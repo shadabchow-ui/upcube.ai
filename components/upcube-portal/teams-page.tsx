@@ -164,7 +164,10 @@ export function TeamsPage() {
           </div>
         </section>
 
-        <section className="uc-section uc-section-rule" aria-labelledby="teams-content-title">
+        <section
+          className="uc-section uc-section-rule"
+          aria-labelledby="teams-content-title"
+        >
           <div className="uc-shell uc-content-stack">
             <SectionHeading
               title={

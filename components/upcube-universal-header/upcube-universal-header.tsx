@@ -59,7 +59,7 @@ export function UpcubeUniversalHeader({
             className="uuh-open-chat"
             prefetch={false}
           >
-            Open chat
+            Try Ethen
           </Link>
         </div>
       </div>

@@ -4,11 +4,16 @@ import type { UpcubeNewsArticle } from "lib/upcube-news/news";
 
 type NewsCardProps = {
   article: UpcubeNewsArticle;
+  compact?: boolean;
 };
 
-export function NewsCard({ article }: NewsCardProps) {
+export function NewsCard({ article, compact = false }: NewsCardProps) {
   return (
-    <article className="uc-news-card">
+    <article
+      className={["uc-news-card", compact ? "uc-news-card--compact" : undefined]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <div className="uc-news-card__meta">
         <span className="uc-eyebrow">{article.category}</span>
         <span>{article.dateLabel}</span>
@@ -18,12 +23,14 @@ export function NewsCard({ article }: NewsCardProps) {
       <p className="uc-news-card__excerpt">{article.excerpt}</p>
       <div className="uc-news-card__actions">
         <Link className="uc-news-card__link" href={article.href}>
-          Read story
+          {compact ? "Read article" : "Read story"}
         </Link>
-        <Link className="uc-news-card__link" href={article.productPageUrl}>
-          View product page
-        </Link>
-        {article.launchUrl ? (
+        {!compact ? (
+          <Link className="uc-news-card__link" href={article.productPageUrl}>
+            View product page
+          </Link>
+        ) : null}
+        {!compact && article.launchUrl ? (
           <Link className="uc-news-card__link" href={article.launchUrl}>
             Launch app
           </Link>

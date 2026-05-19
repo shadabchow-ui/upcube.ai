@@ -73,13 +73,13 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
   },
   {
     id: "upcube-os",
-    label: "Upcube OS",
+    label: "OS",
     description: "AI-first desktop operating system overview.",
     productHref: "/products/upcube-os",
   },
   {
     id: "upcube-mobile-os",
-    label: "Upcube Mobile OS",
+    label: "Mobile OS",
     description: "AI-first mobile operating system overview.",
     productHref: "/products/upcube-mobile-os",
   },
@@ -94,7 +94,7 @@ export const upcubeLauncherApps = [
   },
   {
     id: "globe" as const,
-    label: "Earth",
+    label: "Planet",
     href: UPCUBE_PLANET_URL,
     iconSrc: "/upcube-app-icons/planet.png",
   },

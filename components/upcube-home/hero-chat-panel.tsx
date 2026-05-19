@@ -27,9 +27,8 @@ export function HeroChatPanel() {
           />
         </div>
         <div className="uc-home__chat-composer-bar">
-          <p>Ethen, research, Earth, and developer tools from one prompt.</p>
-          <button type="submit" aria-label="Open chat">
-            <span>Open chat</span>
+          <button type="submit" aria-label="Try Ethen">
+            <span>Try Ethen</span>
             <span className="uc-home__chat-arrow" aria-hidden="true">
               ↑
             </span>

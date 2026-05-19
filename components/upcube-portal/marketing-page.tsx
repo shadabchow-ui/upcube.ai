@@ -35,7 +35,11 @@ function ActionLink({
   }
 
   return (
-    <Link className="uc-button" data-variant={solid ? "solid" : undefined} href={href}>
+    <Link
+      className="uc-button"
+      data-variant={solid ? "solid" : undefined}
+      href={href}
+    >
       {label}
     </Link>
   );
@@ -79,7 +83,9 @@ export function MarketingPage({ content }: MarketingPageProps) {
         {content.sections.map((section) => (
           <section className="uc-section uc-section-rule" key={section.title}>
             <div className="uc-shell uc-content-stack">
-              {section.eyebrow ? <p className="uc-eyebrow">{section.eyebrow}</p> : null}
+              {section.eyebrow ? (
+                <p className="uc-eyebrow">{section.eyebrow}</p>
+              ) : null}
               <h2 className="uc-section-title">{section.title}</h2>
               {section.description ? (
                 <p className="uc-section-description">{section.description}</p>

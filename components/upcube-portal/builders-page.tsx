@@ -146,7 +146,11 @@ export function BuildersPage() {
               title="UpcubeAI Builders"
               description="A practical view of how builders can ship AI features with typed interfaces, evaluation gates, and operational guardrails."
             />
-            <div className="uc-tab-row" role="tablist" aria-label="Builders tabs">
+            <div
+              className="uc-tab-row"
+              role="tablist"
+              aria-label="Builders tabs"
+            >
               {buildersTabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -164,7 +168,10 @@ export function BuildersPage() {
           </div>
         </section>
 
-        <section className="uc-section uc-section-rule" aria-labelledby="builders-content-title">
+        <section
+          className="uc-section uc-section-rule"
+          aria-labelledby="builders-content-title"
+        >
           <div className="uc-shell uc-content-stack">
             <SectionHeading
               title={

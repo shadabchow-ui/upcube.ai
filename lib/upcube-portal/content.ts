@@ -133,6 +133,17 @@ export type PortalHeroCopy = {
   description: string;
 };
 
+export type UpcubeCompanyIdentity = {
+  descriptor: string;
+  tagline: string;
+  oneLiner: string;
+  mission: string;
+  vision: string;
+  belief: string;
+  promise: string;
+  pillars: string[];
+};
+
 export type PortalRoleCard = {
   id: string;
   team: string;
@@ -176,6 +187,28 @@ export {
   UPCUBE_VENTARI_URL,
 };
 
+export const upcubeCompanyIdentity: UpcubeCompanyIdentity = {
+  descriptor: "Artificial Intelligence Company",
+  tagline: "The Next Frontier.",
+  oneLiner: "A technology company for the AI age.",
+  mission:
+    "UpCubeAI builds high-end products for work, discovery, commerce, infrastructure, entertainment, and the next era of computing.",
+  vision:
+    "The current product family is designed as the first proof of a broader intelligent technology ecosystem.",
+  belief:
+    "Intelligence should feel useful, premium, and connected across the tools people rely on every day.",
+  promise:
+    "Build products that turn powerful systems into clear, trustworthy experiences without overstating what is live.",
+  pillars: [
+    "AI",
+    "Commerce",
+    "Discovery",
+    "Cloud & Infrastructure",
+    "Computing",
+    "Entertainment",
+  ],
+};
+
 export const portalPrimaryNav: PortalNavItem[] = [
   { id: "products", label: "Products", href: "/products/upcube-ai" },
   { id: "news", label: "News", href: "/news" },
@@ -185,7 +218,7 @@ export const portalPrimaryNav: PortalNavItem[] = [
 ];
 
 export const portalActionNav: PortalNavItem[] = [
-  { id: "chat", label: "Open chat", href: UPCUBE_CHAT_URL },
+  { id: "chat", label: "Try Ethen", href: UPCUBE_CHAT_URL },
 ];
 
 export const portalNav = portalPrimaryNav;
@@ -207,88 +240,80 @@ export const portalAppLinks: PortalNavItem[] = [
 export const portalHomepageCards: PortalCardItem[] = [
   {
     id: "chat",
-    title: "UpcubeAI",
+    title: "AI",
     description:
-      "Assistant workspace for planning and execution. Learn details or launch the live app.",
+      "Assistant workspace for planning, research, and execution across the broader UpcubeAI platform.",
     href: "/products/upcube-ai",
-    tag: "Learn + Launch",
   },
   {
     id: "globe",
-    title: "Upcube Earth",
+    title: "Earth",
     description:
-      "3D Earth and geospatial workflows. Learn details or launch the live app.",
+      "3D Earth and geospatial workflows in the company’s discovery product line.",
     href: "/products/earth",
-    tag: "Learn + Launch",
   },
   {
     id: "games",
-    title: "Upcube Games",
-    description: "Games directory and launches. Learn details or launch live.",
+    title: "Games",
+    description:
+      "Games discovery and entertainment surfaces across the Upcube ecosystem.",
     href: "/products/games",
-    tag: "Learn + Launch",
   },
   {
     id: "books",
-    title: "Upcube Books",
+    title: "Books",
     description:
-      "Reading and publishing workflows. Learn details or launch the live app.",
+      "Reading and publishing workflows with product-grade discovery and editorial depth.",
     href: "/products/books",
-    tag: "Learn + Launch",
   },
   {
     id: "jobs",
-    title: "Upcube Jobs",
+    title: "Jobs",
     description:
-      "Hiring destination for role discovery. Learn details or launch live.",
+      "Hiring and opportunity workflows connected to the broader Upcube company story.",
     href: "/products/jobs",
-    tag: "Learn + Launch",
   },
   {
     id: "cloud",
-    title: "Upcube Cloud",
+    title: "Cloud",
     description:
-      "Developer tools and workflows. Learn details or launch the live app.",
+      "Developer tooling and infrastructure workflows that support the wider product ecosystem.",
     href: "/products/cloud",
-    tag: "Learn + Launch",
   },
   {
     id: "ventari",
     title: "Ventari",
     description:
-      "Commerce search and discovery workflows. Learn details or launch the live app.",
+      "A premium commerce product built for large-scale product discovery.",
     href: "/products/ventari",
-    tag: "Learn + Launch",
   },
   {
     id: "vm",
     title: "VM Compute",
-    description: "Learn the current public product positioning for VM Compute.",
+    description:
+      "Compute and virtualization direction for the platform layer behind future intelligent systems.",
     href: "/products/vm",
-    tag: "Learn",
   },
   {
     id: "upcube-os",
-    title: "Upcube OS",
+    title: "OS",
     description:
-      "Public consumer operating-system overview with 2028 release language.",
+      "Operating-system direction for premium computing experiences in the next era of AI.",
     href: "/products/upcube-os",
-    tag: "Learn",
   },
   {
     id: "upcube-mobile-os",
-    title: "Upcube Mobile OS",
+    title: "Mobile OS",
     description:
-      "Public consumer mobile operating-system overview with 2028 release language.",
+      "Mobile computing direction for intelligent, device-native product experiences.",
     href: "/products/upcube-mobile-os",
-    tag: "Learn",
   },
 ];
 
 export const portalFooterGroups: PortalFooterGroup[] = [
   {
     id: "apps",
-    title: "Apps",
+    title: "Products",
     links: portalAppLinks,
   },
   {
@@ -348,6 +373,34 @@ export const portalFooterGroups: PortalFooterGroup[] = [
         href: "/research/economic",
       },
     ],
+  },
+];
+
+export const portalSocialLinks: PortalNavItem[] = [
+  {
+    id: "facebook-social",
+    label: "Facebook",
+    href: "https://www.facebook.com/upcubeinc/",
+  },
+  {
+    id: "linkedin-social",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/35441477",
+  },
+  {
+    id: "instagram-social",
+    label: "Instagram",
+    href: "https://www.instagram.com/upcubeai/",
+  },
+  {
+    id: "x-social",
+    label: "X",
+    href: "https://x.com/upcubeai",
+  },
+  {
+    id: "youtube-social",
+    label: "YouTube",
+    href: "https://www.youtube.com/@upcubeai",
   },
 ];
 
@@ -808,75 +861,119 @@ export const portalNewsItems: PortalNewsItem[] = [
 
 export const companyMission: PortalHeroCopy = {
   eyebrow: "Company",
-  title: "UpcubeAI is building a connected product ecosystem.",
+  title: "A technology company for the AI age.",
   description:
-    "This company page stays high level and focuses on product direction because broader corporate details were not provided in the repo.",
+    "UpCubeAI is an artificial intelligence technology company creating high-end products across AI, commerce, discovery, cloud infrastructure, entertainment, and computing.",
 };
 
 export const companyVisionBullets: PortalBullet[] = [
   {
     id: "vision-products",
-    label: "Connected products",
+    label: "High-end product systems",
     detail:
-      "One portal for chat, research, enterprise, and commerce-adjacent workflows.",
+      "Build premium, useful products that move from intelligence to execution across a connected ecosystem.",
   },
   {
     id: "vision-execution",
-    label: "Execution oriented",
+    label: "Proof through products",
     detail:
-      "Product narratives should stay close to what the repo and routes actually implement.",
+      "The current portfolio is meant to show how the company can span AI, commerce, discovery, infrastructure, entertainment, and computing.",
   },
   {
     id: "vision-trust",
-    label: "Trust by restraint",
+    label: "Trust through discipline",
     detail:
-      "Public-facing language should avoid legal, security, or compliance commitments without proof.",
+      "Public-facing language stays ambitious about product direction while remaining disciplined about unsupported claims.",
   },
 ];
 
 export const companyWorkAreas: PortalBullet[] = [
   {
     id: "work-ai",
-    label: "AI workspaces",
-    detail: "Assistant-led planning, synthesis, and execution support.",
+    label: "AI",
+    detail:
+      "Assistant-led workspaces, orchestration, and intelligence-native product experiences.",
   },
   {
     id: "work-commerce",
-    label: "Commerce operations",
+    label: "Commerce",
     detail:
-      "Merchandising and launch workflows that complement the existing storefront.",
+      "Merchandising, storefront systems, and search-led buying experiences built for modern commerce teams.",
   },
   {
-    id: "work-research",
-    label: "Research and publishing",
+    id: "work-discovery",
+    label: "Discovery",
     detail:
-      "Research overviews and update templates for product-facing knowledge work.",
+      "Research, mapping, editorial, and search surfaces that help people explore complex information clearly.",
+  },
+  {
+    id: "work-cloud",
+    label: "Cloud & Infrastructure",
+    detail:
+      "Developer tools, compute direction, and platform services that support the broader product ecosystem.",
+  },
+  {
+    id: "work-computing",
+    label: "Computing",
+    detail:
+      "Operating-system and device-direction work for the next era of premium intelligent computing.",
+  },
+  {
+    id: "work-entertainment",
+    label: "Entertainment",
+    detail:
+      "Interactive products and media experiences that extend the platform into play and culture.",
   },
 ];
 
 export const companyEcosystem: PortalCardItem[] = [
   {
     id: "eco-chat",
-    title: "Chat",
-    description: "Assistant workspace for planning, writing, and execution.",
+    title: "AI",
+    description:
+      "Ethen anchors the ecosystem with assistant-led planning, writing, research, and execution workflows.",
     href: UPCUBE_CHAT_URL,
-    tag: "Live app",
+    tag: "AI",
   },
   {
-    id: "eco-research",
-    title: "Research",
+    id: "eco-ventari",
+    title: "Ventari",
     description:
-      "Editorial overview for research themes and future publishing.",
-    href: "/research",
-    tag: "Live route",
+      "Ventari brings commerce search and large-scale product discovery into the broader company platform.",
+    href: "/products/ventari",
+    tag: "Commerce",
   },
   {
-    id: "eco-enterprise",
-    title: "Enterprise",
+    id: "eco-earth",
+    title: "Earth",
     description:
-      "Conservative enterprise narrative tied to current repo scope.",
-    href: "/enterprise",
-    tag: "Live route",
+      "Earth extends UpCubeAI into mapping, world data, and geospatial exploration.",
+    href: "/products/earth",
+    tag: "Discovery",
+  },
+  {
+    id: "eco-cloud",
+    title: "Cloud",
+    description:
+      "Cloud and VM Compute establish the infrastructure lane for future builders and platform teams.",
+    href: "/products/cloud",
+    tag: "Cloud & Infrastructure",
+  },
+  {
+    id: "eco-os",
+    title: "OS",
+    description:
+      "OS and Mobile OS point toward the company’s long-range computing direction.",
+    href: "/products/upcube-os",
+    tag: "Computing",
+  },
+  {
+    id: "eco-games",
+    title: "Games",
+    description:
+      "Games shows how the ecosystem can extend into interactive entertainment and culture.",
+    href: "/products/games",
+    tag: "Entertainment",
   },
 ];
 

@@ -7,6 +7,7 @@ import { SectionHeading } from "components/upcube-portal/section-heading";
 import {
   companyEcosystem,
   companyMission,
+  upcubeCompanyIdentity,
   companyVisionBullets,
   companyWorkAreas,
 } from "lib/upcube-portal/content";
@@ -44,7 +45,7 @@ export function CompanyPage() {
           <div className="uc-shell">
             <SectionHeading
               title="Work areas"
-              description="Core product lanes in the current Upcube ecosystem."
+              description="Core company pillars represented by the current product ecosystem."
             />
             <div className="uc-grid uc-inner-grid-3">
               {companyWorkAreas.map((item) => (
@@ -61,7 +62,7 @@ export function CompanyPage() {
           <div className="uc-shell">
             <SectionHeading
               title="Ecosystem overview"
-              description="Connected products in the broader UpcubeAI portal."
+              description="Current products as proof points in the broader UpCubeAI company story."
             />
             <div className="uc-grid uc-card-grid">
               {companyEcosystem.map((item) => (
@@ -79,7 +80,7 @@ export function CompanyPage() {
           <div className="uc-shell">
             <SectionHeading
               title="Build with UpcubeAI"
-              description="Use the portal as a single entry point for product, research, and execution workflows."
+              description={upcubeCompanyIdentity.mission}
             />
             <p>
               <Link className="uc-button" data-variant="solid" href="#">

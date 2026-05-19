@@ -45,7 +45,7 @@ export const explorePageContent: MarketingPageContent = {
   title: "Explore the UpcubeAI portal",
   lead: "Move from question to execution with one workspace across chat, research, spatial tools, publishing, hiring, and developer surfaces.",
   chips: ["Portal-first", "Black editorial UI", "App-linked experiences"],
-  primaryCta: { label: "Open chat", href: UPCUBE_CHAT_URL, external: true },
+  primaryCta: { label: "Try Ethen", href: UPCUBE_CHAT_URL, external: true },
   secondaryCta: { label: "View capabilities", href: "/capabilities" },
   sections: [
     {
@@ -89,7 +89,7 @@ export const platformPageContent: MarketingPageContent = {
   lead: "UpcubeAI unifies interaction, planning, and delivery across product, research, and creator workflows.",
   chips: ["Shared shell", "App Router pages", "Scoped portal styles"],
   primaryCta: {
-    label: "Open Upcube Chat",
+    label: "Try Ethen",
     href: UPCUBE_CHAT_URL,
     external: true,
   },
@@ -200,7 +200,7 @@ export const capabilitiesPageContent: MarketingPageContent = {
   lead: "The portal emphasizes practical AI workflows: writing, analysis, planning, and cross-app routing for execution.",
   chips: ["Chat-first", "Research-aware", "App-connected"],
   primaryCta: {
-    label: "Open chat workspace",
+    label: "Try Ethen",
     href: UPCUBE_CHAT_URL,
     external: true,
   },
@@ -253,7 +253,7 @@ export const enterprisePageContent: MarketingPageContent = {
   lead: "Use UpcubeAI to support team operations, research workflows, and delivery planning while keeping human review in the loop.",
   chips: ["Team workflows", "Review gates", "Claim-limited positioning"],
   primaryCta: { label: "Read research lane", href: "/research" },
-  secondaryCta: { label: "Open chat", href: UPCUBE_CHAT_URL, external: true },
+  secondaryCta: { label: "Try Ethen", href: UPCUBE_CHAT_URL, external: true },
   sections: [
     {
       eyebrow: "Enterprise lanes",
@@ -306,7 +306,7 @@ export const researchPageContent: MarketingPageContent = {
   lead: "Use the research lane for grounded analysis, summary artifacts, and practical planning outputs tied to execution.",
   chips: ["Evidence mapping", "Decision support", "Action-oriented briefs"],
   primaryCta: {
-    label: "Open chat for research",
+    label: "Try Ethen",
     href: UPCUBE_CHAT_URL,
     external: true,
   },

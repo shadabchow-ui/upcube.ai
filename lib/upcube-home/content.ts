@@ -15,35 +15,51 @@ export type FeatureBand = {
 
 export const featureBands: FeatureBand[] = [
   {
-    title: "Explore Upcube Earth in 3D",
+    title: "AI",
     description:
-      "Upcube Earth combines geospatial context with AI-native queries for teams building location-aware products.",
-    href: "https://planet.upcube.ai",
-    cta: "Explore Upcube Earth",
-    tone: "teal",
+      "UpcubeAI and Ethen turn chat, research, artifacts, and execution into one serious artificial intelligence workspace.",
+    href: "https://ethen.upcube.ai",
+    cta: "Try Ethen",
+    tone: "green",
   },
   {
-    title: "Launch smarter commerce systems",
+    title: "Commerce",
     description:
-      "Use Upcube Commerce workflows to streamline catalog updates, merchandising, and storefront experimentation.",
-    href: "#",
-    cta: "Explore Commerce",
+      "Ventari represents a premium commerce product line built for discovery, scale, and stronger product decision-making.",
+    href: "/products/ventari",
+    cta: "Explore Ventari",
     tone: "amber",
   },
   {
-    title: "Build with Upcube Cloud",
+    title: "Discovery",
     description:
-      "Upcube Cloud provides docs, templates, and implementation entry points for teams shipping across the ecosystem.",
+      "Earth, Books, and Games extend the company into geospatial, reading, and entertainment discovery experiences.",
+    href: "https://planet.upcube.ai",
+    cta: "Explore Earth",
+    tone: "teal",
+  },
+  {
+    title: "Cloud & Infrastructure",
+    description:
+      "Upcube Cloud provides the shared developer and infrastructure layer behind product delivery across the ecosystem.",
     href: "https://cloud.upcube.ai",
-    cta: "Open Upcube Cloud",
+    cta: "Open Cloud",
     tone: "blue",
   },
   {
-    title: "Create, learn, and publish faster",
+    title: "Computing",
     description:
-      "From AI chat to books and research, one workspace helps teams ideate, refine, and ship faster.",
-    href: "https://ethen.upcube.ai",
-    cta: "Open Workspace",
+      "VM Compute, Upcube OS, and Upcube Mobile OS describe the company’s broader systems and computing direction.",
+    href: "/products/vm",
+    cta: "View computing products",
+    tone: "blue",
+  },
+  {
+    title: "Entertainment",
+    description:
+      "Games and other consumer-facing surfaces show the company can pair ambitious interfaces with broad product ambition.",
+    href: "https://games.upcube.ai",
+    cta: "Open Games",
     tone: "green",
   },
 ];

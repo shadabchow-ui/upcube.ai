@@ -100,6 +100,39 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/brand": {
+      "renderingMode": "PARTIALLY_STATIC",
+      "experimentalPPR": true,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight"
+        }
+      ],
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 604800,
+      "srcRoute": "/brand",
+      "dataRoute": "/brand.rsc",
+      "prefetchDataRoute": "/brand.prefetch.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/builders": {
       "renderingMode": "PARTIALLY_STATIC",
       "experimentalPPR": true,
@@ -223,6 +256,39 @@
       "srcRoute": "/careers",
       "dataRoute": "/careers.rsc",
       "prefetchDataRoute": "/careers.prefetch.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/charter": {
+      "renderingMode": "PARTIALLY_STATIC",
+      "experimentalPPR": true,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight"
+        }
+      ],
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 604800,
+      "srcRoute": "/charter",
+      "dataRoute": "/charter.rsc",
+      "prefetchDataRoute": "/charter.prefetch.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -421,6 +487,39 @@
       "srcRoute": "/faq",
       "dataRoute": "/faq.rsc",
       "prefetchDataRoute": "/faq.prefetch.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/foundation": {
+      "renderingMode": "PARTIALLY_STATIC",
+      "experimentalPPR": true,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight"
+        }
+      ],
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 604800,
+      "srcRoute": "/foundation",
+      "dataRoute": "/foundation.rsc",
+      "prefetchDataRoute": "/foundation.prefetch.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -923,6 +1022,39 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/policies": {
+      "renderingMode": "PARTIALLY_STATIC",
+      "experimentalPPR": true,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight"
+        }
+      ],
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 604800,
+      "srcRoute": "/policies",
+      "dataRoute": "/policies.rsc",
+      "prefetchDataRoute": "/policies.prefetch.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/principles": {
       "renderingMode": "PARTIALLY_STATIC",
       "experimentalPPR": true,
@@ -1352,6 +1484,39 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/research/economic": {
+      "renderingMode": "PARTIALLY_STATIC",
+      "experimentalPPR": true,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight"
+        }
+      ],
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 604800,
+      "srcRoute": "/research/economic",
+      "dataRoute": "/research/economic.rsc",
+      "prefetchDataRoute": "/research/economic.prefetch.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/research": {
       "renderingMode": "PARTIALLY_STATIC",
       "experimentalPPR": true,
@@ -1376,6 +1541,39 @@
       "srcRoute": "/research",
       "dataRoute": "/research.rsc",
       "prefetchDataRoute": "/research.prefetch.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/research/residency": {
+      "renderingMode": "PARTIALLY_STATIC",
+      "experimentalPPR": true,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight"
+        }
+      ],
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 604800,
+      "srcRoute": "/research/residency",
+      "dataRoute": "/research/residency.rsc",
+      "prefetchDataRoute": "/research/residency.prefetch.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1515,6 +1713,38 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/sitemap.xml": {
+      "initialHeaders": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "application/xml",
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/sitemap.xml/layout,_N_T_/sitemap.xml/route,_N_T_/sitemap.xml"
+      },
+      "renderingMode": "STATIC",
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": "/sitemap.xml",
+      "dataRoute": null,
+      "prefetchDataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/teams": {
       "renderingMode": "PARTIALLY_STATIC",
       "experimentalPPR": true,
@@ -1572,6 +1802,72 @@
       "srcRoute": "/terms-of-service",
       "dataRoute": "/terms-of-service.rsc",
       "prefetchDataRoute": "/terms-of-service.prefetch.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/terms": {
+      "renderingMode": "PARTIALLY_STATIC",
+      "experimentalPPR": true,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight"
+        }
+      ],
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 604800,
+      "srcRoute": "/terms",
+      "dataRoute": "/terms.rsc",
+      "prefetchDataRoute": "/terms.prefetch.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/trust-transparency": {
+      "renderingMode": "PARTIALLY_STATIC",
+      "experimentalPPR": true,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight"
+        }
+      ],
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 604800,
+      "srcRoute": "/trust-transparency",
+      "dataRoute": "/trust-transparency.rsc",
+      "prefetchDataRoute": "/trust-transparency.prefetch.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1910,8 +2206,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "6497ae96836266ab621fba5382de7cf7",
-    "previewModeSigningKey": "299b9723ac63c970173bd00d55d3b7e054682e30793ff3fa38639802d7643059",
-    "previewModeEncryptionKey": "80331a3a766d5f3e06f866abe905c09ff6c863ee11ef103ad17553f8bb5a510b"
+    "previewModeId": "fa33dded626b2bb158061e83e83f8c6d",
+    "previewModeSigningKey": "eebe4c87cb2e3bd36689b728f7376bdf383eb67f2c172f88cc786190bef06df3",
+    "previewModeEncryptionKey": "a1248e28c72f94832872d0649c32483622cc943e86b9926086f9e5c4adaf0d26"
   }
 }

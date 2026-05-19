@@ -594,6 +594,25 @@ export const upcubeNewsPreviewArticles = upcubeNewsArticles.filter(
   (article) => article.category === "Product Preview",
 );
 
+export function getRelatedUpcubeNewsArticles(slug: string, limit = 3) {
+  const current = getUpcubeNewsArticleBySlug(slug);
+
+  if (!current) {
+    return upcubeNewsArticles.slice(0, limit);
+  }
+
+  const sameCategory = upcubeNewsArticles.filter(
+    (article) => article.slug !== slug && article.category === current.category,
+  );
+  const fallback = upcubeNewsArticles.filter(
+    (article) =>
+      article.slug !== slug &&
+      !sameCategory.some((candidate) => candidate.slug === article.slug),
+  );
+
+  return [...sameCategory, ...fallback].slice(0, limit);
+}
+
 export function getUpcubeNewsArticleBySlug(slug: string) {
   return upcubeNewsArticles.find((article) => article.slug === slug);
 }

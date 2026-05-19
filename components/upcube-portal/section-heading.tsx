@@ -16,10 +16,14 @@ export function SectionHeading({
   className,
 }: SectionHeadingProps) {
   return (
-    <header className={["uc-section-heading", className].filter(Boolean).join(" ")}>
+    <header
+      className={["uc-section-heading", className].filter(Boolean).join(" ")}
+    >
       {eyebrow ? <p className="uc-eyebrow">{eyebrow}</p> : null}
       <h2 className="uc-section-title">{title}</h2>
-      {description ? <p className="uc-section-description">{description}</p> : null}
+      {description ? (
+        <p className="uc-section-description">{description}</p>
+      ) : null}
       {actions}
     </header>
   );

@@ -6,12 +6,15 @@ import { useEffect, useRef, useState } from "react";
 import { UpcubeAppLauncher } from "components/upcube-universal-header/upcube-app-launcher";
 import {
   portalActionNav,
+  portalAppLinks,
   portalMenuGroups,
   portalPrimaryNav,
 } from "lib/upcube-portal/content";
 
 export function PortalHeader() {
   const [activeMenuId, setActiveMenuId] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
   const menuShellRef = useRef<HTMLDivElement | null>(null);
   const closeTimerRef = useRef<number | null>(null);
   const activeMenu =
@@ -49,12 +52,21 @@ export function PortalHeader() {
         clearCloseTimer();
         setActiveMenuId(null);
       }
+
+      if (
+        isMobileMenuOpen &&
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
     }
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
         clearCloseTimer();
         setActiveMenuId(null);
+        setIsMobileMenuOpen(false);
       }
     }
 
@@ -65,7 +77,20 @@ export function PortalHeader() {
       document.removeEventListener("pointerdown", handlePointerDown);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [activeMenuId]);
+  }, [activeMenuId, isMobileMenuOpen]);
+
+  useEffect(() => {
+    function handleViewportChange() {
+      if (window.innerWidth >= 900) {
+        setIsMobileMenuOpen(false);
+      }
+    }
+
+    window.addEventListener("resize", handleViewportChange);
+    return () => {
+      window.removeEventListener("resize", handleViewportChange);
+    };
+  }, []);
 
   useEffect(
     () => () => {
@@ -75,7 +100,7 @@ export function PortalHeader() {
   );
 
   return (
-    <header className="uc-header">
+    <header className="uc-header" ref={headerRef}>
       <div className="uc-shell uc-header-inner">
         <Link href="/" className="uc-brand" aria-label="UpcubeAI home">
           <img
@@ -182,6 +207,69 @@ export function PortalHeader() {
               {item.label}
             </Link>
           ))}
+        </div>
+
+        <div className="uc-mobile-menu-shell">
+          <button
+            type="button"
+            className="uc-mobile-menu-button"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="uc-mobile-menu-panel"
+            onClick={() => setIsMobileMenuOpen((open) => !open)}
+          >
+            {isMobileMenuOpen ? "Close" : "Menu"}
+          </button>
+
+          {isMobileMenuOpen ? (
+            <div
+              id="uc-mobile-menu-panel"
+              className="uc-mobile-menu-panel"
+              aria-label="Portal mobile menu"
+            >
+              <nav
+                className="uc-mobile-menu-nav"
+                aria-label="Portal mobile primary"
+              >
+                {portalPrimaryNav.map((item) => (
+                  <Link
+                    key={item.id}
+                    className="uc-mobile-menu-link"
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+
+              <div className="uc-mobile-menu-apps">
+                <p className="uc-mobile-menu-label">Apps</p>
+                <div className="uc-mobile-menu-app-grid">
+                  {portalAppLinks.map((item) => (
+                    <Link
+                      key={item.id}
+                      className="uc-mobile-menu-app-link"
+                      href={item.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {portalActionNav.map((item) => (
+                <Link
+                  key={item.id}
+                  className="uc-mobile-menu-cta"
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </header>

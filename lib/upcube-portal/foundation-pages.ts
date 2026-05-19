@@ -2,6 +2,7 @@ import {
   PortalTextSection,
   PortalTheme,
   legalDraftNotice,
+  upcubeCompanyIdentity,
 } from "lib/upcube-portal/content";
 import {
   UPCUBE_CHAT_URL,
@@ -29,67 +30,87 @@ const careersStatusNotice =
 
 export const aboutPageContent: FoundationPageContent = {
   eyebrow: "About Us",
-  title: "UpcubeAI is building a simpler way to work with intelligence.",
+  title: "Building the next generation of intelligent technology.",
   description:
-    "The public site frames one platform story across chat, research, and connected apps. It stays high level where the repo does not provide verified corporate detail.",
+    "UpCubeAI is an artificial intelligence technology company creating high-end products across AI, commerce, discovery, cloud infrastructure, entertainment, and computing.",
   sections: [
     {
       id: "platform",
-      title: "What the platform is for",
+      title: "What the company is building",
       paragraphs: [
-        "UpcubeAI is presented as a place to move from question to action without turning serious work into noise.",
-        "Ethen, research, and connected app surfaces are meant to feel like parts of one system rather than disconnected destinations.",
+        upcubeCompanyIdentity.mission,
+        "Ethen, Earth, Ventari, Cloud, Books, Games, Jobs, and the computing roadmap are positioned as connected product lines inside one broader company story.",
       ],
     },
     {
       id: "approach",
-      title: "How the product should feel",
+      title: "How the work should feel",
       paragraphs: [
-        "The product language favors clarity, restraint, and continuity across tasks.",
+        "The product language favors clarity, precision, and continuity across the ecosystem.",
       ],
       bullets: [
-        "Simple enough to start quickly.",
-        "Structured enough to support real work.",
-        "Careful enough to avoid claims the repo cannot prove.",
+        "Useful intelligence over decorative complexity.",
+        "Premium product craft across every surface.",
+        "Connected systems instead of isolated apps.",
       ],
     },
     {
       id: "public-posture",
-      title: "What this page does not claim",
+      title: "What stays deliberately restrained",
       paragraphs: [
-        "Formal company history, offices, legal registrations, and partnership facts were not provided in the repo, so they are intentionally left out here.",
+        "Formal company history, offices, legal registrations, partnerships, and other corporate facts were not provided in the repo, so this page keeps its claims focused on product identity and direction.",
       ],
     },
   ],
   ctas: [
-    { label: "Open chat", href: UPCUBE_CHAT_URL, external: true },
+    { label: "Try Ethen", href: UPCUBE_CHAT_URL, external: true },
     { label: "Research overview", href: "/research" },
   ],
 };
 
 export const charterPageContent: FoundationPageContent = {
   eyebrow: "Our Charter",
-  title: "A public charter for how Upcube should build.",
+  title:
+    "Principles for building the next generation of intelligent technology.",
   description:
-    "The charter is short on purpose. It describes standards for product judgment, not legal obligations or governance filings.",
+    "The charter is short on purpose. It defines product principles and public posture, not legal obligations or governance filings.",
   sections: [
     {
-      id: "clarity",
-      title: "Clarity first",
+      id: "useful-intelligence",
+      title: "Useful intelligence",
       paragraphs: [
-        "Products should reduce confusion, not add ceremony around it.",
+        "Products should make intelligence easier to use for real work, not bury it under ceremony.",
       ],
       bullets: [
-        "Prefer plain language over inflated positioning.",
-        "Prefer visible review points over hidden automation.",
-        "Prefer useful pages over decorative surfaces.",
+        "Prefer clarity over inflated positioning.",
+        "Prefer execution value over novelty theater.",
+        "Prefer inspectable workflows over vague magic.",
       ],
     },
     {
-      id: "trust",
-      title: "Trust through boundaries",
+      id: "premium-craft",
+      title: "Premium product craft",
       paragraphs: [
-        "Where the repo does not prove a fact, the site should say less.",
+        "High-end products should feel deliberate, calm, and coherent from the first interaction to the deepest workflow.",
+      ],
+      bullets: [
+        "Make powerful systems feel clear and controlled.",
+        "Keep the ecosystem visually and structurally consistent.",
+        "Use restraint instead of noise as the default expression of quality.",
+      ],
+    },
+    {
+      id: "connected-ecosystem",
+      title: "Connected ecosystem",
+      paragraphs: [
+        "Every product line should feel like part of a broader company system rather than a collection of disconnected apps.",
+      ],
+    },
+    {
+      id: "trust-control",
+      title: "Trust and control",
+      paragraphs: [
+        "Where the repo does not prove a fact, the site should say less and keep its promises smaller.",
       ],
       bullets: [
         "No invented legal standing.",
@@ -98,15 +119,15 @@ export const charterPageContent: FoundationPageContent = {
       ],
     },
     {
-      id: "craft",
-      title: "Craft with restraint",
+      id: "future-computing",
+      title: "Future computing",
       paragraphs: [
-        "The experience should feel deliberate, premium, and easy to read without falling into hype.",
+        "The company direction reaches beyond today’s apps toward the next era of operating systems, infrastructure, and intelligent devices.",
       ],
     },
   ],
   ctas: [
-    { label: "Open chat", href: UPCUBE_CHAT_URL, external: true },
+    { label: "Try Ethen", href: UPCUBE_CHAT_URL, external: true },
     { label: "About Us", href: "/about" },
   ],
 };
@@ -194,9 +215,9 @@ export const careersPageContent: FoundationPageContent = {
 
 export const brandPageContent: FoundationPageContent = {
   eyebrow: "Brand Help Center",
-  title: "A simple guide for using the Upcube name and mark with care.",
+  title: "UpCubeAI | Artificial Intelligence Company | The Next Frontier.",
   description:
-    "This page offers practical brand-use guidance without implying a full downloadable brand kit exists in the repo.",
+    "This page offers practical guidance for using the UpcubeAI name, company descriptor, and tagline without implying a full downloadable brand kit exists in the repo.",
   sections: [
     {
       id: "naming",
@@ -205,9 +226,11 @@ export const brandPageContent: FoundationPageContent = {
         "Use product names as they appear in the live site so the ecosystem stays coherent.",
       ],
       bullets: [
-        "Use UpcubeAI for the platform story.",
+        "Use UpcubeAI for the company and platform story.",
+        "Use Artificial Intelligence Company as the short public descriptor where a company label is needed.",
+        "Use The Next Frontier. as the public-facing tagline.",
         "Use Ethen for the chat workspace destination.",
-        "Use Planet, Books, Games, Jobs, and Cloud as app names when linking to those products.",
+        "Use Earth, Books, Games, Jobs, Cloud, Ventari, OS, and Mobile OS as product names when linking to those destinations.",
       ],
     },
     {
@@ -384,7 +407,7 @@ export const researchResidencyPageContent: FoundationPageContent = {
   ],
   ctas: [
     { label: "Research overview", href: "/research" },
-    { label: "Open chat", href: UPCUBE_CHAT_URL, external: true },
+    { label: "Try Ethen", href: UPCUBE_CHAT_URL, external: true },
   ],
 };
 
@@ -423,7 +446,7 @@ export const researchEconomicPageContent: FoundationPageContent = {
   ],
   ctas: [
     { label: "Research overview", href: "/research" },
-    { label: "Open chat", href: UPCUBE_CHAT_URL, external: true },
+    { label: "Try Ethen", href: UPCUBE_CHAT_URL, external: true },
   ],
 };
 

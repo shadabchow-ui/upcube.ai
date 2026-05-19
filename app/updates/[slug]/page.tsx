@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { ArticlePage } from "components/upcube-portal/article-page";
-import { getPortalArticleBySlug, portalArticles } from "lib/upcube-portal/content";
+import {
+  getPortalArticleBySlug,
+  portalArticles,
+} from "lib/upcube-portal/content";
 
 export function generateStaticParams() {
   return portalArticles.map((article) => ({ slug: article.slug }));

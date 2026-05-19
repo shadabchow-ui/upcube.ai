@@ -148,6 +148,12 @@
       "namedRegex": "^/about(?:/)?$"
     },
     {
+      "page": "/brand",
+      "regex": "^/brand(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/brand(?:/)?$"
+    },
+    {
       "page": "/builders",
       "regex": "^/builders(?:/)?$",
       "routeKeys": {},
@@ -170,6 +176,12 @@
       "regex": "^/careers(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/careers(?:/)?$"
+    },
+    {
+      "page": "/charter",
+      "regex": "^/charter(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/charter(?:/)?$"
     },
     {
       "page": "/chat",
@@ -208,6 +220,12 @@
       "namedRegex": "^/faq(?:/)?$"
     },
     {
+      "page": "/foundation",
+      "regex": "^/foundation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/foundation(?:/)?$"
+    },
+    {
       "page": "/how-it-works",
       "regex": "^/how\\-it\\-works(?:/)?$",
       "routeKeys": {},
@@ -230,6 +248,12 @@
       "regex": "^/platform(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/platform(?:/)?$"
+    },
+    {
+      "page": "/policies",
+      "regex": "^/policies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policies(?:/)?$"
     },
     {
       "page": "/principles",
@@ -316,6 +340,18 @@
       "namedRegex": "^/research(?:/)?$"
     },
     {
+      "page": "/research/economic",
+      "regex": "^/research/economic(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/research/economic(?:/)?$"
+    },
+    {
+      "page": "/research/residency",
+      "regex": "^/research/residency(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/research/residency(?:/)?$"
+    },
+    {
       "page": "/robots.txt",
       "regex": "^/robots\\.txt(?:/)?$",
       "routeKeys": {},
@@ -352,6 +388,12 @@
       "namedRegex": "^/teams(?:/)?$"
     },
     {
+      "page": "/terms",
+      "regex": "^/terms(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/terms(?:/)?$"
+    },
+    {
       "page": "/terms-of-service",
       "regex": "^/terms\\-of\\-service(?:/)?$",
       "routeKeys": {},
@@ -362,6 +404,12 @@
       "regex": "^/trust(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/trust(?:/)?$"
+    },
+    {
+      "page": "/trust-transparency",
+      "regex": "^/trust\\-transparency(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/trust\\-transparency(?:/)?$"
     },
     {
       "page": "/vision",

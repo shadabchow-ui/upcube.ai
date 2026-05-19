@@ -106,36 +106,6 @@ export function NewsIndexPage() {
             </div>
           </div>
         </section>
-
-        <section className="uc-news-cta">
-          <div className="uc-shell">
-            <div className="uc-news-article__cta-band">
-              <div className="uc-news-featured__copy">
-                <p className="uc-eyebrow">Ecosystem</p>
-                <h2 className="uc-news-featured__title">
-                  See how the products connect.
-                </h2>
-                <p>
-                  Move from launch stories into the full Upcube product
-                  ecosystem, where each product has a dedicated page, clear
-                  CTAs, and related-product paths.
-                </p>
-              </div>
-              <div className="uc-news-hero__actions">
-                <Link
-                  className="uc-button"
-                  data-variant="solid"
-                  href="/explore"
-                >
-                  Explore all products
-                </Link>
-                <Link className="uc-button" href="/research">
-                  Read research
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <PortalFooter />
     </PortalShell>

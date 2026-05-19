@@ -99,10 +99,11 @@ body:has(.uc-home) .commerce-navbar {
   color: var(--uc-text-muted);
   background: transparent;
   font: inherit;
-  font-size: var(--up-type-meta-size);
-  line-height: var(--up-type-meta-line);
-  font-weight: 500;
-  padding: 0.6rem 0.8rem;
+  font-size: var(--up-type-nav-size);
+  line-height: var(--up-type-nav-line);
+  letter-spacing: var(--up-type-nav-track);
+  font-weight: var(--up-type-nav-weight);
+  padding: 0.5rem 0.75rem;
   border-radius: 999px;
   transition:
     background-color 0.18s ease,
@@ -156,9 +157,9 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__mega-label {
   margin: 0;
   color: var(--uc-text-dim);
-  font-size: var(--up-type-meta-size);
-  line-height: var(--up-type-meta-line);
-  letter-spacing: var(--up-type-meta-track);
+  font-size: 0.8125rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -187,16 +188,18 @@ body:has(.uc-home) .commerce-navbar {
 
 .uc-home__mega-item span,
 .uc-home__mobile-link span {
-  font-size: var(--up-type-p1-size);
-  line-height: 1.35;
+  font-size: 0.90625rem;
+  line-height: 1.3rem;
   letter-spacing: -0.01em;
+  font-weight: 500;
 }
 
 .uc-home__mega-item small,
 .uc-home__mobile-link small {
   color: var(--uc-text-dim);
-  font-size: var(--up-type-p2-size);
-  line-height: var(--up-type-p2-line);
+  font-size: 0.84375rem;
+  line-height: 1.28rem;
+  letter-spacing: -0.01em;
 }
 
 .uc-home__mobile-panel {
@@ -215,9 +218,9 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__mobile-title {
   margin: 0 0 0.45rem;
   color: var(--uc-text-dim);
-  font-size: var(--up-type-meta-size);
-  line-height: var(--up-type-meta-line);
-  letter-spacing: var(--up-type-meta-track);
+  font-size: 0.8125rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -318,10 +321,10 @@ body:has(.uc-home) .commerce-navbar {
   margin-bottom: 0.75rem;
   margin-inline: auto;
   text-align: center;
-  font-size: clamp(28px, 3.25vw, 44px);
+  font-size: clamp(34px, 10vw, 46px);
   line-height: 1.05;
   font-weight: 600;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.04em;
   text-wrap: balance;
 }
 
@@ -378,22 +381,10 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__chat-composer-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 1rem;
   padding-top: 0.5rem;
   border-top: 1px solid var(--uc-border-soft);
-}
-
-.uc-home__chat-composer-bar p {
-  margin: 0;
-}
-
-.uc-home__chat-composer-bar p {
-  margin: 0;
-  color: var(--uc-text-dim);
-  font-size: var(--up-type-p2-size);
-  line-height: var(--up-type-p2-line);
-  text-align: left;
 }
 
 .uc-home__chat-composer button {
@@ -466,11 +457,17 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__section h2 {
   max-width: 18ch;
   margin: 0 0 clamp(1.5rem, 4vw, 2.75rem);
-  font-size: var(--up-type-h2-size);
-  line-height: var(--up-type-h2-line);
+  font-size: clamp(2.25rem, 10vw, 3rem);
+  line-height: 1.05;
   font-weight: var(--up-type-h2-weight);
   letter-spacing: var(--up-type-h2-track);
   text-wrap: balance;
+}
+
+.uc-home__section-title-centered {
+  max-width: none;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .uc-home__section-head-row {
@@ -517,11 +514,10 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__story,
 .uc-home__feature {
   min-height: 14rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 1.4rem;
+  align-content: start;
+  gap: 0.9rem;
   padding: clamp(1.1rem, 2.4vw, 1.75rem);
   color: var(--uc-text);
   text-decoration: none;
@@ -549,6 +545,7 @@ body:has(.uc-home) .commerce-navbar {
   margin: 0;
   color: var(--uc-text-muted);
   line-height: 1.55;
+  max-width: 34ch;
 }
 
 .uc-home__portal-card small,
@@ -587,15 +584,20 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__brand-text {
   margin: 0 0 0.6rem;
   color: var(--uc-text);
-  font-size: 1rem;
-  font-weight: 520;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
 }
 
 .uc-home__footer h3 {
   margin: 0 0 0.85rem;
-  color: var(--uc-text);
-  font-size: 0.95rem;
-  font-weight: 520;
+  color: var(--uc-text-muted);
+  font-size: 0.8125rem;
+  line-height: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .uc-home__footer nav {
@@ -607,7 +609,9 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__footer-copy {
   margin: 0;
   color: var(--uc-text-muted);
-  line-height: 1.5;
+  font-size: var(--up-type-footer-size);
+  line-height: var(--up-type-footer-line);
+  letter-spacing: var(--up-type-footer-track);
   text-decoration: none;
 }
 
@@ -621,6 +625,7 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__footer nav a small {
   color: var(--uc-text-dim);
   font-size: 0.72rem;
+  line-height: 1.1rem;
 }
 
 .uc-home__footer nav a:hover {
@@ -650,19 +655,6 @@ body:has(.uc-home) .commerce-navbar {
 }
 
 @media (max-width: 61.99rem) {
-  .uc-home__header-inner {
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .uc-home__actions {
-    margin-left: auto;
-  }
-
-  .uc-home__actions .uc-home__link-btn {
-    display: none;
-  }
-
   .uc-home__hero h1 {
     white-space: normal;
     text-wrap: balance;
@@ -670,40 +662,117 @@ body:has(.uc-home) .commerce-navbar {
 }
 
 @media (max-width: 44rem) {
-  .uc-home__chat-composer-bar {
-    flex-direction: column;
-    align-items: stretch;
+  .uc-home__container {
+    overflow-x: clip;
   }
 
-  .uc-home__chat-composer button {
+  .uc-home__hero-inner {
+    min-height: auto;
+    padding-block: clamp(2rem, 10vw, 3rem);
+  }
+
+  .uc-home__hero-stack {
+    gap: 0.55rem;
+  }
+
+  .uc-home__chat-panel {
+    width: min(100%, calc(100vw - 32px));
+    max-width: 100%;
+  }
+
+  .uc-home__chat-composer {
+    gap: 0.45rem;
+    padding: 0.7rem 0.75rem 0.75rem;
+    border-radius: 22px;
+  }
+
+  .uc-home__chat-composer-field {
+    min-height: 2.3rem;
+  }
+
+  .uc-home__chat-composer textarea {
+    min-height: 2.3rem;
+    font-size: 0.98rem;
+    line-height: 1.3;
+    padding: 0;
+  }
+
+  .uc-home__chat-composer-bar {
+    padding-top: 0.42rem;
     justify-content: center;
   }
 
+  .uc-home__chat-composer button {
+    min-height: 2.8rem;
+    justify-content: center;
+    padding-inline: 0.9rem 0.5rem;
+  }
+
   .uc-home__section-head-row {
-    align-items: baseline;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .uc-home__chat-suggestions {
+    gap: 0.45rem;
+    width: min(100%, calc(100vw - 32px));
+    margin-inline: auto;
+    padding-inline: 0.25rem;
+  }
+
+  .uc-home__chat-suggestions a {
+    padding: 0.48rem 0.78rem;
+    font-size: 0.82rem;
+    line-height: 1.2rem;
+  }
+
+  .uc-home__portal-grid,
+  .uc-home__story-grid,
+  .uc-home__feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uc-home__section h2 {
+    max-width: none;
+  }
+
+  .uc-home__portal-card,
+  .uc-home__story,
+  .uc-home__feature {
+    min-height: auto;
+    gap: 0.8rem;
   }
 }
 
 @media (max-width: 36rem) {
-  .uc-home__header-inner {
-    gap: 0.75rem;
+  .uc-home__hero {
+    overflow-x: clip;
   }
 
-  .uc-home__actions {
-    width: 100%;
+  .uc-home__hero h1 {
+    max-width: 10ch;
   }
 
-  .uc-home__actions .uc-home__primary-btn {
-    width: 100%;
+  .uc-home__chat-panel {
+    width: min(100%, calc(100vw - 32px));
   }
 
-  .uc-home__brand,
-  .uc-home__brand-mark {
-    width: 2rem;
-    height: 2rem;
+  .uc-home__portal-card,
+  .uc-home__story,
+  .uc-home__feature {
+    padding: 1.1rem 1rem 1.15rem;
   }
 
   .uc-home__chat-composer {
-    border-radius: 1.45rem;
+    border-radius: 22px;
+  }
+
+  .uc-home__chat-composer button {
+    width: 100%;
+  }
+
+  .uc-home__chat-arrow {
+    width: 1.8rem;
+    height: 1.8rem;
   }
 }

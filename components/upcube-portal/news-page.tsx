@@ -22,7 +22,10 @@ export function NewsPage() {
           </div>
         </section>
 
-        <section className="uc-section uc-section-rule" aria-labelledby="news-grid-title">
+        <section
+          className="uc-section uc-section-rule"
+          aria-labelledby="news-grid-title"
+        >
           <div className="uc-shell uc-content-stack">
             <SectionHeading
               title="Latest updates"
@@ -45,7 +48,10 @@ export function NewsPage() {
             </div>
             <p className="uc-card-copy">
               Looking for article-template detail?{" "}
-              <Link className="uc-nav-link" href="/updates/platform-iteration-placeholder">
+              <Link
+                className="uc-nav-link"
+                href="/updates/platform-iteration-placeholder"
+              >
                 Open updates article route
               </Link>
               .

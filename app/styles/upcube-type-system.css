@@ -42,6 +42,16 @@
   --up-type-meta-track: 0.08em;
   --up-type-meta-weight: 500;
 
+  --up-type-nav-size: 0.875rem;
+  --up-type-nav-line: 1.25rem;
+  --up-type-nav-track: -0.01em;
+  --up-type-nav-weight: 500;
+
+  --up-type-footer-size: 0.875rem;
+  --up-type-footer-line: 1.435rem;
+  --up-type-footer-track: -0.01em;
+  --up-type-footer-weight: 400;
+
   --up-color-background: #000;
   --up-color-primary-100: #f5f5f0;
   --up-color-primary-80: rgba(245, 245, 240, 0.8);
@@ -117,10 +127,10 @@
 }
 
 .up-text-nav {
-  font-size: var(--up-type-meta-size);
-  line-height: var(--up-type-meta-line);
-  letter-spacing: 0;
-  font-weight: 500;
+  font-size: var(--up-type-nav-size);
+  line-height: var(--up-type-nav-line);
+  letter-spacing: var(--up-type-nav-track);
+  font-weight: var(--up-type-nav-weight);
 }
 
 .up-page-shell {

@@ -61,7 +61,10 @@ export function ArticlePage({ article }: ArticlePageProps) {
               ))}
             </ul>
             <p>
-              <Link href="/updates/platform-iteration-placeholder" className="uc-nav-link">
+              <Link
+                href="/updates/platform-iteration-placeholder"
+                className="uc-nav-link"
+              >
                 Back to updates template
               </Link>
             </p>

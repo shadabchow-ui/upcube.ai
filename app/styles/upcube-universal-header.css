@@ -34,9 +34,9 @@
 }
 
 .uuh-brand-label {
-  font-size: var(--up-type-p2-size);
-  line-height: 1.35;
-  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
   letter-spacing: 0.01em;
 }
 
@@ -50,11 +50,12 @@
 .uuh-nav-link {
   color: var(--up-color-primary-60);
   text-decoration: none;
-  font-size: var(--up-type-meta-size);
-  line-height: var(--up-type-meta-line);
-  font-weight: 500;
+  font-size: var(--up-type-nav-size);
+  line-height: var(--up-type-nav-line);
+  letter-spacing: var(--up-type-nav-track);
+  font-weight: var(--up-type-nav-weight);
   white-space: nowrap;
-  padding: 0.35rem 0.55rem;
+  padding: 0.34rem 0.52rem;
   border-radius: 999px;
 }
 
@@ -80,9 +81,10 @@
   border: 1px solid rgba(245, 245, 240, 0.18);
   color: var(--up-color-primary-100);
   text-decoration: none;
-  font-size: var(--up-type-meta-size);
-  line-height: 1.2;
-  font-weight: 500;
+  font-size: var(--up-type-nav-size);
+  line-height: var(--up-type-nav-line);
+  letter-spacing: var(--up-type-nav-track);
+  font-weight: var(--up-type-nav-weight);
   white-space: nowrap;
 }
 
@@ -148,9 +150,9 @@
 .uuh-launcher-panel-title {
   margin: 0 0 0.85rem;
   color: var(--up-color-primary-60);
-  font-size: var(--up-type-meta-size);
-  line-height: var(--up-type-meta-line);
-  letter-spacing: var(--up-type-meta-track);
+  font-size: 0.8125rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -203,8 +205,10 @@
 
 .uuh-app-tile-label {
   text-align: center;
-  font-size: var(--up-type-p2-size);
-  line-height: 1.35;
+  font-size: 0.84375rem;
+  line-height: 1.2rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
   color: rgba(255, 255, 255, 0.86);
 }
 

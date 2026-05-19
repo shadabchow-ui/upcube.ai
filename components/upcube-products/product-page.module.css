@@ -287,14 +287,66 @@
 }
 
 @media (max-width: 640px) {
+  .heroSection,
+  .section,
+  .ctaSection {
+    padding-block: clamp(2.5rem, 9vw, 3.6rem);
+  }
+
+  .heroSection {
+    padding-top: clamp(3.6rem, 13vw, 4.75rem);
+  }
+
+  .heroCopy h1 {
+    max-width: none;
+    font-size: clamp(2.35rem, 11vw, 3.2rem);
+    line-height: 1.02;
+  }
+
+  .summary,
+  .sectionIntro p,
+  .card p,
+  .highlightCard p,
+  .availabilityBand p,
+  .linkCard p,
+  .ctaCopy p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .actionRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .actionRow :global(.uc-button) {
+    width: 100%;
+    justify-content: center;
+  }
+
   .heroVisual {
-    min-height: 22rem;
+    min-height: 18rem;
     border-radius: 1.5rem;
+  }
+
+  .highlightStack {
+    padding: 1rem;
+  }
+
+  .cardGrid,
+  .storyGrid {
+    grid-template-columns: 1fr;
   }
 
   .card,
   .linkCard,
   .ctaBand {
     border-radius: 1.3rem;
+  }
+
+  .card,
+  .linkCard {
+    min-height: auto;
   }
 }
