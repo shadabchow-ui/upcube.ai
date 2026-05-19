@@ -9,14 +9,10 @@ type UpcubeUniversalHeaderProps = {
 };
 
 const defaultLinks = [
-  { id: "news", label: "News", href: "https://upcube.ai/news" },
-  { id: "research", label: "Research", href: "https://upcube.ai/research" },
-  {
-    id: "enterprise",
-    label: "Enterprise",
-    href: "https://upcube.ai/enterprise",
-  },
-  { id: "trust", label: "Trust", href: "https://upcube.ai/trust" },
+  { id: "news", label: "News", href: "/news" },
+  { id: "research", label: "Research", href: "/research" },
+  { id: "enterprise", label: "Enterprise", href: "/enterprise" },
+  { id: "trust", label: "Trust", href: "/trust" },
 ];
 
 export function UpcubeUniversalHeader({
@@ -27,7 +23,7 @@ export function UpcubeUniversalHeader({
     <header className={["uuh-header", className].filter(Boolean).join(" ")}>
       <div className="uuh-shell">
         <Link
-          href="https://upcube.ai"
+          href="/"
           className="uuh-brand"
           aria-label="Upcube home"
           prefetch={false}

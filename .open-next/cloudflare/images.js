@@ -1,7 +1,5 @@
 // <define:__IMAGES_DEVICE_SIZES__>
-var define_IMAGES_DEVICE_SIZES_default = [
-  640, 750, 828, 1080, 1200, 1920, 2048, 3840,
-];
+var define_IMAGES_DEVICE_SIZES_default = [640, 750, 828, 1080, 1200, 1920, 2048, 3840];
 
 // <define:__IMAGES_FORMATS__>
 var define_IMAGES_FORMATS_default = ["image/avif", "image/webp"];
@@ -10,26 +8,13 @@ var define_IMAGES_FORMATS_default = ["image/avif", "image/webp"];
 var define_IMAGES_IMAGE_SIZES_default = [32, 48, 64, 96, 128, 256, 384];
 
 // <define:__IMAGES_LOCAL_PATTERNS__>
-var define_IMAGES_LOCAL_PATTERNS_default = [
-  {
-    pathname:
-      "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/?)$",
-    search: "",
-  },
-];
+var define_IMAGES_LOCAL_PATTERNS_default = [{ pathname: "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/?)$", search: "" }];
 
 // <define:__IMAGES_QUALITIES__>
 var define_IMAGES_QUALITIES_default = [75];
 
 // <define:__IMAGES_REMOTE_PATTERNS__>
-var define_IMAGES_REMOTE_PATTERNS_default = [
-  {
-    protocol: "https",
-    hostname: "^(?:^(?:cdn\\.shopify\\.com)$)$",
-    pathname:
-      "^(?:\\/s\\/files(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$",
-  },
-];
+var define_IMAGES_REMOTE_PATTERNS_default = [{ protocol: "https", hostname: "^(?:^(?:cdn\\.shopify\\.com)$)$", pathname: "^(?:\\/s\\/files(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$" }];
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/utils/error.js
 function isOpenNextError(e) {
@@ -53,17 +38,10 @@ var DOWNPLAYED_ERROR_LOGS = [
   {
     clientName: "S3Client",
     commandName: "GetObjectCommand",
-    errorName: "NoSuchKey",
-  },
+    errorName: "NoSuchKey"
+  }
 ];
-var isDownplayedErrorLog = (errorLog) =>
-  DOWNPLAYED_ERROR_LOGS.some(
-    (downplayedInput) =>
-      downplayedInput.clientName === errorLog?.clientName &&
-      downplayedInput.commandName === errorLog?.commandName &&
-      (downplayedInput.errorName === errorLog?.error?.name ||
-        downplayedInput.errorName === errorLog?.error?.Code),
-  );
+var isDownplayedErrorLog = (errorLog) => DOWNPLAYED_ERROR_LOGS.some((downplayedInput) => downplayedInput.clientName === errorLog?.clientName && downplayedInput.commandName === errorLog?.commandName && (downplayedInput.errorName === errorLog?.error?.name || downplayedInput.errorName === errorLog?.error?.Code));
 function error(...args) {
   if (args.some((arg) => isDownplayedErrorLog(arg))) {
     return debug(...args);
@@ -74,18 +52,10 @@ function error(...args) {
       return;
     }
     if (error2.logLevel === 0) {
-      return console.log(
-        ...args.map((arg) =>
-          isOpenNextError(arg) ? `${arg.name}: ${arg.message}` : arg,
-        ),
-      );
+      return console.log(...args.map((arg) => isOpenNextError(arg) ? `${arg.name}: ${arg.message}` : arg));
     }
     if (error2.logLevel === 1) {
-      return warn(
-        ...args.map((arg) =>
-          isOpenNextError(arg) ? `${arg.name}: ${arg.message}` : arg,
-        ),
-      );
+      return warn(...args.map((arg) => isOpenNextError(arg) ? `${arg.name}: ${arg.message}` : arg));
     }
     return console.error(...args);
   }
@@ -110,19 +80,16 @@ async function handleImageRequest(requestURL, requestHeaders, env) {
   const parseResult = parseImageRequest(requestURL, requestHeaders);
   if (!parseResult.ok) {
     return new Response(parseResult.message, {
-      status: 400,
+      status: 400
     });
   }
   let imageResponse;
   if (parseResult.url.startsWith("/")) {
     if (env.ASSETS === void 0) {
       error("env.ASSETS binding is not defined");
-      return new Response(
-        '"url" parameter is valid but upstream response is invalid',
-        {
-          status: 404,
-        },
-      );
+      return new Response('"url" parameter is valid but upstream response is invalid', {
+        status: 404
+      });
     }
     const absoluteURL = new URL(parseResult.url, requestURL);
     imageResponse = await env.ASSETS.fetch(absoluteURL);
@@ -135,32 +102,23 @@ async function handleImageRequest(requestURL, requestHeaders, env) {
     }
     if (!fetchImageResult.ok) {
       if (fetchImageResult.error === "timed_out") {
-        return new Response(
-          '"url" parameter is valid but upstream response timed out',
-          {
-            status: 504,
-          },
-        );
+        return new Response('"url" parameter is valid but upstream response timed out', {
+          status: 504
+        });
       }
       if (fetchImageResult.error === "too_many_redirects") {
-        return new Response(
-          '"url" parameter is valid but upstream response is invalid',
-          {
-            status: 508,
-          },
-        );
+        return new Response('"url" parameter is valid but upstream response is invalid', {
+          status: 508
+        });
       }
       throw new Error("Failed to fetch image");
     }
     imageResponse = fetchImageResult.response;
   }
   if (!imageResponse.ok || imageResponse.body === null) {
-    return new Response(
-      '"url" parameter is valid but upstream response is invalid',
-      {
-        status: imageResponse.status,
-      },
-    );
+    return new Response('"url" parameter is valid but upstream response is invalid', {
+      status: imageResponse.status
+    });
   }
   let immutable = false;
   if (parseResult.static) {
@@ -178,24 +136,18 @@ async function handleImageRequest(requestURL, requestHeaders, env) {
   const { contentType, imageStream } = readHeaderResult;
   if (contentType === null) {
     warn(`Failed to detect content type of "${parseResult.url}"`);
-    return new Response(
-      '"url" parameter is valid but image type is not allowed',
-      {
-        status: 400,
-      },
-    );
+    return new Response('"url" parameter is valid but image type is not allowed', {
+      status: 400
+    });
   }
   if (contentType === SVG) {
     if (true) {
-      return new Response(
-        '"url" parameter is valid but image type is not allowed',
-        {
-          status: 400,
-        },
-      );
+      return new Response('"url" parameter is valid but image type is not allowed', {
+        status: 400
+      });
     }
     const response2 = createImageResponse(imageStream, contentType, {
-      immutable,
+      immutable
     });
     return response2;
   }
@@ -203,59 +155,50 @@ async function handleImageRequest(requestURL, requestHeaders, env) {
     if (env.IMAGES === void 0) {
       warn("env.IMAGES binding is not defined");
       const response3 = createImageResponse(imageStream, contentType, {
-        immutable,
+        immutable
       });
       return response3;
     }
     const imageSource = env.IMAGES.input(imageStream);
-    const imageTransformationResult = await imageSource
-      .transform({
-        width: parseResult.width,
-        fit: "scale-down",
-      })
-      .output({
-        quality: parseResult.quality,
-        format: GIF,
-      });
+    const imageTransformationResult = await imageSource.transform({
+      width: parseResult.width,
+      fit: "scale-down"
+    }).output({
+      quality: parseResult.quality,
+      format: GIF
+    });
     const outputImageStream = imageTransformationResult.image();
     const response2 = createImageResponse(outputImageStream, GIF, {
-      immutable,
+      immutable
     });
     return response2;
   }
-  if (
-    contentType === AVIF ||
-    contentType === WEBP ||
-    contentType === JPEG ||
-    contentType === PNG
-  ) {
+  if (contentType === AVIF || contentType === WEBP || contentType === JPEG || contentType === PNG) {
     if (env.IMAGES === void 0) {
       warn("env.IMAGES binding is not defined");
       const response3 = createImageResponse(imageStream, contentType, {
-        immutable,
+        immutable
       });
       return response3;
     }
     const outputFormat = parseResult.format ?? contentType;
     const imageSource = env.IMAGES.input(imageStream);
-    const imageTransformationResult = await imageSource
-      .transform({
-        width: parseResult.width,
-        fit: "scale-down",
-      })
-      .output({
-        quality: parseResult.quality,
-        format: outputFormat,
-      });
+    const imageTransformationResult = await imageSource.transform({
+      width: parseResult.width,
+      fit: "scale-down"
+    }).output({
+      quality: parseResult.quality,
+      format: outputFormat
+    });
     const outputImageStream = imageTransformationResult.image();
     const response2 = createImageResponse(outputImageStream, outputFormat, {
-      immutable,
+      immutable
     });
     return response2;
   }
   warn(`Image content type ${contentType} not supported`);
   const response = createImageResponse(imageStream, contentType, {
-    immutable,
+    immutable
   });
   return response;
 }
@@ -263,14 +206,14 @@ async function handleCdnCgiImageRequest(requestURL, env) {
   const parseResult = parseCdnCgiImageRequest(requestURL.pathname);
   if (!parseResult.ok) {
     return new Response(parseResult.message, {
-      status: 400,
+      status: 400
     });
   }
   let imageResponse;
   if (parseResult.url.startsWith("/")) {
     if (env.ASSETS === void 0) {
       return new Response("env.ASSETS binding is not defined", {
-        status: 404,
+        status: 404
       });
     }
     const absoluteURL = new URL(parseResult.url, requestURL);
@@ -279,12 +222,9 @@ async function handleCdnCgiImageRequest(requestURL, env) {
     imageResponse = await fetch(parseResult.url);
   }
   if (!imageResponse.ok || imageResponse.body === null) {
-    return new Response(
-      '"url" parameter is valid but upstream response is invalid',
-      {
-        status: imageResponse.status,
-      },
-    );
+    return new Response('"url" parameter is valid but upstream response is invalid', {
+      status: imageResponse.status
+    });
   }
   const readHeaderResult = await readImageHeader(imageResponse);
   if (readHeaderResult instanceof Response) {
@@ -292,42 +232,28 @@ async function handleCdnCgiImageRequest(requestURL, env) {
   }
   const { contentType, imageStream } = readHeaderResult;
   if (contentType === null || !SUPPORTED_CDN_CGI_INPUT_TYPES.has(contentType)) {
-    return new Response(
-      '"url" parameter is valid but image type is not allowed',
-      {
-        status: 400,
-      },
-    );
+    return new Response('"url" parameter is valid but image type is not allowed', {
+      status: 400
+    });
   }
   if (contentType === SVG && true) {
-    return new Response(
-      '"url" parameter is valid but image type is not allowed',
-      {
-        status: 400,
-      },
-    );
+    return new Response('"url" parameter is valid but image type is not allowed', {
+      status: 400
+    });
   }
   return new Response(imageStream, {
-    headers: { "Content-Type": contentType },
+    headers: { "Content-Type": contentType }
   });
 }
 function parseCdnCgiImageRequest(pathname) {
-  const match = pathname.match(
-    /^\/cdn-cgi\/image\/(?<options>[^/]+)\/(?<url>.+)$/,
-  );
-  if (
-    match === null || // Valid URLs have at least one option
-    !match.groups?.options ||
-    !match.groups?.url
-  ) {
+  const match = pathname.match(/^\/cdn-cgi\/image\/(?<options>[^/]+)\/(?<url>.+)$/);
+  if (match === null || // Valid URLs have at least one option
+  !match.groups?.options || !match.groups?.url) {
     return { ok: false, message: "Invalid /cdn-cgi/image/ URL format" };
   }
   const imageUrl = match.groups.url;
   if (imageUrl.startsWith("/")) {
-    return {
-      ok: false,
-      message: '"url" parameter cannot be a protocol-relative URL (//)',
-    };
+    return { ok: false, message: '"url" parameter cannot be a protocol-relative URL (//)' };
   }
   let resolvedUrl;
   if (imageUrl.match(/^https?:\/\//)) {
@@ -338,7 +264,7 @@ function parseCdnCgiImageRequest(pathname) {
   return {
     ok: true,
     url: resolvedUrl,
-    static: false,
+    static: false
   };
 }
 async function readImageHeader(imageResponse) {
@@ -348,12 +274,9 @@ async function readImageHeader(imageResponse) {
   const readResult = await reader.readAtLeast(32, headerBytes);
   if (readResult.value === void 0) {
     await imageResponse.body.cancel();
-    return new Response(
-      '"url" parameter is valid but upstream response is invalid',
-      {
-        status: 400,
-      },
-    );
+    return new Response('"url" parameter is valid but upstream response is invalid', {
+      status: 400
+    });
   }
   const contentType = detectImageContentType(readResult.value);
   return { contentType, imageStream };
@@ -363,13 +286,13 @@ async function fetchWithRedirects(url, timeoutMS, maxRedirectCount) {
   try {
     response = await fetch(url, {
       signal: AbortSignal.timeout(timeoutMS),
-      redirect: "manual",
+      redirect: "manual"
     });
   } catch (e) {
     if (e instanceof Error && e.name === "TimeoutError") {
       const result2 = {
         ok: false,
-        error: "timed_out",
+        error: "timed_out"
       };
       return result2;
     }
@@ -381,7 +304,7 @@ async function fetchWithRedirects(url, timeoutMS, maxRedirectCount) {
       if (maxRedirectCount < 1) {
         const result3 = {
           ok: false,
-          error: "too_many_redirects",
+          error: "too_many_redirects"
         };
         return result3;
       }
@@ -391,17 +314,13 @@ async function fetchWithRedirects(url, timeoutMS, maxRedirectCount) {
       } else {
         redirectTarget = locationHeader;
       }
-      const result2 = await fetchWithRedirects(
-        redirectTarget,
-        timeoutMS,
-        maxRedirectCount - 1,
-      );
+      const result2 = await fetchWithRedirects(redirectTarget, timeoutMS, maxRedirectCount - 1);
       return result2;
     }
   }
   const result = {
     ok: true,
-    response,
+    response
   };
   return result;
 }
@@ -412,15 +331,11 @@ function createImageResponse(image, contentType, imageResponseFlags) {
       Vary: "Accept",
       "Content-Type": contentType,
       "Content-Disposition": "attachment",
-      "Content-Security-Policy":
-        "script-src 'none'; frame-src 'none'; sandbox;",
-    },
+      "Content-Security-Policy": "script-src 'none'; frame-src 'none'; sandbox;"
+    }
   });
   if (imageResponseFlags.immutable) {
-    response.headers.set(
-      "Cache-Control",
-      "public, max-age=315360000, immutable",
-    );
+    response.headers.set("Cache-Control", "public, max-age=315360000, immutable");
   }
   return response;
 }
@@ -452,7 +367,7 @@ function parseImageRequest(requestURL, requestHeaders) {
     width: widthOrError,
     quality: qualityOrError,
     format,
-    static: parsedUrlOrError.static,
+    static: parsedUrlOrError.static
   };
   return result;
 }
@@ -461,14 +376,14 @@ function validateUrlQueryParameter(requestURL) {
   if (urls.length < 1) {
     const result = {
       ok: false,
-      message: '"url" parameter is required',
+      message: '"url" parameter is required'
     };
     return result;
   }
   if (urls.length > 1) {
     const result = {
       ok: false,
-      message: '"url" parameter cannot be an array',
+      message: '"url" parameter cannot be an array'
     };
     return result;
   }
@@ -476,26 +391,24 @@ function validateUrlQueryParameter(requestURL) {
   if (url.length > 3072) {
     const result = {
       ok: false,
-      message: '"url" parameter is too long',
+      message: '"url" parameter is too long'
     };
     return result;
   }
   if (url.startsWith("//")) {
     const result = {
       ok: false,
-      message: '"url" parameter cannot be a protocol-relative URL (//)',
+      message: '"url" parameter cannot be a protocol-relative URL (//)'
     };
     return result;
   }
   if (url.startsWith("/")) {
-    const staticAsset = url.startsWith(
-      `${__NEXT_BASE_PATH__ || ""}/_next/static/media`,
-    );
+    const staticAsset = url.startsWith(`${__NEXT_BASE_PATH__ || ""}/_next/static/media`);
     const pathname = getPathnameFromRelativeURL(url);
     if (/\/_next\/image($|\/)/.test(decodeURIComponent(pathname))) {
       const result = {
         ok: false,
-        message: '"url" parameter cannot be recursive',
+        message: '"url" parameter cannot be recursive'
       };
       return result;
     }
@@ -518,14 +431,14 @@ function validateUrlQueryParameter(requestURL) {
   if (!validProtocols.includes(parsedURL.protocol)) {
     const result = {
       ok: false,
-      message: '"url" parameter is invalid',
+      message: '"url" parameter is invalid'
     };
     return result;
   }
   if (!hasRemoteMatch(define_IMAGES_REMOTE_PATTERNS_default, parsedURL)) {
     const result = {
       ok: false,
-      message: '"url" parameter is not allowed',
+      message: '"url" parameter is not allowed'
     };
     return result;
   }
@@ -536,14 +449,14 @@ function validateWidthQueryParameter(requestURL) {
   if (widthQueryValues.length < 1) {
     const result = {
       ok: false,
-      message: '"w" parameter (width) is required',
+      message: '"w" parameter (width) is required'
     };
     return result;
   }
   if (widthQueryValues.length > 1) {
     const result = {
       ok: false,
-      message: '"w" parameter (width) cannot be an array',
+      message: '"w" parameter (width) cannot be an array'
     };
     return result;
   }
@@ -551,7 +464,7 @@ function validateWidthQueryParameter(requestURL) {
   if (!/^[0-9]+$/.test(widthQueryValue)) {
     const result = {
       ok: false,
-      message: '"w" parameter (width) must be an integer greater than 0',
+      message: '"w" parameter (width) must be an integer greater than 0'
     };
     return result;
   }
@@ -559,17 +472,15 @@ function validateWidthQueryParameter(requestURL) {
   if (width <= 0 || isNaN(width)) {
     const result = {
       ok: false,
-      message: '"w" parameter (width) must be an integer greater than 0',
+      message: '"w" parameter (width) must be an integer greater than 0'
     };
     return result;
   }
-  const sizeValid =
-    define_IMAGES_DEVICE_SIZES_default.includes(width) ||
-    define_IMAGES_IMAGE_SIZES_default.includes(width);
+  const sizeValid = define_IMAGES_DEVICE_SIZES_default.includes(width) || define_IMAGES_IMAGE_SIZES_default.includes(width);
   if (!sizeValid) {
     const result = {
       ok: false,
-      message: `"w" parameter (width) of ${width} is not allowed`,
+      message: `"w" parameter (width) of ${width} is not allowed`
     };
     return result;
   }
@@ -580,14 +491,14 @@ function validateQualityQueryParameter(requestURL) {
   if (qualityQueryValues.length < 1) {
     const result = {
       ok: false,
-      message: '"q" parameter (quality) is required',
+      message: '"q" parameter (quality) is required'
     };
     return result;
   }
   if (qualityQueryValues.length > 1) {
     const result = {
       ok: false,
-      message: '"q" parameter (quality) cannot be an array',
+      message: '"q" parameter (quality) cannot be an array'
     };
     return result;
   }
@@ -595,7 +506,7 @@ function validateQualityQueryParameter(requestURL) {
   if (!/^[0-9]+$/.test(qualityQueryValue)) {
     const result = {
       ok: false,
-      message: '"q" parameter (quality) must be an integer between 1 and 100',
+      message: '"q" parameter (quality) must be an integer between 1 and 100'
     };
     return result;
   }
@@ -603,14 +514,14 @@ function validateQualityQueryParameter(requestURL) {
   if (isNaN(quality) || quality < 1 || quality > 100) {
     const result = {
       ok: false,
-      message: '"q" parameter (quality) must be an integer between 1 and 100',
+      message: '"q" parameter (quality) must be an integer between 1 and 100'
     };
     return result;
   }
   if (!define_IMAGES_QUALITIES_default.includes(quality)) {
     const result = {
       ok: false,
-      message: `"q" parameter (quality) of ${quality} is not allowed`,
+      message: `"q" parameter (quality) of ${quality} is not allowed`
     };
     return result;
   }
@@ -633,7 +544,7 @@ function parseRelativeURL(relativeURL) {
   if (!relativeURL.includes("?")) {
     const result2 = {
       pathname: relativeURL,
-      search: "",
+      search: ""
     };
     return result2;
   }
@@ -642,7 +553,7 @@ function parseRelativeURL(relativeURL) {
   const search = "?" + parts.slice(1).join("?");
   const result = {
     pathname,
-    search,
+    search
   };
   return result;
 }
@@ -662,19 +573,13 @@ function hasRemoteMatch(remotePatterns, url) {
   return false;
 }
 function matchRemotePattern(pattern, url) {
-  if (
-    pattern.protocol !== void 0 &&
-    pattern.protocol.replace(/:$/, "") !== url.protocol.replace(/:$/, "")
-  ) {
+  if (pattern.protocol !== void 0 && pattern.protocol.replace(/:$/, "") !== url.protocol.replace(/:$/, "")) {
     return false;
   }
   if (pattern.port !== void 0 && pattern.port !== url.port) {
     return false;
   }
-  if (
-    pattern.hostname === void 0 ||
-    !new RegExp(pattern.hostname).test(url.hostname)
-  ) {
+  if (pattern.hostname === void 0 || !new RegExp(pattern.hostname).test(url.hostname)) {
     return false;
   }
   if (pattern.search !== void 0 && pattern.search !== url.search) {
@@ -695,14 +600,7 @@ var ICO = "image/x-icon";
 var ICNS = "image/x-icns";
 var TIFF = "image/tiff";
 var BMP = "image/bmp";
-var SUPPORTED_CDN_CGI_INPUT_TYPES = /* @__PURE__ */ new Set([
-  JPEG,
-  PNG,
-  GIF,
-  WEBP,
-  SVG,
-  HEIC,
-]);
+var SUPPORTED_CDN_CGI_INPUT_TYPES = /* @__PURE__ */ new Set([JPEG, PNG, GIF, WEBP, SVG, HEIC]);
 function detectImageContentType(buffer) {
   if ([255, 216, 255].every((b, i) => buffer[i] === b)) {
     return JPEG;
@@ -713,11 +611,7 @@ function detectImageContentType(buffer) {
   if ([71, 73, 70, 56].every((b, i) => buffer[i] === b)) {
     return GIF;
   }
-  if (
-    [82, 73, 70, 70, 0, 0, 0, 0, 87, 69, 66, 80].every(
-      (b, i) => !b || buffer[i] === b,
-    )
-  ) {
+  if ([82, 73, 70, 70, 0, 0, 0, 0, 87, 69, 66, 80].every((b, i) => !b || buffer[i] === b)) {
     return WEBP;
   }
   if ([60, 63, 120, 109, 108].every((b, i) => buffer[i] === b)) {
@@ -726,11 +620,7 @@ function detectImageContentType(buffer) {
   if ([60, 115, 118, 103].every((b, i) => buffer[i] === b)) {
     return SVG;
   }
-  if (
-    [0, 0, 0, 0, 102, 116, 121, 112, 97, 118, 105, 102].every(
-      (b, i) => !b || buffer[i] === b,
-    )
-  ) {
+  if ([0, 0, 0, 0, 102, 116, 121, 112, 97, 118, 105, 102].every((b, i) => !b || buffer[i] === b)) {
     return AVIF;
   }
   if ([0, 0, 1, 0].every((b, i) => buffer[i] === b)) {
@@ -748,25 +638,13 @@ function detectImageContentType(buffer) {
   if ([255, 10].every((b, i) => buffer[i] === b)) {
     return JXL;
   }
-  if (
-    [0, 0, 0, 12, 74, 88, 76, 32, 13, 10, 135, 10].every(
-      (b, i) => buffer[i] === b,
-    )
-  ) {
+  if ([0, 0, 0, 12, 74, 88, 76, 32, 13, 10, 135, 10].every((b, i) => buffer[i] === b)) {
     return JXL;
   }
-  if (
-    [0, 0, 0, 0, 102, 116, 121, 112, 104, 101, 105, 99].every(
-      (b, i) => !b || buffer[i] === b,
-    )
-  ) {
+  if ([0, 0, 0, 0, 102, 116, 121, 112, 104, 101, 105, 99].every((b, i) => !b || buffer[i] === b)) {
     return HEIC;
   }
-  if (
-    [0, 0, 0, 12, 106, 80, 32, 32, 13, 10, 135, 10].every(
-      (b, i) => buffer[i] === b,
-    )
-  ) {
+  if ([0, 0, 0, 12, 106, 80, 32, 32, 13, 10, 135, 10].every((b, i) => buffer[i] === b)) {
     return JP2;
   }
   return null;
@@ -777,5 +655,5 @@ export {
   handleImageRequest,
   matchLocalPattern,
   matchRemotePattern,
-  parseCdnCgiImageRequest,
+  parseCdnCgiImageRequest
 };

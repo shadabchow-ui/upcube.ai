@@ -10,6 +10,62 @@ import {
   portalHomepageCards,
   portalMenuGroups,
 } from "lib/upcube-portal/content";
+import {
+  UPCUBE_BOOKS_URL,
+  UPCUBE_CLOUD_URL,
+  UPCUBE_GAMES_URL,
+  UPCUBE_JOBS_URL,
+  UPCUBE_PLANET_URL,
+} from "lib/upcube-universal/product-links";
+
+const currentAppLinks = [
+  {
+    id: "app-ai-home",
+    label: "Ethen",
+    href: HOME_CHAT_CTA_HREF,
+    placeholder: false,
+  },
+  {
+    id: "app-planet-home",
+    label: "Planet",
+    href: UPCUBE_PLANET_URL,
+    placeholder: false,
+  },
+  {
+    id: "app-books-home",
+    label: "Books",
+    href: UPCUBE_BOOKS_URL,
+    placeholder: false,
+  },
+  {
+    id: "app-games-home",
+    label: "Games",
+    href: UPCUBE_GAMES_URL,
+    placeholder: false,
+  },
+  {
+    id: "app-jobs-home",
+    label: "Jobs",
+    href: UPCUBE_JOBS_URL,
+    placeholder: false,
+  },
+  {
+    id: "app-cloud-home",
+    label: "Cloud",
+    href: UPCUBE_CLOUD_URL,
+    placeholder: false,
+  },
+];
+
+const footerGroups = portalFooterGroups.map((group) =>
+  group.id === "products"
+    ? {
+        ...group,
+        title: "Apps",
+        links: currentAppLinks,
+      }
+    : group,
+);
 
 function LinkMeta({ placeholder }: { placeholder?: boolean }) {
   return placeholder ? <small>Placeholder destination</small> : null;
@@ -313,11 +369,11 @@ export default function UpcubeHomePage() {
           <div>
             <p className="uc-home__brand-text">UpcubeAI</p>
             <p className="uc-home__footer-copy">
-              Main ecosystem portal for UpcubeAI, Upcube Earth, Upcube Books,
-              Upcube Games, Upcube Jobs, Upcube Cloud, Ventari, and commerce.
+              Main ecosystem portal for Ethen, Planet, Books, Games, Jobs, and
+              Cloud across UpcubeAI.
             </p>
           </div>
-          {portalFooterGroups.map((group) => (
+          {footerGroups.map((group) => (
             <nav key={group.id} aria-label={`${group.title} links`}>
               <h3>{group.title}</h3>
               {group.links.map((item) => (

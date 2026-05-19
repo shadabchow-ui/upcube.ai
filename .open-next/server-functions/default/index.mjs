@@ -1,73 +1,44 @@
-globalThis.monorepoPackagePath = "";
-globalThis.openNextDebug = false;
-globalThis.openNextVersion = "4.0.2";
-globalThis.nextVersion = "15.6.0";
+globalThis.monorepoPackagePath = "";globalThis.openNextDebug = false;globalThis.openNextVersion = "4.0.2";globalThis.nextVersion = "15.6.0";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __require = /* @__PURE__ */ ((x) =>
-  typeof require !== "undefined"
-    ? require
-    : typeof Proxy !== "undefined"
-      ? new Proxy(x, {
-          get: (a, b) => (typeof require !== "undefined" ? require : a)[b],
-        })
-      : x)(function (x) {
+var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
+  get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
+}) : x)(function(x) {
   if (typeof require !== "undefined") return require.apply(this, arguments);
   throw Error('Dynamic require of "' + x + '" is not supported');
 });
-var __esm = (fn, res) =>
-  function __init() {
-    return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])((fn = 0))), res;
-  };
-var __commonJS = (cb, mod3) =>
-  function __require2() {
-    return (
-      mod3 ||
-        (0, cb[__getOwnPropNames(cb)[0]])(
-          (mod3 = { exports: {} }).exports,
-          mod3,
-        ),
-      mod3.exports
-    );
-  };
+var __esm = (fn, res) => function __init() {
+  return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
+};
+var __commonJS = (cb, mod3) => function __require2() {
+  return mod3 || (0, cb[__getOwnPropNames(cb)[0]])((mod3 = { exports: {} }).exports, mod3), mod3.exports;
+};
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
-  if ((from && typeof from === "object") || typeof from === "function") {
+  if (from && typeof from === "object" || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, {
-          get: () => from[key],
-          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
-        });
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
   }
   return to;
 };
-var __reExport = (target, mod3, secondTarget) => (
-  __copyProps(target, mod3, "default"),
-  secondTarget && __copyProps(secondTarget, mod3, "default")
-);
-var __toESM = (mod3, isNodeMode, target) => (
-  (target = mod3 != null ? __create(__getProtoOf(mod3)) : {}),
-  __copyProps(
-    // If the importer is in node compatibility mode or this is not an ESM
-    // file that has been converted to a CommonJS file using a Babel-
-    // compatible transform (i.e. "__esModule" has not been set), then set
-    // "default" to the CommonJS "module.exports" for node compatibility.
-    isNodeMode || !mod3 || !mod3.__esModule
-      ? __defProp(target, "default", { value: mod3, enumerable: true })
-      : target,
-    mod3,
-  )
-);
-var __toCommonJS = (mod3) =>
-  __copyProps(__defProp({}, "__esModule", { value: true }), mod3);
+var __reExport = (target, mod3, secondTarget) => (__copyProps(target, mod3, "default"), secondTarget && __copyProps(secondTarget, mod3, "default"));
+var __toESM = (mod3, isNodeMode, target) => (target = mod3 != null ? __create(__getProtoOf(mod3)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod3 || !mod3.__esModule ? __defProp(target, "default", { value: mod3, enumerable: true }) : target,
+  mod3
+));
+var __toCommonJS = (mod3) => __copyProps(__defProp({}, "__esModule", { value: true }), mod3);
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/utils/error.js
 function isOpenNextError(e) {
@@ -98,7 +69,7 @@ var init_error = __esm({
         this.name = "FatalError";
       }
     };
-  },
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/adapters/logger.js
@@ -120,18 +91,10 @@ function error(...args) {
       return;
     }
     if (error2.logLevel === 0) {
-      return console.log(
-        ...args.map((arg) =>
-          isOpenNextError(arg) ? `${arg.name}: ${arg.message}` : arg,
-        ),
-      );
+      return console.log(...args.map((arg) => isOpenNextError(arg) ? `${arg.name}: ${arg.message}` : arg));
     }
     if (error2.logLevel === 1) {
-      return warn(
-        ...args.map((arg) =>
-          isOpenNextError(arg) ? `${arg.name}: ${arg.message}` : arg,
-        ),
-      );
+      return warn(...args.map((arg) => isOpenNextError(arg) ? `${arg.name}: ${arg.message}` : arg));
     }
     return console.error(...args);
   }
@@ -158,18 +121,11 @@ var init_logger = __esm({
       {
         clientName: "S3Client",
         commandName: "GetObjectCommand",
-        errorName: "NoSuchKey",
-      },
+        errorName: "NoSuchKey"
+      }
     ];
-    isDownplayedErrorLog = (errorLog) =>
-      DOWNPLAYED_ERROR_LOGS.some(
-        (downplayedInput) =>
-          downplayedInput.clientName === errorLog?.clientName &&
-          downplayedInput.commandName === errorLog?.commandName &&
-          (downplayedInput.errorName === errorLog?.error?.name ||
-            downplayedInput.errorName === errorLog?.error?.Code),
-      );
-  },
+    isDownplayedErrorLog = (errorLog) => DOWNPLAYED_ERROR_LOGS.some((downplayedInput) => downplayedInput.clientName === errorLog?.clientName && downplayedInput.commandName === errorLog?.commandName && (downplayedInput.errorName === errorLog?.error?.name || downplayedInput.errorName === errorLog?.error?.Code));
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/http/util.js
@@ -215,9 +171,7 @@ var init_util = __esm({
           if (value.length === 1 || value[0] === value[1]) {
             result[keyLower] = value[0];
           } else {
-            warn(
-              "Multiple different values for Location header found. Using the last one",
-            );
+            warn("Multiple different values for Location header found. Using the last one");
             result[keyLower] = value[value.length - 1];
           }
           continue;
@@ -235,7 +189,7 @@ var init_util = __esm({
       }
       return String(header);
     };
-  },
+  }
 });
 
 // node-built-in-modules:node:module
@@ -244,33 +198,31 @@ import * as node_module_star from "node:module";
 var init_node_module = __esm({
   "node-built-in-modules:node:module"() {
     __reExport(node_module_exports, node_module_star);
-  },
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/utils/stream.js
 import { ReadableStream as ReadableStream2 } from "node:stream/web";
 function emptyReadableStream() {
   if (process.env.OPEN_NEXT_FORCE_NON_EMPTY_RESPONSE === "true") {
-    return new ReadableStream2(
-      {
-        pull(controller) {
-          maybeSomethingBuffer ??= Buffer.from("SOMETHING");
-          controller.enqueue(maybeSomethingBuffer);
-          controller.close();
-        },
-      },
-      { highWaterMark: 0 },
-    );
+    return new ReadableStream2({
+      pull(controller) {
+        maybeSomethingBuffer ??= Buffer.from("SOMETHING");
+        controller.enqueue(maybeSomethingBuffer);
+        controller.close();
+      }
+    }, { highWaterMark: 0 });
   }
   return new ReadableStream2({
     start(controller) {
       controller.close();
-    },
+    }
   });
 }
 var maybeSomethingBuffer;
 var init_stream = __esm({
-  "node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/utils/stream.js"() {},
+  "node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/utils/stream.js"() {
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/overrides/converters/utils.js
@@ -280,7 +232,7 @@ function getQueryFromSearchParams(searchParams) {
 var init_utils = __esm({
   "node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/overrides/converters/utils.js"() {
     init_util();
-  },
+  }
 });
 
 // node_modules/.pnpm/cookie@1.1.1/node_modules/cookie/dist/index.js
@@ -298,25 +250,27 @@ var require_dist = __commonJS({
     exports.serialize = stringifySetCookie;
     var cookieNameRegExp = /^[\u0021-\u003A\u003C\u003E-\u007E]+$/;
     var cookieValueRegExp = /^[\u0021-\u003A\u003C-\u007E]*$/;
-    var domainValueRegExp =
-      /^([.]?[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)([.][a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)*$/i;
+    var domainValueRegExp = /^([.]?[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)([.][a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)*$/i;
     var pathValueRegExp = /^[\u0020-\u003A\u003D-\u007E]*$/;
     var maxAgeRegExp = /^-?\d+$/;
     var __toString = Object.prototype.toString;
     var NullObject = /* @__PURE__ */ (() => {
-      const C = function () {};
+      const C = function() {
+      };
       C.prototype = /* @__PURE__ */ Object.create(null);
       return C;
     })();
     function parseCookie(str, options) {
       const obj = new NullObject();
       const len = str.length;
-      if (len < 2) return obj;
+      if (len < 2)
+        return obj;
       const dec = options?.decode || decode;
       let index = 0;
       do {
         const eqIdx = eqIndex(str, index, len);
-        if (eqIdx === -1) break;
+        if (eqIdx === -1)
+          break;
         const endIdx = endIndex(str, index, len);
         if (eqIdx > endIdx) {
           index = str.lastIndexOf(";", eqIdx - 1) + 1;
@@ -335,7 +289,8 @@ var require_dist = __commonJS({
       const cookieStrings = [];
       for (const name of Object.keys(cookie)) {
         const val = cookie[name];
-        if (val === void 0) continue;
+        if (val === void 0)
+          continue;
         if (!cookieNameRegExp.test(name)) {
           throw new TypeError(`cookie name is invalid: ${name}`);
         }
@@ -348,10 +303,7 @@ var require_dist = __commonJS({
       return cookieStrings.join("; ");
     }
     function stringifySetCookie(_name, _val, _opts) {
-      const cookie =
-        typeof _name === "object"
-          ? _name
-          : { ..._opts, name: _name, value: String(_val) };
+      const cookie = typeof _name === "object" ? _name : { ..._opts, name: _name, value: String(_val) };
       const options = typeof _val === "object" ? _val : _opts;
       const enc = options?.encode || encodeURIComponent;
       if (!cookieNameRegExp.test(cookie.name)) {
@@ -381,10 +333,7 @@ var require_dist = __commonJS({
         str += "; Path=" + cookie.path;
       }
       if (cookie.expires) {
-        if (
-          !isDate(cookie.expires) ||
-          !Number.isFinite(cookie.expires.valueOf())
-        ) {
+        if (!isDate(cookie.expires) || !Number.isFinite(cookie.expires.valueOf())) {
           throw new TypeError(`option expires is invalid: ${cookie.expires}`);
         }
         str += "; Expires=" + cookie.expires.toUTCString();
@@ -399,10 +348,7 @@ var require_dist = __commonJS({
         str += "; Partitioned";
       }
       if (cookie.priority) {
-        const priority =
-          typeof cookie.priority === "string"
-            ? cookie.priority.toLowerCase()
-            : void 0;
+        const priority = typeof cookie.priority === "string" ? cookie.priority.toLowerCase() : void 0;
         switch (priority) {
           case "low":
             str += "; Priority=Low";
@@ -414,16 +360,11 @@ var require_dist = __commonJS({
             str += "; Priority=High";
             break;
           default:
-            throw new TypeError(
-              `option priority is invalid: ${cookie.priority}`,
-            );
+            throw new TypeError(`option priority is invalid: ${cookie.priority}`);
         }
       }
       if (cookie.sameSite) {
-        const sameSite =
-          typeof cookie.sameSite === "string"
-            ? cookie.sameSite.toLowerCase()
-            : cookie.sameSite;
+        const sameSite = typeof cookie.sameSite === "string" ? cookie.sameSite.toLowerCase() : cookie.sameSite;
         switch (sameSite) {
           case true:
           case "strict":
@@ -436,9 +377,7 @@ var require_dist = __commonJS({
             str += "; SameSite=None";
             break;
           default:
-            throw new TypeError(
-              `option sameSite is invalid: ${cookie.sameSite}`,
-            );
+            throw new TypeError(`option sameSite is invalid: ${cookie.sameSite}`);
         }
       }
       return str;
@@ -448,23 +387,16 @@ var require_dist = __commonJS({
       const len = str.length;
       const endIdx = endIndex(str, 0, len);
       const eqIdx = eqIndex(str, 0, endIdx);
-      const setCookie =
-        eqIdx === -1
-          ? { name: "", value: dec(valueSlice(str, 0, endIdx)) }
-          : {
-              name: valueSlice(str, 0, eqIdx),
-              value: dec(valueSlice(str, eqIdx + 1, endIdx)),
-            };
+      const setCookie = eqIdx === -1 ? { name: "", value: dec(valueSlice(str, 0, endIdx)) } : {
+        name: valueSlice(str, 0, eqIdx),
+        value: dec(valueSlice(str, eqIdx + 1, endIdx))
+      };
       let index = endIdx + 1;
       while (index < len) {
         const endIdx2 = endIndex(str, index, len);
         const eqIdx2 = eqIndex(str, index, endIdx2);
-        const attr =
-          eqIdx2 === -1
-            ? valueSlice(str, index, endIdx2)
-            : valueSlice(str, index, eqIdx2);
-        const val =
-          eqIdx2 === -1 ? void 0 : valueSlice(str, eqIdx2 + 1, endIdx2);
+        const attr = eqIdx2 === -1 ? valueSlice(str, index, endIdx2) : valueSlice(str, index, eqIdx2);
+        const val = eqIdx2 === -1 ? void 0 : valueSlice(str, eqIdx2 + 1, endIdx2);
         switch (attr.toLowerCase()) {
           case "httponly":
             setCookie.httpOnly = true;
@@ -482,32 +414,29 @@ var require_dist = __commonJS({
             setCookie.path = val;
             break;
           case "max-age":
-            if (val && maxAgeRegExp.test(val)) setCookie.maxAge = Number(val);
+            if (val && maxAgeRegExp.test(val))
+              setCookie.maxAge = Number(val);
             break;
           case "expires":
-            if (!val) break;
+            if (!val)
+              break;
             const date = new Date(val);
-            if (Number.isFinite(date.valueOf())) setCookie.expires = date;
+            if (Number.isFinite(date.valueOf()))
+              setCookie.expires = date;
             break;
           case "priority":
-            if (!val) break;
+            if (!val)
+              break;
             const priority = val.toLowerCase();
-            if (
-              priority === "low" ||
-              priority === "medium" ||
-              priority === "high"
-            ) {
+            if (priority === "low" || priority === "medium" || priority === "high") {
               setCookie.priority = priority;
             }
             break;
           case "samesite":
-            if (!val) break;
+            if (!val)
+              break;
             const sameSite = val.toLowerCase();
-            if (
-              sameSite === "lax" ||
-              sameSite === "strict" ||
-              sameSite === "none"
-            ) {
+            if (sameSite === "lax" || sameSite === "strict" || sameSite === "none") {
               setCookie.sameSite = sameSite;
             }
             break;
@@ -529,17 +458,20 @@ var require_dist = __commonJS({
       let end = max;
       do {
         const code = str.charCodeAt(start);
-        if (code !== 32 && code !== 9) break;
+        if (code !== 32 && code !== 9)
+          break;
       } while (++start < end);
       while (end > start) {
         const code = str.charCodeAt(end - 1);
-        if (code !== 32 && code !== 9) break;
+        if (code !== 32 && code !== 9)
+          break;
         end--;
       }
       return str.slice(start, end);
     }
     function decode(str) {
-      if (str.indexOf("%") === -1) return str;
+      if (str.indexOf("%") === -1)
+        return str;
       try {
         return decodeURIComponent(str);
       } catch (e) {
@@ -549,13 +481,13 @@ var require_dist = __commonJS({
     function isDate(val) {
       return __toString.call(val) === "[object Date]";
     }
-  },
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/overrides/converters/edge.js
 var edge_exports = {};
 __export(edge_exports, {
-  default: () => edge_default,
+  default: () => edge_default
 });
 import { Buffer as Buffer2 } from "node:buffer";
 var import_cookie, NULL_BODY_STATUSES, converter, edge_default;
@@ -577,13 +509,9 @@ var init_edge = __esm({
         const rawPath = url.pathname;
         const method = event.method;
         const shouldHaveBody = method !== "GET" && method !== "HEAD";
-        const body = shouldHaveBody
-          ? Buffer2.from(await event.arrayBuffer())
-          : void 0;
+        const body = shouldHaveBody ? Buffer2.from(await event.arrayBuffer()) : void 0;
         const cookieHeader = event.headers.get("cookie");
-        const cookies = cookieHeader
-          ? import_cookie.default.parse(cookieHeader)
-          : {};
+        const cookies = cookieHeader ? import_cookie.default.parse(cookieHeader) : {};
         return {
           type: "core",
           method,
@@ -593,7 +521,7 @@ var init_edge = __esm({
           headers,
           remoteAddress: event.headers.get("x-forwarded-for") ?? "::1",
           query,
-          cookies,
+          cookies
         };
       },
       convertTo: async (result) => {
@@ -603,25 +531,18 @@ var init_edge = __esm({
             method: result.internalEvent.method,
             headers: {
               ...result.internalEvent.headers,
-              "x-forwarded-host": result.internalEvent.headers.host,
-            },
+              "x-forwarded-host": result.internalEvent.headers.host
+            }
           });
-          if (
-            globalThis.__dangerous_ON_edge_converter_returns_request === true
-          ) {
+          if (globalThis.__dangerous_ON_edge_converter_returns_request === true) {
             return request;
           }
-          const cfCache =
-            (result.isISR ||
-              result.internalEvent.rawPath.startsWith("/_next/image")) &&
-            process.env.DISABLE_CACHE !== "true"
-              ? { cacheEverything: true }
-              : {};
+          const cfCache = (result.isISR || result.internalEvent.rawPath.startsWith("/_next/image")) && process.env.DISABLE_CACHE !== "true" ? { cacheEverything: true } : {};
           return fetch(request, {
             // This is a hack to make sure that the response is cached by Cloudflare
             // See https://developers.cloudflare.com/workers/examples/cache-using-fetch/#caching-html-resources
             // @ts-expect-error - This is a Cloudflare specific option
-            cf: cfCache,
+            cf: cfCache
           });
         }
         const headers = new Headers();
@@ -641,128 +562,122 @@ var init_edge = __esm({
             headers.set(key, value);
           }
         }
-        const body = NULL_BODY_STATUSES.has(result.statusCode)
-          ? null
-          : result.body;
+        const body = NULL_BODY_STATUSES.has(result.statusCode) ? null : result.body;
         return new Response(body, {
           status: result.statusCode,
-          headers,
+          headers
         });
       },
-      name: "edge",
+      name: "edge"
     };
     edge_default = converter;
-  },
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/overrides/wrappers/cloudflare-node.js
 var cloudflare_node_exports = {};
 __export(cloudflare_node_exports, {
-  default: () => cloudflare_node_default,
+  default: () => cloudflare_node_default
 });
 import { Writable } from "node:stream";
 var NULL_BODY_STATUSES2, handler, cloudflare_node_default;
 var init_cloudflare_node = __esm({
   "node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/overrides/wrappers/cloudflare-node.js"() {
     NULL_BODY_STATUSES2 = /* @__PURE__ */ new Set([101, 204, 205, 304]);
-    handler =
-      async (handler3, converter2) =>
-      async (request, env, ctx, abortSignal) => {
-        globalThis.process = process;
-        for (const [key, value] of Object.entries(env)) {
-          if (typeof value === "string") {
-            process.env[key] = value;
-          }
+    handler = async (handler3, converter2) => async (request, env, ctx, abortSignal) => {
+      globalThis.process = process;
+      for (const [key, value] of Object.entries(env)) {
+        if (typeof value === "string") {
+          process.env[key] = value;
         }
-        const internalEvent = await converter2.convertFrom(request);
-        const url = new URL(request.url);
-        const { promise: promiseResponse, resolve: resolveResponse } =
-          Promise.withResolvers();
-        const streamCreator = {
-          writeHeaders(prelude) {
-            const { statusCode, cookies, headers } = prelude;
-            const responseHeaders = new Headers(headers);
-            for (const cookie of cookies) {
-              responseHeaders.append("Set-Cookie", cookie);
-            }
-            if (url.hostname === "localhost") {
-              responseHeaders.set("Content-Encoding", "identity");
-            }
-            if (NULL_BODY_STATUSES2.has(statusCode)) {
-              const response2 = new Response(null, {
-                status: statusCode,
-                headers: responseHeaders,
-              });
-              resolveResponse(response2);
-              return new Writable({
-                write(chunk, encoding, callback) {
-                  callback();
-                },
-              });
-            }
-            let controller;
-            const readable = new ReadableStream({
-              start(c) {
-                controller = c;
-              },
-            });
-            const response = new Response(readable, {
+      }
+      const internalEvent = await converter2.convertFrom(request);
+      const url = new URL(request.url);
+      const { promise: promiseResponse, resolve: resolveResponse } = Promise.withResolvers();
+      const streamCreator = {
+        writeHeaders(prelude) {
+          const { statusCode, cookies, headers } = prelude;
+          const responseHeaders = new Headers(headers);
+          for (const cookie of cookies) {
+            responseHeaders.append("Set-Cookie", cookie);
+          }
+          if (url.hostname === "localhost") {
+            responseHeaders.set("Content-Encoding", "identity");
+          }
+          if (NULL_BODY_STATUSES2.has(statusCode)) {
+            const response2 = new Response(null, {
               status: statusCode,
-              headers: responseHeaders,
+              headers: responseHeaders
             });
-            resolveResponse(response);
+            resolveResponse(response2);
             return new Writable({
               write(chunk, encoding, callback) {
-                try {
-                  controller.enqueue(chunk);
-                } catch (e) {
-                  return callback(e);
-                }
                 callback();
-              },
-              final(callback) {
-                controller.close();
-                callback();
-              },
-              destroy(error2, callback) {
-                if (error2) {
-                  controller.error(error2);
-                } else {
-                  try {
-                    controller.close();
-                  } catch {}
-                }
-                callback(error2);
-              },
+              }
             });
-          },
-          // This is for passing along the original abort signal from the initial Request you retrieve in your worker
-          // Ensures that the response we pass to NextServer is aborted if the request is aborted
-          // By doing this `request.signal.onabort` will work in route handlers
-          abortSignal,
-          // There is no need to retain the chunks that were pushed to the response stream.
-          retainChunks: false,
-        };
-        ctx.waitUntil(
-          handler3(internalEvent, {
-            streamCreator,
-            waitUntil: ctx.waitUntil.bind(ctx),
-          }),
-        );
-        return promiseResponse;
+          }
+          let controller;
+          const readable = new ReadableStream({
+            start(c) {
+              controller = c;
+            }
+          });
+          const response = new Response(readable, {
+            status: statusCode,
+            headers: responseHeaders
+          });
+          resolveResponse(response);
+          return new Writable({
+            write(chunk, encoding, callback) {
+              try {
+                controller.enqueue(chunk);
+              } catch (e) {
+                return callback(e);
+              }
+              callback();
+            },
+            final(callback) {
+              controller.close();
+              callback();
+            },
+            destroy(error2, callback) {
+              if (error2) {
+                controller.error(error2);
+              } else {
+                try {
+                  controller.close();
+                } catch {
+                }
+              }
+              callback(error2);
+            }
+          });
+        },
+        // This is for passing along the original abort signal from the initial Request you retrieve in your worker
+        // Ensures that the response we pass to NextServer is aborted if the request is aborted
+        // By doing this `request.signal.onabort` will work in route handlers
+        abortSignal,
+        // There is no need to retain the chunks that were pushed to the response stream.
+        retainChunks: false
       };
+      ctx.waitUntil(handler3(internalEvent, {
+        streamCreator,
+        waitUntil: ctx.waitUntil.bind(ctx)
+      }));
+      return promiseResponse;
+    };
     cloudflare_node_default = {
       wrapper: handler,
       name: "cloudflare-node",
-      supportStreaming: true,
+      supportStreaming: true
     };
-  },
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/overrides/tagCache/dummy.js
 var dummy_exports = {};
 __export(dummy_exports, {
-  default: () => dummy_default,
+  default: () => dummy_default
 });
 var dummyTagCache, dummy_default;
 var init_dummy = __esm({
@@ -784,16 +699,16 @@ var init_dummy = __esm({
       },
       isStale: async (_path) => {
         return false;
-      },
+      }
     };
     dummy_default = dummyTagCache;
-  },
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/overrides/queue/dummy.js
 var dummy_exports2 = {};
 __export(dummy_exports2, {
-  default: () => dummy_default2,
+  default: () => dummy_default2
 });
 var dummyQueue, dummy_default2;
 var init_dummy2 = __esm({
@@ -803,16 +718,16 @@ var init_dummy2 = __esm({
       name: "dummy",
       send: async () => {
         throw new FatalError("Dummy queue is not implemented");
-      },
+      }
     };
     dummy_default2 = dummyQueue;
-  },
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/overrides/incrementalCache/dummy.js
 var dummy_exports3 = {};
 __export(dummy_exports3, {
-  default: () => dummy_default3,
+  default: () => dummy_default3
 });
 var dummyIncrementalCache, dummy_default3;
 var init_dummy3 = __esm({
@@ -828,31 +743,31 @@ var init_dummy3 = __esm({
       },
       delete: async () => {
         throw new IgnorableError('"Dummy" cache does not cache anything');
-      },
+      }
     };
     dummy_default3 = dummyIncrementalCache;
-  },
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/overrides/assetResolver/dummy.js
 var dummy_exports4 = {};
 __export(dummy_exports4, {
-  default: () => dummy_default4,
+  default: () => dummy_default4
 });
 var resolver, dummy_default4;
 var init_dummy4 = __esm({
   "node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/overrides/assetResolver/dummy.js"() {
     resolver = {
-      name: "dummy",
+      name: "dummy"
     };
     dummy_default4 = resolver;
-  },
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/overrides/proxyExternalRequest/fetch.js
 var fetch_exports = {};
 __export(fetch_exports, {
-  default: () => fetch_default,
+  default: () => fetch_default
 });
 var fetchProxy, fetch_default;
 var init_fetch = __esm({
@@ -863,15 +778,11 @@ var init_fetch = __esm({
       // @ts-ignore
       proxy: async (internalEvent) => {
         const { url, headers: eventHeaders, method, body } = internalEvent;
-        const headers = Object.fromEntries(
-          Object.entries(eventHeaders).filter(
-            ([key]) => key.toLowerCase() !== "cf-connecting-ip",
-          ),
-        );
+        const headers = Object.fromEntries(Object.entries(eventHeaders).filter(([key]) => key.toLowerCase() !== "cf-connecting-ip"));
         const response = await fetch(url, {
           method,
           headers,
-          body,
+          body
         });
         const responseHeaders = {};
         response.headers.forEach((value, key) => {
@@ -889,18 +800,18 @@ var init_fetch = __esm({
           headers: responseHeaders,
           statusCode: response.status,
           isBase64Encoded: true,
-          body: response.body ?? emptyReadableStream(),
+          body: response.body ?? emptyReadableStream()
         };
-      },
+      }
     };
     fetch_default = fetchProxy;
-  },
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/overrides/cdnInvalidation/dummy.js
 var dummy_exports5 = {};
 __export(dummy_exports5, {
-  default: () => dummy_default5,
+  default: () => dummy_default5
 });
 var dummy_default5;
 var init_dummy5 = __esm({
@@ -909,9 +820,9 @@ var init_dummy5 = __esm({
       name: "dummy",
       invalidatePaths: (_) => {
         return Promise.resolve();
-      },
+      }
     };
-  },
+  }
 });
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/core/createMainHandler.js
@@ -990,12 +901,7 @@ var OpenNextNodeResponse = class extends Transform {
     this.onEnd = onEnd;
     this.streamCreator = streamCreator;
     this.initialHeaders = initialHeaders;
-    if (
-      statusCode &&
-      Number.isInteger(statusCode) &&
-      statusCode >= 100 &&
-      statusCode <= 599
-    ) {
+    if (statusCode && Number.isInteger(statusCode) && statusCode >= 100 && statusCode <= 599) {
       this.statusCode = statusCode;
     }
     streamCreator?.abortSignal?.addEventListener("abort", () => {
@@ -1008,9 +914,7 @@ var OpenNextNodeResponse = class extends Transform {
     return this;
   }
   get finished() {
-    return this.responseStream
-      ? this.responseStream?.writableFinished
-      : this.writableFinished;
+    return this.responseStream ? this.responseStream?.writableFinished : this.writableFinished;
   }
   setHeader(name, value) {
     const key = name.toLowerCase();
@@ -1052,27 +956,17 @@ var OpenNextNodeResponse = class extends Transform {
   // Only used directly in next@14+
   flushHeaders() {
     this.headersSent = true;
-    const mergeHeadersPriority =
-      globalThis.__openNextAls?.getStore()?.mergeHeadersPriority ??
-      "middleware";
+    const mergeHeadersPriority = globalThis.__openNextAls?.getStore()?.mergeHeadersPriority ?? "middleware";
     if (this.initialHeaders) {
-      this.headers =
-        mergeHeadersPriority === "middleware"
-          ? {
-              ...this.headers,
-              ...this.initialHeaders,
-            }
-          : {
-              ...this.initialHeaders,
-              ...this.headers,
-            };
-      const initialCookies = parseSetCookieHeader(
-        this.initialHeaders[SET_COOKIE_HEADER]?.toString(),
-      );
-      this._cookies =
-        mergeHeadersPriority === "middleware"
-          ? [...this._cookies, ...initialCookies]
-          : [...initialCookies, ...this._cookies];
+      this.headers = mergeHeadersPriority === "middleware" ? {
+        ...this.headers,
+        ...this.initialHeaders
+      } : {
+        ...this.initialHeaders,
+        ...this.headers
+      };
+      const initialCookies = parseSetCookieHeader(this.initialHeaders[SET_COOKIE_HEADER]?.toString());
+      this._cookies = mergeHeadersPriority === "middleware" ? [...this._cookies, ...initialCookies] : [...initialCookies, ...this._cookies];
     }
     this.fixHeaders(this.headers);
     this.fixHeadersForError();
@@ -1083,7 +977,7 @@ var OpenNextNodeResponse = class extends Transform {
       this.responseStream = this.streamCreator?.writeHeaders({
         statusCode: this.statusCode ?? 200,
         cookies: this._cookies,
-        headers: parsedHeaders,
+        headers: parsedHeaders
       });
       this.pipe(this.responseStream);
     }
@@ -1095,9 +989,7 @@ var OpenNextNodeResponse = class extends Transform {
     }
     const existingHeader = this.getHeader(key);
     const toAppend = Array.isArray(value) ? value : [value];
-    const newValue = Array.isArray(existingHeader)
-      ? [...existingHeader, ...toAppend]
-      : [existingHeader, ...toAppend];
+    const newValue = Array.isArray(existingHeader) ? [...existingHeader, ...toAppend] : [existingHeader, ...toAppend];
     return this.setHeader(key, newValue);
   }
   writeHead(statusCode, statusMessage, headers) {
@@ -1166,16 +1058,12 @@ var OpenNextNodeResponse = class extends Transform {
     if (!this.headersSent) {
       this.flushHeaders();
     }
-    globalThis.__openNextAls
-      ?.getStore()
-      ?.pendingPromiseRunner.add(this.onEnd(this.headers));
+    globalThis.__openNextAls?.getStore()?.pendingPromiseRunner.add(this.onEnd(this.headers));
     this.streamCreator?.onFinish?.(this.bodyLength);
-    if (
-      this.bodyLength === 0 && // We use an env variable here because not all aws account have the same behavior
-      // On some aws accounts the response will hang if the body is empty
-      // We are modifying the response body here, this is not a good practice
-      process.env.OPEN_NEXT_FORCE_NON_EMPTY_RESPONSE === "true"
-    ) {
+    if (this.bodyLength === 0 && // We use an env variable here because not all aws account have the same behavior
+    // On some aws accounts the response will hang if the body is empty
+    // We are modifying the response body here, this is not a good practice
+    process.env.OPEN_NEXT_FORCE_NON_EMPTY_RESPONSE === "true") {
       debug('Force writing "SOMETHING" to the response body');
       this.push("SOMETHING");
     }
@@ -1200,10 +1088,9 @@ var OpenNextNodeResponse = class extends Transform {
   }
   getHeaderValues(name) {
     const values = this.getHeader(name);
-    if (values === void 0) return void 0;
-    return (Array.isArray(values) ? values : [values]).map((value) =>
-      value.toString(),
-    );
+    if (values === void 0)
+      return void 0;
+    return (Array.isArray(values) ? values : [values]).map((value) => value.toString());
   }
   send() {
     for (const chunk of this._chunks) {
@@ -1233,8 +1120,7 @@ var OpenNextNodeResponse = class extends Transform {
       return;
     }
     if (this.statusCode === 404 || this.statusCode === 500) {
-      this.headers["cache-control"] =
-        "private, no-cache, no-store, max-age=0, must-revalidate";
+      this.headers["cache-control"] = "private, no-cache, no-store, max-age=0, must-revalidate";
     }
   }
 };
@@ -1249,7 +1135,7 @@ var IncomingMessage = class extends http.IncomingMessage {
       remoteAddress,
       address: () => ({ port: 443 }),
       end: Function.prototype,
-      destroy: Function.prototype,
+      destroy: Function.prototype
     });
     if (body) {
       headers["content-length"] ??= String(Buffer.byteLength(body));
@@ -1263,7 +1149,7 @@ var IncomingMessage = class extends http.IncomingMessage {
       method,
       headers,
       body,
-      url,
+      url
     });
     this._read = () => {
       this.push(body);
@@ -1323,9 +1209,7 @@ var DetachedPromiseRunner = class {
   }
   async await() {
     debug(`Awaiting ${this.promises.length} detached promises`);
-    const results = await Promise.allSettled(
-      this.promises.map((p) => p.promise),
-    );
+    const results = await Promise.allSettled(this.promises.map((p) => p.promise));
     const rejectedPromises = results.filter((r) => r.status === "rejected");
     rejectedPromises.forEach((r) => {
       error(r.reason);
@@ -1334,8 +1218,7 @@ var DetachedPromiseRunner = class {
 };
 async function awaitAllDetachedPromise() {
   const store = globalThis.__openNextAls.getStore();
-  const promisesToAwait =
-    store?.pendingPromiseRunner.await() ?? Promise.resolve();
+  const promisesToAwait = store?.pendingPromiseRunner.await() ?? Promise.resolve();
   if (store?.waitUntil) {
     store.waitUntil(promisesToAwait);
     return;
@@ -1346,42 +1229,35 @@ function provideNextAfterProvider() {
   const NEXT_REQUEST_CONTEXT_SYMBOL = Symbol.for("@next/request-context");
   const VERCEL_REQUEST_CONTEXT_SYMBOL = Symbol.for("@vercel/request-context");
   const store = globalThis.__openNextAls.getStore();
-  const waitUntil =
-    store?.waitUntil ?? ((promise) => store?.pendingPromiseRunner.add(promise));
+  const waitUntil = store?.waitUntil ?? ((promise) => store?.pendingPromiseRunner.add(promise));
   const nextAfterContext = {
     get: () => ({
-      waitUntil,
-    }),
+      waitUntil
+    })
   };
   globalThis[NEXT_REQUEST_CONTEXT_SYMBOL] = nextAfterContext;
   if (process.env.EMULATE_VERCEL_REQUEST_CONTEXT) {
     globalThis[VERCEL_REQUEST_CONTEXT_SYMBOL] = nextAfterContext;
   }
 }
-function runWithOpenNextRequestContext(
-  { isISRRevalidation, waitUntil, requestId = Math.random().toString(36) },
-  fn,
-) {
-  return globalThis.__openNextAls.run(
-    {
-      requestId,
-      pendingPromiseRunner: new DetachedPromiseRunner(),
-      isISRRevalidation,
-      waitUntil,
-      writtenTags: /* @__PURE__ */ new Set(),
-      requestCache: new RequestCache(),
-    },
-    async () => {
-      provideNextAfterProvider();
-      let result;
-      try {
-        result = await fn();
-      } finally {
-        await awaitAllDetachedPromise();
-      }
-      return result;
-    },
-  );
+function runWithOpenNextRequestContext({ isISRRevalidation, waitUntil, requestId = Math.random().toString(36) }, fn) {
+  return globalThis.__openNextAls.run({
+    requestId,
+    pendingPromiseRunner: new DetachedPromiseRunner(),
+    isISRRevalidation,
+    waitUntil,
+    writtenTags: /* @__PURE__ */ new Set(),
+    requestCache: new RequestCache()
+  }, async () => {
+    provideNextAfterProvider();
+    let result;
+    try {
+      result = await fn();
+    } finally {
+      await awaitAllDetachedPromise();
+    }
+    return result;
+  });
 }
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/adapters/config/index.js
@@ -1391,1734 +1267,14 @@ globalThis.__dirname ??= "";
 var NEXT_DIR = path.join(__dirname, ".next");
 var OPEN_NEXT_DIR = path.join(__dirname, ".open-next");
 debug({ NEXT_DIR, OPEN_NEXT_DIR });
-var NextConfig = {
-  env: {},
-  webpack: null,
-  typescript: { ignoreBuildErrors: false },
-  typedRoutes: false,
-  distDir: ".next",
-  cleanDistDir: true,
-  assetPrefix: "",
-  cacheMaxMemorySize: 52428800,
-  configOrigin: "next.config.ts",
-  useFileSystemPublicRoutes: true,
-  generateEtags: true,
-  pageExtensions: ["tsx", "ts", "jsx", "js"],
-  poweredByHeader: true,
-  compress: true,
-  images: {
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [32, 48, 64, 96, 128, 256, 384],
-    path: "/_next/image",
-    loader: "default",
-    loaderFile: "",
-    domains: [],
-    disableStaticImages: false,
-    minimumCacheTTL: 14400,
-    formats: ["image/avif", "image/webp"],
-    maximumRedirects: 3,
-    dangerouslyAllowLocalIP: false,
-    dangerouslyAllowSVG: false,
-    contentSecurityPolicy: "script-src 'none'; frame-src 'none'; sandbox;",
-    contentDispositionType: "attachment",
-    localPatterns: [{ pathname: "**", search: "" }],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.shopify.com",
-        pathname: "/s/files/**",
-      },
-    ],
-    qualities: [75],
-    unoptimized: false,
-  },
-  devIndicators: { position: "bottom-left" },
-  onDemandEntries: { maxInactiveAge: 6e4, pagesBufferLength: 5 },
-  basePath: "",
-  sassOptions: {},
-  trailingSlash: false,
-  i18n: null,
-  productionBrowserSourceMaps: false,
-  excludeDefaultMomentLocales: true,
-  reactProductionProfiling: false,
-  reactStrictMode: null,
-  reactMaxHeadersLength: 6e3,
-  httpAgentOptions: { keepAlive: true },
-  logging: {},
-  compiler: {},
-  expireTime: 31536e3,
-  staticPageGenerationTimeout: 60,
-  output: "standalone",
-  modularizeImports: {
-    "@mui/icons-material": { transform: "@mui/icons-material/{{member}}" },
-    lodash: { transform: "lodash/{{member}}" },
-  },
-  outputFileTracingRoot: "/Users/sha/Documents/AI/upcubemain/commerce-main",
-  experimental: {
-    useSkewCookie: false,
-    cacheLife: {
-      default: { stale: 300, revalidate: 900, expire: 4294967294 },
-      seconds: { stale: 30, revalidate: 1, expire: 60 },
-      minutes: { stale: 300, revalidate: 60, expire: 3600 },
-      hours: { stale: 300, revalidate: 3600, expire: 86400 },
-      days: { stale: 300, revalidate: 86400, expire: 604800 },
-      weeks: { stale: 300, revalidate: 604800, expire: 2592e3 },
-      max: { stale: 300, revalidate: 2592e3, expire: 31536e3 },
-    },
-    cacheHandlers: {},
-    cssChunking: true,
-    multiZoneDraftMode: false,
-    appNavFailHandling: false,
-    prerenderEarlyExit: true,
-    serverMinification: true,
-    serverSourceMaps: false,
-    linkNoTouchStart: false,
-    caseSensitiveRoutes: false,
-    clientSegmentCache: true,
-    rdcForNavigations: true,
-    clientParamParsing: false,
-    dynamicOnHover: false,
-    preloadEntriesOnStart: true,
-    clientRouterFilter: true,
-    clientRouterFilterRedirects: false,
-    fetchCacheKeyPrefix: "",
-    middlewarePrefetch: "flexible",
-    optimisticClientCache: true,
-    manualClientBasePath: false,
-    cpus: 9,
-    memoryBasedWorkersCount: false,
-    imgOptConcurrency: null,
-    imgOptTimeoutInSeconds: 7,
-    imgOptMaxInputPixels: 268402689,
-    imgOptSequentialRead: null,
-    imgOptSkipMetadata: null,
-    isrFlushToDisk: true,
-    workerThreads: false,
-    optimizeCss: false,
-    nextScriptWorkers: false,
-    scrollRestoration: false,
-    externalDir: false,
-    disableOptimizedLoading: false,
-    gzipSize: true,
-    craCompat: false,
-    esmExternals: true,
-    fullySpecified: false,
-    swcTraceProfiling: false,
-    forceSwcTransforms: false,
-    largePageDataBytes: 128e3,
-    typedEnv: false,
-    parallelServerCompiles: false,
-    parallelServerBuildTraces: false,
-    ppr: true,
-    authInterrupts: false,
-    webpackMemoryOptimizations: false,
-    optimizeServerReact: true,
-    viewTransition: false,
-    routerBFCache: false,
-    removeUncaughtErrorAndRejectionListeners: false,
-    validateRSCRequestHeaders: true,
-    staleTimes: { dynamic: 0, static: 300 },
-    reactDebugChannel: false,
-    serverComponentsHmrCache: true,
-    staticGenerationMaxConcurrency: 8,
-    staticGenerationMinPagesPerWorker: 25,
-    cacheComponents: false,
-    inlineCss: true,
-    useCache: true,
-    globalNotFound: false,
-    browserDebugInfoInTerminal: false,
-    lockDistDir: true,
-    isolatedDevBuild: true,
-    middlewareClientMaxBodySize: 10485760,
-    optimizePackageImports: [
-      "lucide-react",
-      "date-fns",
-      "lodash-es",
-      "ramda",
-      "antd",
-      "react-bootstrap",
-      "ahooks",
-      "@ant-design/icons",
-      "@headlessui/react",
-      "@headlessui-float/react",
-      "@heroicons/react/20/solid",
-      "@heroicons/react/24/solid",
-      "@heroicons/react/24/outline",
-      "@visx/visx",
-      "@tremor/react",
-      "rxjs",
-      "@mui/material",
-      "@mui/icons-material",
-      "recharts",
-      "react-use",
-      "effect",
-      "@effect/schema",
-      "@effect/platform",
-      "@effect/platform-node",
-      "@effect/platform-browser",
-      "@effect/platform-bun",
-      "@effect/sql",
-      "@effect/sql-mssql",
-      "@effect/sql-mysql2",
-      "@effect/sql-pg",
-      "@effect/sql-sqlite-node",
-      "@effect/sql-sqlite-bun",
-      "@effect/sql-sqlite-wasm",
-      "@effect/sql-sqlite-react-native",
-      "@effect/rpc",
-      "@effect/rpc-http",
-      "@effect/typeclass",
-      "@effect/experimental",
-      "@effect/opentelemetry",
-      "@material-ui/core",
-      "@material-ui/icons",
-      "@tabler/icons-react",
-      "mui-core",
-      "react-icons/ai",
-      "react-icons/bi",
-      "react-icons/bs",
-      "react-icons/cg",
-      "react-icons/ci",
-      "react-icons/di",
-      "react-icons/fa",
-      "react-icons/fa6",
-      "react-icons/fc",
-      "react-icons/fi",
-      "react-icons/gi",
-      "react-icons/go",
-      "react-icons/gr",
-      "react-icons/hi",
-      "react-icons/hi2",
-      "react-icons/im",
-      "react-icons/io",
-      "react-icons/io5",
-      "react-icons/lia",
-      "react-icons/lib",
-      "react-icons/lu",
-      "react-icons/md",
-      "react-icons/pi",
-      "react-icons/ri",
-      "react-icons/rx",
-      "react-icons/si",
-      "react-icons/sl",
-      "react-icons/tb",
-      "react-icons/tfi",
-      "react-icons/ti",
-      "react-icons/vsc",
-      "react-icons/wi",
-    ],
-    trustHostHeader: false,
-    isExperimentalCompile: false,
-  },
-  htmlLimitedBots:
-    "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-  bundlePagesRouterDependencies: false,
-  configFileName: "next.config.ts",
-  turbopack: { root: "/Users/sha/Documents/AI/upcubemain/commerce-main" },
-};
-var BuildId = "VU5JVFnLsxyFgjvEA3PdC";
+var NextConfig = { "env": {}, "webpack": null, "typescript": { "ignoreBuildErrors": false }, "typedRoutes": false, "distDir": ".next", "cleanDistDir": true, "assetPrefix": "", "cacheMaxMemorySize": 52428800, "configOrigin": "next.config.ts", "useFileSystemPublicRoutes": true, "generateEtags": true, "pageExtensions": ["tsx", "ts", "jsx", "js"], "poweredByHeader": true, "compress": true, "images": { "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840], "imageSizes": [32, 48, 64, 96, 128, 256, 384], "path": "/_next/image", "loader": "default", "loaderFile": "", "domains": [], "disableStaticImages": false, "minimumCacheTTL": 14400, "formats": ["image/avif", "image/webp"], "maximumRedirects": 3, "dangerouslyAllowLocalIP": false, "dangerouslyAllowSVG": false, "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;", "contentDispositionType": "attachment", "localPatterns": [{ "pathname": "**", "search": "" }], "remotePatterns": [{ "protocol": "https", "hostname": "cdn.shopify.com", "pathname": "/s/files/**" }], "qualities": [75], "unoptimized": false }, "devIndicators": { "position": "bottom-left" }, "onDemandEntries": { "maxInactiveAge": 6e4, "pagesBufferLength": 5 }, "basePath": "", "sassOptions": {}, "trailingSlash": false, "i18n": null, "productionBrowserSourceMaps": false, "excludeDefaultMomentLocales": true, "reactProductionProfiling": false, "reactStrictMode": null, "reactMaxHeadersLength": 6e3, "httpAgentOptions": { "keepAlive": true }, "logging": {}, "compiler": {}, "expireTime": 31536e3, "staticPageGenerationTimeout": 60, "output": "standalone", "modularizeImports": { "@mui/icons-material": { "transform": "@mui/icons-material/{{member}}" }, "lodash": { "transform": "lodash/{{member}}" } }, "outputFileTracingRoot": "/Users/sha/Documents/AI/upcubemain/commerce-main", "experimental": { "useSkewCookie": false, "cacheLife": { "default": { "stale": 300, "revalidate": 900, "expire": 4294967294 }, "seconds": { "stale": 30, "revalidate": 1, "expire": 60 }, "minutes": { "stale": 300, "revalidate": 60, "expire": 3600 }, "hours": { "stale": 300, "revalidate": 3600, "expire": 86400 }, "days": { "stale": 300, "revalidate": 86400, "expire": 604800 }, "weeks": { "stale": 300, "revalidate": 604800, "expire": 2592e3 }, "max": { "stale": 300, "revalidate": 2592e3, "expire": 31536e3 } }, "cacheHandlers": {}, "cssChunking": true, "multiZoneDraftMode": false, "appNavFailHandling": false, "prerenderEarlyExit": true, "serverMinification": true, "serverSourceMaps": false, "linkNoTouchStart": false, "caseSensitiveRoutes": false, "clientSegmentCache": true, "rdcForNavigations": true, "clientParamParsing": false, "dynamicOnHover": false, "preloadEntriesOnStart": true, "clientRouterFilter": true, "clientRouterFilterRedirects": false, "fetchCacheKeyPrefix": "", "middlewarePrefetch": "flexible", "optimisticClientCache": true, "manualClientBasePath": false, "cpus": 9, "memoryBasedWorkersCount": false, "imgOptConcurrency": null, "imgOptTimeoutInSeconds": 7, "imgOptMaxInputPixels": 268402689, "imgOptSequentialRead": null, "imgOptSkipMetadata": null, "isrFlushToDisk": true, "workerThreads": false, "optimizeCss": false, "nextScriptWorkers": false, "scrollRestoration": false, "externalDir": false, "disableOptimizedLoading": false, "gzipSize": true, "craCompat": false, "esmExternals": true, "fullySpecified": false, "swcTraceProfiling": false, "forceSwcTransforms": false, "largePageDataBytes": 128e3, "typedEnv": false, "parallelServerCompiles": false, "parallelServerBuildTraces": false, "ppr": true, "authInterrupts": false, "webpackMemoryOptimizations": false, "optimizeServerReact": true, "viewTransition": false, "routerBFCache": false, "removeUncaughtErrorAndRejectionListeners": false, "validateRSCRequestHeaders": true, "staleTimes": { "dynamic": 0, "static": 300 }, "reactDebugChannel": false, "serverComponentsHmrCache": true, "staticGenerationMaxConcurrency": 8, "staticGenerationMinPagesPerWorker": 25, "cacheComponents": false, "inlineCss": true, "useCache": true, "globalNotFound": false, "browserDebugInfoInTerminal": false, "lockDistDir": true, "isolatedDevBuild": true, "middlewareClientMaxBodySize": 10485760, "optimizePackageImports": ["lucide-react", "date-fns", "lodash-es", "ramda", "antd", "react-bootstrap", "ahooks", "@ant-design/icons", "@headlessui/react", "@headlessui-float/react", "@heroicons/react/20/solid", "@heroicons/react/24/solid", "@heroicons/react/24/outline", "@visx/visx", "@tremor/react", "rxjs", "@mui/material", "@mui/icons-material", "recharts", "react-use", "effect", "@effect/schema", "@effect/platform", "@effect/platform-node", "@effect/platform-browser", "@effect/platform-bun", "@effect/sql", "@effect/sql-mssql", "@effect/sql-mysql2", "@effect/sql-pg", "@effect/sql-sqlite-node", "@effect/sql-sqlite-bun", "@effect/sql-sqlite-wasm", "@effect/sql-sqlite-react-native", "@effect/rpc", "@effect/rpc-http", "@effect/typeclass", "@effect/experimental", "@effect/opentelemetry", "@material-ui/core", "@material-ui/icons", "@tabler/icons-react", "mui-core", "react-icons/ai", "react-icons/bi", "react-icons/bs", "react-icons/cg", "react-icons/ci", "react-icons/di", "react-icons/fa", "react-icons/fa6", "react-icons/fc", "react-icons/fi", "react-icons/gi", "react-icons/go", "react-icons/gr", "react-icons/hi", "react-icons/hi2", "react-icons/im", "react-icons/io", "react-icons/io5", "react-icons/lia", "react-icons/lib", "react-icons/lu", "react-icons/md", "react-icons/pi", "react-icons/ri", "react-icons/rx", "react-icons/si", "react-icons/sl", "react-icons/tb", "react-icons/tfi", "react-icons/ti", "react-icons/vsc", "react-icons/wi"], "trustHostHeader": false, "isExperimentalCompile": false }, "htmlLimitedBots": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight", "bundlePagesRouterDependencies": false, "configFileName": "next.config.ts", "turbopack": { "root": "/Users/sha/Documents/AI/upcubemain/commerce-main" } };
+var BuildId = "CtKobV0SLzOJn-9cVkb7e";
 var HtmlPages = ["/404", "/500"];
-var RoutesManifest = {
-  basePath: "",
-  rewrites: { beforeFiles: [], afterFiles: [], fallback: [] },
-  redirects: [
-    {
-      source: "/:path+/",
-      destination: "/:path+",
-      internal: true,
-      priority: true,
-      statusCode: 308,
-      regex: "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$",
-    },
-  ],
-  routes: {
-    static: [
-      { page: "/", regex: "^/(?:/)?$", routeKeys: {}, namedRegex: "^/(?:/)?$" },
-      {
-        page: "/_global-error",
-        regex: "^/_global\\-error(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/_global\\-error(?:/)?$",
-      },
-      {
-        page: "/_not-found",
-        regex: "^/_not\\-found(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/_not\\-found(?:/)?$",
-      },
-      {
-        page: "/about",
-        regex: "^/about(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/about(?:/)?$",
-      },
-      {
-        page: "/builders",
-        regex: "^/builders(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/builders(?:/)?$",
-      },
-      {
-        page: "/business",
-        regex: "^/business(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/business(?:/)?$",
-      },
-      {
-        page: "/capabilities",
-        regex: "^/capabilities(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/capabilities(?:/)?$",
-      },
-      {
-        page: "/careers",
-        regex: "^/careers(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/careers(?:/)?$",
-      },
-      {
-        page: "/chat",
-        regex: "^/chat(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/chat(?:/)?$",
-      },
-      {
-        page: "/company",
-        regex: "^/company(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/company(?:/)?$",
-      },
-      {
-        page: "/contact",
-        regex: "^/contact(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/contact(?:/)?$",
-      },
-      {
-        page: "/enterprise",
-        regex: "^/enterprise(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/enterprise(?:/)?$",
-      },
-      {
-        page: "/explore",
-        regex: "^/explore(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/explore(?:/)?$",
-      },
-      {
-        page: "/faq",
-        regex: "^/faq(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/faq(?:/)?$",
-      },
-      {
-        page: "/favicon.ico",
-        regex: "^/favicon\\.ico(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/favicon\\.ico(?:/)?$",
-      },
-      {
-        page: "/how-it-works",
-        regex: "^/how\\-it\\-works(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/how\\-it\\-works(?:/)?$",
-      },
-      {
-        page: "/news",
-        regex: "^/news(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/news(?:/)?$",
-      },
-      {
-        page: "/opengraph-image",
-        regex: "^/opengraph\\-image(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/opengraph\\-image(?:/)?$",
-      },
-      {
-        page: "/platform",
-        regex: "^/platform(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/platform(?:/)?$",
-      },
-      {
-        page: "/principles",
-        regex: "^/principles(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/principles(?:/)?$",
-      },
-      {
-        page: "/privacy",
-        regex: "^/privacy(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/privacy(?:/)?$",
-      },
-      {
-        page: "/privacy-policy",
-        regex: "^/privacy\\-policy(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/privacy\\-policy(?:/)?$",
-      },
-      {
-        page: "/research",
-        regex: "^/research(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/research(?:/)?$",
-      },
-      {
-        page: "/robots.txt",
-        regex: "^/robots\\.txt(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/robots\\.txt(?:/)?$",
-      },
-      {
-        page: "/safety",
-        regex: "^/safety(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/safety(?:/)?$",
-      },
-      {
-        page: "/search",
-        regex: "^/search(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/search(?:/)?$",
-      },
-      {
-        page: "/security-privacy",
-        regex: "^/security\\-privacy(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/security\\-privacy(?:/)?$",
-      },
-      {
-        page: "/sitemap.xml",
-        regex: "^/sitemap\\.xml(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/sitemap\\.xml(?:/)?$",
-      },
-      {
-        page: "/teams",
-        regex: "^/teams(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/teams(?:/)?$",
-      },
-      {
-        page: "/terms-of-service",
-        regex: "^/terms\\-of\\-service(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/terms\\-of\\-service(?:/)?$",
-      },
-      {
-        page: "/trust",
-        regex: "^/trust(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/trust(?:/)?$",
-      },
-      {
-        page: "/vision",
-        regex: "^/vision(?:/)?$",
-        routeKeys: {},
-        namedRegex: "^/vision(?:/)?$",
-      },
-    ],
-    dynamic: [
-      {
-        page: "/product/[handle]",
-        regex: "^/product/([^/]+?)(?:/)?$",
-        routeKeys: { nxtPhandle: "nxtPhandle" },
-        namedRegex: "^/product/(?<nxtPhandle>[^/]+?)(?:/)?$",
-        prefetchSegmentDataRoutes: [
-          {
-            destination: "/product/[handle].segments/product/$d$handle$segment",
-            source:
-              "^/product/(?<nxtPhandle>[^/]+?)\\.segments/product/\\$d\\$handle(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
-            routeKeys: { nxtPhandle: "nxtPhandle" },
-          },
-        ],
-      },
-      {
-        page: "/search/[collection]",
-        regex: "^/search/([^/]+?)(?:/)?$",
-        routeKeys: { nxtPcollection: "nxtPcollection" },
-        namedRegex: "^/search/(?<nxtPcollection>[^/]+?)(?:/)?$",
-        prefetchSegmentDataRoutes: [
-          {
-            destination:
-              "/search/[collection].segments/search/$d$collection$segment",
-            source:
-              "^/search/(?<nxtPcollection>[^/]+?)\\.segments/search/\\$d\\$collection(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
-            routeKeys: { nxtPcollection: "nxtPcollection" },
-          },
-        ],
-      },
-      {
-        page: "/search/[collection]/opengraph-image",
-        regex: "^/search/([^/]+?)/opengraph\\-image(?:/)?$",
-        routeKeys: { nxtPcollection: "nxtPcollection" },
-        namedRegex:
-          "^/search/(?<nxtPcollection>[^/]+?)/opengraph\\-image(?:/)?$",
-      },
-      {
-        page: "/updates/[slug]",
-        regex: "^/updates/([^/]+?)(?:/)?$",
-        routeKeys: { nxtPslug: "nxtPslug" },
-        namedRegex: "^/updates/(?<nxtPslug>[^/]+?)(?:/)?$",
-        prefetchSegmentDataRoutes: [
-          {
-            destination: "/updates/[slug].segments/updates/$d$slug$segment",
-            source:
-              "^/updates/(?<nxtPslug>[^/]+?)\\.segments/updates/\\$d\\$slug(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
-            routeKeys: { nxtPslug: "nxtPslug" },
-          },
-        ],
-      },
-      {
-        page: "/[page]",
-        regex: "^/([^/]+?)(?:/)?$",
-        routeKeys: { nxtPpage: "nxtPpage" },
-        namedRegex: "^/(?<nxtPpage>[^/]+?)(?:/)?$",
-        prefetchSegmentDataRoutes: [
-          {
-            destination: "/[page].segments/$d$page$segment",
-            source:
-              "^/(?<nxtPpage>[^/]+?)\\.segments/\\$d\\$page(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
-            routeKeys: { nxtPpage: "nxtPpage" },
-          },
-        ],
-      },
-      {
-        page: "/[page]/opengraph-image",
-        regex: "^/([^/]+?)/opengraph\\-image(?:/)?$",
-        routeKeys: { nxtPpage: "nxtPpage" },
-        namedRegex: "^/(?<nxtPpage>[^/]+?)/opengraph\\-image(?:/)?$",
-      },
-    ],
-    data: { static: [], dynamic: [] },
-  },
-  locales: [],
-};
-var PrerenderManifest = {
-  version: 4,
-  routes: {
-    "/_global-error": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: false,
-      srcRoute: "/_global-error",
-      dataRoute: "/_global-error.rsc",
-      prefetchDataRoute: "/_global-error.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/_not-found": {
-      initialStatus: 404,
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/_not-found",
-      dataRoute: "/_not-found.rsc",
-      prefetchDataRoute: "/_not-found.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/about": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/about",
-      dataRoute: "/about.rsc",
-      prefetchDataRoute: "/about.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/builders": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/builders",
-      dataRoute: "/builders.rsc",
-      prefetchDataRoute: "/builders.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/business": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/business",
-      dataRoute: "/business.rsc",
-      prefetchDataRoute: "/business.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/capabilities": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/capabilities",
-      dataRoute: "/capabilities.rsc",
-      prefetchDataRoute: "/capabilities.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/careers": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/careers",
-      dataRoute: "/careers.rsc",
-      prefetchDataRoute: "/careers.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/chat": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/chat",
-      dataRoute: "/chat.rsc",
-      prefetchDataRoute: "/chat.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/company": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/company",
-      dataRoute: "/company.rsc",
-      prefetchDataRoute: "/company.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/contact": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/contact",
-      dataRoute: "/contact.rsc",
-      prefetchDataRoute: "/contact.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/enterprise": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/enterprise",
-      dataRoute: "/enterprise.rsc",
-      prefetchDataRoute: "/enterprise.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/explore": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/explore",
-      dataRoute: "/explore.rsc",
-      prefetchDataRoute: "/explore.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/faq": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/faq",
-      dataRoute: "/faq.rsc",
-      prefetchDataRoute: "/faq.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/favicon.ico": {
-      initialHeaders: {
-        "cache-control": "public, max-age=0, must-revalidate",
-        "content-type": "image/x-icon",
-        "x-next-cache-tags":
-          "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico",
-      },
-      renderingMode: "STATIC",
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-      ],
-      initialRevalidateSeconds: false,
-      srcRoute: "/favicon.ico",
-      dataRoute: null,
-      prefetchDataRoute: null,
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/how-it-works": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/how-it-works",
-      dataRoute: "/how-it-works.rsc",
-      prefetchDataRoute: "/how-it-works.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/news": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/news",
-      dataRoute: "/news.rsc",
-      prefetchDataRoute: "/news.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/opengraph-image": {
-      initialHeaders: {
-        "cache-control": "public, max-age=0, must-revalidate",
-        "content-type": "image/png",
-        "x-next-cache-tags":
-          "_N_T_/layout,_N_T_/opengraph-image/layout,_N_T_/opengraph-image/route,_N_T_/opengraph-image",
-      },
-      renderingMode: "STATIC",
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-      ],
-      initialRevalidateSeconds: false,
-      srcRoute: "/opengraph-image",
-      dataRoute: null,
-      prefetchDataRoute: null,
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/",
-      dataRoute: "/index.rsc",
-      prefetchDataRoute: "/index.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/platform": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/platform",
-      dataRoute: "/platform.rsc",
-      prefetchDataRoute: "/platform.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/principles": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/principles",
-      dataRoute: "/principles.rsc",
-      prefetchDataRoute: "/principles.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/privacy-policy": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/privacy-policy",
-      dataRoute: "/privacy-policy.rsc",
-      prefetchDataRoute: "/privacy-policy.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/privacy": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/privacy",
-      dataRoute: "/privacy.rsc",
-      prefetchDataRoute: "/privacy.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/research": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/research",
-      dataRoute: "/research.rsc",
-      prefetchDataRoute: "/research.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/robots.txt": {
-      initialHeaders: {
-        "cache-control": "public, max-age=0, must-revalidate",
-        "content-type": "text/plain",
-        "x-next-cache-tags":
-          "_N_T_/layout,_N_T_/robots.txt/layout,_N_T_/robots.txt/route,_N_T_/robots.txt",
-      },
-      renderingMode: "STATIC",
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-      ],
-      initialRevalidateSeconds: false,
-      srcRoute: "/robots.txt",
-      dataRoute: null,
-      prefetchDataRoute: null,
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/safety": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/safety",
-      dataRoute: "/safety.rsc",
-      prefetchDataRoute: "/safety.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/search": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/search",
-      dataRoute: "/search.rsc",
-      prefetchDataRoute: "/search.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/security-privacy": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/security-privacy",
-      dataRoute: "/security-privacy.rsc",
-      prefetchDataRoute: "/security-privacy.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/teams": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/teams",
-      dataRoute: "/teams.rsc",
-      prefetchDataRoute: "/teams.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/terms-of-service": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/terms-of-service",
-      dataRoute: "/terms-of-service.rsc",
-      prefetchDataRoute: "/terms-of-service.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/trust": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/trust",
-      dataRoute: "/trust.rsc",
-      prefetchDataRoute: "/trust.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/updates/platform-iteration-placeholder": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/updates/[slug]",
-      dataRoute: "/updates/platform-iteration-placeholder.rsc",
-      prefetchDataRoute: "/updates/platform-iteration-placeholder.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/vision": {
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalPPR: true,
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      initialRevalidateSeconds: 86400,
-      initialExpireSeconds: 604800,
-      srcRoute: "/vision",
-      dataRoute: "/vision.rsc",
-      prefetchDataRoute: "/vision.prefetch.rsc",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-  },
-  dynamicRoutes: {
-    "/[page]": {
-      experimentalPPR: true,
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      routeRegex: "^/([^/]+?)(?:/)?$",
-      dataRoute: "/[page].rsc",
-      fallback: "/[page]",
-      fallbackRevalidate: 86400,
-      fallbackExpire: 604800,
-      fallbackRootParams: [],
-      fallbackSourceRoute: "/[page]",
-      fallbackRouteParams: [
-        {
-          paramName: "page",
-          paramType: "dynamic",
-          isParallelRouteParam: false,
-        },
-      ],
-      dataRouteRegex: "^/([^/]+?)\\.rsc$",
-      prefetchDataRoute: "/[page].prefetch.rsc",
-      prefetchDataRouteRegex: "^/([^/]+?)\\.prefetch\\.rsc$",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/product/[handle]": {
-      experimentalPPR: true,
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      routeRegex: "^/product/([^/]+?)(?:/)?$",
-      dataRoute: "/product/[handle].rsc",
-      fallback: "/product/[handle]",
-      fallbackRevalidate: 86400,
-      fallbackExpire: 604800,
-      fallbackRootParams: [],
-      fallbackSourceRoute: "/product/[handle]",
-      fallbackRouteParams: [
-        {
-          paramName: "handle",
-          paramType: "dynamic",
-          isParallelRouteParam: false,
-        },
-      ],
-      dataRouteRegex: "^/product/([^/]+?)\\.rsc$",
-      prefetchDataRoute: "/product/[handle].prefetch.rsc",
-      prefetchDataRouteRegex: "^/product/([^/]+?)\\.prefetch\\.rsc$",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/search/[collection]": {
-      experimentalPPR: true,
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      routeRegex: "^/search/([^/]+?)(?:/)?$",
-      dataRoute: "/search/[collection].rsc",
-      fallback: "/search/[collection]",
-      fallbackRevalidate: 86400,
-      fallbackExpire: 604800,
-      fallbackRootParams: [],
-      fallbackSourceRoute: "/search/[collection]",
-      fallbackRouteParams: [
-        {
-          paramName: "collection",
-          paramType: "dynamic",
-          isParallelRouteParam: false,
-        },
-      ],
-      dataRouteRegex: "^/search/([^/]+?)\\.rsc$",
-      prefetchDataRoute: "/search/[collection].prefetch.rsc",
-      prefetchDataRouteRegex: "^/search/([^/]+?)\\.prefetch\\.rsc$",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-    "/updates/[slug]": {
-      experimentalPPR: true,
-      renderingMode: "PARTIALLY_STATIC",
-      experimentalBypassFor: [
-        { type: "header", key: "next-action" },
-        {
-          type: "header",
-          key: "content-type",
-          value: "multipart/form-data;.*",
-        },
-        {
-          type: "header",
-          key: "user-agent",
-          value:
-            "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
-        },
-      ],
-      routeRegex: "^/updates/([^/]+?)(?:/)?$",
-      dataRoute: "/updates/[slug].rsc",
-      fallback: "/updates/[slug]",
-      fallbackRevalidate: 86400,
-      fallbackExpire: 604800,
-      fallbackRootParams: [],
-      fallbackSourceRoute: "/updates/[slug]",
-      fallbackRouteParams: [
-        {
-          paramName: "slug",
-          paramType: "dynamic",
-          isParallelRouteParam: false,
-        },
-      ],
-      dataRouteRegex: "^/updates/([^/]+?)\\.rsc$",
-      prefetchDataRoute: "/updates/[slug].prefetch.rsc",
-      prefetchDataRouteRegex: "^/updates/([^/]+?)\\.prefetch\\.rsc$",
-      allowHeader: [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token",
-      ],
-    },
-  },
-  notFoundRoutes: [],
-  preview: {
-    previewModeId: "423fa336db31e94b7d754de68c2a030a",
-    previewModeSigningKey:
-      "33cb8564ac0ab984f192312cee1d741096c111d8c082f69dd9f90628228e38b1",
-    previewModeEncryptionKey:
-      "9819fd15f92a75f349090a63026d90fe83ea87885d277c3a30b06bd89ccdaeab",
-  },
-};
-var MiddlewareManifest = {
-  version: 3,
-  middleware: {},
-  sortedMiddleware: [],
-  functions: {},
-};
-var AppPathRoutesManifest = {
-  "/[page]/opengraph-image/route": "/[page]/opengraph-image",
-  "/[page]/page": "/[page]",
-  "/_global-error/page": "/_global-error",
-  "/_not-found/page": "/_not-found",
-  "/about/page": "/about",
-  "/api/revalidate/route": "/api/revalidate",
-  "/builders/page": "/builders",
-  "/business/page": "/business",
-  "/capabilities/page": "/capabilities",
-  "/careers/page": "/careers",
-  "/chat/page": "/chat",
-  "/company/page": "/company",
-  "/contact/page": "/contact",
-  "/enterprise/page": "/enterprise",
-  "/explore/page": "/explore",
-  "/faq/page": "/faq",
-  "/favicon.ico/route": "/favicon.ico",
-  "/how-it-works/page": "/how-it-works",
-  "/news/page": "/news",
-  "/opengraph-image/route": "/opengraph-image",
-  "/page": "/",
-  "/platform/page": "/platform",
-  "/principles/page": "/principles",
-  "/privacy-policy/page": "/privacy-policy",
-  "/privacy/page": "/privacy",
-  "/product/[handle]/page": "/product/[handle]",
-  "/research/page": "/research",
-  "/robots.txt/route": "/robots.txt",
-  "/safety/page": "/safety",
-  "/search/[collection]/opengraph-image/route":
-    "/search/[collection]/opengraph-image",
-  "/search/[collection]/page": "/search/[collection]",
-  "/search/page": "/search",
-  "/security-privacy/page": "/security-privacy",
-  "/sitemap.xml/route": "/sitemap.xml",
-  "/teams/page": "/teams",
-  "/terms-of-service/page": "/terms-of-service",
-  "/trust/page": "/trust",
-  "/updates/[slug]/page": "/updates/[slug]",
-  "/vision/page": "/vision",
-};
-var FunctionsConfigManifest = { version: 1, functions: {} };
+var RoutesManifest = { "basePath": "", "rewrites": { "beforeFiles": [], "afterFiles": [], "fallback": [] }, "redirects": [{ "source": "/:path+/", "destination": "/:path+", "internal": true, "priority": true, "statusCode": 308, "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$" }], "routes": { "static": [{ "page": "/", "regex": "^/(?:/)?$", "routeKeys": {}, "namedRegex": "^/(?:/)?$" }, { "page": "/_global-error", "regex": "^/_global\\-error(?:/)?$", "routeKeys": {}, "namedRegex": "^/_global\\-error(?:/)?$" }, { "page": "/_not-found", "regex": "^/_not\\-found(?:/)?$", "routeKeys": {}, "namedRegex": "^/_not\\-found(?:/)?$" }, { "page": "/about", "regex": "^/about(?:/)?$", "routeKeys": {}, "namedRegex": "^/about(?:/)?$" }, { "page": "/builders", "regex": "^/builders(?:/)?$", "routeKeys": {}, "namedRegex": "^/builders(?:/)?$" }, { "page": "/business", "regex": "^/business(?:/)?$", "routeKeys": {}, "namedRegex": "^/business(?:/)?$" }, { "page": "/capabilities", "regex": "^/capabilities(?:/)?$", "routeKeys": {}, "namedRegex": "^/capabilities(?:/)?$" }, { "page": "/careers", "regex": "^/careers(?:/)?$", "routeKeys": {}, "namedRegex": "^/careers(?:/)?$" }, { "page": "/chat", "regex": "^/chat(?:/)?$", "routeKeys": {}, "namedRegex": "^/chat(?:/)?$" }, { "page": "/company", "regex": "^/company(?:/)?$", "routeKeys": {}, "namedRegex": "^/company(?:/)?$" }, { "page": "/contact", "regex": "^/contact(?:/)?$", "routeKeys": {}, "namedRegex": "^/contact(?:/)?$" }, { "page": "/enterprise", "regex": "^/enterprise(?:/)?$", "routeKeys": {}, "namedRegex": "^/enterprise(?:/)?$" }, { "page": "/explore", "regex": "^/explore(?:/)?$", "routeKeys": {}, "namedRegex": "^/explore(?:/)?$" }, { "page": "/faq", "regex": "^/faq(?:/)?$", "routeKeys": {}, "namedRegex": "^/faq(?:/)?$" }, { "page": "/favicon.ico", "regex": "^/favicon\\.ico(?:/)?$", "routeKeys": {}, "namedRegex": "^/favicon\\.ico(?:/)?$" }, { "page": "/how-it-works", "regex": "^/how\\-it\\-works(?:/)?$", "routeKeys": {}, "namedRegex": "^/how\\-it\\-works(?:/)?$" }, { "page": "/news", "regex": "^/news(?:/)?$", "routeKeys": {}, "namedRegex": "^/news(?:/)?$" }, { "page": "/opengraph-image", "regex": "^/opengraph\\-image(?:/)?$", "routeKeys": {}, "namedRegex": "^/opengraph\\-image(?:/)?$" }, { "page": "/platform", "regex": "^/platform(?:/)?$", "routeKeys": {}, "namedRegex": "^/platform(?:/)?$" }, { "page": "/principles", "regex": "^/principles(?:/)?$", "routeKeys": {}, "namedRegex": "^/principles(?:/)?$" }, { "page": "/privacy", "regex": "^/privacy(?:/)?$", "routeKeys": {}, "namedRegex": "^/privacy(?:/)?$" }, { "page": "/privacy-policy", "regex": "^/privacy\\-policy(?:/)?$", "routeKeys": {}, "namedRegex": "^/privacy\\-policy(?:/)?$" }, { "page": "/products/books", "regex": "^/products/books(?:/)?$", "routeKeys": {}, "namedRegex": "^/products/books(?:/)?$" }, { "page": "/products/cloud", "regex": "^/products/cloud(?:/)?$", "routeKeys": {}, "namedRegex": "^/products/cloud(?:/)?$" }, { "page": "/products/earth", "regex": "^/products/earth(?:/)?$", "routeKeys": {}, "namedRegex": "^/products/earth(?:/)?$" }, { "page": "/products/games", "regex": "^/products/games(?:/)?$", "routeKeys": {}, "namedRegex": "^/products/games(?:/)?$" }, { "page": "/products/jobs", "regex": "^/products/jobs(?:/)?$", "routeKeys": {}, "namedRegex": "^/products/jobs(?:/)?$" }, { "page": "/products/upcube-ai", "regex": "^/products/upcube\\-ai(?:/)?$", "routeKeys": {}, "namedRegex": "^/products/upcube\\-ai(?:/)?$" }, { "page": "/products/upcube-mobile-os", "regex": "^/products/upcube\\-mobile\\-os(?:/)?$", "routeKeys": {}, "namedRegex": "^/products/upcube\\-mobile\\-os(?:/)?$" }, { "page": "/products/upcube-os", "regex": "^/products/upcube\\-os(?:/)?$", "routeKeys": {}, "namedRegex": "^/products/upcube\\-os(?:/)?$" }, { "page": "/products/ventari", "regex": "^/products/ventari(?:/)?$", "routeKeys": {}, "namedRegex": "^/products/ventari(?:/)?$" }, { "page": "/products/vm", "regex": "^/products/vm(?:/)?$", "routeKeys": {}, "namedRegex": "^/products/vm(?:/)?$" }, { "page": "/research", "regex": "^/research(?:/)?$", "routeKeys": {}, "namedRegex": "^/research(?:/)?$" }, { "page": "/robots.txt", "regex": "^/robots\\.txt(?:/)?$", "routeKeys": {}, "namedRegex": "^/robots\\.txt(?:/)?$" }, { "page": "/safety", "regex": "^/safety(?:/)?$", "routeKeys": {}, "namedRegex": "^/safety(?:/)?$" }, { "page": "/search", "regex": "^/search(?:/)?$", "routeKeys": {}, "namedRegex": "^/search(?:/)?$" }, { "page": "/security-privacy", "regex": "^/security\\-privacy(?:/)?$", "routeKeys": {}, "namedRegex": "^/security\\-privacy(?:/)?$" }, { "page": "/sitemap.xml", "regex": "^/sitemap\\.xml(?:/)?$", "routeKeys": {}, "namedRegex": "^/sitemap\\.xml(?:/)?$" }, { "page": "/teams", "regex": "^/teams(?:/)?$", "routeKeys": {}, "namedRegex": "^/teams(?:/)?$" }, { "page": "/terms-of-service", "regex": "^/terms\\-of\\-service(?:/)?$", "routeKeys": {}, "namedRegex": "^/terms\\-of\\-service(?:/)?$" }, { "page": "/trust", "regex": "^/trust(?:/)?$", "routeKeys": {}, "namedRegex": "^/trust(?:/)?$" }, { "page": "/vision", "regex": "^/vision(?:/)?$", "routeKeys": {}, "namedRegex": "^/vision(?:/)?$" }], "dynamic": [{ "page": "/news/[slug]", "regex": "^/news/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/news/(?<nxtPslug>[^/]+?)(?:/)?$", "prefetchSegmentDataRoutes": [{ "destination": "/news/[slug].segments/news/$d$slug$segment", "source": "^/news/(?<nxtPslug>[^/]+?)\\.segments/news/\\$d\\$slug(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" } }] }, { "page": "/product/[handle]", "regex": "^/product/([^/]+?)(?:/)?$", "routeKeys": { "nxtPhandle": "nxtPhandle" }, "namedRegex": "^/product/(?<nxtPhandle>[^/]+?)(?:/)?$", "prefetchSegmentDataRoutes": [{ "destination": "/product/[handle].segments/product/$d$handle$segment", "source": "^/product/(?<nxtPhandle>[^/]+?)\\.segments/product/\\$d\\$handle(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$", "routeKeys": { "nxtPhandle": "nxtPhandle" } }] }, { "page": "/search/[collection]", "regex": "^/search/([^/]+?)(?:/)?$", "routeKeys": { "nxtPcollection": "nxtPcollection" }, "namedRegex": "^/search/(?<nxtPcollection>[^/]+?)(?:/)?$", "prefetchSegmentDataRoutes": [{ "destination": "/search/[collection].segments/search/$d$collection$segment", "source": "^/search/(?<nxtPcollection>[^/]+?)\\.segments/search/\\$d\\$collection(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$", "routeKeys": { "nxtPcollection": "nxtPcollection" } }] }, { "page": "/search/[collection]/opengraph-image", "regex": "^/search/([^/]+?)/opengraph\\-image(?:/)?$", "routeKeys": { "nxtPcollection": "nxtPcollection" }, "namedRegex": "^/search/(?<nxtPcollection>[^/]+?)/opengraph\\-image(?:/)?$" }, { "page": "/updates/[slug]", "regex": "^/updates/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/updates/(?<nxtPslug>[^/]+?)(?:/)?$", "prefetchSegmentDataRoutes": [{ "destination": "/updates/[slug].segments/updates/$d$slug$segment", "source": "^/updates/(?<nxtPslug>[^/]+?)\\.segments/updates/\\$d\\$slug(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" } }] }, { "page": "/[page]", "regex": "^/([^/]+?)(?:/)?$", "routeKeys": { "nxtPpage": "nxtPpage" }, "namedRegex": "^/(?<nxtPpage>[^/]+?)(?:/)?$", "prefetchSegmentDataRoutes": [{ "destination": "/[page].segments/$d$page$segment", "source": "^/(?<nxtPpage>[^/]+?)\\.segments/\\$d\\$page(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$", "routeKeys": { "nxtPpage": "nxtPpage" } }] }, { "page": "/[page]/opengraph-image", "regex": "^/([^/]+?)/opengraph\\-image(?:/)?$", "routeKeys": { "nxtPpage": "nxtPpage" }, "namedRegex": "^/(?<nxtPpage>[^/]+?)/opengraph\\-image(?:/)?$" }], "data": { "static": [], "dynamic": [] } }, "locales": [] };
+var PrerenderManifest = { "version": 4, "routes": { "/_global-error": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": false, "srcRoute": "/_global-error", "dataRoute": "/_global-error.rsc", "prefetchDataRoute": "/_global-error.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/_not-found": { "initialStatus": 404, "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/_not-found", "dataRoute": "/_not-found.rsc", "prefetchDataRoute": "/_not-found.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/about": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/about", "dataRoute": "/about.rsc", "prefetchDataRoute": "/about.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/builders": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/builders", "dataRoute": "/builders.rsc", "prefetchDataRoute": "/builders.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/business": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/business", "dataRoute": "/business.rsc", "prefetchDataRoute": "/business.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/capabilities": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/capabilities", "dataRoute": "/capabilities.rsc", "prefetchDataRoute": "/capabilities.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/careers": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/careers", "dataRoute": "/careers.rsc", "prefetchDataRoute": "/careers.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/chat": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/chat", "dataRoute": "/chat.rsc", "prefetchDataRoute": "/chat.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/company": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/company", "dataRoute": "/company.rsc", "prefetchDataRoute": "/company.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/contact": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/contact", "dataRoute": "/contact.rsc", "prefetchDataRoute": "/contact.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/enterprise": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/enterprise", "dataRoute": "/enterprise.rsc", "prefetchDataRoute": "/enterprise.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/explore": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/explore", "dataRoute": "/explore.rsc", "prefetchDataRoute": "/explore.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/faq": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/faq", "dataRoute": "/faq.rsc", "prefetchDataRoute": "/faq.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/favicon.ico": { "initialHeaders": { "cache-control": "public, max-age=0, must-revalidate", "content-type": "image/x-icon", "x-next-cache-tags": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico" }, "renderingMode": "STATIC", "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/favicon.ico", "dataRoute": null, "prefetchDataRoute": null, "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/how-it-works": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/how-it-works", "dataRoute": "/how-it-works.rsc", "prefetchDataRoute": "/how-it-works.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/news/upcube-ai-launch": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/news/[slug]", "dataRoute": "/news/upcube-ai-launch.rsc", "prefetchDataRoute": "/news/upcube-ai-launch.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/news/upcube-books-launch": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/news/[slug]", "dataRoute": "/news/upcube-books-launch.rsc", "prefetchDataRoute": "/news/upcube-books-launch.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/news/upcube-cloud-launch": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/news/[slug]", "dataRoute": "/news/upcube-cloud-launch.rsc", "prefetchDataRoute": "/news/upcube-cloud-launch.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/news/upcube-earth-launch": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/news/[slug]", "dataRoute": "/news/upcube-earth-launch.rsc", "prefetchDataRoute": "/news/upcube-earth-launch.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/news/upcube-games-launch": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/news/[slug]", "dataRoute": "/news/upcube-games-launch.rsc", "prefetchDataRoute": "/news/upcube-games-launch.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/news/upcube-jobs-launch": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/news/[slug]", "dataRoute": "/news/upcube-jobs-launch.rsc", "prefetchDataRoute": "/news/upcube-jobs-launch.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/news/upcube-mobile-os-preview": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/news/[slug]", "dataRoute": "/news/upcube-mobile-os-preview.rsc", "prefetchDataRoute": "/news/upcube-mobile-os-preview.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/news/upcube-os-preview": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/news/[slug]", "dataRoute": "/news/upcube-os-preview.rsc", "prefetchDataRoute": "/news/upcube-os-preview.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/news/ventari-launch": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/news/[slug]", "dataRoute": "/news/ventari-launch.rsc", "prefetchDataRoute": "/news/ventari-launch.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/news/vm-compute-launch": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/news/[slug]", "dataRoute": "/news/vm-compute-launch.rsc", "prefetchDataRoute": "/news/vm-compute-launch.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/news": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/news", "dataRoute": "/news.rsc", "prefetchDataRoute": "/news.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/opengraph-image": { "initialHeaders": { "cache-control": "public, max-age=0, must-revalidate", "content-type": "image/png", "x-next-cache-tags": "_N_T_/layout,_N_T_/opengraph-image/layout,_N_T_/opengraph-image/route,_N_T_/opengraph-image" }, "renderingMode": "STATIC", "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/opengraph-image", "dataRoute": null, "prefetchDataRoute": null, "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/", "dataRoute": "/index.rsc", "prefetchDataRoute": "/index.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/platform": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/platform", "dataRoute": "/platform.rsc", "prefetchDataRoute": "/platform.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/principles": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/principles", "dataRoute": "/principles.rsc", "prefetchDataRoute": "/principles.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/privacy-policy": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/privacy-policy", "dataRoute": "/privacy-policy.rsc", "prefetchDataRoute": "/privacy-policy.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/privacy": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/privacy", "dataRoute": "/privacy.rsc", "prefetchDataRoute": "/privacy.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/products/books": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/products/books", "dataRoute": "/products/books.rsc", "prefetchDataRoute": "/products/books.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/products/cloud": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/products/cloud", "dataRoute": "/products/cloud.rsc", "prefetchDataRoute": "/products/cloud.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/products/earth": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/products/earth", "dataRoute": "/products/earth.rsc", "prefetchDataRoute": "/products/earth.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/products/games": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/products/games", "dataRoute": "/products/games.rsc", "prefetchDataRoute": "/products/games.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/products/jobs": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/products/jobs", "dataRoute": "/products/jobs.rsc", "prefetchDataRoute": "/products/jobs.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/products/upcube-ai": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/products/upcube-ai", "dataRoute": "/products/upcube-ai.rsc", "prefetchDataRoute": "/products/upcube-ai.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/products/upcube-mobile-os": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/products/upcube-mobile-os", "dataRoute": "/products/upcube-mobile-os.rsc", "prefetchDataRoute": "/products/upcube-mobile-os.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/products/upcube-os": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/products/upcube-os", "dataRoute": "/products/upcube-os.rsc", "prefetchDataRoute": "/products/upcube-os.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/products/ventari": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/products/ventari", "dataRoute": "/products/ventari.rsc", "prefetchDataRoute": "/products/ventari.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/products/vm": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/products/vm", "dataRoute": "/products/vm.rsc", "prefetchDataRoute": "/products/vm.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/research": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/research", "dataRoute": "/research.rsc", "prefetchDataRoute": "/research.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/robots.txt": { "initialHeaders": { "cache-control": "public, max-age=0, must-revalidate", "content-type": "text/plain", "x-next-cache-tags": "_N_T_/layout,_N_T_/robots.txt/layout,_N_T_/robots.txt/route,_N_T_/robots.txt" }, "renderingMode": "STATIC", "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/robots.txt", "dataRoute": null, "prefetchDataRoute": null, "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/safety": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/safety", "dataRoute": "/safety.rsc", "prefetchDataRoute": "/safety.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/search": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/search", "dataRoute": "/search.rsc", "prefetchDataRoute": "/search.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/security-privacy": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/security-privacy", "dataRoute": "/security-privacy.rsc", "prefetchDataRoute": "/security-privacy.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/teams": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/teams", "dataRoute": "/teams.rsc", "prefetchDataRoute": "/teams.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/terms-of-service": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/terms-of-service", "dataRoute": "/terms-of-service.rsc", "prefetchDataRoute": "/terms-of-service.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/trust": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/trust", "dataRoute": "/trust.rsc", "prefetchDataRoute": "/trust.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/updates/platform-iteration-placeholder": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/updates/[slug]", "dataRoute": "/updates/platform-iteration-placeholder.rsc", "prefetchDataRoute": "/updates/platform-iteration-placeholder.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/vision": { "renderingMode": "PARTIALLY_STATIC", "experimentalPPR": true, "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "initialRevalidateSeconds": 86400, "initialExpireSeconds": 604800, "srcRoute": "/vision", "dataRoute": "/vision.rsc", "prefetchDataRoute": "/vision.prefetch.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] } }, "dynamicRoutes": { "/[page]": { "experimentalPPR": true, "renderingMode": "PARTIALLY_STATIC", "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "routeRegex": "^/([^/]+?)(?:/)?$", "dataRoute": "/[page].rsc", "fallback": "/[page]", "fallbackRevalidate": 86400, "fallbackExpire": 604800, "fallbackRootParams": [], "fallbackSourceRoute": "/[page]", "fallbackRouteParams": [{ "paramName": "page", "paramType": "dynamic", "isParallelRouteParam": false }], "dataRouteRegex": "^/([^/]+?)\\.rsc$", "prefetchDataRoute": "/[page].prefetch.rsc", "prefetchDataRouteRegex": "^/([^/]+?)\\.prefetch\\.rsc$", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/news/[slug]": { "experimentalPPR": true, "renderingMode": "PARTIALLY_STATIC", "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "routeRegex": "^/news/([^/]+?)(?:/)?$", "dataRoute": "/news/[slug].rsc", "fallback": "/news/[slug]", "fallbackRevalidate": 86400, "fallbackExpire": 604800, "fallbackRootParams": [], "fallbackSourceRoute": "/news/[slug]", "fallbackRouteParams": [{ "paramName": "slug", "paramType": "dynamic", "isParallelRouteParam": false }], "dataRouteRegex": "^/news/([^/]+?)\\.rsc$", "prefetchDataRoute": "/news/[slug].prefetch.rsc", "prefetchDataRouteRegex": "^/news/([^/]+?)\\.prefetch\\.rsc$", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/product/[handle]": { "experimentalPPR": true, "renderingMode": "PARTIALLY_STATIC", "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "routeRegex": "^/product/([^/]+?)(?:/)?$", "dataRoute": "/product/[handle].rsc", "fallback": "/product/[handle]", "fallbackRevalidate": 86400, "fallbackExpire": 604800, "fallbackRootParams": [], "fallbackSourceRoute": "/product/[handle]", "fallbackRouteParams": [{ "paramName": "handle", "paramType": "dynamic", "isParallelRouteParam": false }], "dataRouteRegex": "^/product/([^/]+?)\\.rsc$", "prefetchDataRoute": "/product/[handle].prefetch.rsc", "prefetchDataRouteRegex": "^/product/([^/]+?)\\.prefetch\\.rsc$", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/search/[collection]": { "experimentalPPR": true, "renderingMode": "PARTIALLY_STATIC", "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "routeRegex": "^/search/([^/]+?)(?:/)?$", "dataRoute": "/search/[collection].rsc", "fallback": "/search/[collection]", "fallbackRevalidate": 86400, "fallbackExpire": 604800, "fallbackRootParams": [], "fallbackSourceRoute": "/search/[collection]", "fallbackRouteParams": [{ "paramName": "collection", "paramType": "dynamic", "isParallelRouteParam": false }], "dataRouteRegex": "^/search/([^/]+?)\\.rsc$", "prefetchDataRoute": "/search/[collection].prefetch.rsc", "prefetchDataRouteRegex": "^/search/([^/]+?)\\.prefetch\\.rsc$", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/updates/[slug]": { "experimentalPPR": true, "renderingMode": "PARTIALLY_STATIC", "experimentalBypassFor": [{ "type": "header", "key": "next-action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }, { "type": "header", "key": "user-agent", "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight" }], "routeRegex": "^/updates/([^/]+?)(?:/)?$", "dataRoute": "/updates/[slug].rsc", "fallback": "/updates/[slug]", "fallbackRevalidate": 86400, "fallbackExpire": 604800, "fallbackRootParams": [], "fallbackSourceRoute": "/updates/[slug]", "fallbackRouteParams": [{ "paramName": "slug", "paramType": "dynamic", "isParallelRouteParam": false }], "dataRouteRegex": "^/updates/([^/]+?)\\.rsc$", "prefetchDataRoute": "/updates/[slug].prefetch.rsc", "prefetchDataRouteRegex": "^/updates/([^/]+?)\\.prefetch\\.rsc$", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] } }, "notFoundRoutes": [], "preview": { "previewModeId": "8261e09ec9fab9a54e7f944b47e26332", "previewModeSigningKey": "bdbe47c46f6d90e473ffd87c09e3c3d6baba874b8b785c1e09810c54667562bb", "previewModeEncryptionKey": "e5bc385ffabff806ab150a00a5ebd44a7c0b7276bc9d18b6f1e09ce106e184f2" } };
+var MiddlewareManifest = { "version": 3, "middleware": {}, "sortedMiddleware": [], "functions": {} };
+var AppPathRoutesManifest = { "/[page]/opengraph-image/route": "/[page]/opengraph-image", "/[page]/page": "/[page]", "/_global-error/page": "/_global-error", "/_not-found/page": "/_not-found", "/about/page": "/about", "/api/revalidate/route": "/api/revalidate", "/builders/page": "/builders", "/business/page": "/business", "/capabilities/page": "/capabilities", "/careers/page": "/careers", "/chat/page": "/chat", "/company/page": "/company", "/contact/page": "/contact", "/enterprise/page": "/enterprise", "/explore/page": "/explore", "/faq/page": "/faq", "/favicon.ico/route": "/favicon.ico", "/how-it-works/page": "/how-it-works", "/news/[slug]/page": "/news/[slug]", "/news/page": "/news", "/opengraph-image/route": "/opengraph-image", "/page": "/", "/platform/page": "/platform", "/principles/page": "/principles", "/privacy-policy/page": "/privacy-policy", "/privacy/page": "/privacy", "/product/[handle]/page": "/product/[handle]", "/products/books/page": "/products/books", "/products/cloud/page": "/products/cloud", "/products/earth/page": "/products/earth", "/products/games/page": "/products/games", "/products/jobs/page": "/products/jobs", "/products/upcube-ai/page": "/products/upcube-ai", "/products/upcube-mobile-os/page": "/products/upcube-mobile-os", "/products/upcube-os/page": "/products/upcube-os", "/products/ventari/page": "/products/ventari", "/products/vm/page": "/products/vm", "/research/page": "/research", "/robots.txt/route": "/robots.txt", "/safety/page": "/safety", "/search/[collection]/opengraph-image/route": "/search/[collection]/opengraph-image", "/search/[collection]/page": "/search/[collection]", "/search/page": "/search", "/security-privacy/page": "/security-privacy", "/sitemap.xml/route": "/sitemap.xml", "/teams/page": "/teams", "/terms-of-service/page": "/terms-of-service", "/trust/page": "/trust", "/updates/[slug]/page": "/updates/[slug]", "/vision/page": "/vision" };
+var FunctionsConfigManifest = { "version": 1, "functions": {} };
 var PagesManifest = { "/404": "pages/404.html", "/500": "pages/500.html" };
 process.env.NEXT_BUILD_ID = BuildId;
 process.env.OPEN_NEXT_BUILD_ID = NextConfig.deploymentId ?? BuildId;
@@ -3196,10 +1352,11 @@ var commonBinaryMimeTypes = /* @__PURE__ */ new Set([
   "application/x-zip",
   "application/zip",
   // Serialized data
-  "application/x-protobuf",
+  "application/x-protobuf"
 ]);
 function isBinaryContentType(contentType) {
-  if (!contentType) return false;
+  if (!contentType)
+    return false;
   const value = contentType.split(";")[0];
   return commonBinaryMimeTypes.has(value);
 }
@@ -3219,7 +1376,7 @@ function parse(raw, preferences, options) {
       lowers.set(lower, { orig: preference, pos: pos++ });
       if (options.prefixMatch) {
         const parts2 = lower.split("-");
-        while ((parts2.pop(), parts2.length > 0)) {
+        while (parts2.pop(), parts2.length > 0) {
           const joined = parts2.join("-");
           if (!lowers.has(joined)) {
             lowers.set(joined, { orig: preference, pos: pos++ });
@@ -3252,7 +1409,7 @@ function parse(raw, preferences, options) {
     if (params.length === 2) {
       const q = params[1];
       const [key, value] = q.split("=");
-      if (!value || (key !== "q" && key !== "Q")) {
+      if (!value || key !== "q" && key !== "Q") {
         throw new Error(`Invalid ${options.type} header`);
       }
       const score = Number.parseFloat(value);
@@ -3302,27 +1459,20 @@ function parse(raw, preferences, options) {
   return preferred;
 }
 function acceptLanguage(header = "", preferences) {
-  return (
-    parse(header, preferences, {
-      type: "accept-language",
-      prefixMatch: true,
-    })[0] || void 0
-  );
+  return parse(header, preferences, {
+    type: "accept-language",
+    prefixMatch: true
+  })[0] || void 0;
 }
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/core/routing/i18n/index.js
 function isLocalizedPath(path2) {
-  return (
-    NextConfig.i18n?.locales.includes(path2.split("/")[1].toLowerCase()) ??
-    false
-  );
+  return NextConfig.i18n?.locales.includes(path2.split("/")[1].toLowerCase()) ?? false;
 }
 function getLocaleFromCookie(cookies) {
   const i18n = NextConfig.i18n;
   const nextLocale = cookies.NEXT_LOCALE?.toLowerCase();
-  return nextLocale
-    ? i18n?.locales.find((locale) => nextLocale === locale.toLowerCase())
-    : void 0;
+  return nextLocale ? i18n?.locales.find((locale) => nextLocale === locale.toLowerCase()) : void 0;
 }
 function detectDomainLocale({ hostname, detectedLocale }) {
   const i18n = NextConfig.i18n;
@@ -3333,41 +1483,27 @@ function detectDomainLocale({ hostname, detectedLocale }) {
   const lowercasedLocale = detectedLocale?.toLowerCase();
   for (const domain of domains) {
     const domainHostname = domain.domain.split(":", 1)[0].toLowerCase();
-    if (
-      hostname === domainHostname ||
-      lowercasedLocale === domain.defaultLocale.toLowerCase() ||
-      domain.locales?.some(
-        (locale) => lowercasedLocale === locale.toLowerCase(),
-      )
-    ) {
+    if (hostname === domainHostname || lowercasedLocale === domain.defaultLocale.toLowerCase() || domain.locales?.some((locale) => lowercasedLocale === locale.toLowerCase())) {
       return domain;
     }
   }
 }
 function detectLocale(internalEvent, i18n) {
   const domainLocale = detectDomainLocale({
-    hostname: internalEvent.headers.host,
+    hostname: internalEvent.headers.host
   });
   if (i18n.localeDetection === false) {
     return domainLocale?.defaultLocale ?? i18n.defaultLocale;
   }
   const cookiesLocale = getLocaleFromCookie(internalEvent.cookies);
-  const preferredLocale = acceptLanguage(
-    internalEvent.headers["accept-language"],
-    i18n?.locales,
-  );
+  const preferredLocale = acceptLanguage(internalEvent.headers["accept-language"], i18n?.locales);
   debug({
     cookiesLocale,
     preferredLocale,
     defaultLocale: i18n.defaultLocale,
-    domainLocale,
+    domainLocale
   });
-  return (
-    domainLocale?.defaultLocale ??
-    cookiesLocale ??
-    preferredLocale ??
-    i18n.defaultLocale
-  );
+  return domainLocale?.defaultLocale ?? cookiesLocale ?? preferredLocale ?? i18n.defaultLocale;
 }
 function localizePath(internalEvent) {
   const i18n = NextConfig.i18n;
@@ -3384,17 +1520,15 @@ function localizePath(internalEvent) {
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/core/routing/queue.js
 function generateShardId(rawPath, maxConcurrency, prefix) {
   let a = cyrb128(rawPath);
-  let t = (a += 1831565813);
-  t = Math.imul(t ^ (t >>> 15), t | 1);
-  t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-  const randomFloat = ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  let t = a += 1831565813;
+  t = Math.imul(t ^ t >>> 15, t | 1);
+  t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+  const randomFloat = ((t ^ t >>> 14) >>> 0) / 4294967296;
   const randomInt = Math.floor(randomFloat * maxConcurrency);
   return `${prefix}-${randomInt}`;
 }
 function generateMessageGroupId(rawPath) {
-  const maxConcurrency = Number.parseInt(
-    process.env.MAX_REVALIDATE_CONCURRENCY ?? "10",
-  );
+  const maxConcurrency = Number.parseInt(process.env.MAX_REVALIDATE_CONCURRENCY ?? "10");
   return generateShardId(rawPath, maxConcurrency, "revalidate");
 }
 function cyrb128(str) {
@@ -3409,11 +1543,11 @@ function cyrb128(str) {
     h3 = h4 ^ Math.imul(h3 ^ k, 951274213);
     h4 = h1 ^ Math.imul(h4 ^ k, 2716044179);
   }
-  h1 = Math.imul(h3 ^ (h1 >>> 18), 597399067);
-  h2 = Math.imul(h4 ^ (h2 >>> 22), 2869860233);
-  h3 = Math.imul(h1 ^ (h3 >>> 17), 951274213);
-  h4 = Math.imul(h2 ^ (h4 >>> 19), 2716044179);
-  (h1 ^= h2 ^ h3 ^ h4), (h2 ^= h1), (h3 ^= h1), (h4 ^= h1);
+  h1 = Math.imul(h3 ^ h1 >>> 18, 597399067);
+  h2 = Math.imul(h4 ^ h2 >>> 22, 2869860233);
+  h3 = Math.imul(h1 ^ h3 >>> 17, 951274213);
+  h4 = Math.imul(h2 ^ h4 >>> 19, 2716044179);
+  h1 ^= h2 ^ h3 ^ h4, h2 ^= h1, h3 ^= h1, h4 ^= h1;
   return h1 >>> 0;
 }
 
@@ -3426,9 +1560,7 @@ function constructNextUrl(baseUrl, path2) {
 function convertRes(res) {
   const statusCode = res.statusCode || 200;
   const headers = parseHeaders(res.getFixedHeaders());
-  const isBase64Encoded =
-    isBinaryContentType(headers["content-type"]) ||
-    !!headers["content-encoding"];
+  const isBase64Encoded = isBinaryContentType(headers["content-type"]) || !!headers["content-encoding"];
   const body = new ReadableStream3({
     pull(controller) {
       if (!res._chunks || res._chunks.length === 0) {
@@ -3436,14 +1568,14 @@ function convertRes(res) {
         return;
       }
       controller.enqueue(res._chunks.shift());
-    },
+    }
   });
   return {
     type: "core",
     statusCode,
     headers,
     body,
-    isBase64Encoded,
+    isBase64Encoded
   };
 }
 function convertToQueryString(query) {
@@ -3458,7 +1590,8 @@ function convertToQueryString(query) {
   return queryStrings.length > 0 ? `?${queryStrings.join("&")}` : "";
 }
 function convertToQuery(querystring) {
-  if (!querystring) return {};
+  if (!querystring)
+    return {};
   const query = new URLSearchParams(querystring);
   const queryObject = {};
   for (const key of query.keys()) {
@@ -3469,18 +1602,15 @@ function convertToQuery(querystring) {
 }
 function getMiddlewareMatch(middlewareManifest2, functionsManifest) {
   if (functionsManifest?.functions?.["/_middleware"]) {
-    return (
-      functionsManifest.functions["/_middleware"].matchers?.map(
-        ({ regexp }) => new RegExp(regexp),
-      ) ?? [/.*/]
-    );
+    return functionsManifest.functions["/_middleware"].matchers?.map(({ regexp }) => new RegExp(regexp)) ?? [/.*/];
   }
   const rootMiddleware = middlewareManifest2.middleware["/"];
-  if (!rootMiddleware?.matchers) return [];
+  if (!rootMiddleware?.matchers)
+    return [];
   return rootMiddleware.matchers.map(({ regexp }) => new RegExp(regexp));
 }
 var CommonHeaders;
-(function (CommonHeaders2) {
+(function(CommonHeaders2) {
   CommonHeaders2["CACHE_CONTROL"] = "cache-control";
   CommonHeaders2["NEXT_CACHE"] = "x-nextjs-cache";
 })(CommonHeaders || (CommonHeaders = {}));
@@ -3489,30 +1619,24 @@ function fixCacheHeaderForHtmlPages(internalEvent, headers) {
     if (process.env.OPEN_NEXT_DANGEROUSLY_SET_ERROR_HEADERS === "true") {
       return;
     }
-    headers[CommonHeaders.CACHE_CONTROL] =
-      "private, no-cache, no-store, max-age=0, must-revalidate";
+    headers[CommonHeaders.CACHE_CONTROL] = "private, no-cache, no-store, max-age=0, must-revalidate";
     return;
   }
   const localizedPath = localizePath(internalEvent);
-  if (
-    HtmlPages.includes(localizedPath) &&
-    !internalEvent.headers["x-middleware-prefetch"]
-  ) {
-    headers[CommonHeaders.CACHE_CONTROL] =
-      "public, max-age=0, s-maxage=31536000, must-revalidate";
+  if (HtmlPages.includes(localizedPath) && !internalEvent.headers["x-middleware-prefetch"]) {
+    headers[CommonHeaders.CACHE_CONTROL] = "public, max-age=0, s-maxage=31536000, must-revalidate";
   }
 }
 function fixSWRCacheHeader(headers) {
   let cacheControl = headers[CommonHeaders.CACHE_CONTROL];
-  if (!cacheControl) return;
+  if (!cacheControl)
+    return;
   if (Array.isArray(cacheControl)) {
     cacheControl = cacheControl.join(",");
   }
-  if (typeof cacheControl !== "string") return;
-  headers[CommonHeaders.CACHE_CONTROL] = cacheControl.replace(
-    /\bstale-while-revalidate(?!=)/,
-    "stale-while-revalidate=2592000",
-  );
+  if (typeof cacheControl !== "string")
+    return;
+  headers[CommonHeaders.CACHE_CONTROL] = cacheControl.replace(/\bstale-while-revalidate(?!=)/, "stale-while-revalidate=2592000");
 }
 function addOpenNextHeader(headers) {
   if (NextConfig.poweredByHeader) {
@@ -3522,27 +1646,21 @@ function addOpenNextHeader(headers) {
     headers["X-OpenNext-Version"] = globalThis.openNextVersion;
   }
   if (process.env.OPEN_NEXT_REQUEST_ID_HEADER || globalThis.openNextDebug) {
-    headers["X-OpenNext-RequestId"] =
-      globalThis.__openNextAls.getStore()?.requestId;
+    headers["X-OpenNext-RequestId"] = globalThis.__openNextAls.getStore()?.requestId;
   }
 }
 async function revalidateIfRequired(host, rawPath, headers, req) {
   if (headers[CommonHeaders.NEXT_CACHE] === "STALE") {
     const internalMeta = req?.[Symbol.for("NextInternalRequestMeta")];
-    const revalidateUrl = internalMeta?._nextDidRewrite
-      ? rawPath.startsWith("/_next/data/")
-        ? `/_next/data/${BuildId}${internalMeta?._nextRewroteUrl}.json`
-        : internalMeta?._nextRewroteUrl
-      : rawPath;
+    const revalidateUrl = internalMeta?._nextDidRewrite ? rawPath.startsWith("/_next/data/") ? `/_next/data/${BuildId}${internalMeta?._nextRewroteUrl}.json` : internalMeta?._nextRewroteUrl : rawPath;
     try {
       const hash = (str) => crypto.createHash("md5").update(str).digest("hex");
-      const lastModified =
-        globalThis.__openNextAls.getStore()?.lastModified ?? 0;
+      const lastModified = globalThis.__openNextAls.getStore()?.lastModified ?? 0;
       const eTag = `${headers.etag ?? headers.ETag ?? ""}`;
       await globalThis.queue.send({
         MessageBody: { host, url: revalidateUrl, eTag, lastModified },
         MessageDeduplicationId: hash(`${rawPath}-${lastModified}-${eTag}`),
-        MessageGroupId: generateMessageGroupId(rawPath),
+        MessageGroupId: generateMessageGroupId(rawPath)
       });
     } catch (e) {
       error(`Failed to revalidate stale page ${rawPath}`, e);
@@ -3557,65 +1675,45 @@ function fixISRHeaders(headers) {
     return;
   }
   if (headers[CommonHeaders.NEXT_CACHE] === "REVALIDATED") {
-    headers[CommonHeaders.CACHE_CONTROL] =
-      "private, no-cache, no-store, max-age=0, must-revalidate";
+    headers[CommonHeaders.CACHE_CONTROL] = "private, no-cache, no-store, max-age=0, must-revalidate";
     return;
   }
   const _lastModified = globalThis.__openNextAls.getStore()?.lastModified ?? 0;
   if (headers[CommonHeaders.NEXT_CACHE] === "HIT" && _lastModified > 0) {
-    debug(
-      "cache-control",
-      headers[CommonHeaders.CACHE_CONTROL],
-      _lastModified,
-      Date.now(),
-    );
+    debug("cache-control", headers[CommonHeaders.CACHE_CONTROL], _lastModified, Date.now());
     if (sMaxAge && sMaxAge !== 31536e3) {
       const age = Math.round((Date.now() - _lastModified) / 1e3);
       const remainingTtl = Math.max(sMaxAge - age, 1);
-      headers[CommonHeaders.CACHE_CONTROL] =
-        `s-maxage=${remainingTtl}, stale-while-revalidate=2592000`;
+      headers[CommonHeaders.CACHE_CONTROL] = `s-maxage=${remainingTtl}, stale-while-revalidate=2592000`;
     }
   }
-  if (headers[CommonHeaders.NEXT_CACHE] !== "STALE") return;
-  headers[CommonHeaders.CACHE_CONTROL] =
-    "s-maxage=2, stale-while-revalidate=2592000";
+  if (headers[CommonHeaders.NEXT_CACHE] !== "STALE")
+    return;
+  headers[CommonHeaders.CACHE_CONTROL] = "s-maxage=2, stale-while-revalidate=2592000";
 }
 function createServerResponse(routingResult, headers, responseStream) {
   const internalEvent = routingResult.internalEvent;
-  return new OpenNextNodeResponse(
-    (_headers) => {
-      fixCacheHeaderForHtmlPages(internalEvent, _headers);
-      fixSWRCacheHeader(_headers);
-      addOpenNextHeader(_headers);
-      fixISRHeaders(_headers);
-    },
-    async (_headers) => {
-      await revalidateIfRequired(
-        internalEvent.headers.host,
-        internalEvent.rawPath,
-        _headers,
-      );
-      await invalidateCDNOnRequest(routingResult, _headers);
-    },
-    responseStream,
-    headers,
-    routingResult.rewriteStatusCode,
-  );
+  return new OpenNextNodeResponse((_headers) => {
+    fixCacheHeaderForHtmlPages(internalEvent, _headers);
+    fixSWRCacheHeader(_headers);
+    addOpenNextHeader(_headers);
+    fixISRHeaders(_headers);
+  }, async (_headers) => {
+    await revalidateIfRequired(internalEvent.headers.host, internalEvent.rawPath, _headers);
+    await invalidateCDNOnRequest(routingResult, _headers);
+  }, responseStream, headers, routingResult.rewriteStatusCode);
 }
 async function invalidateCDNOnRequest(params, headers) {
   const { internalEvent, resolvedRoutes, initialURL } = params;
   const initialPath = new URL(initialURL).pathname;
   const isIsrRevalidation = internalEvent.headers["x-isr"] === "1";
-  if (
-    !isIsrRevalidation &&
-    headers[CommonHeaders.NEXT_CACHE] === "REVALIDATED"
-  ) {
+  if (!isIsrRevalidation && headers[CommonHeaders.NEXT_CACHE] === "REVALIDATED") {
     await globalThis.cdnInvalidationHandler.invalidatePaths([
       {
         initialPath,
         rawPath: internalEvent.rawPath,
-        resolvedRoutes,
-      },
+        resolvedRoutes
+      }
     ]);
   }
 }
@@ -3640,17 +1738,12 @@ init_logger();
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/core/routing/routeMatcher.js
 var optionalLocalePrefixRegex = `^/(?:${RoutesManifest.locales.map((locale) => `${locale}/?`).join("|")})?`;
-var optionalBasepathPrefixRegex = RoutesManifest.basePath
-  ? `^${RoutesManifest.basePath}/?`
-  : "^/";
-var optionalPrefix = optionalLocalePrefixRegex.replace(
-  "^/",
-  optionalBasepathPrefixRegex,
-);
+var optionalBasepathPrefixRegex = RoutesManifest.basePath ? `^${RoutesManifest.basePath}/?` : "^/";
+var optionalPrefix = optionalLocalePrefixRegex.replace("^/", optionalBasepathPrefixRegex);
 function routeMatcher(routeDefinitions) {
   const regexp = routeDefinitions.map((route) => ({
     page: route.page,
-    regexp: new RegExp(route.regex.replace("^/", optionalPrefix)),
+    regexp: new RegExp(route.regex.replace("^/", optionalPrefix))
   }));
   const appPathsSet = /* @__PURE__ */ new Set();
   const routePathsSet = /* @__PURE__ */ new Set();
@@ -3672,36 +1765,24 @@ function routeMatcher(routeDefinitions) {
       }
       return {
         route: foundRoute.page,
-        type: routeType,
+        type: routeType
       };
     });
   };
 }
 var staticRouteMatcher = routeMatcher([
   ...RoutesManifest.routes.static,
-  ...getStaticAPIRoutes(),
+  ...getStaticAPIRoutes()
 ]);
 var dynamicRouteMatcher = routeMatcher(RoutesManifest.routes.dynamic);
 function getStaticAPIRoutes() {
   const createRouteDefinition = (route) => ({
     page: route,
-    regex: `^${route}(?:/)?$`,
+    regex: `^${route}(?:/)?$`
   });
-  const dynamicRoutePages = new Set(
-    RoutesManifest.routes.dynamic.map(({ page }) => page),
-  );
-  const pagesStaticAPIRoutes = Object.keys(PagesManifest)
-    .filter(
-      (route) => route.startsWith("/api/") && !dynamicRoutePages.has(route),
-    )
-    .map(createRouteDefinition);
-  const appPathsStaticAPIRoutes = Object.values(AppPathRoutesManifest)
-    .filter(
-      (route) =>
-        (route.startsWith("/api/") || route === "/api") &&
-        !dynamicRoutePages.has(route),
-    )
-    .map(createRouteDefinition);
+  const dynamicRoutePages = new Set(RoutesManifest.routes.dynamic.map(({ page }) => page));
+  const pagesStaticAPIRoutes = Object.keys(PagesManifest).filter((route) => route.startsWith("/api/") && !dynamicRoutePages.has(route)).map(createRouteDefinition);
+  const appPathsStaticAPIRoutes = Object.values(AppPathRoutesManifest).filter((route) => (route.startsWith("/api/") || route === "/api") && !dynamicRoutePages.has(route)).map(createRouteDefinition);
   return [...pagesStaticAPIRoutes, ...appPathsStaticAPIRoutes];
 }
 
@@ -3710,10 +1791,7 @@ init_stream();
 init_utils();
 var middlewareManifest = MiddlewareManifest;
 var functionsConfigManifest = FunctionsConfigManifest;
-var middleMatch = getMiddlewareMatch(
-  middlewareManifest,
-  functionsConfigManifest,
-);
+var middleMatch = getMiddlewareMatch(middlewareManifest, functionsConfigManifest);
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/core/routingHandler.js
 var MIDDLEWARE_HEADER_PREFIX = "x-middleware-response-";
@@ -3759,53 +1837,42 @@ var nextServer = new NextServer.default({
       //#endOverride
       //#override composableCache
       cacheHandlers: {
-        default: composableCacheHandlerPath,
-      },
+        default: composableCacheHandlerPath
+      }
       //#endOverride
-    },
+    }
   },
   customServer: false,
   dev: false,
-  dir: __dirname,
+  dir: __dirname
 });
 var routesLoaded = false;
 globalThis.__next_route_preloader = async (stage) => {
   if (routesLoaded) {
     return;
   }
-  const thisFunction = globalThis.fnName
-    ? globalThis.openNextConfig.functions[globalThis.fnName]
-    : globalThis.openNextConfig.default;
-  const routePreloadingBehavior =
-    thisFunction?.routePreloadingBehavior ?? "none";
+  const thisFunction = globalThis.fnName ? globalThis.openNextConfig.functions[globalThis.fnName] : globalThis.openNextConfig.default;
+  const routePreloadingBehavior = thisFunction?.routePreloadingBehavior ?? "none";
   if (routePreloadingBehavior === "none") {
     routesLoaded = true;
     return;
   }
   if (!("unstable_preloadEntries" in nextServer)) {
-    debug(
-      "The current version of Next.js does not support route preloading. Skipping route preloading.",
-    );
+    debug("The current version of Next.js does not support route preloading. Skipping route preloading.");
     routesLoaded = true;
     return;
   }
   if (stage === "waitUntil" && routePreloadingBehavior === "withWaitUntil") {
     const waitUntil = globalThis.__openNextAls.getStore()?.waitUntil;
     if (!waitUntil) {
-      error(
-        "You've tried to use the 'withWaitUntil' route preloading behavior, but the 'waitUntil' function is not available.",
-      );
+      error("You've tried to use the 'withWaitUntil' route preloading behavior, but the 'waitUntil' function is not available.");
       routesLoaded = true;
       return;
     }
     debug("Preloading entries with waitUntil");
     waitUntil?.(nextServer.unstable_preloadEntries());
     routesLoaded = true;
-  } else if (
-    (stage === "start" && routePreloadingBehavior === "onStart") ||
-    (stage === "warmerEvent" && routePreloadingBehavior === "onWarmerEvent") ||
-    stage === "onDemand"
-  ) {
+  } else if (stage === "start" && routePreloadingBehavior === "onStart" || stage === "warmerEvent" && routePreloadingBehavior === "onWarmerEvent" || stage === "onDemand") {
     const startTimestamp = Date.now();
     debug("Preloading entries");
     await nextServer.unstable_preloadEntries();
@@ -3813,176 +1880,136 @@ globalThis.__next_route_preloader = async (stage) => {
     routesLoaded = true;
   }
 };
-var requestHandler = (metadata) =>
-  "getRequestHandlerWithMetadata" in nextServer
-    ? nextServer.getRequestHandlerWithMetadata(metadata)
-    : nextServer.getRequestHandler();
+var requestHandler = (metadata) => "getRequestHandlerWithMetadata" in nextServer ? nextServer.getRequestHandlerWithMetadata(metadata) : nextServer.getRequestHandler();
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/core/requestHandler.js
 globalThis.__openNextAls = new AsyncLocalStorage();
 async function openNextHandler(internalEvent, options) {
   const initialHeaders = internalEvent.headers;
-  const requestId = globalThis.openNextConfig.middleware?.external
-    ? internalEvent.headers[INTERNAL_EVENT_REQUEST_ID]
-    : Math.random().toString(36);
-  return runWithOpenNextRequestContext(
-    {
-      isISRRevalidation: initialHeaders["x-isr"] === "1",
-      waitUntil: options?.waitUntil,
-      requestId,
-    },
-    async () => {
-      await globalThis.__next_route_preloader("waitUntil");
-      if (initialHeaders["x-forwarded-host"]) {
-        initialHeaders.host = initialHeaders["x-forwarded-host"];
+  const requestId = globalThis.openNextConfig.middleware?.external ? internalEvent.headers[INTERNAL_EVENT_REQUEST_ID] : Math.random().toString(36);
+  return runWithOpenNextRequestContext({
+    isISRRevalidation: initialHeaders["x-isr"] === "1",
+    waitUntil: options?.waitUntil,
+    requestId
+  }, async () => {
+    await globalThis.__next_route_preloader("waitUntil");
+    if (initialHeaders["x-forwarded-host"]) {
+      initialHeaders.host = initialHeaders["x-forwarded-host"];
+    }
+    debug("internalEvent", internalEvent);
+    const internalHeaders = {
+      initialPath: initialHeaders[INTERNAL_HEADER_INITIAL_URL] ?? internalEvent.rawPath,
+      resolvedRoutes: initialHeaders[INTERNAL_HEADER_RESOLVED_ROUTES] ? JSON.parse(initialHeaders[INTERNAL_HEADER_RESOLVED_ROUTES]) : [],
+      rewriteStatusCode: Number.parseInt(initialHeaders[INTERNAL_HEADER_REWRITE_STATUS_CODE])
+    };
+    let routingResult = {
+      internalEvent,
+      isExternalRewrite: false,
+      origin: false,
+      isISR: false,
+      initialURL: internalEvent.url,
+      ...internalHeaders
+    };
+    const headers = "type" in routingResult ? routingResult.headers : routingResult.internalEvent.headers;
+    const overwrittenResponseHeaders = {};
+    for (const [rawKey, value] of Object.entries(headers)) {
+      if (!rawKey.startsWith(MIDDLEWARE_HEADER_PREFIX)) {
+        continue;
       }
-      debug("internalEvent", internalEvent);
-      const internalHeaders = {
-        initialPath:
-          initialHeaders[INTERNAL_HEADER_INITIAL_URL] ?? internalEvent.rawPath,
-        resolvedRoutes: initialHeaders[INTERNAL_HEADER_RESOLVED_ROUTES]
-          ? JSON.parse(initialHeaders[INTERNAL_HEADER_RESOLVED_ROUTES])
-          : [],
-        rewriteStatusCode: Number.parseInt(
-          initialHeaders[INTERNAL_HEADER_REWRITE_STATUS_CODE],
-        ),
-      };
-      let routingResult = {
-        internalEvent,
-        isExternalRewrite: false,
-        origin: false,
-        isISR: false,
-        initialURL: internalEvent.url,
-        ...internalHeaders,
-      };
-      const headers =
-        "type" in routingResult
-          ? routingResult.headers
-          : routingResult.internalEvent.headers;
-      const overwrittenResponseHeaders = {};
-      for (const [rawKey, value] of Object.entries(headers)) {
-        if (!rawKey.startsWith(MIDDLEWARE_HEADER_PREFIX)) {
-          continue;
+      const key = rawKey.slice(MIDDLEWARE_HEADER_PREFIX_LEN);
+      if (key !== "x-middleware-set-cookie") {
+        overwrittenResponseHeaders[key] = value;
+      }
+      headers[key] = value;
+      delete headers[rawKey];
+    }
+    if ("isExternalRewrite" in routingResult && routingResult.isExternalRewrite === true) {
+      try {
+        routingResult = await globalThis.proxyExternalRequest.proxy(routingResult.internalEvent);
+      } catch (e) {
+        error("External request failed.", e);
+        routingResult = {
+          internalEvent: {
+            type: "core",
+            rawPath: "/500",
+            method: "GET",
+            headers: {},
+            url: constructNextUrl(internalEvent.url, "/500"),
+            query: {},
+            cookies: {},
+            remoteAddress: ""
+          },
+          // On error we need to rewrite to the 500 page which is an internal rewrite
+          isExternalRewrite: false,
+          isISR: false,
+          origin: false,
+          initialURL: internalEvent.url,
+          resolvedRoutes: [{ route: "/500", type: "page" }]
+        };
+      }
+    }
+    if ("type" in routingResult) {
+      if (options?.streamCreator) {
+        const response = createServerResponse({
+          internalEvent,
+          isExternalRewrite: false,
+          isISR: false,
+          resolvedRoutes: [],
+          origin: false,
+          initialURL: internalEvent.url
+        }, routingResult.headers, options.streamCreator);
+        response.statusCode = routingResult.statusCode;
+        response.flushHeaders();
+        const [bodyToConsume, bodyToReturn] = routingResult.body.tee();
+        for await (const chunk of bodyToConsume) {
+          response.write(chunk);
         }
-        const key = rawKey.slice(MIDDLEWARE_HEADER_PREFIX_LEN);
-        if (key !== "x-middleware-set-cookie") {
-          overwrittenResponseHeaders[key] = value;
-        }
-        headers[key] = value;
-        delete headers[rawKey];
+        response.end();
+        routingResult.body = bodyToReturn;
       }
-      if (
-        "isExternalRewrite" in routingResult &&
-        routingResult.isExternalRewrite === true
-      ) {
-        try {
-          routingResult = await globalThis.proxyExternalRequest.proxy(
-            routingResult.internalEvent,
-          );
-        } catch (e) {
-          error("External request failed.", e);
-          routingResult = {
-            internalEvent: {
-              type: "core",
-              rawPath: "/500",
-              method: "GET",
-              headers: {},
-              url: constructNextUrl(internalEvent.url, "/500"),
-              query: {},
-              cookies: {},
-              remoteAddress: "",
-            },
-            // On error we need to rewrite to the 500 page which is an internal rewrite
-            isExternalRewrite: false,
-            isISR: false,
-            origin: false,
-            initialURL: internalEvent.url,
-            resolvedRoutes: [{ route: "/500", type: "page" }],
-          };
-        }
-      }
-      if ("type" in routingResult) {
-        if (options?.streamCreator) {
-          const response = createServerResponse(
-            {
-              internalEvent,
-              isExternalRewrite: false,
-              isISR: false,
-              resolvedRoutes: [],
-              origin: false,
-              initialURL: internalEvent.url,
-            },
-            routingResult.headers,
-            options.streamCreator,
-          );
-          response.statusCode = routingResult.statusCode;
-          response.flushHeaders();
-          const [bodyToConsume, bodyToReturn] = routingResult.body.tee();
-          for await (const chunk of bodyToConsume) {
-            response.write(chunk);
-          }
-          response.end();
-          routingResult.body = bodyToReturn;
-        }
-        return routingResult;
-      }
-      const preprocessedEvent = routingResult.internalEvent;
-      debug("preprocessedEvent", preprocessedEvent);
-      const { search, pathname, hash } = new URL(preprocessedEvent.url);
-      const reqProps = {
-        method: preprocessedEvent.method,
-        url: `${pathname}${search}${hash}`,
-        //WORKAROUND: We pass this header to the serverless function to mimic a prefetch request which will not trigger revalidation since we handle revalidation differently
-        // There is 3 way we can handle revalidation:
-        // 1. We could just let the revalidation go as normal, but due to race conditions the revalidation will be unreliable
-        // 2. We could alter the lastModified time of our cache to make next believe that the cache is fresh, but this could cause issues with stale data since the cdn will cache the stale data as if it was fresh
-        // 3. OUR CHOICE: We could pass a purpose prefetch header to the serverless function to make next believe that the request is a prefetch request and not trigger revalidation (This could potentially break in the future if next changes the behavior of prefetch requests)
-        headers: {
-          ...headers,
-        },
-        body: preprocessedEvent.body,
-        remoteAddress: preprocessedEvent.remoteAddress,
-      };
-      const mergeHeadersPriority = globalThis.openNextConfig.dangerous
-        ?.headersAndCookiesPriority
-        ? globalThis.openNextConfig.dangerous.headersAndCookiesPriority(
-            preprocessedEvent,
-          )
-        : "middleware";
-      const store = globalThis.__openNextAls.getStore();
-      if (store) {
-        store.mergeHeadersPriority = mergeHeadersPriority;
-      }
-      const req = new IncomingMessage(reqProps);
-      const res = createServerResponse(
-        routingResult,
-        overwrittenResponseHeaders,
-        options?.streamCreator,
-      );
-      await processRequest(req, res, routingResult);
-      const {
-        statusCode,
-        headers: responseHeaders,
-        isBase64Encoded,
-        body,
-      } = convertRes(res);
-      const internalResult = {
-        type: internalEvent.type,
-        statusCode,
-        headers: responseHeaders,
-        body,
-        isBase64Encoded,
-      };
-      return internalResult;
-    },
-  );
+      return routingResult;
+    }
+    const preprocessedEvent = routingResult.internalEvent;
+    debug("preprocessedEvent", preprocessedEvent);
+    const { search, pathname, hash } = new URL(preprocessedEvent.url);
+    const reqProps = {
+      method: preprocessedEvent.method,
+      url: `${pathname}${search}${hash}`,
+      //WORKAROUND: We pass this header to the serverless function to mimic a prefetch request which will not trigger revalidation since we handle revalidation differently
+      // There is 3 way we can handle revalidation:
+      // 1. We could just let the revalidation go as normal, but due to race conditions the revalidation will be unreliable
+      // 2. We could alter the lastModified time of our cache to make next believe that the cache is fresh, but this could cause issues with stale data since the cdn will cache the stale data as if it was fresh
+      // 3. OUR CHOICE: We could pass a purpose prefetch header to the serverless function to make next believe that the request is a prefetch request and not trigger revalidation (This could potentially break in the future if next changes the behavior of prefetch requests)
+      headers: {
+        ...headers
+      },
+      body: preprocessedEvent.body,
+      remoteAddress: preprocessedEvent.remoteAddress
+    };
+    const mergeHeadersPriority = globalThis.openNextConfig.dangerous?.headersAndCookiesPriority ? globalThis.openNextConfig.dangerous.headersAndCookiesPriority(preprocessedEvent) : "middleware";
+    const store = globalThis.__openNextAls.getStore();
+    if (store) {
+      store.mergeHeadersPriority = mergeHeadersPriority;
+    }
+    const req = new IncomingMessage(reqProps);
+    const res = createServerResponse(routingResult, overwrittenResponseHeaders, options?.streamCreator);
+    await processRequest(req, res, routingResult);
+    const { statusCode, headers: responseHeaders, isBase64Encoded, body } = convertRes(res);
+    const internalResult = {
+      type: internalEvent.type,
+      statusCode,
+      headers: responseHeaders,
+      body,
+      isBase64Encoded
+    };
+    return internalResult;
+  });
 }
 async function processRequest(req, res, routingResult) {
   delete req.body;
   const initialURL = new URL(
     // We always assume that only the routing layer can set this header.
-    routingResult.internalEvent.headers[INTERNAL_HEADER_INITIAL_URL] ??
-      routingResult.initialURL,
+    routingResult.internalEvent.headers[INTERNAL_HEADER_INITIAL_URL] ?? routingResult.initialURL
   );
   let invokeStatus;
   if (routingResult.internalEvent.rawPath === "/500") {
@@ -4002,12 +2029,10 @@ async function processRequest(req, res, routingResult) {
     invokePath: routingResult.internalEvent.rawPath,
     invokeQuery: routingResult.internalEvent.query,
     // invokeStatus is only used for error pages
-    invokeStatus,
+    invokeStatus
   };
   try {
-    req.url =
-      initialURL.pathname +
-      convertToQueryString(routingResult.internalEvent.query);
+    req.url = initialURL.pathname + convertToQueryString(routingResult.internalEvent.query);
     await requestHandler(requestMetadata)(req, res);
   } catch (e) {
     if (e.constructor.name === "NoFallbackError") {
@@ -4018,13 +2043,7 @@ async function processRequest(req, res, routingResult) {
     }
   }
 }
-async function handleNoFallbackError(
-  req,
-  res,
-  routingResult,
-  metadata,
-  index = 1,
-) {
+async function handleNoFallbackError(req, res, routingResult, metadata, index = 1) {
   if (index >= 5) {
     await tryRenderError("500", res, routingResult.internalEvent);
     return;
@@ -4037,7 +2056,7 @@ async function handleNoFallbackError(
     await requestHandler({
       ...routingResult,
       invokeOutput: routingResult.resolvedRoutes[index].route,
-      ...metadata,
+      ...metadata
     })(req, res);
   } catch (e) {
     if (e.constructor.name === "NoFallbackError") {
@@ -4055,29 +2074,23 @@ async function tryRenderError(type, res, internalEvent) {
       url: `/${type}`,
       headers: internalEvent.headers,
       body: internalEvent.body,
-      remoteAddress: internalEvent.remoteAddress,
+      remoteAddress: internalEvent.remoteAddress
     });
     const requestMetadata = {
       // By setting invokePath and invokeQuery we can bypass some of the routing logic in Next.js
       invokePath: type === "404" ? "/404" : "/500",
       invokeStatus: type === "404" ? 404 : 500,
-      middlewareInvoke: false,
+      middlewareInvoke: false
     };
     await requestHandler(requestMetadata)(_req, res);
   } catch (e) {
     error("NextJS request failed.", e);
     res.statusCode = 500;
     res.setHeader("Content-Type", "application/json");
-    res.end(
-      JSON.stringify(
-        {
-          message: "Server failed to respond.",
-          details: e,
-        },
-        null,
-        2,
-      ),
-    );
+    res.end(JSON.stringify({
+      message: "Server failed to respond.",
+      details: e
+    }, null, 2));
   }
 }
 
@@ -4093,9 +2106,7 @@ async function resolveWrapper(wrapper) {
   if (typeof wrapper === "function") {
     return wrapper();
   }
-  const m_1 = await Promise.resolve().then(
-    () => (init_cloudflare_node(), cloudflare_node_exports),
-  );
+  const m_1 = await Promise.resolve().then(() => (init_cloudflare_node(), cloudflare_node_exports));
   return m_1.default;
 }
 async function resolveTagCache(tagCache) {
@@ -4109,27 +2120,21 @@ async function resolveQueue(queue) {
   if (typeof queue === "function") {
     return queue();
   }
-  const m_1 = await Promise.resolve().then(
-    () => (init_dummy2(), dummy_exports2),
-  );
+  const m_1 = await Promise.resolve().then(() => (init_dummy2(), dummy_exports2));
   return m_1.default;
 }
 async function resolveIncrementalCache(incrementalCache) {
   if (typeof incrementalCache === "function") {
     return incrementalCache();
   }
-  const m_1 = await Promise.resolve().then(
-    () => (init_dummy3(), dummy_exports3),
-  );
+  const m_1 = await Promise.resolve().then(() => (init_dummy3(), dummy_exports3));
   return m_1.default;
 }
 async function resolveAssetResolver(assetResolver) {
   if (typeof assetResolver === "function") {
     return assetResolver();
   }
-  const m_1 = await Promise.resolve().then(
-    () => (init_dummy4(), dummy_exports4),
-  );
+  const m_1 = await Promise.resolve().then(() => (init_dummy4(), dummy_exports4));
   return m_1.default;
 }
 async function resolveProxyRequest(proxyRequest) {
@@ -4143,41 +2148,27 @@ async function resolveCdnInvalidation(cdnInvalidation) {
   if (typeof cdnInvalidation === "function") {
     return cdnInvalidation();
   }
-  const m_1 = await Promise.resolve().then(
-    () => (init_dummy5(), dummy_exports5),
-  );
+  const m_1 = await Promise.resolve().then(() => (init_dummy5(), dummy_exports5));
   return m_1.default;
 }
 
 // node_modules/.pnpm/@opennextjs+aws@4.0.2_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0_/node_modules/@opennextjs/aws/dist/core/createMainHandler.js
 async function createMainHandler() {
   const config = await import("./open-next.config.mjs").then((m) => m.default);
-  const thisFunction = globalThis.fnName
-    ? config.functions[globalThis.fnName]
-    : config.default;
+  const thisFunction = globalThis.fnName ? config.functions[globalThis.fnName] : config.default;
   globalThis.serverId = generateUniqueId();
   globalThis.openNextConfig = config;
   await globalThis.__next_route_preloader("start");
   globalThis.queue = await resolveQueue(thisFunction.override?.queue);
-  globalThis.incrementalCache = await resolveIncrementalCache(
-    thisFunction.override?.incrementalCache,
-  );
+  globalThis.incrementalCache = await resolveIncrementalCache(thisFunction.override?.incrementalCache);
   globalThis.tagCache = await resolveTagCache(thisFunction.override?.tagCache);
   if (config.middleware?.external !== true) {
-    globalThis.assetResolver = await resolveAssetResolver(
-      globalThis.openNextConfig.middleware?.assetResolver,
-    );
+    globalThis.assetResolver = await resolveAssetResolver(globalThis.openNextConfig.middleware?.assetResolver);
   }
-  globalThis.proxyExternalRequest = await resolveProxyRequest(
-    thisFunction.override?.proxyExternalRequest,
-  );
-  globalThis.cdnInvalidationHandler = await resolveCdnInvalidation(
-    thisFunction.override?.cdnInvalidation,
-  );
+  globalThis.proxyExternalRequest = await resolveProxyRequest(thisFunction.override?.proxyExternalRequest);
+  globalThis.cdnInvalidationHandler = await resolveCdnInvalidation(thisFunction.override?.cdnInvalidation);
   const converter2 = await resolveConverter(thisFunction.override?.converter);
-  const { wrapper, name } = await resolveWrapper(
-    thisFunction.override?.wrapper,
-  );
+  const { wrapper, name } = await resolveWrapper(thisFunction.override?.wrapper);
   debug("Using wrapper", name);
   return wrapper(openNextHandler, converter2);
 }
@@ -4190,4 +2181,6 @@ var handler2 = await createMainHandler();
 function setNextjsServerWorkingDirectory() {
   process.chdir(__dirname);
 }
-export { handler2 as handler };
+export {
+  handler2 as handler
+};

@@ -131,6 +131,8 @@ body:has(.uc-page) .commerce-navbar {
   order: 3;
   width: 100%;
   position: relative;
+  padding-bottom: 0.8rem;
+  margin-bottom: -0.8rem;
 }
 
 .uc-header-nav {

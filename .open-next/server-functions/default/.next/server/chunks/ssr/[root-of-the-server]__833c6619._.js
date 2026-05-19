@@ -1,0 +1,3 @@
+module.exports=[93695,(a,b,c)=>{b.exports=a.x("next/dist/shared/lib/no-fallback-error.external.js",()=>require("next/dist/shared/lib/no-fallback-error.external.js"))},39236,a=>{a.n(a.i(86895))},70864,a=>{a.n(a.i(33290))},65897,a=>{a.n(a.i(96647))},82532,a=>{a.n(a.i(98340))},77201,a=>{a.n(a.i(96351))},74608,a=>{a.n(a.i(94166))},97903,a=>{a.n(a.i(5722))},70317,a=>{"use strict";var b=a.i(63874),c=a.i(54341);let d=(0,a.i(75574).getUpcubeProductBySlug)("vm"),e={title:`${d.name} | Upcube`,description:d.summary};function f(){return(0,b.jsx)(c.ProductPage,{product:d})}a.s(["default",()=>f,"metadata",0,e])}];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__833c6619._.js.map

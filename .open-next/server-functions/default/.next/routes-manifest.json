@@ -21,6 +21,23 @@
   },
   "dynamicRoutes": [
     {
+      "page": "/news/[slug]",
+      "regex": "^/news/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/news/(?<nxtPslug>[^/]+?)(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/news/[slug].segments/news/$d$slug$segment",
+          "source": "^/news/(?<nxtPslug>[^/]+?)\\.segments/news/\\$d\\$slug(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPslug": "nxtPslug"
+          }
+        }
+      ]
+    },
+    {
       "page": "/product/[handle]",
       "regex": "^/product/([^/]+?)(?:/)?$",
       "routeKeys": {
@@ -237,6 +254,66 @@
       "regex": "^/privacy\\-policy(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/privacy\\-policy(?:/)?$"
+    },
+    {
+      "page": "/products/books",
+      "regex": "^/products/books(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/books(?:/)?$"
+    },
+    {
+      "page": "/products/cloud",
+      "regex": "^/products/cloud(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/cloud(?:/)?$"
+    },
+    {
+      "page": "/products/earth",
+      "regex": "^/products/earth(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/earth(?:/)?$"
+    },
+    {
+      "page": "/products/games",
+      "regex": "^/products/games(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/games(?:/)?$"
+    },
+    {
+      "page": "/products/jobs",
+      "regex": "^/products/jobs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/jobs(?:/)?$"
+    },
+    {
+      "page": "/products/upcube-ai",
+      "regex": "^/products/upcube\\-ai(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/upcube\\-ai(?:/)?$"
+    },
+    {
+      "page": "/products/upcube-mobile-os",
+      "regex": "^/products/upcube\\-mobile\\-os(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/upcube\\-mobile\\-os(?:/)?$"
+    },
+    {
+      "page": "/products/upcube-os",
+      "regex": "^/products/upcube\\-os(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/upcube\\-os(?:/)?$"
+    },
+    {
+      "page": "/products/ventari",
+      "regex": "^/products/ventari(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/ventari(?:/)?$"
+    },
+    {
+      "page": "/products/vm",
+      "regex": "^/products/vm(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/vm(?:/)?$"
     },
     {
       "page": "/research",

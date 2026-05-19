@@ -8,15 +8,19 @@ import MobileMenu from "./mobile-menu";
 import Search, { SearchSkeleton } from "./search";
 
 const { SITE_NAME } = process.env;
+const fallbackNavItems: Menu[] = [{ title: "News", path: "/news" }];
 
 export async function Navbar() {
   const menu = await getMenu("next-js-frontend-header-menu");
+  const navItems = menu.some((item) => item.path === "/news")
+    ? menu
+    : [...menu, ...fallbackNavItems];
 
   return (
     <nav className="commerce-navbar relative flex items-center justify-between p-4 lg:px-6">
       <div className="block flex-none md:hidden">
         <Suspense fallback={null}>
-          <MobileMenu menu={menu} />
+          <MobileMenu menu={navItems} />
         </Suspense>
       </div>
       <div className="flex w-full items-center">
@@ -31,9 +35,9 @@ export async function Navbar() {
               {SITE_NAME}
             </div>
           </Link>
-          {menu.length ? (
+          {navItems.length ? (
             <ul className="hidden gap-6 text-sm md:flex md:items-center">
-              {menu.map((item: Menu) => (
+              {navItems.map((item: Menu) => (
                 <li key={item.title}>
                   <Link
                     href={item.path}

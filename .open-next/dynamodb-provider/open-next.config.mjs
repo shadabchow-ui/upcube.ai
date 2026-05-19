@@ -1,14 +1,9 @@
-import { createRequire as topLevelCreateRequire } from "module";
-const require = topLevelCreateRequire(import.meta.url);
-import bannerUrl from "url";
-const __dirname = bannerUrl.fileURLToPath(new URL(".", import.meta.url));
+import { createRequire as topLevelCreateRequire } from 'module';const require = topLevelCreateRequire(import.meta.url);import bannerUrl from 'url';const __dirname = bannerUrl.fileURLToPath(new URL('.', import.meta.url));
 
 // node_modules/.pnpm/@opennextjs+cloudflare@1.19.10_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0__wrangler@4.92.0/node_modules/@opennextjs/cloudflare/dist/api/cloudflare-context.js
 var cloudflareContextSymbol = Symbol.for("__cloudflare-context__");
 function getCloudflareContext(options = { async: false }) {
-  return options.async
-    ? getCloudflareContextAsync()
-    : getCloudflareContextSync();
+  return options.async ? getCloudflareContextAsync() : getCloudflareContextSync();
 }
 function getCloudflareContextFromGlobalScope() {
   const global = globalThis;
@@ -63,12 +58,12 @@ async function getCloudflareContextFromWrangler(options) {
     // because we invoke wrangler with `CLOUDFLARE_LOAD_DEV_VARS_FROM_DOT_ENV`=`"false"`.
     // Initializing `envFiles` with an empty list is the equivalent for this API call.
     envFiles: [],
-    environment,
+    environment
   });
   return {
     env,
     cf,
-    ctx,
+    ctx
   };
 }
 var initOpenNextCloudflareForDevErrorMsg = `
@@ -94,10 +89,7 @@ var resolver = {
   name: "cloudflare-asset-resolver",
   async maybeGetAssetResult(event) {
     const { ASSETS } = getCloudflareContext().env;
-    if (
-      !ASSETS ||
-      !isUserWorkerFirst(globalThis.__ASSETS_RUN_WORKER_FIRST__, event.rawPath)
-    ) {
+    if (!ASSETS || !isUserWorkerFirst(globalThis.__ASSETS_RUN_WORKER_FIRST__, event.rawPath)) {
       return void 0;
     }
     const { method, headers } = event;
@@ -107,7 +99,7 @@ var resolver = {
     const url = new URL(event.rawPath, "https://assets.local");
     const response = await ASSETS.fetch(url, {
       headers,
-      method,
+      method
     });
     if (response.status === 404) {
       await response.body?.cancel();
@@ -119,9 +111,9 @@ var resolver = {
       headers: Object.fromEntries(response.headers.entries()),
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       body: getResponseBody(method, response),
-      isBase64Encoded: false,
+      isBase64Encoded: false
     };
-  },
+  }
 };
 function getResponseBody(method, response) {
   if (method === "HEAD") {
@@ -142,9 +134,7 @@ function isUserWorkerFirst(runWorkerFirst, pathname) {
     } else if (hasPositiveMatch) {
       continue;
     }
-    const match = new RegExp(
-      `^${rule.replace(/([[\]().*+?^$|{}\\])/g, "\\$1").replace("\\*", ".*")}$`,
-    ).test(pathname);
+    const match = new RegExp(`^${rule.replace(/([[\]().*+?^$|{}\\])/g, "\\$1").replace("\\*", ".*")}$`).test(pathname);
     if (match) {
       if (isPositiveRule) {
         hasPositiveMatch = true;
@@ -159,14 +149,7 @@ var asset_resolver_default = resolver;
 
 // node_modules/.pnpm/@opennextjs+cloudflare@1.19.10_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0__wrangler@4.92.0/node_modules/@opennextjs/cloudflare/dist/api/config.js
 function defineCloudflareConfig(config = {}) {
-  const {
-    incrementalCache,
-    tagCache,
-    queue,
-    cachePurge,
-    enableCacheInterception = false,
-    routePreloadingBehavior = "none",
-  } = config;
+  const { incrementalCache, tagCache, queue, cachePurge, enableCacheInterception = false, routePreloadingBehavior = "none" } = config;
   return {
     default: {
       override: {
@@ -176,17 +159,17 @@ function defineCloudflareConfig(config = {}) {
         incrementalCache: resolveIncrementalCache(incrementalCache),
         tagCache: resolveTagCache(tagCache),
         queue: resolveQueue(queue),
-        cdnInvalidation: resolveCdnInvalidation(cachePurge),
+        cdnInvalidation: resolveCdnInvalidation(cachePurge)
       },
-      routePreloadingBehavior,
+      routePreloadingBehavior
     },
     // node:crypto is used to compute cache keys
     edgeExternals: ["node:crypto"],
     cloudflare: {
-      useWorkerdCondition: true,
+      useWorkerdCondition: true
     },
     dangerous: {
-      enableCacheInterception,
+      enableCacheInterception
     },
     middleware: {
       external: true,
@@ -196,10 +179,10 @@ function defineCloudflareConfig(config = {}) {
         proxyExternalRequest: "fetch",
         incrementalCache: resolveIncrementalCache(incrementalCache),
         tagCache: resolveTagCache(tagCache),
-        queue: resolveQueue(queue),
+        queue: resolveQueue(queue)
       },
-      assetResolver: () => asset_resolver_default,
-    },
+      assetResolver: () => asset_resolver_default
+    }
   };
 }
 function resolveIncrementalCache(value = "dummy") {
@@ -233,4 +216,6 @@ var open_next_config_default = defineCloudflareConfig({
   // See https://opennext.js.org/cloudflare/caching for more details
   // incrementalCache: r2IncrementalCache
 });
-export { open_next_config_default as default };
+export {
+  open_next_config_default as default
+};

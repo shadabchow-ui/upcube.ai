@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import LogoIcon from "./icons/logo";
 
 export default function LogoSquare({ size }: { size?: "sm" | undefined }) {
   return (
@@ -12,10 +11,12 @@ export default function LogoSquare({ size }: { size?: "sm" | undefined }) {
         },
       )}
     >
-      <LogoIcon
-        className={clsx({
-          "h-[16px] w-[16px]": !size,
-          "h-[10px] w-[10px]": size === "sm",
+      <img
+        src="/brand/logo-mark.png"
+        alt="UpcubeAI"
+        className={clsx("object-contain", {
+          "h-[18px] w-[18px]": !size,
+          "h-[12px] w-[12px]": size === "sm",
         })}
       />
     </div>

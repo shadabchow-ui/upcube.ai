@@ -1,6 +1,4 @@
-globalThis.openNextDebug = false;
-globalThis.openNextVersion = "4.0.2";
-globalThis.nextVersion = "15.6.0";
+globalThis.openNextDebug = false;globalThis.openNextVersion = "4.0.2";globalThis.nextVersion = "15.6.0";
 
 // node_modules/.pnpm/@opennextjs+cloudflare@1.19.10_next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0__wrangler@4.92.0/node_modules/@opennextjs/cloudflare/dist/api/durable-objects/sharded-tag-cache.js
 import { DurableObject } from "cloudflare:workers";
@@ -22,39 +20,27 @@ var DOShardedTagCache = class extends DurableObject {
     super(state, env);
     this.sql = state.storage.sql;
     state.blockConcurrencyWhile(async () => {
-      this.sql.exec(
-        `CREATE TABLE IF NOT EXISTS revalidations (tag TEXT PRIMARY KEY, revalidatedAt INTEGER, stale INTEGER, expire INTEGER DEFAULT NULL)`,
-      );
+      this.sql.exec(`CREATE TABLE IF NOT EXISTS revalidations (tag TEXT PRIMARY KEY, revalidatedAt INTEGER, stale INTEGER, expire INTEGER DEFAULT NULL)`);
       try {
-        this.sql.exec(
-          `ALTER TABLE revalidations ADD COLUMN stale INTEGER; ALTER TABLE revalidations ADD COLUMN expire INTEGER DEFAULT NULL`,
-        );
-      } catch {}
+        this.sql.exec(`ALTER TABLE revalidations ADD COLUMN stale INTEGER; ALTER TABLE revalidations ADD COLUMN expire INTEGER DEFAULT NULL`);
+      } catch {
+      }
     });
   }
   async getTagData(tags) {
-    if (tags.length === 0) return {};
+    if (tags.length === 0)
+      return {};
     try {
-      const result = this.sql
-        .exec(
-          `SELECT tag, revalidatedAt, stale, expire FROM revalidations WHERE tag IN (${tags.map(() => "?").join(", ")})`,
-          ...tags,
-        )
-        .toArray();
-      debugCache(
-        "DOShardedTagCache",
-        `getTagData tags=${tags} -> ${result.length} results`,
-      );
-      return Object.fromEntries(
-        result.map((row) => [
-          row.tag,
-          {
-            revalidatedAt: row.revalidatedAt ?? 0,
-            stale: row.stale ?? null,
-            expire: row.expire ?? null,
-          },
-        ]),
-      );
+      const result = this.sql.exec(`SELECT tag, revalidatedAt, stale, expire FROM revalidations WHERE tag IN (${tags.map(() => "?").join(", ")})`, ...tags).toArray();
+      debugCache("DOShardedTagCache", `getTagData tags=${tags} -> ${result.length} results`);
+      return Object.fromEntries(result.map((row) => [
+        row.tag,
+        {
+          revalidatedAt: row.revalidatedAt ?? 0,
+          stale: row.stale ?? null,
+          expire: row.expire ?? null
+        }
+      ]));
     } catch (e) {
       console.error(e);
       return {};
@@ -71,14 +57,8 @@ var DOShardedTagCache = class extends DurableObject {
   async getLastRevalidated(tags) {
     const data = await this.getTagData(tags);
     const values = Object.values(data);
-    const timeMs =
-      values.length === 0
-        ? 0
-        : Math.max(...values.map(({ revalidatedAt }) => revalidatedAt));
-    debugCache(
-      "DOShardedTagCache",
-      `getLastRevalidated tags=${tags} -> time=${timeMs}`,
-    );
+    const timeMs = values.length === 0 ? 0 : Math.max(...values.map(({ revalidatedAt }) => revalidatedAt));
+    debugCache("DOShardedTagCache", `getLastRevalidated tags=${tags} -> time=${timeMs}`);
     return timeMs;
   }
   /**
@@ -92,13 +72,8 @@ var DOShardedTagCache = class extends DurableObject {
   async hasBeenRevalidated(tags, lastModified) {
     const data = await this.getTagData(tags);
     const lastModifiedOrNowMs = lastModified ?? Date.now();
-    const revalidated = Object.values(data).some(
-      ({ revalidatedAt }) => revalidatedAt > lastModifiedOrNowMs,
-    );
-    debugCache(
-      "DOShardedTagCache",
-      `hasBeenRevalidated tags=${tags} -> revalidated=${revalidated}`,
-    );
+    const revalidated = Object.values(data).some(({ revalidatedAt }) => revalidatedAt > lastModifiedOrNowMs);
+    debugCache("DOShardedTagCache", `hasBeenRevalidated tags=${tags} -> revalidated=${revalidated}`);
     return revalidated;
   }
   /**
@@ -111,41 +86,25 @@ var DOShardedTagCache = class extends DurableObject {
    */
   async getRevalidationTimes(tags) {
     const data = await this.getTagData(tags);
-    return Object.fromEntries(
-      Object.entries(data).map(([tag, { revalidatedAt }]) => [
-        tag,
-        revalidatedAt,
-      ]),
-    );
+    return Object.fromEntries(Object.entries(data).map(([tag, { revalidatedAt }]) => [tag, revalidatedAt]));
   }
   async writeTags(tags, lastModified) {
-    if (tags.length === 0) return;
+    if (tags.length === 0)
+      return;
     const nowMs = lastModified ?? Date.now();
-    debugCache(
-      "DOShardedTagCache",
-      `writeTags tags=${JSON.stringify(tags)} time=${nowMs}`,
-    );
+    debugCache("DOShardedTagCache", `writeTags tags=${JSON.stringify(tags)} time=${nowMs}`);
     if (typeof tags[0] === "string") {
       for (const tag of tags) {
-        this.sql.exec(
-          `INSERT OR REPLACE INTO revalidations (tag, revalidatedAt, stale) VALUES (?, ?, ?)`,
-          tag,
-          nowMs,
-          nowMs,
-        );
+        this.sql.exec(`INSERT OR REPLACE INTO revalidations (tag, revalidatedAt, stale) VALUES (?, ?, ?)`, tag, nowMs, nowMs);
       }
     } else {
       for (const entry of tags) {
         const staleValue = entry.stale ?? nowMs;
-        this.sql.exec(
-          `INSERT OR REPLACE INTO revalidations (tag, revalidatedAt, stale, expire) VALUES (?, ?, ?, ?)`,
-          entry.tag,
-          staleValue,
-          staleValue,
-          entry.expire ?? null,
-        );
+        this.sql.exec(`INSERT OR REPLACE INTO revalidations (tag, revalidatedAt, stale, expire) VALUES (?, ?, ?, ?)`, entry.tag, staleValue, staleValue, entry.expire ?? null);
       }
     }
   }
 };
-export { DOShardedTagCache };
+export {
+  DOShardedTagCache
+};
