@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { UpcubeAppLauncher } from "components/upcube-universal-header/upcube-app-launcher";
 import {
@@ -16,12 +16,9 @@ export function PortalHeader() {
   const closeTimerRef = useRef<number | null>(null);
   const activeMenu =
     portalMenuGroups.find((group) => group.id === activeMenuId) ?? null;
-  const directNavItems = useMemo(
-    () =>
-      portalPrimaryNav.filter((item) =>
-        ["explore", "platform", "business", "enterprise"].includes(item.id),
-      ),
-    [],
+  const menuGroupIds = new Set(portalMenuGroups.map((group) => group.id));
+  const directNavItems = portalPrimaryNav.filter(
+    (item) => !menuGroupIds.has(item.id),
   );
 
   function clearCloseTimer() {
@@ -179,7 +176,7 @@ export function PortalHeader() {
             <Link
               key={item.id}
               className="uc-button"
-              data-variant={index === 1 ? "solid" : undefined}
+              data-variant={item.id === "chat" ? "solid" : undefined}
               href={item.href}
             >
               {item.label}

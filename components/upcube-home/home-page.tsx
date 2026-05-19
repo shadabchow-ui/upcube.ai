@@ -9,63 +9,8 @@ import {
   portalFooterGroups,
   portalHomepageCards,
   portalMenuGroups,
+  portalPrimaryNav,
 } from "lib/upcube-portal/content";
-import {
-  UPCUBE_BOOKS_URL,
-  UPCUBE_CLOUD_URL,
-  UPCUBE_GAMES_URL,
-  UPCUBE_JOBS_URL,
-  UPCUBE_PLANET_URL,
-} from "lib/upcube-universal/product-links";
-
-const currentAppLinks = [
-  {
-    id: "app-ai-home",
-    label: "Ethen",
-    href: HOME_CHAT_CTA_HREF,
-    placeholder: false,
-  },
-  {
-    id: "app-planet-home",
-    label: "Planet",
-    href: UPCUBE_PLANET_URL,
-    placeholder: false,
-  },
-  {
-    id: "app-books-home",
-    label: "Books",
-    href: UPCUBE_BOOKS_URL,
-    placeholder: false,
-  },
-  {
-    id: "app-games-home",
-    label: "Games",
-    href: UPCUBE_GAMES_URL,
-    placeholder: false,
-  },
-  {
-    id: "app-jobs-home",
-    label: "Jobs",
-    href: UPCUBE_JOBS_URL,
-    placeholder: false,
-  },
-  {
-    id: "app-cloud-home",
-    label: "Cloud",
-    href: UPCUBE_CLOUD_URL,
-    placeholder: false,
-  },
-];
-
-const footerGroups = portalFooterGroups.map((group) =>
-  group.id === "products"
-    ? {
-        ...group,
-        title: "Apps",
-        links: currentAppLinks,
-      }
-    : group,
-);
 
 function LinkMeta({ placeholder }: { placeholder?: boolean }) {
   return placeholder ? <small>Placeholder destination</small> : null;
@@ -77,6 +22,10 @@ function Header() {
   const closeTimerRef = useRef<number | null>(null);
   const activeMenu =
     portalMenuGroups.find((group) => group.id === activeMenuId) ?? null;
+  const menuGroupIds = new Set(portalMenuGroups.map((group) => group.id));
+  const directNavItems = portalPrimaryNav.filter(
+    (item) => !menuGroupIds.has(item.id),
+  );
 
   function clearCloseTimer() {
     if (closeTimerRef.current !== null) {
@@ -182,6 +131,15 @@ function Header() {
                 </button>
               </div>
             ))}
+            {directNavItems.map((item) => (
+              <Link
+                className="uc-home__nav-trigger"
+                href={item.href}
+                key={item.id}
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           {activeMenu ? (
@@ -244,14 +202,27 @@ function Header() {
                 </div>
               </section>
             ))}
+            {directNavItems.length ? (
+              <section aria-label="Primary navigation">
+                <p className="uc-home__mobile-title">Navigation</p>
+                <div className="uc-home__mobile-links">
+                  {directNavItems.map((item) => (
+                    <Link
+                      className="uc-home__mobile-link"
+                      href={item.href}
+                      key={item.id}
+                    >
+                      <span>{item.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            ) : null}
           </div>
         </details>
 
         <div className="uc-home__actions">
           <UpcubeAppLauncher />
-          <Link href="/research" className="uc-home__link-btn">
-            Research
-          </Link>
           <Link href={HOME_CHAT_CTA_HREF} className="uc-home__primary-btn">
             Open chat
           </Link>
@@ -369,11 +340,11 @@ export default function UpcubeHomePage() {
           <div>
             <p className="uc-home__brand-text">UpcubeAI</p>
             <p className="uc-home__footer-copy">
-              Main ecosystem portal for Ethen, Planet, Books, Games, Jobs, and
+              Main ecosystem portal for Ethen, Earth, Books, Games, Jobs, and
               Cloud across UpcubeAI.
             </p>
           </div>
-          {footerGroups.map((group) => (
+          {portalFooterGroups.map((group) => (
             <nav key={group.id} aria-label={`${group.title} links`}>
               <h3>{group.title}</h3>
               {group.links.map((item) => (

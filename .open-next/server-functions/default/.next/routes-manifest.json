@@ -208,12 +208,6 @@
       "namedRegex": "^/faq(?:/)?$"
     },
     {
-      "page": "/favicon.ico",
-      "regex": "^/favicon\\.ico(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/favicon\\.ico(?:/)?$"
-    },
-    {
       "page": "/how-it-works",
       "regex": "^/how\\-it\\-works(?:/)?$",
       "routeKeys": {},

@@ -178,19 +178,13 @@ export {
 
 export const portalPrimaryNav: PortalNavItem[] = [
   { id: "products", label: "Products", href: "/products/upcube-ai" },
-  { id: "explore", label: "Explore", href: "/explore" },
-  { id: "platform", label: "Platform", href: "/platform" },
-  { id: "business", label: "Business", href: "/business" },
-  { id: "capabilities", label: "Capabilities", href: "/capabilities" },
   { id: "news", label: "News", href: "/news" },
+  { id: "research", label: "Research", href: "/research" },
   { id: "trust", label: "Trust", href: "/trust" },
-  { id: "builders", label: "Builders", href: "/builders" },
-  { id: "teams", label: "Teams", href: "/teams" },
-  { id: "enterprise", label: "Enterprise", href: "/enterprise" },
+  { id: "company", label: "Company", href: "/company" },
 ];
 
 export const portalActionNav: PortalNavItem[] = [
-  { id: "research", label: "Research", href: "/research" },
   { id: "chat", label: "Open chat", href: UPCUBE_CHAT_URL },
 ];
 
@@ -198,6 +192,16 @@ export const portalNav = portalPrimaryNav;
 export const portalFooterLinks: PortalNavItem[] = [
   ...portalPrimaryNav,
   { id: "storefront-footer", label: "Storefront", href: "/search" },
+];
+
+export const portalAppLinks: PortalNavItem[] = [
+  { id: "app-ethen", label: "Ethen", href: UPCUBE_CHAT_URL },
+  { id: "app-earth", label: "Earth", href: UPCUBE_PLANET_URL },
+  { id: "app-books", label: "Books", href: UPCUBE_BOOKS_URL },
+  { id: "app-games", label: "Games", href: UPCUBE_GAMES_URL },
+  { id: "app-jobs", label: "Jobs", href: UPCUBE_JOBS_URL },
+  { id: "app-cloud", label: "Cloud", href: UPCUBE_CLOUD_URL },
+  { id: "app-ventari", label: "Ventari", href: UPCUBE_VENTARI_URL },
 ];
 
 export const portalHomepageCards: PortalCardItem[] = [
@@ -283,40 +287,66 @@ export const portalHomepageCards: PortalCardItem[] = [
 
 export const portalFooterGroups: PortalFooterGroup[] = [
   {
-    id: "products",
-    title: "Products",
-    links: upcubeProductLinks.map((product) => ({
-      id: `product-${product.id}-footer`,
-      label: product.label,
-      href: product.launchHref ?? product.productHref,
-    })),
+    id: "apps",
+    title: "Apps",
+    links: portalAppLinks,
   },
   {
-    id: "explore",
-    title: "Explore",
+    id: "terms-policies",
+    title: "Terms & Policies",
     links: [
-      { id: "explore-footer", label: "Explore", href: "/explore" },
-      { id: "platform-footer", label: "Platform", href: "/platform" },
-      { id: "business-footer", label: "Business", href: "/business" },
-      {
-        id: "capabilities-footer",
-        label: "Capabilities",
-        href: "/capabilities",
-      },
-      { id: "news-footer", label: "News", href: "/news" },
-      { id: "builders-footer", label: "Builders", href: "/builders" },
-      { id: "teams-footer", label: "Teams", href: "/teams" },
-      { id: "enterprise-footer", label: "Enterprise", href: "/enterprise" },
-      { id: "research-footer", label: "Research", href: "/research" },
+      { id: "terms-footer", label: "Terms of Use", href: "/terms" },
+      { id: "privacy-footer", label: "Privacy Policy", href: "/privacy" },
+      { id: "policies-footer", label: "Other Policies", href: "/policies" },
     ],
   },
   {
-    id: "routes",
-    title: "Company",
+    id: "about-us",
+    title: "About Us",
     links: [
-      { id: "home-footer", label: "Portal home", href: "/" },
-      { id: "company-footer", label: "Company", href: "/company" },
-      { id: "careers-footer", label: "Careers", href: UPCUBE_JOBS_URL },
+      { id: "about-footer", label: "About Us", href: "/about" },
+      { id: "charter-footer", label: "Our Charter", href: "/charter" },
+      { id: "foundation-footer", label: "Foundation", href: "/foundation" },
+      { id: "careers-footer", label: "Careers", href: "/careers" },
+      { id: "brand-footer", label: "Brand Help Center", href: "/brand" },
+    ],
+  },
+  {
+    id: "safety",
+    title: "Safety",
+    links: [
+      { id: "safety-footer", label: "Safety Approach", href: "/safety" },
+      {
+        id: "security-privacy-footer",
+        label: "Security & Privacy",
+        href: "/security-privacy",
+      },
+      {
+        id: "trust-transparency-footer",
+        label: "Trust & Transparency",
+        href: "/trust-transparency",
+      },
+    ],
+  },
+  {
+    id: "research-index",
+    title: "Research Index",
+    links: [
+      {
+        id: "research-overview-footer",
+        label: "Research Overview",
+        href: "/research",
+      },
+      {
+        id: "research-residency-footer",
+        label: "Research Residency",
+        href: "/research/residency",
+      },
+      {
+        id: "research-economic-footer",
+        label: "Economic Research",
+        href: "/research/economic",
+      },
     ],
   },
 ];
@@ -584,22 +614,21 @@ export const portalMenuGroups: PortalMenuGroup[] = [
     items: [
       {
         id: "safety-menu",
-        label: "Safety",
+        label: "Safety Approach",
         href: "/safety",
         description: "Trust and responsible product framing.",
       },
       {
-        id: "faq-menu",
-        label: "FAQ",
-        href: "/faq",
-        description: "Current answers based on repo state.",
+        id: "security-privacy-menu",
+        label: "Security & Privacy",
+        href: "/security-privacy",
+        description: "Current placeholder route for combined trust topics.",
       },
       {
-        id: "privacy-menu",
-        label: "Privacy",
-        href: "/privacy",
-        description:
-          "Placeholder policy structure pending reviewed legal text.",
+        id: "trust-transparency-menu",
+        label: "Trust & Transparency",
+        href: "/trust-transparency",
+        description: "How the public site handles evidence and placeholders.",
       },
     ],
   },
@@ -608,22 +637,22 @@ export const portalMenuGroups: PortalMenuGroup[] = [
     title: "Company",
     items: [
       {
-        id: "company-page-menu",
-        label: "Company",
-        href: "/company",
-        description: "Mission and ecosystem overview.",
+        id: "about-page-menu",
+        label: "About Us",
+        href: "/about",
+        description: "High-level company and platform framing.",
+      },
+      {
+        id: "foundation-menu",
+        label: "Foundation",
+        href: "/foundation",
+        description: "Mission-oriented direction without legal overclaim.",
       },
       {
         id: "careers-menu",
         label: "Careers",
-        href: UPCUBE_JOBS_URL,
-        description: "Jobs and hiring destination.",
-      },
-      {
-        id: "updates-menu",
-        label: "Launch stories",
-        href: "/news",
-        description: "Product launches and previews across Upcube.",
+        href: "/careers",
+        description: "Builder culture and the live jobs destination.",
       },
     ],
   },

@@ -13,7 +13,7 @@ type TextPageProps = {
   sections: PortalTextSection[];
   theme?: PortalTheme;
   draftNotice?: string;
-  ctas?: { label: string; href: string }[];
+  ctas?: { label: string; href: string; external?: boolean }[];
 };
 
 export function TextPage({
@@ -73,16 +73,29 @@ export function TextPage({
         {ctas?.length ? (
           <section className="uc-section uc-section-rule">
             <div className="uc-shell uc-inline-actions">
-              {ctas.map((cta, index) => (
-                <Link
-                  className="uc-button"
-                  data-variant={index === 0 ? "solid" : undefined}
-                  href={cta.href}
-                  key={cta.href}
-                >
-                  {cta.label}
-                </Link>
-              ))}
+              {ctas.map((cta, index) =>
+                cta.external ? (
+                  <a
+                    className="uc-button"
+                    data-variant={index === 0 ? "solid" : undefined}
+                    href={cta.href}
+                    key={cta.href}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {cta.label}
+                  </a>
+                ) : (
+                  <Link
+                    className="uc-button"
+                    data-variant={index === 0 ? "solid" : undefined}
+                    href={cta.href}
+                    key={cta.href}
+                  >
+                    {cta.label}
+                  </Link>
+                ),
+              )}
             </div>
           </section>
         ) : null}

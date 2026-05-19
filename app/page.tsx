@@ -3,7 +3,7 @@ import UpcubeHomePage from "components/upcube-home/home-page";
 
 export const metadata = {
   description:
-    "UpcubeAI ecosystem portal for UpcubeAI, Upcube Earth, Upcube Books, Upcube Games, Upcube Jobs, Upcube Cloud, Ventari, and commerce.",
+    "UpcubeAI ecosystem portal for Ethen, Earth, Books, Games, Jobs, Cloud, Ventari, research, and product pages across Upcube.",
   openGraph: {
     type: "website",
   },

@@ -1,4 +1,5 @@
 import { getCollections, getPages, getProducts } from "lib/shopify";
+import { foundationRoutePaths } from "lib/upcube-portal/foundation-pages";
 import { baseUrl, validateEnvironmentVariables } from "lib/utils";
 import { MetadataRoute } from "next";
 
@@ -10,12 +11,39 @@ type Route = {
 export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  validateEnvironmentVariables();
+  const staticRoutes = [
+    "",
+    "/business",
+    "/builders",
+    "/capabilities",
+    "/chat",
+    "/company",
+    "/contact",
+    "/enterprise",
+    "/explore",
+    "/faq",
+    "/how-it-works",
+    "/news",
+    "/platform",
+    "/principles",
+    "/privacy-policy",
+    "/teams",
+    "/terms-of-service",
+    "/trust",
+    "/vision",
+    ...foundationRoutePaths,
+  ];
 
-  const routesMap = [""].map((route) => ({
+  const routesMap = staticRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString(),
   }));
+
+  try {
+    validateEnvironmentVariables();
+  } catch {
+    return routesMap;
+  }
 
   const collectionsPromise = getCollections().then((collections) =>
     collections.map((collection) => ({
@@ -44,8 +72,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     fetchedRoutes = (
       await Promise.all([collectionsPromise, productsPromise, pagesPromise])
     ).flat();
-  } catch (error) {
-    throw JSON.stringify(error, null, 2);
+  } catch {
+    return routesMap;
   }
 
   return [...routesMap, ...fetchedRoutes];

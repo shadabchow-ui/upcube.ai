@@ -331,6 +331,27 @@ export const researchPageContent: MarketingPageContent = {
       ],
     },
     {
+      eyebrow: "Research index",
+      title: "Pages for longer-form work",
+      cards: [
+        {
+          title: "Research overview",
+          body: "Start from the main route when you want the broad public framing.",
+          href: "/research",
+        },
+        {
+          title: "Research residency",
+          body: "Read the placeholder direction for a possible residency model.",
+          href: "/research/residency",
+        },
+        {
+          title: "Economic research",
+          body: "Read the current direction for cost, tradeoffs, and system economics.",
+          href: "/research/economic",
+        },
+      ],
+    },
+    {
       eyebrow: "Connected lanes",
       title: "Route results into the right app",
       cards: [

@@ -15,7 +15,6 @@
   "/enterprise/page": "app/enterprise/page.js",
   "/explore/page": "app/explore/page.js",
   "/faq/page": "app/faq/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/how-it-works/page": "app/how-it-works/page.js",
   "/news/[slug]/page": "app/news/[slug]/page.js",
   "/news/page": "app/news/page.js",

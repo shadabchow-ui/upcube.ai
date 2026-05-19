@@ -313,15 +313,15 @@ body:has(.uc-home) .commerce-navbar {
 }
 
 .uc-home__hero h1 {
-  max-width: 12ch;
+  max-width: none;
   margin: 0;
   margin-bottom: 0.75rem;
   margin-inline: auto;
   text-align: center;
-  font-size: var(--up-type-h1-size);
-  line-height: var(--up-type-h1-line);
-  font-weight: var(--up-type-h1-weight);
-  letter-spacing: var(--up-type-h1-track);
+  font-size: clamp(28px, 3.25vw, 44px);
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.035em;
   text-wrap: balance;
 }
 
@@ -643,6 +643,10 @@ body:has(.uc-home) .commerce-navbar {
   .uc-home__mobile-menu {
     display: none;
   }
+
+  .uc-home__hero h1 {
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 61.99rem) {
@@ -657,6 +661,11 @@ body:has(.uc-home) .commerce-navbar {
 
   .uc-home__actions .uc-home__link-btn {
     display: none;
+  }
+
+  .uc-home__hero h1 {
+    white-space: normal;
+    text-wrap: balance;
   }
 }
 

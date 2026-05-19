@@ -9,10 +9,11 @@ type UpcubeUniversalHeaderProps = {
 };
 
 const defaultLinks = [
+  { id: "products", label: "Products", href: "/products/upcube-ai" },
   { id: "news", label: "News", href: "/news" },
   { id: "research", label: "Research", href: "/research" },
-  { id: "enterprise", label: "Enterprise", href: "/enterprise" },
   { id: "trust", label: "Trust", href: "/trust" },
+  { id: "company", label: "Company", href: "/company" },
 ];
 
 export function UpcubeUniversalHeader({

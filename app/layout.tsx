@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { CartProvider } from "components/cart/cart-context";
 import { Navbar } from "components/layout/navbar";
-import { WelcomeToast } from "components/welcome-toast";
 import { GeistSans } from "geist/font/sans";
 import { getCart } from "lib/shopify";
 import { ReactNode } from "react";
@@ -14,7 +13,6 @@ import "./styles/upcube-portal.css";
 import "./styles/upcube-universal-header.css";
 import { baseUrl } from "lib/utils";
 
-const { SITE_NAME } = process.env;
 const upcubeInter = localFont({
   src: [
     {
@@ -32,10 +30,9 @@ const upcubeInter = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: {
-    default: SITE_NAME!,
-    template: `%s | ${SITE_NAME}`,
-  },
+  title: "UpCubeAI | Artificial Intelligence Company",
+  description:
+    "Artificial intelligence company building consumer apps, product experiences, and research across the Upcube ecosystem.",
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
@@ -63,7 +60,6 @@ export default async function RootLayout({
           <main>
             {children}
             <Toaster closeButton />
-            <WelcomeToast />
           </main>
         </CartProvider>
       </body>

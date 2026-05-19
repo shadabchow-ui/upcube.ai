@@ -20,7 +20,6 @@ export function UpcubeAppLauncher({
   currentAppId,
   launcherLabel = "Open app launcher",
 }: UpcubeAppLauncherProps) {
-  const visibleApps = apps.filter((app) => !["ventari", "ai"].includes(app.id));
   const [isOpen, setIsOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
   const panelId = useId();
@@ -70,9 +69,9 @@ export function UpcubeAppLauncher({
 
       {isOpen ? (
         <div id={panelId} className="uuh-launcher-panel" role="menu">
-          <p className="uuh-launcher-panel-title">Upcube apps</p>
+          <p className="uuh-launcher-panel-title">Apps</p>
           <div className="uuh-launcher-grid">
-            {visibleApps.map((app) => (
+            {apps.map((app) => (
               <UpcubeAppTile
                 key={app.id}
                 app={app}
