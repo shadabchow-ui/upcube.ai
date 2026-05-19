@@ -3,22 +3,23 @@ body:has(.uc-home) .commerce-navbar {
 }
 
 .uc-home {
-  --uc-bg: #000;
-  --uc-surface: #050505;
-  --uc-surface-soft: #101010;
+  --uc-bg: var(--up-color-background);
+  --uc-surface: var(--up-color-surface);
+  --uc-surface-soft: var(--up-color-surface-2);
   --uc-surface-elevated: #151515;
-  --uc-text: #f5f5f0;
-  --uc-text-muted: rgba(245, 245, 240, 0.68);
-  --uc-text-dim: rgba(245, 245, 240, 0.46);
-  --uc-border: rgba(245, 245, 240, 0.15);
-  --uc-border-soft: rgba(245, 245, 240, 0.08);
-  --uc-max: 1380px;
-  --uc-pad: clamp(1.25rem, 3vw, 2.5rem);
-  --uc-section-y: clamp(4.75rem, 8vw, 7.5rem);
+  --uc-text: var(--up-color-primary-100);
+  --uc-text-muted: var(--up-color-primary-80);
+  --uc-text-dim: var(--up-color-primary-60);
+  --uc-border: rgba(245, 245, 240, 0.16);
+  --uc-border-soft: var(--up-color-border);
+  --uc-max: var(--up-media-width);
+  --uc-pad: var(--up-page-gutter);
+  --uc-section-y: var(--up-section-y);
   background: var(--uc-bg);
   color: var(--uc-text);
   min-height: 100svh;
   overflow-x: clip;
+  font-family: var(--up-font-sans);
 }
 
 .uc-home * {
@@ -42,7 +43,7 @@ body:has(.uc-home) .commerce-navbar {
 
 .uc-home__header-inner {
   position: relative;
-  min-height: 5.5rem;
+  min-height: max(5rem, var(--up-header-h));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -98,8 +99,9 @@ body:has(.uc-home) .commerce-navbar {
   color: var(--uc-text-muted);
   background: transparent;
   font: inherit;
-  font-size: 0.92rem;
-  line-height: 1;
+  font-size: var(--up-type-meta-size);
+  line-height: var(--up-type-meta-line);
+  font-weight: 500;
   padding: 0.6rem 0.8rem;
   border-radius: 999px;
   transition:
@@ -154,8 +156,9 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__mega-label {
   margin: 0;
   color: var(--uc-text-dim);
-  font-size: 0.76rem;
-  letter-spacing: 0.08em;
+  font-size: var(--up-type-meta-size);
+  line-height: var(--up-type-meta-line);
+  letter-spacing: var(--up-type-meta-track);
   text-transform: uppercase;
 }
 
@@ -184,14 +187,16 @@ body:has(.uc-home) .commerce-navbar {
 
 .uc-home__mega-item span,
 .uc-home__mobile-link span {
-  font-size: 1rem;
+  font-size: var(--up-type-p1-size);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
 }
 
 .uc-home__mega-item small,
 .uc-home__mobile-link small {
   color: var(--uc-text-dim);
-  font-size: 0.78rem;
-  line-height: 1.45;
+  font-size: var(--up-type-p2-size);
+  line-height: var(--up-type-p2-line);
 }
 
 .uc-home__mobile-panel {
@@ -210,7 +215,9 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__mobile-title {
   margin: 0 0 0.45rem;
   color: var(--uc-text-dim);
-  font-size: 0.76rem;
+  font-size: var(--up-type-meta-size);
+  line-height: var(--up-type-meta-line);
+  letter-spacing: var(--up-type-meta-track);
   text-transform: uppercase;
 }
 
@@ -244,8 +251,9 @@ body:has(.uc-home) .commerce-navbar {
   justify-content: center;
   border-radius: 999px;
   padding: 0.65rem 1rem;
-  font-size: 0.9rem;
-  line-height: 1;
+  font-size: var(--up-type-meta-size);
+  line-height: 1.2;
+  font-weight: 500;
   text-decoration: none;
   transition:
     background-color 0.18s ease,
@@ -281,46 +289,49 @@ body:has(.uc-home) .commerce-navbar {
 }
 
 .uc-home__hero-inner {
-  min-height: min(24rem, calc(100svh - 5.5rem));
+  min-height: min(28rem, calc(100svh - max(5rem, var(--up-header-h))));
   display: grid;
   place-items: center;
-  padding-block: clamp(1.6rem, 5vw, 3rem);
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
 }
 
 .uc-home__hero-stack {
-  width: min(100%, 56rem);
+  width: min(100%, 58rem);
   display: grid;
   justify-items: center;
-  gap: 0.55rem;
+  gap: 0.7rem;
   text-align: center;
 }
 
 .uc-home__eyebrow {
   margin: 0;
   color: var(--uc-text-dim);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-size: var(--up-type-meta-size);
+  line-height: var(--up-type-meta-line);
+  letter-spacing: var(--up-type-meta-track);
   text-transform: uppercase;
 }
 
 .uc-home__hero h1 {
-  max-width: 100%;
+  max-width: 12ch;
   margin: 0;
   margin-bottom: 0.75rem;
   margin-inline: auto;
   text-align: center;
-  font-size: 28px;
-  line-height: 34px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
+  font-size: var(--up-type-h1-size);
+  line-height: var(--up-type-h1-line);
+  font-weight: var(--up-type-h1-weight);
+  letter-spacing: var(--up-type-h1-track);
+  text-wrap: balance;
 }
 
 .uc-home__lead {
   max-width: 34rem;
   margin: 0;
   color: var(--uc-text-muted);
-  font-size: clamp(1rem, 1.45vw, 1.18rem);
-  line-height: 1.65;
+  font-size: var(--up-type-p1-size);
+  line-height: var(--up-type-p1-line);
+  letter-spacing: var(--up-type-p1-track);
 }
 
 .uc-home__chat-panel {
@@ -380,8 +391,8 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__chat-composer-bar p {
   margin: 0;
   color: var(--uc-text-dim);
-  font-size: 0.88rem;
-  line-height: 1.5;
+  font-size: var(--up-type-p2-size);
+  line-height: var(--up-type-p2-line);
   text-align: left;
 }
 
@@ -396,7 +407,9 @@ body:has(.uc-home) .commerce-navbar {
   color: #000;
   padding: 0.45rem 0.55rem 0.45rem 1rem;
   font: inherit;
-  font-size: 0.92rem;
+  font-size: var(--up-type-meta-size);
+  line-height: 1.2;
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -425,7 +438,8 @@ body:has(.uc-home) .commerce-navbar {
   color: var(--uc-text-muted);
   background: rgba(255, 255, 255, 0.03);
   padding: 0.6rem 0.9rem;
-  font-size: 0.86rem;
+  font-size: var(--up-type-p2-size);
+  line-height: 1.45;
   text-decoration: none;
 }
 
@@ -452,9 +466,10 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__section h2 {
   max-width: 18ch;
   margin: 0 0 clamp(1.5rem, 4vw, 2.75rem);
-  font-size: clamp(2rem, 5vw, 4.25rem);
-  line-height: 1.04;
-  font-weight: 520;
+  font-size: var(--up-type-h2-size);
+  line-height: var(--up-type-h2-line);
+  font-weight: var(--up-type-h2-weight);
+  letter-spacing: var(--up-type-h2-track);
   text-wrap: balance;
 }
 
@@ -468,7 +483,8 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__news-link {
   color: var(--uc-text-muted);
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: var(--up-type-p2-size);
+  line-height: 1.45;
 }
 
 .uc-home__news-link:hover {

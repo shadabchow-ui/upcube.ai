@@ -1,7 +1,82 @@
+"use client";
+
 import Link from "next/link";
-import { portalActionNav, portalPrimaryNav } from "lib/upcube-portal/content";
+import { useEffect, useMemo, useRef, useState } from "react";
+
+import { UpcubeAppLauncher } from "components/upcube-universal-header/upcube-app-launcher";
+import {
+  portalActionNav,
+  portalMenuGroups,
+  portalPrimaryNav,
+} from "lib/upcube-portal/content";
 
 export function PortalHeader() {
+  const [activeMenuId, setActiveMenuId] = useState<string | null>(null);
+  const menuShellRef = useRef<HTMLDivElement | null>(null);
+  const closeTimerRef = useRef<number | null>(null);
+  const activeMenu =
+    portalMenuGroups.find((group) => group.id === activeMenuId) ?? null;
+  const directNavItems = useMemo(
+    () =>
+      portalPrimaryNav.filter((item) =>
+        ["explore", "platform", "business", "enterprise"].includes(item.id),
+      ),
+    [],
+  );
+
+  function clearCloseTimer() {
+    if (closeTimerRef.current !== null) {
+      window.clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  }
+
+  function queueClose() {
+    clearCloseTimer();
+    closeTimerRef.current = window.setTimeout(() => {
+      setActiveMenuId(null);
+      closeTimerRef.current = null;
+    }, 120);
+  }
+
+  useEffect(() => {
+    if (!activeMenuId) {
+      return;
+    }
+
+    function handlePointerDown(event: PointerEvent) {
+      if (
+        menuShellRef.current &&
+        !menuShellRef.current.contains(event.target as Node)
+      ) {
+        clearCloseTimer();
+        setActiveMenuId(null);
+      }
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        clearCloseTimer();
+        setActiveMenuId(null);
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeMenuId]);
+
+  useEffect(
+    () => () => {
+      clearCloseTimer();
+    },
+    [],
+  );
+
   return (
     <header className="uc-header">
       <div className="uc-shell uc-header-inner">
@@ -14,27 +89,92 @@ export function PortalHeader() {
             className="uc-brand-mark"
           />
         </Link>
-        <nav className="uc-header-nav" aria-label="Portal primary">
-          <ul className="uc-nav-list">
-            {portalPrimaryNav.map((item) => (
-              <li key={item.id}>
-                <Link
-                  className="uc-nav-link"
-                  data-placeholder={item.placeholder ? "true" : undefined}
-                  href={item.href}
-                >
-                  {item.label}
-                  {item.placeholder ? (
-                    <span className="uc-nav-note" aria-hidden="true">
-                      Soon
-                    </span>
-                  ) : null}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+
+        <div
+          className="uc-header-menu-shell"
+          ref={menuShellRef}
+          onMouseEnter={clearCloseTimer}
+          onMouseLeave={queueClose}
+          onBlur={(event) => {
+            const nextTarget = event.relatedTarget as Node | null;
+            if (!nextTarget || !event.currentTarget.contains(nextTarget)) {
+              clearCloseTimer();
+              setActiveMenuId(null);
+            }
+          }}
+        >
+          <nav className="uc-header-nav" aria-label="Portal primary">
+            <ul className="uc-nav-list">
+              {portalMenuGroups.map((group) => (
+                <li className="uc-nav-item" key={group.id}>
+                  <button
+                    type="button"
+                    className="uc-nav-trigger"
+                    aria-expanded={activeMenu?.id === group.id}
+                    aria-controls={`uc-header-mega-${group.id}`}
+                    onMouseEnter={() => {
+                      clearCloseTimer();
+                      setActiveMenuId(group.id);
+                    }}
+                    onFocus={() => {
+                      clearCloseTimer();
+                      setActiveMenuId(group.id);
+                    }}
+                    onClick={() => {
+                      clearCloseTimer();
+                      setActiveMenuId(group.id);
+                    }}
+                  >
+                    {group.title}
+                  </button>
+                </li>
+              ))}
+              {directNavItems.map((item) => (
+                <li className="uc-nav-item" key={item.id}>
+                  <Link className="uc-nav-link" href={item.href}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {activeMenu ? (
+            <div
+              className="uc-header-mega-wrap"
+              onMouseEnter={clearCloseTimer}
+              onMouseLeave={queueClose}
+            >
+              <div
+                id={`uc-header-mega-${activeMenu.id}`}
+                className="uc-header-mega-panel"
+                role="group"
+                aria-label={`${activeMenu.title} menu`}
+              >
+                <p className="uc-header-mega-label">{activeMenu.title}</p>
+                <div className="uc-header-mega-grid">
+                  {activeMenu.items.map((item) => (
+                    <Link
+                      key={item.id}
+                      className="uc-header-mega-link"
+                      href={item.href}
+                      onClick={() => {
+                        clearCloseTimer();
+                        setActiveMenuId(null);
+                      }}
+                    >
+                      <span>{item.label}</span>
+                      <small>{item.description ?? ""}</small>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : null}
+        </div>
+
         <div className="uc-header-actions">
+          <UpcubeAppLauncher />
           {portalActionNav.map((item, index) => (
             <Link
               key={item.id}

@@ -1,0 +1,138 @@
+:root {
+  --up-font-sans:
+    var(--font-upcube-inter), Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --up-font-mono:
+    "SF Mono", "JetBrains Mono", Consolas, ui-monospace, monospace;
+
+  --up-header-h: 3.75rem;
+
+  --up-type-xl-size: clamp(3rem, 6vw, 4.75rem);
+  --up-type-xl-line: clamp(3rem, 6.15vw, 4.95rem);
+  --up-type-xl-track: -0.05em;
+  --up-type-xl-weight: 560;
+
+  --up-type-h1-size: clamp(2.3rem, 4.7vw, 3.9rem);
+  --up-type-h1-line: clamp(2.4rem, 4.95vw, 4.15rem);
+  --up-type-h1-track: -0.038em;
+  --up-type-h1-weight: 550;
+
+  --up-type-h2-size: clamp(1.85rem, 3.2vw, 2.95rem);
+  --up-type-h2-line: clamp(2.1rem, 3.45vw, 3.2rem);
+  --up-type-h2-track: -0.03em;
+  --up-type-h2-weight: 540;
+
+  --up-type-h3-size: clamp(1.35rem, 2.1vw, 1.9rem);
+  --up-type-h3-line: clamp(1.75rem, 2.4vw, 2.35rem);
+  --up-type-h3-track: -0.018em;
+  --up-type-h3-weight: 540;
+
+  --up-type-p1-size: 1.0625rem;
+  --up-type-p1-line: 1.8;
+  --up-type-p1-track: -0.01em;
+  --up-type-p1-weight: 400;
+
+  --up-type-p2-size: 0.9375rem;
+  --up-type-p2-line: 1.6;
+  --up-type-p2-track: -0.006em;
+  --up-type-p2-weight: 400;
+
+  --up-type-meta-size: 0.875rem;
+  --up-type-meta-line: 1.45;
+  --up-type-meta-track: 0.08em;
+  --up-type-meta-weight: 500;
+
+  --up-color-background: #000;
+  --up-color-primary-100: #f5f5f0;
+  --up-color-primary-80: rgba(245, 245, 240, 0.8);
+  --up-color-primary-60: rgba(245, 245, 240, 0.6);
+  --up-color-surface: #050505;
+  --up-color-surface-2: #0d0d0d;
+  --up-color-border: rgba(245, 245, 240, 0.1);
+
+  --up-page-gutter: clamp(1rem, 3vw, 2rem);
+  --up-content-width: 68rem;
+  --up-media-width: 82rem;
+  --up-section-y: clamp(4rem, 8vw, 6.5rem);
+  --up-radius-lg: 1.6rem;
+  --up-radius-md: 1.1rem;
+  --up-shadow-soft: 0 18px 54px rgba(0, 0, 0, 0.34);
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --up-header-h: 4.1rem;
+  }
+}
+
+.up-text-xl {
+  font-size: var(--up-type-xl-size);
+  line-height: var(--up-type-xl-line);
+  letter-spacing: var(--up-type-xl-track);
+  font-weight: var(--up-type-xl-weight);
+}
+
+.up-text-h1 {
+  font-size: var(--up-type-h1-size);
+  line-height: var(--up-type-h1-line);
+  letter-spacing: var(--up-type-h1-track);
+  font-weight: var(--up-type-h1-weight);
+}
+
+.up-text-h2 {
+  font-size: var(--up-type-h2-size);
+  line-height: var(--up-type-h2-line);
+  letter-spacing: var(--up-type-h2-track);
+  font-weight: var(--up-type-h2-weight);
+}
+
+.up-text-h3 {
+  font-size: var(--up-type-h3-size);
+  line-height: var(--up-type-h3-line);
+  letter-spacing: var(--up-type-h3-track);
+  font-weight: var(--up-type-h3-weight);
+}
+
+.up-text-p1 {
+  font-size: var(--up-type-p1-size);
+  line-height: var(--up-type-p1-line);
+  letter-spacing: var(--up-type-p1-track);
+  font-weight: var(--up-type-p1-weight);
+  text-wrap: pretty;
+}
+
+.up-text-p2 {
+  font-size: var(--up-type-p2-size);
+  line-height: var(--up-type-p2-line);
+  letter-spacing: var(--up-type-p2-track);
+  font-weight: var(--up-type-p2-weight);
+}
+
+.up-text-meta {
+  font-size: var(--up-type-meta-size);
+  line-height: var(--up-type-meta-line);
+  letter-spacing: var(--up-type-meta-track);
+  font-weight: var(--up-type-meta-weight);
+  text-transform: uppercase;
+}
+
+.up-text-nav {
+  font-size: var(--up-type-meta-size);
+  line-height: var(--up-type-meta-line);
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.up-page-shell {
+  width: min(100%, var(--up-media-width));
+  margin-inline: auto;
+  padding-inline: var(--up-page-gutter);
+}
+
+.up-page-container {
+  width: min(100%, var(--up-content-width));
+}
+
+.up-section {
+  padding-block: var(--up-section-y);
+}

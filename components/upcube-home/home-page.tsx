@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { UpcubeAppLauncher } from "components/upcube-universal-header/upcube-app-launcher";
 import { HeroChatPanel, HOME_CHAT_CTA_HREF } from "./hero-chat-panel";
 import { featureBands, stories } from "lib/upcube-home/content";
 import {
@@ -191,6 +192,7 @@ function Header() {
         </details>
 
         <div className="uc-home__actions">
+          <UpcubeAppLauncher />
           <Link href="/research" className="uc-home__link-btn">
             Research
           </Link>
@@ -311,8 +313,8 @@ export default function UpcubeHomePage() {
           <div>
             <p className="uc-home__brand-text">UpcubeAI</p>
             <p className="uc-home__footer-copy">
-              Main ecosystem portal for chat, globe, games, books, jobs, repos,
-              and commerce.
+              Main ecosystem portal for UpcubeAI, Upcube Earth, Upcube Books,
+              Upcube Games, Upcube Jobs, Upcube Cloud, Ventari, and commerce.
             </p>
           </div>
           {portalFooterGroups.map((group) => (

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { CartProvider } from "components/cart/cart-context";
 import { Navbar } from "components/layout/navbar";
 import { WelcomeToast } from "components/welcome-toast";
@@ -7,7 +8,10 @@ import { ReactNode } from "react";
 import localFont from "next/font/local";
 import { Toaster } from "sonner";
 import "./globals.css";
+import "./styles/upcube-type-system.css";
+import "./styles/upcube-news.css";
 import "./styles/upcube-portal.css";
+import "./styles/upcube-universal-header.css";
 import { baseUrl } from "lib/utils";
 
 const { SITE_NAME } = process.env;
@@ -26,11 +30,16 @@ const upcubeInter = localFont({
   display: "swap",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
     default: SITE_NAME!,
     template: `%s | ${SITE_NAME}`,
+  },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
   },
   robots: {
     follow: true,
@@ -47,10 +56,7 @@ export default async function RootLayout({
   const cart = getCart();
 
   return (
-    <html
-      lang="en"
-      className={`${GeistSans.variable} ${upcubeInter.variable}`}
-    >
+    <html lang="en" className={`${GeistSans.variable} ${upcubeInter.variable}`}>
       <body className="bg-neutral-50 text-black selection:bg-teal-300 dark:bg-neutral-900 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
         <CartProvider cartPromise={cart}>
           <Navbar />

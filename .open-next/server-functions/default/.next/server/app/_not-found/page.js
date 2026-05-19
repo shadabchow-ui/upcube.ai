@@ -1,0 +1,28 @@
+var R = require("../../chunks/ssr/[turbopack]_runtime.js")(
+  "server/app/_not-found/page.js",
+);
+R.c("server/chunks/ssr/[root-of-the-server]__89b6cd5d._.js");
+R.c("server/chunks/ssr/_ac8aefdf._.js");
+R.c(
+  "server/chunks/ssr/72740_next_dist_esm_build_templates_app-page_3c2d2fd8.js",
+);
+R.c("server/chunks/ssr/[root-of-the-server]__2b7f36f4._.js");
+R.c("server/chunks/ssr/72740_next_dist_07d8e787._.js");
+R.c("server/chunks/ssr/72740_next_dist_f77d8c2c._.js");
+R.c("server/chunks/ssr/72740_next_dist_esm_ec552f69._.js");
+R.c("server/chunks/ssr/72740_next_dist_5afe7f47._.js");
+R.c("server/chunks/ssr/72740_next_dist_esm_65570cfc._.js");
+R.c("server/chunks/ssr/72740_next_dist_compiled_4f0dfd25._.js");
+R.c("server/chunks/ssr/app_0ef037c1._.js");
+R.c("server/chunks/ssr/[root-of-the-server]__57c22257._.js");
+R.c("server/chunks/ssr/[root-of-the-server]__2befafc6._.js");
+R.c("server/chunks/ssr/_7f761085._.js");
+R.c("server/chunks/ssr/72740_next_dist_89aeaa54._.js");
+R.c("server/chunks/ssr/app_error_tsx_5275429f._.js");
+R.c("server/chunks/ssr/72740_next_dist_client_components_3df277ea._.js");
+R.c(
+  "server/chunks/ssr/72740_next_dist_client_components_builtin_forbidden_f784b946.js",
+);
+R.c("server/chunks/ssr/_7b4a76a8._.js");
+R.m(44585);
+module.exports = R.m(44585).exports;

@@ -1,0 +1,35 @@
+var R = require("../../../chunks/ssr/[turbopack]_runtime.js")(
+  "server/app/updates/[slug]/page.js",
+);
+R.c("server/chunks/ssr/[root-of-the-server]__0064b9e5._.js");
+R.c(
+  "server/chunks/ssr/components_upcube-portal_portal-footer_tsx_22884f8d._.js",
+);
+R.c("server/chunks/ssr/_3a2eff4e._.js");
+R.c("server/chunks/ssr/_ac8aefdf._.js");
+R.c("server/chunks/ssr/[root-of-the-server]__d2798418._.js");
+R.c("server/chunks/ssr/72740_next_dist_compiled_4f0dfd25._.js");
+R.c("server/chunks/ssr/72740_next_dist_f77d8c2c._.js");
+R.c("server/chunks/ssr/72740_next_dist_esm_65570cfc._.js");
+R.c("server/chunks/ssr/72740_next_dist_esm_ec552f69._.js");
+R.c("server/chunks/ssr/72740_next_dist_5afe7f47._.js");
+R.c("server/chunks/ssr/72740_next_dist_07d8e787._.js");
+R.c("server/chunks/ssr/app_0ef037c1._.js");
+R.c("server/chunks/ssr/[root-of-the-server]__57c22257._.js");
+R.c(
+  "server/chunks/ssr/72740_next_dist_client_components_builtin_global-error_504cd985.js",
+);
+R.c("server/chunks/ssr/[root-of-the-server]__2befafc6._.js");
+R.c("server/chunks/ssr/_7f761085._.js");
+R.c("server/chunks/ssr/72740_next_dist_89aeaa54._.js");
+R.c("server/chunks/ssr/app_error_tsx_5275429f._.js");
+R.c("server/chunks/ssr/72740_next_dist_client_components_3df277ea._.js");
+R.c(
+  "server/chunks/ssr/72740_next_dist_client_components_builtin_forbidden_f784b946.js",
+);
+R.c(
+  "server/chunks/ssr/72740_next_dist_client_components_builtin_unauthorized_1fda7a36.js",
+);
+R.c("server/chunks/ssr/_f8f0f162._.js");
+R.m(73548);
+module.exports = R.m(73548).exports;

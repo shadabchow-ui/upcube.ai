@@ -1,0 +1,35 @@
+var R = require("../../chunks/ssr/[turbopack]_runtime.js")(
+  "server/app/security-privacy/page.js",
+);
+R.c("server/chunks/ssr/[root-of-the-server]__3636c6e1._.js");
+R.c(
+  "server/chunks/ssr/components_upcube-portal_portal-footer_tsx_22884f8d._.js",
+);
+R.c("server/chunks/ssr/_067493ae._.js");
+R.c("server/chunks/ssr/_ac8aefdf._.js");
+R.c("server/chunks/ssr/[root-of-the-server]__d2798418._.js");
+R.c("server/chunks/ssr/72740_next_dist_compiled_4f0dfd25._.js");
+R.c("server/chunks/ssr/72740_next_dist_f77d8c2c._.js");
+R.c("server/chunks/ssr/72740_next_dist_esm_65570cfc._.js");
+R.c("server/chunks/ssr/72740_next_dist_esm_ec552f69._.js");
+R.c("server/chunks/ssr/72740_next_dist_5afe7f47._.js");
+R.c("server/chunks/ssr/72740_next_dist_07d8e787._.js");
+R.c("server/chunks/ssr/app_0ef037c1._.js");
+R.c("server/chunks/ssr/[root-of-the-server]__57c22257._.js");
+R.c(
+  "server/chunks/ssr/72740_next_dist_client_components_builtin_global-error_504cd985.js",
+);
+R.c("server/chunks/ssr/[root-of-the-server]__2befafc6._.js");
+R.c("server/chunks/ssr/_7f761085._.js");
+R.c("server/chunks/ssr/72740_next_dist_89aeaa54._.js");
+R.c("server/chunks/ssr/app_error_tsx_5275429f._.js");
+R.c("server/chunks/ssr/72740_next_dist_client_components_3df277ea._.js");
+R.c(
+  "server/chunks/ssr/72740_next_dist_client_components_builtin_forbidden_f784b946.js",
+);
+R.c(
+  "server/chunks/ssr/72740_next_dist_client_components_builtin_unauthorized_1fda7a36.js",
+);
+R.c("server/chunks/ssr/_aec7e6ae._.js");
+R.m(82178);
+module.exports = R.m(82178).exports;

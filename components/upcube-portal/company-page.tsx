@@ -44,7 +44,7 @@ export function CompanyPage() {
           <div className="uc-shell">
             <SectionHeading
               title="Work areas"
-              description="Core lanes where UpcubeAI is actively building products."
+              description="Core product lanes in the current Upcube ecosystem."
             />
             <div className="uc-grid uc-inner-grid-3">
               {companyWorkAreas.map((item) => (

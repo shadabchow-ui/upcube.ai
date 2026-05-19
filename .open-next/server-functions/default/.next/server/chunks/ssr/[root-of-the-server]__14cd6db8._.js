@@ -1,0 +1,250 @@
+module.exports = [
+  93695,
+  (a, b, c) => {
+    b.exports = a.x("next/dist/shared/lib/no-fallback-error.external.js", () =>
+      require("next/dist/shared/lib/no-fallback-error.external.js"),
+    );
+  },
+  39236,
+  (a) => {
+    a.n(a.i(86895));
+  },
+  70864,
+  (a) => {
+    a.n(a.i(33290));
+  },
+  65897,
+  (a) => {
+    a.n(a.i(96647));
+  },
+  82532,
+  (a) => {
+    a.n(a.i(98340));
+  },
+  77201,
+  (a) => {
+    a.n(a.i(96351));
+  },
+  74608,
+  (a) => {
+    a.n(a.i(94166));
+  },
+  97903,
+  (a) => {
+    a.n(a.i(5722));
+  },
+  27554,
+  (a) => {
+    "use strict";
+    var b = a.i(63874);
+    function c({
+      eyebrow: a,
+      title: c,
+      description: d,
+      actions: e,
+      className: f,
+    }) {
+      return (0, b.jsxs)("header", {
+        className: ["uc-section-heading", f].filter(Boolean).join(" "),
+        children: [
+          a ? (0, b.jsx)("p", { className: "uc-eyebrow", children: a }) : null,
+          (0, b.jsx)("h2", { className: "uc-section-title", children: c }),
+          d
+            ? (0, b.jsx)("p", {
+                className: "uc-section-description",
+                children: d,
+              })
+            : null,
+          e,
+        ],
+      });
+    }
+    a.s(["SectionHeading", () => c]);
+  },
+  574,
+  (a) => {
+    "use strict";
+    var b = a.i(63874),
+      c = a.i(53338),
+      d = a.i(72569),
+      e = a.i(20134),
+      f = a.i(79703),
+      g = a.i(27554),
+      h = a.i(31065);
+    function i() {
+      return (0, b.jsxs)(f.PortalShell, {
+        children: [
+          (0, b.jsx)(e.PortalHeader, {}),
+          (0, b.jsxs)("main", {
+            children: [
+              (0, b.jsx)("section", {
+                className: "uc-section uc-inner-hero",
+                children: (0, b.jsx)("div", {
+                  className: "uc-shell",
+                  children: (0, b.jsx)(g.SectionHeading, {
+                    eyebrow: h.companyMission.eyebrow,
+                    title: h.companyMission.title,
+                    description: h.companyMission.description,
+                  }),
+                }),
+              }),
+              (0, b.jsx)("section", {
+                className: "uc-section uc-section-rule",
+                children: (0, b.jsxs)("div", {
+                  className: "uc-shell",
+                  children: [
+                    (0, b.jsx)(g.SectionHeading, {
+                      title: "Mission and vision",
+                    }),
+                    (0, b.jsx)("div", {
+                      className: "uc-grid uc-inner-grid-3",
+                      children: h.companyVisionBullets.map((a) =>
+                        (0, b.jsxs)(
+                          "article",
+                          {
+                            className: "uc-card",
+                            children: [
+                              (0, b.jsx)("h3", {
+                                className: "uc-card-title",
+                                children: a.label,
+                              }),
+                              (0, b.jsx)("p", {
+                                className: "uc-card-copy",
+                                children: a.detail,
+                              }),
+                            ],
+                          },
+                          a.id,
+                        ),
+                      ),
+                    }),
+                  ],
+                }),
+              }),
+              (0, b.jsx)("section", {
+                className: "uc-section uc-section-rule",
+                children: (0, b.jsxs)("div", {
+                  className: "uc-shell",
+                  children: [
+                    (0, b.jsx)(g.SectionHeading, {
+                      title: "Work areas",
+                      description:
+                        "Core lanes where UpcubeAI is actively building products.",
+                    }),
+                    (0, b.jsx)("div", {
+                      className: "uc-grid uc-inner-grid-3",
+                      children: h.companyWorkAreas.map((a) =>
+                        (0, b.jsxs)(
+                          "article",
+                          {
+                            className: "uc-card",
+                            children: [
+                              (0, b.jsx)("h3", {
+                                className: "uc-card-title",
+                                children: a.label,
+                              }),
+                              (0, b.jsx)("p", {
+                                className: "uc-card-copy",
+                                children: a.detail,
+                              }),
+                            ],
+                          },
+                          a.id,
+                        ),
+                      ),
+                    }),
+                  ],
+                }),
+              }),
+              (0, b.jsx)("section", {
+                className: "uc-section uc-section-rule",
+                children: (0, b.jsxs)("div", {
+                  className: "uc-shell",
+                  children: [
+                    (0, b.jsx)(g.SectionHeading, {
+                      title: "Ecosystem overview",
+                      description:
+                        "Connected products in the broader UpcubeAI portal.",
+                    }),
+                    (0, b.jsx)("div", {
+                      className: "uc-grid uc-card-grid",
+                      children: h.companyEcosystem.map((a) =>
+                        (0, b.jsxs)(
+                          "article",
+                          {
+                            className: "uc-card",
+                            children: [
+                              a.tag
+                                ? (0, b.jsx)("p", {
+                                    className: "uc-eyebrow",
+                                    children: a.tag,
+                                  })
+                                : null,
+                              (0, b.jsx)("h3", {
+                                className: "uc-card-title",
+                                children: a.title,
+                              }),
+                              (0, b.jsx)("p", {
+                                className: "uc-card-copy",
+                                children: a.description,
+                              }),
+                            ],
+                          },
+                          a.id,
+                        ),
+                      ),
+                    }),
+                  ],
+                }),
+              }),
+              (0, b.jsx)("section", {
+                className: "uc-section uc-section-rule",
+                children: (0, b.jsxs)("div", {
+                  className: "uc-shell",
+                  children: [
+                    (0, b.jsx)(g.SectionHeading, {
+                      title: "Build with UpcubeAI",
+                      description:
+                        "Use the portal as a single entry point for product, research, and execution workflows.",
+                    }),
+                    (0, b.jsx)("p", {
+                      children: (0, b.jsx)(c.default, {
+                        className: "uc-button",
+                        "data-variant": "solid",
+                        href: "#",
+                        children: "Contact team (placeholder)",
+                      }),
+                    }),
+                  ],
+                }),
+              }),
+            ],
+          }),
+          (0, b.jsx)(d.PortalFooter, {}),
+        ],
+      });
+    }
+    a.s(["CompanyPage", () => i]);
+  },
+  61162,
+  (a) => {
+    "use strict";
+    var b = a.i(63874),
+      c = a.i(574);
+    function d() {
+      return (0, b.jsx)(c.CompanyPage, {});
+    }
+    a.s([
+      "default",
+      () => d,
+      "metadata",
+      0,
+      {
+        title: "Company | UpcubeAI",
+        description: "About UpcubeAI and the portal ecosystem.",
+      },
+    ]);
+  },
+];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__14cd6db8._.js.map

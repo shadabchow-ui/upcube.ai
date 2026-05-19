@@ -1,0 +1,896 @@
+[
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/[page]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/[page]/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/[page]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/[page]/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/[page]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/[page]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/_global-error" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/_global-error/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/_global-error" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/_global-error/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/_global-error" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/_global-error" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/_global-error" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/_not-found" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/_not-found/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/_not-found" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/_not-found/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/_not-found" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/_not-found" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/_not-found" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/_not-found" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/about" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/about/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/about" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/about/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/about" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/about" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/about" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/about" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/builders" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/builders/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/builders" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/builders/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/builders" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/builders" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/builders" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/builders" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/business" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/business/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/business" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/business/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/business" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/business" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/business" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/business" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/capabilities" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/capabilities/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/capabilities" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/capabilities/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/capabilities" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/capabilities" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/capabilities" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/capabilities" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/careers" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/careers/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/careers" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/careers/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/careers" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/careers" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/careers" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/careers" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/chat" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/chat/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/chat" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/chat/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/chat" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/chat" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/chat" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/chat" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/company" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/company/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/company" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/company/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/company" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/company" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/company" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/company" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/contact" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/contact/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/contact" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/contact/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/contact" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/contact" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/contact" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/contact" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/enterprise" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/enterprise/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/enterprise" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/enterprise/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/enterprise" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/enterprise" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/enterprise" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/enterprise" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/explore" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/explore/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/explore" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/explore/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/explore" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/explore" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/explore" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/explore" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/faq" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/faq/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/faq" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/faq/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/faq" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/faq" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/faq" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/faq" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/favicon.ico" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/favicon.ico/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/favicon.ico" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/favicon.ico/route" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/favicon.ico" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/favicon.ico" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/favicon.ico" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/how-it-works" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/how-it-works/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/how-it-works" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/how-it-works/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/how-it-works" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/how-it-works" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/how-it-works" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/how-it-works" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/index" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/index" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/index" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/index" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/index" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/index" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/news" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/news/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/news" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/news/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/news" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/news" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/news" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/news" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/opengraph-image" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/opengraph-image/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/opengraph-image" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/opengraph-image/route" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/opengraph-image" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/opengraph-image" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/opengraph-image" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/platform" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/platform/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/platform" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/platform/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/platform" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/platform" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/platform" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/platform" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/principles" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/principles/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/principles" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/principles/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/principles" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/principles" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/principles" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/principles" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/privacy-policy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/privacy-policy/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/privacy-policy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/privacy-policy/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/privacy-policy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/privacy-policy" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/privacy-policy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/privacy-policy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/privacy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/privacy/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/privacy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/privacy/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/privacy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/privacy" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/privacy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/privacy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/product/[handle]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/product/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/product/[handle]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/product/[handle]/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/product/[handle]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/product/[handle]/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/product/[handle]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/product/[handle]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/research" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/research/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/research" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/research/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/research" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/research" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/research" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/research" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/robots.txt" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/robots.txt/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/robots.txt" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/robots.txt/route" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/robots.txt" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/robots.txt" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/robots.txt" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/safety" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/safety/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/safety" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/safety/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/safety" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/safety" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/safety" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/safety" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/search/[collection]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/search/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/search/[collection]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/search/[collection]/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/search/[collection]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/search/[collection]/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/search/[collection]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/search/[collection]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/search" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/search/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/search" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/search/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/search" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/search" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/search" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/search" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/security-privacy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/security-privacy/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/security-privacy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/security-privacy/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/security-privacy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/security-privacy" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/security-privacy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/security-privacy" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/teams" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/teams/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/teams" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/teams/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/teams" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/teams" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/teams" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/teams" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/terms-of-service" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/terms-of-service/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/terms-of-service" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/terms-of-service/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/terms-of-service" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/terms-of-service" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/terms-of-service" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/terms-of-service" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/trust" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/trust/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/trust" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/trust/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/trust" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/trust" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/trust" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/trust" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/updates/[slug]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/updates/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/updates/[slug]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/updates/[slug]/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/updates/[slug]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/updates/[slug]/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/updates/[slug]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/updates/[slug]" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": {
+      "S": "VU5JVFnLsxyFgjvEA3PdC/updates/platform-iteration-placeholder"
+    },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/updates/layout" },
+    "path": {
+      "S": "VU5JVFnLsxyFgjvEA3PdC/updates/platform-iteration-placeholder"
+    },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/updates/[slug]/layout" },
+    "path": {
+      "S": "VU5JVFnLsxyFgjvEA3PdC/updates/platform-iteration-placeholder"
+    },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/updates/[slug]/page" },
+    "path": {
+      "S": "VU5JVFnLsxyFgjvEA3PdC/updates/platform-iteration-placeholder"
+    },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": {
+      "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/updates/platform-iteration-placeholder"
+    },
+    "path": {
+      "S": "VU5JVFnLsxyFgjvEA3PdC/updates/platform-iteration-placeholder"
+    },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": {
+      "S": "VU5JVFnLsxyFgjvEA3PdC/updates/platform-iteration-placeholder"
+    },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/vision" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/vision/layout" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/vision" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/vision/page" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/vision" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/_N_T_/vision" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/vision" },
+    "revalidatedAt": { "N": "1" }
+  },
+  {
+    "tag": { "S": "VU5JVFnLsxyFgjvEA3PdC/collections" },
+    "path": { "S": "VU5JVFnLsxyFgjvEA3PdC/vision" },
+    "revalidatedAt": { "N": "1" }
+  }
+]

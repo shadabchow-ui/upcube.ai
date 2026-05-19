@@ -15,11 +15,11 @@ export type FeatureBand = {
 
 export const featureBands: FeatureBand[] = [
   {
-    title: "Explore the world in 3D",
+    title: "Explore Upcube Earth in 3D",
     description:
-      "Upcube Globe combines geospatial context with AI-native queries for teams building location-aware products.",
+      "Upcube Earth combines geospatial context with AI-native queries for teams building location-aware products.",
     href: "https://planet.upcube.ai",
-    cta: "Explore Globe",
+    cta: "Explore Upcube Earth",
     tone: "teal",
   },
   {
@@ -31,11 +31,11 @@ export const featureBands: FeatureBand[] = [
     tone: "amber",
   },
   {
-    title: "Build with open developer rails",
+    title: "Build with Upcube Cloud",
     description:
-      "Upcube Repos provides docs, templates, and integrations for teams shipping quickly across the ecosystem.",
+      "Upcube Cloud provides docs, templates, and implementation entry points for teams shipping across the ecosystem.",
     href: "https://cloud.upcube.ai",
-    cta: "Open Repos",
+    cta: "Open Upcube Cloud",
     tone: "blue",
   },
   {
@@ -50,7 +50,7 @@ export const featureBands: FeatureBand[] = [
 
 export const stories: HomeLinkItem[] = [
   {
-    title: "Upcube Globe dashboard rebuild",
+    title: "Upcube Earth interface refresh",
     description: "A faster map shell with clearer overlays and search state.",
     href: "https://planet.upcube.ai",
   },
@@ -61,7 +61,7 @@ export const stories: HomeLinkItem[] = [
   },
   {
     title: "Upcube Books storefront",
-    description: "Editorial shelves and smart collections now live in preview.",
+    description: "Editorial shelves and smart collections for book discovery.",
     href: "https://books.upcube.ai",
   },
   {
@@ -71,7 +71,8 @@ export const stories: HomeLinkItem[] = [
   },
   {
     title: "Developer template pack",
-    description: "Starter repos for internal tools, APIs, and commerce apps.",
+    description:
+      "Starter templates for internal tools, APIs, and commerce apps.",
     href: "https://cloud.upcube.ai",
   },
   {

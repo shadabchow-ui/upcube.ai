@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 
-import { NewsPage } from "components/upcube-portal/news-page";
+import { NewsIndexPage } from "components/upcube-news/news-index-page";
 
 export const metadata: Metadata = {
-  title: "UpcubeAI News",
-  description: "Recent developments across the UpcubeAI portal and ecosystem.",
+  title: "Upcube News",
+  description:
+    "Launch stories and product previews across UpcubeAI, Ventari, Books, Earth, Games, Jobs, Cloud, VM Compute, Upcube OS, and Upcube Mobile OS.",
 };
 
 export default function NewsRoutePage() {
-  return <NewsPage />;
+  return <NewsIndexPage />;
 }

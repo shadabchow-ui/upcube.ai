@@ -17,8 +17,8 @@ export function PortalFooter() {
             <p className="uc-footer-brand-text">UpcubeAI</p>
           </div>
           <p className="uc-footer-note">
-            Shared portal foundation. Route URLs remain placeholders where not
-            yet implemented.
+            Shared portal for product stories, launch news, research, and app
+            access across the Upcube ecosystem.
           </p>
         </div>
         <div className="uc-grid uc-card-grid">

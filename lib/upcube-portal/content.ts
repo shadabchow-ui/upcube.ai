@@ -1,3 +1,14 @@
+import {
+  UPCUBE_BOOKS_URL,
+  UPCUBE_CHAT_URL,
+  UPCUBE_CLOUD_URL,
+  UPCUBE_GAMES_URL,
+  UPCUBE_JOBS_URL,
+  UPCUBE_PLANET_URL,
+  UPCUBE_VENTARI_URL,
+  upcubeProductLinks,
+} from "lib/upcube-universal/product-links";
+
 export type PortalTheme = "dark" | "light" | "enterprise" | "safety";
 
 export type PortalNavItem = {
@@ -155,19 +166,24 @@ export type PortalArticle = {
   related: PortalArticleLink[];
 };
 
-export const UPCUBE_CHAT_URL = "https://ethen.upcube.ai";
-export const UPCUBE_BOOKS_URL = "https://books.upcube.ai";
-export const UPCUBE_PLANET_URL = "https://planet.upcube.ai";
-export const UPCUBE_JOBS_URL = "https://jobs.upcube.ai";
-export const UPCUBE_GAMES_URL = "https://games.upcube.ai";
-export const UPCUBE_CLOUD_URL = "https://cloud.upcube.ai";
+export {
+  UPCUBE_BOOKS_URL,
+  UPCUBE_CHAT_URL,
+  UPCUBE_CLOUD_URL,
+  UPCUBE_GAMES_URL,
+  UPCUBE_JOBS_URL,
+  UPCUBE_PLANET_URL,
+  UPCUBE_VENTARI_URL,
+};
 
 export const portalPrimaryNav: PortalNavItem[] = [
+  { id: "products", label: "Products", href: "/products/upcube-ai" },
   { id: "explore", label: "Explore", href: "/explore" },
   { id: "platform", label: "Platform", href: "/platform" },
   { id: "business", label: "Business", href: "/business" },
   { id: "capabilities", label: "Capabilities", href: "/capabilities" },
   { id: "news", label: "News", href: "/news" },
+  { id: "trust", label: "Trust", href: "/trust" },
   { id: "builders", label: "Builders", href: "/builders" },
   { id: "teams", label: "Teams", href: "/teams" },
   { id: "enterprise", label: "Enterprise", href: "/enterprise" },
@@ -187,50 +203,94 @@ export const portalFooterLinks: PortalNavItem[] = [
 export const portalHomepageCards: PortalCardItem[] = [
   {
     id: "chat",
-    title: "UpcubeAI Chat",
-    description: "Assistant workspace for writing, analysis, and execution.",
-    href: UPCUBE_CHAT_URL,
-    tag: "Workspace",
+    title: "UpcubeAI",
+    description:
+      "Assistant workspace for planning and execution. Learn details or launch the live app.",
+    href: "/products/upcube-ai",
+    tag: "Learn + Launch",
   },
   {
     id: "globe",
-    title: "Upcube Globe",
-    description: "Spatial exploration and geospatial intelligence surfaces.",
-    href: UPCUBE_PLANET_URL,
-    tag: "3D Earth",
+    title: "Upcube Earth",
+    description:
+      "3D Earth and geospatial workflows. Learn details or launch the live app.",
+    href: "/products/earth",
+    tag: "Learn + Launch",
   },
   {
     id: "games",
     title: "Upcube Games",
-    description:
-      "Game discovery, featured titles, and launch-ready highlights.",
-    href: UPCUBE_GAMES_URL,
-    tag: "Discovery",
+    description: "Games directory and launches. Learn details or launch live.",
+    href: "/products/games",
+    tag: "Learn + Launch",
   },
   {
     id: "books",
     title: "Upcube Books",
-    description: "Book storefront and reading-focused editorial experiences.",
-    href: UPCUBE_BOOKS_URL,
-    tag: "Commerce",
+    description:
+      "Reading and publishing workflows. Learn details or launch the live app.",
+    href: "/products/books",
+    tag: "Learn + Launch",
   },
   {
     id: "jobs",
     title: "Upcube Jobs",
-    description: "Hiring, role discovery, and team-building workflows.",
-    href: UPCUBE_JOBS_URL,
-    tag: "Hiring",
+    description:
+      "Hiring destination for role discovery. Learn details or launch live.",
+    href: "/products/jobs",
+    tag: "Learn + Launch",
   },
   {
-    id: "repos",
-    title: "Upcube Repos",
-    description: "Templates, developer tools, and implementation starter kits.",
-    href: UPCUBE_CLOUD_URL,
-    tag: "Developers",
+    id: "cloud",
+    title: "Upcube Cloud",
+    description:
+      "Developer tools and workflows. Learn details or launch the live app.",
+    href: "/products/cloud",
+    tag: "Learn + Launch",
+  },
+  {
+    id: "ventari",
+    title: "Ventari",
+    description:
+      "Commerce search and discovery workflows. Learn details or launch the live app.",
+    href: "/products/ventari",
+    tag: "Learn + Launch",
+  },
+  {
+    id: "vm",
+    title: "VM Compute",
+    description: "Learn the current public product positioning for VM Compute.",
+    href: "/products/vm",
+    tag: "Learn",
+  },
+  {
+    id: "upcube-os",
+    title: "Upcube OS",
+    description:
+      "Public consumer operating-system overview with 2028 release language.",
+    href: "/products/upcube-os",
+    tag: "Learn",
+  },
+  {
+    id: "upcube-mobile-os",
+    title: "Upcube Mobile OS",
+    description:
+      "Public consumer mobile operating-system overview with 2028 release language.",
+    href: "/products/upcube-mobile-os",
+    tag: "Learn",
   },
 ];
 
 export const portalFooterGroups: PortalFooterGroup[] = [
+  {
+    id: "products",
+    title: "Products",
+    links: upcubeProductLinks.map((product) => ({
+      id: `product-${product.id}-footer`,
+      label: product.label,
+      href: product.launchHref ?? product.productHref,
+    })),
+  },
   {
     id: "explore",
     title: "Explore",
@@ -263,6 +323,12 @@ export const portalFooterGroups: PortalFooterGroup[] = [
 
 export const portalRoutePlan: PortalRoutePlan[] = [
   { id: "home", title: "Portal Home", href: "/", status: "live" },
+  {
+    id: "products",
+    title: "Products",
+    href: "/products/upcube-ai",
+    status: "live",
+  },
   { id: "explore", title: "Explore", href: "/explore", status: "live" },
   { id: "platform", title: "Platform", href: "/platform", status: "live" },
   { id: "business", title: "Business", href: "/business", status: "live" },
@@ -357,7 +423,7 @@ export const enterpriseUseCases: PortalFeatureItem[] = [
 
 export const enterprisePlatformNotes: PortalFeatureItem[] = [
   {
-    title: "Shared platform foundation",
+    title: "Shared platform layer",
     description:
       "The repo provides a shared portal shell for product and trust-heavy pages. It does not provide a finalized enterprise platform specification.",
   },
@@ -481,71 +547,12 @@ export const portalMenuGroups: PortalMenuGroup[] = [
   {
     id: "products",
     title: "Products",
-    items: [
-      {
-        id: "chat-menu",
-        label: "Chat",
-        href: UPCUBE_CHAT_URL,
-        description: "Assistant workflows, planning, and execution surfaces.",
-      },
-      {
-        id: "planet-menu",
-        label: "Planet",
-        href: UPCUBE_PLANET_URL,
-        description: "3D globe exploration and geospatial views.",
-      },
-      {
-        id: "books-menu",
-        label: "Books",
-        href: UPCUBE_BOOKS_URL,
-        description: "Reading and bookstore experiences.",
-      },
-      {
-        id: "games-menu",
-        label: "Games",
-        href: UPCUBE_GAMES_URL,
-        description: "Games directory and launch highlights.",
-      },
-      {
-        id: "jobs-menu",
-        label: "Jobs",
-        href: UPCUBE_JOBS_URL,
-        description: "Hiring and career destinations.",
-      },
-      {
-        id: "cloud-menu",
-        label: "Cloud",
-        href: UPCUBE_CLOUD_URL,
-        description: "Developer tools and cloud workspace surfaces.",
-      },
-      {
-        id: "builders-menu",
-        label: "Builders",
-        href: "/builders",
-        description:
-          "Developer-facing implementation workflows and governance framing.",
-      },
-      {
-        id: "teams-menu",
-        label: "Teams",
-        href: "/teams",
-        description:
-          "Operating model guidance for startup and small team execution.",
-      },
-      {
-        id: "research-menu",
-        label: "Research",
-        href: "/research",
-        description:
-          "Research notes, architecture themes, and evaluation context.",
-      },
-      {
-        id: "enterprise-menu",
-        label: "Enterprise",
-        href: "/enterprise",
-        description: "Conservative enterprise positioning and readiness notes.",
-      },
-    ],
+    items: upcubeProductLinks.map((product) => ({
+      id: `${product.id}-menu`,
+      label: product.label,
+      href: product.productHref,
+      description: product.description,
+    })),
   },
   {
     id: "news",
@@ -555,19 +562,19 @@ export const portalMenuGroups: PortalMenuGroup[] = [
         id: "news-latest-menu",
         label: "Recent developments",
         href: "/news",
-        description: "Latest platform and ecosystem updates.",
+        description: "Launch stories and product previews.",
       },
       {
-        id: "news-portal-refresh-menu",
-        label: "Portal visual system refresh",
-        href: "/news",
-        description: "Design and shell improvements across the portal.",
+        id: "news-upcube-ai-menu",
+        label: "UpcubeAI launch",
+        href: "/news/upcube-ai-launch",
+        description: "Workspace, research, artifacts, and tool workflows.",
       },
       {
-        id: "news-globe-menu",
-        label: "Globe interface updates",
-        href: "/news",
-        description: "Spatial UI and exploration improvements.",
+        id: "news-os-preview-menu",
+        label: "Upcube OS preview",
+        href: "/news/upcube-os-preview",
+        description: "Preview the 2028 desktop release path.",
       },
     ],
   },
@@ -605,7 +612,6 @@ export const portalMenuGroups: PortalMenuGroup[] = [
         label: "Company",
         href: "/company",
         description: "Mission and ecosystem overview.",
-        placeholder: true,
       },
       {
         id: "careers-menu",
@@ -615,10 +621,9 @@ export const portalMenuGroups: PortalMenuGroup[] = [
       },
       {
         id: "updates-menu",
-        label: "Updates",
-        href: "/updates/platform-iteration-placeholder",
-        description: "Portal article template route.",
-        placeholder: true,
+        label: "Launch stories",
+        href: "/news",
+        description: "Product launches and previews across Upcube.",
       },
     ],
   },
@@ -732,9 +737,9 @@ export const portalNewsItems: PortalNewsItem[] = [
   },
   {
     id: "news-globe-updates",
-    title: "Upcube Globe spatial interface updates",
+    title: "Upcube Earth spatial interface updates",
     summary:
-      "Ongoing interface adjustments to improve map context, navigation flow, and discovery surfaces in the globe experience.",
+      "Spatial interface refinements focused on map context, navigation flow, and discovery surfaces in the Earth experience.",
     statusLabel: "Recent update",
     href: "/news",
   },

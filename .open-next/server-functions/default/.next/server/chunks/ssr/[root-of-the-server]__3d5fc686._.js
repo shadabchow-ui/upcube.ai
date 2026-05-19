@@ -1,0 +1,1060 @@
+module.exports = [
+  93695,
+  (a, b, c) => {
+    b.exports = a.x("next/dist/shared/lib/no-fallback-error.external.js", () =>
+      require("next/dist/shared/lib/no-fallback-error.external.js"),
+    );
+  },
+  39236,
+  (a) => {
+    a.n(a.i(86895));
+  },
+  70864,
+  (a) => {
+    a.n(a.i(33290));
+  },
+  65897,
+  (a) => {
+    a.n(a.i(96647));
+  },
+  82532,
+  (a) => {
+    a.n(a.i(98340));
+  },
+  77201,
+  (a) => {
+    a.n(a.i(96351));
+  },
+  74608,
+  (a) => {
+    a.n(a.i(94166));
+  },
+  97903,
+  (a) => {
+    a.n(a.i(5722));
+  },
+  88822,
+  (a) => {
+    "use strict";
+    var b = a.i(56520);
+    let c = (0, b.registerClientReference)(
+        function () {
+          throw Error(
+            "Attempted to call FooterMenuItem() from the server but FooterMenuItem is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.",
+          );
+        },
+        "[project]/components/layout/footer-menu.tsx <module evaluation>",
+        "FooterMenuItem",
+      ),
+      d = (0, b.registerClientReference)(
+        function () {
+          throw Error(
+            "Attempted to call the default export of [project]/components/layout/footer-menu.tsx <module evaluation> from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.",
+          );
+        },
+        "[project]/components/layout/footer-menu.tsx <module evaluation>",
+        "default",
+      );
+    a.s(["FooterMenuItem", 0, c, "default", 0, d]);
+  },
+  53252,
+  (a) => {
+    "use strict";
+    var b = a.i(56520);
+    let c = (0, b.registerClientReference)(
+        function () {
+          throw Error(
+            "Attempted to call FooterMenuItem() from the server but FooterMenuItem is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.",
+          );
+        },
+        "[project]/components/layout/footer-menu.tsx",
+        "FooterMenuItem",
+      ),
+      d = (0, b.registerClientReference)(
+        function () {
+          throw Error(
+            "Attempted to call the default export of [project]/components/layout/footer-menu.tsx from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.",
+          );
+        },
+        "[project]/components/layout/footer-menu.tsx",
+        "default",
+      );
+    a.s(["FooterMenuItem", 0, c, "default", 0, d]);
+  },
+  91505,
+  (a) => {
+    "use strict";
+    a.i(88822);
+    var b = a.i(53252);
+    a.n(b);
+  },
+  61277,
+  (a) => {
+    "use strict";
+    var b = a.i(63874),
+      c = a.i(53338),
+      d = a.i(91505),
+      e = a.i(88614),
+      f = a.i(92213),
+      g = a.i(83839);
+    let { COMPANY_NAME: h, SITE_NAME: i } = process.env;
+    async function j() {
+      let a = new Date().getFullYear(),
+        j = "2023" + (a > 2023 ? `-${a}` : ""),
+        k =
+          "w-full h-6 animate-pulse rounded-sm bg-neutral-200 dark:bg-neutral-700",
+        l = await (0, f.getMenu)("next-js-frontend-footer-menu"),
+        m = h || i || "";
+      return (0, b.jsxs)("footer", {
+        className: "text-sm text-neutral-500 dark:text-neutral-400",
+        children: [
+          (0, b.jsxs)("div", {
+            className:
+              "mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-200 px-6 py-12 text-sm md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0 dark:border-neutral-700",
+            children: [
+              (0, b.jsx)("div", {
+                children: (0, b.jsxs)(c.default, {
+                  className:
+                    "flex items-center gap-2 text-black md:pt-1 dark:text-white",
+                  href: "/",
+                  children: [
+                    (0, b.jsx)(e.default, { size: "sm" }),
+                    (0, b.jsx)("span", { className: "uppercase", children: i }),
+                  ],
+                }),
+              }),
+              (0, b.jsx)(g.Suspense, {
+                fallback: (0, b.jsxs)("div", {
+                  className: "flex h-[188px] w-[200px] flex-col gap-2",
+                  children: [
+                    (0, b.jsx)("div", { className: k }),
+                    (0, b.jsx)("div", { className: k }),
+                    (0, b.jsx)("div", { className: k }),
+                    (0, b.jsx)("div", { className: k }),
+                    (0, b.jsx)("div", { className: k }),
+                    (0, b.jsx)("div", { className: k }),
+                  ],
+                }),
+                children: (0, b.jsx)(d.default, { menu: l }),
+              }),
+              (0, b.jsx)("div", {
+                className: "md:ml-auto",
+                children: (0, b.jsxs)("a", {
+                  className:
+                    "flex h-8 w-max flex-none items-center justify-center rounded-md border border-neutral-200 bg-white text-xs text-black dark:border-neutral-700 dark:bg-black dark:text-white",
+                  "aria-label": "Deploy on Vercel",
+                  href: "https://vercel.com/templates/next.js/nextjs-commerce",
+                  children: [
+                    (0, b.jsx)("span", { className: "px-3", children: "▲" }),
+                    (0, b.jsx)("hr", {
+                      className:
+                        "h-full border-r border-neutral-200 dark:border-neutral-700",
+                    }),
+                    (0, b.jsx)("span", {
+                      className: "px-3",
+                      children: "Deploy",
+                    }),
+                  ],
+                }),
+              }),
+            ],
+          }),
+          (0, b.jsx)("div", {
+            className:
+              "border-t border-neutral-200 py-6 text-sm dark:border-neutral-700",
+            children: (0, b.jsxs)("div", {
+              className:
+                "mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0",
+              children: [
+                (0, b.jsxs)("p", {
+                  children: [
+                    "© ",
+                    j,
+                    " ",
+                    m,
+                    m.length && !m.endsWith(".") ? "." : "",
+                    " ",
+                    "All rights reserved.",
+                  ],
+                }),
+                (0, b.jsx)("hr", {
+                  className:
+                    "mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block",
+                }),
+                (0, b.jsx)("p", {
+                  children: (0, b.jsx)("a", {
+                    href: "https://github.com/vercel/commerce",
+                    children: "View the source",
+                  }),
+                }),
+                (0, b.jsx)("p", {
+                  className: "md:ml-auto",
+                  children: (0, b.jsx)("a", {
+                    href: "https://vercel.com",
+                    className: "text-black dark:text-white",
+                    children: "Created by ▲ Vercel",
+                  }),
+                }),
+              ],
+            }),
+          }),
+        ],
+      });
+    }
+    a.s(["default", () => j]);
+  },
+  55289,
+  (a, b, c) => {
+    "use strict";
+    c._ = function (a) {
+      return a && a.__esModule ? a : { default: a };
+    };
+  },
+  83973,
+  (a, b, c) => {
+    "use strict";
+    Object.defineProperty(c, "__esModule", { value: !0 }),
+      Object.defineProperty(c, "warnOnce", {
+        enumerable: !0,
+        get: function () {
+          return d;
+        },
+      });
+    let d = (a) => {};
+  },
+  71382,
+  (a, b, c) => {
+    "use strict";
+    function d({
+      widthInt: a,
+      heightInt: b,
+      blurWidth: c,
+      blurHeight: d,
+      blurDataURL: e,
+      objectFit: f,
+    }) {
+      let g = c ? 40 * c : a,
+        h = d ? 40 * d : b,
+        i = g && h ? `viewBox='0 0 ${g} ${h}'` : "";
+      return `%3Csvg xmlns='http://www.w3.org/2000/svg' ${i}%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1' result='s'/%3E%3CfeFlood x='0' y='0' width='100%25' height='100%25'/%3E%3CfeComposite operator='out' in='s'/%3E%3CfeComposite in2='SourceGraphic'/%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3Cimage width='100%25' height='100%25' x='0' y='0' preserveAspectRatio='${i ? "none" : "contain" === f ? "xMidYMid" : "cover" === f ? "xMidYMid slice" : "none"}' style='filter: url(%23b);' href='${e}'/%3E%3C/svg%3E`;
+    }
+    Object.defineProperty(c, "__esModule", { value: !0 }),
+      Object.defineProperty(c, "getImageBlurSvg", {
+        enumerable: !0,
+        get: function () {
+          return d;
+        },
+      });
+  },
+  95388,
+  (a, b, c) => {
+    "use strict";
+    Object.defineProperty(c, "__esModule", { value: !0 });
+    var d = {
+      VALID_LOADERS: function () {
+        return f;
+      },
+      imageConfigDefault: function () {
+        return g;
+      },
+    };
+    for (var e in d) Object.defineProperty(c, e, { enumerable: !0, get: d[e] });
+    let f = ["default", "imgix", "cloudinary", "akamai", "custom"],
+      g = {
+        deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+        imageSizes: [32, 48, 64, 96, 128, 256, 384],
+        path: "/_next/image",
+        loader: "default",
+        loaderFile: "",
+        domains: [],
+        disableStaticImages: !1,
+        minimumCacheTTL: 14400,
+        formats: ["image/webp"],
+        maximumRedirects: 3,
+        dangerouslyAllowLocalIP: !1,
+        dangerouslyAllowSVG: !1,
+        contentSecurityPolicy: "script-src 'none'; frame-src 'none'; sandbox;",
+        contentDispositionType: "attachment",
+        localPatterns: void 0,
+        remotePatterns: [],
+        qualities: [75],
+        unoptimized: !1,
+      };
+  },
+  77189,
+  (a, b, c) => {
+    "use strict";
+    Object.defineProperty(c, "__esModule", { value: !0 }),
+      Object.defineProperty(c, "getImgProps", {
+        enumerable: !0,
+        get: function () {
+          return i;
+        },
+      }),
+      a.r(83973);
+    let d = a.r(71382),
+      e = a.r(95388),
+      f = ["-moz-initial", "fill", "none", "scale-down", void 0];
+    function g(a) {
+      return void 0 !== a.default;
+    }
+    function h(a) {
+      return void 0 === a
+        ? a
+        : "number" == typeof a
+          ? Number.isFinite(a)
+            ? a
+            : NaN
+          : "string" == typeof a && /^[0-9]+$/.test(a)
+            ? parseInt(a, 10)
+            : NaN;
+    }
+    function i(
+      {
+        src: a,
+        sizes: b,
+        unoptimized: c = !1,
+        priority: i = !1,
+        preload: j = !1,
+        loading: k,
+        className: l,
+        quality: m,
+        width: n,
+        height: o,
+        fill: p = !1,
+        style: q,
+        overrideSrc: r,
+        onLoad: s,
+        onLoadingComplete: t,
+        placeholder: u = "empty",
+        blurDataURL: v,
+        fetchPriority: w,
+        decoding: x = "async",
+        layout: y,
+        objectFit: z,
+        objectPosition: A,
+        lazyBoundary: B,
+        lazyRoot: C,
+        ...D
+      },
+      E,
+    ) {
+      var F;
+      let G,
+        H,
+        I,
+        { imgConf: J, showAltText: K, blurComplete: L, defaultLoader: M } = E,
+        N = J || e.imageConfigDefault;
+      if ("allSizes" in N) G = N;
+      else {
+        let a = [...N.deviceSizes, ...N.imageSizes].sort((a, b) => a - b),
+          b = N.deviceSizes.sort((a, b) => a - b),
+          c = N.qualities?.sort((a, b) => a - b);
+        G = { ...N, allSizes: a, deviceSizes: b, qualities: c };
+      }
+      if (void 0 === M)
+        throw Object.defineProperty(
+          Error(
+            "images.loaderFile detected but the file is missing default export.\nRead more: https://nextjs.org/docs/messages/invalid-images-config",
+          ),
+          "__NEXT_ERROR_CODE",
+          { value: "E163", enumerable: !1, configurable: !0 },
+        );
+      let O = D.loader || M;
+      delete D.loader, delete D.srcSet;
+      let P = "__next_img_default" in O;
+      if (P) {
+        if ("custom" === G.loader)
+          throw Object.defineProperty(
+            Error(`Image with src "${a}" is missing "loader" prop.
+Read more: https://nextjs.org/docs/messages/next-image-missing-loader`),
+            "__NEXT_ERROR_CODE",
+            { value: "E252", enumerable: !1, configurable: !0 },
+          );
+      } else {
+        let a = O;
+        O = (b) => {
+          let { config: c, ...d } = b;
+          return a(d);
+        };
+      }
+      if (y) {
+        "fill" === y && (p = !0);
+        let a = {
+          intrinsic: { maxWidth: "100%", height: "auto" },
+          responsive: { width: "100%", height: "auto" },
+        }[y];
+        a && (q = { ...q, ...a });
+        let c = { responsive: "100vw", fill: "100vw" }[y];
+        c && !b && (b = c);
+      }
+      let Q = "",
+        R = h(n),
+        S = h(o);
+      if ((F = a) && "object" == typeof F && (g(F) || void 0 !== F.src)) {
+        let b = g(a) ? a.default : a;
+        if (!b.src)
+          throw Object.defineProperty(
+            Error(
+              `An object should only be passed to the image component src parameter if it comes from a static image import. It must include src. Received ${JSON.stringify(b)}`,
+            ),
+            "__NEXT_ERROR_CODE",
+            { value: "E460", enumerable: !1, configurable: !0 },
+          );
+        if (!b.height || !b.width)
+          throw Object.defineProperty(
+            Error(
+              `An object should only be passed to the image component src parameter if it comes from a static image import. It must include height and width. Received ${JSON.stringify(b)}`,
+            ),
+            "__NEXT_ERROR_CODE",
+            { value: "E48", enumerable: !1, configurable: !0 },
+          );
+        if (
+          ((H = b.blurWidth),
+          (I = b.blurHeight),
+          (v = v || b.blurDataURL),
+          (Q = b.src),
+          !p)
+        )
+          if (R || S) {
+            if (R && !S) {
+              let a = R / b.width;
+              S = Math.round(b.height * a);
+            } else if (!R && S) {
+              let a = S / b.height;
+              R = Math.round(b.width * a);
+            }
+          } else (R = b.width), (S = b.height);
+      }
+      let T = !i && !j && ("lazy" === k || void 0 === k);
+      (!(a = "string" == typeof a ? a : Q) ||
+        a.startsWith("data:") ||
+        a.startsWith("blob:")) &&
+        ((c = !0), (T = !1)),
+        G.unoptimized && (c = !0),
+        P &&
+          !G.dangerouslyAllowSVG &&
+          a.split("?", 1)[0].endsWith(".svg") &&
+          (c = !0);
+      let U = h(m),
+        V = Object.assign(
+          p
+            ? {
+                position: "absolute",
+                height: "100%",
+                width: "100%",
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+                objectFit: z,
+                objectPosition: A,
+              }
+            : {},
+          K ? {} : { color: "transparent" },
+          q,
+        ),
+        W =
+          L || "empty" === u
+            ? null
+            : "blur" === u
+              ? `url("data:image/svg+xml;charset=utf-8,${(0, d.getImageBlurSvg)({ widthInt: R, heightInt: S, blurWidth: H, blurHeight: I, blurDataURL: v || "", objectFit: V.objectFit })}")`
+              : `url("${u}")`,
+        X = f.includes(V.objectFit)
+          ? "fill" === V.objectFit
+            ? "100% 100%"
+            : "cover"
+          : V.objectFit,
+        Y = W
+          ? {
+              backgroundSize: X,
+              backgroundPosition: V.objectPosition || "50% 50%",
+              backgroundRepeat: "no-repeat",
+              backgroundImage: W,
+            }
+          : {},
+        Z = (function ({
+          config: a,
+          src: b,
+          unoptimized: c,
+          width: d,
+          quality: e,
+          sizes: f,
+          loader: g,
+        }) {
+          if (c) return { src: b, srcSet: void 0, sizes: void 0 };
+          let { widths: h, kind: i } = (function (
+              { deviceSizes: a, allSizes: b },
+              c,
+              d,
+            ) {
+              if (d) {
+                let c = /(^|\s)(1?\d?\d)vw/g,
+                  e = [];
+                for (let a; (a = c.exec(d)); ) e.push(parseInt(a[2]));
+                if (e.length) {
+                  let c = 0.01 * Math.min(...e);
+                  return { widths: b.filter((b) => b >= a[0] * c), kind: "w" };
+                }
+                return { widths: b, kind: "w" };
+              }
+              return "number" != typeof c
+                ? { widths: a, kind: "w" }
+                : {
+                    widths: [
+                      ...new Set(
+                        [c, 2 * c].map(
+                          (a) => b.find((b) => b >= a) || b[b.length - 1],
+                        ),
+                      ),
+                    ],
+                    kind: "x",
+                  };
+            })(a, d, f),
+            j = h.length - 1;
+          return {
+            sizes: f || "w" !== i ? f : "100vw",
+            srcSet: h
+              .map(
+                (c, d) =>
+                  `${g({ config: a, src: b, quality: e, width: c })} ${"w" === i ? c : d + 1}${i}`,
+              )
+              .join(", "),
+            src: g({ config: a, src: b, quality: e, width: h[j] }),
+          };
+        })({
+          config: G,
+          src: a,
+          unoptimized: c,
+          width: R,
+          quality: U,
+          sizes: b,
+          loader: O,
+        }),
+        $ = T ? "lazy" : k;
+      return {
+        props: {
+          ...D,
+          loading: $,
+          fetchPriority: w,
+          width: R,
+          height: S,
+          decoding: x,
+          className: l,
+          style: { ...V, ...Y },
+          sizes: Z.sizes,
+          srcSet: Z.srcSet,
+          src: r || Z.src,
+        },
+        meta: { unoptimized: c, preload: j || i, placeholder: u, fill: p },
+      };
+    }
+  },
+  49,
+  (a, b, c) => {
+    let { createClientModuleProxy: d } = a.r(56520);
+    a.n(
+      d(
+        "[project]/node_modules/.pnpm/next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/client/image-component.js <module evaluation>",
+      ),
+    );
+  },
+  89875,
+  (a, b, c) => {
+    let { createClientModuleProxy: d } = a.r(56520);
+    a.n(
+      d(
+        "[project]/node_modules/.pnpm/next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/client/image-component.js",
+      ),
+    );
+  },
+  23180,
+  (a) => {
+    "use strict";
+    a.i(49);
+    var b = a.i(89875);
+    a.n(b);
+  },
+  84929,
+  (a, b, c) => {
+    "use strict";
+    function d(a, b) {
+      let c = a || 75;
+      return b?.qualities?.length
+        ? b.qualities.reduce(
+            (a, b) => (Math.abs(b - c) < Math.abs(a - c) ? b : a),
+            0,
+          )
+        : c;
+    }
+    Object.defineProperty(c, "__esModule", { value: !0 }),
+      Object.defineProperty(c, "findClosestQuality", {
+        enumerable: !0,
+        get: function () {
+          return d;
+        },
+      });
+  },
+  34436,
+  (a, b, c) => {
+    "use strict";
+    Object.defineProperty(c, "__esModule", { value: !0 }),
+      Object.defineProperty(c, "default", {
+        enumerable: !0,
+        get: function () {
+          return f;
+        },
+      });
+    let d = a.r(84929);
+    function e({ config: a, src: b, width: c, quality: e }) {
+      if (
+        b.startsWith("/") &&
+        b.includes("?") &&
+        a.localPatterns?.length === 1 &&
+        "**" === a.localPatterns[0].pathname &&
+        "" === a.localPatterns[0].search
+      )
+        throw Object.defineProperty(
+          Error(`Image with src "${b}" is using a query string which is not configured in images.localPatterns.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-localpatterns`),
+          "__NEXT_ERROR_CODE",
+          { value: "E871", enumerable: !1, configurable: !0 },
+        );
+      let f = (0, d.findClosestQuality)(e, a);
+      return `${a.path}?url=${encodeURIComponent(b)}&w=${c}&q=${f}${(b.startsWith("/_next/static/media/"), "")}`;
+    }
+    e.__next_img_default = !0;
+    let f = e;
+  },
+  88405,
+  (a, b, c) => {
+    "use strict";
+    Object.defineProperty(c, "__esModule", { value: !0 });
+    var d = {
+      default: function () {
+        return k;
+      },
+      getImageProps: function () {
+        return j;
+      },
+    };
+    for (var e in d) Object.defineProperty(c, e, { enumerable: !0, get: d[e] });
+    let f = a.r(55289),
+      g = a.r(77189),
+      h = a.r(23180),
+      i = f._(a.r(34436));
+    function j(a) {
+      let { props: b } = (0, g.getImgProps)(a, {
+        defaultLoader: i.default,
+        imgConf: {
+          deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+          imageSizes: [32, 48, 64, 96, 128, 256, 384],
+          qualities: [75],
+          path: "/_next/image",
+          loader: "default",
+          dangerouslyAllowSVG: !1,
+          unoptimized: !1,
+        },
+      });
+      for (let [a, c] of Object.entries(b)) void 0 === c && delete b[a];
+      return { props: b };
+    }
+    let k = h.Image;
+  },
+  19273,
+  (a, b, c) => {
+    b.exports = a.r(88405);
+  },
+  87052,
+  62051,
+  (a) => {
+    "use strict";
+    var b = a.i(63874),
+      c = a.i(68962),
+      d = a.i(19273);
+    let e = ({
+      amount: a,
+      className: d,
+      currencyCode: e = "USD",
+      currencyCodeClassName: f,
+    }) =>
+      (0, b.jsxs)("p", {
+        suppressHydrationWarning: !0,
+        className: d,
+        children: [
+          `${new Intl.NumberFormat(void 0, { style: "currency", currency: e, currencyDisplay: "narrowSymbol" }).format(parseFloat(a))}`,
+          (0, b.jsx)("span", {
+            className: (0, c.default)("ml-1 inline", f),
+            children: `${e}`,
+          }),
+        ],
+      });
+    a.s(["default", 0, e], 62051);
+    let f = ({
+      title: a,
+      amount: d,
+      currencyCode: f,
+      position: g = "bottom",
+    }) =>
+      (0, b.jsx)("div", {
+        className: (0, c.default)(
+          "absolute bottom-0 left-0 flex w-full px-4 pb-4 @container/label",
+          { "lg:px-20 lg:pb-[35%]": "center" === g },
+        ),
+        children: (0, b.jsxs)("div", {
+          className:
+            "flex items-center rounded-full border bg-white/70 p-1 text-xs font-semibold text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white",
+          children: [
+            (0, b.jsx)("h3", {
+              className:
+                "mr-4 line-clamp-2 grow pl-2 leading-none tracking-tight",
+              children: a,
+            }),
+            (0, b.jsx)(e, {
+              className: "flex-none rounded-full bg-blue-600 p-2 text-white",
+              amount: d,
+              currencyCode: f,
+              currencyCodeClassName: "hidden @[275px]/label:inline",
+            }),
+          ],
+        }),
+      });
+    function g({ isInteractive: a = !0, active: e, label: g, ...h }) {
+      return (0, b.jsxs)("div", {
+        className: (0, c.default)(
+          "group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-white hover:border-blue-600 dark:bg-black",
+          {
+            relative: g,
+            "border-2 border-blue-600": e,
+            "border-neutral-200 dark:border-neutral-800": !e,
+          },
+        ),
+        children: [
+          h.src
+            ? (0, b.jsx)(d.default, {
+                className: (0, c.default)(
+                  "relative h-full w-full object-contain",
+                  {
+                    "transition duration-300 ease-in-out group-hover:scale-105":
+                      a,
+                  },
+                ),
+                ...h,
+              })
+            : null,
+          g
+            ? (0, b.jsx)(f, {
+                title: g.title,
+                amount: g.amount,
+                currencyCode: g.currencyCode,
+                position: g.position,
+              })
+            : null,
+        ],
+      });
+    }
+    a.s(["GridTileImage", () => g], 87052);
+  },
+  27455,
+  (a) => {
+    "use strict";
+    var b = a.i(63874),
+      c = a.i(68962);
+    a.s([
+      "default",
+      0,
+      ({ html: a, className: d }) =>
+        (0, b.jsx)("div", {
+          className: (0, c.default)(
+            "prose mx-auto max-w-6xl text-base leading-7 text-black prose-headings:mt-8 prose-headings:font-semibold prose-headings:tracking-wide prose-headings:text-black prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg prose-a:text-black prose-a:underline prose-a:hover:text-neutral-300 prose-strong:text-black prose-ol:mt-8 prose-ol:list-decimal prose-ol:pl-6 prose-ul:mt-8 prose-ul:list-disc prose-ul:pl-6 dark:text-white dark:prose-headings:text-white dark:prose-a:text-white dark:prose-strong:text-white",
+            d,
+          ),
+          dangerouslySetInnerHTML: { __html: a },
+        }),
+    ]);
+  },
+  3307,
+  (a) => {
+    "use strict";
+    let b = (0, a.i(56520).registerClientReference)(
+      function () {
+        throw Error(
+          "Attempted to call Gallery() from the server but Gallery is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.",
+        );
+      },
+      "[project]/components/product/gallery.tsx <module evaluation>",
+      "Gallery",
+    );
+    a.s(["Gallery", 0, b]);
+  },
+  78564,
+  (a) => {
+    "use strict";
+    let b = (0, a.i(56520).registerClientReference)(
+      function () {
+        throw Error(
+          "Attempted to call Gallery() from the server but Gallery is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.",
+        );
+      },
+      "[project]/components/product/gallery.tsx",
+      "Gallery",
+    );
+    a.s(["Gallery", 0, b]);
+  },
+  92435,
+  (a) => {
+    "use strict";
+    a.i(3307);
+    var b = a.i(78564);
+    a.n(b);
+  },
+  38405,
+  (a) => {
+    "use strict";
+    let b = (0, a.i(56520).registerClientReference)(
+      function () {
+        throw Error(
+          "Attempted to call AddToCart() from the server but AddToCart is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.",
+        );
+      },
+      "[project]/components/cart/add-to-cart.tsx <module evaluation>",
+      "AddToCart",
+    );
+    a.s(["AddToCart", 0, b]);
+  },
+  38467,
+  (a) => {
+    "use strict";
+    let b = (0, a.i(56520).registerClientReference)(
+      function () {
+        throw Error(
+          "Attempted to call AddToCart() from the server but AddToCart is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.",
+        );
+      },
+      "[project]/components/cart/add-to-cart.tsx",
+      "AddToCart",
+    );
+    a.s(["AddToCart", 0, b]);
+  },
+  40973,
+  (a) => {
+    "use strict";
+    a.i(38405);
+    var b = a.i(38467);
+    a.n(b);
+  },
+  72316,
+  (a) => {
+    "use strict";
+    let b = (0, a.i(56520).registerClientReference)(
+      function () {
+        throw Error(
+          "Attempted to call VariantSelector() from the server but VariantSelector is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.",
+        );
+      },
+      "[project]/components/product/variant-selector.tsx <module evaluation>",
+      "VariantSelector",
+    );
+    a.s(["VariantSelector", 0, b]);
+  },
+  25730,
+  (a) => {
+    "use strict";
+    let b = (0, a.i(56520).registerClientReference)(
+      function () {
+        throw Error(
+          "Attempted to call VariantSelector() from the server but VariantSelector is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.",
+        );
+      },
+      "[project]/components/product/variant-selector.tsx",
+      "VariantSelector",
+    );
+    a.s(["VariantSelector", 0, b]);
+  },
+  63652,
+  (a) => {
+    "use strict";
+    a.i(72316);
+    var b = a.i(25730);
+    a.n(b);
+  },
+  72566,
+  (a) => {
+    "use strict";
+    var b = a.i(63874),
+      c = a.i(87052),
+      d = a.i(61277),
+      e = a.i(92435),
+      f = a.i(40973),
+      g = a.i(62051),
+      h = a.i(27455),
+      i = a.i(63652);
+    function j({ product: a }) {
+      return (0, b.jsxs)(b.Fragment, {
+        children: [
+          (0, b.jsxs)("div", {
+            className:
+              "mb-6 flex flex-col border-b pb-6 dark:border-neutral-700",
+            children: [
+              (0, b.jsx)("h1", {
+                className: "mb-2 text-5xl font-medium",
+                children: a.title,
+              }),
+              (0, b.jsx)("div", {
+                className:
+                  "mr-auto w-auto rounded-full bg-blue-600 p-2 text-sm text-white",
+                children: (0, b.jsx)(g.default, {
+                  amount: a.priceRange.maxVariantPrice.amount,
+                  currencyCode: a.priceRange.maxVariantPrice.currencyCode,
+                }),
+              }),
+            ],
+          }),
+          (0, b.jsx)(i.VariantSelector, {
+            options: a.options,
+            variants: a.variants,
+          }),
+          a.descriptionHtml
+            ? (0, b.jsx)(h.default, {
+                className: "mb-6 text-sm leading-tight dark:text-white/[60%]",
+                html: a.descriptionHtml,
+              })
+            : null,
+          (0, b.jsx)(f.AddToCart, { product: a }),
+        ],
+      });
+    }
+    var k = a.i(36812),
+      l = a.i(92213),
+      m = a.i(53338);
+    a.i(98347);
+    var n = a.i(59120),
+      o = a.i(83839);
+    async function p(a) {
+      let b = await a.params,
+        c = await (0, l.getProduct)(b.handle);
+      if (!c) return (0, n.notFound)();
+      let { url: d, width: e, height: f, altText: g } = c.featuredImage || {},
+        h = !c.tags.includes(k.HIDDEN_PRODUCT_TAG);
+      return {
+        title: c.seo.title || c.title,
+        description: c.seo.description || c.description,
+        robots: { index: h, follow: h, googleBot: { index: h, follow: h } },
+        openGraph: d
+          ? { images: [{ url: d, width: e, height: f, alt: g }] }
+          : null,
+      };
+    }
+    async function q(a) {
+      let c = await a.params,
+        f = await (0, l.getProduct)(c.handle);
+      if (!f) return (0, n.notFound)();
+      let g = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        name: f.title,
+        description: f.description,
+        image: f.featuredImage.url,
+        offers: {
+          "@type": "AggregateOffer",
+          availability: f.availableForSale
+            ? "https://schema.org/InStock"
+            : "https://schema.org/OutOfStock",
+          priceCurrency: f.priceRange.minVariantPrice.currencyCode,
+          highPrice: f.priceRange.maxVariantPrice.amount,
+          lowPrice: f.priceRange.minVariantPrice.amount,
+        },
+      };
+      return (0, b.jsxs)(b.Fragment, {
+        children: [
+          (0, b.jsx)("script", {
+            type: "application/ld+json",
+            dangerouslySetInnerHTML: { __html: JSON.stringify(g) },
+          }),
+          (0, b.jsxs)("div", {
+            className: "mx-auto max-w-(--breakpoint-2xl) px-4",
+            children: [
+              (0, b.jsxs)("div", {
+                className:
+                  "flex flex-col rounded-lg border border-neutral-200 bg-white p-8 md:p-12 lg:flex-row lg:gap-8 dark:border-neutral-800 dark:bg-black",
+                children: [
+                  (0, b.jsx)("div", {
+                    className: "h-full w-full basis-full lg:basis-4/6",
+                    children: (0, b.jsx)(o.Suspense, {
+                      fallback: (0, b.jsx)("div", {
+                        className:
+                          "relative aspect-square h-full max-h-[550px] w-full overflow-hidden",
+                      }),
+                      children: (0, b.jsx)(e.Gallery, {
+                        images: f.images
+                          .slice(0, 5)
+                          .map((a) => ({ src: a.url, altText: a.altText })),
+                      }),
+                    }),
+                  }),
+                  (0, b.jsx)("div", {
+                    className: "basis-full lg:basis-2/6",
+                    children: (0, b.jsx)(o.Suspense, {
+                      fallback: null,
+                      children: (0, b.jsx)(j, { product: f }),
+                    }),
+                  }),
+                ],
+              }),
+              (0, b.jsx)(r, { id: f.id }),
+            ],
+          }),
+          (0, b.jsx)(d.default, {}),
+        ],
+      });
+    }
+    async function r({ id: a }) {
+      let d = await (0, l.getProductRecommendations)(a);
+      return d.length
+        ? (0, b.jsxs)("div", {
+            className: "py-8",
+            children: [
+              (0, b.jsx)("h2", {
+                className: "mb-4 text-2xl font-bold",
+                children: "Related Products",
+              }),
+              (0, b.jsx)("ul", {
+                className: "flex w-full gap-4 overflow-x-auto pt-1",
+                children: d.map((a) =>
+                  (0, b.jsx)(
+                    "li",
+                    {
+                      className:
+                        "aspect-square w-full flex-none min-[475px]:w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5",
+                      children: (0, b.jsx)(m.default, {
+                        className: "relative h-full w-full",
+                        href: `/product/${a.handle}`,
+                        prefetch: !0,
+                        children: (0, b.jsx)(c.GridTileImage, {
+                          alt: a.title,
+                          label: {
+                            title: a.title,
+                            amount: a.priceRange.maxVariantPrice.amount,
+                            currencyCode:
+                              a.priceRange.maxVariantPrice.currencyCode,
+                          },
+                          src: a.featuredImage?.url,
+                          fill: !0,
+                          sizes:
+                            "(min-width: 1024px) 20vw, (min-width: 768px) 25vw, (min-width: 640px) 33vw, (min-width: 475px) 50vw, 100vw",
+                        }),
+                      }),
+                    },
+                    a.handle,
+                  ),
+                ),
+              }),
+            ],
+          })
+        : null;
+    }
+    a.s(["default", () => q, "generateMetadata", () => p], 72566);
+  },
+];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__3d5fc686._.js.map

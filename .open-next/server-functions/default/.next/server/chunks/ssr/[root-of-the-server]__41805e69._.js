@@ -1,0 +1,285 @@
+module.exports = [
+  93695,
+  (a, b, c) => {
+    b.exports = a.x("next/dist/shared/lib/no-fallback-error.external.js", () =>
+      require("next/dist/shared/lib/no-fallback-error.external.js"),
+    );
+  },
+  39236,
+  (a) => {
+    a.n(a.i(86895));
+  },
+  70864,
+  (a) => {
+    a.n(a.i(33290));
+  },
+  65897,
+  (a) => {
+    a.n(a.i(96647));
+  },
+  82532,
+  (a) => {
+    a.n(a.i(98340));
+  },
+  77201,
+  (a) => {
+    a.n(a.i(96351));
+  },
+  74608,
+  (a) => {
+    a.n(a.i(94166));
+  },
+  97903,
+  (a) => {
+    a.n(a.i(5722));
+  },
+  27554,
+  (a) => {
+    "use strict";
+    var b = a.i(63874);
+    function c({
+      eyebrow: a,
+      title: c,
+      description: d,
+      actions: e,
+      className: f,
+    }) {
+      return (0, b.jsxs)("header", {
+        className: ["uc-section-heading", f].filter(Boolean).join(" "),
+        children: [
+          a ? (0, b.jsx)("p", { className: "uc-eyebrow", children: a }) : null,
+          (0, b.jsx)("h2", { className: "uc-section-title", children: c }),
+          d
+            ? (0, b.jsx)("p", {
+                className: "uc-section-description",
+                children: d,
+              })
+            : null,
+          e,
+        ],
+      });
+    }
+    a.s(["SectionHeading", () => c]);
+  },
+  60887,
+  (a) => {
+    "use strict";
+    var b = a.i(63874),
+      c = a.i(53338),
+      d = a.i(72569),
+      e = a.i(20134),
+      f = a.i(79703),
+      g = a.i(27554),
+      h = a.i(31065);
+    function i() {
+      return (0, b.jsxs)(f.PortalShell, {
+        children: [
+          (0, b.jsx)(e.PortalHeader, {}),
+          (0, b.jsxs)("main", {
+            className: "uc-main",
+            children: [
+              (0, b.jsx)("section", {
+                className: "uc-section uc-hero-section",
+                children: (0, b.jsxs)("div", {
+                  className: "uc-shell uc-hero-grid",
+                  children: [
+                    (0, b.jsxs)("div", {
+                      className: "uc-hero-copy",
+                      children: [
+                        (0, b.jsx)("p", {
+                          className: "uc-eyebrow",
+                          children: "Safety and Trust",
+                        }),
+                        (0, b.jsx)("h1", {
+                          className: "uc-hero-title",
+                          children:
+                            "Responsible product framing before formal trust claims.",
+                        }),
+                        (0, b.jsx)("p", {
+                          className: "uc-hero-lead",
+                          children:
+                            "This page describes how UpcubeAI should present safety, quality, privacy, and governance topics while the repo lacks formal legal or compliance source material. It is meant to set expectations conservatively.",
+                        }),
+                      ],
+                    }),
+                    (0, b.jsxs)("aside", {
+                      className: "uc-note-panel",
+                      "aria-label": "Trust page status",
+                      children: [
+                        (0, b.jsx)("p", {
+                          className: "uc-eyebrow",
+                          children: "What is not claimed here",
+                        }),
+                        (0, b.jsx)("p", {
+                          children:
+                            "No certifications, legal guarantees, security control lists, or reviewed policy commitments are represented on this page.",
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              }),
+              (0, b.jsx)("section", {
+                className: "uc-section uc-section-rule",
+                children: (0, b.jsxs)("div", {
+                  className: "uc-shell uc-split-layout",
+                  children: [
+                    (0, b.jsx)(g.SectionHeading, {
+                      eyebrow: "Responsible AI",
+                      title: "Trust copy should match product proof.",
+                      description:
+                        "The implementation follows a claim-limited approach so design polish does not imply capabilities that the repo does not prove.",
+                    }),
+                    (0, b.jsx)("div", {
+                      className: "uc-grid uc-checklist-grid",
+                      children: h.safetyPrinciples.map((a) =>
+                        (0, b.jsxs)(
+                          "article",
+                          {
+                            className: "uc-checklist-card",
+                            children: [
+                              (0, b.jsx)("h3", { children: a.title }),
+                              (0, b.jsx)("p", { children: a.description }),
+                            ],
+                          },
+                          a.title,
+                        ),
+                      ),
+                    }),
+                  ],
+                }),
+              }),
+              (0, b.jsx)("section", {
+                className: "uc-section uc-section-rule",
+                children: (0, b.jsxs)("div", {
+                  className: "uc-shell",
+                  children: [
+                    (0, b.jsx)(g.SectionHeading, {
+                      eyebrow: "Platform safety principles",
+                      title:
+                        "Clear boundaries across product, privacy, and governance language.",
+                      description:
+                        "Each section below stays process-oriented because the repo does not include a reviewed trust-center source package.",
+                    }),
+                    (0, b.jsx)("div", {
+                      className:
+                        "uc-grid uc-feature-grid uc-feature-grid--three",
+                      children: h.safetyQualityNotes.map((a) =>
+                        (0, b.jsxs)(
+                          "article",
+                          {
+                            className: "uc-feature-card",
+                            children: [
+                              (0, b.jsx)("h3", { children: a.title }),
+                              (0, b.jsx)("p", { children: a.description }),
+                            ],
+                          },
+                          a.title,
+                        ),
+                      ),
+                    }),
+                  ],
+                }),
+              }),
+              (0, b.jsx)("section", {
+                className: "uc-section uc-section-rule",
+                children: (0, b.jsxs)("div", {
+                  className: "uc-shell",
+                  children: [
+                    (0, b.jsx)(g.SectionHeading, {
+                      eyebrow: "Trust links",
+                      title:
+                        "Link readers to the pages that explain current scope.",
+                      description:
+                        "These links route to implemented pages and avoid inventing contact channels or off-repo trust resources.",
+                    }),
+                    (0, b.jsx)("div", {
+                      className: "uc-grid uc-feature-grid",
+                      children: h.trustLinks.map((a) =>
+                        (0, b.jsxs)(
+                          "article",
+                          {
+                            className: "uc-feature-card",
+                            children: [
+                              (0, b.jsx)("h3", { children: a.title }),
+                              (0, b.jsx)("p", { children: a.description }),
+                              (0, b.jsx)("p", {
+                                children: (0, b.jsx)(c.default, {
+                                  className: "uc-nav-link",
+                                  href: a.href,
+                                  children: "Open page",
+                                }),
+                              }),
+                            ],
+                          },
+                          a.title,
+                        ),
+                      ),
+                    }),
+                  ],
+                }),
+              }),
+              (0, b.jsx)("section", {
+                className: "uc-section uc-section-rule",
+                children: (0, b.jsxs)("div", {
+                  className: "uc-shell uc-cta-band",
+                  children: [
+                    (0, b.jsxs)("div", {
+                      children: [
+                        (0, b.jsx)("p", {
+                          className: "uc-eyebrow",
+                          children: "Continue",
+                        }),
+                        (0, b.jsx)("h2", {
+                          className: "uc-section-title",
+                          children:
+                            "Review current placeholders before publishing stronger commitments.",
+                        }),
+                      ],
+                    }),
+                    (0, b.jsxs)("div", {
+                      className: "uc-inline-actions",
+                      children: [
+                        (0, b.jsx)(c.default, {
+                          className: "uc-button",
+                          "data-variant": "solid",
+                          href: "/faq",
+                          children: "Review FAQ",
+                        }),
+                        (0, b.jsx)(c.default, {
+                          className: "uc-button",
+                          href: "/privacy",
+                          children: "Review Privacy",
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              }),
+            ],
+          }),
+          (0, b.jsx)(d.PortalFooter, {}),
+        ],
+      });
+    }
+    function j() {
+      return (0, b.jsx)(i, {});
+    }
+    a.s(
+      [
+        "default",
+        () => j,
+        "metadata",
+        0,
+        {
+          title: "UpcubeAI Safety",
+          description:
+            "Safety and trust overview for UpcubeAI with process-oriented language and no unsupported compliance or legal claims.",
+        },
+      ],
+      60887,
+    );
+  },
+];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__41805e69._.js.map
