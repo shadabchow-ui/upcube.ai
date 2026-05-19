@@ -3511,7 +3511,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/.pnpm/next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/server/load-manifest.external.js": {
-      "bytes": 11671282,
+      "bytes": 11671268,
       "imports": [
         {
           "path": "path",
@@ -11668,7 +11668,7 @@
           "bytesInOutput": 462
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/server/load-manifest.external.js": {
-          "bytesInOutput": 11565875
+          "bytesInOutput": 11565861
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/compiled/@vercel/og/index.edge.js": {
           "bytesInOutput": 535270
@@ -12625,7 +12625,7 @@
           "bytesInOutput": 114878
         }
       },
-      "bytes": 17299962
+      "bytes": 17299948
     }
   }
 }
