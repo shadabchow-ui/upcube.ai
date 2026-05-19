@@ -11,7 +11,8 @@ import "./styles/upcube-type-system.css";
 import "./styles/upcube-news.css";
 import "./styles/upcube-portal.css";
 import "./styles/upcube-universal-header.css";
-import { baseUrl } from "lib/utils";
+
+const canonicalBaseUrl = "https://upcube.ai";
 
 const upcubeInter = localFont({
   src: [
@@ -29,7 +30,7 @@ const upcubeInter = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL(canonicalBaseUrl),
   title: "UpCubeAI | Artificial Intelligence Company",
   description:
     "Artificial intelligence company building consumer apps, product experiences, and research across the Upcube ecosystem.",

@@ -1,13 +1,15 @@
-import { baseUrl } from "lib/utils";
+const canonicalBaseUrl = "https://upcube.ai";
 
 export default function robots() {
   return {
     rules: [
       {
         userAgent: "*",
+        allow: "/",
+        disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
+    sitemap: `${canonicalBaseUrl}/sitemap.xml`,
+    host: canonicalBaseUrl,
   };
 }

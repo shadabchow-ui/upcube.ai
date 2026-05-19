@@ -1,80 +1,146 @@
 import { getCollections, getPages, getProducts } from "lib/shopify";
+import { upcubeNewsArticles } from "lib/upcube-news/news";
 import { foundationRoutePaths } from "lib/upcube-portal/foundation-pages";
-import { baseUrl, validateEnvironmentVariables } from "lib/utils";
+import { upcubeProducts } from "lib/upcube-products/products";
+import { validateEnvironmentVariables } from "lib/utils";
 import { MetadataRoute } from "next";
 
-type Route = {
+const canonicalBaseUrl = "https://upcube.ai";
+const generatedAt = new Date().toISOString();
+
+type SitemapRoute = {
   url: string;
   lastModified: string;
+  changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
+  priority?: number;
 };
 
-export const dynamic = "force-dynamic";
+export const revalidate = 86_400;
+
+const portalRouteConfigs: Array<
+  Pick<SitemapRoute, "url" | "changeFrequency" | "priority">
+> = [
+  { url: "", changeFrequency: "daily", priority: 1 },
+  { url: "/about", changeFrequency: "monthly", priority: 0.6 },
+  { url: "/brand", changeFrequency: "monthly", priority: 0.5 },
+  { url: "/builders", changeFrequency: "weekly", priority: 0.7 },
+  { url: "/business", changeFrequency: "weekly", priority: 0.7 },
+  { url: "/capabilities", changeFrequency: "weekly", priority: 0.8 },
+  { url: "/careers", changeFrequency: "weekly", priority: 0.6 },
+  { url: "/charter", changeFrequency: "monthly", priority: 0.5 },
+  { url: "/chat", changeFrequency: "weekly", priority: 0.5 },
+  { url: "/company", changeFrequency: "weekly", priority: 0.8 },
+  { url: "/contact", changeFrequency: "monthly", priority: 0.7 },
+  { url: "/enterprise", changeFrequency: "weekly", priority: 0.8 },
+  { url: "/explore", changeFrequency: "weekly", priority: 0.8 },
+  { url: "/faq", changeFrequency: "monthly", priority: 0.6 },
+  { url: "/foundation", changeFrequency: "monthly", priority: 0.5 },
+  { url: "/how-it-works", changeFrequency: "weekly", priority: 0.8 },
+  { url: "/news", changeFrequency: "weekly", priority: 0.9 },
+  { url: "/platform", changeFrequency: "weekly", priority: 0.8 },
+  { url: "/policies", changeFrequency: "monthly", priority: 0.4 },
+  { url: "/principles", changeFrequency: "monthly", priority: 0.7 },
+  { url: "/privacy", changeFrequency: "yearly", priority: 0.3 },
+  { url: "/privacy-policy", changeFrequency: "yearly", priority: 0.3 },
+  { url: "/research", changeFrequency: "weekly", priority: 0.8 },
+  { url: "/research/economic", changeFrequency: "monthly", priority: 0.6 },
+  { url: "/research/residency", changeFrequency: "monthly", priority: 0.6 },
+  { url: "/safety", changeFrequency: "monthly", priority: 0.7 },
+  { url: "/security-privacy", changeFrequency: "monthly", priority: 0.7 },
+  { url: "/teams", changeFrequency: "weekly", priority: 0.7 },
+  { url: "/terms", changeFrequency: "yearly", priority: 0.3 },
+  { url: "/terms-of-service", changeFrequency: "yearly", priority: 0.3 },
+  { url: "/trust", changeFrequency: "weekly", priority: 0.8 },
+  { url: "/trust-transparency", changeFrequency: "monthly", priority: 0.6 },
+  { url: "/vision", changeFrequency: "monthly", priority: 0.7 },
+];
+
+const buildSitemapRoute = (
+  path: string,
+  config: Omit<SitemapRoute, "url" | "lastModified"> = {},
+): SitemapRoute => ({
+  url: `${canonicalBaseUrl}${path}`,
+  lastModified: generatedAt,
+  ...config,
+});
+
+const dedupeRoutes = (routes: SitemapRoute[]) =>
+  Array.from(new Map(routes.map((route) => [route.url, route])).values());
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const staticRoutes = [
-    "",
-    "/business",
-    "/builders",
-    "/capabilities",
-    "/chat",
-    "/company",
-    "/contact",
-    "/enterprise",
-    "/explore",
-    "/faq",
-    "/how-it-works",
-    "/news",
-    "/platform",
-    "/principles",
-    "/privacy-policy",
-    "/teams",
-    "/terms-of-service",
-    "/trust",
-    "/vision",
-    ...foundationRoutePaths,
-  ];
+  const foundationRoutes = foundationRoutePaths.map((path) =>
+    buildSitemapRoute(path, { changeFrequency: "monthly", priority: 0.5 }),
+  );
 
-  const routesMap = staticRoutes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date().toISOString(),
-  }));
+  const portalRoutes = portalRouteConfigs.map(
+    ({ url, changeFrequency, priority }) =>
+      buildSitemapRoute(url, { changeFrequency, priority }),
+  );
+
+  const productRoutes = upcubeProducts.map((product) =>
+    buildSitemapRoute(`/products/${product.slug}`, {
+      changeFrequency: "weekly",
+      priority: 0.8,
+    }),
+  );
+
+  const newsRoutes = upcubeNewsArticles.map((article) =>
+    buildSitemapRoute(article.href, {
+      changeFrequency:
+        article.category === "Product Launch" ? "monthly" : "yearly",
+      priority: article.featured ? 0.9 : 0.7,
+    }),
+  );
+
+  const baseRoutes = dedupeRoutes([
+    ...portalRoutes,
+    ...foundationRoutes,
+    ...productRoutes,
+    ...newsRoutes,
+  ]);
 
   try {
     validateEnvironmentVariables();
   } catch {
-    return routesMap;
+    return baseRoutes;
   }
 
   const collectionsPromise = getCollections().then((collections) =>
     collections.map((collection) => ({
-      url: `${baseUrl}${collection.path}`,
+      url: `${canonicalBaseUrl}${collection.path}`,
       lastModified: collection.updatedAt,
+      changeFrequency: "weekly" as const,
+      priority: 0.5,
     })),
   );
 
   const productsPromise = getProducts({}).then((products) =>
     products.map((product) => ({
-      url: `${baseUrl}/product/${product.handle}`,
+      url: `${canonicalBaseUrl}/product/${product.handle}`,
       lastModified: product.updatedAt,
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
     })),
   );
 
   const pagesPromise = getPages().then((pages) =>
     pages.map((page) => ({
-      url: `${baseUrl}/${page.handle}`,
+      url: `${canonicalBaseUrl}/${page.handle}`,
       lastModified: page.updatedAt,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
     })),
   );
 
-  let fetchedRoutes: Route[] = [];
+  let fetchedRoutes: SitemapRoute[] = [];
 
   try {
     fetchedRoutes = (
       await Promise.all([collectionsPromise, productsPromise, pagesPromise])
     ).flat();
   } catch {
-    return routesMap;
+    return baseRoutes;
   }
 
-  return [...routesMap, ...fetchedRoutes];
+  return dedupeRoutes([...baseRoutes, ...fetchedRoutes]);
 }
