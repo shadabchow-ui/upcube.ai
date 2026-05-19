@@ -37,3 +37,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
+
+# Build output
+.next/
+.open-next/
+.wrangler/
+.vercel/
+out/
