@@ -32,6 +32,8 @@ export type UpcubeProduct = {
   eyebrow: string;
   headline: string;
   summary: string;
+  seoTitle?: string;
+  seoDescription?: string;
   primaryAction: ProductAction;
   secondaryAction: ProductAction;
   heroHighlights: string[];
@@ -58,6 +60,9 @@ export const upcubeProducts: UpcubeProduct[] = [
       "The AI workspace that keeps powerful work clear, connected, and in motion.",
     summary:
       "UpcubeAI brings Ethen, chat, research, artifacts, governed tools, approvals, and workspace continuity into one focused product experience.",
+    seoTitle: "UpcubeAI | AI Workspace and Assistant Platform",
+    seoDescription:
+      "UpcubeAI is an AI workspace and assistant platform for chat, research, artifacts, approvals, and connected work across the Upcube ecosystem.",
     primaryAction: {
       label: "Launch UpcubeAI",
       href: "https://ethen.upcube.ai",
@@ -168,6 +173,9 @@ export const upcubeProducts: UpcubeProduct[] = [
       "A calmer way to discover books, preview what matters, and keep a reading path that feels personal.",
     summary:
       "Upcube Books is built around public-first discovery, trusted previews, saved books, public-domain lanes, and a product direction that makes AI-assisted reading feel natural without losing copyright boundaries.",
+    seoTitle: "Upcube Books | Book Discovery and AI Reading Platform",
+    seoDescription:
+      "Upcube Books is a book discovery and AI reading platform for previews, saved reading paths, lawful access, and future reading guidance.",
     primaryAction: {
       label: "Launch Upcube Books",
       href: "https://books.upcube.ai",
@@ -277,6 +285,9 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Explore the planet with terrain, cities, overlays, and search that invite you deeper into the map.",
     summary:
       "Upcube Earth combines globe exploration, terrain, city context, search, overlays, and shareable views into a spatial product that feels built for discovery.",
+    seoTitle: "Upcube Earth | 3D Globe and Spatial Intelligence Platform",
+    seoDescription:
+      "Upcube Earth is a 3D globe and spatial intelligence platform for exploration, terrain, city context, search, overlays, and shareable views.",
     primaryAction: {
       label: "Launch Upcube Earth",
       href: "https://planet.upcube.ai",
@@ -387,6 +398,9 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Find what to play next with a game discovery experience built around momentum, taste, and clarity.",
     summary:
       "Upcube Games turns releases, genres, platforms, studios, franchises, search, and recommendations into a polished product for people who want cleaner discovery.",
+    seoTitle: "Upcube Games | Video Game Discovery Platform",
+    seoDescription:
+      "Upcube Games is a video game discovery platform for releases, genres, platforms, studios, franchises, and recommendation paths.",
     primaryAction: {
       label: "Launch Upcube Games",
       href: "https://games.upcube.ai",
@@ -497,6 +511,9 @@ export const upcubeProducts: UpcubeProduct[] = [
       "A cleaner path from role discovery to the next move in your career.",
     summary:
       "Upcube Jobs is the hiring destination in the Upcube ecosystem, designed to make opportunity discovery feel organized, direct, and worth returning to.",
+    seoTitle: "Upcube Jobs | AI Job Discovery and Career Platform",
+    seoDescription:
+      "Upcube Jobs is an AI job discovery and career platform for clearer opportunity browsing, role context, and connected ecosystem workflows.",
     primaryAction: {
       label: "Launch Upcube Jobs",
       href: "https://jobs.upcube.ai",
@@ -606,6 +623,9 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Cloud infrastructure that makes compute, storage, networking, and developer flow easier to understand.",
     summary:
       "Upcube Cloud is the consumer- and business-facing destination for compute, tooling, and infrastructure stories across the Upcube ecosystem.",
+    seoTitle: "Upcube Cloud | AI Cloud Infrastructure Platform",
+    seoDescription:
+      "Upcube Cloud is an AI cloud infrastructure platform for developer tools, cloud workflows, compute access, and scalable systems across Upcube.",
     primaryAction: {
       label: "Launch Upcube Cloud",
       href: "https://cloud.upcube.ai",
@@ -716,6 +736,9 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Shopping built for massive choice, faster discovery, and product pages that make decisions easier.",
     summary:
       "Ventari is a premium commerce product built around search, categories, rich product pages, reviews, recommendations, and catalog architecture built to scale to 100M+ products.",
+    seoTitle: "Ventari | AI Commerce and Product Discovery Platform",
+    seoDescription:
+      "Ventari is the AI commerce and product discovery platform for large-scale search, richer product pages, and recommendation-led shopping.",
     primaryAction: {
       label: "Launch Ventari",
       href: "https://ventari.net",
@@ -826,6 +849,9 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Compute infrastructure designed to make virtual machines, networking, storage, and operations easier to reason about.",
     summary:
       "VM Compute is the cloud compute product in the ecosystem, built around instance lifecycle, storage, networking, jobs, repair loops, and scalable systems language that still reads clearly in public.",
+    seoTitle: "VM Compute | Virtual Machine Cloud Compute Platform",
+    seoDescription:
+      "VM Compute is a virtual machine cloud compute platform for lifecycle control, networking, storage, jobs, and repair-oriented infrastructure.",
     primaryAction: {
       label: "Open Upcube Cloud",
       href: "https://cloud.upcube.ai",
@@ -939,6 +965,9 @@ export const upcubeProducts: UpcubeProduct[] = [
       "A consumer operating system designed to make AI help feel built in, visible, and firmly under your control.",
     summary:
       "Upcube OS is the public operating-system vision in the ecosystem, built around trustworthy AI help, clear permissions, visible actions, and a public consumer release planned for 2028 while improvements continue.",
+    seoTitle: "Upcube OS | AI Operating System",
+    seoDescription:
+      "Upcube OS is an AI operating system built around visible help, system context, permissions, and trust-first computing direction.",
     primaryAction: {
       label: "Read the vision",
       href: "/vision",
@@ -1050,6 +1079,9 @@ export const upcubeProducts: UpcubeProduct[] = [
       "A phone platform designed around trust, privacy, and AI help that stays visible every step of the way.",
     summary:
       "Upcube Mobile OS is the public mobile operating-system vision in the ecosystem, built around trusted launch, privacy-aware intelligence, clear system boundaries, and a public consumer release planned for 2028 while improvements continue.",
+    seoTitle: "Upcube Mobile OS | AI Mobile Operating System",
+    seoDescription:
+      "Upcube Mobile OS is an AI mobile operating system focused on trusted assistance, privacy, system clarity, and future phone computing.",
     primaryAction: {
       label: "Read the vision",
       href: "/vision",
@@ -1161,6 +1193,9 @@ export const upcubeProducts: UpcubeProduct[] = [
     headline: "The voice platform for future Upcube devices.",
     summary:
       "Upcube Voice brings Ethen into future Upcube headphones, earbuds, home audio, car audio, and companion devices through private, real-time voice assistance built around user control.",
+    seoTitle: "Upcube Voice | AI Voice Platform for Future Upcube Devices",
+    seoDescription:
+      "Upcube Voice is the AI voice platform for future Upcube devices, built around private push-to-talk, real-time assistance, and clear user control.",
     primaryAction: {
       label: "Explore Voice",
       href: "/news/upcube-voice-preview",
@@ -1273,13 +1308,16 @@ export const upcubeProducts: UpcubeProduct[] = [
     headline: "Learning paths for the AI age.",
     summary:
       "Upcube University is the learning platform for the Upcube ecosystem, focused on AI education, product training, technical courses, guided learning paths, and future credential-style programs.",
+    seoTitle: "Upcube University | AI Education and Learning Platform",
+    seoDescription:
+      "Upcube University is the AI education and learning platform for the Upcube ecosystem, built for training, technical courses, and guided paths.",
     primaryAction: {
-      label: "Explore University",
-      href: "/news/upcube-university-preview",
+      label: "Open University",
+      href: "https://university.upcube.ai",
     },
     secondaryAction: {
-      label: "Explore UpcubeAI",
-      href: "/products/upcube-ai",
+      label: "Read the preview",
+      href: "/news/upcube-university-preview",
     },
     heroHighlights: [
       "Learning platform for the Upcube ecosystem, not a legal university or accredited institution claim.",
@@ -1287,7 +1325,7 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Future credential-style programs are direction only, not public offerings in this repo.",
     ],
     availabilityNote:
-      "No public University site is available in this repo, and future credential-style programs are direction only.",
+      "The public app domain is https://university.upcube.ai, while accreditation, degrees, and public enrollment are not claimed on this page.",
     signatureTitle:
       "A learning platform designed to make serious learning feel structured, premium, and connected to real product systems.",
     signatureBody:
@@ -1317,7 +1355,7 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Future credential-style programs",
-        body: "The long-term direction can include credential-style learning programs, but the public page stops short of claiming accreditation, degrees, certifications, or live enrollment status.",
+        body: "The long-term direction can include credential-style learning programs, but the public page stops short of claiming accreditation, degrees, certifications, or open enrollment status.",
       },
     ],
     techCards: [
@@ -1368,14 +1406,14 @@ export const upcubeProducts: UpcubeProduct[] = [
     finalCtaTitle:
       "Explore the learning platform direction without overstating what is live.",
     finalCtaBody:
-      "Upcube University is presented as the learning platform for the ecosystem, with guided learning and future program direction grounded in the products that already define UpcubeAI.",
+      "Upcube University is presented as the learning platform for the ecosystem, with a live app destination and future program direction that stays grounded without drifting into accreditation, degree, or enrollment claims.",
     finalPrimaryAction: {
-      label: "Read the preview",
-      href: "/news/upcube-university-preview",
+      label: "Open University",
+      href: "https://university.upcube.ai",
     },
     finalSecondaryAction: {
-      label: "Explore UpcubeAI",
-      href: "/products/upcube-ai",
+      label: "Read the preview",
+      href: "/news/upcube-university-preview",
     },
   },
 ];

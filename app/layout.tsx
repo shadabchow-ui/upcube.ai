@@ -5,6 +5,7 @@ import { GeistSans } from "geist/font/sans";
 import { getCart } from "lib/shopify";
 import {
   canonicalBaseUrl,
+  DEFAULT_OG_IMAGE,
   DEFAULT_SITE_DESCRIPTION,
   DEFAULT_SITE_TITLE,
 } from "lib/upcube-seo/metadata";
@@ -54,13 +55,13 @@ export const metadata: Metadata = {
     url: canonicalBaseUrl,
     siteName: "UpCubeAI",
     type: "website",
-    images: [{ url: "/icon.png" }],
+    images: [{ url: DEFAULT_OG_IMAGE }],
   },
   twitter: {
     card: "summary_large_image",
     title: DEFAULT_SITE_TITLE,
     description: DEFAULT_SITE_DESCRIPTION,
-    images: ["/icon.png"],
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

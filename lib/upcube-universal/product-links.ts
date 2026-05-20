@@ -5,6 +5,7 @@ export const UPCUBE_JOBS_URL = "https://jobs.upcube.ai";
 export const UPCUBE_GAMES_URL = "https://games.upcube.ai";
 export const UPCUBE_CLOUD_URL = "https://cloud.upcube.ai";
 export const UPCUBE_VENTARI_URL = "https://ventari.net";
+export const UPCUBE_UNIVERSITY_URL = "https://university.upcube.ai";
 
 export type UpcubeProductLink = {
   id: string;
@@ -95,6 +96,7 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
     description:
       "AI education, product training, and guided learning paths across the Upcube ecosystem.",
     productHref: "/products/university",
+    launchHref: UPCUBE_UNIVERSITY_URL,
   },
 ];
 

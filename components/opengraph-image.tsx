@@ -1,7 +1,4 @@
 import { ImageResponse } from "next/og";
-import LogoIcon from "./icons/logo";
-import { join } from "path";
-import { readFile } from "fs/promises";
 
 export type Props = {
   title?: string;
@@ -12,34 +9,171 @@ export default async function OpengraphImage(
 ): Promise<ImageResponse> {
   const { title } = {
     ...{
-      title: process.env.SITE_NAME,
+      title: "UpCube",
     },
     ...props,
   };
 
-  const file = await readFile(join(process.cwd(), "./fonts/Inter-Bold.ttf"));
-  const font = Uint8Array.from(file).buffer;
-
   return new ImageResponse(
     (
-      <div tw="flex h-full w-full flex-col items-center justify-center bg-black">
-        <div tw="flex flex-none items-center justify-center border border-neutral-700 h-[160px] w-[160px] rounded-3xl">
-          <LogoIcon width="64" height="58" fill="white" />
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          height: "100%",
+          background: "#050505",
+          color: "#ffffff",
+          padding: "72px 80px",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <div
+              style={{
+                display: "flex",
+                width: 86,
+                height: 86,
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 24,
+                border: "1px solid rgba(255,255,255,0.12)",
+                background: "#101010",
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 28"
+                width="44"
+                height="39"
+                fill="white"
+              >
+                <path d="M21.5758 9.75769L16 0L0 28H11.6255L21.5758 9.75769Z" />
+                <path d="M26.2381 17.9167L20.7382 28H32L26.2381 17.9167Z" />
+              </svg>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                marginLeft: 28,
+              }}
+            >
+              <p
+                style={{
+                  margin: 0,
+                  fontSize: 28,
+                  fontWeight: 600,
+                  letterSpacing: "-0.04em",
+                }}
+              >
+                UpCubeAI
+              </p>
+              <p
+                style={{
+                  margin: "8px 0 0",
+                  fontSize: 16,
+                  color: "rgba(255,255,255,0.72)",
+                }}
+              >
+                Artificial Intelligence Company
+              </p>
+            </div>
+          </div>
+          <p
+            style={{
+              margin: 0,
+              fontSize: 15,
+              color: "rgba(255,255,255,0.58)",
+            }}
+          >
+            The Next Frontier.
+          </p>
         </div>
-        <p tw="mt-12 text-6xl font-bold text-white">{title}</p>
+
+        <div
+          style={{
+            display: "flex",
+            maxWidth: 920,
+            flexDirection: "column",
+          }}
+        >
+          <p
+            style={{
+              margin: 0,
+              fontSize: 18,
+              textTransform: "uppercase",
+              letterSpacing: "0.24em",
+              color: "rgba(255,255,255,0.46)",
+            }}
+          >
+            UpCube
+          </p>
+          <p
+            style={{
+              margin: "20px 0 0",
+              fontSize: 78,
+              fontWeight: 600,
+              lineHeight: 1.02,
+              letterSpacing: "-0.055em",
+            }}
+          >
+            {title}
+          </p>
+          <p
+            style={{
+              margin: "32px 0 0",
+              maxWidth: 820,
+              fontSize: 28,
+              lineHeight: 1.28,
+              color: "rgba(255,255,255,0.74)",
+            }}
+          >
+            High-end AI products for work, discovery, commerce, cloud
+            infrastructure, entertainment, and the future of computing.
+          </p>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            paddingTop: 28,
+            borderTop: "1px solid rgba(255,255,255,0.10)",
+          }}
+        >
+          <p
+            style={{
+              margin: 0,
+              fontSize: 16,
+              color: "rgba(255,255,255,0.54)",
+            }}
+          >
+            Branded social preview
+          </p>
+          <p
+            style={{
+              margin: 0,
+              fontSize: 16,
+              color: "rgba(255,255,255,0.54)",
+            }}
+          >
+            upcube.ai
+          </p>
+        </div>
       </div>
     ),
     {
       width: 1200,
       height: 630,
-      fonts: [
-        {
-          name: "Inter",
-          data: font,
-          style: "normal",
-          weight: 700,
-        },
-      ],
     },
   );
 }

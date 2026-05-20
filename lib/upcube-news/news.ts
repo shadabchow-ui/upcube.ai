@@ -646,10 +646,11 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
     excerpt:
       "Upcube University is a preview of the learning platform for the Upcube ecosystem, focused on AI education, product training, technical courses, guided learning paths, and future credential-style programs.",
     heroSummary:
-      "Upcube University is presented as the learning platform for the Upcube ecosystem, with no public University URL, no accreditation claim, and no open enrollment flow in this repo.",
-    primaryCtaLabel: "Explore University",
-    primaryCtaHref: "/products/university",
+      "Upcube University is presented as the learning platform for the Upcube ecosystem, with a live app domain, no accreditation claim, and no open enrollment flow in this repo.",
+    primaryCtaLabel: "Open University",
+    primaryCtaHref: "https://university.upcube.ai",
     productPageUrl: "/products/university",
+    launchUrl: "https://university.upcube.ai",
     seoTitle: "Previewing Upcube University | Learning Paths for the AI Age",
     seoDescription:
       "Preview Upcube University, the learning platform for the Upcube ecosystem built for AI education, product training, technical courses, and guided learning paths.",
@@ -661,7 +662,7 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
       {
         eyebrow: "The preview",
         title: "A learning platform for the Upcube ecosystem",
-        body: "Upcube University is described as the learning platform for the Upcube ecosystem. The page avoids claiming a public University site, accredited status, legal school status, or open enrollment.",
+        body: "Upcube University is described as the learning platform for the Upcube ecosystem, with a public app domain at university.upcube.ai. The page still avoids accredited status, legal school status, degrees, or open enrollment claims.",
       },
       {
         eyebrow: "Learning paths",

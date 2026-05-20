@@ -4,10 +4,10 @@ import type { UpcubeNewsArticle } from "lib/upcube-news/news";
 import type { UpcubeProduct } from "lib/upcube-products/products";
 
 export const CANONICAL_BASE_URL = "https://upcube.ai";
-export const DEFAULT_SITE_TITLE = "UpCube | Artificial Intelligence Company";
+export const DEFAULT_SITE_TITLE = "UpCubeAI | Artificial Intelligence Company";
 export const DEFAULT_SITE_DESCRIPTION =
   "UpCubeAI is an artificial intelligence technology company building high-end products for work, discovery, commerce, cloud infrastructure, entertainment, voice, education, and the future of computing.";
-const DEFAULT_OG_IMAGE = "/icon.png";
+export const DEFAULT_OG_IMAGE = "/opengraph-image";
 
 export const canonicalBaseUrl = CANONICAL_BASE_URL;
 export const upcubeSiteName = "UpCubeAI";
@@ -95,13 +95,14 @@ export function createBasicPageMetadata({
 
 export function createProductPageMetadata(product: UpcubeProduct): Metadata {
   const title =
-    product.name.toLowerCase() === upcubeSiteName.toLowerCase()
+    product.seoTitle ??
+    (product.name.toLowerCase() === upcubeSiteName.toLowerCase()
       ? upcubeSiteName
-      : `${product.name} | ${upcubeSiteName}`;
+      : `${product.name} | ${upcubeSiteName}`);
 
   return createBasicPageMetadata({
     title,
-    description: product.summary,
+    description: product.seoDescription ?? product.summary,
     path: `/products/${product.slug}`,
   });
 }

@@ -304,6 +304,12 @@
       "namedRegex": "^/products/jobs(?:/)?$"
     },
     {
+      "page": "/products/university",
+      "regex": "^/products/university(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/university(?:/)?$"
+    },
+    {
       "page": "/products/upcube-ai",
       "regex": "^/products/upcube\\-ai(?:/)?$",
       "routeKeys": {},

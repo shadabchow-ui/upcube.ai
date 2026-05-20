@@ -34,6 +34,7 @@
   "/products/earth/page": "app/products/earth/page.js",
   "/products/games/page": "app/products/games/page.js",
   "/products/jobs/page": "app/products/jobs/page.js",
+  "/products/university/page": "app/products/university/page.js",
   "/products/upcube-ai/page": "app/products/upcube-ai/page.js",
   "/products/upcube-mobile-os/page": "app/products/upcube-mobile-os/page.js",
   "/products/upcube-os/page": "app/products/upcube-os/page.js",

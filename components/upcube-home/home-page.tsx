@@ -2,7 +2,7 @@ import Link from "next/link";
 import { HeroChatPanel, HOME_CHAT_CTA_HREF } from "./hero-chat-panel";
 import {
   featureBands,
-  homeNarrativeSections,
+  homeBuildSectionIntro,
   homeProofPoints,
   stories,
 } from "lib/upcube-home/content";
@@ -73,34 +73,6 @@ export default function UpcubeHomePage() {
           </div>
         </section>
 
-        <section
-          className="uc-home__section"
-          aria-labelledby="company-story-title"
-        >
-          <div className="uc-home__container">
-            <h2 id="company-story-title">What UpCubeAI is building</h2>
-            <div className="uc-home__narrative-grid">
-              {homeNarrativeSections.map((section) => (
-                <article
-                  className="uc-home__narrative-card"
-                  key={section.title}
-                >
-                  <p className="uc-home__eyebrow">{section.eyebrow}</p>
-                  <h3>{section.title}</h3>
-                  <p>{section.body}</p>
-                  <div className="uc-home__inline-links">
-                    {section.links.map((item) => (
-                      <Link href={item.href} key={item.href}>
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="uc-home__section" aria-labelledby="feature-title">
           <div className="uc-home__container">
             <h2 id="feature-title">
@@ -124,12 +96,8 @@ export default function UpcubeHomePage() {
 
         <section className="uc-home__section" aria-labelledby="proof-title">
           <div className="uc-home__container">
-            <div className="uc-home__section-head-row">
-              <h2 id="proof-title">
-                Intelligence across work, voice, education, commerce, discovery,
-                cloud, and computing
-              </h2>
-            </div>
+            <h2 id="proof-title">What UpCube builds</h2>
+            <p className="uc-home__section-copy">{homeBuildSectionIntro}</p>
             <div className="uc-home__proof-grid">
               {homeProofPoints.map((item) => (
                 <article className="uc-home__proof-card" key={item.title}>

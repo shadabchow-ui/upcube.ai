@@ -925,6 +925,9 @@ module.exports = (sourcePath)=>({
       case "server/chunks/ssr/[root-of-the-server]__2cf2a7a3._.js": return require("/Users/sha/Documents/AI/upcubemain/commerce-main/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__2cf2a7a3._.js");
       case "server/chunks/ssr/_eb4ca33e._.js": return require("/Users/sha/Documents/AI/upcubemain/commerce-main/.open-next/server-functions/default/.next/server/chunks/ssr/_eb4ca33e._.js");
       case "server/chunks/ssr/_f4ab2e97._.js": return require("/Users/sha/Documents/AI/upcubemain/commerce-main/.open-next/server-functions/default/.next/server/chunks/ssr/_f4ab2e97._.js");
+      case "server/chunks/ssr/[root-of-the-server]__abf3dec3._.js": return require("/Users/sha/Documents/AI/upcubemain/commerce-main/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__abf3dec3._.js");
+      case "server/chunks/ssr/_77ff5aa6._.js": return require("/Users/sha/Documents/AI/upcubemain/commerce-main/.open-next/server-functions/default/.next/server/chunks/ssr/_77ff5aa6._.js");
+      case "server/chunks/ssr/_a0fbdf00._.js": return require("/Users/sha/Documents/AI/upcubemain/commerce-main/.open-next/server-functions/default/.next/server/chunks/ssr/_a0fbdf00._.js");
       case "server/chunks/ssr/[root-of-the-server]__755b1691._.js": return require("/Users/sha/Documents/AI/upcubemain/commerce-main/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__755b1691._.js");
       case "server/chunks/ssr/_2613b6a2._.js": return require("/Users/sha/Documents/AI/upcubemain/commerce-main/.open-next/server-functions/default/.next/server/chunks/ssr/_2613b6a2._.js");
       case "server/chunks/ssr/_3d6092eb._.js": return require("/Users/sha/Documents/AI/upcubemain/commerce-main/.open-next/server-functions/default/.next/server/chunks/ssr/_3d6092eb._.js");

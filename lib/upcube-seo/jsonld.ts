@@ -171,7 +171,7 @@ export function createProductJsonLd(product: UpcubeProduct): JsonLdObject[] {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: product.name,
-    description: product.summary,
+    description: product.seoDescription ?? product.summary,
     url: buildCanonicalUrl(`/products/${product.slug}`),
     applicationCategory: getProductApplicationCategory(product.slug),
     operatingSystem: "Web",

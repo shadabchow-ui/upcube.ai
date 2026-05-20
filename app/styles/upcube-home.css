@@ -491,7 +491,6 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__portal-grid,
 .uc-home__story-grid,
 .uc-home__feature-grid,
-.uc-home__narrative-grid,
 .uc-home__proof-grid,
 .uc-home__footer-grid {
   display: grid;
@@ -512,10 +511,6 @@ body:has(.uc-home) .commerce-navbar {
   grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
 }
 
-.uc-home__narrative-grid {
-  grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
-}
-
 .uc-home__proof-grid {
   grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
 }
@@ -523,7 +518,6 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__portal-card,
 .uc-home__story,
 .uc-home__feature,
-.uc-home__narrative-card,
 .uc-home__proof-card {
   min-height: 14rem;
   display: grid;
@@ -545,7 +539,6 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__portal-card h3,
 .uc-home__story h3,
 .uc-home__feature h3,
-.uc-home__narrative-card h3,
 .uc-home__proof-card h3 {
   margin: 0;
   font-size: clamp(1.15rem, 1.6vw, 1.45rem);
@@ -556,9 +549,9 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__portal-card p,
 .uc-home__story p,
 .uc-home__feature p,
-.uc-home__narrative-card p,
 .uc-home__proof-card p,
-.uc-home__cta-copy {
+.uc-home__cta-copy,
+.uc-home__section-copy {
   margin: 0;
   color: var(--uc-text-muted);
   line-height: 1.55;
@@ -607,6 +600,11 @@ body:has(.uc-home) .commerce-navbar {
 .uc-home__cta-copy {
   max-width: 42rem;
   margin-top: -0.75rem;
+}
+
+.uc-home__section-copy {
+  max-width: 52rem;
+  margin: 0 0 1.5rem;
 }
 
 .uc-home__feature a {
@@ -778,7 +776,6 @@ body:has(.uc-home) .commerce-navbar {
   .uc-home__portal-grid,
   .uc-home__story-grid,
   .uc-home__feature-grid,
-  .uc-home__narrative-grid,
   .uc-home__proof-grid {
     grid-template-columns: 1fr;
   }
@@ -790,7 +787,6 @@ body:has(.uc-home) .commerce-navbar {
   .uc-home__portal-card,
   .uc-home__story,
   .uc-home__feature,
-  .uc-home__narrative-card,
   .uc-home__proof-card {
     min-height: auto;
     gap: 0.8rem;
@@ -813,7 +809,6 @@ body:has(.uc-home) .commerce-navbar {
   .uc-home__portal-card,
   .uc-home__story,
   .uc-home__feature,
-  .uc-home__narrative-card,
   .uc-home__proof-card {
     padding: 1.1rem 1rem 1.15rem;
   }
