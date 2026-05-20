@@ -1,13 +1,20 @@
 import Link from "next/link";
+import {
+  UPCUBE_BOOKS_URL,
+  UPCUBE_CHAT_URL,
+  UPCUBE_CLOUD_URL,
+  UPCUBE_GAMES_URL,
+  UPCUBE_PLANET_URL,
+} from "lib/upcube-universal/product-links";
 
-export const HOME_CHAT_CTA_HREF = "https://ethen.upcube.ai";
+export const HOME_CHAT_CTA_HREF = UPCUBE_CHAT_URL;
 
 const suggestions = [
-  { label: "Ethen", href: "https://ethen.upcube.ai" },
-  { label: "Earth", href: "https://planet.upcube.ai" },
-  { label: "Books", href: "https://books.upcube.ai" },
-  { label: "Games", href: "https://games.upcube.ai" },
-  { label: "Cloud", href: "https://cloud.upcube.ai" },
+  { label: "Ethen", href: UPCUBE_CHAT_URL },
+  { label: "Earth", href: UPCUBE_PLANET_URL },
+  { label: "Books", href: UPCUBE_BOOKS_URL },
+  { label: "Games", href: UPCUBE_GAMES_URL },
+  { label: "Cloud", href: UPCUBE_CLOUD_URL },
 ];
 
 export function HeroChatPanel() {
@@ -27,8 +34,7 @@ export function HeroChatPanel() {
           />
         </div>
         <div className="uc-home__chat-composer-bar">
-          <button type="submit" aria-label="Try Ethen">
-            <span>Try Ethen</span>
+          <button type="submit" aria-label="Send to Ethen">
             <span className="uc-home__chat-arrow" aria-hidden="true">
               ↑
             </span>

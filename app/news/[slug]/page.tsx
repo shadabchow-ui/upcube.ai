@@ -20,7 +20,7 @@ export async function generateMetadata(props: {
 
   if (!article) {
     return {
-      title: "News article not found | UpCubeAI",
+      title: "News article not found | UpcubeAI",
     };
   }
 

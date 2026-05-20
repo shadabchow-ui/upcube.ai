@@ -56,10 +56,9 @@ export const upcubeProducts: UpcubeProduct[] = [
     slug: "upcube-ai",
     name: "UpcubeAI",
     eyebrow: "Ethen workspace",
-    headline:
-      "The AI workspace that keeps powerful work clear, connected, and in motion.",
+    headline: "The AI workspace for clear, connected work.",
     summary:
-      "UpcubeAI brings Ethen, chat, research, artifacts, governed tools, approvals, and workspace continuity into one focused product experience.",
+      "UpcubeAI keeps powerful work focused, visible, and moving forward. It brings Ethen, chat, research, artifacts, governed tools, approvals, and workspace continuity into one calm, capable product experience.",
     seoTitle: "UpcubeAI | AI Workspace and Assistant Platform",
     seoDescription:
       "UpcubeAI is an AI workspace and assistant platform for chat, research, artifacts, approvals, and connected work across the Upcube ecosystem.",
@@ -72,74 +71,74 @@ export const upcubeProducts: UpcubeProduct[] = [
       href: "/research",
     },
     heroHighlights: [
-      "Ethen for daily work, deep questions, and multi-step tasks.",
-      "Artifacts that turn answers into reusable output.",
-      "Approvals and tool controls that keep action visible.",
+      "Ethen is built for daily work, deep questions, and multi-step tasks.",
+      "Artifacts turn answers into reusable output.",
+      "Approvals and tool controls keep every important action visible.",
     ],
     signatureTitle:
-      "One workspace for thinking through the work and moving it forward.",
+      "One workspace for thinking through the work — and moving it forward.",
     signatureBody:
-      "UpcubeAI is designed for people who want more than a transcript. It gives chat a real workspace around it, so context, sources, tools, and outputs stay together instead of scattering across tabs.",
+      "UpcubeAI is for people who need more than a chat transcript. It gives every conversation a real workspace around it, keeping context, sources, tools, and outputs together instead of scattered across tabs.",
     signatureCards: [
       {
         title: "Chat with continuity",
-        body: "Start with a question, keep refining, and return to the same thread of work without losing the shape of the task.",
+        body: "Start with a question, refine the work, and return to the same thread without losing the shape of the task.",
       },
       {
         title: "Artifacts that last",
-        body: "Turn live conversation into plans, docs, structured outputs, and other deliverables you can keep using.",
+        body: "Turn live conversation into plans, documents, structured outputs, and deliverables you can keep using.",
       },
       {
         title: "Clear approvals",
-        body: "When a workflow needs review, UpcubeAI is designed to make the decision point obvious instead of burying it.",
+        body: "When a workflow needs review, UpcubeAI makes the decision point visible, deliberate, and easy to understand.",
       },
     ],
     featureStories: [
       {
-        title: "Research that stays attached to the answer",
-        body: "UpcubeAI is built around retrieval-aware work so research, sources, and grounded context can stay close to the response instead of becoming a separate manual step.",
+        title: "Research that stays with the answer",
+        body: "UpcubeAI is built for grounded work, keeping research, sources, and context close to the response instead of turning them into a separate step.",
       },
       {
         title: "Tools that feel governed, not chaotic",
-        body: "The product direction emphasizes tool use with visibility, policies, and approvals so automation can stay useful without feeling opaque.",
+        body: "Tool use is designed with visibility, policies, and approvals, so automation stays useful, controlled, and understandable.",
       },
       {
-        title: "A workspace that spans more than one surface",
-        body: "The platform direction already points beyond the browser, with continuity across web, CLI, desktop, mobile, and IDE workflows shaping the product story.",
+        title: "A workspace that reaches beyond one surface",
+        body: "UpcubeAI points beyond the browser, with continuity across web, CLI, desktop, mobile, and IDE workflows shaping the broader product direction.",
       },
     ],
     techCards: [
       {
         title: "Streaming answers",
-        body: "Responses arrive in motion, so the experience feels conversational while still leaving room for deliberate review.",
+        body: "Responses arrive as the work unfolds, making the experience feel immediate while still leaving room for careful review.",
       },
       {
         title: "Artifacts and memory of work",
-        body: "Outputs are meant to become useful objects, not disappear into a chat log after the moment passes.",
+        body: "Outputs become useful objects you can return to, not answers that disappear into a chat log.",
       },
       {
         title: "Approvals where they matter",
-        body: "Sensitive actions are designed around clear checkpoints so powerful workflows can stay understandable.",
+        body: "Sensitive actions are designed around clear checkpoints, keeping powerful workflows inspectable and trusted.",
       },
     ],
     useCases: [
       {
         title: "Turn a rough idea into a plan",
-        body: "Use Ethen to structure a vague task into milestones, open questions, and next actions without losing the original context.",
+        body: "Use Ethen to shape an unclear task into milestones, open questions, and next actions while preserving the original context.",
       },
       {
         title: "Move from research to output",
-        body: "Collect source-backed context, synthesize it, and shape the result into something ready to share or build from.",
+        body: "Gather grounded context, synthesize what matters, and turn it into something ready to share, ship, or build from.",
       },
       {
         title: "Keep teams aligned on the work",
-        body: "Use one workspace for prompts, artifacts, approvals, and follow-through instead of splitting the task across disconnected tools.",
+        body: "Bring prompts, artifacts, approvals, and follow-through into one workspace instead of spreading the task across disconnected tools.",
       },
     ],
     ecosystemLinks: [
       {
         title: "Upcube Books",
-        body: "Carry reading, previews, and saved discovery paths into the same ecosystem.",
+        body: "Carry reading, previews, and saved discovery paths into the same connected ecosystem.",
         href: "/products/books",
       },
       {
@@ -149,13 +148,13 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Upcube Cloud",
-        body: "Follow product work into developer tools, cloud workflows, and compute paths.",
+        body: "Move from product work into developer tools, cloud workflows, and compute paths.",
         href: "/products/cloud",
       },
     ],
     finalCtaTitle: "Start with a prompt. Leave with something you can use.",
     finalCtaBody:
-      "UpcubeAI is built to make serious AI work feel calm, inspectable, and ready to move forward.",
+      "UpcubeAI is built to make serious AI work feel calm, visible, and ready to move forward.",
     finalPrimaryAction: {
       label: "Open UpcubeAI",
       href: "https://ethen.upcube.ai",
@@ -169,13 +168,12 @@ export const upcubeProducts: UpcubeProduct[] = [
     slug: "books",
     name: "Upcube Books",
     eyebrow: "Reading and discovery",
-    headline:
-      "A calmer way to discover books, preview what matters, and keep a reading path that feels personal.",
+    headline: "Explore 50M books with a calmer path to discovery.",
     summary:
-      "Upcube Books is built around public-first discovery, trusted previews, saved books, public-domain lanes, and a product direction that makes AI-assisted reading feel natural without losing copyright boundaries.",
-    seoTitle: "Upcube Books | Book Discovery and AI Reading Platform",
+      "Upcube Books makes book discovery feel focused, trusted, and worth returning to. Search across 50M titles with cleaner book pages, trusted previews, saved books, public-domain reading lanes, and an AI-assisted reading direction designed around lawful access and reader trust.",
+    seoTitle: "Upcube Books | 50M Books — Discovery and AI Reading Platform",
     seoDescription:
-      "Upcube Books is a book discovery and AI reading platform for previews, saved reading paths, lawful access, and future reading guidance.",
+      "Upcube Books is a book discovery platform across 50M titles for previews, saved reading paths, lawful access, and future reading guidance.",
     primaryAction: {
       label: "Launch Upcube Books",
       href: "https://books.upcube.ai",
@@ -185,39 +183,39 @@ export const upcubeProducts: UpcubeProduct[] = [
       href: "/explore",
     },
     heroHighlights: [
-      "Search titles quickly and move straight into cleaner detail pages.",
+      "Explore 50M books with fast search and cleaner detail pages.",
       "Open trusted previews instead of dead-end metadata.",
       "Save books locally so discovery feels persistent without requiring an account.",
     ],
-    signatureTitle: "Book discovery that feels curated instead of crowded.",
+    signatureTitle: "Book discovery that feels curated, not crowded.",
     signatureBody:
-      "Upcube Books is designed for the moment before commitment: when you are comparing titles, opening previews, building a reading list, or looking for something worth returning to later.",
+      "Upcube Books is built for the moment before commitment — when you are comparing titles, opening previews, saving possibilities, and finding something worth coming back to.",
     signatureCards: [
       {
         title: "Discovery with momentum",
-        body: "Browse titles, descriptions, and metadata in a way that keeps the next useful decision close at hand.",
+        body: "Browse titles, covers, descriptions, and metadata in a way that keeps the next useful action close.",
       },
       {
         title: "Trusted previews",
-        body: "Preview actions send readers to legal provider-backed destinations instead of blurring the line around content ownership.",
+        body: "Preview paths lead readers to legal, provider-backed destinations, keeping discovery useful without blurring copyright boundaries.",
       },
       {
         title: "Saved books that stay close",
-        body: "Browser-local saves make it easy to come back to titles, build a shortlist, and keep reading intent alive.",
+        body: "Browser-local saves make it easy to build a shortlist, return to titles, and keep reading intent alive.",
       },
     ],
     featureStories: [
       {
         title: "Rich book pages built for real comparison",
-        body: "Upcube Books is designed around metadata, covers, descriptions, and preview links that help people decide whether a book deserves more time.",
+        body: "Upcube Books brings together metadata, covers, descriptions, and preview links so readers can decide whether a book deserves more time.",
       },
       {
         title: "Public-domain lanes with clearer rights boundaries",
-        body: "Where public-domain access is available, the product can create a more direct reading lane while keeping copyrighted works preview- and provider-linked.",
+        body: "When public-domain access is available, Upcube Books can create a more direct reading path while keeping copyrighted works preview- and provider-linked.",
       },
       {
         title: "AI-assisted reading, introduced carefully",
-        body: "The long-term direction includes reading guidance, summaries, and study help, but the product story begins with strong discovery and lawful access first.",
+        body: "The long-term direction includes reading guidance, summaries, study help, and research workflows — but the foundation begins with strong discovery, lawful access, and trust.",
       },
     ],
     techCards: [
@@ -227,31 +225,31 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Fast public storefront behavior",
-        body: "The reading experience is meant to feel open and lightweight before any account system enters the picture.",
+        body: "The reading experience is meant to feel open, lightweight, and accessible before any account system enters the story.",
       },
       {
         title: "Local saves, simple by design",
-        body: "Saved books can stay in the browser so readers get continuity without turning discovery into account management.",
+        body: "Saved books can stay in the browser, giving readers continuity without turning discovery into account management.",
       },
     ],
     useCases: [
       {
         title: "Find a title worth opening tonight",
-        body: "Search for a book, scan the essentials, and jump into a trusted preview path in just a few steps.",
+        body: "Search for a book, scan what matters, and move into a trusted preview path in just a few steps.",
       },
       {
         title: "Build a reading list as you browse",
-        body: "Keep promising books nearby without interrupting the discovery flow or forcing a sign-up wall too early.",
+        body: "Save promising titles without interrupting discovery or forcing an early sign-up wall.",
       },
       {
-        title: "Move between discovery and deeper reading",
-        body: "Use public-domain lanes and preview links to keep the path from browsing to reading straightforward.",
+        title: "Move from discovery to deeper reading",
+        body: "Use public-domain lanes and trusted preview links to make the path from browsing to reading feel straightforward.",
       },
     ],
     ecosystemLinks: [
       {
         title: "UpcubeAI",
-        body: "Carry research, summaries, and reading-related work into a broader AI workspace.",
+        body: "Carry research, summaries, notes, and reading-related work into a broader AI workspace.",
         href: "/products/upcube-ai",
       },
       {
@@ -261,13 +259,13 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Ventari",
-        body: "See how product discovery patterns translate into large-scale shopping experiences.",
+        body: "See how discovery patterns translate into large-scale shopping and product search.",
         href: "/products/ventari",
       },
     ],
     finalCtaTitle: "Make discovering books feel worth the time again.",
     finalCtaBody:
-      "Upcube Books is built for readers who want clearer search, better previews, and a smoother path back to what caught their attention.",
+      "Upcube Books is built for readers who want clearer search, trusted previews, saved titles, and a smoother path back to what caught their attention.",
     finalPrimaryAction: {
       label: "Open Upcube Books",
       href: "https://books.upcube.ai",
@@ -281,10 +279,9 @@ export const upcubeProducts: UpcubeProduct[] = [
     slug: "earth",
     name: "Upcube Earth",
     eyebrow: "3D Earth and spatial intelligence",
-    headline:
-      "Explore the planet with terrain, cities, overlays, and search that invite you deeper into the map.",
+    headline: "Explore the planet in deeper detail.",
     summary:
-      "Upcube Earth combines globe exploration, terrain, city context, search, overlays, and shareable views into a spatial product that feels built for discovery.",
+      "Upcube Earth turns the map into an immersive discovery experience. Explore terrain, cities, overlays, search, and shareable views through a spatial product built to make the world feel clearer, richer, and easier to understand.",
     seoTitle: "Upcube Earth | 3D Globe and Spatial Intelligence Platform",
     seoDescription:
       "Upcube Earth is a 3D globe and spatial intelligence platform for exploration, terrain, city context, search, overlays, and shareable views.",
@@ -298,53 +295,53 @@ export const upcubeProducts: UpcubeProduct[] = [
     },
     heroHighlights: [
       "Move from a place name to a mapped view in seconds.",
-      "See terrain, cities, and layers with more visual depth.",
-      "Use overlays and shareable views to keep geographic context intact.",
+      "See terrain, cities, and layers with greater visual depth.",
+      "Use overlays and shareable views to preserve geographic context.",
     ],
     signatureTitle:
       "Spatial exploration that feels immersive from the first movement.",
     signatureBody:
-      "Upcube Earth is designed to make the world feel explorable, not flat. The product story centers on a high-clarity 3D Earth experience that helps people move between search, terrain, overlays, and visual context without losing orientation.",
+      "Upcube Earth is designed to make the world feel explorable, not flat. The experience centers on a high-clarity 3D globe that helps people move between search, terrain, overlays, and visual context without losing orientation.",
     signatureCards: [
       {
         title: "3D Earth at the center",
-        body: "The globe is the interface, creating a more natural way to move through cities, regions, and terrain.",
+        body: "The globe becomes the interface, creating a more natural way to move through cities, regions, landscapes, and terrain.",
       },
       {
         title: "Search that lands with context",
-        body: "A location search should do more than jump the camera. It should give you a view worth staying in.",
+        body: "Location search does more than move the camera. It brings you into a view that feels worth staying in.",
       },
       {
         title: "Overlays that add meaning",
-        body: "Layered context helps users understand what they are seeing instead of treating maps as a static background.",
+        body: "Layered context helps people understand what they are seeing, turning maps from a static background into a living surface for discovery.",
       },
     ],
     featureStories: [
       {
         title: "Terrain and elevation that change how a place feels",
-        body: "Upcube Earth is built around richer topography, so mountains, coastlines, valleys, and city edges feel more legible in motion.",
+        body: "Richer topography makes mountains, coastlines, valleys, city edges, and natural boundaries feel more legible in motion.",
       },
       {
         title: "Cities, layers, and spatial detail in one view",
-        body: "The experience is designed to combine imagery, 3D context, and map layers into one product instead of splitting each mode into a separate tool.",
+        body: "Upcube Earth brings imagery, 3D context, and map layers together in one experience instead of forcing each mode into a separate tool.",
       },
       {
-        title: "Spatial intelligence without losing visual calm",
-        body: "Search, overlays, and provider-backed data are meant to deepen exploration while keeping the interface clean enough to invite longer sessions.",
+        title: "Spatial intelligence with visual calm",
+        body: "Search, overlays, and provider-backed data deepen exploration while keeping the interface clean, focused, and inviting.",
       },
     ],
     techCards: [
       {
         title: "Provider-backed map layers",
-        body: "Earth is designed to work with configurable providers while keeping attribution and source boundaries visible.",
+        body: "Earth is designed around configurable map providers while keeping attribution and data boundaries visible.",
       },
       {
         title: "3D terrain and city context",
-        body: "Elevation and urban detail help a place feel real instead of abstract.",
+        body: "Elevation, terrain, and urban detail help places feel real instead of abstract.",
       },
       {
         title: "Shareable views",
-        body: "Meaningful perspectives can be preserved and shared so exploration turns into something communicable.",
+        body: "Meaningful perspectives can be saved and shared, turning exploration into something others can understand instantly.",
       },
     ],
     useCases: [
@@ -354,31 +351,31 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Compare terrain, neighborhoods, and layers",
-        body: "Use the 3D view to understand how geography, elevation, and overlays change the shape of a region.",
+        body: "Use the 3D view to understand how elevation, geography, and overlays shape a region.",
       },
       {
         title: "Share a location with more context",
-        body: "Save and pass along a view that captures why a place matters, not just where it is.",
+        body: "Pass along a view that captures why a place matters, not just where it is.",
       },
     ],
     ecosystemLinks: [
       {
         title: "UpcubeAI",
-        body: "Bring place-based exploration into research, writing, and planning workflows.",
+        body: "Bring place-based exploration into research, writing, planning, and decision-making workflows.",
         href: "/products/upcube-ai",
       },
       {
         title: "Upcube Cloud",
-        body: "Extend spatial products with developer and infrastructure workflows.",
+        body: "Extend spatial products with developer tools, cloud workflows, and infrastructure support.",
         href: "/products/cloud",
       },
       {
         title: "VM Compute",
-        body: "See the compute story behind scalable geospatial services and workloads.",
+        body: "Explore the compute layer behind scalable geospatial services and spatial workloads.",
         href: "/products/vm",
       },
     ],
-    finalCtaTitle: "Launch into a more immersive view of the world.",
+    finalCtaTitle: "Step into a more immersive view of the world.",
     finalCtaBody:
       "Upcube Earth is built for people who want richer spatial context, cleaner exploration, and a map experience that rewards curiosity.",
     finalPrimaryAction: {
@@ -394,13 +391,12 @@ export const upcubeProducts: UpcubeProduct[] = [
     slug: "games",
     name: "Upcube Games",
     eyebrow: "Game discovery",
-    headline:
-      "Find what to play next with a game discovery experience built around momentum, taste, and clarity.",
+    headline: "Discover across 400K games with clarity and momentum.",
     summary:
-      "Upcube Games turns releases, genres, platforms, studios, franchises, search, and recommendations into a polished product for people who want cleaner discovery.",
-    seoTitle: "Upcube Games | Video Game Discovery Platform",
+      "Upcube Games makes finding what to play next feel faster, cleaner, and more intentional. Explore 400K games across releases, genres, platforms, studios, franchises, search, and recommendations — all shaped into a polished discovery product for players who want less noise and better direction.",
+    seoTitle: "Upcube Games | 400K Games — Video Game Discovery Platform",
     seoDescription:
-      "Upcube Games is a video game discovery platform for releases, genres, platforms, studios, franchises, and recommendation paths.",
+      "Upcube Games is a video game discovery platform across 400K games for releases, genres, platforms, studios, franchises, and recommendation paths.",
     primaryAction: {
       label: "Launch Upcube Games",
       href: "https://games.upcube.ai",
@@ -410,18 +406,18 @@ export const upcubeProducts: UpcubeProduct[] = [
       href: "/explore",
     },
     heroHighlights: [
-      "Find what to play next without digging through noise.",
+      "Discover across 400K games without digging through clutter.",
       "Browse by platform, genre, studio, and franchise.",
-      "Recommendations help you keep moving instead of starting over.",
+      "Use recommendations to keep moving instead of starting over.",
     ],
     signatureTitle:
-      "Game discovery that feels organized around how players actually choose.",
+      "Game discovery organized around how players actually choose.",
     signatureBody:
-      "Upcube Games is built to make searching, browsing, and comparing games feel cleaner. The product story starts with the question every player knows: what should I play next?",
+      "Upcube Games is built to make searching, browsing, and comparing games feel calmer and more useful. The product starts with the question every player knows: what should I play next?",
     signatureCards: [
       {
         title: "Find what to play next",
-        body: "Move between top games, new releases, and upcoming launches without losing the thread of what drew you in.",
+        body: "Move between top games, new releases, and upcoming launches without losing the thread of what caught your interest.",
       },
       {
         title: "Browse by platform, genre, studio, and franchise",
@@ -429,45 +425,45 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Launch into cleaner game discovery",
-        body: "A calmer layout makes the directory feel more like a product you want to use, not a data dump you tolerate.",
+        body: "A focused layout makes the directory feel like a product you want to use — not a database you have to fight through.",
       },
     ],
     featureStories: [
       {
         title: "Search that understands how games are described",
-        body: "Upcube Games is designed around titles, platforms, genres, studios, and franchises so discovery starts from the language players already use.",
+        body: "Upcube Games is designed around titles, platforms, genres, studios, and franchises, so discovery starts with the language players already use.",
       },
       {
         title: "Game pages with the right context nearby",
-        body: "Summaries, releases, ratings, platforms, and related titles are meant to make each page feel decisive instead of thin.",
+        body: "Summaries, release details, ratings, platforms, and related titles help each page feel useful, decisive, and worth exploring.",
       },
       {
-        title: "Recommendations that help you keep moving",
-        body: "Rule-based recommendation paths keep discovery useful even before deeper personalization enters the picture.",
+        title: "Recommendations that keep discovery moving",
+        body: "Rule-based recommendation paths create momentum even before deeper personalization enters the experience.",
       },
     ],
     techCards: [
       {
         title: "Live metadata, server-side access",
-        body: "The product is built around live game data while keeping provider credentials and upstream logic on the server side.",
+        body: "Upcube Games is built around live game data while keeping provider credentials and upstream logic protected on the server side.",
       },
       {
         title: "Genre, platform, and franchise structure",
-        body: "Strong directory organization makes it easier to browse broadly or narrow down quickly.",
+        body: "Strong directory organization makes it easier to browse broadly, narrow quickly, and follow the path that fits your taste.",
       },
       {
         title: "Graceful fallback behavior",
-        body: "When upstream configuration is missing, the product direction favors understandable fallback states over blank surfaces.",
+        body: "When upstream configuration is missing, the product direction favors clear fallback states over empty or confusing surfaces.",
       },
     ],
     useCases: [
       {
-        title: "Jump from curiosity to a short list",
+        title: "Jump from curiosity to a shortlist",
         body: "Compare top games, upcoming releases, and similar titles until the next play session feels obvious.",
       },
       {
         title: "Browse the way players think",
-        body: "Start with a platform, genre, studio, or franchise and follow the trail from there.",
+        body: "Start with a platform, genre, studio, or franchise, then follow the trail from there.",
       },
       {
         title: "Use recommendations as momentum, not distraction",
@@ -477,7 +473,7 @@ export const upcubeProducts: UpcubeProduct[] = [
     ecosystemLinks: [
       {
         title: "UpcubeAI",
-        body: "Bring discovery notes, comparisons, and lists into a broader AI workspace.",
+        body: "Bring discovery notes, comparisons, lists, and game research into a broader AI workspace.",
         href: "/products/upcube-ai",
       },
       {
@@ -487,7 +483,7 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Upcube Jobs",
-        body: "Explore how product, hiring, and publishing lanes meet inside Upcube.",
+        body: "Explore how product, hiring, publishing, and entertainment discovery meet inside Upcube.",
         href: "/products/jobs",
       },
     ],
@@ -507,13 +503,12 @@ export const upcubeProducts: UpcubeProduct[] = [
     slug: "jobs",
     name: "Upcube Jobs",
     eyebrow: "Hiring and role discovery",
-    headline:
-      "A cleaner path from role discovery to the next move in your career.",
+    headline: "Browse 8M jobs with a clearer path to opportunity.",
     summary:
-      "Upcube Jobs is the hiring destination in the Upcube ecosystem, designed to make opportunity discovery feel organized, direct, and worth returning to.",
-    seoTitle: "Upcube Jobs | AI Job Discovery and Career Platform",
+      "Upcube Jobs makes career discovery feel organized, direct, and worth returning to. Explore an 8M-job discovery surface designed to help people move from role discovery to the next meaningful step in their career.",
+    seoTitle: "Upcube Jobs | 8M Jobs — AI Job Discovery and Career Platform",
     seoDescription:
-      "Upcube Jobs is an AI job discovery and career platform for clearer opportunity browsing, role context, and connected ecosystem workflows.",
+      "Upcube Jobs is an AI job discovery and career platform with an 8M-job discovery surface for clearer opportunity browsing, role context, and connected ecosystem workflows.",
     primaryAction: {
       label: "Launch Upcube Jobs",
       href: "https://jobs.upcube.ai",
@@ -523,45 +518,45 @@ export const upcubeProducts: UpcubeProduct[] = [
       href: "/explore",
     },
     heroHighlights: [
-      "Role discovery that feels more focused from the first screen.",
-      "Job exploration that can stay aligned with product and company context.",
-      "A direct hiring destination already linked across the Upcube portal.",
+      "Browse 8M jobs with focused role discovery.",
+      "Explore opportunities with product and company context nearby.",
+      "Move through a direct hiring destination already connected across the Upcube portal.",
     ],
-    signatureTitle: "Designed to make opportunity discovery feel clearer.",
+    signatureTitle: "Opportunity discovery, made clearer.",
     signatureBody:
-      "Upcube Jobs is presented as a direct, polished destination for exploring opportunities across the Upcube ecosystem.",
+      "Upcube Jobs is built as a polished hiring destination for exploring roles across the broader Upcube ecosystem — direct, focused, and easy to return to.",
     signatureCards: [
       {
         title: "Discover roles with less friction",
-        body: "The product story centers on helping people move from curiosity to a role worth opening without unnecessary clutter.",
+        body: "Move from curiosity to a role worth opening without unnecessary clutter or dead ends.",
       },
       {
         title: "Stay close to the broader ecosystem",
-        body: "Jobs lives beside the rest of the Upcube product family, making company and product context easier to understand.",
+        body: "Jobs lives beside the rest of the Upcube product family, making company direction, product context, and platform ambition easier to understand.",
       },
       {
         title: "Built to feel direct",
-        body: "A strong hiring destination should get out of the way and help people decide whether a role deserves more attention.",
+        body: "A strong hiring destination gets out of the way and helps people decide whether a role deserves more attention.",
       },
     ],
     featureStories: [
       {
         title: "Role discovery that feels intentional",
-        body: "Upcube Jobs is positioned as a dedicated destination for exploring roles instead of hiding hiring behind generic company pages.",
+        body: "Upcube Jobs gives hiring its own dedicated destination instead of hiding opportunities behind generic company pages.",
       },
       {
         title: "Cleaner pathways into openings",
-        body: "The product direction favors direct, understandable navigation from discovery into role detail and next-step evaluation.",
+        body: "The product direction favors clear navigation from discovery into role detail, context, and next-step evaluation.",
       },
       {
         title: "Part of a connected product story",
-        body: "Hiring can stay visibly connected to the products, research, and execution surfaces that define the broader Upcube ecosystem.",
+        body: "Hiring stays visibly connected to the products, research, and execution surfaces that define the Upcube ecosystem.",
       },
     ],
     techCards: [
       {
         title: "Dedicated jobs destination",
-        body: "The live jobs domain gives hiring a clearer home than a single careers page buried inside a broader site.",
+        body: "The live jobs surface gives hiring a clearer home than a single careers page buried inside a broader company site.",
       },
       {
         title: "Connected navigation",
@@ -569,13 +564,13 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Neutral public positioning",
-        body: "The public story stays clear and practical, focusing on role discovery, context, and next-step confidence.",
+        body: "The public story stays practical: role discovery, company context, and next-step confidence.",
       },
     ],
     useCases: [
       {
         title: "Scan for roles that fit the moment",
-        body: "Start broad, move quickly, and narrow attention to roles that feel aligned with your next step.",
+        body: "Start broad, move quickly, and narrow attention to roles aligned with your next step.",
       },
       {
         title: "Understand the company through the products",
@@ -583,29 +578,29 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Return to openings with less context loss",
-        body: "A dedicated destination makes it easier to come back when timing or priorities change.",
+        body: "A dedicated destination makes it easier to come back when timing, priorities, or focus changes.",
       },
     ],
     ecosystemLinks: [
       {
         title: "UpcubeAI",
-        body: "See the core workspace product behind the ecosystem.",
+        body: "Explore the core AI workspace behind the ecosystem.",
         href: "/products/upcube-ai",
       },
       {
         title: "Upcube Cloud",
-        body: "Follow developer and infrastructure stories connected to the platform.",
+        body: "Follow the developer, infrastructure, and platform stories connected to the product family.",
         href: "/products/cloud",
       },
       {
         title: "Upcube OS",
-        body: "Explore the longer-range platform vision shaping the product family.",
+        body: "See the longer-range computing vision shaping where the ecosystem can go next.",
         href: "/products/upcube-os",
       },
     ],
     finalCtaTitle: "Make the next opportunity easier to spot.",
     finalCtaBody:
-      "Upcube Jobs is positioned as a cleaner, more direct way to explore roles in the Upcube ecosystem.",
+      "Upcube Jobs is positioned as a cleaner, more direct way to explore roles across the Upcube ecosystem.",
     finalPrimaryAction: {
       label: "Open Upcube Jobs",
       href: "https://jobs.upcube.ai",
@@ -619,10 +614,9 @@ export const upcubeProducts: UpcubeProduct[] = [
     slug: "cloud",
     name: "Upcube Cloud",
     eyebrow: "Compute and developer infrastructure",
-    headline:
-      "Cloud infrastructure that makes compute, storage, networking, and developer flow easier to understand.",
+    headline: "Cloud infrastructure, made easier to understand.",
     summary:
-      "Upcube Cloud is the consumer- and business-facing destination for compute, tooling, and infrastructure stories across the Upcube ecosystem.",
+      "Upcube Cloud gives compute, storage, networking, and developer workflows a clearer front door. It is the cloud and infrastructure destination for the Upcube ecosystem — built to make serious systems feel more approachable, connected, and ready to scale.",
     seoTitle: "Upcube Cloud | AI Cloud Infrastructure Platform",
     seoDescription:
       "Upcube Cloud is an AI cloud infrastructure platform for developer tools, cloud workflows, compute access, and scalable systems across Upcube.",
@@ -636,58 +630,58 @@ export const upcubeProducts: UpcubeProduct[] = [
     },
     heroHighlights: [
       "A clearer entry point for developer and cloud workflows.",
-      "A product story that turns infrastructure into something easier to grasp.",
+      "A product story that makes infrastructure easier to grasp.",
       "Direct paths into compute-heavy products like VM Compute.",
     ],
     signatureTitle: "A cleaner front door to the Upcube infrastructure story.",
     signatureBody:
-      "Upcube Cloud is where developer tools, cloud workflows, and infrastructure products come together. It is meant to feel approachable without flattening the complexity that real systems need underneath.",
+      "Upcube Cloud brings developer tools, cloud workflows, compute, storage, networking, and infrastructure products into one focused destination. It is designed to feel approachable without hiding the complexity that real systems need underneath.",
     signatureCards: [
       {
         title: "Compute with clearer language",
-        body: "Talk about infrastructure in product terms people can follow, not only in operator shorthand.",
+        body: "Infrastructure should feel understandable from the first page — explained in product terms people can follow, not only in operator shorthand.",
       },
       {
         title: "Storage and networking in context",
-        body: "Present the building blocks of modern systems as connected parts of one experience instead of a list of isolated acronyms.",
+        body: "The building blocks of modern systems are presented as connected parts of one experience, not a scattered list of acronyms.",
       },
       {
         title: "A destination for scalable systems",
-        body: "Upcube Cloud is positioned as the place where developer and infrastructure paths meet the rest of the product ecosystem.",
+        body: "Upcube Cloud is positioned as the place where developer workflows, infrastructure paths, and the broader product ecosystem meet.",
       },
     ],
     featureStories: [
       {
         title: "Compute that feels usable from the outside",
-        body: "The public product story begins with understandable entry points for virtual machines, runtime workflows, and cloud operations.",
+        body: "The public product story starts with clear entry points for virtual machines, runtime workflows, and cloud operations.",
       },
       {
         title: "Storage, networking, and systems that belong together",
-        body: "A serious cloud product has to connect disk, network, identity, and workload movement into one coherent narrative.",
+        body: "A serious cloud product connects disk, network, identity, workload movement, and deployment into one coherent platform story.",
       },
       {
-        title: "Built for teams that move from product to infrastructure",
-        body: "Upcube Cloud is designed to feel at home beside products like UpcubeAI, Ventari, and VM Compute instead of living as a disconnected admin surface.",
+        title: "Built for teams moving from product to infrastructure",
+        body: "Upcube Cloud is designed to sit naturally beside UpcubeAI, Ventari, and VM Compute — not as a disconnected admin surface, but as the systems layer behind the ecosystem.",
       },
     ],
     techCards: [
       {
         title: "Compute systems",
-        body: "Virtual machines and control-plane ideas shape the deeper compute story without forcing the public page into internal architecture jargon.",
+        body: "Virtual machines, runtime workflows, and control-plane direction shape the deeper compute story without turning the public page into internal architecture notes.",
       },
       {
         title: "Networking and storage, made legible",
-        body: "The product direction makes core infrastructure concepts understandable enough to follow without oversimplifying them.",
+        body: "Core infrastructure concepts are presented clearly enough to follow without oversimplifying what they do.",
       },
       {
         title: "Scalable systems language",
-        body: "The page is designed to speak to both technical and business audiences who need to understand where the platform can grow.",
+        body: "The page speaks to both technical and business audiences — helping them understand what the platform supports today and where it can grow next.",
       },
     ],
     useCases: [
       {
         title: "Launch a new system with less friction",
-        body: "Move from product intent into compute, storage, and network decisions without leaving the ecosystem.",
+        body: "Move from product idea into compute, storage, and network decisions without leaving the Upcube ecosystem.",
       },
       {
         title: "Give teams a clearer cloud entry point",
@@ -695,36 +689,35 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Connect build work to runtime reality",
-        body: "Keep developer momentum while still showing where scalable systems actually live.",
+        body: "Keep developer momentum while showing where scalable systems actually live, operate, and grow.",
       },
     ],
     ecosystemLinks: [
       {
         title: "VM Compute",
-        body: "See the deeper virtual-machine and control-plane story behind Upcube Cloud.",
+        body: "Go deeper into virtual machines, networking, storage, and compute workflows.",
         href: "/products/vm",
       },
       {
-        title: "Ventari",
-        body: "Follow how scalable infrastructure ideas support commerce at larger catalog sizes.",
-        href: "/products/ventari",
-      },
-      {
         title: "UpcubeAI",
-        body: "Bring infrastructure work back into a broader AI workspace and execution loop.",
+        body: "Connect infrastructure to the AI workspace and execution layer of the ecosystem.",
         href: "/products/upcube-ai",
       },
+      {
+        title: "Ventari",
+        body: "See how cloud infrastructure supports large-scale commerce search, catalog systems, and product discovery.",
+        href: "/products/ventari",
+      },
     ],
-    finalCtaTitle:
-      "Open the part of the ecosystem where systems come together.",
+    finalCtaTitle: "Build on a clearer foundation.",
     finalCtaBody:
-      "Upcube Cloud is built to make infrastructure feel more coherent, more navigable, and more connected to real product work.",
+      "Upcube Cloud is designed to make infrastructure feel more understandable, more connected, and more useful across the entire Upcube ecosystem.",
     finalPrimaryAction: {
       label: "Open Upcube Cloud",
       href: "https://cloud.upcube.ai",
     },
     finalSecondaryAction: {
-      label: "Read about VM Compute",
+      label: "Explore VM Compute",
       href: "/products/vm",
     },
   },
@@ -732,13 +725,12 @@ export const upcubeProducts: UpcubeProduct[] = [
     slug: "ventari",
     name: "Ventari",
     eyebrow: "Large-scale shopping",
-    headline:
-      "Shopping built for massive choice, faster discovery, and product pages that make decisions easier.",
+    headline: "Shopping built for 100M products.",
     summary:
-      "Ventari is a premium commerce product built around search, categories, rich product pages, reviews, recommendations, and catalog architecture built to scale to 100M+ products.",
-    seoTitle: "Ventari | AI Commerce and Product Discovery Platform",
+      "Ventari makes large-scale shopping feel fast, elegant, and easier to decide. Built for 100M products, Ventari brings search, categories, rich product pages, reviews, recommendations, and scalable catalog architecture into one premium commerce experience.",
+    seoTitle: "Ventari | 100M Products — AI Commerce and Discovery Platform",
     seoDescription:
-      "Ventari is the AI commerce and product discovery platform for large-scale search, richer product pages, and recommendation-led shopping.",
+      "Ventari is the AI commerce and product discovery platform built for 100M products with large-scale search, richer product pages, and recommendation-led shopping.",
     primaryAction: {
       label: "Launch Ventari",
       href: "https://ventari.net",
@@ -748,90 +740,90 @@ export const upcubeProducts: UpcubeProduct[] = [
       href: "/explore",
     },
     heroHighlights: [
-      "Shopping built for massive choice.",
-      "Search that keeps pace with a 100M+ product catalog.",
+      "Shopping built for 100M products.",
+      "Search that keeps pace with a 100M-product catalog.",
       "Reviews and recommendations that turn browsing into discovery.",
     ],
     signatureTitle:
-      "A shopping experience that keeps clarity even when the catalog gets huge.",
+      "A shopping experience that stays clear, even when the catalog gets massive.",
     signatureBody:
-      "Ventari is designed for people who want fast search, rich product pages, smart categories, and product discovery that still feels elegant at scale.",
+      "Ventari is designed for people who want fast search, rich product pages, smart categories, and product discovery that still feels refined at scale.",
     signatureCards: [
       {
         title: "Search that keeps pace with a 100M+ product catalog",
-        body: "Ventari is positioned around large-catalog readiness, so discovery does not collapse when product choice expands dramatically.",
+        body: "Ventari is built around large-catalog readiness, so discovery stays useful as product choice expands.",
       },
       {
-        title: "Product pages designed to make decisions easier",
-        body: "The product story centers on clean PDP composition, clear detail surfaces, and stronger browsing confidence.",
+        title: "Product pages that make decisions easier",
+        body: "Clean PDP composition, clear details, strong imagery, options, pricing, reviews, and related items help customers move with more confidence.",
       },
       {
-        title: "Categories, reviews, and recommendations that work together",
-        body: "Instead of treating each piece as an add-on, Ventari combines them into one shopping flow that keeps momentum alive.",
+        title: "Categories, reviews, and recommendations working together",
+        body: "Ventari brings each part of the shopping journey into one connected flow, keeping momentum alive from search to product detail.",
       },
     ],
     featureStories: [
       {
         title: "Discovery that starts before the product page",
-        body: "Search and categories are treated as first-class parts of the experience so people can reach the right product faster.",
+        body: "Search and categories are first-class parts of the experience, helping customers reach the right product faster.",
       },
       {
         title: "Rich PDPs that feel considered",
-        body: "Product pages are designed to present images, pricing, options, reviews, and related items in a way that makes the next decision easier.",
+        body: "Product pages are designed to present images, pricing, options, reviews, and related products in a way that makes the next decision clearer.",
       },
       {
         title: "Recommendations that turn browsing into discovery",
-        body: "Recommendation flows help people keep exploring without making the storefront feel noisy or directionless.",
+        body: "Recommendation flows help people keep exploring without making the storefront feel noisy, crowded, or directionless.",
       },
     ],
     techCards: [
       {
         title: "Catalog architecture built for scale",
-        body: "Ventari is built with large-catalog growth in mind, from taxonomy and search to image and metadata quality.",
+        body: "Ventari is built with large-catalog growth in mind — from taxonomy and search to image quality, metadata, and product structure.",
       },
       {
         title: "Search and category depth",
-        body: "Discovery remains central whether someone begins with a broad category, a specific query, or a single PDP.",
+        body: "Discovery stays central whether someone starts with a broad category, a precise query, or a single product page.",
       },
       {
         title: "Deferred storefront composition",
-        body: "The product direction emphasizes strong PDPs and related sections without letting secondary content slow the main experience.",
+        body: "The product direction emphasizes strong PDPs and related sections without letting secondary content slow down the main shopping experience.",
       },
     ],
     useCases: [
       {
         title: "Move quickly through massive product choice",
-        body: "Search, categories, and related products help customers find the right item without feeling buried by the catalog.",
+        body: "Search, categories, and related products help customers find the right item without feeling lost in the catalog.",
       },
       {
-        title: "Make PDPs do more of the work",
-        body: "Use stronger product pages to lower hesitation and make comparisons easier before the cart step even begins.",
+        title: "Make product pages do more of the work",
+        body: "Stronger PDPs reduce hesitation and make comparison easier before the customer reaches the cart.",
       },
       {
         title: "Keep discovery alive after the first click",
-        body: "Recommendations and reviews help people keep moving instead of bouncing back to search from scratch.",
+        body: "Recommendations and reviews help people continue exploring instead of restarting from search.",
       },
     ],
     ecosystemLinks: [
       {
         title: "Upcube Cloud",
-        body: "See the infrastructure and systems story behind scalable commerce.",
+        body: "Explore the infrastructure and systems story behind scalable commerce.",
         href: "/products/cloud",
       },
       {
         title: "VM Compute",
-        body: "Follow the compute story behind large-scale catalog and storefront workloads.",
+        body: "Follow the compute layer behind large-scale catalog and storefront workloads.",
         href: "/products/vm",
       },
       {
         title: "UpcubeAI",
-        body: "Connect shopping, research, and product workflows inside the broader ecosystem.",
+        body: "Connect shopping, research, product workflows, and decision-making inside the broader ecosystem.",
         href: "/products/upcube-ai",
       },
     ],
-    finalCtaTitle: "Launch into shopping built for real catalog scale.",
+    finalCtaTitle: "Shopping designed for real catalog scale.",
     finalCtaBody:
-      "Ventari is designed to make search, categories, reviews, recommendations, and PDP quality feel like one premium shopping experience.",
+      "Ventari is built to make search, categories, reviews, recommendations, and PDP quality feel like one premium commerce experience.",
     finalPrimaryAction: {
       label: "Open Ventari",
       href: "https://ventari.net",
@@ -961,10 +953,9 @@ export const upcubeProducts: UpcubeProduct[] = [
     slug: "upcube-os",
     name: "Upcube OS",
     eyebrow: "Desktop operating system",
-    headline:
-      "A consumer operating system designed to make AI help feel built in, visible, and firmly under your control.",
+    headline: "A consumer operating system for the AI era.",
     summary:
-      "Upcube OS is the public operating-system vision in the ecosystem, built around trustworthy AI help, clear permissions, visible actions, and a public consumer release planned for 2028 while improvements continue.",
+      "Upcube OS is designed to make AI feel built in, visible, and firmly under your control. It is the public operating-system vision inside the Upcube ecosystem — built around trustworthy AI help, clear permissions, visible actions, readable history, and a planned public consumer release in 2028 while improvements continue.",
     seoTitle: "Upcube OS | AI Operating System",
     seoDescription:
       "Upcube OS is an AI operating system built around visible help, system context, permissions, and trust-first computing direction.",
@@ -977,19 +968,19 @@ export const upcubeProducts: UpcubeProduct[] = [
       href: "/trust",
     },
     heroHighlights: [
-      "AI help that feels built into the computer, not bolted on.",
+      "AI help that feels built into the computer, not added on.",
       "Clear permissions, approvals, and visible activity history.",
-      "Public consumer release planned for 2028 while improvements continue.",
+      "Public consumer release planned for 2028 while the product continues to improve.",
     ],
     availabilityNote:
       "Public consumer release is planned for 2028 while improvements continue across the product and system experience.",
     signatureTitle: "An operating system that explains itself as it helps.",
     signatureBody:
-      "Upcube OS is built around a simple promise: your computer should feel more helpful without feeling more hidden, with AI assistance that stays visible, understandable, and connected to real system work.",
+      "Upcube OS is built around a simple idea: your computer should become more helpful without becoming more hidden. AI assistance should stay visible, understandable, and connected to real system work.",
     signatureCards: [
       {
         title: "AI that feels built in",
-        body: "Help should live across files, documents, email, browser, settings, and workspaces instead of hiding behind a single app icon.",
+        body: "Help can live across files, documents, email, browser, settings, and workspaces — not behind a single app icon.",
       },
       {
         title: "Visible action, not silent automation",
@@ -997,13 +988,13 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Trust through understandable control",
-        body: "Permissions, history, and approvals are meant to feel plain-language clear instead of abstract and technical.",
+        body: "Permissions, history, and approvals are presented in plain language, so control feels clear instead of technical.",
       },
     ],
     featureStories: [
       {
         title: "AI that helps across the whole system",
-        body: "Upcube OS imagines a computer where summarizing a PDF, organizing files, restoring a workspace, or explaining battery drain all feel like natural requests.",
+        body: "Upcube OS imagines a computer where summarizing a PDF, organizing files, restoring a workspace, or explaining battery drain feels like a natural request.",
       },
       {
         title: "An activity history you can actually read",
@@ -1011,27 +1002,27 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Approvals for the moments that matter",
-        body: "Deleting files, sending messages, changing settings, and other meaningful actions are designed to stay visible and intentionally reviewed.",
+        body: "Deleting files, sending messages, changing settings, and other meaningful actions are designed to stay visible, intentional, and reviewable.",
       },
     ],
     techCards: [
       {
         title: "System-level intelligence",
-        body: "Upcube OS is framed around AI as part of the computer itself, not a separate novelty layer.",
+        body: "Upcube OS is framed around AI as part of the computer itself — not a separate novelty layer.",
       },
       {
         title: "Permission design that makes sense",
-        body: "Requests are meant to be specific to the task, time-bounded where possible, and easy to understand.",
+        body: "Access requests are meant to be specific to the task, time-bounded where possible, and easy to understand.",
       },
       {
         title: "A trust-first operating model",
-        body: "The product story keeps visibility, control, and reversibility at the center of the experience.",
+        body: "Visibility, control, and reversibility stay at the center of the experience.",
       },
     ],
     useCases: [
       {
         title: "Organize real work without losing sight of the changes",
-        body: "Ask the system for help, see the scope of access clearly, and keep the result understandable afterward.",
+        body: "Ask the system for help, see the scope of access clearly, and understand the result afterward.",
       },
       {
         title: "Get explanations instead of mystery",
@@ -1039,7 +1030,7 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Move faster without surrendering control",
-        body: "The long-term goal is a computer that helps more often while still making important decisions feel reviewable.",
+        body: "The long-term goal is a computer that helps more often while keeping important decisions reviewable.",
       },
     ],
     ecosystemLinks: [
@@ -1050,7 +1041,7 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "UpcubeAI",
-        body: "Follow the workspace and assistant story that shapes the broader ecosystem.",
+        body: "Follow the workspace and assistant story shaping the broader ecosystem.",
         href: "/products/upcube-ai",
       },
       {
@@ -1061,9 +1052,9 @@ export const upcubeProducts: UpcubeProduct[] = [
     ],
     finalCtaTitle: "A more helpful computer should still feel like yours.",
     finalCtaBody:
-      "Upcube OS presents a public consumer vision for AI-native computing, with release planned for 2028 while the product keeps improving.",
+      "Upcube OS presents a public consumer vision for AI-native computing — designed around help, trust, visibility, and control, with public release planned for 2028.",
     finalPrimaryAction: {
-      label: "Explore the vision",
+      label: "Read the Upcube OS vision",
       href: "/vision",
     },
     finalSecondaryAction: {
@@ -1075,10 +1066,9 @@ export const upcubeProducts: UpcubeProduct[] = [
     slug: "upcube-mobile-os",
     name: "Upcube Mobile OS",
     eyebrow: "Mobile operating system",
-    headline:
-      "A phone platform designed around trust, privacy, and AI help that stays visible every step of the way.",
+    headline: "A mobile operating system for trusted AI.",
     summary:
-      "Upcube Mobile OS is the public mobile operating-system vision in the ecosystem, built around trusted launch, privacy-aware intelligence, clear system boundaries, and a public consumer release planned for 2028 while improvements continue.",
+      "Upcube Mobile OS is designed around privacy, trust, and AI help that stays visible every step of the way. It is the public mobile operating-system vision inside the Upcube ecosystem — built around trusted launch, privacy-aware intelligence, clear system boundaries, visible control, and a planned public consumer release in 2028 while improvements continue.",
     seoTitle: "Upcube Mobile OS | AI Mobile Operating System",
     seoDescription:
       "Upcube Mobile OS is an AI mobile operating system focused on trusted assistance, privacy, system clarity, and future phone computing.",
@@ -1093,79 +1083,79 @@ export const upcubeProducts: UpcubeProduct[] = [
     heroHighlights: [
       "AI as a system layer, not just an assistant icon.",
       "Privacy-aware intelligence with clearer user control.",
-      "Public consumer release planned for 2028 while improvements continue.",
+      "Public consumer release planned for 2028 while the product continues to improve.",
     ],
     availabilityNote:
       "Public consumer release is planned for 2028 while improvements continue across the product and mobile system direction.",
     signatureTitle:
-      "A mobile OS that treats trust and intelligence as the same design problem.",
+      "A mobile OS where trust and intelligence are designed together.",
     signatureBody:
-      "Upcube Mobile OS is positioned as an original AI-native phone platform, one that helps with everyday tasks while keeping privacy, system boundaries, and user control visible from the start.",
+      "Upcube Mobile OS is positioned as an original AI-native phone platform — one that helps with everyday tasks while keeping privacy, system boundaries, and user control visible from the start.",
     signatureCards: [
       {
         title: "AI across the system",
-        body: "Search, settings, files, photos, notifications, privacy, and diagnostics are all part of the product story instead of being sealed off from intelligence.",
+        body: "Search, settings, files, photos, notifications, privacy, and diagnostics become part of the intelligence layer instead of staying disconnected from it.",
       },
       {
         title: "Privacy you can understand",
-        body: "The product direction emphasizes showing when AI is local, when cloud AI is involved, and what information was touched.",
+        body: "The product direction emphasizes showing when AI runs locally, when cloud AI is involved, and what information was touched.",
       },
       {
         title: "Trust built into the phone experience",
-        body: "Trusted launch, app boundaries, services, and user approval all shape how the mobile platform is described publicly.",
+        body: "Trusted launch, app boundaries, services, and user approvals shape the foundation of the mobile platform story.",
       },
     ],
     featureStories: [
       {
         title: "Ask for what you need in plain language",
-        body: "The mobile vision centers on requests like cleaning up storage, making the phone more private, or finding the right setting faster.",
+        body: "The mobile vision supports requests like cleaning up storage, improving privacy, finding the right setting, or understanding what changed.",
       },
       {
         title: "System intelligence with visible boundaries",
-        body: "Apps, services, frameworks, and daemons are treated as separate system layers so intelligence can stay powerful without becoming blurry.",
+        body: "Apps, services, frameworks, and background processes are treated as clear system layers, so AI can be powerful without becoming blurry.",
       },
       {
         title: "A phone that explains itself better",
-        body: "Diagnostics, settings, privacy, accessibility, and everyday help are meant to feel more understandable instead of more technical.",
+        body: "Diagnostics, settings, privacy, accessibility, storage, and everyday help are designed to feel easier to inspect, understand, and control.",
       },
     ],
     techCards: [
       {
         title: "Trusted app launch and boundaries",
-        body: "The product story begins with trust, process boundaries, and clear ownership of system services.",
+        body: "The product story begins with secure launch, process separation, and clear ownership of system services.",
       },
       {
         title: "System-owned intelligence",
-        body: "AI help is framed as part of the operating system rather than a bolt-on surface competing for attention.",
+        body: "AI help is framed as part of the operating system itself — not a bolt-on assistant competing for attention.",
       },
       {
         title: "Original and IP-safe direction",
-        body: "The mobile product is presented as an independent platform vision with its own trust and system design language.",
+        body: "Upcube Mobile OS is presented as an independent platform vision with its own trust model, interaction language, and system design direction.",
       },
     ],
     useCases: [
       {
         title: "Find the right setting faster",
-        body: "Ask in plain language and move toward a clearer answer without digging through layers of menus.",
+        body: "Ask in plain language and move toward the right answer without digging through layers of menus.",
       },
       {
         title: "Understand what the phone is doing",
-        body: "Battery, storage, privacy, and diagnostics should feel easier to inspect and explain.",
+        body: "Battery, storage, privacy, diagnostics, and background activity should feel easier to inspect and explain.",
       },
       {
         title: "Get help without surrendering privacy",
-        body: "The mobile vision is built around making intelligence useful while keeping data access visible and bounded.",
+        body: "The mobile vision is built around useful intelligence with visible, bounded data access.",
       },
     ],
     ecosystemLinks: [
       {
         title: "Upcube OS",
-        body: "See the desktop-side operating-system vision that shares the same trust-first philosophy.",
+        body: "Explore the desktop operating-system vision that shares the same trust-first philosophy.",
         href: "/products/upcube-os",
       },
       {
         title: "UpcubeAI",
-        body: "Connect the mobile experience to the wider assistant and workspace story.",
+        body: "Connect the mobile experience to the wider AI assistant and workspace story.",
         href: "/products/upcube-ai",
       },
       {
@@ -1174,11 +1164,11 @@ export const upcubeProducts: UpcubeProduct[] = [
         href: "/products/cloud",
       },
     ],
-    finalCtaTitle: "A phone should help more and explain more.",
+    finalCtaTitle: "A phone should help more — and explain more.",
     finalCtaBody:
-      "Upcube Mobile OS presents a public consumer mobile vision with release planned for 2028 while the product continues to improve.",
+      "Upcube Mobile OS presents a public consumer vision for AI-native mobile computing, designed around trust, privacy, visibility, and control, with public release planned for 2028.",
     finalPrimaryAction: {
-      label: "Explore the vision",
+      label: "Read the Upcube Mobile OS vision",
       href: "/vision",
     },
     finalSecondaryAction: {
@@ -1192,7 +1182,7 @@ export const upcubeProducts: UpcubeProduct[] = [
     eyebrow: "AI & Voice",
     headline: "The voice platform for future Upcube devices.",
     summary:
-      "Upcube Voice brings Ethen into future Upcube headphones, earbuds, home audio, car audio, and companion devices through private, real-time voice assistance built around user control.",
+      "Upcube Voice brings Ethen into the devices around you — privately, intentionally, and in real time. It is the AI voice platform direction for future Upcube headphones, earbuds, home audio, car audio, and companion devices, designed around user control from the first interaction.",
     seoTitle: "Upcube Voice | AI Voice Platform for Future Upcube Devices",
     seoDescription:
       "Upcube Voice is the AI voice platform for future Upcube devices, built around private push-to-talk, real-time assistance, and clear user control.",
@@ -1205,76 +1195,76 @@ export const upcubeProducts: UpcubeProduct[] = [
       href: "/products/upcube-ai",
     },
     heroHighlights: [
-      "AI voice platform for future Upcube-manufactured devices, not a hardware launch claim.",
+      "AI voice platform for future Upcube-manufactured devices — not a hardware launch claim.",
       "Private push-to-talk with real-time assistance and no always-listening mode.",
       "Backend-issued ephemeral sessions with no raw audio persisted.",
     ],
     availabilityNote:
       "Hardware is not launched yet, and no public Voice site is available in this repo.",
     signatureTitle:
-      "A voice platform foundation that stays intentional, private, and grounded in real product limits.",
+      "A voice platform built to feel private, intentional, and grounded.",
     signatureBody:
-      "Upcube Voice is presented as the AI voice platform for future Upcube devices. The public story stays focused on private interaction, real-time assistance, and claim discipline rather than launch availability.",
+      "Upcube Voice is presented as the AI voice foundation for future Upcube devices. The public story focuses on real-time assistance, deliberate activation, and clear product limits instead of overstating availability.",
     signatureCards: [
       {
         title: "Talk to Ethen naturally",
-        body: "Upcube Voice is framed around natural, real-time conversation that brings Ethen into future device experiences without turning the page into a launch claim.",
+        body: "Upcube Voice brings natural, real-time conversation into future device experiences, extending Ethen beyond the workspace without turning the preview into a launch claim.",
       },
       {
         title: "Push-to-talk by design",
-        body: "Voice interaction is built around deliberate activation instead of an always-listening mode, keeping user control clear in the public story.",
+        body: "Voice interaction is built around deliberate activation, not always-on listening, so control stays clear.",
       },
       {
         title: "Built for future Upcube headphones and earbuds",
-        body: "The preview covers future Upcube-manufactured headphones and earbuds without claiming current public hardware availability or a live device storefront.",
+        body: "The preview covers future Upcube-manufactured headphones and earbuds while staying honest that public hardware availability has not launched yet.",
       },
     ],
     featureStories: [
       {
         title: "Home audio and car audio direction",
-        body: "The product direction extends beyond wearables to future home audio, car audio, and companion-device experiences while staying explicit that hardware is not launched yet.",
+        body: "Upcube Voice extends beyond wearables into future home audio, car audio, and companion-device experiences, while remaining clear that hardware has not launched yet.",
       },
       {
-        title: "Realtime conversation architecture",
-        body: "The platform direction is described as real-time voice assistance backed by ephemeral sessions, giving the product page a software-platform foundation without inventing a public service endpoint.",
+        title: "Real-time conversation architecture",
+        body: "The platform direction is built around real-time voice assistance backed by ephemeral sessions, giving the product a serious software foundation without inventing a public service endpoint.",
       },
       {
         title: "Privacy-first voice controls",
-        body: "Public copy stays constrained to private push-to-talk, no always-listening mode, and no raw audio persistence instead of overstating unseen backend or device behavior.",
+        body: "Public copy stays focused on private push-to-talk, no always-listening mode, and no raw audio persistence.",
       },
     ],
     techCards: [
       {
         title: "Private push-to-talk sessions",
-        body: "Voice sessions are described as backend-issued and ephemeral, supporting real-time interaction without promising a public Voice service endpoint.",
+        body: "Voice sessions are backend-issued and ephemeral, supporting real-time interaction without claiming a public Voice service endpoint.",
       },
       {
         title: "No always-listening mode",
-        body: "The preview language keeps activation user-driven rather than implying ambient listening or passive device monitoring.",
+        body: "Activation stays user-driven, avoiding ambient listening or passive device monitoring claims.",
       },
       {
         title: "No raw audio persisted",
-        body: "Public copy stays limited to the stated privacy boundary that raw audio is not persisted.",
+        body: "The public privacy boundary stays simple and clear: raw audio is not persisted.",
       },
     ],
     useCases: [
       {
         title: "Voice across the Upcube ecosystem",
-        body: "The platform direction connects future headphones, earbuds, home audio, car audio, and companion devices to the broader Upcube product family through one assistant relationship.",
+        body: "Future headphones, earbuds, home audio, car audio, and companion devices can connect back to Ethen and the wider Upcube product family.",
       },
       {
         title: "Ask for help on the move",
-        body: "Future device experiences can make it easier to get quick answers and assistance while staying within a deliberate push-to-talk interaction model.",
+        body: "Future device experiences can make quick answers and assistance easier while staying inside a deliberate push-to-talk model.",
       },
       {
         title: "Keep privacy expectations clear",
-        body: "The preview sets expectations around explicit activation, ephemeral sessions, and no raw audio persistence rather than overstating readiness or hardware availability.",
+        body: "The preview sets expectations around explicit activation, ephemeral sessions, and no raw audio persistence instead of overstating readiness or hardware availability.",
       },
     ],
     ecosystemLinks: [
       {
         title: "UpcubeAI",
-        body: "See the assistant and workspace platform behind the Voice direction.",
+        body: "Explore the assistant and workspace platform behind the Voice direction.",
         href: "/products/upcube-ai",
       },
       {
@@ -1288,12 +1278,11 @@ export const upcubeProducts: UpcubeProduct[] = [
         href: "/products/upcube-os",
       },
     ],
-    finalCtaTitle:
-      "Preview the voice direction without overstating launch status.",
+    finalCtaTitle: "Preview voice without overstating launch status.",
     finalCtaBody:
-      "Upcube Voice remains a platform preview for future Upcube devices, with hardware not launched yet and no public Voice site in this repo.",
+      "Upcube Voice is the platform direction for future Upcube devices — built around private push-to-talk, real-time assistance, and user control, with hardware not launched yet.",
     finalPrimaryAction: {
-      label: "Read the preview",
+      label: "Explore Voice",
       href: "/news/upcube-voice-preview",
     },
     finalSecondaryAction: {
@@ -1305,12 +1294,13 @@ export const upcubeProducts: UpcubeProduct[] = [
     slug: "university",
     name: "Upcube University",
     eyebrow: "Education & Learning",
-    headline: "Learning paths for the AI age.",
+    headline: "100K courses at $5 each — learning paths for the AI age.",
     summary:
-      "Upcube University is the learning platform for the Upcube ecosystem, focused on AI education, product training, technical courses, guided learning paths, and future credential-style programs.",
-    seoTitle: "Upcube University | AI Education and Learning Platform",
+      "Upcube University brings structured learning into the Upcube ecosystem. Explore 100K courses with simple $5 course pricing, built around AI education, product training, technical courses, guided learning paths, and future credential-style programs.",
+    seoTitle:
+      "Upcube University | 100K Courses — AI Education and Learning Platform",
     seoDescription:
-      "Upcube University is the AI education and learning platform for the Upcube ecosystem, built for training, technical courses, and guided paths.",
+      "Upcube University is the AI education and learning platform with 100K courses at $5 course pricing for the Upcube ecosystem, built for training, technical courses, and guided paths.",
     primaryAction: {
       label: "Open University",
       href: "https://university.upcube.ai",
@@ -1320,70 +1310,69 @@ export const upcubeProducts: UpcubeProduct[] = [
       href: "/news/upcube-university-preview",
     },
     heroHighlights: [
-      "Learning platform for the Upcube ecosystem, not a legal university or accredited institution claim.",
+      "100K courses with simple $5 course pricing across the Upcube ecosystem.",
       "AI education, product training, technical courses, and guided learning paths.",
-      "Future credential-style programs are direction only, not public offerings in this repo.",
+      "Not a legal university, accredited institution, or degree program.",
     ],
     availabilityNote:
       "The public app domain is https://university.upcube.ai, while accreditation, degrees, and public enrollment are not claimed on this page.",
-    signatureTitle:
-      "A learning platform designed to make serious learning feel structured, premium, and connected to real product systems.",
+    signatureTitle: "Serious learning, structured for the AI era.",
     signatureBody:
-      "Upcube University is positioned as the learning platform for the broader ecosystem. The public story stays focused on AI education, product training, guided technical learning, and future credential-style direction without overstating legal school status or program availability.",
+      "Upcube University is the learning platform direction for the broader ecosystem — focused on AI education, product training, guided technical learning, and future credential-style pathways without overstating legal school status or program availability.",
     signatureCards: [
       {
         title: "Learning paths for the AI age",
-        body: "The platform direction centers on helping people build a stronger working understanding of AI concepts, workflows, and practical product use.",
+        body: "Build a stronger working understanding of AI concepts, workflows, product systems, and practical use.",
       },
       {
         title: "AI education and product training",
-        body: "University is meant to give users a clearer path through UpcubeAI, Voice, Cloud, commerce, and future computing products without scattering learning across disconnected materials.",
+        body: "Learn how UpcubeAI, Voice, Cloud, commerce, and future computing products connect without scattering training across disconnected materials.",
       },
       {
         title: "Guided learning paths",
-        body: "The experience is framed around structured paths that help people move from fundamentals to deeper product and technical context at a deliberate pace.",
+        body: "Move from fundamentals into deeper product and technical context through structured paths designed to build confidence over time.",
       },
     ],
     featureStories: [
       {
         title: "Technical courses across the Upcube ecosystem",
-        body: "Upcube University is described as a place for technical learning that stays connected to real software, infrastructure, and AI product surfaces instead of abstract training alone.",
+        body: "Upcube University brings technical learning closer to real software, infrastructure, AI workflows, and product surfaces.",
       },
       {
         title: "Learning across the ecosystem",
-        body: "The product direction spans software, commerce, cloud infrastructure, voice, and future computing so education can reflect how the broader Upcube platform fits together.",
+        body: "The product direction spans AI, commerce, cloud infrastructure, voice, and future computing, helping learners understand how the broader Upcube platform fits together.",
       },
       {
         title: "Future credential-style programs",
-        body: "The long-term direction can include credential-style learning programs, but the public page stops short of claiming accreditation, degrees, certifications, or open enrollment status.",
+        body: "The long-term direction may include credential-style learning programs, while the public page avoids unsupported claims around accreditation, degrees, certifications, or open enrollment status.",
       },
     ],
     techCards: [
       {
         title: "Structured learning architecture",
-        body: "Guided paths, course modules, and product-based sequencing are presented as the foundation for a more coherent education experience.",
+        body: "Guided paths, course modules, and product-based sequencing create the foundation for a more coherent learning experience.",
       },
       {
         title: "Product-aware training direction",
-        body: "The platform can teach through the actual Upcube product family, keeping learning close to the systems, workflows, and interfaces people need to understand.",
+        body: "Courses can teach through the actual Upcube product family, keeping education close to real systems, workflows, and interfaces.",
       },
       {
         title: "Clear boundaries on what is live",
-        body: "Public positioning stays disciplined about future program direction, avoiding unsupported claims around legal status, accreditation, or currently available credentials.",
+        body: "Public positioning stays disciplined around future program direction, without making unsupported claims about legal status, accreditation, degrees, or credentials.",
       },
     ],
     useCases: [
       {
-        title: "Learn AI through practical product workflows",
-        body: "Use guided material to understand how AI tools, product systems, and interface decisions connect in real use instead of only through theory.",
+        title: "Learn AI through real product workflows",
+        body: "Use guided material to understand how AI tools, product systems, and interface decisions connect in practice.",
       },
       {
         title: "Train across the Upcube platform",
-        body: "Follow learning paths that move between UpcubeAI, Voice, Cloud, commerce, and computing products as one connected ecosystem.",
+        body: "Follow learning paths across UpcubeAI, Voice, Cloud, commerce, and computing products as one connected ecosystem.",
       },
       {
         title: "Prepare for deeper technical study",
-        body: "Use course-style material and structured paths to build toward more advanced product, cloud, systems, and future computing topics over time.",
+        body: "Use course-style material and structured paths to build toward advanced product, cloud, systems, and future computing topics over time.",
       },
     ],
     ecosystemLinks: [
@@ -1404,9 +1393,9 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
     ],
     finalCtaTitle:
-      "Explore the learning platform direction without overstating what is live.",
+      "Learning for the ecosystem, without overstating what is live.",
     finalCtaBody:
-      "Upcube University is presented as the learning platform for the ecosystem, with a live app destination and future program direction that stays grounded without drifting into accreditation, degree, or enrollment claims.",
+      "Upcube University presents the learning platform direction for Upcube — with 100K courses, simple $5 course pricing, a live app destination, and future program ambition kept clear, grounded, and responsibly framed.",
     finalPrimaryAction: {
       label: "Open University",
       href: "https://university.upcube.ai",

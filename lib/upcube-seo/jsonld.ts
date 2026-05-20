@@ -1,4 +1,5 @@
 import type {
+  PortalCardItem,
   PortalFaqItem,
   UpcubeCompanyIdentity,
 } from "lib/upcube-portal/content";
@@ -20,7 +21,7 @@ type BreadcrumbItem = {
   path: string;
 };
 
-const organizationName = "UpCubeAI";
+const organizationName = "UpcubeAI";
 
 function createOrganizationReference() {
   return {
@@ -179,6 +180,31 @@ export function createProductJsonLd(product: UpcubeProduct): JsonLdObject[] {
   });
 
   return schemas;
+}
+
+export function createItemListJsonLd(
+  items: PortalCardItem[],
+  path: string,
+): JsonLdObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "UpcubeAI Product Family",
+    description:
+      "Connected AI products spanning work, discovery, commerce, cloud infrastructure, entertainment, learning, and future computing.",
+    url: buildCanonicalUrl(path),
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Product",
+        name: item.title,
+        description: item.description,
+        url: buildCanonicalUrl(item.href),
+        category: item.category,
+      },
+    })),
+  };
 }
 
 export function createFaqPageJsonLd(items: PortalFaqItem[]): JsonLdObject {

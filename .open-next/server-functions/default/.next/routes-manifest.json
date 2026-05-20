@@ -38,6 +38,23 @@
       ]
     },
     {
+      "page": "/policy/[slug]",
+      "regex": "^/policy/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/policy/(?<nxtPslug>[^/]+?)(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/policy/[slug].segments/policy/$d$slug$segment",
+          "source": "^/policy/(?<nxtPslug>[^/]+?)\\.segments/policy/\\$d\\$slug(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPslug": "nxtPslug"
+          }
+        }
+      ]
+    },
+    {
       "page": "/product/[handle]",
       "regex": "^/product/([^/]+?)(?:/)?$",
       "routeKeys": {
@@ -50,6 +67,23 @@
           "source": "^/product/(?<nxtPhandle>[^/]+?)\\.segments/product/\\$d\\$handle(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
           "routeKeys": {
             "nxtPhandle": "nxtPhandle"
+          }
+        }
+      ]
+    },
+    {
+      "page": "/research/[slug]",
+      "regex": "^/research/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/research/(?<nxtPslug>[^/]+?)(?:/)?$",
+      "prefetchSegmentDataRoutes": [
+        {
+          "destination": "/research/[slug].segments/research/$d$slug$segment",
+          "source": "^/research/(?<nxtPslug>[^/]+?)\\.segments/research/\\$d\\$slug(?<segment>/__PAGE__\\.segment\\.rsc|\\.segment\\.rsc)(?:/)?$",
+          "routeKeys": {
+            "nxtPslug": "nxtPslug"
           }
         }
       ]
@@ -148,6 +182,12 @@
       "namedRegex": "^/about(?:/)?$"
     },
     {
+      "page": "/apps",
+      "regex": "^/apps(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/apps(?:/)?$"
+    },
+    {
       "page": "/brand",
       "regex": "^/brand(?:/)?$",
       "routeKeys": {},
@@ -202,6 +242,18 @@
       "namedRegex": "^/contact(?:/)?$"
     },
     {
+      "page": "/developers",
+      "regex": "^/developers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/developers(?:/)?$"
+    },
+    {
+      "page": "/docs",
+      "regex": "^/docs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/docs(?:/)?$"
+    },
+    {
       "page": "/enterprise",
       "regex": "^/enterprise(?:/)?$",
       "routeKeys": {},
@@ -220,16 +272,46 @@
       "namedRegex": "^/faq(?:/)?$"
     },
     {
+      "page": "/for-organizations",
+      "regex": "^/for\\-organizations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/for\\-organizations(?:/)?$"
+    },
+    {
       "page": "/foundation",
       "regex": "^/foundation(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/foundation(?:/)?$"
     },
     {
+      "page": "/founder-letter",
+      "regex": "^/founder\\-letter(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/founder\\-letter(?:/)?$"
+    },
+    {
       "page": "/how-it-works",
       "regex": "^/how\\-it\\-works(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/how\\-it\\-works(?:/)?$"
+    },
+    {
+      "page": "/legal",
+      "regex": "^/legal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/legal(?:/)?$"
+    },
+    {
+      "page": "/legal/privacy",
+      "regex": "^/legal/privacy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/legal/privacy(?:/)?$"
+    },
+    {
+      "page": "/legal/terms",
+      "regex": "^/legal/terms(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/legal/terms(?:/)?$"
     },
     {
       "page": "/news",
@@ -254,6 +336,18 @@
       "regex": "^/policies(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/policies(?:/)?$"
+    },
+    {
+      "page": "/policy",
+      "regex": "^/policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policy(?:/)?$"
+    },
+    {
+      "page": "/pricing",
+      "regex": "^/pricing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/pricing(?:/)?$"
     },
     {
       "page": "/principles",
@@ -382,6 +476,12 @@
       "namedRegex": "^/search(?:/)?$"
     },
     {
+      "page": "/security",
+      "regex": "^/security(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/security(?:/)?$"
+    },
+    {
       "page": "/security-privacy",
       "regex": "^/security\\-privacy(?:/)?$",
       "routeKeys": {},
@@ -392,6 +492,18 @@
       "regex": "^/sitemap\\.xml(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/societal-impact",
+      "regex": "^/societal\\-impact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/societal\\-impact(?:/)?$"
+    },
+    {
+      "page": "/status",
+      "regex": "^/status(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/status(?:/)?$"
     },
     {
       "page": "/teams",
@@ -428,6 +540,12 @@
       "regex": "^/vision(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/vision(?:/)?$"
+    },
+    {
+      "page": "/working-together",
+      "regex": "^/working\\-together(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/working\\-together(?:/)?$"
     }
   ],
   "dataRoutes": [],

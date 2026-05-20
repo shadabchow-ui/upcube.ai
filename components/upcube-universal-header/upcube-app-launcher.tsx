@@ -68,7 +68,12 @@ export function UpcubeAppLauncher({
       </button>
 
       {isOpen ? (
-        <div id={panelId} className="uuh-launcher-panel" role="menu">
+        <div
+          id={panelId}
+          className="uuh-launcher-panel"
+          role="navigation"
+          aria-label="App launcher"
+        >
           <p className="uuh-launcher-panel-title">Apps</p>
           <div className="uuh-launcher-grid">
             {apps.map((app) => (

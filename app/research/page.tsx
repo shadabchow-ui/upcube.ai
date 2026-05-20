@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
-import { ResearchPage } from "components/upcube-portal/research-page";
+import { LongformIndexPage } from "components/upcube-portal/longform-index-page";
 
 export const metadata: Metadata = {
   title: "UpcubeAI Research",
   description:
-    "Research-to-decision workflow overview for the UpcubeAI portal.",
+    "Research across geospatial AI, health AI, science, sustainability, algorithms, machine intelligence, NLP, HCI, networking, responsible AI, security, software engineering, and systems.",
 };
 
 export default function Page() {
-  return <ResearchPage />;
+  return <LongformIndexPage />;
 }

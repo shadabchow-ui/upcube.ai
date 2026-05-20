@@ -4,13 +4,14 @@ import type { UpcubeNewsArticle } from "lib/upcube-news/news";
 import type { UpcubeProduct } from "lib/upcube-products/products";
 
 export const CANONICAL_BASE_URL = "https://upcube.ai";
-export const DEFAULT_SITE_TITLE = "UpCubeAI | Artificial Intelligence Company";
+export const DEFAULT_SITE_TITLE =
+  "UpcubeAI | AI Product Family for Work, Discovery, and Cloud";
 export const DEFAULT_SITE_DESCRIPTION =
-  "UpCubeAI is an artificial intelligence technology company building high-end products for work, discovery, commerce, cloud infrastructure, entertainment, voice, education, and the future of computing.";
+  "UpcubeAI is the AI product company behind Ethen, Earth, Books, Games, Jobs, Cloud, Voice, University, and future computing platforms — a connected product family for work, discovery, commerce, infrastructure, and learning.";
 export const DEFAULT_OG_IMAGE = "/opengraph-image";
 
 export const canonicalBaseUrl = CANONICAL_BASE_URL;
-export const upcubeSiteName = "UpCubeAI";
+export const upcubeSiteName = "UpcubeAI";
 
 type PageMetadataInput = {
   title?: string;
@@ -39,7 +40,8 @@ export const upcubeOrganizationSchema = {
   url: CANONICAL_BASE_URL,
   description: DEFAULT_SITE_DESCRIPTION,
   logo: buildCanonicalUrl("/brand/logo-mark.png"),
-  slogan: "The Next Frontier.",
+  slogan:
+    "AI for the way you work, discover, build, and imagine what\u2019s next.",
   sameAs: [
     "https://www.facebook.com/upcubeinc/",
     "https://www.linkedin.com/company/35441477",
@@ -111,7 +113,7 @@ export function createNewsIndexMetadata(): Metadata {
   return createBasicPageMetadata({
     title: `Upcube News | ${upcubeSiteName}`,
     description:
-      "Launch stories and product previews across UpcubeAI, Voice, University, Ventari, Books, Earth, Games, Jobs, Cloud, VM Compute, Upcube OS, and Upcube Mobile OS.",
+      "Launch stories and product previews across UpcubeAI, Voice, University, Ventari, Books, Earth, Games, Jobs, Cloud, VM Compute, OS, and Mobile OS.",
     path: "/news",
   });
 }

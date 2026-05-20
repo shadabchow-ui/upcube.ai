@@ -2,6 +2,8 @@ import {
   PortalTextSection,
   PortalTheme,
   legalDraftNotice,
+  securitySections,
+  statusSections,
   upcubeCompanyIdentity,
 } from "lib/upcube-portal/content";
 import {
@@ -32,7 +34,7 @@ export const aboutPageContent: FoundationPageContent = {
   eyebrow: "About Us",
   title: "Building the next generation of intelligent technology.",
   description:
-    "UpCubeAI is an artificial intelligence technology company creating high-end products across AI, commerce, discovery, cloud infrastructure, entertainment, and computing.",
+    "Upcube is an AI technology company building a connected family of premium products across AI, commerce, discovery, cloud infrastructure, entertainment, and computing.",
   sections: [
     {
       id: "platform",
@@ -215,7 +217,7 @@ export const careersPageContent: FoundationPageContent = {
 
 export const brandPageContent: FoundationPageContent = {
   eyebrow: "Brand Help Center",
-  title: "UpCubeAI | Artificial Intelligence Company",
+  title: "UpcubeAI | AI Technology Company",
   description:
     "This page offers practical guidance for using the UpcubeAI name, company descriptor, and tagline without implying a full downloadable brand kit exists in the repo.",
   sections: [
@@ -226,9 +228,9 @@ export const brandPageContent: FoundationPageContent = {
         "Use product names as they appear in the live site so the ecosystem stays coherent.",
       ],
       bullets: [
-        "Use UpcubeAI for the company and platform story.",
-        "Use Artificial Intelligence Company as the short public descriptor where a company label is needed.",
-        "Use The Next Frontier. as the public-facing tagline.",
+        "Use UpcubeAI for the AI workspace and product family.",
+        "Use AI technology company as the short public descriptor where a company label is needed.",
+        'Use "AI for the way you work, discover, build, and imagine what\'s next" as the public-facing tagline.',
         "Use Ethen for the chat workspace destination.",
         "Use Earth, Books, Games, Jobs, Cloud, Ventari, OS, and Mobile OS as product names when linking to those destinations.",
       ],
@@ -450,6 +452,195 @@ export const researchEconomicPageContent: FoundationPageContent = {
   ],
 };
 
+export const workingTogetherPageContent: FoundationPageContent = {
+  eyebrow: "Working Together",
+  title: "Building AI for everyone through diverse perspectives.",
+  description:
+    "How UpcubeAI approaches collaboration, inclusion, and shared progress across the AI community.",
+  sections: [
+    {
+      id: "approach",
+      title: "Approach to collaboration",
+      paragraphs: [
+        "UpcubeAI is built around the belief that the strongest AI products come from broad perspectives, careful collaboration, and willingness to learn from many voices.",
+        "This page describes the direction for working together. It does not claim that formal partnership programs, diversity certifications, or published workforce reports exist today.",
+      ],
+    },
+    {
+      id: "diverse-perspectives",
+      title: "Why diverse perspectives matter",
+      paragraphs: [
+        "AI products affect people in different ways. Teams that reflect a wider range of backgrounds, experiences, and viewpoints are better positioned to build tools that work well for more people.",
+      ],
+      bullets: [
+        "Seek broad input across product, research, and community channels.",
+        "Create accessible product surfaces that work for diverse users.",
+        "Keep product language clear and respectful across audiences.",
+        "Encourage participation from underrepresented communities.",
+      ],
+    },
+    {
+      id: "what-is-missing",
+      title: "What is not yet provided",
+      paragraphs: [
+        "Formal diversity reports, partnership agreements, workforce statistics, and community program details were not provided in this repo.",
+        "This page describes public intent, not a completed operational program.",
+      ],
+    },
+  ],
+  ctas: [
+    { label: "Careers", href: "/careers" },
+    { label: "About Us", href: "/about" },
+  ],
+};
+
+export const societalImpactPageContent: FoundationPageContent = {
+  eyebrow: "Societal Impact",
+  title: "AI and the next era of discovery.",
+  description:
+    "How UpcubeAI thinks about the broader effects of AI on learning, access, discovery, and meaningful progress.",
+  sections: [
+    {
+      id: "opportunity",
+      title: "The opportunity for AI to create broad benefit",
+      paragraphs: [
+        "AI can help more people access better tools for learning, discovery, research, and creative work. UpcubeAI focuses on practical products that improve how people work with information.",
+      ],
+    },
+    {
+      id: "areas",
+      title: "Areas of potential societal contribution",
+      paragraphs: [
+        "The current product family touches several areas where AI can have a meaningful impact.",
+      ],
+      bullets: [
+        "Learning and education through Upcube University.",
+        "Spatial discovery and public understanding through Upcube Earth AI.",
+        "Health-adjacent research support through Upcube Health AI.",
+        "Scientific research acceleration through Upcube Science AI.",
+      ],
+    },
+    {
+      id: "caution",
+      title: "What stays measured",
+      paragraphs: [
+        "This page does not claim that UpcubeAI has solved large societal challenges, published independent impact studies, or established formal public-benefit programs beyond what is visible in the repo.",
+        "Claims about societal outcomes should be conservative and backed by real product evidence.",
+      ],
+    },
+  ],
+  ctas: [
+    { label: "Research overview", href: "/research" },
+    { label: "About Us", href: "/about" },
+  ],
+};
+
+export const founderLetterPageContent: FoundationPageContent = {
+  eyebrow: "Founder Letter",
+  title: "Why we focus on AI and to what end.",
+  description:
+    "A letter from the founding perspective on why UpcubeAI exists and what it aims to build.",
+  sections: [
+    {
+      id: "why",
+      title: "Why we started",
+      paragraphs: [
+        "Modern AI tools should feel like an extension of clear thinking, not a replacement for it. We started UpcubeAI to build intelligent products that help people work, discover, and build with clarity, speed, and confidence.",
+      ],
+    },
+    {
+      id: "focus",
+      title: "What we focus on",
+      paragraphs: [
+        "We focus on practical AI that turns questions into structured work, complex information into understandable context, and scattered tools into connected product experiences.",
+      ],
+    },
+    {
+      id: "principles",
+      title: "What guides the work",
+      bullets: [
+        "Build products that earn trust through clarity, not through overselling.",
+        "Keep claims honest and tied to what is actually built.",
+        "Design for the long run, with every surface feeling deliberate and premium.",
+        "Treat AI as a tool for human judgment, not a substitute for it.",
+      ],
+      paragraphs: [
+        "This letter is directional. Formal founder statements, detailed founding history, and biographical details were not provided in this repo.",
+      ],
+    },
+  ],
+  ctas: [
+    { label: "About Us", href: "/about" },
+    { label: "Foundation", href: "/foundation" },
+  ],
+};
+
+export const forOrganizationsPageContent: FoundationPageContent = {
+  eyebrow: "For Organizations",
+  title: "Unlock more capability with AI.",
+  description:
+    "How organizations can use UpcubeAI across teams, research, and operational workflows.",
+  sections: [
+    {
+      id: "overview",
+      title: "Organizational adoption overview",
+      paragraphs: [
+        "UpcubeAI provides a shared AI workspace that teams can use for planning, research, analysis, content creation, and cross-functional coordination.",
+        "This page describes organizational use without claiming enterprise certifications, compliance programs, admin controls, or contractual guarantees.",
+      ],
+    },
+    {
+      id: "use-cases",
+      title: "Common organizational use cases",
+      bullets: [
+        "Strategic planning and briefing preparation.",
+        "Cross-team research synthesis and decision support.",
+        "Content and documentation workflows with review gates.",
+        "Discovery and analysis across the Upcube product ecosystem.",
+        "Learning and skill development through Upcube University.",
+      ],
+      paragraphs: [
+        "These use cases describe product direction, not claims of deployed enterprise infrastructure.",
+      ],
+    },
+    {
+      id: "whats-next",
+      title: "What is not provided",
+      paragraphs: [
+        "Enterprise pricing, organizational admin controls, data governance tools, procurement workflows, compliance certifications, and dedicated support agreements were not provided in this repo.",
+      ],
+    },
+  ],
+  ctas: [
+    { label: "Enterprise overview", href: "/enterprise" },
+    { label: "Try Ethen", href: UPCUBE_CHAT_URL, external: true },
+  ],
+};
+
+export const securityPageContent: FoundationPageContent = {
+  eyebrow: "Security",
+  title: "Security overview for the Upcube portal.",
+  description:
+    "A canonical security entry point that sets expectations without unsupported claims.",
+  sections: securitySections,
+  ctas: [
+    { label: "Safety Approach", href: "/safety" },
+    { label: "Trust & Transparency", href: "/trust-transparency" },
+  ],
+};
+
+export const statusPageContent: FoundationPageContent = {
+  eyebrow: "Status",
+  title: "Public status and operational expectations.",
+  description:
+    "A status landing route that sets expectations and points to trust and contact surfaces.",
+  sections: statusSections,
+  ctas: [
+    { label: "Contact us", href: "/contact" },
+    { label: "Trust & Transparency", href: "/trust-transparency" },
+  ],
+};
+
 export const foundationRoutePaths = [
   "/terms",
   "/privacy",
@@ -465,4 +656,10 @@ export const foundationRoutePaths = [
   "/research",
   "/research/residency",
   "/research/economic",
+  "/working-together",
+  "/societal-impact",
+  "/founder-letter",
+  "/for-organizations",
+  "/security",
+  "/status",
 ] as const;

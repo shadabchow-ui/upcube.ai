@@ -74,7 +74,7 @@ export default async function OpengraphImage(
                   letterSpacing: "-0.04em",
                 }}
               >
-                UpCubeAI
+                UpcubeAI
               </p>
               <p
                 style={{
@@ -83,7 +83,7 @@ export default async function OpengraphImage(
                   color: "rgba(255,255,255,0.72)",
                 }}
               >
-                Artificial Intelligence Company
+                AI Technology Company
               </p>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default async function OpengraphImage(
               color: "rgba(255,255,255,0.58)",
             }}
           >
-            The Next Frontier.
+            AI for the way you work, discover, build, and imagine what's next.
           </p>
         </div>
 

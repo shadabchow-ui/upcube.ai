@@ -62,7 +62,7 @@ export function CompanyPage() {
           <div className="uc-shell">
             <SectionHeading
               title="Ecosystem overview"
-              description="Current products as proof points in the broader UpCubeAI company story."
+              description="Current products as proof points in the broader UpcubeAI company story."
             />
             <div className="uc-grid uc-card-grid">
               {companyEcosystem.map((item) => (

@@ -16,7 +16,7 @@ export default function NotFound() {
               <h1 className="uc-hero-title">This page could not be found.</h1>
               <p className="uc-hero-lead">
                 The route may have moved, expired, or never existed in the
-                current UpCubeAI site map.
+                current UpcubeAI site map.
               </p>
               <div className="uc-inline-actions">
                 <Link className="uc-button" data-variant="solid" href="/">

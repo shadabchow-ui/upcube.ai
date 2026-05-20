@@ -59,7 +59,8 @@
   border-radius: 999px;
 }
 
-.uuh-nav-link:hover {
+.uuh-nav-link:hover,
+.uuh-nav-link:focus-visible {
   color: #fff;
   background: rgba(255, 255, 255, 0.07);
 }
@@ -88,7 +89,8 @@
   white-space: nowrap;
 }
 
-.uuh-open-chat:hover {
+.uuh-open-chat:hover,
+.uuh-open-chat:focus-visible {
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -110,6 +112,7 @@
 }
 
 .uuh-launcher-trigger:hover,
+.uuh-launcher-trigger:focus-visible,
 .uuh-launcher-trigger[aria-expanded="true"] {
   background: rgba(255, 255, 255, 0.16);
 }
@@ -221,6 +224,17 @@
   border-radius: 999px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @media (min-width: 54rem) {
   .uuh-nav {
     display: inline-flex;
@@ -237,5 +251,19 @@
     right: -0.25rem;
     border-radius: 1.3rem;
     padding: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .uuh-header *,
+  .uuh-header *::before,
+  .uuh-header *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .uuh-app-tile:hover {
+    transform: none;
   }
 }

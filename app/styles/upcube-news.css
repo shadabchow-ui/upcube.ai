@@ -1,3 +1,14 @@
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 .uc-news-page,
 .uc-news-article-page {
   min-height: 100svh;
@@ -38,7 +49,6 @@
   letter-spacing: var(--up-type-xl-track);
   font-weight: var(--up-type-xl-weight);
   text-wrap: balance;
-  max-width: 13ch;
 }
 
 .uc-news-hero__lead,
@@ -64,26 +74,6 @@
   align-items: center;
 }
 
-.uc-news-featured {
-  border: 1px solid var(--uc-border-soft);
-  border-radius: 1.8rem;
-  padding: clamp(1.4rem, 3vw, 2.2rem);
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(255, 255, 255, 0.08),
-      transparent 35%
-    ),
-    #050505;
-  box-shadow: var(--uc-shadow);
-}
-
-.uc-news-featured__copy {
-  display: grid;
-  gap: 0.9rem;
-}
-
-.uc-news-featured__title,
 .uc-news-card__title,
 .uc-news-article__section h2,
 .uc-news-article__related h2,
@@ -93,10 +83,6 @@
   letter-spacing: var(--up-type-h2-track);
   font-weight: var(--up-type-h2-weight);
   text-wrap: balance;
-}
-
-.uc-news-featured__title {
-  font-size: var(--up-type-h2-size);
 }
 
 .uc-news-section__head {
@@ -274,6 +260,17 @@
   box-shadow: var(--uc-shadow);
 }
 
+.uc-newsletter-form {
+  display: flex;
+  gap: 0.65rem;
+  max-width: 28rem;
+}
+
+.uc-newsletter-form .uc-form-input {
+  flex: 1;
+  min-width: 0;
+}
+
 @media (max-width: 720px) {
   .uc-news-hero,
   .uc-news-section,
@@ -286,11 +283,6 @@
     max-width: none;
     font-size: clamp(2.35rem, 11vw, 3.2rem);
     line-height: 1.03;
-  }
-
-  .uc-news-featured {
-    padding: 1.2rem 1.05rem;
-    border-radius: 1.45rem;
   }
 
   .uc-news-grid,
@@ -346,9 +338,15 @@
   }
 }
 
+@media (min-width: 721px) {
+  .uc-page .uc-news-hero__title {
+    font-size: clamp(2.35rem, 5vw, 4rem);
+    line-height: clamp(2.45rem, 5.15vw, 4.15rem);
+    max-width: 15ch;
+  }
+}
+
 @media (min-width: 920px) {
-  .uc-news-hero__grid,
-  .uc-news-featured,
   .uc-news-article__hero,
   .uc-news-article__cta-band {
     grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);

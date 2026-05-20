@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "UpCubeAI | Artificial Intelligence Company";
+export const alt = "UpcubeAI | AI Technology Company";
 export const size = {
   width: 1200,
   height: 630,
@@ -51,7 +51,7 @@ export default function Image() {
                   letterSpacing: "-0.04em",
                 }}
               >
-                UpCubeAI
+                UpcubeAI
               </div>
               <div
                 style={{
@@ -59,7 +59,7 @@ export default function Image() {
                   color: "rgba(255,255,255,0.72)",
                 }}
               >
-                Artificial Intelligence Company
+                AI Technology Company
               </div>
             </div>
             <div
@@ -68,7 +68,7 @@ export default function Image() {
                 color: "rgba(255,255,255,0.58)",
               }}
             >
-              The Next Frontier.
+              AI for the way you work, discover, build, and imagine what's next.
             </div>
           </div>
 
@@ -88,7 +88,7 @@ export default function Image() {
                 color: "rgba(255,255,255,0.46)",
               }}
             >
-              UpCubeAI
+              UpcubeAI
             </div>
             <div
               style={{

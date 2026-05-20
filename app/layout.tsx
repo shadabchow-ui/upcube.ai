@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { CartProvider } from "components/cart/cart-context";
 import { Navbar } from "components/layout/navbar";
-import { GeistSans } from "geist/font/sans";
 import { getCart } from "lib/shopify";
 import {
   canonicalBaseUrl,
@@ -17,6 +16,7 @@ import "./styles/upcube-type-system.css";
 import "./styles/upcube-news.css";
 import "./styles/upcube-portal.css";
 import "./styles/upcube-universal-header.css";
+import "./styles/upcube-longform.css";
 
 const upcubeInter = localFont({
   src: [
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: DEFAULT_SITE_TITLE,
     description: DEFAULT_SITE_DESCRIPTION,
     url: canonicalBaseUrl,
-    siteName: "UpCubeAI",
+    siteName: "UpcubeAI",
     type: "website",
     images: [{ url: DEFAULT_OG_IMAGE }],
   },
@@ -74,7 +74,7 @@ export default async function RootLayout({
   const cart = getCart();
 
   return (
-    <html lang="en" className={`${GeistSans.variable} ${upcubeInter.variable}`}>
+    <html lang="en" className={`${upcubeInter.variable}`}>
       <body className="bg-neutral-50 text-black selection:bg-teal-300 dark:bg-neutral-900 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
         <CartProvider cartPromise={cart}>
           <Navbar />

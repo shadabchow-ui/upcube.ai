@@ -2,10 +2,14 @@ import { getCollections, getPages, getProducts } from "lib/shopify";
 import { upcubeNewsArticles } from "lib/upcube-news/news";
 import { foundationRoutePaths } from "lib/upcube-portal/foundation-pages";
 import { upcubeProducts } from "lib/upcube-products/products";
+import { CANONICAL_BASE_URL } from "lib/upcube-seo/metadata";
 import { validateEnvironmentVariables } from "lib/utils";
 import { MetadataRoute } from "next";
 
-const canonicalBaseUrl = "https://upcube.ai";
+const canonicalBaseUrl = CANONICAL_BASE_URL;
+// Static routes use build-time date as fallback — no content-embedded dates available
+// for portal pages. Shopify-backed pages (collections, products, pages) use their
+// server-side updatedAt values when available.
 const generatedAt = new Date().toISOString();
 
 type SitemapRoute = {
@@ -31,22 +35,29 @@ const portalRouteConfigs: Array<
   { url: "/chat", changeFrequency: "weekly", priority: 0.5 },
   { url: "/company", changeFrequency: "weekly", priority: 0.8 },
   { url: "/contact", changeFrequency: "monthly", priority: 0.7 },
+  { url: "/developers", changeFrequency: "weekly", priority: 0.7 },
   { url: "/enterprise", changeFrequency: "weekly", priority: 0.8 },
   { url: "/explore", changeFrequency: "weekly", priority: 0.8 },
   { url: "/faq", changeFrequency: "monthly", priority: 0.6 },
   { url: "/foundation", changeFrequency: "monthly", priority: 0.5 },
   { url: "/how-it-works", changeFrequency: "weekly", priority: 0.8 },
+  { url: "/legal", changeFrequency: "monthly", priority: 0.4 },
   { url: "/news", changeFrequency: "weekly", priority: 0.9 },
   { url: "/platform", changeFrequency: "weekly", priority: 0.8 },
   { url: "/policies", changeFrequency: "monthly", priority: 0.4 },
+  { url: "/pricing", changeFrequency: "monthly", priority: 0.6 },
   { url: "/principles", changeFrequency: "monthly", priority: 0.7 },
   { url: "/privacy", changeFrequency: "yearly", priority: 0.3 },
   { url: "/privacy-policy", changeFrequency: "yearly", priority: 0.3 },
   { url: "/research", changeFrequency: "weekly", priority: 0.8 },
+  { url: "/apps", changeFrequency: "weekly", priority: 0.7 },
+  { url: "/docs", changeFrequency: "weekly", priority: 0.7 },
   { url: "/research/economic", changeFrequency: "monthly", priority: 0.6 },
   { url: "/research/residency", changeFrequency: "monthly", priority: 0.6 },
   { url: "/safety", changeFrequency: "monthly", priority: 0.7 },
+  { url: "/security", changeFrequency: "monthly", priority: 0.7 },
   { url: "/security-privacy", changeFrequency: "monthly", priority: 0.7 },
+  { url: "/status", changeFrequency: "weekly", priority: 0.6 },
   { url: "/teams", changeFrequency: "weekly", priority: 0.7 },
   { url: "/terms", changeFrequency: "yearly", priority: 0.3 },
   { url: "/terms-of-service", changeFrequency: "yearly", priority: 0.3 },

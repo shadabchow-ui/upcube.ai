@@ -32,7 +32,7 @@ export async function generateMetadata(props: {
       title: page.seo?.title || page.title,
       description: page.seo?.description || page.bodySummary,
       url: `https://upcube.ai/${params.page}`,
-      siteName: "UpCubeAI",
+      siteName: "UpcubeAI",
       publishedTime: page.createdAt,
       modifiedTime: page.updatedAt,
       type: "article",

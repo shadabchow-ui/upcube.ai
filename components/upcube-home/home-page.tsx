@@ -6,7 +6,10 @@ import {
   homeProofPoints,
   stories,
 } from "lib/upcube-home/content";
-import { portalHomepageCards } from "lib/upcube-portal/content";
+import {
+  portalHomepageCards,
+  productScaleStats,
+} from "lib/upcube-portal/content";
 import { PortalFooter } from "components/upcube-portal/portal-footer";
 import { PortalHeader } from "components/upcube-portal/portal-header";
 
@@ -33,7 +36,7 @@ function Hero() {
     <section className="uc-home__hero">
       <div className="uc-home__container uc-home__hero-inner">
         <div className="uc-home__hero-stack">
-          <h1>What can I help with?</h1>
+          <h1 className="uc-home__hero-title-compact">What can I help with?</h1>
           <HeroChatPanel />
         </div>
       </div>
@@ -49,12 +52,28 @@ export default function UpcubeHomePage() {
         <Hero />
 
         <section
+          className="uc-home__section uc-home__section--stats"
+          aria-labelledby="stats-title"
+        >
+          <div className="uc-home__container">
+            <div className="uc-home__stats-grid">
+              {productScaleStats.map((stat) => (
+                <div className="uc-home__stat" key={stat.id}>
+                  <span className="uc-home__stat-value">{stat.value}</span>
+                  <span className="uc-home__stat-label">{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section
           className="uc-home__section uc-home__section--portal"
           aria-labelledby="portal-title"
         >
           <div className="uc-home__container">
             <h2 id="portal-title" className="uc-home__section-title-centered">
-              Explore the UpCubeAI product family
+              Discover UpcubeAI
             </h2>
             <div className="uc-home__portal-grid">
               {portalHomepageCards.map((card) => (
@@ -67,7 +86,7 @@ export default function UpcubeHomePage() {
                   <h3>{card.title}</h3>
                   <p>{card.description}</p>
                   <span className="uc-home__card-link">
-                    View product details
+                    {card.ctaLabel ?? "View product details"}
                   </span>
                   <LinkMeta placeholder={card.href === "#"} />
                 </Link>
@@ -76,10 +95,92 @@ export default function UpcubeHomePage() {
           </div>
         </section>
 
-        <section className="uc-home__section" aria-labelledby="feature-title">
+        <section
+          className="uc-home__section uc-home__section--preview"
+          aria-labelledby="preview-title"
+        >
+          <div className="uc-home__container">
+            <p className="uc-home__preview-label">Product surfaces</p>
+            <h2 id="preview-title">Interfaces built for clarity at scale.</h2>
+            <p className="uc-home__section-copy">
+              Purpose-built experiences that turn massive information spaces
+              into simple, focused, and intelligent product surfaces.
+            </p>
+            <div className="uc-home__preview-grid">
+              <article className="uc-home__preview-panel">
+                <p className="uc-home__preview-caption">
+                  Ethen workspace &mdash; Chat, research, and execution in one
+                  connected AI workspace.
+                </p>
+                <div className="uc-home__preview-surface uc-home__preview-surface--workspace">
+                  <div className="uc-home__preview-sidebar">
+                    <span className="uc-home__preview-sidebar-item" />
+                    <span className="uc-home__preview-sidebar-item" />
+                    <span className="uc-home__preview-sidebar-item" />
+                    <span className="uc-home__preview-sidebar-item" />
+                    <span className="uc-home__preview-sidebar-item" />
+                  </div>
+                  <div className="uc-home__preview-main">
+                    <div className="uc-home__preview-header-bar">
+                      <span className="uc-home__preview-header-line" />
+                      <span className="uc-home__preview-header-dot" />
+                    </div>
+                    <div className="uc-home__preview-body-lines">
+                      <span className="uc-home__preview-body-line" />
+                      <span className="uc-home__preview-body-line" />
+                      <span className="uc-home__preview-body-line" />
+                      <span className="uc-home__preview-body-line" />
+                      <span className="uc-home__preview-body-line" />
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article className="uc-home__preview-panel">
+                <p className="uc-home__preview-caption">
+                  Earth &mdash; 3D spatial exploration with terrain, layers, and
+                  contextual overlays.
+                </p>
+                <div className="uc-home__preview-surface uc-home__preview-surface--globe">
+                  <div className="uc-home__preview-globe-ring" />
+                  <div className="uc-home__preview-annotation">
+                    <span className="uc-home__preview-annotation-dot" />
+                    <span className="uc-home__preview-annotation-text">
+                      Terrain + overlay context
+                    </span>
+                  </div>
+                </div>
+              </article>
+
+              <article className="uc-home__preview-panel">
+                <p className="uc-home__preview-caption">
+                  Ventari &mdash; Commerce discovery built for 100M+ products,
+                  with powerful search, product detail, and catalog-scale
+                  browsing.
+                </p>
+                <div className="uc-home__preview-surface uc-home__preview-surface--commerce">
+                  <span className="uc-home__preview-commerce-bar" />
+                  <div className="uc-home__preview-commerce-grid">
+                    <span className="uc-home__preview-commerce-card" />
+                    <span className="uc-home__preview-commerce-card" />
+                    <span className="uc-home__preview-commerce-card" />
+                    <span className="uc-home__preview-commerce-card" />
+                    <span className="uc-home__preview-commerce-card" />
+                    <span className="uc-home__preview-commerce-card" />
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="uc-home__section uc-home__section--alt"
+          aria-labelledby="feature-title"
+        >
           <div className="uc-home__container">
             <h2 id="feature-title">
-              A product ecosystem for the AI and voice age
+              A product ecosystem for the AI and voice age.
             </h2>
             <div className="uc-home__feature-grid">
               {featureBands.map((band) => (
@@ -99,7 +200,7 @@ export default function UpcubeHomePage() {
 
         <section className="uc-home__section" aria-labelledby="proof-title">
           <div className="uc-home__container">
-            <h2 id="proof-title">What UpCube builds</h2>
+            <h2 id="proof-title">What Upcube builds</h2>
             <p className="uc-home__section-copy">{homeBuildSectionIntro}</p>
             <div className="uc-home__proof-grid">
               {homeProofPoints.map((item) => (
@@ -119,7 +220,10 @@ export default function UpcubeHomePage() {
           </div>
         </section>
 
-        <section className="uc-home__section" aria-labelledby="updates-title">
+        <section
+          className="uc-home__section uc-home__section--alt"
+          aria-labelledby="updates-title"
+        >
           <div className="uc-home__container">
             <div className="uc-home__section-head-row">
               <h2 id="updates-title">Recent developments</h2>
@@ -149,12 +253,13 @@ export default function UpcubeHomePage() {
           aria-labelledby="cta-title"
         >
           <div className="uc-home__container">
-            <h2 id="cta-title">See how the product family connects</h2>
+            <h2 id="cta-title">See how the product family connects.</h2>
             <p className="uc-home__cta-copy">
-              Start in Ethen, then move through product pages, launch stories,
-              and research to see how UpCubeAI connects AI workspaces, voice
-              platforms, education, commerce, discovery, cloud infrastructure,
-              entertainment, and future computing.
+              Start with Ethen. Then explore everything it opens. Move through
+              product pages, launch stories, and research to see how UpcubeAI
+              connects AI workspaces, voice platforms, education, commerce,
+              discovery, cloud infrastructure, entertainment, and future
+              computing into one growing ecosystem.
             </p>
             <div className="uc-home__cta-row">
               <Link href={HOME_CHAT_CTA_HREF} className="uc-home__primary-btn">

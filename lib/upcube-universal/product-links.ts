@@ -67,7 +67,7 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
   },
   {
     id: "vm",
-    label: "VM Compute",
+    label: "Compute",
     description: "Virtual machines, networking, storage, and operations.",
     productHref: "/products/vm",
     launchHref: UPCUBE_CLOUD_URL,

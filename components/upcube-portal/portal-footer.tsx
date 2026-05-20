@@ -2,7 +2,6 @@ import Link from "next/link";
 import {
   portalFooterGroups,
   portalSocialLinks,
-  upcubeCompanyIdentity,
 } from "lib/upcube-portal/content";
 
 function SocialIcon({ label }: { label: string }) {
@@ -69,10 +68,6 @@ export function PortalFooter() {
               className="uc-footer-brand-mark"
             />
             <div>
-              <p className="uc-footer-brand-text">UpcubeAI</p>
-              <p className="uc-footer-brand-subtitle">
-                {upcubeCompanyIdentity.descriptor}
-              </p>
               <p className="uc-footer-brand-tagline">The Next Frontier.</p>
             </div>
           </div>
@@ -96,7 +91,11 @@ export function PortalFooter() {
         </div>
         <div className="uc-grid uc-card-grid">
           {portalFooterGroups.map((group) => (
-            <section key={group.id} aria-label={group.title}>
+            <section
+              key={group.id}
+              aria-label={group.title}
+              data-group-id={group.id}
+            >
               <p className="uc-footer-heading">{group.title}</p>
               <ul className="uc-footer-list">
                 {group.links.map((item) => (

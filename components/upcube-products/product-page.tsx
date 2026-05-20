@@ -81,21 +81,14 @@ export function ProductPage({ product }: ProductPageProps) {
                     {product.secondaryAction.label}
                   </Link>
                 </div>
-              </div>
-
-              <aside
-                className={styles.heroVisual}
-                aria-label={`${product.name} highlights`}
-              >
-                <div className={styles.visualGlow} />
-                <div className={styles.highlightStack}>
+                <div className={styles.keyFactsRow}>
                   {product.heroHighlights.map((highlight) => (
-                    <article key={highlight} className={styles.highlightCard}>
-                      <p>{highlight}</p>
-                    </article>
+                    <div key={highlight} className={styles.keyFact}>
+                      {highlight}
+                    </div>
                   ))}
                 </div>
-              </aside>
+              </div>
             </div>
           </div>
         </section>

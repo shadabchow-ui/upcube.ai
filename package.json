@@ -7,6 +7,9 @@
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "test": "pnpm prettier:check",
+    "test:unit": "vitest run",
+    "test:watch": "vitest",
+    "validate": "pnpm prettier:check && pnpm test:unit",
     "cf:build": "opennextjs-cloudflare build",
     "preview": "opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare deploy"
@@ -34,6 +37,8 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.0.14",
     "typescript": "5.8.2",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^4.1.6",
     "wrangler": "^4.92.0"
   }
 }

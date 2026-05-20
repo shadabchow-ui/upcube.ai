@@ -8,6 +8,7 @@ import {
   UPCUBE_VENTARI_URL,
   upcubeProductLinks,
 } from "lib/upcube-universal/product-links";
+import { researchLongformPages } from "lib/upcube-portal/longform-pages";
 
 export type PortalTheme = "dark" | "light" | "enterprise" | "safety";
 
@@ -24,6 +25,15 @@ export type PortalCardItem = {
   description: string;
   href: string;
   tag?: string;
+  status?: "live" | "preview" | "external" | "planned" | "not_provided";
+  category?:
+    | "Work"
+    | "Discovery"
+    | "Infrastructure"
+    | "Future Platforms"
+    | "Learning"
+    | "Commerce";
+  ctaLabel?: string;
 };
 
 export type PortalFooterGroup = {
@@ -133,6 +143,20 @@ export type PortalHeroCopy = {
   description: string;
 };
 
+export type ProductScaleStat = {
+  id: string;
+  label: string;
+  value: string;
+};
+
+export const productScaleStats: ProductScaleStat[] = [
+  { id: "books-scale", label: "Books", value: "50M books" },
+  { id: "games-scale", label: "Games", value: "400K games" },
+  { id: "ventari-scale", label: "Ventari", value: "100M products" },
+  { id: "jobs-scale", label: "Jobs", value: "8M jobs" },
+  { id: "university-scale", label: "University", value: "100K courses" },
+];
+
 export type UpcubeCompanyIdentity = {
   descriptor: string;
   tagline: string;
@@ -188,18 +212,19 @@ export {
 };
 
 export const upcubeCompanyIdentity: UpcubeCompanyIdentity = {
-  descriptor: "Artificial Intelligence Company",
-  tagline: "The Next Frontier.",
+  descriptor: "AI technology company",
+  tagline:
+    "Connected intelligence for the way you work, discover, build, and imagine what's next.",
   oneLiner:
-    "An artificial intelligence technology company building premium products for the next era of computing.",
+    "An AI technology company building a connected family of premium products across AI, voice, education, commerce, discovery, cloud infrastructure, entertainment, and future computing.",
   mission:
-    "UpCubeAI builds high-end products for work, discovery, commerce, cloud infrastructure, entertainment, voice, education, and the next era of computing.",
+    "Upcube builds a connected family of premium products for work, discovery, commerce, cloud infrastructure, entertainment, voice, education, and the next era of computing.",
   vision:
-    "The current product family is designed as the first proof of a broader intelligent technology ecosystem.",
+    "The product family connects workspaces, learning, retail-scale discovery, infrastructure, and AI-native systems designed for what comes next.",
   belief:
-    "Intelligence should feel useful, premium, and connected across the tools people rely on every day.",
+    "Intelligence should feel useful, connected, and clear across the tools people rely on every day.",
   promise:
-    "Build products that turn powerful systems into clear, trustworthy experiences without overstating what is live.",
+    "Turn powerful systems into clear, trustworthy experiences without overstating what is live.",
   pillars: [
     "AI & Voice",
     "Education & Learning",
@@ -239,104 +264,182 @@ export const portalAppLinks: PortalNavItem[] = [
   { id: "app-ventari", label: "Ventari", href: UPCUBE_VENTARI_URL },
 ];
 
-export const portalHomepageCards: PortalCardItem[] = [
-  {
+const portalHomepageStatusById: Record<
+  string,
+  "live" | "preview" | "external" | "planned" | "not_provided"
+> = {
+  "upcube-ai": "live",
+  books: "live",
+  earth: "live",
+  games: "live",
+  jobs: "live",
+  cloud: "live",
+  ventari: "external",
+  vm: "planned",
+  "upcube-os": "planned",
+  "upcube-mobile-os": "planned",
+  voice: "preview",
+  university: "live",
+};
+
+const portalHomepageCardsById: Record<string, PortalCardItem> = {
+  "upcube-ai": {
     id: "chat",
     title: "UpcubeAI",
     description:
-      "An AI workspace for chat, research, artifacts, and execution that turns questions into durable work.",
+      "An AI workspace for chat, research, artifacts, and execution that turns questions into durable work and reusable output.",
     href: "/products/upcube-ai",
     tag: "AI workspace",
+    category: "Work",
+    ctaLabel: "Open Ethen",
   },
-  {
+  earth: {
     id: "globe",
     title: "Earth",
     description:
-      "A 3D discovery product for maps, terrain, cities, and shareable world exploration.",
+      "A spatial discovery product for maps, terrain, cities, and shareable world exploration.",
     href: "/products/earth",
     tag: "Spatial discovery",
+    category: "Discovery",
+    ctaLabel: "Explore Earth",
   },
-  {
+  games: {
     id: "games",
     title: "Games",
     description:
-      "An entertainment discovery surface for releases, genres, platforms, and recommendation paths.",
+      "Discover across 400K games with releases, genres, platforms, and recommendation paths designed for momentum.",
     href: "/products/games",
     tag: "Entertainment",
+    category: "Discovery",
+    ctaLabel: "Explore Games",
   },
-  {
+  books: {
     id: "books",
     title: "Books",
     description:
-      "A reading discovery product built for previews, saved titles, and editorial browsing.",
+      "Explore 50M books with previews, saved titles, and a calmer path to discovery.",
     href: "/products/books",
     tag: "Knowledge discovery",
+    category: "Discovery",
+    ctaLabel: "Browse Books",
   },
-  {
+  jobs: {
     id: "jobs",
     title: "Jobs",
     description:
-      "A company opportunity surface for career exploration and future hiring workflows.",
+      "Browse an 8M-job discovery surface for career exploration and clearer opportunity workflows.",
     href: "/products/jobs",
     tag: "Opportunity",
+    category: "Work",
+    ctaLabel: "Explore Jobs",
   },
-  {
+  cloud: {
     id: "cloud",
     title: "Cloud",
     description:
-      "The cloud infrastructure and tooling layer behind Upcube builders, systems, and product delivery.",
+      "The cloud infrastructure and tooling layer behind Upcube builders, systems, and product delivery — made easier to understand.",
     href: "/products/cloud",
     tag: "Cloud infrastructure",
+    category: "Infrastructure",
+    ctaLabel: "Open Cloud",
   },
-  {
+  ventari: {
     id: "ventari",
     title: "Ventari",
     description:
-      "A premium AI commerce product built for large-scale search, product detail, and discovery.",
+      "A premium commerce product built for 100M products with large-scale search, product detail, and refined discovery.",
     href: "/products/ventari",
     tag: "AI commerce",
+    category: "Commerce",
+    ctaLabel: "Open Ventari",
   },
-  {
+  vm: {
     id: "vm",
-    title: "VM Compute",
+    title: "Compute",
     description:
-      "Compute, networking, storage, and virtualization workflows for the systems layer behind the ecosystem.",
+      "Virtual machines, networking, storage, and compute workflows for the systems layer behind the Upcube ecosystem.",
     href: "/products/vm",
     tag: "Compute",
+    category: "Infrastructure",
+    ctaLabel: "Learn more",
   },
-  {
+  "upcube-os": {
     id: "upcube-os",
     title: "Upcube OS",
     description:
-      "An AI operating system direction for premium desktop computing with visible control and trust.",
+      "An AI operating system direction for desktop computing with visible control, trust, and clarity.",
     href: "/products/upcube-os",
     tag: "AI operating system",
+    category: "Future Platforms",
+    ctaLabel: "View preview",
   },
-  {
+  "upcube-mobile-os": {
     id: "upcube-mobile-os",
     title: "Mobile OS",
     description:
-      "An AI-native mobile computing direction focused on device trust, privacy, and clear interaction.",
+      "An AI-native mobile computing direction focused on privacy, trust, and clear interaction.",
     href: "/products/upcube-mobile-os",
     tag: "Future computing",
+    category: "Future Platforms",
+    ctaLabel: "View preview",
   },
-  {
+  voice: {
     id: "voice",
     title: "Voice",
     description:
-      "AI voice platform for future Upcube headphones, earbuds, home audio, car audio, and companion devices.",
+      "AI voice platform for future Upcube devices — headphones, earbuds, home audio, car audio, and companion devices.",
     href: "/products/voice",
     tag: "AI & Voice",
+    category: "Future Platforms",
+    ctaLabel: "View preview",
   },
-  {
+  university: {
     id: "university",
     title: "University",
     description:
-      "AI education, product training, and guided learning paths across the Upcube ecosystem.",
+      "100K courses with simple $5 course pricing for AI education, product training, and guided learning paths.",
     href: "/products/university",
     tag: "Education & Learning",
+    category: "Learning",
+    ctaLabel: "Explore University",
   },
-];
+};
+
+function derivePortalCardStatus(
+  productId: string,
+  launchHref?: string,
+): "live" | "preview" | "external" | "planned" | "not_provided" {
+  const forcedStatus = portalHomepageStatusById[productId];
+  if (forcedStatus) {
+    return forcedStatus;
+  }
+
+  if (!launchHref) {
+    return "not_provided";
+  }
+
+  if (launchHref.includes("ventari.net")) {
+    return "external";
+  }
+
+  return "live";
+}
+
+export const portalHomepageCards: PortalCardItem[] = upcubeProductLinks.flatMap(
+  (product) => {
+    const baseCard = portalHomepageCardsById[product.id];
+    if (!baseCard) {
+      return [];
+    }
+
+    return [
+      {
+        ...baseCard,
+        status: derivePortalCardStatus(product.id, product.launchHref),
+      },
+    ];
+  },
+);
 
 const portalProductPageLinks: PortalNavItem[] = upcubeProductLinks.map(
   (product) => ({
@@ -356,9 +459,20 @@ export const portalFooterGroups: PortalFooterGroup[] = [
     id: "terms-policies",
     title: "Terms & Policies",
     links: [
+      { id: "legal-footer", label: "Legal Index", href: "/legal" },
       { id: "terms-footer", label: "Terms of Use", href: "/terms" },
       { id: "privacy-footer", label: "Privacy Policy", href: "/privacy" },
       { id: "policies-footer", label: "Other Policies", href: "/policies" },
+      {
+        id: "principles-footer",
+        label: "AI Principles",
+        href: "/principles",
+      },
+      {
+        id: "for-organizations-footer",
+        label: "For Organizations",
+        href: "/for-organizations",
+      },
     ],
   },
   {
@@ -370,6 +484,21 @@ export const portalFooterGroups: PortalFooterGroup[] = [
       { id: "foundation-footer", label: "Foundation", href: "/foundation" },
       { id: "careers-footer", label: "Careers", href: "/careers" },
       { id: "brand-footer", label: "Brand Help Center", href: "/brand" },
+      {
+        id: "working-together-footer",
+        label: "Working Together",
+        href: "/working-together",
+      },
+      {
+        id: "societal-impact-footer",
+        label: "Societal Impact",
+        href: "/societal-impact",
+      },
+      {
+        id: "founder-letter-footer",
+        label: "Founder Letter",
+        href: "/founder-letter",
+      },
     ],
   },
   {
@@ -377,6 +506,11 @@ export const portalFooterGroups: PortalFooterGroup[] = [
     title: "Safety",
     links: [
       { id: "safety-footer", label: "Safety Approach", href: "/safety" },
+      {
+        id: "security-footer",
+        label: "Security",
+        href: "/security",
+      },
       {
         id: "security-privacy-footer",
         label: "Security & Privacy",
@@ -387,6 +521,7 @@ export const portalFooterGroups: PortalFooterGroup[] = [
         label: "Trust & Transparency",
         href: "/trust-transparency",
       },
+      { id: "status-footer", label: "Status", href: "/status" },
     ],
   },
   {
@@ -467,6 +602,24 @@ export const portalRoutePlan: PortalRoutePlan[] = [
     href: "/research",
     status: "live",
   },
+  ...researchLongformPages.map((page) => ({
+    id: `research-${page.slug}`,
+    title: page.title,
+    href: `/research/${page.slug}`,
+    status: "live" as const,
+  })),
+  {
+    id: "research-residency",
+    title: "Research Residency",
+    href: "/research/residency",
+    status: "live",
+  },
+  {
+    id: "research-economic",
+    title: "Economic Research",
+    href: "/research/economic",
+    status: "live",
+  },
   {
     id: "enterprise",
     title: "Enterprise",
@@ -476,8 +629,44 @@ export const portalRoutePlan: PortalRoutePlan[] = [
   { id: "safety", title: "Safety", href: "/safety", status: "live" },
   { id: "faq", title: "FAQ", href: "/faq", status: "live" },
   { id: "privacy", title: "Privacy", href: "/privacy", status: "live" },
-  { id: "company", title: "Company", href: "/company", status: "planned" },
-  { id: "careers", title: "Careers", href: "/careers", status: "planned" },
+  { id: "company", title: "Company", href: "/company", status: "live" },
+  { id: "careers", title: "Careers", href: "/careers", status: "live" },
+  {
+    id: "principles",
+    title: "AI Principles",
+    href: "/principles",
+    status: "live",
+  },
+  {
+    id: "legal",
+    title: "Legal Index",
+    href: "/legal",
+    status: "live",
+  },
+  {
+    id: "working-together",
+    title: "Working Together",
+    href: "/working-together",
+    status: "live",
+  },
+  {
+    id: "societal-impact",
+    title: "Societal Impact",
+    href: "/societal-impact",
+    status: "live",
+  },
+  {
+    id: "founder-letter",
+    title: "Founder Letter",
+    href: "/founder-letter",
+    status: "live",
+  },
+  {
+    id: "for-organizations",
+    title: "For Organizations",
+    href: "/for-organizations",
+    status: "live",
+  },
   {
     id: "blog",
     title: "Blog Article",
@@ -698,6 +887,40 @@ export const portalMenuGroups: PortalMenuGroup[] = [
     ],
   },
   {
+    id: "research",
+    title: "Research",
+    items: [
+      {
+        id: "research-overview-menu",
+        label: "Overview",
+        href: "/research",
+      },
+      ...researchLongformPages.map((page) => {
+        let label = page.title
+          .replace(/^Upcube /, "")
+          .replace(/\band\b/gi, "&");
+        if (label.endsWith(" AI") && label.split(" ").length > 2) {
+          label = label.slice(0, -3);
+        }
+        return {
+          id: `research-${page.slug}-menu`,
+          label,
+          href: `/research/${page.slug}`,
+        };
+      }),
+      {
+        id: "research-residency-menu",
+        label: "Research Residency",
+        href: "/research/residency",
+      },
+      {
+        id: "research-economic-menu",
+        label: "Economic Research",
+        href: "/research/economic",
+      },
+    ],
+  },
+  {
     id: "trust",
     title: "Trust",
     items: [
@@ -718,6 +941,18 @@ export const portalMenuGroups: PortalMenuGroup[] = [
         label: "Trust & Transparency",
         href: "/trust-transparency",
         description: "How the public site handles evidence and placeholders.",
+      },
+      {
+        id: "principles-menu",
+        label: "AI Principles",
+        href: "/principles",
+        description: "Operating principles for AI development.",
+      },
+      {
+        id: "for-organizations-menu",
+        label: "For Organizations",
+        href: "/for-organizations",
+        description: "Unlock more capability with AI.",
       },
     ],
   },
@@ -742,6 +977,24 @@ export const portalMenuGroups: PortalMenuGroup[] = [
         label: "Careers",
         href: "/careers",
         description: "Builder culture and the live jobs destination.",
+      },
+      {
+        id: "working-together-menu",
+        label: "Working Together",
+        href: "/working-together",
+        description: "Building AI for everyone through diverse perspectives.",
+      },
+      {
+        id: "societal-impact-menu",
+        label: "Societal Impact",
+        href: "/societal-impact",
+        description: "AI and the next era of discovery.",
+      },
+      {
+        id: "founder-letter-menu",
+        label: "Founder Letter",
+        href: "/founder-letter",
+        description: "Why we focus on AI and to what end.",
       },
     ],
   },
@@ -817,6 +1070,13 @@ export const researchFocusAreas: ResearchFocusArea[] = [
 ];
 
 export const researchCards: ResearchCard[] = [
+  ...researchLongformPages.map((page) => ({
+    id: `research-${page.slug}`,
+    tag: "Research",
+    label: page.title,
+    summary: page.description,
+    href: `/research/${page.slug}`,
+  })),
   {
     id: "portal-iteration",
     tag: "Update",
@@ -897,15 +1157,15 @@ export const portalNewsItems: PortalNewsItem[] = [
 
 export const companyMission: PortalHeroCopy = {
   eyebrow: "Company",
-  title: "A technology company for the AI age.",
+  title: "An AI technology company for the way you work, discover, and build.",
   description:
-    "UpCubeAI is an artificial intelligence technology company creating high-end products across AI, commerce, discovery, cloud infrastructure, entertainment, and computing.",
+    "Upcube is an AI technology company building a connected family of premium products across AI, commerce, discovery, cloud infrastructure, entertainment, and computing.",
 };
 
 export const companyVisionBullets: PortalBullet[] = [
   {
     id: "vision-products",
-    label: "High-end product systems",
+    label: "Connected product systems",
     detail:
       "Build premium, useful products that move from intelligence to execution across a connected ecosystem.",
   },
@@ -913,13 +1173,13 @@ export const companyVisionBullets: PortalBullet[] = [
     id: "vision-execution",
     label: "Proof through products",
     detail:
-      "The current portfolio is meant to show how the company can span AI, commerce, discovery, infrastructure, entertainment, and computing.",
+      "The current portfolio shows how Upcube spans AI, commerce, discovery, infrastructure, entertainment, and computing.",
   },
   {
     id: "vision-trust",
     label: "Trust through discipline",
     detail:
-      "Public-facing language stays ambitious about product direction while remaining disciplined about unsupported claims.",
+      "Public language stays ambitious about product direction while remaining disciplined about unsupported claims.",
   },
 ];
 
@@ -928,37 +1188,37 @@ export const companyWorkAreas: PortalBullet[] = [
     id: "work-ai",
     label: "AI",
     detail:
-      "Assistant-led workspaces, orchestration, and intelligence-native product experiences.",
+      "Assistant-led workspaces, orchestration, and intelligence-native product experiences for modern teams.",
   },
   {
     id: "work-commerce",
     label: "Commerce",
     detail:
-      "Merchandising, storefront systems, and search-led buying experiences built for modern commerce teams.",
+      "Large-scale search, product discovery, and premium commerce experiences built for modern retail.",
   },
   {
     id: "work-discovery",
     label: "Discovery",
     detail:
-      "Research, mapping, editorial, and search surfaces that help people explore complex information clearly.",
+      "Spatial exploration, book discovery, game browsing, and surfaces that help people explore complex information clearly.",
   },
   {
     id: "work-cloud",
     label: "Cloud & Infrastructure",
     detail:
-      "Developer tools, compute direction, and platform services that support the broader product ecosystem.",
+      "Developer tools, compute direction, storage, networking, and platform services supporting the broader product ecosystem.",
   },
   {
     id: "work-computing",
     label: "Computing",
     detail:
-      "Operating-system and device-direction work for the next era of premium intelligent computing.",
+      "Operating-system and device-direction work for the next era of AI-native intelligent computing.",
   },
   {
     id: "work-entertainment",
     label: "Entertainment",
     detail:
-      "Interactive products and media experiences that extend the platform into play and culture.",
+      "Interactive products, game discovery, and media experiences that extend the platform into play and culture.",
   },
 ];
 
@@ -967,7 +1227,7 @@ export const companyEcosystem: PortalCardItem[] = [
     id: "eco-chat",
     title: "AI",
     description:
-      "Ethen anchors the ecosystem with assistant-led planning, writing, research, and execution workflows.",
+      "Ethen anchors the ecosystem with AI-led planning, writing, research, and execution workflows.",
     href: UPCUBE_CHAT_URL,
     tag: "AI",
   },
@@ -975,7 +1235,7 @@ export const companyEcosystem: PortalCardItem[] = [
     id: "eco-ventari",
     title: "Ventari",
     description:
-      "Ventari brings commerce search and large-scale product discovery into the broader company platform.",
+      "Ventari brings commerce search and large-scale product discovery into the broader Upcube platform.",
     href: "/products/ventari",
     tag: "Commerce",
   },
@@ -983,7 +1243,7 @@ export const companyEcosystem: PortalCardItem[] = [
     id: "eco-earth",
     title: "Earth",
     description:
-      "Earth extends UpCubeAI into mapping, world data, and geospatial exploration.",
+      "Earth extends Upcube into mapping, world data, and geospatial exploration.",
     href: "/products/earth",
     tag: "Discovery",
   },
@@ -991,7 +1251,7 @@ export const companyEcosystem: PortalCardItem[] = [
     id: "eco-cloud",
     title: "Cloud",
     description:
-      "Cloud and VM Compute establish the infrastructure lane for future builders and platform teams.",
+      "Cloud and VM Compute establish the infrastructure lane for builders and platform teams.",
     href: "/products/cloud",
     tag: "Cloud & Infrastructure",
   },
@@ -999,7 +1259,7 @@ export const companyEcosystem: PortalCardItem[] = [
     id: "eco-os",
     title: "OS",
     description:
-      "OS and Mobile OS point toward the company’s long-range computing direction.",
+      "OS and Mobile OS point toward the company's long-range computing direction.",
     href: "/products/upcube-os",
     tag: "Computing",
   },
@@ -1007,7 +1267,7 @@ export const companyEcosystem: PortalCardItem[] = [
     id: "eco-games",
     title: "Games",
     description:
-      "Games shows how the ecosystem can extend into interactive entertainment and culture.",
+      "Games shows how the ecosystem extends into interactive entertainment and culture.",
     href: "/products/games",
     tag: "Entertainment",
   },
@@ -1142,12 +1402,49 @@ export type PortalTextSection = {
   bullets?: string[];
 };
 
+export type ContactInquiryType = {
+  value: string;
+  label: string;
+};
+
+export type ContactProductOption = {
+  value: string;
+  label: string;
+};
+
+export const contactInquiryTypes: ContactInquiryType[] = [
+  { value: "general", label: "General inquiry" },
+  { value: "sales", label: "Sales inquiry" },
+  { value: "product-interest", label: "Product interest" },
+  { value: "partnership", label: "Partnership proposal" },
+  { value: "press", label: "Press and media" },
+  { value: "trust-safety", label: "Trust and safety" },
+  { value: "feedback", label: "Product feedback" },
+  { value: "other", label: "Other" },
+];
+
+export const contactProductOptions: ContactProductOption[] = [
+  { value: "upcube-ai", label: "UpcubeAI — AI workspace" },
+  { value: "books", label: "Upcube Books — Reading discovery" },
+  { value: "earth", label: "Upcube Earth — 3D spatial exploration" },
+  { value: "games", label: "Upcube Games — Game discovery" },
+  { value: "jobs", label: "Upcube Jobs — Hiring and careers" },
+  { value: "cloud", label: "Upcube Cloud — Developer infrastructure" },
+  { value: "ventari", label: "Ventari — Commerce platform" },
+  { value: "vm", label: "Compute — Virtual machines" },
+  { value: "upcube-os", label: "Upcube OS — Desktop operating system" },
+  { value: "upcube-mobile-os", label: "Mobile OS — Mobile platform" },
+  { value: "voice", label: "Upcube Voice — Voice platform" },
+  { value: "university", label: "University — Education and learning" },
+  { value: "general", label: "Not product-specific" },
+];
+
 export const principlesSections: PortalTextSection[] = [
   {
     id: "mission",
     title: "Mission",
     paragraphs: [
-      "UpcubeAI builds practical intelligence tools for planning, analysis, and execution while keeping human judgment central.",
+      "Upcube builds practical intelligence tools for planning, analysis, and execution while keeping human judgment central.",
       "This principles page is directional and product-focused, not a legal commitment document.",
     ],
   },
@@ -1179,7 +1476,7 @@ export const principlesSections: PortalTextSection[] = [
     id: "cooperation",
     title: "Interoperability and collaboration",
     paragraphs: [
-      "UpcubeAI should integrate cleanly with the systems teams already operate.",
+      "Upcube should integrate cleanly with the systems teams already operate.",
     ],
     bullets: [
       "Use transparent contracts between product surfaces and supporting services.",
@@ -1194,7 +1491,7 @@ export const visionSections: PortalTextSection[] = [
     id: "direction",
     title: "Product direction",
     paragraphs: [
-      "UpcubeAI is evolving into a unified work surface across assistant interactions, research synthesis, and operational decision support.",
+      "Upcube is evolving into a unified work surface across assistant interactions, research synthesis, and operational decision support.",
       "The near-term vision is practical: reduce context switching and increase execution quality with reliable, inspectable workflows.",
     ],
   },
@@ -1202,7 +1499,7 @@ export const visionSections: PortalTextSection[] = [
     id: "model",
     title: "Operating model",
     paragraphs: [
-      "The current repo positions UpcubeAI as a portal linking product surfaces such as chat, research, and trust pages.",
+      "The current repo positions Upcube as a portal linking product surfaces such as chat, research, and trust pages.",
     ],
     bullets: [
       "Use shared design and content primitives.",
@@ -1224,7 +1521,7 @@ export const howItWorksSections: PortalTextSection[] = [
     id: "flow",
     title: "Workflow loop",
     paragraphs: [
-      "A typical UpcubeAI workflow starts from intent capture, continues through structured response generation, and ends with operator review and action.",
+      "A typical Upcube workflow starts from intent capture, continues through structured response generation, and ends with operator review and action.",
     ],
     bullets: [
       "Interpret task intent and required constraints.",
@@ -1251,22 +1548,23 @@ export const howItWorksSections: PortalTextSection[] = [
 export const contactSections: PortalTextSection[] = [
   {
     id: "status",
-    title: "Contact status",
+    title: "How to reach us",
     paragraphs: [
-      "A verified public support inbox, legal notice address, and media contact channel are not provided in this repo.",
-      "Use this page as a placeholder contact surface until approved contact details are available.",
+      "Use the form below to send a message to the Upcube team. We review inquiries across sales, product interest, partnership, press, trust and safety, and general feedback.",
+      "This page prepares your request for review. A backend submission handler is not yet deployed, so messages prepared here are not transmitted until a live endpoint is connected.",
     ],
   },
   {
     id: "requests",
-    title: "Request categories",
+    title: "What happens next",
     bullets: [
-      "Enterprise and partnership inquiries.",
-      "Product feedback and issue reports.",
-      "Trust, safety, and policy questions.",
+      "Sales and partnership inquiries are reviewed by the product team.",
+      "Product interest helps us understand which Upcube products matter to you.",
+      "Trust, safety, and policy questions are reviewed before escalation.",
+      "Response SLAs and support hours are not provided in current source material.",
     ],
     paragraphs: [
-      "Routing and response SLAs are not provided in current source material.",
+      "For the fastest path to existing products, use the app launcher or product pages to navigate directly to live destinations.",
     ],
   },
 ];
@@ -1339,6 +1637,126 @@ export const termsSections: PortalTextSection[] = [
     ],
     paragraphs: [
       "Final wording and jurisdictional terms are not provided in this repository.",
+    ],
+  },
+];
+
+export const pricingSections: PortalTextSection[] = [
+  {
+    id: "availability",
+    title: "Availability and pricing status",
+    paragraphs: [
+      "Public pricing tiers are not provided in this repository.",
+      "Product availability and commercial terms can vary by product and release stage.",
+    ],
+    bullets: [
+      "Use product pages to review the current public surface for each product.",
+      "Use the apps page to open public launch destinations where available.",
+      "Use contact and trust pages for procurement and review routing until formal pricing documentation is published.",
+    ],
+  },
+];
+
+export const developersSections: PortalTextSection[] = [
+  {
+    id: "overview",
+    title: "Developer overview",
+    paragraphs: [
+      "This repository publishes a product-family portal and route-level navigation for developer-relevant surfaces.",
+      "It does not provide a finalized public API contract in current source material.",
+    ],
+  },
+  {
+    id: "where-to-start",
+    title: "Where to start",
+    bullets: [
+      "Cloud product overview for developer tooling and cloud workflows.",
+      "Compute product overview for infrastructure-oriented workflows.",
+      "Documentation hub for route-level references and product links.",
+      "Status route for operational-status messaging boundaries.",
+    ],
+    paragraphs: [
+      "Treat these routes as navigation and context surfaces until implementation-specific API docs are published.",
+    ],
+  },
+];
+
+export const docsSections: PortalTextSection[] = [
+  {
+    id: "docs-hub",
+    title: "Documentation hub status",
+    paragraphs: [
+      "A full structured documentation system is not provided in this repository.",
+      "This page links to implemented product and portal routes so teams can navigate current source-backed content quickly.",
+    ],
+  },
+];
+
+export const appsSections: PortalTextSection[] = [
+  {
+    id: "launcher",
+    title: "App launcher",
+    paragraphs: [
+      "This page collects public app launch destinations and product overviews available from current link constants.",
+      "Account-gated dashboard behavior is not implemented in this route.",
+    ],
+  },
+];
+
+export const securitySections: PortalTextSection[] = [
+  {
+    id: "security-overview",
+    title: "Security overview",
+    paragraphs: [
+      "This route is a canonical security entry point for the portal.",
+      "Security controls, certifications, and contractual guarantees are not provided in current repo content and are intentionally not claimed here.",
+    ],
+  },
+  {
+    id: "related-trust-routes",
+    title: "Related trust routes",
+    bullets: [
+      "Security & Privacy combines placeholder trust language across both topics.",
+      "Trust & Transparency explains claim boundaries and placeholder handling.",
+      "Safety describes process-oriented product safety framing.",
+    ],
+    paragraphs: [
+      "Use these routes for current context until reviewed policy or compliance artifacts are published.",
+    ],
+  },
+];
+
+export const statusSections: PortalTextSection[] = [
+  {
+    id: "public-status",
+    title: "Public status",
+    paragraphs: [
+      "Automated public status monitoring is not provided in this repository.",
+      "This page is a status landing route that sets expectations and points to trust and contact surfaces.",
+    ],
+    bullets: [
+      "No live uptime dashboard is implemented here.",
+      "No incident-history backend is implemented here.",
+      "Operational updates should be treated as manual and source-backed when published.",
+    ],
+  },
+];
+
+export const legalSections: PortalTextSection[] = [
+  {
+    id: "legal-index",
+    title: "Legal index",
+    paragraphs: [
+      "This route indexes current legal and policy pages published in the portal.",
+      "Reviewed legal entity text, effective dates, and contact details are not fully provided in this repo.",
+    ],
+    bullets: [
+      "Terms of Use",
+      "Terms of Service",
+      "Privacy",
+      "Privacy Policy",
+      "Other Policies",
+      "Security and trust routes for related context",
     ],
   },
 ];

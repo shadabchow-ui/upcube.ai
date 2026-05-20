@@ -24,13 +24,13 @@ export type FeatureBand = {
 };
 
 export const homeBuildSectionIntro =
-  "UpCubeAI is an artificial intelligence technology company building premium products across AI, voice, education, commerce, discovery, cloud infrastructure, entertainment, and future computing. The homepage product family is meant to show how that company story extends from the workspace into learning, retail-scale discovery, infrastructure, and AI-native computing.";
+  "Upcube is an AI technology company building a connected family of premium products across AI, voice, education, commerce, discovery, cloud infrastructure, entertainment, and future computing. The product family shows how that company story extends from the workspace into learning, retail-scale discovery, infrastructure, and AI-native computing.";
 
 export const homeProofPoints: HomeProofPoint[] = [
   {
     title: "AI & Voice",
     description:
-      "UpcubeAI and Ethen combine chat, research, artifacts, and governed tool flows into a serious AI workspace, while Upcube Voice extends that assistant relationship into future device experiences.",
+      "A connected intelligence layer for work, creation, and conversation. UpcubeAI and Ethen bring chat, research, artifacts, and governed tool flows into one AI workspace, while Upcube Voice extends that assistant experience into future devices.",
     href: "/products/upcube-ai",
     links: [
       { label: "UpcubeAI", href: "/products/upcube-ai" },
@@ -41,7 +41,7 @@ export const homeProofPoints: HomeProofPoint[] = [
   {
     title: "Commerce",
     description:
-      "Ventari extends the company into AI commerce with large-catalog search, stronger product detail, cleaner category browsing, and recommendation-led discovery.",
+      "AI commerce, built for scale. Ventari brings Upcube into premium commerce with large-catalog search, richer product detail, cleaner category browsing, and recommendation-led discovery.",
     href: "/products/ventari",
     links: [
       { label: "Ventari", href: "/products/ventari" },
@@ -51,7 +51,7 @@ export const homeProofPoints: HomeProofPoint[] = [
   {
     title: "Discovery",
     description:
-      "Earth, Books, and Games show how AI discovery can feel clearer across maps, reading, and entertainment, with each product built around navigation, context, and return-worthy browsing.",
+      "New ways to explore knowledge, places, and entertainment. Earth, Books, and Games extend Upcube into AI-powered discovery across the world, reading, and interactive entertainment.",
     href: "/products/earth",
     links: [
       { label: "Earth", href: "/products/earth" },
@@ -62,7 +62,7 @@ export const homeProofPoints: HomeProofPoint[] = [
   {
     title: "Education & Learning",
     description:
-      "Upcube University extends the ecosystem into AI education, product training, technical courses, and guided learning paths without overstating institutional status.",
+      "Learning designed for the AI era. Upcube University brings AI education, product training, technical courses, and guided learning paths into the ecosystem.",
     href: "/products/university",
     links: [
       { label: "Upcube University", href: "/products/university" },
@@ -75,17 +75,17 @@ export const homeProofPoints: HomeProofPoint[] = [
   {
     title: "Cloud & infrastructure",
     description:
-      "Upcube Cloud and VM Compute represent the cloud infrastructure layer behind the ecosystem, connecting developer tooling, compute workflows, and systems operations to the consumer-facing products.",
+      "The foundation behind every product. Upcube Cloud provides the shared infrastructure, developer tools, and delivery layer that power the Upcube product family.",
     href: "/products/cloud",
     links: [
       { label: "Cloud", href: "/products/cloud" },
-      { label: "VM Compute", href: "/products/vm" },
+      { label: "Compute", href: "/products/vm" },
     ],
   },
   {
     title: "Entertainment",
     description:
-      "Games gives the portfolio a dedicated entertainment surface, proving the company can apply product craft and structured discovery patterns beyond work software.",
+      "Consumer discovery at ambitious scale. Games and other entertainment surfaces show how Upcube pairs bold interfaces with broad, intelligent discovery experiences.",
     href: "/products/games",
     links: [
       { label: "Games", href: "/products/games" },
@@ -95,7 +95,7 @@ export const homeProofPoints: HomeProofPoint[] = [
   {
     title: "Computing",
     description:
-      "Upcube OS and Upcube Mobile OS represent the long-range computing ambition: AI operating systems designed around trust, clarity, and visible control.",
+      "A future direction for intelligent systems. VM Compute, Upcube OS, and Upcube Mobile OS define a broader path toward AI-native operating systems, virtualization, and next-generation computing.",
     href: "/products/upcube-os",
     links: [
       { label: "Upcube OS", href: "/products/upcube-os" },
@@ -108,7 +108,7 @@ export const featureBands: FeatureBand[] = [
   {
     title: "AI & Voice",
     description:
-      "UpcubeAI, Ethen, and Upcube Voice turn chat, research, artifacts, execution, and future private voice interaction into one connected AI and voice platform direction.",
+      "A connected intelligence layer for work, creation, and conversation. UpcubeAI, Ethen, and Upcube Voice bring chat, research, artifacts, execution, and future private voice interaction into one seamless AI platform direction.",
     href: "/products/upcube-ai",
     cta: "Explore UpcubeAI",
     tone: "green",
@@ -116,7 +116,7 @@ export const featureBands: FeatureBand[] = [
   {
     title: "Commerce",
     description:
-      "Ventari represents a premium AI commerce product line built for discovery, scale, and stronger product decision-making.",
+      "Commerce discovery, reimagined for scale. Ventari is a premium AI commerce product line built for large catalogs, smarter discovery, and more confident product decisions.",
     href: "/products/ventari",
     cta: "Explore Ventari",
     tone: "amber",
@@ -124,7 +124,7 @@ export const featureBands: FeatureBand[] = [
   {
     title: "Discovery",
     description:
-      "Earth, Books, and Games extend the company into AI discovery across geospatial, reading, and entertainment experiences.",
+      "New ways to explore knowledge, places, and entertainment. Earth, Books, and Games extend Upcube into AI-powered discovery across the world, reading, and interactive entertainment.",
     href: "/products/earth",
     cta: "Explore discovery products",
     tone: "teal",
@@ -132,7 +132,7 @@ export const featureBands: FeatureBand[] = [
   {
     title: "Education & Learning",
     description:
-      "Upcube University adds ecosystem learning through AI education, product training, technical courses, and guided learning paths.",
+      "Learning designed for the AI era. Upcube University brings AI education, product training, technical courses, and guided learning paths into the ecosystem.",
     href: "/products/university",
     cta: "Explore University",
     tone: "green",
@@ -140,7 +140,7 @@ export const featureBands: FeatureBand[] = [
   {
     title: "Cloud & Infrastructure",
     description:
-      "Upcube Cloud provides the shared cloud infrastructure and developer layer behind product delivery across the ecosystem.",
+      "The foundation behind every product. Upcube Cloud provides the shared infrastructure, developer tools, and delivery layer that power the Upcube product family.",
     href: "/products/cloud",
     cta: "Explore Cloud",
     tone: "blue",
@@ -148,7 +148,7 @@ export const featureBands: FeatureBand[] = [
   {
     title: "Computing",
     description:
-      "VM Compute, Upcube OS, and Upcube Mobile OS describe the company’s broader systems, AI operating systems, and future computing direction.",
+      "A future direction for intelligent systems. VM Compute, Upcube OS, and Upcube Mobile OS define a broader path toward AI-native operating systems, virtualization, and next-generation computing.",
     href: "/products/vm",
     cta: "View computing products",
     tone: "blue",
@@ -156,7 +156,7 @@ export const featureBands: FeatureBand[] = [
   {
     title: "Entertainment",
     description:
-      "Games and other consumer-facing surfaces show the company can pair ambitious interfaces with broad entertainment discovery ambition.",
+      "Consumer discovery at ambitious scale. Games and other entertainment surfaces show how Upcube pairs bold interfaces with broad, intelligent discovery experiences.",
     href: "/products/games",
     cta: "Explore Games",
     tone: "green",
@@ -167,56 +167,56 @@ export const stories: HomeLinkItem[] = [
   {
     title: "UpcubeAI workspace launch",
     description:
-      "How Ethen, research, artifacts, and tool flows come together in one AI workspace.",
+      "How Ethen brings research, artifacts, execution, and governed tool flows together in one serious AI workspace.",
     href: "/news/upcube-ai-launch",
     tag: "AI workspace",
   },
   {
     title: "Ventari commerce launch",
     description:
-      "A premium commerce story focused on large-scale search, product detail, and discovery momentum.",
+      "A premium commerce story built around large-scale search, richer product detail, and discovery momentum.",
     href: "/news/ventari-launch",
     tag: "AI commerce",
   },
   {
     title: "Upcube Earth launch story",
     description:
-      "A spatial discovery surface built around 3D globe exploration, layers, and place search.",
+      "A spatial discovery experience designed for 3D globe exploration, intelligent layers, terrain, and place search.",
     href: "/news/upcube-earth-launch",
     tag: "Discovery",
   },
   {
     title: "Upcube Books launch story",
     description:
-      "A calmer approach to book discovery, previews, and saved reading paths.",
+      "A calmer, more thoughtful way to discover books through previews, saved titles, and guided reading paths.",
     href: "/news/upcube-books-launch",
     tag: "Books",
   },
   {
     title: "Upcube Voice preview",
     description:
-      "The voice platform direction for future Upcube devices, built around private push-to-talk and real-time assistance.",
+      "A voice platform direction for future Upcube devices, centered on private push-to-talk, real-time assistance, and trusted interaction.",
     href: "/news/upcube-voice-preview",
     tag: "AI & Voice",
   },
   {
     title: "Upcube University preview",
     description:
-      "Learning paths, product training, and ecosystem education for the AI age.",
+      "Learning paths, product training, and ecosystem education designed for the AI age.",
     href: "/news/upcube-university-preview",
     tag: "Education & Learning",
   },
   {
     title: "Research direction",
     description:
-      "Editorial work on architecture, evaluation, and systems thinking across the product family.",
+      "Editorial work on architecture, evaluation, and systems thinking across the Upcube product family.",
     href: "/research",
     tag: "Research",
   },
   {
     title: "Research notes refresh",
     description:
-      "Editorial summaries for architecture, evaluation, and workflow experiments.",
+      "Fresh editorial summaries covering architecture, evaluation, workflow experiments, and product development progress.",
     href: "/research",
     tag: "Updates",
   },
