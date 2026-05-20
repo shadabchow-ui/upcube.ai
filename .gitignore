@@ -44,3 +44,9 @@ next-env.d.ts
 .wrangler/
 .vercel/
 out/
+
+# Build output
+.next/
+.open-next/
+out/
+.wrangler/
