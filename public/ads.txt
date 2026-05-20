@@ -1,0 +1,2 @@
+# UpcubeAI does not currently authorize third-party ad inventory sales for upcube.ai.
+# Add seller lines only after the ad provider and publisher IDs are confirmed.

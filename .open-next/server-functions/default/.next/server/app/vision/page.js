@@ -1,6 +1,6 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/vision/page.js")
-R.c("server/chunks/ssr/[root-of-the-server]__df48e341._.js")
-R.c("server/chunks/ssr/components_upcube-portal_41729522._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__1d8b7a38._.js")
+R.c("server/chunks/ssr/components_upcube-portal_cc433cb3._.js")
 R.c("server/chunks/ssr/_fdcfcd80._.js")
 R.c("server/chunks/ssr/72740_next_dist_8244f46f._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__428ada7b._.js")

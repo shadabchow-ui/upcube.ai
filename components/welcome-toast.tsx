@@ -21,6 +21,7 @@ export function WelcomeToast() {
             <a
               href="https://vercel.com/templates/next.js/nextjs-commerce"
               className="text-blue-600 hover:underline"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Deploy your own

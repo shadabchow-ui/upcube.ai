@@ -83,6 +83,12 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
     description: "AI-first mobile operating system overview.",
     productHref: "/products/upcube-mobile-os",
   },
+  {
+    id: "voice",
+    label: "Voice",
+    description: "AI voice platform for future Upcube devices.",
+    productHref: "/products/voice",
+  },
 ];
 
 export const upcubeLauncherApps = [

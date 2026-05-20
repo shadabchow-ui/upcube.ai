@@ -188,11 +188,12 @@ export {
 };
 
 export const upcubeCompanyIdentity: UpcubeCompanyIdentity = {
-  descriptor: "Artificial Intelligence Company",
+  descriptor: "AI & Voice Company",
   tagline: "The Next Frontier.",
-  oneLiner: "A technology company for the AI age.",
+  oneLiner:
+    "An AI and voice technology company building premium products for the next era of computing.",
   mission:
-    "UpCubeAI builds high-end products for work, discovery, commerce, infrastructure, entertainment, and the next era of computing.",
+    "UpCubeAI builds high-end products for AI & voice, discovery, commerce, infrastructure, entertainment, and the next era of computing.",
   vision:
     "The current product family is designed as the first proof of a broader intelligent technology ecosystem.",
   belief:
@@ -200,7 +201,7 @@ export const upcubeCompanyIdentity: UpcubeCompanyIdentity = {
   promise:
     "Build products that turn powerful systems into clear, trustworthy experiences without overstating what is live.",
   pillars: [
-    "AI",
+    "AI & Voice",
     "Commerce",
     "Discovery",
     "Cloud & Infrastructure",
@@ -240,81 +241,107 @@ export const portalAppLinks: PortalNavItem[] = [
 export const portalHomepageCards: PortalCardItem[] = [
   {
     id: "chat",
-    title: "AI",
+    title: "UpcubeAI",
     description:
-      "Assistant workspace for planning, research, and execution across the broader UpcubeAI platform.",
+      "An AI workspace for chat, research, artifacts, and execution that turns questions into durable work.",
     href: "/products/upcube-ai",
+    tag: "AI workspace",
   },
   {
     id: "globe",
     title: "Earth",
     description:
-      "3D Earth and geospatial workflows in the company’s discovery product line.",
+      "A 3D discovery product for maps, terrain, cities, and shareable world exploration.",
     href: "/products/earth",
+    tag: "Spatial discovery",
   },
   {
     id: "games",
     title: "Games",
     description:
-      "Games discovery and entertainment surfaces across the Upcube ecosystem.",
+      "An entertainment discovery surface for releases, genres, platforms, and recommendation paths.",
     href: "/products/games",
+    tag: "Entertainment",
   },
   {
     id: "books",
     title: "Books",
     description:
-      "Reading and publishing workflows with product-grade discovery and editorial depth.",
+      "A reading discovery product built for previews, saved titles, and editorial browsing.",
     href: "/products/books",
+    tag: "Knowledge discovery",
   },
   {
     id: "jobs",
     title: "Jobs",
     description:
-      "Hiring and opportunity workflows connected to the broader Upcube company story.",
+      "A company opportunity surface for career exploration and future hiring workflows.",
     href: "/products/jobs",
+    tag: "Opportunity",
   },
   {
     id: "cloud",
     title: "Cloud",
     description:
-      "Developer tooling and infrastructure workflows that support the wider product ecosystem.",
+      "The cloud infrastructure and tooling layer behind Upcube builders, systems, and product delivery.",
     href: "/products/cloud",
+    tag: "Cloud infrastructure",
   },
   {
     id: "ventari",
     title: "Ventari",
     description:
-      "A premium commerce product built for large-scale product discovery.",
+      "A premium AI commerce product built for large-scale search, product detail, and discovery.",
     href: "/products/ventari",
+    tag: "AI commerce",
   },
   {
     id: "vm",
     title: "VM Compute",
     description:
-      "Compute and virtualization direction for the platform layer behind future intelligent systems.",
+      "Compute, networking, storage, and virtualization workflows for the systems layer behind the ecosystem.",
     href: "/products/vm",
+    tag: "Compute",
   },
   {
     id: "upcube-os",
-    title: "OS",
+    title: "Upcube OS",
     description:
-      "Operating-system direction for premium computing experiences in the next era of AI.",
+      "An AI operating system direction for premium desktop computing with visible control and trust.",
     href: "/products/upcube-os",
+    tag: "AI operating system",
   },
   {
     id: "upcube-mobile-os",
     title: "Mobile OS",
     description:
-      "Mobile computing direction for intelligent, device-native product experiences.",
+      "An AI-native mobile computing direction focused on device trust, privacy, and clear interaction.",
     href: "/products/upcube-mobile-os",
+    tag: "Future computing",
+  },
+  {
+    id: "voice",
+    title: "Voice",
+    description:
+      "AI voice platform for future Upcube headphones, earbuds, home audio, car audio, and companion devices.",
+    href: "/products/voice",
+    tag: "AI & Voice",
   },
 ];
+
+const portalProductPageLinks: PortalNavItem[] = upcubeProductLinks.map(
+  (product) => ({
+    id: `${product.id}-footer`,
+    label: product.label,
+    href: product.productHref,
+  }),
+);
 
 export const portalFooterGroups: PortalFooterGroup[] = [
   {
     id: "apps",
     title: "Products",
-    links: portalAppLinks,
+    links: portalProductPageLinks,
   },
   {
     id: "terms-policies",

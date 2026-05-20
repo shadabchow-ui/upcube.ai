@@ -8,7 +8,8 @@ export type UpcubeProductSlug =
   | "ventari"
   | "vm"
   | "upcube-os"
-  | "upcube-mobile-os";
+  | "upcube-mobile-os"
+  | "voice";
 
 export type ProductAction = {
   label: string;
@@ -1150,6 +1151,118 @@ export const upcubeProducts: UpcubeProduct[] = [
     finalSecondaryAction: {
       label: "Read trust",
       href: "/trust",
+    },
+  },
+  {
+    slug: "voice",
+    name: "Upcube Voice",
+    eyebrow: "AI & Voice",
+    headline: "The voice platform for future Upcube devices.",
+    summary:
+      "Upcube Voice brings Ethen into future Upcube headphones, earbuds, home audio, car audio, and companion devices through private, real-time voice assistance built around user control.",
+    primaryAction: {
+      label: "Explore Voice",
+      href: "/news/upcube-voice-preview",
+    },
+    secondaryAction: {
+      label: "Explore UpcubeAI",
+      href: "/products/upcube-ai",
+    },
+    heroHighlights: [
+      "AI voice platform for future Upcube-manufactured devices, not a hardware launch claim.",
+      "Private push-to-talk with real-time assistance and no always-listening mode.",
+      "Backend-issued ephemeral sessions with no raw audio persisted.",
+    ],
+    availabilityNote:
+      "Hardware is not launched yet, and no public Voice site is available in this repo.",
+    signatureTitle:
+      "A voice platform foundation that stays intentional, private, and grounded in real product limits.",
+    signatureBody:
+      "Upcube Voice is presented as the AI voice platform for future Upcube devices. The public story stays focused on private interaction, real-time assistance, and claim discipline rather than launch availability.",
+    signatureCards: [
+      {
+        title: "Talk to Ethen naturally",
+        body: "Upcube Voice is framed around natural, real-time conversation that brings Ethen into future device experiences without turning the page into a launch claim.",
+      },
+      {
+        title: "Push-to-talk by design",
+        body: "Voice interaction is built around deliberate activation instead of an always-listening mode, keeping user control clear in the public story.",
+      },
+      {
+        title: "Built for future Upcube headphones and earbuds",
+        body: "The preview covers future Upcube-manufactured headphones and earbuds without claiming current public hardware availability or a live device storefront.",
+      },
+    ],
+    featureStories: [
+      {
+        title: "Home audio and car audio direction",
+        body: "The product direction extends beyond wearables to future home audio, car audio, and companion-device experiences while staying explicit that hardware is not launched yet.",
+      },
+      {
+        title: "Realtime conversation architecture",
+        body: "The platform direction is described as real-time voice assistance backed by ephemeral sessions, giving the product page a software-platform foundation without inventing a public service endpoint.",
+      },
+      {
+        title: "Privacy-first voice controls",
+        body: "Public copy stays constrained to private push-to-talk, no always-listening mode, and no raw audio persistence instead of overstating unseen backend or device behavior.",
+      },
+    ],
+    techCards: [
+      {
+        title: "Private push-to-talk sessions",
+        body: "Voice sessions are described as backend-issued and ephemeral, supporting real-time interaction without promising a public Voice service endpoint.",
+      },
+      {
+        title: "No always-listening mode",
+        body: "The preview language keeps activation user-driven rather than implying ambient listening or passive device monitoring.",
+      },
+      {
+        title: "No raw audio persisted",
+        body: "Public copy stays limited to the stated privacy boundary that raw audio is not persisted.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Voice across the Upcube ecosystem",
+        body: "The platform direction connects future headphones, earbuds, home audio, car audio, and companion devices to the broader Upcube product family through one assistant relationship.",
+      },
+      {
+        title: "Ask for help on the move",
+        body: "Future device experiences can make it easier to get quick answers and assistance while staying within a deliberate push-to-talk interaction model.",
+      },
+      {
+        title: "Keep privacy expectations clear",
+        body: "The preview sets expectations around explicit activation, ephemeral sessions, and no raw audio persistence rather than overstating readiness or hardware availability.",
+      },
+    ],
+    ecosystemLinks: [
+      {
+        title: "UpcubeAI",
+        body: "See the assistant and workspace platform behind the Voice direction.",
+        href: "/products/upcube-ai",
+      },
+      {
+        title: "Upcube Mobile OS",
+        body: "Connect the voice preview to the broader mobile and device computing direction.",
+        href: "/products/upcube-mobile-os",
+      },
+      {
+        title: "Upcube OS",
+        body: "Follow the trust-first operating-system direction for future device experiences.",
+        href: "/products/upcube-os",
+      },
+    ],
+    finalCtaTitle:
+      "Preview the voice direction without overstating launch status.",
+    finalCtaBody:
+      "Upcube Voice remains a platform preview for future Upcube devices, with hardware not launched yet and no public Voice site in this repo.",
+    finalPrimaryAction: {
+      label: "Read the preview",
+      href: "/news/upcube-voice-preview",
+    },
+    finalSecondaryAction: {
+      label: "Explore UpcubeAI",
+      href: "/products/upcube-ai",
     },
   },
 ];

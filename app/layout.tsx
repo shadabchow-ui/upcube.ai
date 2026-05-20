@@ -3,6 +3,11 @@ import { CartProvider } from "components/cart/cart-context";
 import { Navbar } from "components/layout/navbar";
 import { GeistSans } from "geist/font/sans";
 import { getCart } from "lib/shopify";
+import {
+  canonicalBaseUrl,
+  DEFAULT_SITE_DESCRIPTION,
+  DEFAULT_SITE_TITLE,
+} from "lib/upcube-seo/metadata";
 import { ReactNode } from "react";
 import localFont from "next/font/local";
 import { Toaster } from "sonner";
@@ -11,8 +16,6 @@ import "./styles/upcube-type-system.css";
 import "./styles/upcube-news.css";
 import "./styles/upcube-portal.css";
 import "./styles/upcube-universal-header.css";
-
-const canonicalBaseUrl = "https://upcube.ai";
 
 const upcubeInter = localFont({
   src: [
@@ -31,9 +34,11 @@ const upcubeInter = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL(canonicalBaseUrl),
-  title: "UpCubeAI | Artificial Intelligence Company",
-  description:
-    "Artificial intelligence company building consumer apps, product experiences, and research across the Upcube ecosystem.",
+  title: DEFAULT_SITE_TITLE,
+  description: DEFAULT_SITE_DESCRIPTION,
+  alternates: {
+    canonical: canonicalBaseUrl,
+  },
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
@@ -42,6 +47,20 @@ export const metadata: Metadata = {
   robots: {
     follow: true,
     index: true,
+  },
+  openGraph: {
+    title: DEFAULT_SITE_TITLE,
+    description: DEFAULT_SITE_DESCRIPTION,
+    url: canonicalBaseUrl,
+    siteName: "UpCubeAI",
+    type: "website",
+    images: [{ url: "/icon.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_SITE_TITLE,
+    description: DEFAULT_SITE_DESCRIPTION,
+    images: ["/icon.png"],
   },
 };
 

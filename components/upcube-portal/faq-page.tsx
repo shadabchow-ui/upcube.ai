@@ -1,16 +1,19 @@
 import Link from "next/link";
 
+import { JsonLd } from "components/upcube-seo/json-ld";
 import { PortalFooter } from "components/upcube-portal/portal-footer";
 import { PortalHeader } from "components/upcube-portal/portal-header";
 import { PortalShell } from "components/upcube-portal/portal-shell";
 import { SectionHeading } from "components/upcube-portal/section-heading";
 import { faqItems } from "lib/upcube-portal/content";
+import { createFaqPageJsonLd } from "lib/upcube-seo/jsonld";
 
 export function FaqPage() {
   return (
     <PortalShell>
       <PortalHeader />
       <main className="uc-main">
+        <JsonLd data={createFaqPageJsonLd(faqItems)} />
         <section className="uc-section uc-hero-section">
           <div className="uc-shell uc-hero-grid">
             <div className="uc-hero-copy">

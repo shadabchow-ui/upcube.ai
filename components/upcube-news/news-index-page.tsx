@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { JsonLd } from "components/upcube-seo/json-ld";
 import { PortalFooter } from "components/upcube-portal/portal-footer";
 import { PortalHeader } from "components/upcube-portal/portal-header";
 import { PortalShell } from "components/upcube-portal/portal-shell";
@@ -8,6 +9,7 @@ import {
   upcubeNewsLaunchArticles,
   upcubeNewsPreviewArticles,
 } from "lib/upcube-news/news";
+import { createCollectionPageJsonLd } from "lib/upcube-seo/jsonld";
 import { NewsCard } from "./news-card";
 
 export function NewsIndexPage() {
@@ -15,6 +17,14 @@ export function NewsIndexPage() {
     <PortalShell className="uc-news-page">
       <PortalHeader />
       <main>
+        <JsonLd
+          data={createCollectionPageJsonLd({
+            title: "Upcube News",
+            description:
+              "Launch stories and product previews across UpcubeAI, Voice, Ventari, Books, Earth, Games, Jobs, Cloud, VM Compute, Upcube OS, and Upcube Mobile OS.",
+            path: "/news",
+          })}
+        />
         <section className="uc-news-hero">
           <div className="uc-shell uc-news-hero__grid">
             <div className="uc-news-hero__copy">
@@ -24,8 +34,8 @@ export function NewsIndexPage() {
               </h1>
               <p className="uc-news-hero__lead">
                 Explore launch stories, product previews, and the connected
-                tools shaping Upcube across AI, commerce, discovery, cloud,
-                compute, operating systems, and consumer applications.
+                tools shaping Upcube across AI, voice, commerce, discovery,
+                cloud, compute, operating systems, and consumer applications.
               </p>
               <div className="uc-news-hero__actions">
                 <Link
@@ -91,11 +101,12 @@ export function NewsIndexPage() {
             <div className="uc-news-section__head">
               <p className="uc-eyebrow">Product Preview</p>
               <h2>
-                Preview the operating systems in the broader Upcube vision.
+                Preview future Upcube platforms across voice and operating
+                systems.
               </h2>
               <p>
-                Upcube OS and Upcube Mobile OS use public consumer release
-                planned for 2028 language and route readers to their product
+                Upcube Voice, Upcube OS, and Upcube Mobile OS stay framed as
+                product-preview surfaces that route readers to internal product
                 pages instead of launch apps.
               </p>
             </div>

@@ -1,8 +1,10 @@
 import Link from "next/link";
 
+import { JsonLd } from "components/upcube-seo/json-ld";
 import { PortalFooter } from "components/upcube-portal/portal-footer";
 import { PortalHeader } from "components/upcube-portal/portal-header";
 import { PortalShell } from "components/upcube-portal/portal-shell";
+import { createArticleJsonLd } from "lib/upcube-seo/jsonld";
 import {
   getRelatedUpcubeNewsArticles,
   type UpcubeNewsArticle,
@@ -20,6 +22,7 @@ export function NewsArticlePage({ article }: NewsArticlePageProps) {
     <PortalShell className="uc-news-article-page">
       <PortalHeader />
       <main>
+        <JsonLd data={createArticleJsonLd(article)} />
         <article className="uc-news-article">
           <div className="uc-shell uc-news-article__hero">
             <div className="uc-news-article__hero-copy">

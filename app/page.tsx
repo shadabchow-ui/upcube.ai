@@ -1,14 +1,30 @@
 import "app/styles/upcube-home.css";
+import { JsonLd } from "components/upcube-seo/json-ld";
 import UpcubeHomePage from "components/upcube-home/home-page";
+import { upcubeCompanyIdentity } from "lib/upcube-portal/content";
+import {
+  createOrganizationJsonLd,
+  createWebSiteJsonLd,
+} from "lib/upcube-seo/jsonld";
+import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
-export const metadata = {
+export const metadata = createBasicPageMetadata({
+  title: "UpCubeAI | AI & Voice Company",
   description:
-    "UpcubeAI ecosystem portal for Ethen, Earth, Books, Games, Jobs, Cloud, Ventari, research, and product pages across Upcube.",
-  openGraph: {
-    type: "website",
-  },
-};
+    "UpCubeAI is an AI and voice technology company building high-end products for work, voice, discovery, commerce, cloud infrastructure, entertainment, and the future of computing.",
+  path: "/",
+});
 
 export default function HomePage() {
-  return <UpcubeHomePage />;
+  return (
+    <>
+      <JsonLd
+        data={[
+          createOrganizationJsonLd(upcubeCompanyIdentity),
+          createWebSiteJsonLd(),
+        ]}
+      />
+      <UpcubeHomePage />
+    </>
+  );
 }

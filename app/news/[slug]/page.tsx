@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { NewsArticlePage } from "components/upcube-news/news-article-page";
+import { createNewsArticleMetadata } from "lib/upcube-seo/metadata";
 import {
   getUpcubeNewsArticleBySlug,
   upcubeNewsArticles,
@@ -19,14 +20,11 @@ export async function generateMetadata(props: {
 
   if (!article) {
     return {
-      title: "News article not found | Upcube",
+      title: "News article not found | UpCubeAI",
     };
   }
 
-  return {
-    title: article.seoTitle,
-    description: article.seoDescription,
-  };
+  return createNewsArticleMetadata(article);
 }
 
 export default async function NewsArticleRoute(props: {

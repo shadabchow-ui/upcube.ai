@@ -580,6 +580,62 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
       { name: "Upcube Books", href: "/products/books" },
     ],
   },
+  {
+    slug: "upcube-voice-preview",
+    href: "/news/upcube-voice-preview",
+    productName: "Upcube Voice",
+    category: "Product Preview",
+    dateLabel: "Recent update",
+    headline:
+      "Previewing Upcube Voice: the voice platform for future Upcube devices",
+    excerpt:
+      "Upcube Voice is a preview of the AI voice platform for future Upcube-manufactured devices, centered on private push-to-talk interaction, real-time assistance, ephemeral sessions, and no raw audio persistence.",
+    heroSummary:
+      "Upcube Voice is presented as the voice platform for future Upcube headphones, earbuds, home audio, car audio, and companion devices, with hardware not launched yet and no public Voice site in this repo.",
+    primaryCtaLabel: "Explore Voice",
+    primaryCtaHref: "/products/voice",
+    productPageUrl: "/products/voice",
+    seoTitle: "Previewing Upcube Voice | Future Upcube Devices",
+    seoDescription:
+      "Read the Upcube Voice preview for future Upcube devices, private push-to-talk interaction, backend-issued ephemeral sessions, and no raw audio persistence.",
+    finalCtaTitle:
+      "Follow the voice direction through the product preview, not a launch claim.",
+    finalCtaBody:
+      "Upcube Voice stays framed as a future-device preview with claim discipline around hardware readiness, public availability, and service URLs.",
+    sections: [
+      {
+        eyebrow: "The preview",
+        title: "The voice platform for future Upcube devices",
+        body: "Upcube Voice is described as the AI voice platform for future Upcube-manufactured devices. The page avoids claiming that hardware is launched or that a public Voice site exists today.",
+      },
+      {
+        eyebrow: "Control",
+        title: "Voice assistance built around control",
+        body: "The public story centers on deliberate push-to-talk activation and real-time assistance, while explicitly avoiding an always-listening mode claim.",
+      },
+      {
+        eyebrow: "Realtime conversation",
+        title: "Realtime conversation without always-listening",
+        body: "The platform direction is framed around real-time voice help with clear session boundaries, keeping user control visible instead of implying ambient listening.",
+      },
+      {
+        eyebrow: "Device direction",
+        title:
+          "Built for future Upcube headphones, earbuds, home audio, car audio, and companion devices",
+        body: "The preview names the future device categories directly without drifting into generic any-headphones positioning or current retail availability claims.",
+      },
+      {
+        eyebrow: "Ecosystem",
+        title: "How Voice fits the Upcube ecosystem",
+        body: "Upcube Voice is positioned as the future device layer that brings Ethen into broader Upcube experiences, while staying grounded that the hardware is not launched yet and the public destination remains the product preview page.",
+      },
+    ],
+    relatedProducts: [
+      { name: "UpcubeAI", href: "/products/upcube-ai" },
+      { name: "Upcube Mobile OS", href: "/products/upcube-mobile-os" },
+      { name: "Upcube OS", href: "/products/upcube-os" },
+    ],
+  },
 ];
 
 export const featuredUpcubeNewsArticle: UpcubeNewsArticle =

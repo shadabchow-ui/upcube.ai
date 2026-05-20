@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { HeroChatPanel, HOME_CHAT_CTA_HREF } from "./hero-chat-panel";
-import { featureBands, stories } from "lib/upcube-home/content";
+import {
+  featureBands,
+  homeNarrativeSections,
+  homeProofPoints,
+  stories,
+} from "lib/upcube-home/content";
 import {
   portalHomepageCards,
   upcubeCompanyIdentity,
@@ -8,8 +13,22 @@ import {
 import { PortalFooter } from "components/upcube-portal/portal-footer";
 import { PortalHeader } from "components/upcube-portal/portal-header";
 
-function LinkMeta({ placeholder }: { placeholder?: boolean }) {
-  return placeholder ? <small>Placeholder destination</small> : null;
+function LinkMeta({
+  placeholder,
+  tag,
+}: {
+  placeholder?: boolean;
+  tag?: string;
+}) {
+  if (placeholder) {
+    return <small>Placeholder destination</small>;
+  }
+
+  if (tag) {
+    return <small className="uc-home__chip">{tag}</small>;
+  }
+
+  return null;
 }
 
 function Hero() {
@@ -19,7 +38,7 @@ function Hero() {
         <div className="uc-home__hero-stack">
           <h1>What can I help with?</h1>
           <p className="uc-home__lead">
-            {upcubeCompanyIdentity.oneLiner} High-end AI products for work,
+            {upcubeCompanyIdentity.oneLiner} High-end products for AI & voice,
             discovery, commerce, infrastructure, entertainment, and computing.
           </p>
           <HeroChatPanel />
@@ -39,7 +58,7 @@ export default function UpcubeHomePage() {
         <section className="uc-home__section" aria-labelledby="portal-title">
           <div className="uc-home__container">
             <h2 id="portal-title" className="uc-home__section-title-centered">
-              Get Started with UpCube
+              Explore the UpCubeAI product family
             </h2>
             <div className="uc-home__portal-grid">
               {portalHomepageCards.map((card) => (
@@ -48,10 +67,42 @@ export default function UpcubeHomePage() {
                   href={card.href}
                   key={card.id}
                 >
+                  <LinkMeta tag={card.tag} />
                   <h3>{card.title}</h3>
                   <p>{card.description}</p>
+                  <span className="uc-home__card-link">
+                    View product details
+                  </span>
                   <LinkMeta placeholder={card.href === "#"} />
                 </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="uc-home__section"
+          aria-labelledby="company-story-title"
+        >
+          <div className="uc-home__container">
+            <h2 id="company-story-title">What UpCubeAI is building</h2>
+            <div className="uc-home__narrative-grid">
+              {homeNarrativeSections.map((section) => (
+                <article
+                  className="uc-home__narrative-card"
+                  key={section.title}
+                >
+                  <p className="uc-home__eyebrow">{section.eyebrow}</p>
+                  <h3>{section.title}</h3>
+                  <p>{section.body}</p>
+                  <div className="uc-home__inline-links">
+                    {section.links.map((item) => (
+                      <Link href={item.href} key={item.href}>
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </article>
               ))}
             </div>
           </div>
@@ -60,7 +111,7 @@ export default function UpcubeHomePage() {
         <section className="uc-home__section" aria-labelledby="feature-title">
           <div className="uc-home__container">
             <h2 id="feature-title">
-              Building the next generation of intelligent technology.
+              A product ecosystem for the AI and voice age
             </h2>
             <div className="uc-home__feature-grid">
               {featureBands.map((band) => (
@@ -72,6 +123,32 @@ export default function UpcubeHomePage() {
                   <p>{band.description}</p>
                   <Link href={band.href}>{band.cta}</Link>
                   <LinkMeta placeholder={band.href === "#"} />
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="uc-home__section" aria-labelledby="proof-title">
+          <div className="uc-home__container">
+            <div className="uc-home__section-head-row">
+              <h2 id="proof-title">
+                Intelligence across work, voice, commerce, discovery, cloud, and
+                computing
+              </h2>
+            </div>
+            <div className="uc-home__proof-grid">
+              {homeProofPoints.map((item) => (
+                <article className="uc-home__proof-card" key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <div className="uc-home__inline-links">
+                    {item.links.map((link) => (
+                      <Link href={link.href} key={link.href}>
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
                 </article>
               ))}
             </div>
@@ -93,6 +170,7 @@ export default function UpcubeHomePage() {
                   href={story.href}
                   key={story.title}
                 >
+                  <LinkMeta tag={story.tag} />
                   <h3>{story.title}</h3>
                   <p>{story.description}</p>
                   <LinkMeta placeholder={story.href === "#"} />
@@ -107,7 +185,13 @@ export default function UpcubeHomePage() {
           aria-labelledby="cta-title"
         >
           <div className="uc-home__container">
-            <h2 id="cta-title">Explore the Upcube ecosystem.</h2>
+            <h2 id="cta-title">See how the product family connects</h2>
+            <p className="uc-home__cta-copy">
+              Start in Ethen, then move through product pages, launch stories,
+              and research to see how UpCubeAI connects AI workspaces, voice
+              platforms, commerce, discovery, cloud infrastructure,
+              entertainment, and future computing.
+            </p>
             <div className="uc-home__cta-row">
               <Link href={HOME_CHAT_CTA_HREF} className="uc-home__primary-btn">
                 Try Ethen

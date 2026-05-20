@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   portalFooterGroups,
   portalSocialLinks,
+  upcubeCompanyIdentity,
 } from "lib/upcube-portal/content";
 
 function SocialIcon({ label }: { label: string }) {
@@ -70,7 +71,7 @@ export function PortalFooter() {
             <div>
               <p className="uc-footer-brand-text">UpcubeAI</p>
               <p className="uc-footer-brand-subtitle">
-                Artificial Intelligence Company
+                {upcubeCompanyIdentity.descriptor}
               </p>
               <p className="uc-footer-brand-tagline">The Next Frontier.</p>
             </div>

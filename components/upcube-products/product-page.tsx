@@ -1,8 +1,10 @@
 import Link from "next/link";
 
+import { JsonLd } from "components/upcube-seo/json-ld";
 import { PortalFooter } from "components/upcube-portal/portal-footer";
 import { PortalHeader } from "components/upcube-portal/portal-header";
 import { PortalShell } from "components/upcube-portal/portal-shell";
+import { createProductJsonLd } from "lib/upcube-seo/jsonld";
 import type {
   ProductCard,
   ProductLinkCard,
@@ -50,10 +52,13 @@ function EcosystemGrid({ items }: { items: ProductLinkCard[] }) {
 }
 
 export function ProductPage({ product }: ProductPageProps) {
+  const productSchemas = createProductJsonLd(product);
+
   return (
     <PortalShell>
       <PortalHeader />
       <main className={styles.page} data-product={product.slug}>
+        <JsonLd data={productSchemas} />
         <section className={styles.heroSection}>
           <div className="uc-shell">
             <div className={styles.heroShell}>
