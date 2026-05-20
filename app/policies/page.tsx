@@ -1,14 +1,32 @@
 import type { Metadata } from "next";
 
-import { FoundationPage } from "components/upcube-portal/foundation-page";
-import { policiesPageContent } from "lib/upcube-portal/foundation-pages";
+import { LongformPage } from "components/upcube-portal/longform-page";
+import { getBodyForRoute } from "lib/upcube-portal/page-content";
+import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Other Policies | UpcubeAI",
+export const metadata: Metadata = createBasicPageMetadata({
+  title: "Policy | UpcubeAI",
   description:
-    "Policy index page for current placeholder-safe UpcubeAI routes.",
-};
+    "Additional policy pages covering UpcubeAI safety, trust, and responsible AI.",
+  path: "/policies",
+});
 
 export default function PoliciesRoutePage() {
-  return <FoundationPage content={policiesPageContent} />;
+  const body = getBodyForRoute("/legal/other-policies");
+
+  return (
+    <LongformPage
+      entry={{
+        slug: "other-policies",
+        order: 99,
+        title: "Policy",
+        subtitle: "",
+        description: "Additional policy surfaces across the UpcubeAI portal.",
+        body,
+        category: "trust",
+      }}
+      backHref="/legal"
+      backLabel="Back to Legal"
+    />
+  );
 }

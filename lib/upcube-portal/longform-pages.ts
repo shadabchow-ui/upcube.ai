@@ -14,10 +14,10 @@ export const researchLongformPages: LongformPageEntry[] = [
   {
     slug: "earth-ai-geospatial-intelligence",
     order: 1,
-    title: "Upcube Earth AI",
+    title: "Spatial Intelligence",
     subtitle: "A new layer of intelligence for understanding the world.",
     description:
-      "Upcube Earth AI is the research direction behind Upcube’s spatial discovery work — a long-range effort to make maps, terrain, cities, layers, movement, environmental signals, and place-based context easier to understand through AI.",
+      "Spatial Intelligence is Upcube’s research direction for geospatial AI — a long-range effort to make maps, terrain, cities, layers, movement, environmental signals, and place-based context easier to understand through AI.",
     body: `# Upcube Earth AI
 
 ## A new layer of intelligence for understanding the world.
@@ -467,11 +467,11 @@ The AI workspace where users can turn spatial findings into research notes, plan
 
 The infrastructure layer for future geospatial processing, provider integrations, APIs, and scalable data workflows.
 
-### VM Compute
+### Compute
 
 Compute workflows for heavier geospatial tasks, experiments, simulations, or processing pipelines.
 
-### Upcube University
+### Upcube Education
 
 Learning paths for geospatial AI, spatial analysis, map interfaces, and Earth intelligence.
 
@@ -557,9 +557,9 @@ Bring spatial research into Ethen, artifacts, planning, and workspace execution.
 Follow the infrastructure and developer layer behind scalable spatial products.  
 **Explore Cloud**
 
-### VM Compute  
+### Compute  
 Explore compute workflows for systems, simulations, and geospatial processing.  
-**Explore VM Compute**
+**Explore Compute**
 
 ### Societal Impact  
 See how spatial AI can support learning, resilience, discovery, and meaningful real-world challenges.  
@@ -584,7 +584,7 @@ Upcube Earth AI is built around that direction:
   {
     slug: "health-ai",
     order: 2,
-    title: "Upcube Health AI",
+    title: "Health Knowledge",
     subtitle:
       "AI for clearer health knowledge, research, and responsible discovery.",
     description:
@@ -762,7 +762,7 @@ Health knowledge should be easier to understand.
 
 AI can help learners explore anatomy, biology, public health, nutrition concepts, medical terminology, research methods, and health policy in a structured way.
 
-Upcube University can eventually support health-learning pathways as part of broader AI education and guided learning.
+Upcube Education can eventually support health-learning pathways as part of broader AI education and guided learning.
 
 ### Research direction
 
@@ -858,7 +858,7 @@ Workflows for scanning papers, extracting findings, comparing evidence, and crea
 
 ### Health learning pathways
 
-Guided Upcube University tracks for biology, public health, AI in healthcare, responsible health data use, and evidence-based reasoning.
+Guided Upcube Education tracks for biology, public health, AI in healthcare, responsible health data use, and evidence-based reasoning.
 
 ### Geospatial public health context
 
@@ -936,7 +936,7 @@ A guide for developers on privacy, evaluation, safety, human review, and claim d
 
 ### Helping more people understand complex health concepts.
 
-How Upcube University can support health literacy, biology learning, public health basics, and responsible AI education.
+How Upcube Education can support health literacy, biology learning, public health basics, and responsible AI education.
 
 **Read the blog**
 
@@ -1008,7 +1008,7 @@ Researchers may use UpcubeAI to summarize papers, compare findings, organize cit
 
 ### Learning health concepts with more structure.
 
-Upcube University can support guided learning in biology, public health, evidence review, and responsible AI use in health contexts.
+Upcube Education can support guided learning in biology, public health, evidence review, and responsible AI use in health contexts.
 
 ---
 
@@ -1044,7 +1044,7 @@ Developers may use UpcubeAI research guidance to understand privacy, evaluation,
 
 The AI workspace for research, source-aware summaries, artifacts, review workflows, and structured outputs.
 
-### Upcube University
+### Upcube Education
 
 Learning paths for health literacy, AI in health, public health concepts, and responsible health AI development.
 
@@ -1056,7 +1056,7 @@ Spatial context for access, infrastructure, environment, resilience, and public-
 
 Infrastructure direction for secure, scalable, and observable AI workflows.
 
-### VM Compute
+### Compute
 
 Compute workflows for future research experiments, evaluation pipelines, and data-processing tasks.
 
@@ -1112,7 +1112,7 @@ Support source-aware summarization, paper comparison, research artifacts, and ci
 
 ### Phase 3: Health education paths
 
-Develop Upcube University learning tracks for health literacy, AI in healthcare, public health, and evidence review.
+Develop Upcube Education learning tracks for health literacy, AI in healthcare, public health, and evidence review.
 
 ### Phase 4: Geospatial health context
 
@@ -1136,9 +1136,9 @@ Prepare the documentation, controls, and review standards needed before any real
 Use Ethen for research, source-aware summaries, artifacts, and structured health knowledge workflows.  
 **Explore UpcubeAI**
 
-### Upcube University  
+### Upcube Education  
 Learning paths for AI education, health literacy, technical courses, and guided study.  
-**Explore University**
+**Explore Education**
 
 ### Upcube Earth AI  
 Spatial intelligence for terrain, access, infrastructure, and public-health context.  
@@ -1173,7 +1173,7 @@ Upcube Health AI is built around that direction:
   {
     slug: "science-ai",
     order: 3,
-    title: "Upcube Science AI",
+    title: "Discovery Science",
     subtitle:
       "AI for discovery, research, and the next generation of scientific tools.",
     description:
@@ -1263,7 +1263,7 @@ Scientific workflows are often slow because they require moving between papers, 
 
 AI can help reduce that friction.
 
-Upcube Science AI can become a research layer across the Upcube ecosystem — connecting Ethen’s workspace, Upcube University’s learning paths, Upcube Cloud’s infrastructure direction, VM Compute’s compute workflows, Upcube Earth AI’s spatial context, and Upcube Books’ knowledge discovery.
+Upcube Science AI can become a research layer across the Upcube ecosystem — connecting Ethen’s workspace, Upcube Education’s learning paths, Upcube Cloud’s infrastructure direction, Compute’s compute workflows, Upcube Earth AI’s spatial context, and Upcube Books’ knowledge discovery.
 
 ### Research assistance
 
@@ -1452,7 +1452,7 @@ Encourage verification for important results.
 
 ### Product direction
 
-Upcube University and Ethen can help users build stronger scientific reasoning skills through guided, reviewable explanations.
+Upcube Education and Ethen can help users build stronger scientific reasoning skills through guided, reviewable explanations.
 
 ---
 
@@ -1594,7 +1594,7 @@ A research note on AI-assisted notebooks, analysis scripts, reproducibility, vis
 
 ### Making complex life-science concepts easier to study.
 
-How Upcube University and Ethen can help users understand biology, genomics, neuroscience, and research methods.
+How Upcube Education and Ethen can help users understand biology, genomics, neuroscience, and research methods.
 
 **Read the blog**
 
@@ -1759,7 +1759,7 @@ Developers can use UpcubeAI guidance to design research tools that support revie
 
 The AI workspace for research questions, literature summaries, artifacts, citations, scientific coding, and structured outputs.
 
-### Upcube University
+### Upcube Education
 
 Learning paths for scientific topics, AI education, research methods, technical courses, and guided study.
 
@@ -1775,7 +1775,7 @@ Spatial intelligence for environmental science, terrain, climate context, resili
 
 Infrastructure direction for data workflows, model experiments, APIs, evaluation, and scientific systems.
 
-### VM Compute
+### Compute
 
 Compute workflows for simulations, notebooks, analysis pipelines, and future research experiments.
 
@@ -1833,7 +1833,7 @@ Support paper summaries, citation tables, method comparisons, evidence maps, and
 
 ### Phase 3: Scientific learning paths
 
-Build Upcube University tracks for biology, earth science, scientific computing, statistics, AI in science, and research methods.
+Build Upcube Education tracks for biology, earth science, scientific computing, statistics, AI in science, and research methods.
 
 ### Phase 4: Empirical software workflows
 
@@ -1880,9 +1880,9 @@ Upcube Science AI should strengthen that process, not shortcut it.
 Use Ethen for research, artifacts, scientific coding, source-aware summaries, and structured outputs.  
 **Explore UpcubeAI**
 
-### Upcube University  
+### Upcube Education  
 Guided learning paths for AI education, science, research methods, and technical courses.  
-**Explore University**
+**Explore Education**
 
 ### Upcube Earth AI  
 Spatial intelligence for environmental science, terrain, map layers, and place-based research.  
@@ -1921,7 +1921,7 @@ Upcube Science AI is built around that direction:
   {
     slug: "sustainability-crisis-resilience",
     order: 4,
-    title: "Upcube Sustainability & Crisis Resilience AI",
+    title: "Planet Resilience",
     subtitle: "AI for a more sustainable, resilient future.",
     description:
       "The world is facing harder questions about climate, infrastructure, natural hazards, cities, transportation, energy, land use, and community resilience.",
@@ -1972,7 +1972,7 @@ Use Upcube Earth AI to connect geography, terrain, overlays, and shareable views
 
 ### Sustainability learning
 
-Use Upcube University and Ethen to teach climate, infrastructure, environmental science, and responsible AI workflows.
+Use Upcube Education and Ethen to teach climate, infrastructure, environmental science, and responsible AI workflows.
 
 ### Human authority
 
@@ -1992,8 +1992,8 @@ UpcubeAI’s sustainability research direction connects several parts of the eco
 
 Upcube Earth AI for spatial context.  
 Upcube Science AI for environmental research.  
-Upcube Cloud and VM Compute for systems and data workflows.  
-Upcube University for sustainability education.  
+Upcube Cloud and Compute for systems and data workflows.  
+Upcube Education for sustainability education.  
 Ethen for turning research into plans, reports, and artifacts.
 
 The long-term goal is to help people move from environmental information to clearer decisions — without overstating what the product can prove.
@@ -2355,7 +2355,7 @@ Organizations may use AI-assisted map workflows to summarize terrain, access, pu
 
 ### Learning climate and environmental science through maps.
 
-Upcube University and Upcube Earth AI can support guided lessons on terrain, climate, water, cities, biodiversity, and sustainability.
+Upcube Education and Upcube Earth AI can support guided lessons on terrain, climate, water, cities, biodiversity, and sustainability.
 
 ---
 
@@ -2395,11 +2395,11 @@ The research layer for environmental science, complex systems, climate education
 
 The infrastructure direction for data workflows, APIs, hosting, observability, and scalable systems.
 
-### VM Compute
+### Compute
 
 Compute workflows for simulations, data processing, geospatial experiments, and research pipelines.
 
-### Upcube University
+### Upcube Education
 
 Learning paths for climate literacy, environmental science, crisis resilience, geospatial AI, and sustainability operations.
 
@@ -2449,7 +2449,7 @@ Create public pages for Earth AI, Sustainability & Crisis Resilience AI, Science
 
 ### Phase 2: Environmental learning paths
 
-Build Upcube University tracks for climate, sustainability, terrain, water systems, mobility, biodiversity, and crisis preparedness concepts.
+Build Upcube Education tracks for climate, sustainability, terrain, water systems, mobility, biodiversity, and crisis preparedness concepts.
 
 ### Phase 3: Spatial research artifacts
 
@@ -2518,7 +2518,7 @@ Upcube Sustainability & Crisis Resilience AI is built around that direction:
   {
     slug: "algorithms-and-theory",
     order: 5,
-    title: "Upcube Algorithms and Theory",
+    title: "Core Intelligence",
     subtitle: "The invisible systems that make intelligent products work.",
     description: "Every great AI product depends on more than the model.",
     body: `# Upcube Algorithms and Theory
@@ -2595,7 +2595,7 @@ The user should not have to understand scheduling, ranking, routing, graph searc
 Search is one of the most important product experiences in the Upcube ecosystem.
 
 Books needs search across titles, authors, subjects, previews, and saved reading paths.  
-Ventari needs search across massive product catalogs.  
+Upcube Shopping needs search across massive product catalogs.  
 Games needs search across releases, platforms, genres, studios, and franchises.  
 Jobs needs search across roles, companies, locations, skills, and opportunity signals.  
 Earth needs search across places, terrain, cities, and overlays.  
@@ -2680,11 +2680,11 @@ Recommendations can make a product feel alive — or make it feel manipulative.
 
 UpcubeAI should treat recommendations as a clarity tool. The goal is to help users keep moving through a catalog, topic, or workflow when they are ready for the next step.
 
-Ventari can recommend related products.  
+Upcube Shopping can recommend related products.  
 Games can recommend similar titles.  
 Books can recommend reading paths.  
 Jobs can recommend related roles.  
-University can recommend learning paths.  
+Education can recommend learning paths.  
 Earth can recommend nearby places or related layers.  
 Ethen can recommend next actions or artifact formats.
 
@@ -2710,8 +2710,8 @@ Recommendations should create momentum, not clutter.
 Market systems appear across the Upcube ecosystem.
 
 Jobs can match candidates with roles.  
-Ventari can match shoppers with products.  
-University can match learners with courses.  
+Upcube Shopping can match shoppers with products.  
+Education can match learners with courses.  
 Cloud can match workloads with compute resources.  
 Future enterprise products may match teams, agents, tools, and tasks.
 
@@ -2761,7 +2761,7 @@ AI should not be trusted because it sounds fluent. It should earn trust through 
 
 AI products depend on infrastructure that can route, schedule, monitor, and recover.
 
-Upcube Cloud and VM Compute create a natural research area for infrastructure algorithms: resource allocation, load balancing, storage placement, networking, autoscaling, queue management, job scheduling, model routing, and fault recovery.
+Upcube Cloud and Compute create a natural research area for infrastructure algorithms: resource allocation, load balancing, storage placement, networking, autoscaling, queue management, job scheduling, model routing, and fault recovery.
 
 ### Research direction
 
@@ -2863,7 +2863,7 @@ A plain-language introduction to search, ranking, routing, scheduling, recommend
 
 ### Making huge catalogs feel simple.
 
-How UpcubeAI can design search and ranking for Books, Games, Jobs, Ventari, Earth, and Ethen.
+How UpcubeAI can design search and ranking for Books, Games, Jobs, Upcube Shopping, Earth, and Ethen.
 
 **Read the blog**
 
@@ -2997,7 +2997,7 @@ Algorithms route prompts, retrieve sources, select tools, organize artifacts, de
 
 ---
 
-## Ventari
+## Upcube Shopping
 
 ### Commerce at catalog scale.
 
@@ -3037,7 +3037,7 @@ Place search, route context, terrain interpretation, layer ranking, geospatial r
 
 ---
 
-## Upcube University
+## Upcube Education
 
 ### Learning paths.
 
@@ -3045,7 +3045,7 @@ Course recommendations, prerequisite graphs, skill progression, study plans, and
 
 ---
 
-## Upcube Cloud and VM Compute
+## Upcube Cloud and Compute
 
 ### Infrastructure intelligence.
 
@@ -3149,7 +3149,7 @@ Map the search, ranking, recommendation, routing, scheduling, and graph problems
 
 ### Phase 2: Search and ranking foundations
 
-Design shared search patterns for Books, Games, Jobs, Ventari, Earth, and Ethen.
+Design shared search patterns for Books, Games, Jobs, Upcube Shopping, Earth, and Ethen.
 
 ### Phase 3: Graph and recommendation layer
 
@@ -3200,9 +3200,9 @@ That is the kind of work Upcube Algorithms and Theory is built to support.
 The AI workspace for chat, research, artifacts, approvals, tools, and execution.  
 **Explore UpcubeAI**
 
-### Ventari  
+### Upcube Shopping  
 Large-scale commerce search, recommendations, product pages, and catalog discovery.  
-**Explore Ventari**
+**Explore Upcube Shopping**
 
 ### Upcube Jobs  
 Career discovery and opportunity workflows across the Upcube ecosystem.  
@@ -3212,9 +3212,9 @@ Career discovery and opportunity workflows across the Upcube ecosystem.
 Cloud infrastructure and developer workflows for scalable systems.  
 **Explore Cloud**
 
-### VM Compute  
+### Compute  
 Compute, networking, storage, virtualization, and operations.  
-**Explore VM Compute**
+**Explore Compute**
 
 ### AI Principles  
 The principles guiding bold, responsible, collaborative AI development at UpcubeAI.  
@@ -3239,10 +3239,10 @@ Upcube Algorithms and Theory is built around that direction:
   {
     slug: "information-retrieval",
     order: 6,
-    title: "Upcube Information Retrieval",
+    title: "Search Routing",
     subtitle: "The science of finding what matters.",
     description:
-      "Information retrieval is the research field behind search: how systems match what a person wants with the best available information.",
+      "Search Routing is the research field behind how systems match what a person wants with the best available information.",
     body: `# Upcube Information Retrieval
 
 ## The science of finding what matters.
@@ -3255,7 +3255,7 @@ People are no longer only searching for web pages. They are searching across boo
 
 Upcube Information Retrieval is the research direction for how UpcubeAI can make search, retrieval, ranking, recommendations, and source-grounded answers work across the entire Upcube product family.
 
-It connects Ethen, Upcube Books, Upcube Earth, Upcube Games, Upcube Jobs, Ventari, Upcube University, Upcube Cloud, and future operating-system experiences through one core idea:
+It connects Ethen, Upcube Books, Upcube Earth, Upcube Games, Upcube Jobs, Upcube Shopping, Upcube Education, Upcube Cloud, and future operating-system experiences through one core idea:
 
 **The right information should feel closer to the work.**
 
@@ -3332,7 +3332,7 @@ A catalog may contain millions of records, but the user only sees a handful firs
 Upcube products need different ranking strategies:
 
 Books should rank by relevance, title match, author, preview availability, subject, and reading intent.  
-Ventari should rank by product relevance, category match, quality, reviews, price, image quality, and availability.  
+Upcube Shopping should rank by product relevance, category match, quality, reviews, price, image quality, and availability.  
 Jobs should rank by role fit, freshness, location, skill match, company context, and user intent.  
 Games should rank by title match, platform, genre, release timing, ratings, and related interest.  
 Earth should rank places by geographic intent, popularity, specificity, nearby context, and layer relevance.  
@@ -3418,7 +3418,7 @@ People rarely know the perfect query on the first try.
 
 They search, refine, compare, ask follow-up questions, change constraints, and discover what they actually meant. Conversational search supports that natural process.
 
-UpcubeAI can apply conversational search across Ethen, Books, Jobs, Games, Ventari, Earth, and University.
+UpcubeAI can apply conversational search across Ethen, Books, Jobs, Games, Upcube Shopping, Earth, and Education.
 
 ### Research direction
 
@@ -3444,7 +3444,7 @@ Modern retrieval has to work across many forms of information: text, images, map
 Upcube products already point in this direction.
 
 Books use covers and text metadata.  
-Ventari uses product images, variants, reviews, and descriptions.  
+Upcube Shopping uses product images, variants, reviews, and descriptions.  
 Games use screenshots, box art, trailers, genres, and platform metadata.  
 Earth uses maps, terrain, imagery, overlays, and place names.  
 Voice may use audio and transcripts.  
@@ -3529,7 +3529,7 @@ Title, author, subject, preview, public-domain, saved-title, and reading-path re
 
 ### Commerce retrieval
 
-Product search, PDP ranking, review retrieval, recommendation paths, and large-catalog relevance for Ventari.
+Product search, PDP ranking, review retrieval, recommendation paths, and large-catalog relevance for Upcube Shopping.
 
 ### Career retrieval
 
@@ -3545,7 +3545,7 @@ Place search, terrain context, layer matching, city search, and spatial reasonin
 
 ### Learning retrieval
 
-Course search, prerequisite paths, skill graphs, and personalized learning recommendations for Upcube University.
+Course search, prerequisite paths, skill graphs, and personalized learning recommendations for Upcube Education.
 
 ### Multi-modal retrieval
 
@@ -3573,7 +3573,7 @@ A plain-language introduction to how UpcubeAI thinks about search, ranking, retr
 
 ### One retrieval philosophy, many product surfaces.
 
-How Books, Jobs, Games, Ventari, Earth, University, and Ethen each require different ranking and retrieval strategies.
+How Books, Jobs, Games, Upcube Shopping, Earth, Education, and Ethen each require different ranking and retrieval strategies.
 
 **Read the blog**
 
@@ -3641,7 +3641,7 @@ Until then, these cards are planned research structure, not claims of published 
 
 ## Upcube Information Retrieval: Search and Ranking Across AI Product Surfaces
 
-A future technical overview of retrieval across Ethen, Books, Jobs, Games, Ventari, Earth, University, and Cloud.
+A future technical overview of retrieval across Ethen, Books, Jobs, Games, Upcube Shopping, Earth, Education, and Cloud.
 
 **Status:** Planned technical note  
 **Preview**
@@ -3730,19 +3730,19 @@ Jobs needs role search, skill matching, company context, freshness, location fil
 
 ---
 
-## Ventari
+## Upcube Shopping
 
 ### Commerce discovery at scale.
 
-Ventari needs large-catalog search, product ranking, category depth, review retrieval, related products, and decision-support recommendations.
+Upcube Shopping needs large-catalog search, product ranking, category depth, review retrieval, related products, and decision-support recommendations.
 
 ---
 
-## Upcube University
+## Upcube Education
 
 ### Learning path retrieval.
 
-University needs course search, prerequisite mapping, skill-based recommendations, and guided paths for AI education and product training.
+Education needs course search, prerequisite mapping, skill-based recommendations, and guided paths for AI education and product training.
 
 ---
 
@@ -3830,7 +3830,7 @@ Users should be able to refine, filter, compare, save, and question results.
 
 ### Phase 1: Retrieval inventory
 
-Map search, ranking, and recommendation needs across UpcubeAI, Books, Earth, Games, Jobs, Ventari, University, Cloud, and future OS surfaces.
+Map search, ranking, and recommendation needs across UpcubeAI, Books, Earth, Games, Jobs, Upcube Shopping, Education, Cloud, and future OS surfaces.
 
 ### Phase 2: Shared search foundations
 
@@ -3890,9 +3890,9 @@ Optimization, graph mining, ranking, scheduling, recommendation systems, and age
 The AI workspace for chat, research, artifacts, approvals, tools, and execution.  
 **Explore UpcubeAI**
 
-### Ventari  
+### Upcube Shopping  
 Large-scale commerce search and product discovery.  
-**Explore Ventari**
+**Explore Upcube Shopping**
 
 ### Upcube Books  
 Book discovery, previews, saved titles, and reading paths.  
@@ -3925,10 +3925,10 @@ Upcube Information Retrieval is built around that direction:
   {
     slug: "machine-intelligence",
     order: 7,
-    title: "Upcube Machine Intelligence",
+    title: "Adaptive Intelligence",
     subtitle: "The learning systems behind useful AI products.",
     description:
-      "Machine intelligence is the research foundation behind systems that learn from patterns, generalize from evidence, adapt to new tasks, and help products become more capable over time.",
+      "Adaptive Intelligence is the research foundation behind systems that learn from patterns, generalize from evidence, adapt to new tasks, and help products become more capable over time.",
     body: `# Upcube Machine Intelligence
 
 ## The learning systems behind useful AI products.
@@ -3939,7 +3939,7 @@ For UpcubeAI, machine intelligence is not one feature.
 
 It is the technical layer that can improve chat, research, artifacts, search, ranking, prediction, recommendations, voice, visual understanding, tool routing, agent planning, personalization, and future AI-native computing.
 
-Upcube Machine Intelligence is the research direction for how the Upcube ecosystem can use learning systems responsibly across its product family — from Ethen’s workspace intelligence to Ventari commerce discovery, Upcube Books, Upcube Earth, Games, Jobs, University, Cloud, Voice, OS, and Mobile OS.
+Upcube Machine Intelligence is the research direction for how the Upcube ecosystem can use learning systems responsibly across its product family — from Ethen’s workspace intelligence to Upcube Shopping commerce discovery, Upcube Books, Upcube Earth, Games, Jobs, Education, Cloud, Voice, OS, and Mobile OS.
 
 This page does not claim that UpcubeAI has published academic papers, trained frontier models, released benchmark-leading systems, or built formal machine intelligence research teams.
 
@@ -3963,7 +3963,7 @@ Machine intelligence studies how systems learn from data, examples, interaction,
 In UpcubeAI, that can mean many things:
 
 Understanding user intent in Ethen.  
-Ranking products in Ventari.  
+Ranking products in Upcube Shopping.  
 Recommending books, games, jobs, or courses.  
 Retrieving sources for research answers.  
 Routing prompts to the right model or tool.  
@@ -3972,7 +3972,7 @@ Summarizing documents and artifacts.
 Understanding images, maps, or product photos.  
 Processing voice interaction in future devices.  
 Supporting adaptive interfaces in OS and Mobile OS.  
-Predicting system load in Cloud and VM Compute.
+Predicting system load in Cloud and Compute.
 
 The deeper challenge is not simply making AI more powerful.
 
@@ -4034,12 +4034,12 @@ Language intelligence should help users turn rough thoughts into usable work whi
 
 Many Upcube products depend on ranking.
 
-Ventari ranks products.  
+Upcube Shopping ranks products.  
 Jobs ranks opportunities.  
 Books ranks titles.  
 Games ranks releases and recommendations.  
 Earth ranks places and layers.  
-University ranks courses and learning paths.  
+Education ranks courses and learning paths.  
 Ethen ranks sources, artifacts, and next actions.
 
 Machine intelligence can improve those rankings by learning from metadata, behavior, content, freshness, quality, and intent.
@@ -4096,7 +4096,7 @@ AI products increasingly need to work across text, images, documents, maps, audi
 
 UpcubeAI’s product family naturally moves in this direction:
 
-Ventari uses product images and metadata.  
+Upcube Shopping uses product images and metadata.  
 Books uses covers, previews, and descriptions.  
 Games uses screenshots, trailers, genres, and release data.  
 Earth uses maps, terrain, overlays, and imagery.  
@@ -4426,11 +4426,11 @@ Ethen needs language understanding, retrieval, artifact generation, tool routing
 
 ---
 
-## Ventari
+## Upcube Shopping
 
 ### Intelligence for commerce discovery.
 
-Ventari needs ranking, recommendations, product understanding, image-text matching, review summarization, category organization, and decision support.
+Upcube Shopping needs ranking, recommendations, product understanding, image-text matching, review summarization, category organization, and decision support.
 
 ---
 
@@ -4466,11 +4466,11 @@ Jobs needs role search, skill matching, company context, job freshness, recommen
 
 ---
 
-## Upcube University
+## Upcube Education
 
 ### Intelligence for guided learning.
 
-University needs course recommendations, prerequisite graphs, learning paths, quizzes, study plans, and skill progression.
+Education needs course recommendations, prerequisite graphs, learning paths, quizzes, study plans, and skill progression.
 
 ---
 
@@ -4482,7 +4482,7 @@ Voice needs speech understanding, real-time response, interruption handling, int
 
 ---
 
-## Upcube Cloud and VM Compute
+## Upcube Cloud and Compute
 
 ### Intelligence for infrastructure.
 
@@ -4578,7 +4578,7 @@ Model uncertainty, failure modes, and product maturity should remain visible in 
 
 ### Phase 1: Product intelligence inventory
 
-Map the machine intelligence needs across Ethen, Ventari, Books, Earth, Games, Jobs, University, Cloud, Voice, OS, and Mobile OS.
+Map the machine intelligence needs across Ethen, Upcube Shopping, Books, Earth, Games, Jobs, Education, Cloud, Voice, OS, and Mobile OS.
 
 ### Phase 2: Evaluation foundations
 
@@ -4676,11 +4676,11 @@ Upcube Machine Intelligence is built around that direction:
   {
     slug: "machine-perception",
     order: 8,
-    title: "Upcube Machine Perception",
+    title: "Multimodal Understanding",
     subtitle:
       "AI that can understand what people see, hear, read, and explore.",
     description:
-      "Machine perception is the research area behind AI systems that understand images, sounds, speech, documents, handwriting, video, maps, music, interfaces, and the visual world around us.",
+      "Multimodal Understanding is the research area behind AI systems that understand images, sounds, speech, documents, handwriting, video, maps, music, interfaces, and the visual world around us.",
     body: `# Upcube Machine Perception
 
 ## AI that can understand what people see, hear, read, and explore.
@@ -4689,7 +4689,7 @@ Machine perception is the research area behind AI systems that understand images
 
 For UpcubeAI, machine perception is a foundational direction.
 
-It can help Ethen understand uploaded files, screenshots, diagrams, documents, and visual references. It can help Ventari understand product images and catalog quality. It can help Upcube Books work with covers, scans, previews, and metadata. It can help Upcube Earth reason over terrain, imagery, overlays, and spatial visuals. It can help Upcube Games understand screenshots, art, trailers, and visual discovery. It can help Upcube Voice understand speech. It can help future OS and Mobile OS experiences make visual, audio, and document context easier to work with.
+It can help Ethen understand uploaded files, screenshots, diagrams, documents, and visual references. It can help Upcube Shopping understand product images and catalog quality. It can help Upcube Books work with covers, scans, previews, and metadata. It can help Upcube Earth reason over terrain, imagery, overlays, and spatial visuals. It can help Upcube Games understand screenshots, art, trailers, and visual discovery. It can help Upcube Voice understand speech. It can help future OS and Mobile OS experiences make visual, audio, and document context easier to work with.
 
 The goal is not only to recognize objects.
 
@@ -4804,7 +4804,7 @@ Ethen should help users turn messy documents into usable work without pretending
 
 ### Making commerce discovery more visual and more precise.
 
-Ventari’s commerce direction depends on product quality.
+Upcube Shopping’s commerce direction depends on product quality.
 
 A product page is only as strong as its images, descriptions, variants, metadata, reviews, and recommendations. Machine perception can help connect product photos with catalog structure.
 
@@ -4819,7 +4819,7 @@ Support large-catalog image quality workflows.
 
 ### Product direction
 
-Ventari should make product discovery feel richer by understanding what shoppers can actually see.
+Upcube Shopping should make product discovery feel richer by understanding what shoppers can actually see.
 
 ---
 
@@ -4975,7 +4975,7 @@ Ethen support for images, screenshots, files, diagrams, PDFs, videos, tables, co
 
 ### Commerce image intelligence
 
-Product-image analysis, image quality review, visual search, attribute extraction, and image-description consistency for Ventari.
+Product-image analysis, image quality review, visual search, attribute extraction, and image-description consistency for Upcube Shopping.
 
 ### Geospatial perception
 
@@ -4995,7 +4995,7 @@ Speech recognition, real-time intent, audio summaries, voice interaction, and pr
 
 ### Video-to-knowledge workflows
 
-Tutorial extraction, chaptering, demonstration summaries, transcript alignment, and learning artifacts for Upcube University.
+Tutorial extraction, chaptering, demonstration summaries, transcript alignment, and learning artifacts for Upcube Education.
 
 ### UI and visual-reference analysis
 
@@ -5033,7 +5033,7 @@ How Ethen can help describe interfaces, compare references, extract UI patterns,
 
 ### Helping catalogs become more visual and trustworthy.
 
-How Ventari can use image understanding to improve product discovery, metadata, quality checks, and visual search.
+How Upcube Shopping can use image understanding to improve product discovery, metadata, quality checks, and visual search.
 
 **Read the blog**
 
@@ -5053,7 +5053,7 @@ How AI can extract, summarize, and structure information from PDFs, forms, recei
 
 ### Turning tutorials into guided knowledge.
 
-How Upcube University can use video perception to create steps, notes, chapters, checklists, and learning artifacts.
+How Upcube Education can use video perception to create steps, notes, chapters, checklists, and learning artifacts.
 
 **Read the blog**
 
@@ -5157,11 +5157,11 @@ Ethen can use perception to understand screenshots, diagrams, documents, product
 
 ---
 
-## Ventari
+## Upcube Shopping
 
 ### Commerce image understanding.
 
-Ventari can use perception to improve product search, image quality, category assignment, attributes, related products, and PDP confidence.
+Upcube Shopping can use perception to improve product search, image quality, category assignment, attributes, related products, and PDP confidence.
 
 ---
 
@@ -5197,11 +5197,11 @@ Jobs can use perception for resumes, PDFs, role documents, company materials, an
 
 ---
 
-## Upcube University
+## Upcube Education
 
 ### Learning from video, images, and documents.
 
-University can use perception to turn lectures, tutorials, slides, diagrams, and visual examples into structured learning materials.
+Education can use perception to turn lectures, tutorials, slides, diagrams, and visual examples into structured learning materials.
 
 ---
 
@@ -5368,9 +5368,9 @@ Search, ranking, retrieval, grounded answers, recommendations, and multi-surface
 The AI workspace for chat, research, artifacts, approvals, tools, and execution.  
 **Explore UpcubeAI**
 
-### Ventari  
+### Upcube Shopping  
 Commerce discovery with product images, search, PDPs, recommendations, and catalog scale.  
-**Explore Ventari**
+**Explore Upcube Shopping**
 
 ### Upcube Earth AI  
 Spatial intelligence for terrain, maps, overlays, imagery, and place-based reasoning.  
@@ -5401,10 +5401,10 @@ Upcube Machine Perception is built around that direction:
   {
     slug: "natural-language-processing",
     order: 9,
-    title: "Upcube Natural Language Processing",
+    title: "Language Reasoning",
     subtitle: "AI that understands language, context, and intent.",
     description:
-      "Natural language processing is the research field behind systems that read, write, translate, summarize, classify, extract, search, reason, and respond through human language.",
+      "Language Reasoning is the research field behind systems that read, write, translate, summarize, classify, extract, search, reason, and respond through human language.",
     body: `# Upcube Natural Language Processing
 
 ## AI that understands language, context, and intent.
@@ -5413,7 +5413,7 @@ Natural language processing is the research field behind systems that read, writ
 
 For UpcubeAI, natural language processing is foundational.
 
-It powers the way users talk to Ethen. It shapes how documents become artifacts. It helps research stay grounded in sources. It improves search across Books, Jobs, Games, Ventari, Earth, and University. It supports future voice interaction. It helps products understand entities, tasks, instructions, tone, structure, and meaning.
+It powers the way users talk to Ethen. It shapes how documents become artifacts. It helps research stay grounded in sources. It improves search across Books, Jobs, Games, Upcube Shopping, Earth, and Education. It supports future voice interaction. It helps products understand entities, tasks, instructions, tone, structure, and meaning.
 
 The deeper goal is not only to process text.
 
@@ -5554,10 +5554,10 @@ Many Upcube products depend on entities:
 
 Books have titles, authors, editions, subjects, and publishers.  
 Jobs have roles, companies, skills, locations, and industries.  
-Ventari has products, brands, categories, reviews, and attributes.  
+Upcube Shopping has products, brands, categories, reviews, and attributes.  
 Games have titles, studios, franchises, platforms, and genres.  
 Earth has places, cities, countries, layers, coordinates, and landmarks.  
-University has courses, topics, skills, modules, and learning paths.  
+Education has courses, topics, skills, modules, and learning paths.  
 Ethen has sources, artifacts, tools, approvals, projects, and tasks.
 
 NLP helps identify and connect those entities.
@@ -5909,11 +5909,11 @@ Jobs needs skill extraction, role matching, company context, job-description und
 
 ---
 
-## Ventari
+## Upcube Shopping
 
 ### Language for commerce.
 
-Ventari needs product-title parsing, attribute extraction, review summarization, category understanding, recommendations, and PDP copy.
+Upcube Shopping needs product-title parsing, attribute extraction, review summarization, category understanding, recommendations, and PDP copy.
 
 ---
 
@@ -5933,11 +5933,11 @@ Games needs title matching, genre understanding, studio and franchise extraction
 
 ---
 
-## Upcube University
+## Upcube Education
 
 ### Language for learning.
 
-University needs course descriptions, lesson summaries, quizzes, learning paths, concept explanations, and multilingual education support.
+Education needs course descriptions, lesson summaries, quizzes, learning paths, concept explanations, and multilingual education support.
 
 ---
 
@@ -6041,7 +6041,7 @@ Test for accuracy, completeness, tone, formatting, safety, and task fit.
 
 ### Phase 1: NLP inventory
 
-Map language tasks across Ethen, Books, Jobs, Ventari, Earth, Games, University, Voice, Cloud, OS, and Mobile OS.
+Map language tasks across Ethen, Books, Jobs, Upcube Shopping, Earth, Games, Education, Voice, Cloud, OS, and Mobile OS.
 
 ### Phase 2: Intent and artifact generation
 
@@ -6139,10 +6139,10 @@ Upcube Natural Language Processing is built around that direction:
   {
     slug: "human-computer-interaction-visualization",
     order: 10,
-    title: "Upcube Human-Computer Interaction and Visualization",
+    title: "Interface Intelligence",
     subtitle: "Designing AI people can understand, control, and trust.",
     description:
-      "Human-computer interaction is where technology becomes experience.",
+      "Interface Intelligence is where technology becomes experience.",
     body: `# Upcube Human-Computer Interaction and Visualization
 
 ## Designing AI people can understand, control, and trust.
@@ -6287,9 +6287,9 @@ Many Upcube products involve systems that are too complex for plain text alone.
 
 Cloud infrastructure has compute, storage, networking, queues, costs, logs, and deployments.  
 Earth has terrain, cities, overlays, layers, and geospatial relationships.  
-Ventari has product catalogs, reviews, recommendations, variants, and category graphs.  
+Upcube Shopping has product catalogs, reviews, recommendations, variants, and category graphs.  
 Jobs has roles, skills, companies, locations, and career paths.  
-University has courses, prerequisites, progress, and learning maps.  
+Education has courses, prerequisites, progress, and learning maps.  
 Ethen has prompts, sources, artifacts, tools, approvals, and task state.
 
 Visualization helps users understand these systems faster.
@@ -6637,11 +6637,11 @@ Earth needs globe-first controls, layer menus, place search, overlays, contextua
 
 ---
 
-## Ventari
+## Upcube Shopping
 
 ### Commerce decision-making.
 
-Ventari needs product grids, filters, comparison surfaces, rich PDPs, review summaries, recommendation paths, and category navigation.
+Upcube Shopping needs product grids, filters, comparison surfaces, rich PDPs, review summaries, recommendation paths, and category navigation.
 
 ---
 
@@ -6669,15 +6669,15 @@ Games needs visual catalogs, platform filters, release timelines, related titles
 
 ---
 
-## Upcube University
+## Upcube Education
 
 ### Guided learning.
 
-University needs course cards, learning paths, progress views, prerequisites, modules, quizzes, and study artifacts.
+Education needs course cards, learning paths, progress views, prerequisites, modules, quizzes, and study artifacts.
 
 ---
 
-## Upcube Cloud and VM Compute
+## Upcube Cloud and Compute
 
 ### Infrastructure visualization.
 
@@ -6783,7 +6783,7 @@ AI should make work easier to understand, not add hidden complexity.
 
 ### Phase 1: Interface inventory
 
-Map the major interaction patterns across Ethen, Earth, Ventari, Jobs, Books, Games, University, Cloud, Voice, OS, and Mobile OS.
+Map the major interaction patterns across Ethen, Earth, Upcube Shopping, Jobs, Books, Games, Education, Cloud, Voice, OS, and Mobile OS.
 
 ### Phase 2: Workspace shell patterns
 
@@ -6879,7 +6879,7 @@ Upcube HCI and Visualization is built around that direction:
   {
     slug: "networking",
     order: 11,
-    title: "Upcube Networking",
+    title: "Connected Infrastructure",
     subtitle: "The network foundation behind cloud, compute, and AI systems.",
     description: "Networking is central to modern computing.",
     body: `# Upcube Networking
@@ -6890,7 +6890,7 @@ Networking is central to modern computing.
 
 Every AI workspace, cloud platform, virtual machine, data service, search system, streaming experience, and future operating system depends on networks that can move information reliably, securely, and quickly.
 
-For UpcubeAI, networking is a core research direction behind Upcube Cloud, VM Compute, Ethen, Voice, Earth, Ventari, Jobs, University, and future OS products.
+For UpcubeAI, networking is a core research direction behind Upcube Cloud, Compute, Ethen, Voice, Earth, Upcube Shopping, Jobs, Education, and future OS products.
 
 The network is not only plumbing.
 
@@ -6950,7 +6950,7 @@ Virtual networking is the foundation of modern cloud platforms.
 
 VMs, containers, databases, APIs, services, workers, queues, and storage systems all need private and public network paths. They need routing, isolation, firewalls, load balancing, DNS, service discovery, and observability.
 
-Upcube Cloud and VM Compute create a natural direction for this work.
+Upcube Cloud and Compute create a natural direction for this work.
 
 ### Research direction
 
@@ -6992,11 +6992,11 @@ Users should feel that AI responds quickly and reliably, even when the system be
 
 ## 3. Data-center and compute networking direction
 
-### The systems layer behind VM Compute.
+### The systems layer behind Compute.
 
 Compute is not useful unless it can communicate.
 
-VM Compute needs networking primitives that can eventually support virtual machines, storage paths, internal services, external access, management planes, and operational telemetry.
+Compute needs networking primitives that can eventually support virtual machines, storage paths, internal services, external access, management planes, and operational telemetry.
 
 This page does not claim UpcubeAI operates custom data centers or large-scale interconnects.
 
@@ -7171,7 +7171,7 @@ AI should help operators understand networks better, not silently change critica
 
 Private networks, public access, firewalls, routing, DNS, load balancing, and service discovery for Upcube Cloud.
 
-### VM Compute networking
+### Compute networking
 
 Virtual machine connectivity, IP management, network isolation, storage paths, and management-plane communication.
 
@@ -7221,7 +7221,7 @@ An introduction to how networks shape latency, reliability, streaming, tools, cl
 
 ### Making compute systems easier to connect and secure.
 
-A research note on private networks, public access, routing, DNS, firewalls, and VM Compute connectivity.
+A research note on private networks, public access, routing, DNS, firewalls, and Compute connectivity.
 
 **Read the blog**
 
@@ -7305,7 +7305,7 @@ A future systems note on routing AI tool calls through approval, policy, securit
 
 ---
 
-## Virtual Networking for VM Compute
+## Virtual Networking for Compute
 
 A future architecture note on private networks, public access, firewalls, DNS, NAT, and compute-to-storage connectivity.
 
@@ -7346,11 +7346,11 @@ Cloud requires networking for APIs, projects, compute resources, storage paths, 
 
 ---
 
-## VM Compute
+## Compute
 
 ### Connected virtual machines.
 
-VM Compute needs virtual networks, IP management, firewall rules, routing, DNS, storage connectivity, and management-plane reliability.
+Compute needs virtual networks, IP management, firewall rules, routing, DNS, storage connectivity, and management-plane reliability.
 
 ---
 
@@ -7378,11 +7378,11 @@ Earth depends on reliable delivery of maps, terrain, imagery, overlays, search r
 
 ---
 
-## Ventari
+## Upcube Shopping
 
 ### Commerce at catalog scale.
 
-Ventari depends on product images, search APIs, PDP data, reviews, recommendations, and caching strategies.
+Upcube Shopping depends on product images, search APIs, PDP data, reviews, recommendations, and caching strategies.
 
 ---
 
@@ -7484,7 +7484,7 @@ AI-assisted network operations should recommend or explain before making sensiti
 
 ### Phase 1: Network surface inventory
 
-Map network needs across UpcubeAI, Cloud, VM Compute, Earth, Voice, Ventari, Books, Jobs, Games, University, OS, and Mobile OS.
+Map network needs across UpcubeAI, Cloud, Compute, Earth, Voice, Upcube Shopping, Books, Jobs, Games, Education, OS, and Mobile OS.
 
 ### Phase 2: Virtual networking model
 
@@ -7539,9 +7539,9 @@ The future of AI needs networks that are faster, safer, more observable, and eas
 Cloud infrastructure and developer workflows for the Upcube ecosystem.  
 **Explore Cloud**
 
-### VM Compute  
+### Compute  
 Compute, networking, storage, virtualization, and operations.  
-**Explore VM Compute**
+**Explore Compute**
 
 ### Algorithms and Theory  
 Optimization, scheduling, routing, graph mining, and systems theory.  
@@ -7578,7 +7578,7 @@ Upcube Networking is built around that direction:
   {
     slug: "responsible-ai",
     order: 12,
-    title: "Upcube Responsible AI",
+    title: "Human Alignment",
     subtitle:
       "Building AI that serves people — with safety, fairness, and accountability at the center.",
     description:
@@ -7591,7 +7591,7 @@ Responsible AI is not a single feature, policy, or checklist.
 
 It is the discipline of building artificial intelligence in ways that foreground human experience, social impact, user trust, safety, fairness, transparency, robustness, privacy, accessibility, and accountability.
 
-For UpcubeAI, Responsible AI is a foundational research direction across the entire product family: Ethen, UpcubeAI, Voice, University, Ventari, Books, Earth, Games, Jobs, Cloud, VM Compute, Upcube OS, and Mobile OS.
+For UpcubeAI, Responsible AI is a foundational research direction across the entire product family: Ethen, UpcubeAI, Voice, Education, Upcube Shopping, Books, Earth, Games, Jobs, Cloud, Compute, Upcube OS, and Mobile OS.
 
 The goal is not only to make AI more powerful.
 
@@ -7795,7 +7795,7 @@ Policy, approvals, logs, and human review for AI workflows that can take action.
 
 ### Fairness in discovery products
 
-Evaluation for Jobs, University, Ventari, Books, Games, and recommendations.
+Evaluation for Jobs, Education, Upcube Shopping, Books, Games, and recommendations.
 
 ### Transparency in AI workspaces
 
@@ -7849,7 +7849,7 @@ A research note on how Ethen can keep tool use and sensitive workflows understan
 
 ### How ranking and recommendations shape opportunity.
 
-A responsible AI view of Jobs, University, Ventari, Books, Games, and search surfaces.
+A responsible AI view of Jobs, Education, Upcube Shopping, Books, Games, and search surfaces.
 
 **Read the blog**
 
@@ -7927,11 +7927,11 @@ Voice requires privacy-aware activation, clear session states, no unsupported al
 
 Opportunity discovery needs fairness-aware ranking, clear employer/listing boundaries, and careful outcome claims.
 
-### Upcube University
+### Upcube Education
 
 Learning products need accessibility, honest education status, safe guidance, and clear boundaries around credentials.
 
-### Ventari
+### Upcube Shopping
 
 Commerce discovery needs transparent recommendations, product-data quality, review integrity, and responsible ranking.
 
@@ -7939,7 +7939,7 @@ Commerce discovery needs transparent recommendations, product-data quality, revi
 
 Spatial products need source attribution, uncertainty, public-safety boundaries, and careful handling of sensitive location context.
 
-### Cloud and VM Compute
+### Cloud and Compute
 
 Infrastructure products need security, privacy, governance, observability, and responsible automation controls.
 
@@ -7996,7 +7996,7 @@ Upcube Responsible AI is built around that direction:
   {
     slug: "anti-abuse-security-privacy",
     order: 13,
-    title: "Upcube Anti-Abuse, Security, and Privacy Research",
+    title: "Trust Defense",
     subtitle: "Protecting users, systems, and trust in the AI era.",
     description:
       "The internet made information easier to access. AI makes digital systems more powerful. Together, they create enormous opportunity — and new risks.",
@@ -8010,7 +8010,7 @@ Abuse, fraud, spam, phishing, unauthorized access, data leakage, prompt injectio
 
 Upcube Anti-Abuse, Security, and Privacy Research is the research direction for building safer AI and cloud products across the Upcube ecosystem.
 
-It connects Ethen, UpcubeAI, Voice, Cloud, VM Compute, Ventari, Jobs, Books, Earth, Games, University, OS, and Mobile OS through one core principle:
+It connects Ethen, UpcubeAI, Voice, Cloud, Compute, Upcube Shopping, Jobs, Books, Earth, Games, Education, OS, and Mobile OS through one core principle:
 
 **Powerful systems need strong boundaries.**
 
@@ -8143,7 +8143,7 @@ Privacy should be clear, specific, and backed by actual product behavior.
 
 ### Protecting data, systems, and infrastructure.
 
-Upcube Cloud, VM Compute, Ethen, and future OS products require strong information-security foundations.
+Upcube Cloud, Compute, Ethen, and future OS products require strong information-security foundations.
 
 ### Research direction
 
@@ -8218,7 +8218,7 @@ Detect abusive content, fake accounts, deceptive listings, spam workflows, and m
 
 ### API and cloud abuse prevention
 
-Protect Upcube Cloud and VM Compute from overload, scraping, credential abuse, and prohibited workloads.
+Protect Upcube Cloud and Compute from overload, scraping, credential abuse, and prohibited workloads.
 
 ### Permission and access control UX
 
@@ -8262,7 +8262,7 @@ How scoped access, clear settings, and careful retention language protect user t
 
 ### Abuse prevention in discovery systems
 
-How Jobs, Ventari, Games, Books, and recommendations can defend against spam, fraud, and manipulation.
+How Jobs, Upcube Shopping, Games, Books, and recommendations can defend against spam, fraud, and manipulation.
 
 **Read the blog**
 
@@ -8318,7 +8318,7 @@ A future research direction for measuring system health without over-collecting 
 
 Tool approvals, prompt-injection defense, file handling, source trust, artifact safety, and workspace access.
 
-### Upcube Cloud and VM Compute
+### Upcube Cloud and Compute
 
 API protection, workload boundaries, network security, tenant isolation, rate limits, and abuse detection.
 
@@ -8326,7 +8326,7 @@ API protection, workload boundaries, network security, tenant isolation, rate li
 
 Push-to-talk privacy, session security, audio-handling boundaries, and user-visible activation states.
 
-### Ventari
+### Upcube Shopping
 
 Fraud prevention, review integrity, product-data trust, scraping defense, and recommendation manipulation protection.
 
@@ -8391,7 +8391,7 @@ Upcube Anti-Abuse, Security, and Privacy Research is built around that direction
   {
     slug: "software-engineering",
     order: 14,
-    title: "Upcube Software Engineering Research",
+    title: "AI Engineering",
     subtitle: "Building software faster without losing quality.",
     description:
       "Modern AI products depend on software teams that can move quickly, test carefully, ship reliably, and keep complex systems understandable over time.",
@@ -8405,7 +8405,7 @@ Software engineering is the discipline behind that balance.
 
 For UpcubeAI, software engineering research connects product development, AI-assisted coding, developer tools, testing, documentation, CI/CD, observability, code quality, design systems, release processes, and human collaboration.
 
-It affects every part of the ecosystem: Ethen, UpcubeAI, Cloud, VM Compute, Ventari, Earth, Books, Games, Jobs, University, Voice, OS, and Mobile OS.
+It affects every part of the ecosystem: Ethen, UpcubeAI, Cloud, Compute, Upcube Shopping, Earth, Books, Games, Jobs, Education, Voice, OS, and Mobile OS.
 
 This page does not claim that UpcubeAI has published software engineering research, created formal developer productivity tools, or operates mature engineering infrastructure at global scale.
 
@@ -8731,15 +8731,15 @@ A future research direction for connecting specs, source files, tests, issues, P
 
 Ethen can support implementation prompts, code review, artifact generation, repo summaries, and validation reporting.
 
-### Upcube Cloud and VM Compute
+### Upcube Cloud and Compute
 
 Cloud products need APIs, infrastructure code, deployment workflows, observability, and reliability engineering.
 
-### Ventari, Books, Jobs, Games, and Earth
+### Upcube Shopping, Books, Jobs, Games, and Earth
 
 Discovery products need search systems, front-end quality, data pipelines, provider integrations, and performance discipline.
 
-### Upcube University
+### Upcube Education
 
 Learning products need course systems, progress tracking, content management, and student-facing reliability.
 
@@ -8796,7 +8796,7 @@ Upcube Software Engineering Research is built around that direction:
   {
     slug: "software-systems",
     order: 15,
-    title: "Upcube Software Systems",
+    title: "Platform Infrastructure",
     subtitle:
       "The systems foundation behind AI, cloud, compute, and future operating platforms.",
     description:
@@ -8809,7 +8809,7 @@ Software systems are the infrastructure that make modern products possible.
 
 They include operating systems, storage systems, distributed systems, databases, queues, schedulers, observability platforms, runtimes, networking layers, reliability systems, developer platforms, and cloud control planes.
 
-For UpcubeAI, software systems research sits underneath the entire ecosystem: Upcube Cloud, VM Compute, Ethen, Voice, Ventari, Earth, Jobs, Books, Games, University, Upcube OS, and Mobile OS.
+For UpcubeAI, software systems research sits underneath the entire ecosystem: Upcube Cloud, Compute, Ethen, Voice, Upcube Shopping, Earth, Jobs, Books, Games, Education, Upcube OS, and Mobile OS.
 
 This page does not claim that UpcubeAI operates warehouse-scale systems, exabyte storage, custom hardware, global control planes, or formally published systems research.
 
@@ -8838,8 +8838,8 @@ Voice needs real-time sessions.
 Maps need asset delivery.  
 Commerce needs catalog infrastructure.  
 Jobs need fresh listings.  
-University needs progress systems.  
-VM Compute needs orchestration.  
+Education needs progress systems.  
+Compute needs orchestration.  
 Operating systems need process, permission, and update models.
 
 Software systems determine whether those products remain fast, reliable, secure, and understandable as they grow.
@@ -8902,7 +8902,7 @@ Stored work should remain usable, secure, and understandable over time.
 
 A control plane is the system that manages resources: projects, users, permissions, VMs, networks, storage, jobs, tools, models, policies, and deployments.
 
-Upcube Cloud and VM Compute need this discipline.
+Upcube Cloud and Compute need this discipline.
 
 ### Research direction
 
@@ -9118,7 +9118,7 @@ A future technical overview of distributed systems, storage, control planes, obs
 **Status:** Planned technical note  
 **Preview**
 
-### Control Plane Architecture for VM Compute
+### Control Plane Architecture for Compute
 
 A future architecture note on resources, networks, storage, lifecycle, policy, and management APIs for compute products.
 
@@ -9149,7 +9149,7 @@ A future research direction for permissions, activity histories, diagnostics, lo
 
 Control planes, APIs, resource management, networking, storage, observability, and reliability.
 
-### VM Compute
+### Compute
 
 Virtual machines, networking, storage, lifecycle state, capacity planning, and operational dashboards.
 
@@ -9161,7 +9161,7 @@ AI workflows, artifacts, retrieval, model routing, tool gateways, approval recor
 
 Real-time sessions, audio routing, session lifecycle, privacy indicators, and low-latency reliability.
 
-### Ventari
+### Upcube Shopping
 
 Large-catalog systems, product metadata, images, search indexes, PDP rendering, reviews, and recommendations.
 
@@ -9169,7 +9169,7 @@ Large-catalog systems, product metadata, images, search indexes, PDP rendering, 
 
 Map assets, terrain, overlays, provider integrations, spatial data, and shareable views.
 
-### Books, Jobs, Games, and University
+### Books, Jobs, Games, and Education
 
 Metadata systems, search indexes, saved items, progress state, recommendations, and provider integrations.
 
@@ -9197,7 +9197,7 @@ Build logs, metrics, traces, dashboards, and incident reporting for product and 
 
 ### Phase 4: Control plane direction
 
-Design resource models for Cloud, VM Compute, AI tools, workspaces, and organization-level controls.
+Design resource models for Cloud, Compute, AI tools, workspaces, and organization-level controls.
 
 ### Phase 5: Reliability engineering
 

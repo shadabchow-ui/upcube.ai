@@ -33,6 +33,21 @@ const upcubeInter = localFont({
   display: "swap",
 });
 
+const upcubeGeist = localFont({
+  src: [
+    {
+      path: "./fonts/geist/Geist-VariableFont_wght.ttf",
+      style: "normal",
+    },
+    {
+      path: "./fonts/geist/Geist-Italic-VariableFont_wght.ttf",
+      style: "italic",
+    },
+  ],
+  variable: "--font-upcube-ui",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(canonicalBaseUrl),
   title: DEFAULT_SITE_TITLE,
@@ -41,8 +56,11 @@ export const metadata: Metadata = {
     canonical: canonicalBaseUrl,
   },
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
+    shortcut: "/favicon.png",
     apple: "/apple-icon.png",
   },
   robots: {
@@ -74,7 +92,10 @@ export default async function RootLayout({
   const cart = getCart();
 
   return (
-    <html lang="en" className={`${upcubeInter.variable}`}>
+    <html
+      lang="en"
+      className={`${upcubeInter.variable} ${upcubeGeist.variable}`}
+    >
       <body className="bg-neutral-50 text-black selection:bg-teal-300 dark:bg-neutral-900 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
         <CartProvider cartPromise={cart}>
           <Navbar />

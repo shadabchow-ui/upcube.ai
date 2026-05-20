@@ -93,40 +93,42 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
   {
     slug: "ventari-launch",
     href: "/news/ventari-launch",
-    productName: "Ventari",
+    productName: "Upcube Shopping",
     category: "Product Launch",
     dateLabel: "Recent update",
     headline:
-      "Ventari launches a large-scale shopping experience built for discovery.",
+      "Upcube Shopping launches commerce technology for marketplace-scale product discovery.",
     excerpt:
-      "Ventari brings search, categories, rich product pages, reviews, and recommendations into a storefront architecture built to scale to 100M+ products.",
+      "Upcube Shopping brings AI-powered search, product pages, reviews, recommendations, category systems, and brand storefront infrastructure into a commerce technology layer designed to support up to 1 billion products.",
     heroSummary:
-      "Ventari is a shopping product for massive choice: a place to search, browse, compare, and discover products through cleaner pages, category paths, reviews, and recommendation surfaces.",
-    primaryCtaLabel: "Open Ventari",
+      "Upcube Shopping is the commerce technology layer for marketplace-scale product discovery: AI-powered catalog search, product detail pages, reviews, recommendations, category systems, and brand storefront infrastructure built for billion-product scale.",
+    primaryCtaLabel: "Explore Upcube Shopping",
     primaryCtaHref: "https://ventari.net",
-    productPageUrl: "/products/ventari",
+    productPageUrl: "/products/shopping",
     launchUrl: "https://ventari.net",
-    seoTitle: "Ventari Launch | Shopping Built for Massive Choice",
+    seoTitle:
+      "Upcube Shopping Launch | Commerce Technology for Billion-Product Scale",
     seoDescription:
-      "Read the Ventari launch story for product discovery, search, categories, product pages, reviews, recommendations, and catalog architecture built to scale to 100M+ products.",
-    finalCtaTitle: "Keep discovery clear, even when the catalog gets huge.",
+      "Read the Upcube Shopping launch story for commerce technology, AI-powered product discovery, catalog search, PDPs, reviews, recommendations, and brand storefront infrastructure designed for marketplace-scale.",
+    finalCtaTitle:
+      "Commerce infrastructure that stays clear, even at massive catalog scale.",
     finalCtaBody:
-      "Ventari is positioned as a premium shopping experience built for search, comparison, and momentum across very large product catalogs.",
+      "Upcube Shopping is positioned as commerce technology built for search, comparison, and momentum across very large product catalogs and brand storefronts.",
     sections: [
       {
         eyebrow: "The launch",
-        title: "Shopping built for massive choice",
-        body: "Ventari is designed for people who want discovery to feel clear even when the catalog is large. Search, categories, product detail pages, reviews, and recommendations work together to turn browsing into a guided shopping experience.",
+        title: "Commerce technology built for billion-product scale",
+        body: "Upcube Shopping is designed for marketplace-scale product discovery. AI-powered search, categories, product detail pages, reviews, and recommendations work together to turn browsing into a guided shopping experience. Designed to support up to 1 billion products.",
       },
       {
         eyebrow: "Search",
-        title: "Search that keeps pace with a 100M+ product catalog",
-        body: "The product direction supports large-catalog search and browsing patterns, with a catalog architecture built to scale to 100M+ products without presenting that scale as a burden to the shopper.",
+        title: "AI-powered catalog search at billion-product scale",
+        body: "The product direction supports large-catalog search and browsing patterns, with a catalog architecture designed to support up to 1 billion products without presenting that scale as a burden to the shopper.",
       },
       {
         eyebrow: "Product pages",
         title: "Details that make decisions easier",
-        body: "Ventari product pages are planned around the information people need to compare, evaluate, and move forward: images, descriptions, categories, reviews, recommendations, and clear actions.",
+        body: "Upcube Shopping product pages are planned around the information people need to compare, evaluate, and move forward: images, descriptions, categories, reviews, recommendations, and clear actions.",
       },
       {
         eyebrow: "Discovery",
@@ -135,14 +137,14 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
       },
       {
         eyebrow: "Commerce system",
-        title: "A storefront designed for scale",
-        body: "Ventari is positioned as a large-scale shopping product, with public pages and discovery flows that can grow with broad product coverage.",
+        title: "A storefront infrastructure designed for scale",
+        body: "Upcube Shopping is positioned as commerce technology, with public pages, catalog systems, and discovery flows designed to grow with broad product coverage across brand storefronts.",
       },
     ],
     relatedProducts: [
       { name: "UpcubeAI", href: "/products/upcube-ai" },
       { name: "Upcube Cloud", href: "/products/cloud" },
-      { name: "VM Compute", href: "/products/vm" },
+      { name: "Compute", href: "/products/vm" },
     ],
   },
   {
@@ -402,44 +404,43 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
       {
         eyebrow: "Ecosystem",
         title: "Infrastructure behind connected products",
-        body: "Cloud sits naturally alongside UpcubeAI, Ventari, and VM Compute as the scalable systems layer of the product ecosystem.",
+        body: "Cloud sits naturally alongside UpcubeAI, Upcube Shopping, and Compute as the scalable systems layer of the product ecosystem.",
       },
     ],
     relatedProducts: [
-      { name: "VM Compute", href: "/products/vm" },
+      { name: "Compute", href: "/products/vm" },
       { name: "UpcubeAI", href: "/products/upcube-ai" },
-      { name: "Ventari", href: "/products/ventari" },
+      { name: "Upcube Shopping", href: "/products/shopping" },
     ],
   },
   {
     slug: "vm-compute-launch",
     href: "/news/vm-compute-launch",
-    productName: "VM Compute",
+    productName: "Compute",
     category: "Product Launch",
     dateLabel: "Recent update",
     headline:
-      "VM Compute launches a clearer path to virtual machines and scalable infrastructure.",
+      "Compute launches a clearer path to virtual machines and scalable infrastructure.",
     excerpt:
-      "VM Compute brings virtual machines, lifecycle control, scheduling, networking, storage, images, host coordination, and repair flows into the Upcube Cloud story.",
+      "Compute brings virtual machines, lifecycle control, scheduling, networking, storage, images, host coordination, and repair flows into the Upcube Cloud story.",
     heroSummary:
-      "VM Compute is the compute product for running and managing virtual machines with a clearer public story around infrastructure, lifecycle, networking, storage, and scalable operations.",
+      "Compute is the cloud compute product for running and managing virtual machines with a clearer public story around infrastructure, lifecycle, networking, storage, and scalable operations.",
     primaryCtaLabel: "Open Upcube Cloud",
     primaryCtaHref: "https://cloud.upcube.ai",
     productPageUrl: "/products/vm",
     launchUrl: "https://cloud.upcube.ai",
-    seoTitle:
-      "VM Compute Launch | Virtual Machines and Scalable Infrastructure",
+    seoTitle: "Compute Launch | Virtual Machines and Scalable Infrastructure",
     seoDescription:
-      "Read the VM Compute launch story for virtual machines, lifecycle control, scheduling, networking, storage, images, and repair-oriented infrastructure workflows.",
+      "Read the Compute launch story for virtual machines, lifecycle control, scheduling, networking, storage, images, and repair-oriented infrastructure workflows.",
     finalCtaTitle:
       "Bring compute into the product story with less jargon and more clarity.",
     finalCtaBody:
-      "VM Compute is positioned as the practical infrastructure lane inside Upcube Cloud, connecting lifecycle, storage, networking, and repair-oriented operations.",
+      "Compute is positioned as the practical infrastructure lane inside Upcube Cloud, connecting lifecycle, storage, networking, and repair-oriented operations.",
     sections: [
       {
         eyebrow: "The launch",
         title: "Compute without unnecessary complexity",
-        body: "VM Compute presents virtual machines as a practical product surface, connecting instance lifecycle, scheduling, host coordination, networking, storage, and images.",
+        body: "Compute presents virtual machines as a practical product surface, connecting instance lifecycle, scheduling, host coordination, networking, storage, and images.",
       },
       {
         eyebrow: "Lifecycle",
@@ -449,7 +450,7 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
       {
         eyebrow: "Infrastructure",
         title: "Networking, storage, and images in one story",
-        body: "VM Compute should explain the infrastructure pieces people expect from a virtual-machine product without turning the article into an engineering changelog.",
+        body: "Compute should explain the infrastructure pieces people expect from a virtual-machine product without turning the article into an engineering changelog.",
       },
       {
         eyebrow: "Reliability direction",
@@ -459,7 +460,7 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
       {
         eyebrow: "Cloud connection",
         title: "Part of Upcube Cloud",
-        body: "VM Compute launches through Upcube Cloud, giving cloud visitors a direct path from product exploration into compute.",
+        body: "Compute launches through Upcube Cloud, giving cloud visitors a direct path from product exploration into compute.",
       },
     ],
     relatedProducts: [
@@ -520,7 +521,7 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
     ],
     relatedProducts: [
       { name: "UpcubeAI", href: "/products/upcube-ai" },
-      { name: "VM Compute", href: "/products/vm" },
+      { name: "Compute", href: "/products/vm" },
       { name: "Upcube Mobile OS", href: "/products/upcube-mobile-os" },
     ],
   },
@@ -639,30 +640,30 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
   {
     slug: "upcube-university-preview",
     href: "/news/upcube-university-preview",
-    productName: "Upcube University",
+    productName: "Upcube Education",
     category: "Product Preview",
     dateLabel: "Recent update",
-    headline: "Previewing Upcube University: learning paths for the AI age",
+    headline: "Previewing Upcube Education: learning paths for the AI age",
     excerpt:
-      "Upcube University is a preview of the learning platform for the Upcube ecosystem, focused on AI education, product training, technical courses, guided learning paths, and future credential-style programs.",
+      "Upcube Education is a preview of the learning platform for the Upcube ecosystem, focused on AI education, product training, technical courses, guided learning paths, and future credential-style programs.",
     heroSummary:
-      "Upcube University is presented as the learning platform for the Upcube ecosystem, with a live app domain, no accreditation claim, and no open enrollment flow in this repo.",
-    primaryCtaLabel: "Open University",
+      "Upcube Education is presented as the learning platform for the Upcube ecosystem, with a live app domain, no accreditation claim, and no open enrollment flow in this repo.",
+    primaryCtaLabel: "Open Education",
     primaryCtaHref: "https://university.upcube.ai",
     productPageUrl: "/products/university",
     launchUrl: "https://university.upcube.ai",
-    seoTitle: "Previewing Upcube University | Learning Paths for the AI Age",
+    seoTitle: "Previewing Upcube Education | Learning Paths for the AI Age",
     seoDescription:
-      "Preview Upcube University, the learning platform for the Upcube ecosystem built for AI education, product training, technical courses, and guided learning paths.",
+      "Preview Upcube Education, the learning platform for the Upcube ecosystem built for AI education, product training, technical courses, and guided learning paths.",
     finalCtaTitle:
       "Follow the learning direction through the product preview, not an institutional claim.",
     finalCtaBody:
-      "Upcube University stays framed as an ecosystem learning platform with careful boundaries around accreditation, degrees, certifications, and public enrollment.",
+      "Upcube Education stays framed as an ecosystem learning platform with careful boundaries around accreditation, degrees, certifications, and public enrollment.",
     sections: [
       {
         eyebrow: "The preview",
         title: "A learning platform for the Upcube ecosystem",
-        body: "Upcube University is described as the learning platform for the Upcube ecosystem, with a public app domain at university.upcube.ai. The page still avoids accredited status, legal school status, degrees, or open enrollment claims.",
+        body: "Upcube Education is described as the learning platform for the Upcube ecosystem, with a public app domain at university.upcube.ai. The page still avoids accredited status, legal school status, degrees, or open enrollment claims.",
       },
       {
         eyebrow: "Learning paths",
@@ -677,7 +678,7 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
       {
         eyebrow: "Technical courses",
         title: "Technical courses across the Upcube ecosystem",
-        body: "University is positioned to cover technical courses spanning AI, voice, discovery, cloud, and computing surfaces across the broader ecosystem.",
+        body: "Education is positioned to cover technical courses spanning AI, voice, discovery, cloud, and computing surfaces across the broader ecosystem.",
       },
       {
         eyebrow: "Future direction",

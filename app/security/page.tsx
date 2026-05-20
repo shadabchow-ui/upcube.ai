@@ -1,14 +1,32 @@
 import type { Metadata } from "next";
 
-import { FoundationPage } from "components/upcube-portal/foundation-page";
-import { securityPageContent } from "lib/upcube-portal/foundation-pages";
+import { LongformPage } from "components/upcube-portal/longform-page";
+import { getBodyForRoute } from "lib/upcube-portal/page-content";
+import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createBasicPageMetadata({
   title: "Security | UpcubeAI",
-  description:
-    "A canonical security entry point that sets expectations without unsupported claims.",
-};
+  description: "UpcubeAI security approach and practices.",
+  path: "/security",
+});
 
 export default function SecurityRoutePage() {
-  return <FoundationPage content={securityPageContent} />;
+  const body = getBodyForRoute("/security");
+
+  return (
+    <LongformPage
+      entry={{
+        slug: "security",
+        order: 99,
+        title: "Security",
+        subtitle: "Building secure products for the AI age.",
+        description:
+          "UpcubeAI approaches security as a product requirement, not only an infrastructure concern.",
+        body,
+        category: "trust",
+      }}
+      backHref="/trust"
+      backLabel="Back to Trust"
+    />
+  );
 }

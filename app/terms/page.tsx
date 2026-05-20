@@ -1,13 +1,32 @@
 import type { Metadata } from "next";
 
-import { FoundationPage } from "components/upcube-portal/foundation-page";
-import { termsPageContent } from "lib/upcube-portal/foundation-pages";
+import { LongformPage } from "components/upcube-portal/longform-page";
+import { getBodyForRoute } from "lib/upcube-portal/page-content";
+import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createBasicPageMetadata({
   title: "Terms of Use | UpcubeAI",
-  description: "Placeholder terms-of-use route for future reviewed legal text.",
-};
+  description: "Terms of Use for UpcubeAI websites, products, and services.",
+  path: "/terms",
+});
 
 export default function TermsRoutePage() {
-  return <FoundationPage content={termsPageContent} />;
+  const body = getBodyForRoute("/legal/terms");
+
+  return (
+    <LongformPage
+      entry={{
+        slug: "terms-of-use",
+        order: 99,
+        title: "Terms of Use",
+        subtitle: "Welcome to UpcubeAI",
+        description:
+          "These Terms of Use describe the rules that apply when you access or use UpcubeAI products.",
+        body,
+        category: "trust",
+      }}
+      backHref="/legal"
+      backLabel="Back to Legal"
+    />
+  );
 }

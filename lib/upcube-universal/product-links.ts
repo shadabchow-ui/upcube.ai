@@ -60,9 +60,10 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
   },
   {
     id: "ventari",
-    label: "Ventari",
-    description: "Large-scale commerce search and product discovery.",
-    productHref: "/products/ventari",
+    label: "Shopping",
+    description:
+      "Commerce technology, catalog discovery, and brand storefront infrastructure.",
+    productHref: "/products/shopping",
     launchHref: UPCUBE_VENTARI_URL,
   },
   {
@@ -92,7 +93,7 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
   },
   {
     id: "university",
-    label: "University",
+    label: "Education",
     description:
       "AI education, product training, and guided learning paths across the Upcube ecosystem.",
     productHref: "/products/university",

@@ -1,13 +1,33 @@
 import type { Metadata } from "next";
 
-import { TermsOfServicePage } from "components/upcube-portal/terms-of-service-page";
+import { LongformPage } from "components/upcube-portal/longform-page";
+import { getBodyForRoute } from "lib/upcube-portal/page-content";
+import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createBasicPageMetadata({
   title: "Terms of Service | UpcubeAI",
   description:
-    "Draft terms-of-service placeholder for UpcubeAI pending reviewed legal text.",
-};
+    "Terms of Service for UpcubeAI websites, products, and services.",
+  path: "/terms-of-service",
+});
 
 export default function TermsOfServiceRoutePage() {
-  return <TermsOfServicePage />;
+  const body = getBodyForRoute("/legal/terms");
+
+  return (
+    <LongformPage
+      entry={{
+        slug: "terms-of-service",
+        order: 99,
+        title: "Terms of Service",
+        subtitle: "Welcome to UpcubeAI",
+        description:
+          "These Terms of Service describe the rules that apply when you access or use UpcubeAI products.",
+        body,
+        category: "trust",
+      }}
+      backHref="/legal"
+      backLabel="Back to Legal"
+    />
+  );
 }

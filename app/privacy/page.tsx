@@ -1,13 +1,32 @@
 import type { Metadata } from "next";
 
-import { PrivacyPage } from "components/upcube-portal/privacy-page";
+import { LongformPage } from "components/upcube-portal/longform-page";
+import { getBodyForRoute } from "lib/upcube-portal/page-content";
+import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
-export const metadata: Metadata = {
-  title: "UpcubeAI Privacy",
-  description:
-    "Placeholder privacy page for UpcubeAI pending reviewed legal copy and confirmed operational details.",
-};
+export const metadata: Metadata = createBasicPageMetadata({
+  title: "Privacy | UpcubeAI",
+  description: "Privacy policy for UpcubeAI products and services.",
+  path: "/privacy",
+});
 
 export default function PrivacyRoute() {
-  return <PrivacyPage />;
+  const body = getBodyForRoute("/legal/privacy");
+
+  return (
+    <LongformPage
+      entry={{
+        slug: "privacy",
+        order: 99,
+        title: "Privacy Notice",
+        subtitle: "",
+        description:
+          "UpcubeAI privacy policy covering how we handle your data.",
+        body,
+        category: "trust",
+      }}
+      backHref="/legal"
+      backLabel="Back to Legal"
+    />
+  );
 }

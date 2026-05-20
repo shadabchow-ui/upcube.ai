@@ -1,14 +1,31 @@
 import type { Metadata } from "next";
 
-import { FoundationPage } from "components/upcube-portal/foundation-page";
-import { foundationPageContent } from "lib/upcube-portal/foundation-pages";
+import { LongformPage } from "components/upcube-portal/longform-page";
+import { getBodyForRoute } from "lib/upcube-portal/page-content";
+import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Foundation | UpcubeAI",
-  description:
-    "Mission-oriented foundation direction page without unsupported legal claims.",
-};
+export const metadata: Metadata = createBasicPageMetadata({
+  title: "Mission | UpcubeAI",
+  description: "Mission-oriented foundation direction page.",
+  path: "/foundation",
+});
 
 export default function FoundationRoutePage() {
-  return <FoundationPage content={foundationPageContent} />;
+  const body = getBodyForRoute("/company/foundation");
+
+  return (
+    <LongformPage
+      entry={{
+        slug: "foundation",
+        order: 99,
+        title: "Mission",
+        subtitle: "",
+        description: "The UpcubeAI Foundation direction and mission.",
+        body,
+        category: "company",
+      }}
+      backHref="/company"
+      backLabel="Back to Company"
+    />
+  );
 }

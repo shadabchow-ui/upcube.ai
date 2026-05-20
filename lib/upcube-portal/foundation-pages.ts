@@ -31,7 +31,7 @@ const careersStatusNotice =
   "Open role inventories, compensation ranges, benefits, locations, and detailed hiring steps were not provided in this repo.";
 
 export const aboutPageContent: FoundationPageContent = {
-  eyebrow: "About Us",
+  eyebrow: "Company Overview",
   title: "Building the next generation of intelligent technology.",
   description:
     "Upcube is an AI technology company building a connected family of premium products across AI, commerce, discovery, cloud infrastructure, entertainment, and computing.",
@@ -41,7 +41,7 @@ export const aboutPageContent: FoundationPageContent = {
       title: "What the company is building",
       paragraphs: [
         upcubeCompanyIdentity.mission,
-        "Ethen, Earth, Ventari, Cloud, Books, Games, Jobs, and the computing roadmap are positioned as connected product lines inside one broader company story.",
+        "Ethen, Earth, Upcube Shopping, Cloud, Books, Games, Jobs, and the computing roadmap are positioned as connected product lines inside one broader company story.",
       ],
     },
     {
@@ -71,7 +71,7 @@ export const aboutPageContent: FoundationPageContent = {
 };
 
 export const charterPageContent: FoundationPageContent = {
-  eyebrow: "Our Charter",
+  eyebrow: "Product Charter",
   title:
     "Principles for building the next generation of intelligent technology.",
   description:
@@ -130,12 +130,12 @@ export const charterPageContent: FoundationPageContent = {
   ],
   ctas: [
     { label: "Try Ethen", href: UPCUBE_CHAT_URL, external: true },
-    { label: "About Us", href: "/about" },
+    { label: "Company Overview", href: "/about" },
   ],
 };
 
 export const foundationPageContent: FoundationPageContent = {
-  eyebrow: "Foundation",
+  eyebrow: "Mission",
   title: "A mission page for work that should matter in the long run.",
   description:
     "This route describes an aspirational foundation direction. It does not claim that a legally registered nonprofit or formal foundation entity exists.",
@@ -216,7 +216,7 @@ export const careersPageContent: FoundationPageContent = {
 };
 
 export const brandPageContent: FoundationPageContent = {
-  eyebrow: "Brand Help Center",
+  eyebrow: "Brand Resources",
   title: "UpcubeAI | AI Technology Company",
   description:
     "This page offers practical guidance for using the UpcubeAI name, company descriptor, and tagline without implying a full downloadable brand kit exists in the repo.",
@@ -232,7 +232,7 @@ export const brandPageContent: FoundationPageContent = {
         "Use AI technology company as the short public descriptor where a company label is needed.",
         'Use "AI for the way you work, discover, build, and imagine what\'s next" as the public-facing tagline.',
         "Use Ethen for the chat workspace destination.",
-        "Use Earth, Books, Games, Jobs, Cloud, Ventari, OS, and Mobile OS as product names when linking to those destinations.",
+        "Use Earth, Books, Games, Jobs, Cloud, Upcube Shopping, OS, and Mobile OS as product names when linking to those destinations.",
       ],
     },
     {
@@ -255,13 +255,13 @@ export const brandPageContent: FoundationPageContent = {
     },
   ],
   ctas: [
-    { label: "About Us", href: "/about" },
-    { label: "Foundation", href: "/foundation" },
+    { label: "Company Overview", href: "/about" },
+    { label: "Mission", href: "/foundation" },
   ],
 };
 
 export const policiesPageContent: FoundationPageContent = {
-  eyebrow: "Other Policies",
+  eyebrow: "Policy",
   title: "A quiet index for policy-shaped pages on the site.",
   description:
     "This page gathers the current placeholder routes without presenting them as reviewed legal policy.",
@@ -298,8 +298,8 @@ export const policiesPageContent: FoundationPageContent = {
   ],
   ctas: [
     { label: "Terms of Use", href: "/terms" },
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Security & Privacy", href: "/security-privacy" },
+    { label: "Privacy Notice", href: "/privacy" },
+    { label: "Privacy", href: "/security-privacy" },
   ],
 };
 
@@ -330,13 +330,13 @@ export const termsPageContent: FoundationPageContent = {
     },
   ],
   ctas: [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Other Policies", href: "/policies" },
+    { label: "Privacy Notice", href: "/privacy" },
+    { label: "Policy", href: "/policies" },
   ],
 };
 
 export const trustTransparencyPageContent: FoundationPageContent = {
-  eyebrow: "Trust & Transparency",
+  eyebrow: "Trust",
   title: "Trust should come from clarity, not from oversized promises.",
   description:
     "This page explains how the public site handles missing facts, placeholder policy routes, and evidence-bound language.",
@@ -369,13 +369,13 @@ export const trustTransparencyPageContent: FoundationPageContent = {
     },
   ],
   ctas: [
-    { label: "Safety Approach", href: "/safety" },
-    { label: "Security & Privacy", href: "/security-privacy" },
+    { label: "Safety", href: "/safety" },
+    { label: "Privacy", href: "/security-privacy" },
   ],
 };
 
 export const researchResidencyPageContent: FoundationPageContent = {
-  eyebrow: "Research Residency",
+  eyebrow: "Research Fellowship",
   title: "A possible residency model, described carefully.",
   description:
     "An active residency program was not provided in the repo. This page describes what such a program could value without implying it exists today.",
@@ -414,7 +414,7 @@ export const researchResidencyPageContent: FoundationPageContent = {
 };
 
 export const researchEconomicPageContent: FoundationPageContent = {
-  eyebrow: "Economic Research",
+  eyebrow: "Economy & Markets",
   title: "Research on cost, tradeoffs, and practical system economics.",
   description:
     "This page describes an economic research lane without claiming a formal institute, published series, or external partnership.",
@@ -453,7 +453,7 @@ export const researchEconomicPageContent: FoundationPageContent = {
 };
 
 export const workingTogetherPageContent: FoundationPageContent = {
-  eyebrow: "Working Together",
+  eyebrow: "Building With Communities",
   title: "Building AI for everyone through diverse perspectives.",
   description:
     "How UpcubeAI approaches collaboration, inclusion, and shared progress across the AI community.",
@@ -490,12 +490,12 @@ export const workingTogetherPageContent: FoundationPageContent = {
   ],
   ctas: [
     { label: "Careers", href: "/careers" },
-    { label: "About Us", href: "/about" },
+    { label: "Company Overview", href: "/about" },
   ],
 };
 
 export const societalImpactPageContent: FoundationPageContent = {
-  eyebrow: "Societal Impact",
+  eyebrow: "Public Impact",
   title: "AI and the next era of discovery.",
   description:
     "How UpcubeAI thinks about the broader effects of AI on learning, access, discovery, and meaningful progress.",
@@ -514,7 +514,7 @@ export const societalImpactPageContent: FoundationPageContent = {
         "The current product family touches several areas where AI can have a meaningful impact.",
       ],
       bullets: [
-        "Learning and education through Upcube University.",
+        "Learning and education through Upcube Education.",
         "Spatial discovery and public understanding through Upcube Earth AI.",
         "Health-adjacent research support through Upcube Health AI.",
         "Scientific research acceleration through Upcube Science AI.",
@@ -531,12 +531,12 @@ export const societalImpactPageContent: FoundationPageContent = {
   ],
   ctas: [
     { label: "Research overview", href: "/research" },
-    { label: "About Us", href: "/about" },
+    { label: "Company Overview", href: "/about" },
   ],
 };
 
 export const founderLetterPageContent: FoundationPageContent = {
-  eyebrow: "Founder Letter",
+  eyebrow: "Founder Note",
   title: "Why we focus on AI and to what end.",
   description:
     "A letter from the founding perspective on why UpcubeAI exists and what it aims to build.",
@@ -570,13 +570,13 @@ export const founderLetterPageContent: FoundationPageContent = {
     },
   ],
   ctas: [
-    { label: "About Us", href: "/about" },
-    { label: "Foundation", href: "/foundation" },
+    { label: "Company Overview", href: "/about" },
+    { label: "Mission", href: "/foundation" },
   ],
 };
 
 export const forOrganizationsPageContent: FoundationPageContent = {
-  eyebrow: "For Organizations",
+  eyebrow: "For Teams & Builders",
   title: "Unlock more capability with AI.",
   description:
     "How organizations can use UpcubeAI across teams, research, and operational workflows.",
@@ -597,7 +597,7 @@ export const forOrganizationsPageContent: FoundationPageContent = {
         "Cross-team research synthesis and decision support.",
         "Content and documentation workflows with review gates.",
         "Discovery and analysis across the Upcube product ecosystem.",
-        "Learning and skill development through Upcube University.",
+        "Learning and skill development through Upcube Education.",
       ],
       paragraphs: [
         "These use cases describe product direction, not claims of deployed enterprise infrastructure.",
@@ -624,8 +624,8 @@ export const securityPageContent: FoundationPageContent = {
     "A canonical security entry point that sets expectations without unsupported claims.",
   sections: securitySections,
   ctas: [
-    { label: "Safety Approach", href: "/safety" },
-    { label: "Trust & Transparency", href: "/trust-transparency" },
+    { label: "Safety", href: "/safety" },
+    { label: "Trust", href: "/trust-transparency" },
   ],
 };
 
@@ -637,7 +637,7 @@ export const statusPageContent: FoundationPageContent = {
   sections: statusSections,
   ctas: [
     { label: "Contact us", href: "/contact" },
-    { label: "Trust & Transparency", href: "/trust-transparency" },
+    { label: "Trust", href: "/trust-transparency" },
   ],
 };
 

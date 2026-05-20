@@ -1,27 +1,32 @@
-import { TextPage } from "components/upcube-portal/text-page";
-import { legalSections, legalDraftNotice } from "lib/upcube-portal/content";
+import type { Metadata } from "next";
+
+import { LongformPage } from "components/upcube-portal/longform-page";
+import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
-export const metadata = createBasicPageMetadata({
+export const metadata: Metadata = createBasicPageMetadata({
   title: "Legal | UpcubeAI",
   description: "Legal index for terms, privacy, policies, and trust routes.",
   path: "/legal",
 });
 
 export default function LegalRoutePage() {
+  const body = getBodyForRoute("/legal");
+
   return (
-    <TextPage
-      eyebrow="Legal"
-      title="Legal and policy index"
-      description="A consolidated index of legal and policy routes currently available in this repository."
-      sections={legalSections}
-      draftNotice={legalDraftNotice}
-      ctas={[
-        { label: "Terms", href: "/terms" },
-        { label: "Privacy", href: "/privacy" },
-        { label: "Policies", href: "/policies" },
-        { label: "Security", href: "/security" },
-      ]}
+    <LongformPage
+      entry={{
+        slug: "legal-policy-index",
+        order: 99,
+        title: "Legal & Policies",
+        subtitle: "A clear home for UpcubeAI legal and policy pages.",
+        description:
+          "This page brings together the legal, policy, safety, trust, privacy, and responsible AI routes currently available across the UpcubeAI portal.",
+        body,
+        category: "trust",
+      }}
+      backHref="/"
+      backLabel="Back to Home"
     />
   );
 }

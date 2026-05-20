@@ -152,9 +152,9 @@ export type ProductScaleStat = {
 export const productScaleStats: ProductScaleStat[] = [
   { id: "books-scale", label: "Books", value: "50M books" },
   { id: "games-scale", label: "Games", value: "400K games" },
-  { id: "ventari-scale", label: "Ventari", value: "100M products" },
+  { id: "ventari-scale", label: "Shopping", value: "1B product scale" },
   { id: "jobs-scale", label: "Jobs", value: "8M jobs" },
-  { id: "university-scale", label: "University", value: "100K courses" },
+  { id: "university-scale", label: "Education", value: "100K courses" },
 ];
 
 export type UpcubeCompanyIdentity = {
@@ -261,7 +261,7 @@ export const portalAppLinks: PortalNavItem[] = [
   { id: "app-games", label: "Games", href: UPCUBE_GAMES_URL },
   { id: "app-jobs", label: "Jobs", href: UPCUBE_JOBS_URL },
   { id: "app-cloud", label: "Cloud", href: UPCUBE_CLOUD_URL },
-  { id: "app-ventari", label: "Ventari", href: UPCUBE_VENTARI_URL },
+  { id: "app-ventari", label: "Shopping", href: UPCUBE_VENTARI_URL },
 ];
 
 const portalHomepageStatusById: Record<
@@ -345,13 +345,13 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
   },
   ventari: {
     id: "ventari",
-    title: "Ventari",
+    title: "Upcube Shopping",
     description:
-      "A premium commerce product built for 100M products with large-scale search, product detail, and refined discovery.",
-    href: "/products/ventari",
+      "Commerce technology for marketplace-scale product discovery. Designed to support up to 1 billion products with AI-powered search, PDPs, reviews, recommendations, and brand storefront infrastructure.",
+    href: "/products/shopping",
     tag: "AI commerce",
     category: "Commerce",
-    ctaLabel: "Open Ventari",
+    ctaLabel: "Explore Shopping",
   },
   vm: {
     id: "vm",
@@ -395,13 +395,13 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
   },
   university: {
     id: "university",
-    title: "University",
+    title: "Education",
     description:
       "100K courses with simple $5 course pricing for AI education, product training, and guided learning paths.",
     href: "/products/university",
     tag: "Education & Learning",
     category: "Learning",
-    ctaLabel: "Explore University",
+    ctaLabel: "Explore Education",
   },
 };
 
@@ -457,55 +457,55 @@ export const portalFooterGroups: PortalFooterGroup[] = [
   },
   {
     id: "terms-policies",
-    title: "Terms & Policies",
+    title: "Legal & Policies",
     links: [
-      { id: "legal-footer", label: "Legal Index", href: "/legal" },
+      { id: "legal-footer", label: "Legal", href: "/legal" },
       { id: "terms-footer", label: "Terms of Use", href: "/terms" },
-      { id: "privacy-footer", label: "Privacy Policy", href: "/privacy" },
-      { id: "policies-footer", label: "Other Policies", href: "/policies" },
+      { id: "privacy-footer", label: "Privacy Notice", href: "/privacy" },
+      { id: "policies-footer", label: "Policy", href: "/policies" },
       {
         id: "principles-footer",
-        label: "AI Principles",
+        label: "Commitments",
         href: "/principles",
       },
       {
         id: "for-organizations-footer",
-        label: "For Organizations",
+        label: "For Teams & Builders",
         href: "/for-organizations",
       },
     ],
   },
   {
     id: "about-us",
-    title: "About Us",
+    title: "Company",
     links: [
-      { id: "about-footer", label: "About Us", href: "/about" },
-      { id: "charter-footer", label: "Our Charter", href: "/charter" },
-      { id: "foundation-footer", label: "Foundation", href: "/foundation" },
+      { id: "about-footer", label: "Company Overview", href: "/about" },
+      { id: "charter-footer", label: "Product Charter", href: "/charter" },
+      { id: "foundation-footer", label: "Mission", href: "/foundation" },
       { id: "careers-footer", label: "Careers", href: "/careers" },
-      { id: "brand-footer", label: "Brand Help Center", href: "/brand" },
+      { id: "brand-footer", label: "Brand Resources", href: "/brand" },
       {
         id: "working-together-footer",
-        label: "Working Together",
+        label: "Building With Communities",
         href: "/working-together",
       },
       {
         id: "societal-impact-footer",
-        label: "Societal Impact",
+        label: "Public Impact",
         href: "/societal-impact",
       },
       {
         id: "founder-letter-footer",
-        label: "Founder Letter",
+        label: "Founder Note",
         href: "/founder-letter",
       },
     ],
   },
   {
     id: "safety",
-    title: "Safety",
+    title: "Trust & Safety",
     links: [
-      { id: "safety-footer", label: "Safety Approach", href: "/safety" },
+      { id: "safety-footer", label: "Safety", href: "/safety" },
       {
         id: "security-footer",
         label: "Security",
@@ -513,12 +513,12 @@ export const portalFooterGroups: PortalFooterGroup[] = [
       },
       {
         id: "security-privacy-footer",
-        label: "Security & Privacy",
+        label: "Privacy",
         href: "/security-privacy",
       },
       {
         id: "trust-transparency-footer",
-        label: "Trust & Transparency",
+        label: "Trust",
         href: "/trust-transparency",
       },
       { id: "status-footer", label: "Status", href: "/status" },
@@ -526,22 +526,12 @@ export const portalFooterGroups: PortalFooterGroup[] = [
   },
   {
     id: "research-index",
-    title: "Research Index",
+    title: "Research",
     links: [
       {
         id: "research-overview-footer",
-        label: "Research Overview",
+        label: "Research Home",
         href: "/research",
-      },
-      {
-        id: "research-residency-footer",
-        label: "Research Residency",
-        href: "/research/residency",
-      },
-      {
-        id: "research-economic-footer",
-        label: "Economic Research",
-        href: "/research/economic",
       },
     ],
   },
@@ -598,7 +588,7 @@ export const portalRoutePlan: PortalRoutePlan[] = [
   { id: "chat", title: "Chat Overview", href: "/chat", status: "live" },
   {
     id: "research",
-    title: "Research Overview",
+    title: "Research Home",
     href: "/research",
     status: "live",
   },
@@ -610,13 +600,13 @@ export const portalRoutePlan: PortalRoutePlan[] = [
   })),
   {
     id: "research-residency",
-    title: "Research Residency",
+    title: "Research Fellowship",
     href: "/research/residency",
     status: "live",
   },
   {
     id: "research-economic",
-    title: "Economic Research",
+    title: "Economy & Markets",
     href: "/research/economic",
     status: "live",
   },
@@ -633,37 +623,37 @@ export const portalRoutePlan: PortalRoutePlan[] = [
   { id: "careers", title: "Careers", href: "/careers", status: "live" },
   {
     id: "principles",
-    title: "AI Principles",
+    title: "Commitments",
     href: "/principles",
     status: "live",
   },
   {
     id: "legal",
-    title: "Legal Index",
+    title: "Legal",
     href: "/legal",
     status: "live",
   },
   {
     id: "working-together",
-    title: "Working Together",
+    title: "Building With Communities",
     href: "/working-together",
     status: "live",
   },
   {
     id: "societal-impact",
-    title: "Societal Impact",
+    title: "Public Impact",
     href: "/societal-impact",
     status: "live",
   },
   {
     id: "founder-letter",
-    title: "Founder Letter",
+    title: "Founder Note",
     href: "/founder-letter",
     status: "live",
   },
   {
     id: "for-organizations",
-    title: "For Organizations",
+    title: "For Teams & Builders",
     href: "/for-organizations",
     status: "live",
   },
@@ -910,47 +900,47 @@ export const portalMenuGroups: PortalMenuGroup[] = [
       }),
       {
         id: "research-residency-menu",
-        label: "Research Residency",
+        label: "Research Fellowship",
         href: "/research/residency",
       },
       {
         id: "research-economic-menu",
-        label: "Economic Research",
+        label: "Economy & Markets",
         href: "/research/economic",
       },
     ],
   },
   {
     id: "trust",
-    title: "Trust",
+    title: "Trust & Safety",
     items: [
       {
         id: "safety-menu",
-        label: "Safety Approach",
+        label: "Safety",
         href: "/safety",
         description: "Trust and responsible product framing.",
       },
       {
         id: "security-privacy-menu",
-        label: "Security & Privacy",
+        label: "Privacy",
         href: "/security-privacy",
         description: "Current placeholder route for combined trust topics.",
       },
       {
         id: "trust-transparency-menu",
-        label: "Trust & Transparency",
+        label: "Trust",
         href: "/trust-transparency",
         description: "How the public site handles evidence and placeholders.",
       },
       {
         id: "principles-menu",
-        label: "AI Principles",
+        label: "Commitments",
         href: "/principles",
         description: "Operating principles for AI development.",
       },
       {
         id: "for-organizations-menu",
-        label: "For Organizations",
+        label: "For Teams & Builders",
         href: "/for-organizations",
         description: "Unlock more capability with AI.",
       },
@@ -962,13 +952,13 @@ export const portalMenuGroups: PortalMenuGroup[] = [
     items: [
       {
         id: "about-page-menu",
-        label: "About Us",
+        label: "Company Overview",
         href: "/about",
         description: "High-level company and platform framing.",
       },
       {
         id: "foundation-menu",
-        label: "Foundation",
+        label: "Mission",
         href: "/foundation",
         description: "Mission-oriented direction without legal overclaim.",
       },
@@ -980,19 +970,19 @@ export const portalMenuGroups: PortalMenuGroup[] = [
       },
       {
         id: "working-together-menu",
-        label: "Working Together",
+        label: "Building With Communities",
         href: "/working-together",
         description: "Building AI for everyone through diverse perspectives.",
       },
       {
         id: "societal-impact-menu",
-        label: "Societal Impact",
+        label: "Public Impact",
         href: "/societal-impact",
         description: "AI and the next era of discovery.",
       },
       {
         id: "founder-letter-menu",
-        label: "Founder Letter",
+        label: "Founder Note",
         href: "/founder-letter",
         description: "Why we focus on AI and to what end.",
       },
@@ -1233,10 +1223,10 @@ export const companyEcosystem: PortalCardItem[] = [
   },
   {
     id: "eco-ventari",
-    title: "Ventari",
+    title: "Upcube Shopping",
     description:
-      "Ventari brings commerce search and large-scale product discovery into the broader Upcube platform.",
-    href: "/products/ventari",
+      "Upcube Shopping brings commerce technology and marketplace-scale product discovery into the broader Upcube platform.",
+    href: "/products/shopping",
     tag: "Commerce",
   },
   {
@@ -1251,7 +1241,7 @@ export const companyEcosystem: PortalCardItem[] = [
     id: "eco-cloud",
     title: "Cloud",
     description:
-      "Cloud and VM Compute establish the infrastructure lane for builders and platform teams.",
+      "Cloud and Compute establish the infrastructure lane for builders and platform teams.",
     href: "/products/cloud",
     tag: "Cloud & Infrastructure",
   },
@@ -1430,12 +1420,12 @@ export const contactProductOptions: ContactProductOption[] = [
   { value: "games", label: "Upcube Games — Game discovery" },
   { value: "jobs", label: "Upcube Jobs — Hiring and careers" },
   { value: "cloud", label: "Upcube Cloud — Developer infrastructure" },
-  { value: "ventari", label: "Ventari — Commerce platform" },
+  { value: "ventari", label: "Upcube Shopping — Commerce technology" },
   { value: "vm", label: "Compute — Virtual machines" },
   { value: "upcube-os", label: "Upcube OS — Desktop operating system" },
   { value: "upcube-mobile-os", label: "Mobile OS — Mobile platform" },
   { value: "voice", label: "Upcube Voice — Voice platform" },
-  { value: "university", label: "University — Education and learning" },
+  { value: "university", label: "Education — Education and learning" },
   { value: "general", label: "Not product-specific" },
 ];
 

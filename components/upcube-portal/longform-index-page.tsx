@@ -19,11 +19,12 @@ export function LongformIndexPage() {
               Research at UpcubeAI
             </h1>
             <p className="uc-longform-index-hero-desc">
-              Exploring AI across geospatial intelligence, health, science,
-              sustainability, algorithms, information retrieval, machine
-              intelligence, perception, natural language, human-computer
-              interaction, networking, responsible AI, security, software
-              engineering, and systems research.
+              Exploring AI across spatial intelligence, health knowledge,
+              discovery science, planet resilience, core intelligence, search
+              routing, adaptive intelligence, multimodal understanding, language
+              reasoning, interface intelligence, connected infrastructure, human
+              alignment, trust defense, AI engineering, and platform
+              infrastructure.
             </p>
           </div>
         </div>

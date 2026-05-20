@@ -41,10 +41,10 @@ export const homeProofPoints: HomeProofPoint[] = [
   {
     title: "Commerce",
     description:
-      "AI commerce, built for scale. Ventari brings Upcube into premium commerce with large-catalog search, richer product detail, cleaner category browsing, and recommendation-led discovery.",
-    href: "/products/ventari",
+      "Commerce technology for marketplace-scale discovery. Upcube Shopping is the commerce technology layer built for billion-product catalogs with AI-powered search, product pages, reviews, recommendations, and brand storefront infrastructure.",
+    href: "/products/shopping",
     links: [
-      { label: "Ventari", href: "/products/ventari" },
+      { label: "Upcube Shopping", href: "/products/shopping" },
       { label: "Commerce story", href: "/news/ventari-launch" },
     ],
   },
@@ -62,12 +62,12 @@ export const homeProofPoints: HomeProofPoint[] = [
   {
     title: "Education & Learning",
     description:
-      "Learning designed for the AI era. Upcube University brings AI education, product training, technical courses, and guided learning paths into the ecosystem.",
+      "Learning designed for the AI era. Upcube Education brings AI education, product training, technical courses, and guided learning paths into the ecosystem.",
     href: "/products/university",
     links: [
-      { label: "Upcube University", href: "/products/university" },
+      { label: "Upcube Education", href: "/products/university" },
       {
-        label: "University preview",
+        label: "Education preview",
         href: "/news/upcube-university-preview",
       },
     ],
@@ -95,7 +95,7 @@ export const homeProofPoints: HomeProofPoint[] = [
   {
     title: "Computing",
     description:
-      "A future direction for intelligent systems. VM Compute, Upcube OS, and Upcube Mobile OS define a broader path toward AI-native operating systems, virtualization, and next-generation computing.",
+      "A future direction for intelligent systems. Compute, Upcube OS, and Upcube Mobile OS define a broader path toward AI-native operating systems, virtualization, and next-generation computing.",
     href: "/products/upcube-os",
     links: [
       { label: "Upcube OS", href: "/products/upcube-os" },
@@ -116,9 +116,9 @@ export const featureBands: FeatureBand[] = [
   {
     title: "Commerce",
     description:
-      "Commerce discovery, reimagined for scale. Ventari is a premium AI commerce product line built for large catalogs, smarter discovery, and more confident product decisions.",
-    href: "/products/ventari",
-    cta: "Explore Ventari",
+      "Commerce technology for marketplace-scale discovery. Upcube Shopping is the commerce technology layer built for billion-product catalogs with AI-powered search, product pages, reviews, recommendations, and brand storefront infrastructure.",
+    href: "/products/shopping",
+    cta: "Explore Shopping",
     tone: "amber",
   },
   {
@@ -132,9 +132,9 @@ export const featureBands: FeatureBand[] = [
   {
     title: "Education & Learning",
     description:
-      "Learning designed for the AI era. Upcube University brings AI education, product training, technical courses, and guided learning paths into the ecosystem.",
+      "Learning designed for the AI era. Upcube Education brings AI education, product training, technical courses, and guided learning paths into the ecosystem.",
     href: "/products/university",
-    cta: "Explore University",
+    cta: "Explore Education",
     tone: "green",
   },
   {
@@ -148,7 +148,7 @@ export const featureBands: FeatureBand[] = [
   {
     title: "Computing",
     description:
-      "A future direction for intelligent systems. VM Compute, Upcube OS, and Upcube Mobile OS define a broader path toward AI-native operating systems, virtualization, and next-generation computing.",
+      "A future direction for intelligent systems. Compute, Upcube OS, and Upcube Mobile OS define a broader path toward AI-native operating systems, virtualization, and next-generation computing.",
     href: "/products/vm",
     cta: "View computing products",
     tone: "blue",
@@ -172,9 +172,9 @@ export const stories: HomeLinkItem[] = [
     tag: "AI workspace",
   },
   {
-    title: "Ventari commerce launch",
+    title: "Upcube Shopping commerce launch",
     description:
-      "A premium commerce story built around large-scale search, richer product detail, and discovery momentum.",
+      "A commerce technology story built around marketplace-scale search, product discovery, and brand storefront infrastructure.",
     href: "/news/ventari-launch",
     tag: "AI commerce",
   },
@@ -200,7 +200,7 @@ export const stories: HomeLinkItem[] = [
     tag: "AI & Voice",
   },
   {
-    title: "Upcube University preview",
+    title: "Upcube Education preview",
     description:
       "Learning paths, product training, and ecosystem education designed for the AI age.",
     href: "/news/upcube-university-preview",

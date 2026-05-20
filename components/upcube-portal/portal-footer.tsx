@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import {
   portalFooterGroups,
   portalSocialLinks,
@@ -54,6 +57,107 @@ function SocialIcon({ label }: { label: string }) {
   }
 }
 
+function LanguageSelector() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const languages = [
+    { code: "en", label: "English (US)" },
+    { code: "en-GB", label: "English (UK)" },
+    { code: "es", label: "Español" },
+    { code: "fr", label: "Français" },
+    { code: "de", label: "Deutsch" },
+    { code: "ja", label: "日本語" },
+    { code: "zh", label: "中文" },
+  ];
+
+  const currentLang = languages[0]!;
+
+  return (
+    <div style={{ position: "relative" }}>
+      <button
+        type="button"
+        className="uc-footer-bottom-lang"
+        aria-expanded={isOpen}
+        aria-haspopup="listbox"
+        aria-label="Language — English (US). Translation UI is conceptual only."
+        onClick={() => setIsOpen((v) => !v)}
+      >
+        {currentLang.label}
+        <svg
+          className="uc-footer-bottom-lang-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </button>
+      {isOpen ? (
+        <div
+          role="listbox"
+          aria-label="Select language"
+          style={{
+            position: "absolute",
+            bottom: "calc(100% + 0.5rem)",
+            right: 0,
+            minWidth: "12rem",
+            border: "1px solid var(--uc-border-soft)",
+            borderRadius: "0.75rem",
+            background: "#0a0a0a",
+            padding: "0.35rem",
+            zIndex: 50,
+            boxShadow: "0 12px 36px rgba(0,0,0,0.5)",
+          }}
+          onMouseLeave={() => setIsOpen(false)}
+        >
+          {languages.map((lang) => (
+            <button
+              key={lang.code}
+              type="button"
+              role="option"
+              aria-selected={lang.code === currentLang.code}
+              style={{
+                display: "block",
+                width: "100%",
+                padding: "0.4rem 0.65rem",
+                border: 0,
+                borderRadius: "0.5rem",
+                background:
+                  lang.code === currentLang.code
+                    ? "rgba(255,255,255,0.08)"
+                    : "transparent",
+                color: "var(--uc-text)",
+                font: "inherit",
+                fontSize: "0.84375rem",
+                lineHeight: "1.4",
+                textAlign: "left",
+                cursor: "pointer",
+              }}
+              onClick={() => setIsOpen(false)}
+            >
+              {lang.label}
+            </button>
+          ))}
+          <p
+            style={{
+              margin: "0.4rem 0.65rem 0",
+              fontSize: "0.6875rem",
+              lineHeight: "1.3",
+              color: "var(--up-color-primary-50)",
+            }}
+          >
+            Translation UI is conceptual. Full i18n is not implemented.
+          </p>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 export function PortalFooter() {
   return (
     <footer className="uc-footer">
@@ -70,23 +174,6 @@ export function PortalFooter() {
             <div>
               <p className="uc-footer-brand-tagline">The Next Frontier.</p>
             </div>
-          </div>
-          <div
-            className="uc-footer-social-row"
-            aria-label="Upcube social links"
-          >
-            {portalSocialLinks.map((item) => (
-              <a
-                key={item.id}
-                className="uc-footer-social-link"
-                href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={item.label}
-              >
-                <SocialIcon label={item.label} />
-              </a>
-            ))}
           </div>
         </div>
         <div className="uc-grid uc-card-grid">
@@ -117,6 +204,39 @@ export function PortalFooter() {
               </ul>
             </section>
           ))}
+        </div>
+      </div>
+      <div className="uc-footer-bottom">
+        <div className="uc-footer-bottom-inner">
+          <div
+            className="uc-footer-bottom-social"
+            aria-label="Upcube social links"
+          >
+            {portalSocialLinks.map((item) => (
+              <a
+                key={item.id}
+                className="uc-footer-social-icon"
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={item.label}
+              >
+                <SocialIcon label={item.label} />
+              </a>
+            ))}
+          </div>
+          <div className="uc-footer-bottom-center">
+            <p className="uc-footer-bottom-copy">Upcube &copy; 2026</p>
+            <span className="uc-footer-bottom-sep" aria-hidden="true">
+              &middot;
+            </span>
+            <Link className="uc-footer-bottom-link" href="/legal/privacy">
+              Your privacy choices
+            </Link>
+          </div>
+          <div className="uc-footer-bottom-right">
+            <LanguageSelector />
+          </div>
         </div>
       </div>
     </footer>

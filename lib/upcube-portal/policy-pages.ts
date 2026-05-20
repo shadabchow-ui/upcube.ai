@@ -12,7 +12,7 @@ export const policyPageContentBySlug: Record<
   FoundationPageContent
 > = {
   "ai-principles": {
-    eyebrow: "AI Principles",
+    eyebrow: "Commitments",
     title: "Bold innovation. Responsible development. Progress together.",
     description:
       "UpcubeAI's approach to developing and using AI is grounded in a simple founding belief: technology should help people understand more, build faster, and move through complexity with greater clarity.",
@@ -87,14 +87,14 @@ export const policyPageContentBySlug: Record<
       },
     ],
     ctas: [
-      { label: "Safety and Trust", href: "/safety" },
-      { label: "Working Together", href: "/policy/working-together" },
-      { label: "Societal Impact", href: "/policy/societal-impact" },
+      { label: "Safety", href: "/safety" },
+      { label: "Building With Communities", href: "/policy/working-together" },
+      { label: "Public Impact", href: "/policy/societal-impact" },
     ],
   },
 
   "working-together": {
-    eyebrow: "Working Together",
+    eyebrow: "Building With Communities",
     title: "Working Together to Build AI for Everyone",
     description:
       "AI should work for more people. Because it is built with more people. UpcubeAI is being designed for a future where artificial intelligence is not reserved for a narrow group of users, companies, devices, languages, or workflows.",
@@ -167,14 +167,14 @@ export const policyPageContentBySlug: Record<
       },
     ],
     ctas: [
-      { label: "AI Principles", href: "/policy/ai-principles" },
-      { label: "Safety and Trust", href: "/safety" },
-      { label: "Societal Impact", href: "/policy/societal-impact" },
+      { label: "Commitments", href: "/policy/ai-principles" },
+      { label: "Safety", href: "/safety" },
+      { label: "Public Impact", href: "/policy/societal-impact" },
     ],
   },
 
   "societal-impact": {
-    eyebrow: "Societal Impact",
+    eyebrow: "Public Impact",
     title: "A new era of discovery",
     description:
       "AI has the potential to help people see patterns sooner, learn faster, build more confidently, and respond to problems with better information. UpcubeAI's societal impact direction starts with that possibility.",
@@ -226,7 +226,7 @@ export const policyPageContentBySlug: Record<
           "Guided learning paths from fundamentals to deeper technical understanding.",
           "Product-based education connected to real systems.",
           "Support for builders, creators, entrepreneurs, and students.",
-          "Clear education boundaries: Upcube University is not a legal university, accredited institution, or degree program unless that status is formally established.",
+          "Clear education boundaries: Upcube Education is not presented as an accredited institution, degree program, or legal university unless that status is formally established.",
         ],
       },
       {
@@ -239,7 +239,7 @@ export const policyPageContentBySlug: Record<
           "Tools for small teams to draft plans, research markets, and execute faster.",
           "Skills for the AI economy through practical education and training.",
           "Career discovery through Upcube Jobs.",
-          "Commerce at scale through Ventari for large-catalog discovery.",
+          "Commerce at scale through Upcube Shopping for large-catalog discovery.",
         ],
       },
       {
@@ -258,14 +258,14 @@ export const policyPageContentBySlug: Record<
       },
     ],
     ctas: [
-      { label: "Working Together", href: "/policy/working-together" },
-      { label: "Safety and Trust", href: "/safety" },
-      { label: "Upcube University", href: "/products/university" },
+      { label: "Building With Communities", href: "/policy/working-together" },
+      { label: "Safety", href: "/safety" },
+      { label: "Upcube Education", href: "/products/university" },
     ],
   },
 
   "why-we-focus-on-ai": {
-    eyebrow: "Founder Letter",
+    eyebrow: "Founder Note",
     title: "Why We Focus on AI — and to What End",
     description:
       "A founder letter from Shadab, Founder of UpcubeAI. AI is one of the most important technologies of our time. It can change how people work, learn, build, discover, create, and make decisions.",
@@ -277,7 +277,7 @@ export const policyPageContentBySlug: Record<
           "We are living through a defining moment in technology. AI is no longer only a research topic or a feature hidden inside software. It is becoming a new layer for work, learning, discovery, commerce, voice, infrastructure, and computing itself.",
           "That possibility is exciting. It is also serious. As AI becomes more capable, the responsibility around it becomes more important. A powerful system should not feel mysterious. A helpful assistant should not silently take control.",
           "Our belief is simple: AI should assist, complement, empower, and inspire people without taking away the clarity and control they need to trust the work.",
-          "Ethen is designed to be more than a chat box. It is an AI workspace where research, artifacts, tools, approvals, and execution can stay connected. Upcube Books, Earth, Ventari, University, Cloud, Voice, OS, and Mobile OS each carry that same standard.",
+          "Ethen is designed to be more than a chat box. It is an AI workspace where research, artifacts, tools, approvals, and execution can stay connected. Upcube Books, Earth, Upcube Shopping, Education, Cloud, Voice, OS, and Mobile OS each carry that same standard.",
           "The goal is not to make AI feel magical. The goal is to make it useful enough, clear enough, and trustworthy enough that people can rely on it for serious work.",
         ],
       },
@@ -303,7 +303,7 @@ export const policyPageContentBySlug: Record<
         ],
         bullets: [
           "Build a serious AI workspace for turning questions into durable work.",
-          "Bring AI into discovery across Books, Earth, Games, Jobs, and Ventari.",
+          "Bring AI into discovery across Books, Earth, Games, Jobs, and Upcube Shopping.",
           "Make learning more practical through structured AI education and product training.",
           "Support builders with infrastructure through Cloud and VM Compute.",
           "Shape future computing around trust with visible controls from the beginning.",
@@ -339,14 +339,14 @@ export const policyPageContentBySlug: Record<
       },
     ],
     ctas: [
-      { label: "AI Principles", href: "/policy/ai-principles" },
-      { label: "Safety and Trust", href: "/safety" },
-      { label: "Working Together", href: "/policy/working-together" },
+      { label: "Commitments", href: "/policy/ai-principles" },
+      { label: "Safety", href: "/safety" },
+      { label: "Building With Communities", href: "/policy/working-together" },
     ],
   },
 
   "for-organizations": {
-    eyebrow: "For Organizations",
+    eyebrow: "For Teams & Builders",
     title: "Unlock more capability with AI",
     description:
       "AI can help organizations move with more clarity, speed, and confidence. UpcubeAI is building a product family for that future.",
@@ -382,9 +382,9 @@ export const policyPageContentBySlug: Record<
       },
       {
         id: "university",
-        title: "Upcube University — upskill teams for the AI era",
+        title: "Upcube Education — upskill teams for the AI era",
         paragraphs: [
-          "Organizations do not only need AI tools. They need AI fluency. Upcube University is designed to support that learning direction.",
+          "Organizations do not only need AI tools. They need AI fluency. Upcube Education is designed to support that learning direction.",
         ],
         bullets: [
           "AI education for understanding concepts, safe workflows, and responsible product thinking.",
@@ -407,9 +407,9 @@ export const policyPageContentBySlug: Record<
       },
       {
         id: "commerce",
-        title: "Ventari for commerce",
+        title: "Upcube Shopping for commerce",
         paragraphs: [
-          "Commerce teams face a simple but difficult problem: the more products they offer, the harder discovery becomes. Ventari is built for large-scale search, rich product pages, reviews, recommendations, and catalog architecture.",
+          "Commerce teams face a simple but difficult problem: the more products they offer, the harder discovery becomes. Upcube Shopping is built for large-scale search, rich product pages, reviews, recommendations, and catalog architecture.",
         ],
         bullets: [
           "Search that keeps pace with large catalogs.",
@@ -433,8 +433,8 @@ export const policyPageContentBySlug: Record<
       },
     ],
     ctas: [
-      { label: "AI Principles", href: "/policy/ai-principles" },
-      { label: "Working Together", href: "/policy/working-together" },
+      { label: "Commitments", href: "/policy/ai-principles" },
+      { label: "Building With Communities", href: "/policy/working-together" },
       { label: "Enterprise Overview", href: "/enterprise" },
     ],
   },

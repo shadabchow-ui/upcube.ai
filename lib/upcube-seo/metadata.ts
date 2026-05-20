@@ -7,7 +7,7 @@ export const CANONICAL_BASE_URL = "https://upcube.ai";
 export const DEFAULT_SITE_TITLE =
   "UpcubeAI | AI Product Family for Work, Discovery, and Cloud";
 export const DEFAULT_SITE_DESCRIPTION =
-  "UpcubeAI is the AI product company behind Ethen, Earth, Books, Games, Jobs, Cloud, Voice, University, and future computing platforms — a connected product family for work, discovery, commerce, infrastructure, and learning.";
+  "UpcubeAI is the AI product company behind Ethen, Earth, Books, Games, Jobs, Cloud, Voice, Education, and future computing platforms — a connected product family for work, discovery, commerce, infrastructure, and learning.";
 export const DEFAULT_OG_IMAGE = "/opengraph-image";
 
 export const canonicalBaseUrl = CANONICAL_BASE_URL;
@@ -113,7 +113,7 @@ export function createNewsIndexMetadata(): Metadata {
   return createBasicPageMetadata({
     title: `Upcube News | ${upcubeSiteName}`,
     description:
-      "Launch stories and product previews across UpcubeAI, Voice, University, Ventari, Books, Earth, Games, Jobs, Cloud, VM Compute, OS, and Mobile OS.",
+      "Launch stories and product previews across UpcubeAI, Voice, Education, Upcube Shopping, Books, Earth, Games, Jobs, Cloud, Compute, OS, and Mobile OS.",
     path: "/news",
   });
 }

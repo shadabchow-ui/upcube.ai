@@ -33,7 +33,7 @@ export const statusGroups: StatusGroup[] = [
       { name: "Earth", uptime: "99.98%", state: "operational" },
       { name: "Games", uptime: "100%", state: "operational" },
       { name: "Jobs", uptime: "99.96%", state: "operational" },
-      { name: "University", uptime: "100%", state: "operational" },
+      { name: "Education", uptime: "100%", state: "operational" },
       { name: "Voice Preview", uptime: "100%", state: "operational" },
     ],
   },
@@ -42,7 +42,7 @@ export const statusGroups: StatusGroup[] = [
     summary:
       "Premium commerce platform for large-scale product search, detail, and recommendations.",
     components: [
-      { name: "Ventari", uptime: "100%", state: "operational" },
+      { name: "Upcube Shopping", uptime: "100%", state: "operational" },
       { name: "Product Search", uptime: "99.98%", state: "operational" },
       { name: "Product Detail Pages", uptime: "100%", state: "operational" },
       {
@@ -72,7 +72,7 @@ export const statusGroups: StatusGroup[] = [
       { name: "News", uptime: "100%", state: "operational" },
       { name: "Research Pages", uptime: "100%", state: "operational" },
       {
-        name: "Security & Privacy Pages",
+        name: "Trust & Policy Pages",
         uptime: "100%",
         state: "operational",
       },

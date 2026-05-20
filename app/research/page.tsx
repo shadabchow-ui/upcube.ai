@@ -5,7 +5,7 @@ import { LongformIndexPage } from "components/upcube-portal/longform-index-page"
 export const metadata: Metadata = {
   title: "UpcubeAI Research",
   description:
-    "Research across geospatial AI, health AI, science, sustainability, algorithms, machine intelligence, NLP, HCI, networking, responsible AI, security, software engineering, and systems.",
+    "Research across spatial intelligence, health knowledge, discovery science, planet resilience, core intelligence, search routing, adaptive intelligence, multimodal understanding, language reasoning, interface intelligence, connected infrastructure, human alignment, trust defense, AI engineering, and platform infrastructure.",
 };
 
 export default function Page() {

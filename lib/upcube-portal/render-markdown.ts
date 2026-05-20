@@ -45,7 +45,7 @@ export function renderMarkdownToHtml(markdown: string): string {
       continue;
     }
 
-    const headingMatch = line.match(/^(#{1,3})\s+(.+)/);
+    const headingMatch = line.match(/^(#{1,6})\s+(.+)/);
     if (headingMatch) {
       const level = headingMatch[1]!.length;
       const text = renderInlineMarkdown(headingMatch[2]!);
@@ -76,7 +76,7 @@ export function renderMarkdownToHtml(markdown: string): string {
     while (i < lines.length) {
       const l = lines[i]!;
       if (l.trim() === "") break;
-      if (/^(#{1,3})\s/.test(l)) break;
+      if (/^(#{1,6})\s/.test(l)) break;
       if (/^-\s/.test(l)) break;
       if (/^-{3,}$/.test(l.trim())) break;
       if (l.trim().startsWith("```")) break;
@@ -85,10 +85,26 @@ export function renderMarkdownToHtml(markdown: string): string {
     }
 
     if (paraLines.length > 0) {
-      const html = paraLines.map((l) => renderInlineMarkdown(l)).join("<br />");
+      const html = paraLines.map((l) => renderInlineMarkdown(l)).join(" ");
       out.push(`<p>${html}</p>`);
     }
   }
 
-  return out.join("\n");
+  const merged: string[] = [];
+  for (const block of out) {
+    if (
+      block.startsWith("<p>") &&
+      merged.length > 0 &&
+      merged[merged.length - 1]!.startsWith("<p>")
+    ) {
+      const prev = merged.pop()!;
+      const prevContent = prev.slice(3, -4);
+      const currContent = block.slice(3, -4);
+      merged.push(`<p>${prevContent} ${currContent}</p>`);
+    } else {
+      merged.push(block);
+    }
+  }
+
+  return merged.join("\n");
 }
