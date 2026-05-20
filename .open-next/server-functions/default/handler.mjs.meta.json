@@ -3511,7 +3511,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/.pnpm/next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/server/load-manifest.external.js": {
-      "bytes": 21132324,
+      "bytes": 21132321,
       "imports": [
         {
           "path": "path",
@@ -5221,7 +5221,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__3404f113._.js": {
-      "bytes": 16107,
+      "bytes": 15915,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/.pnpm/next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/shared/lib/no-fallback-error.external.js",
@@ -12248,7 +12248,7 @@
           "bytesInOutput": 462
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/server/load-manifest.external.js": {
-          "bytesInOutput": 21002781
+          "bytesInOutput": 21002778
         },
         ".open-next/server-functions/default/node_modules/.pnpm/next@15.6.0-canary.60_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/compiled/@vercel/og/index.edge.js": {
           "bytesInOutput": 535270
@@ -12635,7 +12635,7 @@
           "bytesInOutput": 283
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__3404f113._.js": {
-          "bytesInOutput": 16346
+          "bytesInOutput": 16153
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_3a26afb6._.js": {
           "bytesInOutput": 17605
@@ -13295,7 +13295,7 @@
           "bytesInOutput": 124625
         }
       },
-      "bytes": 27247912
+      "bytes": 27247716
     }
   }
 }

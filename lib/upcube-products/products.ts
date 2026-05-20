@@ -9,7 +9,8 @@ export type UpcubeProductSlug =
   | "vm"
   | "upcube-os"
   | "upcube-mobile-os"
-  | "voice";
+  | "voice"
+  | "university";
 
 export type ProductAction = {
   label: string;
@@ -1259,6 +1260,118 @@ export const upcubeProducts: UpcubeProduct[] = [
     finalPrimaryAction: {
       label: "Read the preview",
       href: "/news/upcube-voice-preview",
+    },
+    finalSecondaryAction: {
+      label: "Explore UpcubeAI",
+      href: "/products/upcube-ai",
+    },
+  },
+  {
+    slug: "university",
+    name: "Upcube University",
+    eyebrow: "Education & Learning",
+    headline: "Learning paths for the AI age.",
+    summary:
+      "Upcube University is the learning platform for the Upcube ecosystem, focused on AI education, product training, technical courses, guided learning paths, and future credential-style programs.",
+    primaryAction: {
+      label: "Explore University",
+      href: "/news/upcube-university-preview",
+    },
+    secondaryAction: {
+      label: "Explore UpcubeAI",
+      href: "/products/upcube-ai",
+    },
+    heroHighlights: [
+      "Learning platform for the Upcube ecosystem, not a legal university or accredited institution claim.",
+      "AI education, product training, technical courses, and guided learning paths.",
+      "Future credential-style programs are direction only, not public offerings in this repo.",
+    ],
+    availabilityNote:
+      "No public University site is available in this repo, and future credential-style programs are direction only.",
+    signatureTitle:
+      "A learning platform designed to make serious learning feel structured, premium, and connected to real product systems.",
+    signatureBody:
+      "Upcube University is positioned as the learning platform for the broader ecosystem. The public story stays focused on AI education, product training, guided technical learning, and future credential-style direction without overstating legal school status or program availability.",
+    signatureCards: [
+      {
+        title: "Learning paths for the AI age",
+        body: "The platform direction centers on helping people build a stronger working understanding of AI concepts, workflows, and practical product use.",
+      },
+      {
+        title: "AI education and product training",
+        body: "University is meant to give users a clearer path through UpcubeAI, Voice, Cloud, commerce, and future computing products without scattering learning across disconnected materials.",
+      },
+      {
+        title: "Guided learning paths",
+        body: "The experience is framed around structured paths that help people move from fundamentals to deeper product and technical context at a deliberate pace.",
+      },
+    ],
+    featureStories: [
+      {
+        title: "Technical courses across the Upcube ecosystem",
+        body: "Upcube University is described as a place for technical learning that stays connected to real software, infrastructure, and AI product surfaces instead of abstract training alone.",
+      },
+      {
+        title: "Learning across the ecosystem",
+        body: "The product direction spans software, commerce, cloud infrastructure, voice, and future computing so education can reflect how the broader Upcube platform fits together.",
+      },
+      {
+        title: "Future credential-style programs",
+        body: "The long-term direction can include credential-style learning programs, but the public page stops short of claiming accreditation, degrees, certifications, or live enrollment status.",
+      },
+    ],
+    techCards: [
+      {
+        title: "Structured learning architecture",
+        body: "Guided paths, course modules, and product-based sequencing are presented as the foundation for a more coherent education experience.",
+      },
+      {
+        title: "Product-aware training direction",
+        body: "The platform can teach through the actual Upcube product family, keeping learning close to the systems, workflows, and interfaces people need to understand.",
+      },
+      {
+        title: "Clear boundaries on what is live",
+        body: "Public positioning stays disciplined about future program direction, avoiding unsupported claims around legal status, accreditation, or currently available credentials.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Learn AI through practical product workflows",
+        body: "Use guided material to understand how AI tools, product systems, and interface decisions connect in real use instead of only through theory.",
+      },
+      {
+        title: "Train across the Upcube platform",
+        body: "Follow learning paths that move between UpcubeAI, Voice, Cloud, commerce, and computing products as one connected ecosystem.",
+      },
+      {
+        title: "Prepare for deeper technical study",
+        body: "Use course-style material and structured paths to build toward more advanced product, cloud, systems, and future computing topics over time.",
+      },
+    ],
+    ecosystemLinks: [
+      {
+        title: "UpcubeAI",
+        body: "Connect learning paths back to the AI workspace and assistant surface at the center of the ecosystem.",
+        href: "/products/upcube-ai",
+      },
+      {
+        title: "Upcube Cloud",
+        body: "Follow technical learning into cloud workflows, infrastructure systems, and developer-facing product direction.",
+        href: "/products/cloud",
+      },
+      {
+        title: "Upcube Voice",
+        body: "See how training and guided learning can extend into voice, device, and future interaction surfaces.",
+        href: "/products/voice",
+      },
+    ],
+    finalCtaTitle:
+      "Explore the learning platform direction without overstating what is live.",
+    finalCtaBody:
+      "Upcube University is presented as the learning platform for the ecosystem, with guided learning and future program direction grounded in the products that already define UpcubeAI.",
+    finalPrimaryAction: {
+      label: "Read the preview",
+      href: "/news/upcube-university-preview",
     },
     finalSecondaryAction: {
       label: "Explore UpcubeAI",

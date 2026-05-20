@@ -21,7 +21,7 @@ export function NewsIndexPage() {
           data={createCollectionPageJsonLd({
             title: "Upcube News",
             description:
-              "Launch stories and product previews across UpcubeAI, Voice, Ventari, Books, Earth, Games, Jobs, Cloud, VM Compute, Upcube OS, and Upcube Mobile OS.",
+              "Launch stories and product previews across UpcubeAI, Voice, University, Ventari, Books, Earth, Games, Jobs, Cloud, VM Compute, Upcube OS, and Upcube Mobile OS.",
             path: "/news",
           })}
         />
@@ -34,8 +34,9 @@ export function NewsIndexPage() {
               </h1>
               <p className="uc-news-hero__lead">
                 Explore launch stories, product previews, and the connected
-                tools shaping Upcube across AI, voice, commerce, discovery,
-                cloud, compute, operating systems, and consumer applications.
+                tools shaping Upcube across AI, voice, education, commerce,
+                discovery, cloud, compute, operating systems, and consumer
+                applications.
               </p>
               <div className="uc-news-hero__actions">
                 <Link
@@ -101,13 +102,13 @@ export function NewsIndexPage() {
             <div className="uc-news-section__head">
               <p className="uc-eyebrow">Product Preview</p>
               <h2>
-                Preview future Upcube platforms across voice and operating
-                systems.
+                Preview future Upcube platforms across voice, learning, and
+                operating systems.
               </h2>
               <p>
-                Upcube Voice, Upcube OS, and Upcube Mobile OS stay framed as
-                product-preview surfaces that route readers to internal product
-                pages instead of launch apps.
+                Upcube Voice, Upcube University, Upcube OS, and Upcube Mobile OS
+                stay framed as product-preview surfaces that route readers to
+                internal product pages instead of launch apps.
               </p>
             </div>
             <div className="uc-news-grid">

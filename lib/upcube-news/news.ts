@@ -636,6 +636,60 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
       { name: "Upcube OS", href: "/products/upcube-os" },
     ],
   },
+  {
+    slug: "upcube-university-preview",
+    href: "/news/upcube-university-preview",
+    productName: "Upcube University",
+    category: "Product Preview",
+    dateLabel: "Recent update",
+    headline: "Previewing Upcube University: learning paths for the AI age",
+    excerpt:
+      "Upcube University is a preview of the learning platform for the Upcube ecosystem, focused on AI education, product training, technical courses, guided learning paths, and future credential-style programs.",
+    heroSummary:
+      "Upcube University is presented as the learning platform for the Upcube ecosystem, with no public University URL, no accreditation claim, and no open enrollment flow in this repo.",
+    primaryCtaLabel: "Explore University",
+    primaryCtaHref: "/products/university",
+    productPageUrl: "/products/university",
+    seoTitle: "Previewing Upcube University | Learning Paths for the AI Age",
+    seoDescription:
+      "Preview Upcube University, the learning platform for the Upcube ecosystem built for AI education, product training, technical courses, and guided learning paths.",
+    finalCtaTitle:
+      "Follow the learning direction through the product preview, not an institutional claim.",
+    finalCtaBody:
+      "Upcube University stays framed as an ecosystem learning platform with careful boundaries around accreditation, degrees, certifications, and public enrollment.",
+    sections: [
+      {
+        eyebrow: "The preview",
+        title: "A learning platform for the Upcube ecosystem",
+        body: "Upcube University is described as the learning platform for the Upcube ecosystem. The page avoids claiming a public University site, accredited status, legal school status, or open enrollment.",
+      },
+      {
+        eyebrow: "Learning paths",
+        title: "Learning paths for the AI age",
+        body: "The platform direction focuses on guided learning paths that help people understand AI products, technical workflows, and ecosystem-level product context.",
+      },
+      {
+        eyebrow: "Training",
+        title: "AI education and product training",
+        body: "The public story centers on AI education and product training that can help people use Upcube products more clearly without implying formal degrees or current certifications.",
+      },
+      {
+        eyebrow: "Technical courses",
+        title: "Technical courses across the Upcube ecosystem",
+        body: "University is positioned to cover technical courses spanning AI, voice, discovery, cloud, and computing surfaces across the broader ecosystem.",
+      },
+      {
+        eyebrow: "Future direction",
+        title: "Future credential-style programs",
+        body: "Credential-style programs are described as future direction only, keeping the preview honest about what is not publicly available in this repo today.",
+      },
+    ],
+    relatedProducts: [
+      { name: "UpcubeAI", href: "/products/upcube-ai" },
+      { name: "Upcube Voice", href: "/products/voice" },
+      { name: "Upcube Books", href: "/products/books" },
+    ],
+  },
 ];
 
 export const featuredUpcubeNewsArticle: UpcubeNewsArticle =

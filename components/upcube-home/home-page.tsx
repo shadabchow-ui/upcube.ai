@@ -126,8 +126,8 @@ export default function UpcubeHomePage() {
           <div className="uc-home__container">
             <div className="uc-home__section-head-row">
               <h2 id="proof-title">
-                Intelligence across work, voice, commerce, discovery, cloud, and
-                computing
+                Intelligence across work, voice, education, commerce, discovery,
+                cloud, and computing
               </h2>
             </div>
             <div className="uc-home__proof-grid">
@@ -182,7 +182,7 @@ export default function UpcubeHomePage() {
             <p className="uc-home__cta-copy">
               Start in Ethen, then move through product pages, launch stories,
               and research to see how UpCubeAI connects AI workspaces, voice
-              platforms, commerce, discovery, cloud infrastructure,
+              platforms, education, commerce, discovery, cloud infrastructure,
               entertainment, and future computing.
             </p>
             <div className="uc-home__cta-row">

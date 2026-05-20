@@ -58,6 +58,7 @@ function getProductApplicationCategory(slug: UpcubeProductSlug) {
     "upcube-os": "OperatingSystem",
     "upcube-mobile-os": "OperatingSystem",
     voice: "CommunicationsApplication",
+    university: "EducationalApplication",
   };
 
   return categories[slug];

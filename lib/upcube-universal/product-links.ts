@@ -89,6 +89,13 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
     description: "AI voice platform for future Upcube devices.",
     productHref: "/products/voice",
   },
+  {
+    id: "university",
+    label: "University",
+    description:
+      "AI education, product training, and guided learning paths across the Upcube ecosystem.",
+    productHref: "/products/university",
+  },
 ];
 
 export const upcubeLauncherApps = [

@@ -6,7 +6,7 @@ import type { UpcubeProduct } from "lib/upcube-products/products";
 export const CANONICAL_BASE_URL = "https://upcube.ai";
 export const DEFAULT_SITE_TITLE = "UpCube | Artificial Intelligence Company";
 export const DEFAULT_SITE_DESCRIPTION =
-  "UpCubeAI is an artificial intelligence technology company building high-end products for work, discovery, commerce, cloud infrastructure, entertainment, voice, and the future of computing.";
+  "UpCubeAI is an artificial intelligence technology company building high-end products for work, discovery, commerce, cloud infrastructure, entertainment, voice, education, and the future of computing.";
 const DEFAULT_OG_IMAGE = "/icon.png";
 
 export const canonicalBaseUrl = CANONICAL_BASE_URL;
@@ -110,7 +110,7 @@ export function createNewsIndexMetadata(): Metadata {
   return createBasicPageMetadata({
     title: `Upcube News | ${upcubeSiteName}`,
     description:
-      "Launch stories and product previews across UpcubeAI, Voice, Ventari, Books, Earth, Games, Jobs, Cloud, VM Compute, Upcube OS, and Upcube Mobile OS.",
+      "Launch stories and product previews across UpcubeAI, Voice, University, Ventari, Books, Earth, Games, Jobs, Cloud, VM Compute, Upcube OS, and Upcube Mobile OS.",
     path: "/news",
   });
 }

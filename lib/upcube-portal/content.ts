@@ -193,7 +193,7 @@ export const upcubeCompanyIdentity: UpcubeCompanyIdentity = {
   oneLiner:
     "An artificial intelligence technology company building premium products for the next era of computing.",
   mission:
-    "UpCubeAI builds high-end products for work, discovery, commerce, cloud infrastructure, entertainment, voice, and the next era of computing.",
+    "UpCubeAI builds high-end products for work, discovery, commerce, cloud infrastructure, entertainment, voice, education, and the next era of computing.",
   vision:
     "The current product family is designed as the first proof of a broader intelligent technology ecosystem.",
   belief:
@@ -202,6 +202,7 @@ export const upcubeCompanyIdentity: UpcubeCompanyIdentity = {
     "Build products that turn powerful systems into clear, trustworthy experiences without overstating what is live.",
   pillars: [
     "AI & Voice",
+    "Education & Learning",
     "Commerce",
     "Discovery",
     "Cloud & Infrastructure",
@@ -326,6 +327,14 @@ export const portalHomepageCards: PortalCardItem[] = [
       "AI voice platform for future Upcube headphones, earbuds, home audio, car audio, and companion devices.",
     href: "/products/voice",
     tag: "AI & Voice",
+  },
+  {
+    id: "university",
+    title: "University",
+    description:
+      "AI education, product training, and guided learning paths across the Upcube ecosystem.",
+    href: "/products/university",
+    tag: "Education & Learning",
   },
 ];
 

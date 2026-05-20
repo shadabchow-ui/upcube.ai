@@ -37,7 +37,7 @@ export const homeNarrativeSections: HomeNarrativeSection[] = [
   {
     eyebrow: "Company",
     title: "What UpCubeAI is building",
-    body: "UpCubeAI is an AI and voice technology company building a connected product ecosystem for the next era of computing. The portfolio already spans AI workspaces, voice platforms, commerce, discovery, cloud infrastructure, entertainment, and operating systems, with each surface designed to feel premium, useful, and clearly connected to the broader company direction.",
+    body: "UpCubeAI is an AI and voice technology company building a connected product ecosystem for the next era of computing. The portfolio already spans AI workspaces, voice platforms, education, commerce, discovery, cloud infrastructure, entertainment, and operating systems, with each surface designed to feel premium, useful, and clearly connected to the broader company direction.",
     links: [
       { label: "Visit the company page", href: "/company" },
       { label: "Explore all products", href: "/products/upcube-ai" },
@@ -46,8 +46,8 @@ export const homeNarrativeSections: HomeNarrativeSection[] = [
   {
     eyebrow: "Ecosystem",
     title:
-      "Intelligence across work, voice, commerce, discovery, cloud, and computing",
-    body: "The product family is meant to show how intelligence can move beyond a single assistant and into everyday software and device categories. UpcubeAI and Ethen focus on work, research, and execution, Upcube Voice brings that assistant relationship into future devices, Ventari brings AI commerce and product discovery into retail-scale browsing, Earth and Books expand discovery into place and knowledge, and Cloud, VM Compute, OS, and Mobile OS extend the company story into infrastructure and future computing systems.",
+      "Intelligence across work, voice, education, commerce, discovery, cloud, and computing",
+    body: "The product family is meant to show how intelligence can move beyond a single assistant and into everyday software and device categories. UpcubeAI and Ethen focus on work, research, and execution, Upcube Voice brings that assistant relationship into future devices, Upcube University turns the ecosystem into a learning platform, Ventari brings AI commerce and product discovery into retail-scale browsing, Earth and Books expand discovery into place and knowledge, and Cloud, VM Compute, OS, and Mobile OS extend the company story into infrastructure and future computing systems.",
     links: [
       { label: "Read launch stories", href: "/news" },
       { label: "View research", href: "/research" },
@@ -86,6 +86,19 @@ export const homeProofPoints: HomeProofPoint[] = [
       { label: "Earth", href: "/products/earth" },
       { label: "Books", href: "/products/books" },
       { label: "Games", href: "/products/games" },
+    ],
+  },
+  {
+    title: "Education & Learning",
+    description:
+      "Upcube University extends the ecosystem into AI education, product training, technical courses, and guided learning paths without overstating institutional status.",
+    href: "/products/university",
+    links: [
+      { label: "Upcube University", href: "/products/university" },
+      {
+        label: "University preview",
+        href: "/news/upcube-university-preview",
+      },
     ],
   },
   {
@@ -144,6 +157,14 @@ export const featureBands: FeatureBand[] = [
     href: "/products/earth",
     cta: "Explore discovery products",
     tone: "teal",
+  },
+  {
+    title: "Education & Learning",
+    description:
+      "Upcube University adds ecosystem learning through AI education, product training, technical courses, and guided learning paths.",
+    href: "/products/university",
+    cta: "Explore University",
+    tone: "green",
   },
   {
     title: "Cloud & Infrastructure",
@@ -206,6 +227,13 @@ export const stories: HomeLinkItem[] = [
       "The voice platform direction for future Upcube devices, built around private push-to-talk and real-time assistance.",
     href: "/news/upcube-voice-preview",
     tag: "AI & Voice",
+  },
+  {
+    title: "Upcube University preview",
+    description:
+      "Learning paths, product training, and ecosystem education for the AI age.",
+    href: "/news/upcube-university-preview",
+    tag: "Education & Learning",
   },
   {
     title: "Research direction",
