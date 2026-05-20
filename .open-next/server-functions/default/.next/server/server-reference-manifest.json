@@ -1,6 +1,6 @@
 {
   "node": {
-    "00791faba616f6b993692634234add37f0d8fa98f0": {
+    "00d3edbb8068f0d1228df14a98a4382ec8d02be0b6": {
       "workers": {
         "app/[page]/page": {
           "moduleId": 59547,
@@ -372,7 +372,7 @@
       "filename": "components/cart/actions.ts",
       "exportedName": "createCartAndSetCookie"
     },
-    "002e0f8588021e3f8d202bf932a1a19cb9b05085d2": {
+    "0037b6a6a643f4fac6102d5ef725109614d727cbef": {
       "workers": {
         "app/[page]/page": {
           "moduleId": 59547,
@@ -744,7 +744,7 @@
       "filename": "components/cart/actions.ts",
       "exportedName": "redirectToCheckout"
     },
-    "60b63b1f87993f3e57a03a5c19c55bd76dd93a6bf1": {
+    "60783a5d93d58e7b35f144199ae8c31e8e254d9171": {
       "workers": {
         "app/[page]/page": {
           "moduleId": 59547,
@@ -1116,7 +1116,7 @@
       "filename": "components/cart/actions.ts",
       "exportedName": "removeItem"
     },
-    "60343fdd087a18dd26ecd19436818141bb3a8e86e9": {
+    "60c3d76d4d7a6888d28a4ab77d2486846aac221146": {
       "workers": {
         "app/[page]/page": {
           "moduleId": 59547,
@@ -1488,379 +1488,7 @@
       "filename": "components/cart/actions.ts",
       "exportedName": "updateItemQuantity"
     },
-    "8026f165f1548a9b2ea927d009db1f1451a0b85d2a": {
-      "workers": {
-        "app/[page]/page": {
-          "moduleId": 59547,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/_not-found/page": {
-          "moduleId": 41829,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/about/page": {
-          "moduleId": 11280,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/brand/page": {
-          "moduleId": 61321,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/builders/page": {
-          "moduleId": 63672,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/business/page": {
-          "moduleId": 75430,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/capabilities/page": {
-          "moduleId": 90909,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/careers/page": {
-          "moduleId": 155,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/charter/page": {
-          "moduleId": 28176,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/chat/page": {
-          "moduleId": 88787,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/company/page": {
-          "moduleId": 77544,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/contact/page": {
-          "moduleId": 76418,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/enterprise/page": {
-          "moduleId": 72261,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/explore/page": {
-          "moduleId": 25241,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/faq/page": {
-          "moduleId": 98889,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/foundation/page": {
-          "moduleId": 15773,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/how-it-works/page": {
-          "moduleId": 7419,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/news/[slug]/page": {
-          "moduleId": 5210,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/news/page": {
-          "moduleId": 29671,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/page": {
-          "moduleId": 92195,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/platform/page": {
-          "moduleId": 43019,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/policies/page": {
-          "moduleId": 78347,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/principles/page": {
-          "moduleId": 78550,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/privacy-policy/page": {
-          "moduleId": 75879,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/privacy/page": {
-          "moduleId": 37264,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/product/[handle]/page": {
-          "moduleId": 90335,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/books/page": {
-          "moduleId": 25960,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/cloud/page": {
-          "moduleId": 17330,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/earth/page": {
-          "moduleId": 17354,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/games/page": {
-          "moduleId": 7141,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/jobs/page": {
-          "moduleId": 27266,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/university/page": {
-          "moduleId": 97790,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/upcube-ai/page": {
-          "moduleId": 86776,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/upcube-mobile-os/page": {
-          "moduleId": 30446,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/upcube-os/page": {
-          "moduleId": 91691,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/ventari/page": {
-          "moduleId": 47092,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/vm/page": {
-          "moduleId": 56714,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/voice/page": {
-          "moduleId": 68214,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/research/economic/page": {
-          "moduleId": 30810,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/research/page": {
-          "moduleId": 33532,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/research/residency/page": {
-          "moduleId": 3040,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/safety/page": {
-          "moduleId": 18639,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/search/[collection]/page": {
-          "moduleId": 47324,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/search/page": {
-          "moduleId": 93140,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/security-privacy/page": {
-          "moduleId": 5725,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/teams/page": {
-          "moduleId": 52184,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/terms-of-service/page": {
-          "moduleId": 45113,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/terms/page": {
-          "moduleId": 80634,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/trust-transparency/page": {
-          "moduleId": 53474,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/trust/page": {
-          "moduleId": 95311,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/updates/[slug]/page": {
-          "moduleId": 93096,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/vision/page": {
-          "moduleId": 66048,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_3",
-          "filename": "lib/shopify/index.ts"
-        }
-      },
-      "layer": {
-        "app/[page]/page": "rsc",
-        "app/_not-found/page": "rsc",
-        "app/about/page": "rsc",
-        "app/brand/page": "rsc",
-        "app/builders/page": "rsc",
-        "app/business/page": "rsc",
-        "app/capabilities/page": "rsc",
-        "app/careers/page": "rsc",
-        "app/charter/page": "rsc",
-        "app/chat/page": "rsc",
-        "app/company/page": "rsc",
-        "app/contact/page": "rsc",
-        "app/enterprise/page": "rsc",
-        "app/explore/page": "rsc",
-        "app/faq/page": "rsc",
-        "app/foundation/page": "rsc",
-        "app/how-it-works/page": "rsc",
-        "app/news/[slug]/page": "rsc",
-        "app/news/page": "rsc",
-        "app/page": "rsc",
-        "app/platform/page": "rsc",
-        "app/policies/page": "rsc",
-        "app/principles/page": "rsc",
-        "app/privacy-policy/page": "rsc",
-        "app/privacy/page": "rsc",
-        "app/product/[handle]/page": "rsc",
-        "app/products/books/page": "rsc",
-        "app/products/cloud/page": "rsc",
-        "app/products/earth/page": "rsc",
-        "app/products/games/page": "rsc",
-        "app/products/jobs/page": "rsc",
-        "app/products/university/page": "rsc",
-        "app/products/upcube-ai/page": "rsc",
-        "app/products/upcube-mobile-os/page": "rsc",
-        "app/products/upcube-os/page": "rsc",
-        "app/products/ventari/page": "rsc",
-        "app/products/vm/page": "rsc",
-        "app/products/voice/page": "rsc",
-        "app/research/economic/page": "rsc",
-        "app/research/page": "rsc",
-        "app/research/residency/page": "rsc",
-        "app/safety/page": "rsc",
-        "app/search/[collection]/page": "rsc",
-        "app/search/page": "rsc",
-        "app/security-privacy/page": "rsc",
-        "app/teams/page": "rsc",
-        "app/terms-of-service/page": "rsc",
-        "app/terms/page": "rsc",
-        "app/trust-transparency/page": "rsc",
-        "app/trust/page": "rsc",
-        "app/updates/[slug]/page": "rsc",
-        "app/vision/page": "rsc"
-      },
-      "filename": "lib/shopify/index.ts",
-      "exportedName": "$$RSC_SERVER_CACHE_3"
-    },
-    "80f4104a712e0a5fba08971321848e69c3ba306d6b": {
+    "8026014592d525f1515cf8144cd23caffd35a0c351": {
       "workers": {
         "app/[page]/page": {
           "moduleId": 59547,
@@ -2232,318 +1860,318 @@
       "filename": "lib/shopify/index.ts",
       "exportedName": "$$RSC_SERVER_CACHE_0"
     },
-    "c039d512d620422528aae9c5d74b929cd0f5b16ebf": {
+    "80e829c8095a9afeaaebe64e6100a8b6c72293cd02": {
       "workers": {
         "app/[page]/page": {
           "moduleId": 59547,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/_not-found/page": {
           "moduleId": 41829,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/about/page": {
           "moduleId": 11280,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/brand/page": {
           "moduleId": 61321,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/builders/page": {
           "moduleId": 63672,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/business/page": {
           "moduleId": 75430,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/capabilities/page": {
           "moduleId": 90909,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/careers/page": {
           "moduleId": 155,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/charter/page": {
           "moduleId": 28176,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/chat/page": {
           "moduleId": 88787,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/company/page": {
           "moduleId": 77544,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/contact/page": {
           "moduleId": 76418,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/enterprise/page": {
           "moduleId": 72261,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/explore/page": {
           "moduleId": 25241,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/faq/page": {
           "moduleId": 98889,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/foundation/page": {
           "moduleId": 15773,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/how-it-works/page": {
           "moduleId": 7419,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/news/[slug]/page": {
           "moduleId": 5210,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/news/page": {
           "moduleId": 29671,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/page": {
           "moduleId": 92195,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/platform/page": {
           "moduleId": 43019,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/policies/page": {
           "moduleId": 78347,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/principles/page": {
           "moduleId": 78550,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/privacy-policy/page": {
           "moduleId": 75879,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/privacy/page": {
           "moduleId": 37264,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/product/[handle]/page": {
           "moduleId": 90335,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/products/books/page": {
           "moduleId": 25960,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/products/cloud/page": {
           "moduleId": 17330,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/products/earth/page": {
           "moduleId": 17354,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/products/games/page": {
           "moduleId": 7141,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/products/jobs/page": {
           "moduleId": 27266,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/products/university/page": {
           "moduleId": 97790,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/products/upcube-ai/page": {
           "moduleId": 86776,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/products/upcube-mobile-os/page": {
           "moduleId": 30446,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/products/upcube-os/page": {
           "moduleId": 91691,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/products/ventari/page": {
           "moduleId": 47092,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/products/vm/page": {
           "moduleId": 56714,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/products/voice/page": {
           "moduleId": 68214,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/research/economic/page": {
           "moduleId": 30810,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/research/page": {
           "moduleId": 33532,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/research/residency/page": {
           "moduleId": 3040,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/safety/page": {
           "moduleId": 18639,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/search/[collection]/page": {
           "moduleId": 47324,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/search/page": {
           "moduleId": 93140,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/security-privacy/page": {
           "moduleId": 5725,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/teams/page": {
           "moduleId": 52184,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/terms-of-service/page": {
           "moduleId": 45113,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/terms/page": {
           "moduleId": 80634,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/trust-transparency/page": {
           "moduleId": 53474,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/trust/page": {
           "moduleId": 95311,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/updates/[slug]/page": {
           "moduleId": 93096,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         },
         "app/vision/page": {
           "moduleId": 66048,
           "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "exportedName": "$$RSC_SERVER_CACHE_3",
           "filename": "lib/shopify/index.ts"
         }
       },
@@ -2602,753 +2230,9 @@
         "app/vision/page": "rsc"
       },
       "filename": "lib/shopify/index.ts",
-      "exportedName": "$$RSC_SERVER_CACHE_1"
+      "exportedName": "$$RSC_SERVER_CACHE_3"
     },
-    "c04b0d40cac85f7438db247f77b5ef706f7bf19980": {
-      "workers": {
-        "app/[page]/page": {
-          "moduleId": 59547,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/_not-found/page": {
-          "moduleId": 41829,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/about/page": {
-          "moduleId": 11280,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/brand/page": {
-          "moduleId": 61321,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/builders/page": {
-          "moduleId": 63672,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/business/page": {
-          "moduleId": 75430,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/capabilities/page": {
-          "moduleId": 90909,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/careers/page": {
-          "moduleId": 155,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/charter/page": {
-          "moduleId": 28176,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/chat/page": {
-          "moduleId": 88787,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/company/page": {
-          "moduleId": 77544,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/contact/page": {
-          "moduleId": 76418,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/enterprise/page": {
-          "moduleId": 72261,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/explore/page": {
-          "moduleId": 25241,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/faq/page": {
-          "moduleId": 98889,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/foundation/page": {
-          "moduleId": 15773,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/how-it-works/page": {
-          "moduleId": 7419,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/news/[slug]/page": {
-          "moduleId": 5210,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/news/page": {
-          "moduleId": 29671,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/page": {
-          "moduleId": 92195,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/platform/page": {
-          "moduleId": 43019,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/policies/page": {
-          "moduleId": 78347,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/principles/page": {
-          "moduleId": 78550,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/privacy-policy/page": {
-          "moduleId": 75879,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/privacy/page": {
-          "moduleId": 37264,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/product/[handle]/page": {
-          "moduleId": 90335,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/books/page": {
-          "moduleId": 25960,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/cloud/page": {
-          "moduleId": 17330,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/earth/page": {
-          "moduleId": 17354,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/games/page": {
-          "moduleId": 7141,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/jobs/page": {
-          "moduleId": 27266,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/university/page": {
-          "moduleId": 97790,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/upcube-ai/page": {
-          "moduleId": 86776,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/upcube-mobile-os/page": {
-          "moduleId": 30446,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/upcube-os/page": {
-          "moduleId": 91691,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/ventari/page": {
-          "moduleId": 47092,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/vm/page": {
-          "moduleId": 56714,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/voice/page": {
-          "moduleId": 68214,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/research/economic/page": {
-          "moduleId": 30810,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/research/page": {
-          "moduleId": 33532,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/research/residency/page": {
-          "moduleId": 3040,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/safety/page": {
-          "moduleId": 18639,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/search/[collection]/page": {
-          "moduleId": 47324,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/search/page": {
-          "moduleId": 93140,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/security-privacy/page": {
-          "moduleId": 5725,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/teams/page": {
-          "moduleId": 52184,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/terms-of-service/page": {
-          "moduleId": 45113,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/terms/page": {
-          "moduleId": 80634,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/trust-transparency/page": {
-          "moduleId": 53474,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/trust/page": {
-          "moduleId": 95311,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/updates/[slug]/page": {
-          "moduleId": 93096,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/vision/page": {
-          "moduleId": 66048,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_2",
-          "filename": "lib/shopify/index.ts"
-        }
-      },
-      "layer": {
-        "app/[page]/page": "rsc",
-        "app/_not-found/page": "rsc",
-        "app/about/page": "rsc",
-        "app/brand/page": "rsc",
-        "app/builders/page": "rsc",
-        "app/business/page": "rsc",
-        "app/capabilities/page": "rsc",
-        "app/careers/page": "rsc",
-        "app/charter/page": "rsc",
-        "app/chat/page": "rsc",
-        "app/company/page": "rsc",
-        "app/contact/page": "rsc",
-        "app/enterprise/page": "rsc",
-        "app/explore/page": "rsc",
-        "app/faq/page": "rsc",
-        "app/foundation/page": "rsc",
-        "app/how-it-works/page": "rsc",
-        "app/news/[slug]/page": "rsc",
-        "app/news/page": "rsc",
-        "app/page": "rsc",
-        "app/platform/page": "rsc",
-        "app/policies/page": "rsc",
-        "app/principles/page": "rsc",
-        "app/privacy-policy/page": "rsc",
-        "app/privacy/page": "rsc",
-        "app/product/[handle]/page": "rsc",
-        "app/products/books/page": "rsc",
-        "app/products/cloud/page": "rsc",
-        "app/products/earth/page": "rsc",
-        "app/products/games/page": "rsc",
-        "app/products/jobs/page": "rsc",
-        "app/products/university/page": "rsc",
-        "app/products/upcube-ai/page": "rsc",
-        "app/products/upcube-mobile-os/page": "rsc",
-        "app/products/upcube-os/page": "rsc",
-        "app/products/ventari/page": "rsc",
-        "app/products/vm/page": "rsc",
-        "app/products/voice/page": "rsc",
-        "app/research/economic/page": "rsc",
-        "app/research/page": "rsc",
-        "app/research/residency/page": "rsc",
-        "app/safety/page": "rsc",
-        "app/search/[collection]/page": "rsc",
-        "app/search/page": "rsc",
-        "app/security-privacy/page": "rsc",
-        "app/teams/page": "rsc",
-        "app/terms-of-service/page": "rsc",
-        "app/terms/page": "rsc",
-        "app/trust-transparency/page": "rsc",
-        "app/trust/page": "rsc",
-        "app/updates/[slug]/page": "rsc",
-        "app/vision/page": "rsc"
-      },
-      "filename": "lib/shopify/index.ts",
-      "exportedName": "$$RSC_SERVER_CACHE_2"
-    },
-    "c05270dd7f4b4a588c2abe03f992da84ca88f256fb": {
-      "workers": {
-        "app/[page]/page": {
-          "moduleId": 59547,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/_not-found/page": {
-          "moduleId": 41829,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/about/page": {
-          "moduleId": 11280,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/brand/page": {
-          "moduleId": 61321,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/builders/page": {
-          "moduleId": 63672,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/business/page": {
-          "moduleId": 75430,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/capabilities/page": {
-          "moduleId": 90909,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/careers/page": {
-          "moduleId": 155,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/charter/page": {
-          "moduleId": 28176,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/chat/page": {
-          "moduleId": 88787,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/company/page": {
-          "moduleId": 77544,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/contact/page": {
-          "moduleId": 76418,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/enterprise/page": {
-          "moduleId": 72261,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/explore/page": {
-          "moduleId": 25241,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/faq/page": {
-          "moduleId": 98889,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/foundation/page": {
-          "moduleId": 15773,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/how-it-works/page": {
-          "moduleId": 7419,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/news/[slug]/page": {
-          "moduleId": 5210,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/news/page": {
-          "moduleId": 29671,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/page": {
-          "moduleId": 92195,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/platform/page": {
-          "moduleId": 43019,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/policies/page": {
-          "moduleId": 78347,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/principles/page": {
-          "moduleId": 78550,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/privacy-policy/page": {
-          "moduleId": 75879,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/privacy/page": {
-          "moduleId": 37264,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/product/[handle]/page": {
-          "moduleId": 90335,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/books/page": {
-          "moduleId": 25960,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/cloud/page": {
-          "moduleId": 17330,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/earth/page": {
-          "moduleId": 17354,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/games/page": {
-          "moduleId": 7141,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/jobs/page": {
-          "moduleId": 27266,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/university/page": {
-          "moduleId": 97790,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/upcube-ai/page": {
-          "moduleId": 86776,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/upcube-mobile-os/page": {
-          "moduleId": 30446,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/upcube-os/page": {
-          "moduleId": 91691,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/ventari/page": {
-          "moduleId": 47092,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/vm/page": {
-          "moduleId": 56714,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/products/voice/page": {
-          "moduleId": 68214,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/research/economic/page": {
-          "moduleId": 30810,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/research/page": {
-          "moduleId": 33532,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/research/residency/page": {
-          "moduleId": 3040,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/safety/page": {
-          "moduleId": 18639,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/search/[collection]/page": {
-          "moduleId": 47324,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/search/page": {
-          "moduleId": 93140,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/security-privacy/page": {
-          "moduleId": 5725,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/teams/page": {
-          "moduleId": 52184,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/terms-of-service/page": {
-          "moduleId": 45113,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/terms/page": {
-          "moduleId": 80634,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/trust-transparency/page": {
-          "moduleId": 53474,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/trust/page": {
-          "moduleId": 95311,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/updates/[slug]/page": {
-          "moduleId": 93096,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        },
-        "app/vision/page": {
-          "moduleId": 66048,
-          "async": false,
-          "exportedName": "$$RSC_SERVER_CACHE_6",
-          "filename": "lib/shopify/index.ts"
-        }
-      },
-      "layer": {
-        "app/[page]/page": "rsc",
-        "app/_not-found/page": "rsc",
-        "app/about/page": "rsc",
-        "app/brand/page": "rsc",
-        "app/builders/page": "rsc",
-        "app/business/page": "rsc",
-        "app/capabilities/page": "rsc",
-        "app/careers/page": "rsc",
-        "app/charter/page": "rsc",
-        "app/chat/page": "rsc",
-        "app/company/page": "rsc",
-        "app/contact/page": "rsc",
-        "app/enterprise/page": "rsc",
-        "app/explore/page": "rsc",
-        "app/faq/page": "rsc",
-        "app/foundation/page": "rsc",
-        "app/how-it-works/page": "rsc",
-        "app/news/[slug]/page": "rsc",
-        "app/news/page": "rsc",
-        "app/page": "rsc",
-        "app/platform/page": "rsc",
-        "app/policies/page": "rsc",
-        "app/principles/page": "rsc",
-        "app/privacy-policy/page": "rsc",
-        "app/privacy/page": "rsc",
-        "app/product/[handle]/page": "rsc",
-        "app/products/books/page": "rsc",
-        "app/products/cloud/page": "rsc",
-        "app/products/earth/page": "rsc",
-        "app/products/games/page": "rsc",
-        "app/products/jobs/page": "rsc",
-        "app/products/university/page": "rsc",
-        "app/products/upcube-ai/page": "rsc",
-        "app/products/upcube-mobile-os/page": "rsc",
-        "app/products/upcube-os/page": "rsc",
-        "app/products/ventari/page": "rsc",
-        "app/products/vm/page": "rsc",
-        "app/products/voice/page": "rsc",
-        "app/research/economic/page": "rsc",
-        "app/research/page": "rsc",
-        "app/research/residency/page": "rsc",
-        "app/safety/page": "rsc",
-        "app/search/[collection]/page": "rsc",
-        "app/search/page": "rsc",
-        "app/security-privacy/page": "rsc",
-        "app/teams/page": "rsc",
-        "app/terms-of-service/page": "rsc",
-        "app/terms/page": "rsc",
-        "app/trust-transparency/page": "rsc",
-        "app/trust/page": "rsc",
-        "app/updates/[slug]/page": "rsc",
-        "app/vision/page": "rsc"
-      },
-      "filename": "lib/shopify/index.ts",
-      "exportedName": "$$RSC_SERVER_CACHE_6"
-    },
-    "c05d3f6338432abbe64048e50453db486ce0c5254a": {
+    "c027d7ddc232f3a2590dd15051dd0a29e0e71dc734": {
       "workers": {
         "app/[page]/page": {
           "moduleId": 59547,
@@ -3720,7 +2604,7 @@
       "filename": "lib/shopify/index.ts",
       "exportedName": "$$RSC_SERVER_CACHE_4"
     },
-    "c0a7910feaa4133d0ad662f97334929a32dd5924bd": {
+    "c041615e5171ae56369f6b452aaa62ba5846c1d51c": {
       "workers": {
         "app/[page]/page": {
           "moduleId": 59547,
@@ -4092,7 +2976,751 @@
       "filename": "lib/shopify/index.ts",
       "exportedName": "$$RSC_SERVER_CACHE_5"
     },
-    "c0a9d8c67bb1851be419c499921951ad670d684633": {
+    "c05190505dc15443d47fef232ca96c3d95fd3cbefd": {
+      "workers": {
+        "app/[page]/page": {
+          "moduleId": 59547,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/_not-found/page": {
+          "moduleId": 41829,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/about/page": {
+          "moduleId": 11280,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/brand/page": {
+          "moduleId": 61321,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/builders/page": {
+          "moduleId": 63672,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/business/page": {
+          "moduleId": 75430,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/capabilities/page": {
+          "moduleId": 90909,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/careers/page": {
+          "moduleId": 155,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/charter/page": {
+          "moduleId": 28176,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/chat/page": {
+          "moduleId": 88787,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/company/page": {
+          "moduleId": 77544,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/contact/page": {
+          "moduleId": 76418,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/enterprise/page": {
+          "moduleId": 72261,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/explore/page": {
+          "moduleId": 25241,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/faq/page": {
+          "moduleId": 98889,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/foundation/page": {
+          "moduleId": 15773,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/how-it-works/page": {
+          "moduleId": 7419,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/news/[slug]/page": {
+          "moduleId": 5210,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/news/page": {
+          "moduleId": 29671,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/page": {
+          "moduleId": 92195,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/platform/page": {
+          "moduleId": 43019,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/policies/page": {
+          "moduleId": 78347,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/principles/page": {
+          "moduleId": 78550,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/privacy-policy/page": {
+          "moduleId": 75879,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/privacy/page": {
+          "moduleId": 37264,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/product/[handle]/page": {
+          "moduleId": 90335,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/books/page": {
+          "moduleId": 25960,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/cloud/page": {
+          "moduleId": 17330,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/earth/page": {
+          "moduleId": 17354,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/games/page": {
+          "moduleId": 7141,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/jobs/page": {
+          "moduleId": 27266,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/university/page": {
+          "moduleId": 97790,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/upcube-ai/page": {
+          "moduleId": 86776,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/upcube-mobile-os/page": {
+          "moduleId": 30446,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/upcube-os/page": {
+          "moduleId": 91691,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/ventari/page": {
+          "moduleId": 47092,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/vm/page": {
+          "moduleId": 56714,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/voice/page": {
+          "moduleId": 68214,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/research/economic/page": {
+          "moduleId": 30810,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/research/page": {
+          "moduleId": 33532,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/research/residency/page": {
+          "moduleId": 3040,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/safety/page": {
+          "moduleId": 18639,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/search/[collection]/page": {
+          "moduleId": 47324,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/search/page": {
+          "moduleId": 93140,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/security-privacy/page": {
+          "moduleId": 5725,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/teams/page": {
+          "moduleId": 52184,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/terms-of-service/page": {
+          "moduleId": 45113,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/terms/page": {
+          "moduleId": 80634,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/trust-transparency/page": {
+          "moduleId": 53474,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/trust/page": {
+          "moduleId": 95311,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/updates/[slug]/page": {
+          "moduleId": 93096,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/vision/page": {
+          "moduleId": 66048,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_2",
+          "filename": "lib/shopify/index.ts"
+        }
+      },
+      "layer": {
+        "app/[page]/page": "rsc",
+        "app/_not-found/page": "rsc",
+        "app/about/page": "rsc",
+        "app/brand/page": "rsc",
+        "app/builders/page": "rsc",
+        "app/business/page": "rsc",
+        "app/capabilities/page": "rsc",
+        "app/careers/page": "rsc",
+        "app/charter/page": "rsc",
+        "app/chat/page": "rsc",
+        "app/company/page": "rsc",
+        "app/contact/page": "rsc",
+        "app/enterprise/page": "rsc",
+        "app/explore/page": "rsc",
+        "app/faq/page": "rsc",
+        "app/foundation/page": "rsc",
+        "app/how-it-works/page": "rsc",
+        "app/news/[slug]/page": "rsc",
+        "app/news/page": "rsc",
+        "app/page": "rsc",
+        "app/platform/page": "rsc",
+        "app/policies/page": "rsc",
+        "app/principles/page": "rsc",
+        "app/privacy-policy/page": "rsc",
+        "app/privacy/page": "rsc",
+        "app/product/[handle]/page": "rsc",
+        "app/products/books/page": "rsc",
+        "app/products/cloud/page": "rsc",
+        "app/products/earth/page": "rsc",
+        "app/products/games/page": "rsc",
+        "app/products/jobs/page": "rsc",
+        "app/products/university/page": "rsc",
+        "app/products/upcube-ai/page": "rsc",
+        "app/products/upcube-mobile-os/page": "rsc",
+        "app/products/upcube-os/page": "rsc",
+        "app/products/ventari/page": "rsc",
+        "app/products/vm/page": "rsc",
+        "app/products/voice/page": "rsc",
+        "app/research/economic/page": "rsc",
+        "app/research/page": "rsc",
+        "app/research/residency/page": "rsc",
+        "app/safety/page": "rsc",
+        "app/search/[collection]/page": "rsc",
+        "app/search/page": "rsc",
+        "app/security-privacy/page": "rsc",
+        "app/teams/page": "rsc",
+        "app/terms-of-service/page": "rsc",
+        "app/terms/page": "rsc",
+        "app/trust-transparency/page": "rsc",
+        "app/trust/page": "rsc",
+        "app/updates/[slug]/page": "rsc",
+        "app/vision/page": "rsc"
+      },
+      "filename": "lib/shopify/index.ts",
+      "exportedName": "$$RSC_SERVER_CACHE_2"
+    },
+    "c06e01831520ece6e2ae09aae96503a5c74cebed25": {
+      "workers": {
+        "app/[page]/page": {
+          "moduleId": 59547,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/_not-found/page": {
+          "moduleId": 41829,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/about/page": {
+          "moduleId": 11280,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/brand/page": {
+          "moduleId": 61321,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/builders/page": {
+          "moduleId": 63672,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/business/page": {
+          "moduleId": 75430,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/capabilities/page": {
+          "moduleId": 90909,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/careers/page": {
+          "moduleId": 155,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/charter/page": {
+          "moduleId": 28176,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/chat/page": {
+          "moduleId": 88787,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/company/page": {
+          "moduleId": 77544,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/contact/page": {
+          "moduleId": 76418,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/enterprise/page": {
+          "moduleId": 72261,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/explore/page": {
+          "moduleId": 25241,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/faq/page": {
+          "moduleId": 98889,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/foundation/page": {
+          "moduleId": 15773,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/how-it-works/page": {
+          "moduleId": 7419,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/news/[slug]/page": {
+          "moduleId": 5210,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/news/page": {
+          "moduleId": 29671,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/page": {
+          "moduleId": 92195,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/platform/page": {
+          "moduleId": 43019,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/policies/page": {
+          "moduleId": 78347,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/principles/page": {
+          "moduleId": 78550,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/privacy-policy/page": {
+          "moduleId": 75879,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/privacy/page": {
+          "moduleId": 37264,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/product/[handle]/page": {
+          "moduleId": 90335,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/books/page": {
+          "moduleId": 25960,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/cloud/page": {
+          "moduleId": 17330,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/earth/page": {
+          "moduleId": 17354,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/games/page": {
+          "moduleId": 7141,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/jobs/page": {
+          "moduleId": 27266,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/university/page": {
+          "moduleId": 97790,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/upcube-ai/page": {
+          "moduleId": 86776,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/upcube-mobile-os/page": {
+          "moduleId": 30446,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/upcube-os/page": {
+          "moduleId": 91691,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/ventari/page": {
+          "moduleId": 47092,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/vm/page": {
+          "moduleId": 56714,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/voice/page": {
+          "moduleId": 68214,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/research/economic/page": {
+          "moduleId": 30810,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/research/page": {
+          "moduleId": 33532,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/research/residency/page": {
+          "moduleId": 3040,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/safety/page": {
+          "moduleId": 18639,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/search/[collection]/page": {
+          "moduleId": 47324,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/search/page": {
+          "moduleId": 93140,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/security-privacy/page": {
+          "moduleId": 5725,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/teams/page": {
+          "moduleId": 52184,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/terms-of-service/page": {
+          "moduleId": 45113,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/terms/page": {
+          "moduleId": 80634,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/trust-transparency/page": {
+          "moduleId": 53474,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/trust/page": {
+          "moduleId": 95311,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/updates/[slug]/page": {
+          "moduleId": 93096,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/vision/page": {
+          "moduleId": 66048,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_6",
+          "filename": "lib/shopify/index.ts"
+        }
+      },
+      "layer": {
+        "app/[page]/page": "rsc",
+        "app/_not-found/page": "rsc",
+        "app/about/page": "rsc",
+        "app/brand/page": "rsc",
+        "app/builders/page": "rsc",
+        "app/business/page": "rsc",
+        "app/capabilities/page": "rsc",
+        "app/careers/page": "rsc",
+        "app/charter/page": "rsc",
+        "app/chat/page": "rsc",
+        "app/company/page": "rsc",
+        "app/contact/page": "rsc",
+        "app/enterprise/page": "rsc",
+        "app/explore/page": "rsc",
+        "app/faq/page": "rsc",
+        "app/foundation/page": "rsc",
+        "app/how-it-works/page": "rsc",
+        "app/news/[slug]/page": "rsc",
+        "app/news/page": "rsc",
+        "app/page": "rsc",
+        "app/platform/page": "rsc",
+        "app/policies/page": "rsc",
+        "app/principles/page": "rsc",
+        "app/privacy-policy/page": "rsc",
+        "app/privacy/page": "rsc",
+        "app/product/[handle]/page": "rsc",
+        "app/products/books/page": "rsc",
+        "app/products/cloud/page": "rsc",
+        "app/products/earth/page": "rsc",
+        "app/products/games/page": "rsc",
+        "app/products/jobs/page": "rsc",
+        "app/products/university/page": "rsc",
+        "app/products/upcube-ai/page": "rsc",
+        "app/products/upcube-mobile-os/page": "rsc",
+        "app/products/upcube-os/page": "rsc",
+        "app/products/ventari/page": "rsc",
+        "app/products/vm/page": "rsc",
+        "app/products/voice/page": "rsc",
+        "app/research/economic/page": "rsc",
+        "app/research/page": "rsc",
+        "app/research/residency/page": "rsc",
+        "app/safety/page": "rsc",
+        "app/search/[collection]/page": "rsc",
+        "app/search/page": "rsc",
+        "app/security-privacy/page": "rsc",
+        "app/teams/page": "rsc",
+        "app/terms-of-service/page": "rsc",
+        "app/terms/page": "rsc",
+        "app/trust-transparency/page": "rsc",
+        "app/trust/page": "rsc",
+        "app/updates/[slug]/page": "rsc",
+        "app/vision/page": "rsc"
+      },
+      "filename": "lib/shopify/index.ts",
+      "exportedName": "$$RSC_SERVER_CACHE_6"
+    },
+    "c088780904cd8700defbd323bb5ec8ec07ef074790": {
       "workers": {
         "app/[page]/page": {
           "moduleId": 59547,
@@ -4464,7 +4092,379 @@
       "filename": "lib/shopify/index.ts",
       "exportedName": "$$RSC_SERVER_CACHE_7"
     },
-    "60c4657e42c5bf3e103f113350166b8dc527d970ed": {
+    "c0b2cae6307b1a5569eb43864bb67411da427016e7": {
+      "workers": {
+        "app/[page]/page": {
+          "moduleId": 59547,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/_not-found/page": {
+          "moduleId": 41829,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/about/page": {
+          "moduleId": 11280,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/brand/page": {
+          "moduleId": 61321,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/builders/page": {
+          "moduleId": 63672,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/business/page": {
+          "moduleId": 75430,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/capabilities/page": {
+          "moduleId": 90909,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/careers/page": {
+          "moduleId": 155,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/charter/page": {
+          "moduleId": 28176,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/chat/page": {
+          "moduleId": 88787,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/company/page": {
+          "moduleId": 77544,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/contact/page": {
+          "moduleId": 76418,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/enterprise/page": {
+          "moduleId": 72261,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/explore/page": {
+          "moduleId": 25241,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/faq/page": {
+          "moduleId": 98889,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/foundation/page": {
+          "moduleId": 15773,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/how-it-works/page": {
+          "moduleId": 7419,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/news/[slug]/page": {
+          "moduleId": 5210,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/news/page": {
+          "moduleId": 29671,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/page": {
+          "moduleId": 92195,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/platform/page": {
+          "moduleId": 43019,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/policies/page": {
+          "moduleId": 78347,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/principles/page": {
+          "moduleId": 78550,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/privacy-policy/page": {
+          "moduleId": 75879,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/privacy/page": {
+          "moduleId": 37264,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/product/[handle]/page": {
+          "moduleId": 90335,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/books/page": {
+          "moduleId": 25960,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/cloud/page": {
+          "moduleId": 17330,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/earth/page": {
+          "moduleId": 17354,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/games/page": {
+          "moduleId": 7141,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/jobs/page": {
+          "moduleId": 27266,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/university/page": {
+          "moduleId": 97790,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/upcube-ai/page": {
+          "moduleId": 86776,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/upcube-mobile-os/page": {
+          "moduleId": 30446,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/upcube-os/page": {
+          "moduleId": 91691,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/ventari/page": {
+          "moduleId": 47092,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/vm/page": {
+          "moduleId": 56714,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/products/voice/page": {
+          "moduleId": 68214,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/research/economic/page": {
+          "moduleId": 30810,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/research/page": {
+          "moduleId": 33532,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/research/residency/page": {
+          "moduleId": 3040,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/safety/page": {
+          "moduleId": 18639,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/search/[collection]/page": {
+          "moduleId": 47324,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/search/page": {
+          "moduleId": 93140,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/security-privacy/page": {
+          "moduleId": 5725,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/teams/page": {
+          "moduleId": 52184,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/terms-of-service/page": {
+          "moduleId": 45113,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/terms/page": {
+          "moduleId": 80634,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/trust-transparency/page": {
+          "moduleId": 53474,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/trust/page": {
+          "moduleId": 95311,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/updates/[slug]/page": {
+          "moduleId": 93096,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        },
+        "app/vision/page": {
+          "moduleId": 66048,
+          "async": false,
+          "exportedName": "$$RSC_SERVER_CACHE_1",
+          "filename": "lib/shopify/index.ts"
+        }
+      },
+      "layer": {
+        "app/[page]/page": "rsc",
+        "app/_not-found/page": "rsc",
+        "app/about/page": "rsc",
+        "app/brand/page": "rsc",
+        "app/builders/page": "rsc",
+        "app/business/page": "rsc",
+        "app/capabilities/page": "rsc",
+        "app/careers/page": "rsc",
+        "app/charter/page": "rsc",
+        "app/chat/page": "rsc",
+        "app/company/page": "rsc",
+        "app/contact/page": "rsc",
+        "app/enterprise/page": "rsc",
+        "app/explore/page": "rsc",
+        "app/faq/page": "rsc",
+        "app/foundation/page": "rsc",
+        "app/how-it-works/page": "rsc",
+        "app/news/[slug]/page": "rsc",
+        "app/news/page": "rsc",
+        "app/page": "rsc",
+        "app/platform/page": "rsc",
+        "app/policies/page": "rsc",
+        "app/principles/page": "rsc",
+        "app/privacy-policy/page": "rsc",
+        "app/privacy/page": "rsc",
+        "app/product/[handle]/page": "rsc",
+        "app/products/books/page": "rsc",
+        "app/products/cloud/page": "rsc",
+        "app/products/earth/page": "rsc",
+        "app/products/games/page": "rsc",
+        "app/products/jobs/page": "rsc",
+        "app/products/university/page": "rsc",
+        "app/products/upcube-ai/page": "rsc",
+        "app/products/upcube-mobile-os/page": "rsc",
+        "app/products/upcube-os/page": "rsc",
+        "app/products/ventari/page": "rsc",
+        "app/products/vm/page": "rsc",
+        "app/products/voice/page": "rsc",
+        "app/research/economic/page": "rsc",
+        "app/research/page": "rsc",
+        "app/research/residency/page": "rsc",
+        "app/safety/page": "rsc",
+        "app/search/[collection]/page": "rsc",
+        "app/search/page": "rsc",
+        "app/security-privacy/page": "rsc",
+        "app/teams/page": "rsc",
+        "app/terms-of-service/page": "rsc",
+        "app/terms/page": "rsc",
+        "app/trust-transparency/page": "rsc",
+        "app/trust/page": "rsc",
+        "app/updates/[slug]/page": "rsc",
+        "app/vision/page": "rsc"
+      },
+      "filename": "lib/shopify/index.ts",
+      "exportedName": "$$RSC_SERVER_CACHE_1"
+    },
+    "6017b34eb168c41db5f5d16e6465bed507c1a2e396": {
       "workers": {
         "app/product/[handle]/page": {
           "moduleId": 90335,
@@ -4481,5 +4481,5 @@
     }
   },
   "edge": {},
-  "encryptionKey": "bc+qQ2p5L+Zkb0KwCgdVitZl+0FoSYH1RQcOrA5x1Z0="
+  "encryptionKey": "PiBFI0nxyHwu05ftEUij+yu+7KL2CEouKR4gIh7xrWU="
 }

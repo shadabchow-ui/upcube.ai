@@ -48,7 +48,10 @@ export default function UpcubeHomePage() {
       <main>
         <Hero />
 
-        <section className="uc-home__section" aria-labelledby="portal-title">
+        <section
+          className="uc-home__section uc-home__section--portal"
+          aria-labelledby="portal-title"
+        >
           <div className="uc-home__container">
             <h2 id="portal-title" className="uc-home__section-title-centered">
               Explore the UpCubeAI product family

@@ -454,6 +454,10 @@ body:has(.uc-home) .commerce-navbar {
   border-bottom: 1px solid var(--uc-border-soft);
 }
 
+.uc-home__section--portal {
+  padding-top: clamp(2.75rem, 6vw, var(--uc-section-y));
+}
+
 .uc-home__section h2 {
   max-width: 18ch;
   margin: 0 0 clamp(1.5rem, 4vw, 2.75rem);
@@ -709,17 +713,21 @@ body:has(.uc-home) .commerce-navbar {
 }
 
 @media (max-width: 44rem) {
+  .uc-home {
+    --uc-section-y: clamp(3rem, 9vw, 4rem);
+  }
+
   .uc-home__container {
     overflow-x: clip;
   }
 
   .uc-home__hero-inner {
     min-height: auto;
-    padding-block: clamp(2rem, 10vw, 3rem);
+    padding-block: clamp(1.4rem, 7vw, 2.4rem);
   }
 
   .uc-home__hero-stack {
-    gap: 0.55rem;
+    gap: 0.45rem;
   }
 
   .uc-home__chat-panel {
@@ -731,6 +739,7 @@ body:has(.uc-home) .commerce-navbar {
     gap: 0.45rem;
     padding: 0.7rem 0.75rem 0.75rem;
     border-radius: 22px;
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.34);
   }
 
   .uc-home__chat-composer-field {
@@ -784,6 +793,14 @@ body:has(.uc-home) .commerce-navbar {
     max-width: none;
   }
 
+  .uc-home__section--portal {
+    padding-top: clamp(1.65rem, 6vw, 2.35rem);
+  }
+
+  .uc-home__section--portal .uc-home__section-title-centered {
+    margin-bottom: clamp(1.1rem, 5vw, 1.6rem);
+  }
+
   .uc-home__portal-card,
   .uc-home__story,
   .uc-home__feature,
@@ -804,6 +821,10 @@ body:has(.uc-home) .commerce-navbar {
 
   .uc-home__chat-panel {
     width: min(100%, calc(100vw - 32px));
+  }
+
+  .uc-home__section--portal {
+    padding-top: 1.5rem;
   }
 
   .uc-home__portal-card,
