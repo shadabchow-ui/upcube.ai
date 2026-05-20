@@ -6,10 +6,7 @@ import {
   homeProofPoints,
   stories,
 } from "lib/upcube-home/content";
-import {
-  portalHomepageCards,
-  upcubeCompanyIdentity,
-} from "lib/upcube-portal/content";
+import { portalHomepageCards } from "lib/upcube-portal/content";
 import { PortalFooter } from "components/upcube-portal/portal-footer";
 import { PortalHeader } from "components/upcube-portal/portal-header";
 
@@ -37,10 +34,6 @@ function Hero() {
       <div className="uc-home__container uc-home__hero-inner">
         <div className="uc-home__hero-stack">
           <h1>What can I help with?</h1>
-          <p className="uc-home__lead">
-            {upcubeCompanyIdentity.oneLiner} High-end products for AI & voice,
-            discovery, commerce, infrastructure, entertainment, and computing.
-          </p>
           <HeroChatPanel />
         </div>
       </div>
