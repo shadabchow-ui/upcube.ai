@@ -1,6 +1,8 @@
 import { getCollections, getPages, getProducts } from "lib/shopify";
 import { upcubeNewsArticles } from "lib/upcube-news/news";
 import { foundationRoutePaths } from "lib/upcube-portal/foundation-pages";
+import { researchLongformPages } from "lib/upcube-portal/longform-pages";
+import { policyPageSlugs } from "lib/upcube-portal/policy-pages";
 import { upcubeProducts } from "lib/upcube-products/products";
 import { CANONICAL_BASE_URL } from "lib/upcube-seo/metadata";
 import { validateEnvironmentVariables } from "lib/utils";
@@ -45,6 +47,7 @@ const portalRouteConfigs: Array<
   { url: "/news", changeFrequency: "weekly", priority: 0.9 },
   { url: "/platform", changeFrequency: "weekly", priority: 0.8 },
   { url: "/policies", changeFrequency: "monthly", priority: 0.4 },
+  { url: "/policy", changeFrequency: "monthly", priority: 0.5 },
   { url: "/pricing", changeFrequency: "monthly", priority: 0.6 },
   { url: "/principles", changeFrequency: "monthly", priority: 0.7 },
   { url: "/privacy", changeFrequency: "yearly", priority: 0.3 },
@@ -103,11 +106,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
   );
 
+  const researchRoutes = researchLongformPages.map((page) =>
+    buildSitemapRoute(`/research/${page.slug}`, {
+      changeFrequency: "monthly",
+      priority: 0.6,
+    }),
+  );
+
+  const policyRoutes = policyPageSlugs.map((slug) =>
+    buildSitemapRoute(`/policy/${slug}`, {
+      changeFrequency: "monthly",
+      priority: 0.5,
+    }),
+  );
+
   const baseRoutes = dedupeRoutes([
     ...portalRoutes,
     ...foundationRoutes,
     ...productRoutes,
     ...newsRoutes,
+    ...researchRoutes,
+    ...policyRoutes,
   ]);
 
   try {

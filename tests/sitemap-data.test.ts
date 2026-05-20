@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { foundationRoutePaths } from "lib/upcube-portal/foundation-pages";
+import { researchLongformPages } from "lib/upcube-portal/longform-pages";
+import { policyPageSlugs } from "lib/upcube-portal/policy-pages";
 import { upcubeProducts } from "lib/upcube-products/products";
 import { upcubeNewsArticles } from "lib/upcube-news/news";
 
@@ -11,6 +13,7 @@ const job5Routes = [
   "/security",
   "/status",
   "/legal",
+  "/policy",
 ];
 
 const coreRoutes = ["/", "/news", "/contact"];
@@ -107,5 +110,47 @@ describe("Job 5 route coverage", () => {
       expect(route.startsWith("/")).toBe(true);
       expect(route.length).toBeGreaterThanOrEqual(1);
     }
+  });
+});
+
+describe("research longform route coverage", () => {
+  it("research longform pages array is non-empty", () => {
+    expect(researchLongformPages.length).toBeGreaterThan(0);
+  });
+
+  it("all research longform slugs are non-empty strings", () => {
+    for (const page of researchLongformPages) {
+      expect(page.slug).toBeTruthy();
+      expect(typeof page.slug).toBe("string");
+    }
+  });
+
+  it("expected research slugs are present", () => {
+    const slugs = researchLongformPages.map((p) => p.slug);
+    expect(slugs).toContain("earth-ai-geospatial-intelligence");
+    expect(slugs).toContain("health-ai");
+    expect(slugs).toContain("science-ai");
+    expect(slugs).toContain("natural-language-processing");
+    expect(slugs).toContain("responsible-ai");
+  });
+});
+
+describe("policy page route coverage", () => {
+  it("policy page slugs array is non-empty", () => {
+    expect(policyPageSlugs.length).toBeGreaterThan(0);
+  });
+
+  it("all policy slugs are non-empty strings", () => {
+    for (const slug of policyPageSlugs) {
+      expect(slug).toBeTruthy();
+      expect(typeof slug).toBe("string");
+    }
+  });
+
+  it("expected policy slugs are present", () => {
+    expect(policyPageSlugs).toContain("ai-principles");
+    expect(policyPageSlugs).toContain("working-together");
+    expect(policyPageSlugs).toContain("societal-impact");
+    expect(policyPageSlugs).toContain("for-organizations");
   });
 });

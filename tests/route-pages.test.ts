@@ -19,6 +19,7 @@ const job5Routes = [
   "/security",
   "/status",
   "/legal",
+  "/policy",
 ] as const;
 
 const corePortalRoutes = [
@@ -116,6 +117,18 @@ describe("dynamic route pattern coverage", () => {
 
   it("has news/[slug] dynamic route", () => {
     expect(existsSync(resolve(APP_DIR, "news", "[slug]", "page.tsx"))).toBe(
+      true,
+    );
+  });
+
+  it("has research/[slug] dynamic route", () => {
+    expect(existsSync(resolve(APP_DIR, "research", "[slug]", "page.tsx"))).toBe(
+      true,
+    );
+  });
+
+  it("has policy/[slug] dynamic route", () => {
+    expect(existsSync(resolve(APP_DIR, "policy", "[slug]", "page.tsx"))).toBe(
       true,
     );
   });
