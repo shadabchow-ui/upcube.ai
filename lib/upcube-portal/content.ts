@@ -188,12 +188,12 @@ export {
 };
 
 export const upcubeCompanyIdentity: UpcubeCompanyIdentity = {
-  descriptor: "AI & Voice Company",
+  descriptor: "Artificial Intelligence Company",
   tagline: "The Next Frontier.",
   oneLiner:
-    "An AI and voice technology company building premium products for the next era of computing.",
+    "An artificial intelligence technology company building premium products for the next era of computing.",
   mission:
-    "UpCubeAI builds high-end products for AI & voice, discovery, commerce, infrastructure, entertainment, and the next era of computing.",
+    "UpCubeAI builds high-end products for work, discovery, commerce, cloud infrastructure, entertainment, voice, and the next era of computing.",
   vision:
     "The current product family is designed as the first proof of a broader intelligent technology ecosystem.",
   belief:

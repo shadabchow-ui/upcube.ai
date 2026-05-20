@@ -39,6 +39,7 @@
   "/products/upcube-os/page": "app/products/upcube-os/page.js",
   "/products/ventari/page": "app/products/ventari/page.js",
   "/products/vm/page": "app/products/vm/page.js",
+  "/products/voice/page": "app/products/voice/page.js",
   "/research/economic/page": "app/research/economic/page.js",
   "/research/page": "app/research/page.js",
   "/research/residency/page": "app/research/residency/page.js",

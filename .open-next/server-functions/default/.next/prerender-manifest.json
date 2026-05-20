@@ -826,6 +826,39 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/news/upcube-voice-preview": {
+      "renderingMode": "PARTIALLY_STATIC",
+      "experimentalPPR": true,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight"
+        }
+      ],
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 604800,
+      "srcRoute": "/news/[slug]",
+      "dataRoute": "/news/upcube-voice-preview.rsc",
+      "prefetchDataRoute": "/news/upcube-voice-preview.prefetch.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/news/ventari-launch": {
       "renderingMode": "PARTIALLY_STATIC",
       "experimentalPPR": true,
@@ -1475,6 +1508,39 @@
       "srcRoute": "/products/vm",
       "dataRoute": "/products/vm.rsc",
       "prefetchDataRoute": "/products/vm.prefetch.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/products/voice": {
+      "renderingMode": "PARTIALLY_STATIC",
+      "experimentalPPR": true,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight"
+        }
+      ],
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 604800,
+      "srcRoute": "/products/voice",
+      "dataRoute": "/products/voice.rsc",
+      "prefetchDataRoute": "/products/voice.prefetch.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2206,8 +2272,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "7d57fd20e01a39cf69722ef5832d90a0",
-    "previewModeSigningKey": "b1509f6edcd994a7177f12095f2dbc2ed05fd4ee507d5e8b8ac2b536ddcec40b",
-    "previewModeEncryptionKey": "21a9b1306415c7a2926a830112f1597dc497d9f513277fcd168d892c11c6e892"
+    "previewModeId": "8044fe9f620200bfa8f3e42255fb8f61",
+    "previewModeSigningKey": "049ec8cc3757b7a08dd8bc3a02bcc4b1bc675bbff7b6ebbde3949f2189fa637d",
+    "previewModeEncryptionKey": "25a7f33237c22a8103a284a1cb4af3e48afd8f6144596d3c59fede2e5e2fd64b"
   }
 }

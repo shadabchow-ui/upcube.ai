@@ -180,6 +180,11 @@
       "static/media/Inter_VariableFont_opsz,wght-s.p.cf290510.ttf",
       "static/media/Inter_Italic_VariableFont_opsz,wght-s.p.008c6788.ttf"
     ],
+    "[project]/app/products/voice/page": [
+      "static/media/Geist_Variable-s.p.70416cc0.woff2",
+      "static/media/Inter_VariableFont_opsz,wght-s.p.cf290510.ttf",
+      "static/media/Inter_Italic_VariableFont_opsz,wght-s.p.008c6788.ttf"
+    ],
     "[project]/app/research/economic/page": [
       "static/media/Geist_Variable-s.p.70416cc0.woff2",
       "static/media/Inter_VariableFont_opsz,wght-s.p.cf290510.ttf",

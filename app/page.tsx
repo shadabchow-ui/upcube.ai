@@ -9,9 +9,9 @@ import {
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata = createBasicPageMetadata({
-  title: "UpCubeAI | AI & Voice Company",
+  title: "UpCube | Artificial Intelligence Company",
   description:
-    "UpCubeAI is an AI and voice technology company building high-end products for work, voice, discovery, commerce, cloud infrastructure, entertainment, and the future of computing.",
+    "UpCubeAI is an artificial intelligence technology company building high-end products for work, discovery, commerce, cloud infrastructure, entertainment, voice, and the future of computing.",
   path: "/",
 });
 

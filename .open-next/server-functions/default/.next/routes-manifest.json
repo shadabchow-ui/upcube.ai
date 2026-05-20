@@ -334,6 +334,12 @@
       "namedRegex": "^/products/vm(?:/)?$"
     },
     {
+      "page": "/products/voice",
+      "regex": "^/products/voice(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/voice(?:/)?$"
+    },
+    {
       "page": "/research",
       "regex": "^/research(?:/)?$",
       "routeKeys": {},

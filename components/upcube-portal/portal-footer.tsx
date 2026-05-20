@@ -63,8 +63,8 @@ export function PortalFooter() {
           <div className="uc-footer-brand-row">
             <img
               src="/brand/logo-mark.png"
-              width={28}
-              height={28}
+              width={44}
+              height={44}
               alt="UpcubeAI"
               className="uc-footer-brand-mark"
             />

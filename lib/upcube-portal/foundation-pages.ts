@@ -215,7 +215,7 @@ export const careersPageContent: FoundationPageContent = {
 
 export const brandPageContent: FoundationPageContent = {
   eyebrow: "Brand Help Center",
-  title: "UpCubeAI | Artificial Intelligence Company | The Next Frontier.",
+  title: "UpCubeAI | Artificial Intelligence Company",
   description:
     "This page offers practical guidance for using the UpcubeAI name, company descriptor, and tagline without implying a full downloadable brand kit exists in the repo.",
   sections: [

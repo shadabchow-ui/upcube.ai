@@ -105,8 +105,8 @@ export function PortalHeader() {
         <Link href="/" className="uc-brand" aria-label="UpcubeAI home">
           <img
             src="/brand/logo-mark.png"
-            width={36}
-            height={36}
+            width={40}
+            height={40}
             alt="UpcubeAI"
             className="uc-brand-mark"
           />

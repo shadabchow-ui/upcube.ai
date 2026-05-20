@@ -114,8 +114,8 @@ body:has(.uc-page) .commerce-navbar {
 }
 
 .uc-brand {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: clamp(2.125rem, 4vw, 2.5rem);
+  height: clamp(2.125rem, 4vw, 2.5rem);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -124,8 +124,8 @@ body:has(.uc-page) .commerce-navbar {
 }
 
 .uc-brand-mark {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: clamp(2.125rem, 4vw, 2.5rem);
+  height: clamp(2.125rem, 4vw, 2.5rem);
   display: block;
   object-fit: contain;
 }
@@ -802,8 +802,8 @@ body:has(.uc-page) .commerce-navbar {
 }
 
 .uc-footer-brand-mark {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: clamp(2.5rem, 4vw, 2.75rem);
+  height: clamp(2.5rem, 4vw, 2.75rem);
   display: block;
   object-fit: contain;
 }

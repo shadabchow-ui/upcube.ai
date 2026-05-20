@@ -4,9 +4,9 @@ import type { UpcubeNewsArticle } from "lib/upcube-news/news";
 import type { UpcubeProduct } from "lib/upcube-products/products";
 
 export const CANONICAL_BASE_URL = "https://upcube.ai";
-export const DEFAULT_SITE_TITLE = "UpCubeAI | AI & Voice Company";
+export const DEFAULT_SITE_TITLE = "UpCube | Artificial Intelligence Company";
 export const DEFAULT_SITE_DESCRIPTION =
-  "UpCubeAI is an AI and voice technology company building high-end products for work, voice, discovery, commerce, cloud infrastructure, entertainment, and the future of computing.";
+  "UpCubeAI is an artificial intelligence technology company building high-end products for work, discovery, commerce, cloud infrastructure, entertainment, voice, and the future of computing.";
 const DEFAULT_OG_IMAGE = "/icon.png";
 
 export const canonicalBaseUrl = CANONICAL_BASE_URL;
