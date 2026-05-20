@@ -50,3 +50,9 @@ out/
 .open-next/
 out/
 .wrangler/
+
+# Build output
+.next/
+.open-next/
+out/
+.wrangler/
