@@ -6,6 +6,7 @@
   --product-glow: rgba(86, 191, 255, 0.3);
   --product-glow-soft: rgba(86, 191, 255, 0.14);
   --product-accent: #d9f3ff;
+  --product-section-y: clamp(3.2rem, 6.5vw, 5.2rem);
   color: var(--uc-text);
 }
 
@@ -56,12 +57,12 @@
 .heroSection,
 .section,
 .ctaSection {
-  padding-block: var(--up-section-y);
+  padding-block: var(--product-section-y);
   border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .heroSection {
-  padding-top: clamp(4.8rem, 10vw, 7rem);
+  padding-top: clamp(4.15rem, 8.2vw, 6rem);
   border-top: 0;
 }
 
@@ -273,11 +274,11 @@
   .heroSection,
   .section,
   .ctaSection {
-    padding-block: clamp(2.5rem, 9vw, 3.6rem);
+    padding-block: clamp(2.2rem, 8vw, 3.1rem);
   }
 
   .heroSection {
-    padding-top: clamp(3.6rem, 13vw, 4.75rem);
+    padding-top: clamp(3.2rem, 11vw, 4.2rem);
   }
 
   .heroCopy h1 {

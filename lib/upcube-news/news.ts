@@ -91,6 +91,50 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
     ],
   },
   {
+    slug: "upcube-quantum-launch",
+    href: "/news/upcube-quantum-launch",
+    productName: "Upcube Quantum",
+    category: "Product Launch",
+    dateLabel: "Recent update",
+    headline: "Introducing Upcube Quantum",
+    excerpt:
+      "Upcube Quantum is a beginner-friendly quantum computing workspace for guided experiments, templates, visual runs, and clear result charts.",
+    heroSummary:
+      "Upcube Quantum brings guided experiments, visual runs, and structured templates into one calm workspace designed to make quantum ideas easier to explore.",
+    primaryCtaLabel: "Explore Upcube Quantum",
+    primaryCtaHref: "/products/quantum",
+    productPageUrl: "/products/quantum",
+    launchUrl: "https://quantum.upcube.ai",
+    seoTitle: "Introducing Upcube Quantum | Guided Quantum Exploration",
+    seoDescription:
+      "Read the launch update for Upcube Quantum, a beginner-friendly workspace for guided experiments, templates, visual runs, and clear result charts.",
+    finalCtaTitle: "Start exploring quantum ideas with clarity.",
+    finalCtaBody:
+      "Upcube Quantum is built to make future-computing concepts approachable through guided discovery and visual results.",
+    sections: [
+      {
+        eyebrow: "The launch",
+        title: "Quantum exploration in a clearer workspace",
+        body: "Upcube Quantum is designed for people who want to learn by doing. Guided experiments, structured templates, and a focused console make the first step feel approachable.",
+      },
+      {
+        eyebrow: "Visual results",
+        title: "See what changed after every run",
+        body: "Result views are designed to stay readable, so abstract outcomes are easier to compare, discuss, and build on.",
+      },
+      {
+        eyebrow: "Learning path",
+        title: "Start simple, then go deeper",
+        body: "The product direction supports a calm path from guided examples to more advanced exploration without overwhelming the first experience.",
+      },
+    ],
+    relatedProducts: [
+      { name: "UpcubeAI", href: "/products/upcube-ai" },
+      { name: "Education", href: "/products/university" },
+      { name: "Compute", href: "/products/vm" },
+    ],
+  },
+  {
     slug: "ventari-launch",
     href: "/news/ventari-launch",
     productName: "Upcube Shopping",

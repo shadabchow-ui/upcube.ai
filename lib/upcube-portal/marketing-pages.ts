@@ -300,6 +300,156 @@ export const enterprisePageContent: MarketingPageContent = {
   ],
 };
 
+export const corePageContent: MarketingPageContent = {
+  eyebrow: "Upcube Core",
+  title: "The shared intelligence and platform layer",
+  lead: "Upcube Core brings together AI, workspace, identity, search, and project orchestration as the foundational platform across every Upcube product.",
+  chips: ["AI workspace", "Platform layer", "Ecosystem foundation"],
+  primaryCta: { label: "Explore UpcubeAI", href: "/products/upcube-ai" },
+  secondaryCta: { label: "View all products", href: "/products" },
+  sections: [
+    {
+      eyebrow: "Core capabilities",
+      title: "What the platform layer provides",
+      cards: [
+        {
+          title: "AI workspace",
+          body: "Ethen anchors the ecosystem with AI-led planning, writing, research, and execution workflows.",
+          href: "/products/upcube-ai",
+        },
+        {
+          title: "Identity and access",
+          body: "Account, authentication, and permission boundaries that connect products without scattering user data.",
+        },
+        {
+          title: "Search and discovery",
+          body: "Cross-product search that helps people find content, products, and information across the ecosystem.",
+        },
+        {
+          title: "Project orchestration",
+          body: "Organize work across products, track execution, and keep team context connected.",
+        },
+      ],
+    },
+    {
+      eyebrow: "Platform foundation",
+      title: "How Core connects the ecosystem",
+      cards: [
+        {
+          title: "Unified navigation",
+          body: "A shared shell — header, footer, menus — that makes every Upcube product feel like part of one family.",
+        },
+        {
+          title: "Shared design system",
+          body: "Consistent editorial styling, typography, and interaction patterns across every portal page.",
+        },
+      ],
+    },
+  ],
+};
+
+export const buildPageContent: MarketingPageContent = {
+  eyebrow: "Upcube Build",
+  title: "Cloud, compute, and platform tools for builders",
+  lead: "Upcube Build covers the infrastructure and systems layer — cloud workflows, virtual machines, operating systems, and voice platform for teams building on the Upcube ecosystem.",
+  chips: ["Cloud infrastructure", "Compute", "Platform tools"],
+  primaryCta: { label: "Explore Cloud", href: "/products/cloud" },
+  secondaryCta: { label: "View all products", href: "/products" },
+  sections: [
+    {
+      eyebrow: "Build products",
+      title: "Infrastructure and systems",
+      cards: [
+        {
+          title: "Cloud",
+          body: "Developer tools, cloud workflows, and compute access — the infrastructure front door for the ecosystem.",
+          href: "/products/cloud",
+        },
+        {
+          title: "Compute",
+          body: "Virtual machines, networking, storage, and operations for real infrastructure workloads.",
+          href: "/products/vm",
+        },
+        {
+          title: "Upcube OS",
+          body: "AI-first desktop operating system designed around visible help, permissions, and trust.",
+          href: "/products/upcube-os",
+        },
+        {
+          title: "Upcube Mobile OS",
+          body: "AI-native mobile computing direction focused on privacy, trust, and clear interaction.",
+          href: "/products/upcube-mobile-os",
+        },
+        {
+          title: "Voice",
+          body: "AI voice platform for future Upcube devices — headphones, earbuds, home audio, and car audio.",
+          href: "/products/voice",
+        },
+      ],
+    },
+    {
+      eyebrow: "Who builds on Upcube",
+      title: "Platform roles",
+      cards: [
+        {
+          title: "Developers",
+          body: "Cloud APIs, compute resources, and tooling for building on the Upcube platform.",
+        },
+        {
+          title: "Platform teams",
+          body: "Infrastructure operations, system architecture, and the compute layer behind scalable products.",
+        },
+      ],
+    },
+  ],
+};
+
+export const learnPageContent: MarketingPageContent = {
+  eyebrow: "Upcube Learn",
+  title: "Learning paths for the AI age",
+  lead: "Upcube Learn brings together education, books, and quantum computing — structured learning, discovery, and exploration for the next era of computing.",
+  chips: ["Education", "Discovery", "Future computing"],
+  primaryCta: { label: "Explore Education", href: "/products/university" },
+  secondaryCta: { label: "View all products", href: "/products" },
+  sections: [
+    {
+      eyebrow: "Learn products",
+      title: "Knowledge and exploration",
+      cards: [
+        {
+          title: "Education",
+          body: "100K courses with simple $5 course pricing for AI education, product training, and guided learning paths.",
+          href: "/products/university",
+        },
+        {
+          title: "Books",
+          body: "Explore 50M books with previews, saved titles, and a calmer path to discovery.",
+          href: "/products/books",
+        },
+        {
+          title: "Quantum",
+          body: "A beginner-friendly quantum workspace for guided experiments, visual runs, and clear result charts.",
+          href: "/products/quantum",
+        },
+      ],
+    },
+    {
+      eyebrow: "Learning approach",
+      title: "How Learn works",
+      cards: [
+        {
+          title: "Guided paths",
+          body: "Structured learning sequences help build confidence from fundamentals into advanced topics.",
+        },
+        {
+          title: "Hands-on exploration",
+          body: "Quantum experiments, book previews, and course material let learning happen by doing.",
+        },
+      ],
+    },
+  ],
+};
+
 export const researchPageContent: MarketingPageContent = {
   eyebrow: "Research",
   title: "Research-to-decision workflows for UpcubeAI",

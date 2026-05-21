@@ -36,6 +36,14 @@ const job5Routes = [
   "/policy",
 ] as const;
 
+const ecosystemRoutes = [
+  "/products",
+  "/core",
+  "/build",
+  "/learn",
+  "/explore",
+] as const;
+
 const corePortalRoutes = [
   "/about",
   "/company",
@@ -87,6 +95,14 @@ describe("route page file coverage - Job 5 routes", () => {
   }
 });
 
+describe("route page file coverage - ecosystem routes", () => {
+  for (const route of ecosystemRoutes) {
+    it(`has ${route} page.tsx`, () => {
+      expect(routePageExists(route)).toBe(true);
+    });
+  }
+});
+
 describe("route page file coverage - core portal routes", () => {
   for (const route of corePortalRoutes) {
     it(`has ${route} page.tsx`, () => {
@@ -103,6 +119,7 @@ describe("route page file coverage - product pages", () => {
     "games",
     "jobs",
     "cloud",
+    "quantum",
     "ventari",
     "vm",
     "upcube-os",

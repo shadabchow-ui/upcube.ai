@@ -1,3 +1,5 @@
+import { UPCUBE_QUANTUM_URL } from "lib/upcube-universal/product-links";
+
 export type UpcubeProductSlug =
   | "upcube-ai"
   | "books"
@@ -5,6 +7,7 @@ export type UpcubeProductSlug =
   | "games"
   | "jobs"
   | "cloud"
+  | "quantum"
   | "ventari"
   | "vm"
   | "upcube-os"
@@ -744,6 +747,121 @@ export const upcubeProducts: UpcubeProduct[] = [
     finalSecondaryAction: {
       label: "Explore VM Compute",
       href: "/products/vm",
+    },
+  },
+  {
+    slug: "quantum",
+    name: "Upcube Quantum",
+    eyebrow: "Future Computing",
+    headline: "Quantum computing, made simple.",
+    summary:
+      "Upcube Quantum makes quantum computing easier to understand, explore, and use. Run guided experiments, see results visually, and learn complex ideas through a clear workspace built for discovery.",
+    seoTitle: "Upcube Quantum | Quantum Computing Made Simple",
+    seoDescription:
+      "Upcube Quantum is a beginner-friendly quantum computing workspace for guided experiments, visual runs, templates, and clear result charts.",
+    primaryAction: {
+      label: "Launch Quantum",
+      href: UPCUBE_QUANTUM_URL,
+    },
+    secondaryAction: {
+      label: "See research",
+      href: "/research",
+    },
+    heroHighlights: [
+      "Explore quantum ideas without complex setup.",
+      "Run guided experiments and see results clearly.",
+      "Built for learning, research, and future computing workflows.",
+    ],
+    heroImage: {
+      src: "/product-art/19487.webp",
+      alt: "Abstract light composition representing premium quantum exploration.",
+    },
+    signatureTitle: "A clearer way to explore quantum systems.",
+    signatureBody:
+      "Quantum computing can feel distant and difficult to approach. Upcube Quantum turns it into a guided workspace where experiments, templates, visual results, and learning paths come together in one calm experience.",
+    signatureCards: [
+      {
+        title: "Guided from the first step",
+        body: "Start with structured examples that help make quantum concepts easier to see, test, and understand.",
+      },
+      {
+        title: "Results that feel readable",
+        body: "Visual outputs and clear result views help turn abstract ideas into something easier to compare.",
+      },
+      {
+        title: "Built for learning by doing",
+        body: "Templates and guided runs help people build intuition without starting from a blank console.",
+      },
+    ],
+    featureStories: [
+      {
+        title: "Experiments without the heavy setup",
+        body: "Upcube Quantum keeps the experience focused on exploration, so people can start learning before they become experts.",
+      },
+      {
+        title: "Templates that make ideas approachable",
+        body: "Prepared workflows give learners and builders a practical starting point for common quantum concepts.",
+      },
+      {
+        title: "A console for future computing",
+        body: "The product direction brings quantum exploration into a clearer workspace for research, learning, and experimentation.",
+      },
+    ],
+    techCards: [
+      {
+        title: "Simulator-first exploration",
+        body: "Start with accessible experiments designed to help people understand behavior before moving into deeper technical workflows.",
+      },
+      {
+        title: "Visual result views",
+        body: "Charts and structured outputs make runs easier to read, compare, and explain.",
+      },
+      {
+        title: "Clear paths into deeper work",
+        body: "Docs, templates, and console flows keep advanced ideas available without overwhelming the first experience.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Learn quantum by doing",
+        body: "Use guided examples to build intuition through action instead of passive reading.",
+      },
+      {
+        title: "Explore before building",
+        body: "Test ideas visually before moving into more complex workflows.",
+      },
+      {
+        title: "Support research and education",
+        body: "Use Quantum as a starting point for teaching, experimentation, and early-stage discovery.",
+      },
+    ],
+    ecosystemLinks: [
+      {
+        title: "UpcubeAI",
+        body: "Connect exploration with the assistant workspace for broader research workflows.",
+        href: "/products/upcube-ai",
+      },
+      {
+        title: "Education",
+        body: "Explore learning pathways connected to guided coursework and applied study.",
+        href: "/products/university",
+      },
+      {
+        title: "Compute",
+        body: "Follow the infrastructure lane that supports deeper compute thinking.",
+        href: "/products/vm",
+      },
+    ],
+    finalCtaTitle: "Start exploring the next layer of computing.",
+    finalCtaBody:
+      "Upcube Quantum is built to make complex ideas feel clearer, calmer, and easier to explore.",
+    finalPrimaryAction: {
+      label: "Launch Quantum",
+      href: UPCUBE_QUANTUM_URL,
+    },
+    finalSecondaryAction: {
+      label: "Try a template",
+      href: "https://quantum.upcube.ai/console/templates",
     },
   },
   {

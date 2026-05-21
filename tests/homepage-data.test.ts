@@ -6,7 +6,7 @@ import {
 } from "lib/upcube-portal/content";
 import {
   featureBands,
-  homeProofPoints,
+  homeCapabilityPoints,
   stories,
 } from "lib/upcube-home/content";
 
@@ -109,7 +109,7 @@ describe("homepage feature bands", () => {
 
 describe("homepage proof points", () => {
   it("has proof points defined", () => {
-    expect(homeProofPoints.length).toBeGreaterThan(0);
+    expect(homeCapabilityPoints.length).toBeGreaterThan(0);
   });
 });
 

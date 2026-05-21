@@ -32,7 +32,7 @@ body:has(.uc-page) .commerce-navbar {
   --uc-max-width: var(--up-media-width);
   --uc-content-width: var(--up-content-width);
   --uc-gutter: var(--up-page-gutter);
-  --uc-section-y: var(--up-section-y);
+  --uc-section-y: clamp(3.25rem, 6.4vw, 5.2rem);
   --uc-gap: clamp(0.75rem, 1.8vw, 1.5rem);
   --uc-radius: 1.25rem;
   --uc-radius-sm: 0.75rem;
@@ -180,12 +180,12 @@ body:has(.uc-page) .commerce-navbar {
   gap: 0.45rem;
   color: var(--up-color-primary-60);
   text-decoration: none;
-  font-size: 0.84375rem;
-  line-height: 1.25rem;
+  font-size: 0.8rem;
+  line-height: 1.15rem;
   letter-spacing: 0.01em;
   font-weight: 450;
   border-radius: 999px;
-  padding: 0.38rem 0.68rem;
+  padding: 0.34rem 0.58rem;
   transition:
     color 0.18s ease,
     background-color 0.18s ease,
@@ -195,7 +195,6 @@ body:has(.uc-page) .commerce-navbar {
 .uc-nav-trigger {
   border: 1px solid transparent;
   background: transparent;
-  font: inherit;
   cursor: pointer;
 }
 
@@ -297,6 +296,37 @@ body:has(.uc-page) .commerce-navbar {
   font-weight: 500;
 }
 
+.uc-mobile-menu-grouped {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.uc-mobile-menu-group {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.uc-mobile-menu-group-title {
+  margin: 0;
+  color: var(--up-color-primary-60);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.uc-mobile-menu-group-items {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.uc-mobile-menu-group-items .uc-mobile-menu-link {
+  min-height: 2.4rem;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.95rem;
+}
+
 .uc-mobile-menu-apps {
   display: grid;
   gap: 0.65rem;
@@ -391,6 +421,11 @@ body:has(.uc-page) .commerce-navbar {
   grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
 }
 
+.uc-header-mega-panel[data-layout="vertical"] .uc-header-mega-grid {
+  grid-template-columns: 1fr;
+  gap: 0.18rem;
+}
+
 .uc-header-mega-link {
   display: grid;
   gap: 0.18rem;
@@ -441,6 +476,47 @@ body:has(.uc-page) .commerce-navbar {
   font-size: 0.8375rem;
   line-height: 1.25rem;
   font-weight: 450;
+}
+
+.uc-header-mega-grouped {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.uc-header-mega-column {
+  display: grid;
+  gap: 0.65rem;
+  align-content: start;
+}
+
+.uc-header-mega-group-title {
+  margin: 0;
+  color: var(--up-color-primary-60);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--uc-border-soft);
+}
+
+.uc-header-mega-group-items {
+  display: grid;
+  gap: 0.15rem;
+}
+
+@media (max-width: 64rem) {
+  .uc-header-mega-grouped {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 36rem) {
+  .uc-header-mega-grouped {
+    grid-template-columns: 1fr;
+  }
 }
 
 .uc-button {
@@ -908,18 +984,12 @@ body:has(.uc-page) .commerce-navbar {
   gap: 0.7rem;
 }
 
-[data-group-id="apps"] .uc-footer-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(6, auto);
-  grid-auto-flow: column;
-}
-
-@media (max-width: 720px) {
-  [data-group-id="apps"] .uc-footer-list {
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    grid-auto-flow: row;
-  }
+[data-group-id="core"] .uc-footer-list,
+[data-group-id="build"] .uc-footer-list,
+[data-group-id="learn"] .uc-footer-list,
+[data-group-id="explore"] .uc-footer-list {
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
 }
 
 .uc-footer-link {
@@ -1389,6 +1459,18 @@ body:has(.uc-page) .commerce-navbar {
   border: 1px solid var(--uc-border-soft);
   border-radius: var(--uc-radius);
   background: #050505;
+}
+
+.uc-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 500px) {
+  .uc-form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 .uc-form-field {
@@ -2112,18 +2194,18 @@ body:has(.uc-page) .commerce-navbar {
 }
 
 .uc-longform-body a {
-  color: color-mix(in srgb, var(--uc-accent) 90%, #8eb9ff);
+  color: var(--up-color-primary-60);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .uc-longform-body a:hover {
-  color: var(--uc-accent);
+  color: var(--uc-text);
 }
 
 .uc-longform-body strong {
-  font-weight: 600;
-  color: var(--uc-text);
+  font-weight: 500;
+  color: var(--up-color-primary-80);
 }
 
 .uc-longform-body em {

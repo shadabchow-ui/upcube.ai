@@ -8,7 +8,13 @@ export type UpcubeAppId =
   | "games"
   | "jobs"
   | "cloud"
-  | "ventari";
+  | "quantum"
+  | "shopping"
+  | "compute"
+  | "os"
+  | "mobile-os"
+  | "voice"
+  | "education";
 
 export type UpcubeApp = {
   id: UpcubeAppId;

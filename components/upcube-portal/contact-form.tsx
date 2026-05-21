@@ -3,18 +3,21 @@
 import { useCallback, useState } from "react";
 
 import {
+  contactCompanySizeOptions,
   contactInquiryTypes,
   contactProductOptions,
 } from "lib/upcube-portal/content";
 
 type FormFields = {
-  name: string;
-  email: string;
-  company: string;
   inquiryType: string;
   productInterest: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  company: string;
+  companySize: string;
+  website: string;
   message: string;
-  consented: boolean;
 };
 
 type FormErrors = Partial<Record<keyof FormFields, string>>;
@@ -22,20 +25,22 @@ type FormErrors = Partial<Record<keyof FormFields, string>>;
 type FormState = "idle" | "validating" | "prepared" | "error";
 
 const INITIAL_FIELDS: FormFields = {
-  name: "",
-  email: "",
-  company: "",
   inquiryType: "",
   productInterest: "",
+  email: "",
+  firstName: "",
+  lastName: "",
+  company: "",
+  companySize: "",
+  website: "",
   message: "",
-  consented: false,
 };
 
 function validateFields(fields: FormFields): FormErrors {
   const errors: FormErrors = {};
 
-  if (!fields.name.trim()) {
-    errors.name = "Name is required";
+  if (!fields.inquiryType) {
+    errors.inquiryType = "Select an inquiry type";
   }
 
   if (!fields.email.trim()) {
@@ -44,18 +49,18 @@ function validateFields(fields: FormFields): FormErrors {
     errors.email = "Enter a valid email address";
   }
 
-  if (!fields.inquiryType) {
-    errors.inquiryType = "Select an inquiry type";
+  if (!fields.firstName.trim()) {
+    errors.firstName = "First name is required";
+  }
+
+  if (!fields.lastName.trim()) {
+    errors.lastName = "Last name is required";
   }
 
   if (!fields.message.trim()) {
     errors.message = "Message is required";
   } else if (fields.message.trim().length < 10) {
     errors.message = "Message must be at least 10 characters";
-  }
-
-  if (!fields.consented) {
-    errors.consented = "You must consent to be contacted";
   }
 
   return errors;
@@ -71,13 +76,8 @@ export function ContactForm() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
   ) {
-    const { name, value, type } = e.target;
-    const checked =
-      type === "checkbox" ? (e.target as HTMLInputElement).checked : undefined;
-    setFields((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+    const { name, value } = e.target;
+    setFields((prev) => ({ ...prev, [name]: value }));
     if (errors[name as keyof FormErrors]) {
       setErrors((prev) => {
         const next = { ...prev };
@@ -116,7 +116,6 @@ export function ContactForm() {
   const errorClass = "uc-form-error";
   const selectClass = "uc-form-select";
   const textareaClass = "uc-form-textarea";
-  const checkboxClass = "uc-form-checkbox";
 
   if (state === "prepared") {
     return (
@@ -136,11 +135,11 @@ export function ContactForm() {
             <polyline points="22 4 12 14.01 9 11.01" />
           </svg>
         </div>
-        <h3 className="uc-form-success__title">Request prepared</h3>
+        <h3 className="uc-form-success__title">Request recorded</h3>
         <p className="uc-form-success__message">
-          Your message has been prepared for submission. A backend handler is
-          not yet deployed, so this request was not transmitted. When a live
-          endpoint is connected, your inquiry will reach the Upcube team.
+          Contact form backend is not configured yet. Your message was not
+          transmitted. When a live endpoint is connected, your inquiry will
+          reach the Upcube team.
         </p>
         <button
           type="button"
@@ -148,8 +147,53 @@ export function ContactForm() {
           data-variant="solid"
           onClick={handleReset}
         >
-          Prepare another request
+          Submit another request
         </button>
+      </div>
+    );
+  }
+
+  function renderField({
+    label,
+    name,
+    type = "text",
+    required = false,
+    placeholder,
+    autoComplete,
+  }: {
+    label: string;
+    name: keyof FormFields;
+    type?: string;
+    required?: boolean;
+    placeholder?: string;
+    autoComplete?: string;
+  }) {
+    const errorId = `error-${name}`;
+    return (
+      <div className={fieldClass}>
+        <label className={labelClass} htmlFor={`contact-${name}`}>
+          {label}
+          {required ? <span aria-hidden="true"> *</span> : null}
+        </label>
+        <input
+          id={`contact-${name}`}
+          className={inputClass}
+          type={type}
+          name={name}
+          value={fields[name]}
+          onChange={handleChange}
+          required={required}
+          aria-required={required}
+          aria-describedby={errors[name] ? errorId : undefined}
+          aria-invalid={errors[name] ? "true" : undefined}
+          autoComplete={autoComplete}
+          placeholder={placeholder}
+        />
+        {errors[name] ? (
+          <p className={errorClass} id={errorId} role="alert">
+            {errors[name]}
+          </p>
+        ) : null}
       </div>
     );
   }
@@ -162,71 +206,8 @@ export function ContactForm() {
       aria-label="Contact form"
     >
       <div className={fieldClass}>
-        <label className={labelClass} htmlFor="contact-name">
-          Name <span aria-hidden="true">*</span>
-        </label>
-        <input
-          id="contact-name"
-          className={inputClass}
-          type="text"
-          name="name"
-          value={fields.name}
-          onChange={handleChange}
-          required
-          aria-required="true"
-          aria-describedby={errors.name ? "error-name" : undefined}
-          aria-invalid={errors.name ? "true" : undefined}
-          autoComplete="name"
-        />
-        {errors.name ? (
-          <p className={errorClass} id="error-name" role="alert">
-            {errors.name}
-          </p>
-        ) : null}
-      </div>
-
-      <div className={fieldClass}>
-        <label className={labelClass} htmlFor="contact-email">
-          Email <span aria-hidden="true">*</span>
-        </label>
-        <input
-          id="contact-email"
-          className={inputClass}
-          type="email"
-          name="email"
-          value={fields.email}
-          onChange={handleChange}
-          required
-          aria-required="true"
-          aria-describedby={errors.email ? "error-email" : undefined}
-          aria-invalid={errors.email ? "true" : undefined}
-          autoComplete="email"
-        />
-        {errors.email ? (
-          <p className={errorClass} id="error-email" role="alert">
-            {errors.email}
-          </p>
-        ) : null}
-      </div>
-
-      <div className={fieldClass}>
-        <label className={labelClass} htmlFor="contact-company">
-          Company or organization
-        </label>
-        <input
-          id="contact-company"
-          className={inputClass}
-          type="text"
-          name="company"
-          value={fields.company}
-          onChange={handleChange}
-          autoComplete="organization"
-        />
-      </div>
-
-      <div className={fieldClass}>
         <label className={labelClass} htmlFor="contact-inquiry-type">
-          Inquiry type <span aria-hidden="true">*</span>
+          What are you interested in? <span aria-hidden="true">*</span>
         </label>
         <select
           id="contact-inquiry-type"
@@ -257,7 +238,7 @@ export function ContactForm() {
 
       <div className={fieldClass}>
         <label className={labelClass} htmlFor="contact-product-interest">
-          Product interest
+          Product interest <span aria-hidden="true">*</span>
         </label>
         <select
           id="contact-product-interest"
@@ -265,8 +246,10 @@ export function ContactForm() {
           name="productInterest"
           value={fields.productInterest}
           onChange={handleChange}
+          required
+          aria-required="true"
         >
-          <option value="">Select a product (optional)</option>
+          <option value="">Select a product</option>
           {contactProductOptions.map((product) => (
             <option key={product.value} value={product.value}>
               {product.label}
@@ -274,6 +257,65 @@ export function ContactForm() {
           ))}
         </select>
       </div>
+
+      {renderField({
+        label: "Work email",
+        name: "email",
+        type: "email",
+        required: true,
+        autoComplete: "email",
+      })}
+
+      <div className={fieldClass}>
+        <div className="uc-form-row">
+          {renderField({
+            label: "First name",
+            name: "firstName",
+            required: true,
+            autoComplete: "given-name",
+          })}
+          {renderField({
+            label: "Last name",
+            name: "lastName",
+            required: true,
+            autoComplete: "family-name",
+          })}
+        </div>
+      </div>
+
+      {renderField({
+        label: "Company or organization",
+        name: "company",
+        autoComplete: "organization",
+      })}
+
+      <div className={fieldClass}>
+        <label className={labelClass} htmlFor="contact-company-size">
+          Company size
+        </label>
+        <select
+          id="contact-company-size"
+          className={selectClass}
+          name="companySize"
+          value={fields.companySize}
+          onChange={handleChange}
+        >
+          <option value="">Select company size</option>
+          {contactCompanySizeOptions.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {renderField({
+        label: "Website",
+        name: "website",
+        type: "url",
+        autoComplete: "url",
+        placeholder: "https://",
+      })}
 
       <div className={fieldClass}>
         <label className={labelClass} htmlFor="contact-message">
@@ -298,28 +340,6 @@ export function ContactForm() {
         ) : null}
       </div>
 
-      <div className={fieldClass}>
-        <label className={checkboxClass}>
-          <input
-            type="checkbox"
-            name="consented"
-            checked={fields.consented}
-            onChange={handleChange}
-            aria-describedby={errors.consented ? "error-consent" : undefined}
-            aria-invalid={errors.consented ? "true" : undefined}
-          />
-          <span>
-            I consent to being contacted regarding my inquiry{" "}
-            <span aria-hidden="true">*</span>
-          </span>
-        </label>
-        {errors.consented ? (
-          <p className={errorClass} id="error-consent" role="alert">
-            {errors.consented}
-          </p>
-        ) : null}
-      </div>
-
       <div className="uc-form-actions">
         <button
           type="submit"
@@ -327,13 +347,13 @@ export function ContactForm() {
           data-variant="solid"
           disabled={state === "validating"}
         >
-          {state === "validating" ? "Preparing…" : "Prepare request"}
+          {state === "validating" ? "Submitting..." : "Submit"}
         </button>
       </div>
 
       <p className="uc-form-footnote">
-        This form prepares your request locally. A backend submission handler is
-        not yet deployed.
+        Contact form backend is not configured yet. This form prepares your
+        request locally and does not transmit data.
       </p>
     </form>
   );

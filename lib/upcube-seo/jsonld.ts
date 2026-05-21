@@ -54,6 +54,7 @@ function getProductApplicationCategory(slug: UpcubeProductSlug) {
     games: "EntertainmentApplication",
     jobs: "BusinessApplication",
     cloud: "DeveloperApplication",
+    quantum: "EducationalApplication",
     ventari: "ShoppingApplication",
     vm: "DeveloperApplication",
     "upcube-os": "OperatingSystem",

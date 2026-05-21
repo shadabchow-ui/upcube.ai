@@ -24,34 +24,30 @@ export type FeatureBand = {
 };
 
 export const homeBuildSectionIntro =
-  "Upcube is an AI technology company building a connected family of premium products across AI, voice, education, commerce, discovery, cloud infrastructure, entertainment, and future computing. The product family shows how that company story extends from the workspace into learning, retail-scale discovery, infrastructure, and AI-native computing.";
+  "The ecosystem spans AI workspaces, cloud infrastructure, compute, education, commerce, spatial exploration, entertainment, and next-generation operating systems.";
 
-export const homeProofPoints: HomeProofPoint[] = [
+export const homeCapabilityPoints: HomeProofPoint[] = [
   {
     title: "AI & Voice",
     description:
-      "A connected intelligence layer for work, creation, and conversation. UpcubeAI and Ethen bring chat, research, artifacts, and governed tool flows into one AI workspace, while Upcube Voice extends that assistant experience into future devices.",
+      "A connected intelligence layer for work, creation, and conversation. Ethen brings chat, research, artifacts, and governed tool flows into one AI workspace, while Voice extends that assistant into future device experiences.",
     href: "/products/upcube-ai",
     links: [
-      { label: "UpcubeAI", href: "/products/upcube-ai" },
-      { label: "Upcube Voice", href: "/products/voice" },
-      { label: "Ethen launch story", href: "/news/upcube-ai-launch" },
+      { label: "AI", href: "/products/upcube-ai" },
+      { label: "Voice", href: "/products/voice" },
     ],
   },
   {
     title: "Commerce",
     description:
-      "Commerce technology for marketplace-scale discovery. Upcube Shopping is the commerce technology layer built for billion-product catalogs with AI-powered search, product pages, reviews, recommendations, and brand storefront infrastructure.",
+      "Commerce technology for marketplace-scale discovery. Built for billion-product catalogs with AI-powered search, product pages, reviews, recommendations, and brand storefront infrastructure.",
     href: "/products/shopping",
-    links: [
-      { label: "Upcube Shopping", href: "/products/shopping" },
-      { label: "Commerce story", href: "/news/ventari-launch" },
-    ],
+    links: [{ label: "Shopping", href: "/products/shopping" }],
   },
   {
     title: "Discovery",
     description:
-      "New ways to explore knowledge, places, and entertainment. Earth, Books, and Games extend Upcube into AI-powered discovery across the world, reading, and interactive entertainment.",
+      "New ways to explore knowledge, places, and entertainment. Earth, Books, and Games extend into AI-powered discovery across the world, reading, and interactive entertainment.",
     href: "/products/earth",
     links: [
       { label: "Earth", href: "/products/earth" },
@@ -62,20 +58,14 @@ export const homeProofPoints: HomeProofPoint[] = [
   {
     title: "Education & Learning",
     description:
-      "Learning designed for the AI era. Upcube Education brings AI education, product training, technical courses, and guided learning paths into the ecosystem.",
+      "Learning designed for the AI era. Education brings AI education, product training, technical courses, and guided learning paths into the ecosystem.",
     href: "/products/university",
-    links: [
-      { label: "Upcube Education", href: "/products/university" },
-      {
-        label: "Education preview",
-        href: "/news/upcube-university-preview",
-      },
-    ],
+    links: [{ label: "Education", href: "/products/university" }],
   },
   {
-    title: "Cloud & infrastructure",
+    title: "Cloud & Infrastructure",
     description:
-      "The foundation behind every product. Upcube Cloud provides the shared infrastructure, developer tools, and delivery layer that power the Upcube product family.",
+      "The foundation behind every product. Cloud provides the shared infrastructure, developer tools, and delivery layer that power the product family.",
     href: "/products/cloud",
     links: [
       { label: "Cloud", href: "/products/cloud" },
@@ -85,20 +75,17 @@ export const homeProofPoints: HomeProofPoint[] = [
   {
     title: "Entertainment",
     description:
-      "Consumer discovery at ambitious scale. Games and other entertainment surfaces show how Upcube pairs bold interfaces with broad, intelligent discovery experiences.",
+      "Consumer discovery at ambitious scale. Games and other entertainment surfaces pair bold interfaces with broad, intelligent discovery experiences.",
     href: "/products/games",
-    links: [
-      { label: "Games", href: "/products/games" },
-      { label: "Recent launches", href: "/news" },
-    ],
+    links: [{ label: "Games", href: "/products/games" }],
   },
   {
     title: "Computing",
     description:
-      "A future direction for intelligent systems. Compute, Upcube OS, and Upcube Mobile OS define a broader path toward AI-native operating systems, virtualization, and next-generation computing.",
+      "A future direction for intelligent systems. Compute, OS, and Mobile OS define a broader path toward AI-native operating systems, virtualization, and next-generation computing.",
     href: "/products/upcube-os",
     links: [
-      { label: "Upcube OS", href: "/products/upcube-os" },
+      { label: "OS", href: "/products/upcube-os" },
       { label: "Mobile OS", href: "/products/upcube-mobile-os" },
     ],
   },
@@ -106,59 +93,107 @@ export const homeProofPoints: HomeProofPoint[] = [
 
 export const featureBands: FeatureBand[] = [
   {
-    title: "AI & Voice",
+    title: "Ethen",
     description:
-      "A connected intelligence layer for work, creation, and conversation. UpcubeAI, Ethen, and Upcube Voice bring chat, research, artifacts, execution, and future private voice interaction into one seamless AI platform direction.",
+      "An AI workspace for chat, research, artifacts, and execution. Turn questions into durable work and reusable output.",
     href: "/products/upcube-ai",
-    cta: "Explore UpcubeAI",
+    cta: "Open AI",
     tone: "green",
   },
   {
-    title: "Commerce",
+    title: "Books",
     description:
-      "Commerce technology for marketplace-scale discovery. Upcube Shopping is the commerce technology layer built for billion-product catalogs with AI-powered search, product pages, reviews, recommendations, and brand storefront infrastructure.",
+      "Explore 50M books with previews, saved titles, and a calmer path to discovery.",
+    href: "/products/books",
+    cta: "Browse Books",
+    tone: "teal",
+  },
+  {
+    title: "Earth",
+    description:
+      "A 3D spatial discovery product for maps, terrain, cities, and shareable world exploration.",
+    href: "/products/earth",
+    cta: "Explore Earth",
+    tone: "teal",
+  },
+  {
+    title: "Games",
+    description:
+      "Discover across 400K games with releases, genres, platforms, and recommendation paths.",
+    href: "/products/games",
+    cta: "Explore Games",
+    tone: "amber",
+  },
+  {
+    title: "Jobs",
+    description:
+      "Browse an 8M-job discovery surface for career exploration and clearer opportunity workflows.",
+    href: "/products/jobs",
+    cta: "Explore Jobs",
+    tone: "amber",
+  },
+  {
+    title: "Cloud",
+    description:
+      "Developer tools, cloud workflows, and compute access. The infrastructure front door for the Upcube ecosystem.",
+    href: "/products/cloud",
+    cta: "Open Cloud",
+    tone: "blue",
+  },
+  {
+    title: "Quantum",
+    description:
+      "A beginner-friendly quantum workspace for guided experiments, visual runs, and clear result charts.",
+    href: "/products/quantum",
+    cta: "Explore Quantum",
+    tone: "green",
+  },
+  {
+    title: "Shopping",
+    description:
+      "Commerce technology for marketplace-scale product discovery with AI-powered search and brand storefronts.",
     href: "/products/shopping",
     cta: "Explore Shopping",
     tone: "amber",
   },
   {
-    title: "Discovery",
+    title: "Compute",
     description:
-      "New ways to explore knowledge, places, and entertainment. Earth, Books, and Games extend Upcube into AI-powered discovery across the world, reading, and interactive entertainment.",
-    href: "/products/earth",
-    cta: "Explore discovery products",
-    tone: "teal",
+      "Virtual machines, networking, storage, and operations for the systems layer behind the ecosystem.",
+    href: "/products/vm",
+    cta: "Learn more",
+    tone: "blue",
   },
   {
-    title: "Education & Learning",
+    title: "OS",
     description:
-      "Learning designed for the AI era. Upcube Education brings AI education, product training, technical courses, and guided learning paths into the ecosystem.",
-    href: "/products/university",
-    cta: "Explore Education",
+      "An AI operating system direction for desktop computing with visible control, trust, and clarity.",
+    href: "/products/upcube-os",
+    cta: "View preview",
+    tone: "blue",
+  },
+  {
+    title: "Mobile OS",
+    description:
+      "An AI-native mobile computing direction focused on privacy, trust, and clear interaction.",
+    href: "/products/upcube-mobile-os",
+    cta: "View preview",
+    tone: "blue",
+  },
+  {
+    title: "Voice",
+    description:
+      "AI voice platform for future Upcube devices, built around private push-to-talk and real-time assistance.",
+    href: "/products/voice",
+    cta: "View preview",
     tone: "green",
   },
   {
-    title: "Cloud & Infrastructure",
+    title: "Education",
     description:
-      "The foundation behind every product. Upcube Cloud provides the shared infrastructure, developer tools, and delivery layer that power the Upcube product family.",
-    href: "/products/cloud",
-    cta: "Explore Cloud",
-    tone: "blue",
-  },
-  {
-    title: "Computing",
-    description:
-      "A future direction for intelligent systems. Compute, Upcube OS, and Upcube Mobile OS define a broader path toward AI-native operating systems, virtualization, and next-generation computing.",
-    href: "/products/vm",
-    cta: "View computing products",
-    tone: "blue",
-  },
-  {
-    title: "Entertainment",
-    description:
-      "Consumer discovery at ambitious scale. Games and other entertainment surfaces show how Upcube pairs bold interfaces with broad, intelligent discovery experiences.",
-    href: "/products/games",
-    cta: "Explore Games",
+      "100K courses with simple $5 course pricing for AI education, product training, and guided learning paths.",
+    href: "/products/university",
+    cta: "Explore Education",
     tone: "green",
   },
 ];

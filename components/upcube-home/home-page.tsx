@@ -3,9 +3,10 @@ import { HeroChatPanel, HOME_CHAT_CTA_HREF } from "./hero-chat-panel";
 import {
   featureBands,
   homeBuildSectionIntro,
-  homeProofPoints,
+  homeCapabilityPoints,
   stories,
 } from "lib/upcube-home/content";
+import { ecosystemGroups } from "lib/upcube-universal/product-links";
 import {
   portalHomepageCards,
   productScaleStats,
@@ -36,7 +37,11 @@ function Hero() {
     <section className="uc-home__hero">
       <div className="uc-home__container uc-home__hero-inner">
         <div className="uc-home__hero-stack">
-          <h1 className="uc-home__hero-title-compact">What can I help with?</h1>
+          <h1>Build, learn, compute, create, &amp; explore.</h1>
+          <p className="uc-home__lead">
+            Upcube is a AI-native technology ecosystem for the next generation
+            of builders, learners, creators, founders, and businesses.
+          </p>
           <HeroChatPanel />
         </div>
       </div>
@@ -73,8 +78,46 @@ export default function UpcubeHomePage() {
         >
           <div className="uc-home__container">
             <h2 id="portal-title" className="uc-home__section-title-centered">
-              Discover UpcubeAI
+              Explore the ecosystem.
             </h2>
+            <p className="uc-home__section-copy uc-home__section-copy--centered">
+              One connected platform bringing together AI workspaces, cloud
+              infrastructure, compute, education, commerce, spatial exploration,
+              entertainment, and next-generation operating systems, designed to
+              help people turn ideas into real products, knowledge into action,
+              and ambition into momentum.
+            </p>
+            <div className="uc-home__ecosystem-grid">
+              {ecosystemGroups.map((group) => (
+                <article className="uc-home__ecosystem-card" key={group.id}>
+                  <h3 className="uc-home__ecosystem-card-title">
+                    {group.title}
+                  </h3>
+                  <div className="uc-home__ecosystem-products">
+                    {group.items.map((item) => {
+                      if (!item.productHref) return null;
+                      return (
+                        <Link
+                          href={item.productHref}
+                          key={item.id}
+                          className="uc-home__ecosystem-product-link"
+                        >
+                          {item.label}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="uc-home__section uc-home__section--portal"
+          aria-labelledby="product-cards-title"
+        >
+          <div className="uc-home__container">
             <div className="uc-home__portal-grid">
               {portalHomepageCards.map((card) => (
                 <Link
@@ -100,16 +143,17 @@ export default function UpcubeHomePage() {
           aria-labelledby="preview-title"
         >
           <div className="uc-home__container">
-            <p className="uc-home__preview-label">Product surfaces</p>
+            <p className="uc-home__preview-label">Ecosystem surfaces</p>
             <h2 id="preview-title">Interfaces built for clarity at scale.</h2>
             <p className="uc-home__section-copy">
-              Purpose-built experiences that turn massive information spaces
-              into simple, focused, and intelligent product surfaces.
+              Purpose-built experiences across the ecosystem that turn massive
+              information spaces into simple, focused, and intelligent product
+              surfaces.
             </p>
             <div className="uc-home__preview-grid">
               <article className="uc-home__preview-panel">
                 <p className="uc-home__preview-caption">
-                  Ethen workspace &mdash; Chat, research, and execution in one
+                  Ethen workspace: Chat, research, and execution in one
                   connected AI workspace.
                 </p>
                 <div className="uc-home__preview-surface uc-home__preview-surface--workspace">
@@ -138,7 +182,7 @@ export default function UpcubeHomePage() {
 
               <article className="uc-home__preview-panel">
                 <p className="uc-home__preview-caption">
-                  Earth &mdash; 3D spatial exploration with terrain, layers, and
+                  Earth: 3D spatial exploration with terrain, layers, and
                   contextual overlays.
                 </p>
                 <div className="uc-home__preview-surface uc-home__preview-surface--globe">
@@ -154,9 +198,8 @@ export default function UpcubeHomePage() {
 
               <article className="uc-home__preview-panel">
                 <p className="uc-home__preview-caption">
-                  Ventari &mdash; Commerce discovery built for 100M+ products,
-                  with powerful search, product detail, and catalog-scale
-                  browsing.
+                  Shopping: Commerce discovery built for 100M+ products, with
+                  powerful search, product detail, and catalog-scale browsing.
                 </p>
                 <div className="uc-home__preview-surface uc-home__preview-surface--commerce">
                   <span className="uc-home__preview-commerce-bar" />
@@ -179,9 +222,7 @@ export default function UpcubeHomePage() {
           aria-labelledby="feature-title"
         >
           <div className="uc-home__container">
-            <h2 id="feature-title">
-              A product ecosystem for the AI and voice age.
-            </h2>
+            <h2 id="feature-title">Product highlights.</h2>
             <div className="uc-home__feature-grid">
               {featureBands.map((band) => (
                 <article
@@ -200,10 +241,10 @@ export default function UpcubeHomePage() {
 
         <section className="uc-home__section" aria-labelledby="proof-title">
           <div className="uc-home__container">
-            <h2 id="proof-title">What Upcube builds</h2>
+            <h2 id="proof-title">Ecosystem capabilities.</h2>
             <p className="uc-home__section-copy">{homeBuildSectionIntro}</p>
             <div className="uc-home__proof-grid">
-              {homeProofPoints.map((item) => (
+              {homeCapabilityPoints.map((item) => (
                 <article className="uc-home__proof-card" key={item.title}>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
@@ -253,13 +294,13 @@ export default function UpcubeHomePage() {
           aria-labelledby="cta-title"
         >
           <div className="uc-home__container">
-            <h2 id="cta-title">See how the product family connects.</h2>
+            <h2 id="cta-title">Built as an ecosystem, not a product list.</h2>
             <p className="uc-home__cta-copy">
-              Start with Ethen. Then explore everything it opens. Move through
-              product pages, launch stories, and research to see how UpcubeAI
-              connects AI workspaces, voice platforms, education, commerce,
-              discovery, cloud infrastructure, entertainment, and future
-              computing into one growing ecosystem.
+              Start with Ethen. Then explore everything the ecosystem opens.
+              Move through product pages, launch stories, and research to see
+              how Upcube connects AI workspaces, cloud infrastructure,
+              education, commerce, discovery, entertainment, and next-generation
+              computing into one connected platform.
             </p>
             <div className="uc-home__cta-row">
               <Link href={HOME_CHAT_CTA_HREF} className="uc-home__primary-btn">

@@ -36,6 +36,16 @@ describe("internal link validation - header navigation", () => {
         expect(resolveFullyQualifiedInternalLink(item.href)).toBe(true);
         expect(item.label).toBeTruthy();
       }
+      if (group.columns) {
+        for (const column of group.columns) {
+          expect(column.id).toBeTruthy();
+          expect(column.label).toBeTruthy();
+          for (const item of column.items) {
+            expect(resolveFullyQualifiedInternalLink(item.href)).toBe(true);
+            expect(item.label).toBeTruthy();
+          }
+        }
+      }
     }
   });
 });
@@ -54,30 +64,25 @@ describe("internal link validation - footer", () => {
   });
 
   it("footer contains privacy and legal links", () => {
-    const termsGroup = portalFooterGroups.find(
-      (g) => g.id === "terms-policies",
+    const legalTrustGroup = portalFooterGroups.find(
+      (g) => g.id === "legal-trust",
     );
-    expect(termsGroup).toBeDefined();
-    const hrefs = termsGroup!.links.map((l) => l.href);
+    expect(legalTrustGroup).toBeDefined();
+    const hrefs = legalTrustGroup!.links.map((l) => l.href);
     expect(hrefs).toContain("/terms");
     expect(hrefs).toContain("/privacy");
-  });
-
-  it("footer contains product links matching product list", () => {
-    const appsGroup = portalFooterGroups.find((g) => g.id === "apps");
-    expect(appsGroup).toBeDefined();
-    expect(appsGroup!.links.length).toBeGreaterThanOrEqual(
-      upcubeProductLinks.length,
-    );
-  });
-
-  it("footer contains safety and trust links", () => {
-    const safetyGroup = portalFooterGroups.find((g) => g.id === "safety");
-    expect(safetyGroup).toBeDefined();
-    const hrefs = safetyGroup!.links.map((l) => l.href);
     expect(hrefs).toContain("/safety");
     expect(hrefs).toContain("/security");
-    expect(hrefs).toContain("/trust-transparency");
+  });
+
+  it("footer contains product links across ecosystem groups", () => {
+    const ecosystemGroupIds = ["core", "build", "learn", "explore"];
+    const allProductLinks = ecosystemGroupIds.flatMap(
+      (id) => portalFooterGroups.find((g) => g.id === id)?.links ?? [],
+    );
+    expect(allProductLinks.length).toBeGreaterThanOrEqual(
+      upcubeProductLinks.length,
+    );
   });
 });
 

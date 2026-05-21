@@ -11,6 +11,10 @@ import {
   portalMenuGroups,
   portalPrimaryNav,
 } from "lib/upcube-portal/content";
+import {
+  ecosystemGroups,
+  getProductsByGroup,
+} from "lib/upcube-universal/product-links";
 
 export function PortalHeader() {
   const [activeMenuId, setActiveMenuId] = useState<string | null>(null);
@@ -171,31 +175,58 @@ export function PortalHeader() {
               <div
                 id={`uc-header-mega-${activeMenu.id}`}
                 className="uc-header-mega-panel"
+                data-layout={
+                  activeMenu.id === "ecosystem" ? "vertical" : "grid"
+                }
                 role="group"
                 aria-label={`${activeMenu.title} menu`}
-                {...(activeMenu.id === "research"
-                  ? { "data-compact": "true" }
-                  : {})}
               >
-                <p className="uc-header-mega-label">{activeMenu.title}</p>
-                <div className="uc-header-mega-grid">
-                  {activeMenu.items.map((item) => (
-                    <Link
-                      key={item.id}
-                      className="uc-header-mega-link"
-                      href={item.href}
-                      onClick={() => {
-                        clearCloseTimer();
-                        setActiveMenuId(null);
-                      }}
-                    >
-                      <span>{item.label}</span>
-                      {activeMenu.id !== "research" ? (
-                        <small>{item.description ?? ""}</small>
-                      ) : null}
-                    </Link>
-                  ))}
-                </div>
+                {activeMenu.columns ? (
+                  <div className="uc-header-mega-grouped">
+                    {activeMenu.columns.map((column) => (
+                      <div key={column.id} className="uc-header-mega-column">
+                        <p className="uc-header-mega-group-title">
+                          {column.label}
+                        </p>
+                        <div className="uc-header-mega-group-items">
+                          {column.items.map((item) => (
+                            <Link
+                              key={item.id}
+                              className="uc-header-mega-link"
+                              href={item.href}
+                              onClick={() => {
+                                clearCloseTimer();
+                                setActiveMenuId(null);
+                              }}
+                            >
+                              <span>{item.label}</span>
+                              <small>{item.description ?? ""}</small>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="uc-header-mega-grid">
+                    {activeMenu.items.map((item) => (
+                      <Link
+                        key={item.id}
+                        className="uc-header-mega-link"
+                        href={item.href}
+                        onClick={() => {
+                          clearCloseTimer();
+                          setActiveMenuId(null);
+                        }}
+                      >
+                        <span>{item.label}</span>
+                        {item.description ? (
+                          <small>{item.description}</small>
+                        ) : null}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ) : null}
@@ -286,6 +317,26 @@ export function PortalHeader() {
                   </Link>
                 ))}
               </nav>
+
+              <div className="uc-mobile-menu-grouped">
+                {ecosystemGroups.map((group) => (
+                  <div key={group.id} className="uc-mobile-menu-group">
+                    <p className="uc-mobile-menu-group-title">{group.title}</p>
+                    <div className="uc-mobile-menu-group-items">
+                      {getProductsByGroup(group.id).map((product) => (
+                        <Link
+                          key={product.id}
+                          className="uc-mobile-menu-link"
+                          href={product.productHref}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {product.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
 
               <div className="uc-mobile-menu-apps">
                 <p className="uc-mobile-menu-label">Apps</p>

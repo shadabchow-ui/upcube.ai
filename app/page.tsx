@@ -13,9 +13,9 @@ import {
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata = createBasicPageMetadata({
-  title: "UpcubeAI | AI Product Family for Work, Discovery, and Cloud",
+  title: "Upcube | AI-Native Technology Ecosystem",
   description:
-    "UpcubeAI is the AI product company behind Ethen, Earth, Books, Games, Jobs, Cloud, Voice, University, and future computing platforms — a connected product family for work, discovery, commerce, infrastructure, and learning.",
+    "Upcube is building an AI-native technology ecosystem — combining AI, cloud, compute, operating systems, education, spatial tools, commerce, and work products into one connected platform. Explore Core, Build, Learn, and Explore.",
   path: "/",
 });
 

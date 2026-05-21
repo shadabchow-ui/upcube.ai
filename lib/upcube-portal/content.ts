@@ -5,7 +5,10 @@ import {
   UPCUBE_GAMES_URL,
   UPCUBE_JOBS_URL,
   UPCUBE_PLANET_URL,
+  UPCUBE_QUANTUM_URL,
   UPCUBE_VENTARI_URL,
+  ecosystemGroups,
+  getProductsByGroup,
   upcubeProductLinks,
 } from "lib/upcube-universal/product-links";
 import { researchLongformPages } from "lib/upcube-portal/longform-pages";
@@ -89,10 +92,17 @@ export type PortalMenuItem = {
   placeholder?: boolean;
 };
 
+export type PortalMenuColumn = {
+  id: string;
+  label: string;
+  items: PortalMenuItem[];
+};
+
 export type PortalMenuGroup = {
   id: string;
   title: string;
   items: PortalMenuItem[];
+  columns?: PortalMenuColumn[];
 };
 
 export type ChatExample = {
@@ -208,7 +218,9 @@ export {
   UPCUBE_GAMES_URL,
   UPCUBE_JOBS_URL,
   UPCUBE_PLANET_URL,
+  UPCUBE_QUANTUM_URL,
   UPCUBE_VENTARI_URL,
+  ecosystemGroups,
 };
 
 export const upcubeCompanyIdentity: UpcubeCompanyIdentity = {
@@ -237,7 +249,7 @@ export const upcubeCompanyIdentity: UpcubeCompanyIdentity = {
 };
 
 export const portalPrimaryNav: PortalNavItem[] = [
-  { id: "products", label: "Products", href: "/products/upcube-ai" },
+  { id: "products", label: "Products", href: "/products" },
   { id: "news", label: "News", href: "/news" },
   { id: "research", label: "Research", href: "/research" },
   { id: "trust", label: "Trust", href: "/trust" },
@@ -261,6 +273,7 @@ export const portalAppLinks: PortalNavItem[] = [
   { id: "app-games", label: "Games", href: UPCUBE_GAMES_URL },
   { id: "app-jobs", label: "Jobs", href: UPCUBE_JOBS_URL },
   { id: "app-cloud", label: "Cloud", href: UPCUBE_CLOUD_URL },
+  { id: "app-quantum", label: "Quantum", href: UPCUBE_QUANTUM_URL },
   { id: "app-ventari", label: "Shopping", href: UPCUBE_VENTARI_URL },
 ];
 
@@ -274,6 +287,7 @@ const portalHomepageStatusById: Record<
   games: "live",
   jobs: "live",
   cloud: "live",
+  quantum: "live",
   ventari: "external",
   vm: "planned",
   "upcube-os": "planned",
@@ -285,7 +299,7 @@ const portalHomepageStatusById: Record<
 const portalHomepageCardsById: Record<string, PortalCardItem> = {
   "upcube-ai": {
     id: "chat",
-    title: "UpcubeAI",
+    title: "AI",
     description:
       "An AI workspace for chat, research, artifacts, and execution that turns questions into durable work and reusable output.",
     href: "/products/upcube-ai",
@@ -337,15 +351,25 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
     id: "cloud",
     title: "Cloud",
     description:
-      "The cloud infrastructure and tooling layer behind Upcube builders, systems, and product delivery — made easier to understand.",
+      "The cloud infrastructure and tooling layer behind Upcube builders, systems, and product delivery, made easier to understand.",
     href: "/products/cloud",
     tag: "Cloud infrastructure",
     category: "Infrastructure",
     ctaLabel: "Open Cloud",
   },
+  quantum: {
+    id: "quantum",
+    title: "Quantum",
+    description:
+      "A beginner-friendly quantum workspace for guided experiments, visual runs, and clear result charts.",
+    href: "/products/quantum",
+    tag: "Future computing",
+    category: "Future Platforms",
+    ctaLabel: "Explore Quantum",
+  },
   ventari: {
     id: "ventari",
-    title: "Upcube Shopping",
+    title: "Shopping",
     description:
       "Commerce technology for marketplace-scale product discovery. Designed to support up to 1 billion products with AI-powered search, PDPs, reviews, recommendations, and brand storefront infrastructure.",
     href: "/products/shopping",
@@ -365,7 +389,7 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
   },
   "upcube-os": {
     id: "upcube-os",
-    title: "Upcube OS",
+    title: "OS",
     description:
       "An AI operating system direction for desktop computing with visible control, trust, and clarity.",
     href: "/products/upcube-os",
@@ -387,7 +411,7 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
     id: "voice",
     title: "Voice",
     description:
-      "AI voice platform for future Upcube devices — headphones, earbuds, home audio, car audio, and companion devices.",
+      "AI voice platform for future Upcube devices: headphones, earbuds, home audio, car audio, and companion devices.",
     href: "/products/voice",
     tag: "AI & Voice",
     category: "Future Platforms",
@@ -449,34 +473,40 @@ const portalProductPageLinks: PortalNavItem[] = upcubeProductLinks.map(
   }),
 );
 
+function ecosystemFooterLinks(groupId: string): PortalNavItem[] {
+  return getProductsByGroup(groupId).map((product) => ({
+    id: `${product.id}-footer`,
+    label: product.label,
+    href: product.productHref,
+  }));
+}
+
 export const portalFooterGroups: PortalFooterGroup[] = [
   {
-    id: "apps",
-    title: "Products",
-    links: portalProductPageLinks,
-  },
-  {
-    id: "terms-policies",
-    title: "Legal & Policies",
+    id: "core",
+    title: "Core",
     links: [
-      { id: "legal-footer", label: "Legal", href: "/legal" },
-      { id: "terms-footer", label: "Terms of Use", href: "/terms" },
-      { id: "privacy-footer", label: "Privacy Notice", href: "/privacy" },
-      { id: "policies-footer", label: "Policy", href: "/policies" },
-      {
-        id: "principles-footer",
-        label: "Commitments",
-        href: "/principles",
-      },
-      {
-        id: "for-organizations-footer",
-        label: "For Teams & Builders",
-        href: "/for-organizations",
-      },
+      { id: "products-footer", label: "All Products", href: "/products" },
+      ...ecosystemFooterLinks("core"),
     ],
   },
   {
-    id: "about-us",
+    id: "build",
+    title: "Build",
+    links: ecosystemFooterLinks("build"),
+  },
+  {
+    id: "learn",
+    title: "Learn",
+    links: ecosystemFooterLinks("learn"),
+  },
+  {
+    id: "explore",
+    title: "Explore",
+    links: ecosystemFooterLinks("explore"),
+  },
+  {
+    id: "company",
     title: "Company",
     links: [
       { id: "about-footer", label: "Company Overview", href: "/about" },
@@ -484,6 +514,7 @@ export const portalFooterGroups: PortalFooterGroup[] = [
       { id: "foundation-footer", label: "Mission", href: "/foundation" },
       { id: "careers-footer", label: "Careers", href: "/careers" },
       { id: "brand-footer", label: "Brand Resources", href: "/brand" },
+      { id: "contact-footer", label: "Contact", href: "/contact" },
       {
         id: "working-together-footer",
         label: "Building With Communities",
@@ -502,9 +533,23 @@ export const portalFooterGroups: PortalFooterGroup[] = [
     ],
   },
   {
-    id: "safety",
-    title: "Trust & Safety",
+    id: "legal-trust",
+    title: "Legal / Trust",
     links: [
+      { id: "legal-footer", label: "Legal", href: "/legal" },
+      { id: "terms-footer", label: "Terms of Use", href: "/terms" },
+      { id: "privacy-footer", label: "Privacy Notice", href: "/privacy" },
+      { id: "policies-footer", label: "Policy", href: "/policies" },
+      {
+        id: "principles-footer",
+        label: "Commitments",
+        href: "/principles",
+      },
+      {
+        id: "for-organizations-footer",
+        label: "For Teams & Builders",
+        href: "/for-organizations",
+      },
       { id: "safety-footer", label: "Safety", href: "/safety" },
       {
         id: "security-footer",
@@ -512,27 +557,11 @@ export const portalFooterGroups: PortalFooterGroup[] = [
         href: "/security",
       },
       {
-        id: "security-privacy-footer",
-        label: "Privacy",
-        href: "/security-privacy",
-      },
-      {
         id: "trust-transparency-footer",
         label: "Trust",
         href: "/trust-transparency",
       },
       { id: "status-footer", label: "Status", href: "/status" },
-    ],
-  },
-  {
-    id: "research-index",
-    title: "Research",
-    links: [
-      {
-        id: "research-overview-footer",
-        label: "Research Home",
-        href: "/research",
-      },
     ],
   },
 ];
@@ -568,11 +597,14 @@ export const portalSocialLinks: PortalNavItem[] = [
 export const portalRoutePlan: PortalRoutePlan[] = [
   { id: "home", title: "Portal Home", href: "/", status: "live" },
   {
-    id: "products",
-    title: "Products",
-    href: "/products/upcube-ai",
+    id: "products-overview",
+    title: "All Products",
+    href: "/products",
     status: "live",
   },
+  { id: "core", title: "Core", href: "/core", status: "live" },
+  { id: "build", title: "Build", href: "/build", status: "live" },
+  { id: "learn", title: "Learn", href: "/learn", status: "live" },
   { id: "explore", title: "Explore", href: "/explore", status: "live" },
   { id: "platform", title: "Platform", href: "/platform", status: "live" },
   { id: "business", title: "Business", href: "/business", status: "live" },
@@ -619,6 +651,7 @@ export const portalRoutePlan: PortalRoutePlan[] = [
   { id: "safety", title: "Safety", href: "/safety", status: "live" },
   { id: "faq", title: "FAQ", href: "/faq", status: "live" },
   { id: "privacy", title: "Privacy", href: "/privacy", status: "live" },
+  { id: "contact", title: "Contact", href: "/contact", status: "live" },
   { id: "company", title: "Company", href: "/company", status: "live" },
   { id: "careers", title: "Careers", href: "/careers", status: "live" },
   {
@@ -843,6 +876,46 @@ export const privacySections: PortalPrivacySection[] = [
 
 export const portalMenuGroups: PortalMenuGroup[] = [
   {
+    id: "ecosystem",
+    title: "Solutions",
+    items: [
+      {
+        id: "core-menu",
+        label: "Core",
+        href: "/core",
+        description:
+          "The shared intelligence and platform layer: AI, workspace, identity, search, and projects.",
+      },
+      {
+        id: "build-menu",
+        label: "Build",
+        href: "/build",
+        description:
+          "Cloud infrastructure, compute, operating systems, and voice platform.",
+      },
+      {
+        id: "learn-menu",
+        label: "Learn",
+        href: "/learn",
+        description:
+          "Education, books, and quantum computing: learning paths for the AI age.",
+      },
+      {
+        id: "explore-menu",
+        label: "Explore",
+        href: "/explore",
+        description:
+          "Earth, Games, Shopping, and Jobs: discovery surfaces across Upcube.",
+      },
+      {
+        id: "products-overview-menu",
+        label: "All Products",
+        href: "/products",
+        description: "Every product in the Upcube family grouped by ecosystem.",
+      },
+    ],
+  },
+  {
     id: "products",
     title: "Products",
     items: upcubeProductLinks.map((product) => ({
@@ -857,22 +930,10 @@ export const portalMenuGroups: PortalMenuGroup[] = [
     title: "News",
     items: [
       {
-        id: "news-latest-menu",
-        label: "Recent developments",
+        id: "news-overview-menu",
+        label: "All News",
         href: "/news",
-        description: "Launch stories and product previews.",
-      },
-      {
-        id: "news-upcube-ai-menu",
-        label: "UpcubeAI launch",
-        href: "/news/upcube-ai-launch",
-        description: "Workspace, research, artifacts, and tool workflows.",
-      },
-      {
-        id: "news-os-preview-menu",
-        label: "Upcube OS preview",
-        href: "/news/upcube-os-preview",
-        description: "Preview the 2028 desktop release path.",
+        description: "Latest updates and announcements.",
       },
     ],
   },
@@ -882,67 +943,45 @@ export const portalMenuGroups: PortalMenuGroup[] = [
     items: [
       {
         id: "research-overview-menu",
-        label: "Overview",
+        label: "Research Overview",
         href: "/research",
+        description: "Research areas and publications.",
       },
-      ...researchLongformPages.map((page) => {
-        let label = page.title
-          .replace(/^Upcube /, "")
-          .replace(/\band\b/gi, "&");
-        if (label.endsWith(" AI") && label.split(" ").length > 2) {
-          label = label.slice(0, -3);
-        }
-        return {
-          id: `research-${page.slug}-menu`,
-          label,
-          href: `/research/${page.slug}`,
-        };
-      }),
       {
         id: "research-residency-menu",
         label: "Research Fellowship",
         href: "/research/residency",
-      },
-      {
-        id: "research-economic-menu",
-        label: "Economy & Markets",
-        href: "/research/economic",
+        description: "Research program and fellowship details.",
       },
     ],
   },
   {
     id: "trust",
-    title: "Trust & Safety",
+    title: "Trust",
     items: [
       {
-        id: "safety-menu",
+        id: "trust-overview-menu",
+        label: "Trust Overview",
+        href: "/trust",
+        description: "Trust and safety approach.",
+      },
+      {
+        id: "trust-safety-menu",
         label: "Safety",
         href: "/safety",
-        description: "Trust and responsible product framing.",
+        description: "Safety approach and principles.",
       },
       {
-        id: "security-privacy-menu",
+        id: "trust-security-menu",
+        label: "Security",
+        href: "/security",
+        description: "Security practices and posture.",
+      },
+      {
+        id: "trust-privacy-menu",
         label: "Privacy",
-        href: "/security-privacy",
-        description: "Current placeholder route for combined trust topics.",
-      },
-      {
-        id: "trust-transparency-menu",
-        label: "Trust",
-        href: "/trust-transparency",
-        description: "How the public site handles evidence and placeholders.",
-      },
-      {
-        id: "principles-menu",
-        label: "Commitments",
-        href: "/principles",
-        description: "Operating principles for AI development.",
-      },
-      {
-        id: "for-organizations-menu",
-        label: "For Teams & Builders",
-        href: "/for-organizations",
-        description: "Unlock more capability with AI.",
+        href: "/privacy",
+        description: "Privacy policy and data handling.",
       },
     ],
   },
@@ -951,40 +990,28 @@ export const portalMenuGroups: PortalMenuGroup[] = [
     title: "Company",
     items: [
       {
-        id: "about-page-menu",
+        id: "company-overview-menu",
         label: "Company Overview",
+        href: "/company",
+        description: "About Upcube and what we build.",
+      },
+      {
+        id: "company-about-menu",
+        label: "About",
         href: "/about",
-        description: "High-level company and platform framing.",
+        description: "Our mission, story, and team.",
       },
       {
-        id: "foundation-menu",
-        label: "Mission",
-        href: "/foundation",
-        description: "Mission-oriented direction without legal overclaim.",
-      },
-      {
-        id: "careers-menu",
+        id: "company-careers-menu",
         label: "Careers",
         href: "/careers",
-        description: "Builder culture and the live jobs destination.",
+        description: "Join the team.",
       },
       {
-        id: "working-together-menu",
-        label: "Building With Communities",
-        href: "/working-together",
-        description: "Building AI for everyone through diverse perspectives.",
-      },
-      {
-        id: "societal-impact-menu",
-        label: "Public Impact",
-        href: "/societal-impact",
-        description: "AI and the next era of discovery.",
-      },
-      {
-        id: "founder-letter-menu",
-        label: "Founder Note",
-        href: "/founder-letter",
-        description: "Why we focus on AI and to what end.",
+        id: "company-contact-menu",
+        label: "Contact",
+        href: "/contact",
+        description: "Get in touch.",
       },
     ],
   },
@@ -1095,6 +1122,14 @@ export const researchCards: ResearchCard[] = [
 ];
 
 export const portalNewsItems: PortalNewsItem[] = [
+  {
+    id: "news-quantum-launch",
+    title: "Introducing Upcube Quantum",
+    summary:
+      "Upcube Quantum is a beginner-friendly quantum computing workspace for guided experiments, templates, visual runs, and clear result charts.",
+    statusLabel: "Product addition",
+    href: "/products/quantum",
+  },
   {
     id: "news-portal-refresh",
     title: "UpcubeAI portal visual system refresh",
@@ -1223,9 +1258,9 @@ export const companyEcosystem: PortalCardItem[] = [
   },
   {
     id: "eco-ventari",
-    title: "Upcube Shopping",
+    title: "Shopping",
     description:
-      "Upcube Shopping brings commerce technology and marketplace-scale product discovery into the broader Upcube platform.",
+      "Shopping brings commerce technology and marketplace-scale product discovery into the broader Upcube platform.",
     href: "/products/shopping",
     tag: "Commerce",
   },
@@ -1403,30 +1438,48 @@ export type ContactProductOption = {
 };
 
 export const contactInquiryTypes: ContactInquiryType[] = [
-  { value: "general", label: "General inquiry" },
-  { value: "sales", label: "Sales inquiry" },
-  { value: "product-interest", label: "Product interest" },
-  { value: "partnership", label: "Partnership proposal" },
-  { value: "press", label: "Press and media" },
-  { value: "trust-safety", label: "Trust and safety" },
-  { value: "feedback", label: "Product feedback" },
+  { value: "sales", label: "Sales" },
+  { value: "partnership", label: "Partnership" },
+  { value: "support", label: "Support" },
+  { value: "press", label: "Press" },
+  { value: "security", label: "Security" },
+  { value: "careers", label: "Careers" },
+  { value: "education", label: "Education" },
+  { value: "cloud-compute", label: "Cloud / Compute" },
+  { value: "ai-voice", label: "AI / Voice" },
+  { value: "commerce", label: "Shopping / Commerce" },
+  { value: "jobs", label: "Jobs" },
+  { value: "books", label: "Books" },
+  { value: "earth", label: "Earth" },
+  { value: "games", label: "Games" },
+  { value: "os-mobile", label: "OS / Mobile OS" },
   { value: "other", label: "Other" },
 ];
 
 export const contactProductOptions: ContactProductOption[] = [
-  { value: "upcube-ai", label: "UpcubeAI — AI workspace" },
-  { value: "books", label: "Upcube Books — Reading discovery" },
-  { value: "earth", label: "Upcube Earth — 3D spatial exploration" },
-  { value: "games", label: "Upcube Games — Game discovery" },
-  { value: "jobs", label: "Upcube Jobs — Hiring and careers" },
-  { value: "cloud", label: "Upcube Cloud — Developer infrastructure" },
-  { value: "ventari", label: "Upcube Shopping — Commerce technology" },
-  { value: "vm", label: "Compute — Virtual machines" },
-  { value: "upcube-os", label: "Upcube OS — Desktop operating system" },
-  { value: "upcube-mobile-os", label: "Mobile OS — Mobile platform" },
-  { value: "voice", label: "Upcube Voice — Voice platform" },
-  { value: "university", label: "Education — Education and learning" },
-  { value: "general", label: "Not product-specific" },
+  { value: "ai", label: "AI" },
+  { value: "books", label: "Books" },
+  { value: "earth", label: "Earth" },
+  { value: "games", label: "Games" },
+  { value: "jobs", label: "Jobs" },
+  { value: "cloud", label: "Cloud" },
+  { value: "quantum", label: "Quantum" },
+  { value: "shopping", label: "Shopping" },
+  { value: "compute", label: "Compute" },
+  { value: "os", label: "OS" },
+  { value: "mobile-os", label: "Mobile OS" },
+  { value: "voice", label: "Voice" },
+  { value: "education", label: "Education" },
+  { value: "multiple", label: "Multiple products" },
+];
+
+export const contactCompanySizeOptions: ContactInquiryType[] = [
+  { value: "1", label: "Just me" },
+  { value: "2-10", label: "2-10" },
+  { value: "11-50", label: "11-50" },
+  { value: "51-200", label: "51-200" },
+  { value: "201-1000", label: "201-1,000" },
+  { value: "1000+", label: "1,000+" },
 ];
 
 export const principlesSections: PortalTextSection[] = [
