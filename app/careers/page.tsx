@@ -25,6 +25,10 @@ export default function CareersRoutePage() {
         body,
         category: "company",
       }}
+      heroImage={{
+        src: "/product-art/C-1-2016-024-Alien-Copy.jpeg",
+        alt: "Editorial cover image for careers.",
+      }}
       backHref="/company"
       backLabel="Back to Company"
     />

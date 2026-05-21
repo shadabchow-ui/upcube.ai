@@ -25,6 +25,10 @@ export default function BrandRoutePage() {
         body,
         category: "company",
       }}
+      heroImage={{
+        src: "/product-art/piet_mondrian_2_tableau_i.jpg",
+        alt: "Editorial cover image for brand resources.",
+      }}
       backHref="/company"
       backLabel="Back to Company"
     />

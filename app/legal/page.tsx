@@ -25,6 +25,10 @@ export default function LegalRoutePage() {
         body,
         category: "trust",
       }}
+      heroImage={{
+        src: "/product-art/Composition.jpg",
+        alt: "Editorial cover image for legal and policies.",
+      }}
       backHref="/"
       backLabel="Back to Home"
     />

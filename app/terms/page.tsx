@@ -25,6 +25,10 @@ export default function TermsRoutePage() {
         body,
         category: "trust",
       }}
+      heroImage={{
+        src: "/product-art/COMPOSITION-VII.jpg",
+        alt: "Editorial cover image for terms of use.",
+      }}
       backHref="/legal"
       backLabel="Back to Legal"
     />

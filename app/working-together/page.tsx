@@ -27,6 +27,10 @@ export default function WorkingTogetherRoutePage() {
         body,
         category: "trust",
       }}
+      heroImage={{
+        src: "/product-art/a32ca26a50a12c330df049b8b402b6a8.jpg",
+        alt: "Editorial cover image for building with communities.",
+      }}
       backHref="/policy"
       backLabel="Back to Policy"
     />

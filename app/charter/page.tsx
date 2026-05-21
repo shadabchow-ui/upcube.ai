@@ -26,6 +26,10 @@ export default function CharterRoutePage() {
         body,
         category: "company",
       }}
+      heroImage={{
+        src: "/product-art/050b0e5fb4bd48bbb2c6a91baa3afc40_sw-2962_sh-2191.webp",
+        alt: "Editorial cover image for the product charter.",
+      }}
       backHref="/company"
       backLabel="Back to Company"
     />

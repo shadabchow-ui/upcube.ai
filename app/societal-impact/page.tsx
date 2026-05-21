@@ -26,6 +26,10 @@ export default function SocietalImpactRoutePage() {
         body,
         category: "trust",
       }}
+      heroImage={{
+        src: "/product-art/FAA_starrry_night.jpg",
+        alt: "Editorial cover image for public impact.",
+      }}
       backHref="/policy"
       backLabel="Back to Policy"
     />

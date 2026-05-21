@@ -24,6 +24,10 @@ export default function FoundationRoutePage() {
         body,
         category: "company",
       }}
+      heroImage={{
+        src: "/product-art/FAA_Rhythm.jpg",
+        alt: "Editorial cover image for mission.",
+      }}
       backHref="/company"
       backLabel="Back to Company"
     />

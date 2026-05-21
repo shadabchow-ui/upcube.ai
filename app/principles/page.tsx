@@ -27,6 +27,10 @@ export default function PrinciplesRoutePage() {
         body,
         category: "trust",
       }}
+      heroImage={{
+        src: "/product-art/1998-Despues-de-Montanas-y-Mar-.webp",
+        alt: "Editorial cover image for commitments.",
+      }}
       backHref="/policy"
       backLabel="Back to Policy"
     />
