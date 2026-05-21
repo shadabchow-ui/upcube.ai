@@ -89,6 +89,15 @@ export function ProductPage({ product }: ProductPageProps) {
                   ))}
                 </div>
               </div>
+              {product.heroImage ? (
+                <div className={styles.heroMedia}>
+                  <img
+                    src={product.heroImage.src}
+                    alt={product.heroImage.alt}
+                    className={styles.heroImage}
+                  />
+                </div>
+              ) : null}
             </div>
           </div>
         </section>

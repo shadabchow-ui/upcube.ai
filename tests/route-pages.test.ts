@@ -1,12 +1,26 @@
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+
+import {
+  getBodyForRoute,
+  getPageContentByRoute,
+} from "lib/upcube-portal/page-content";
 
 const APP_DIR = resolve(__dirname, "..", "app");
 
 function routePageExists(route: string): boolean {
   const pagePath = resolve(APP_DIR, `.${route}`, "page.tsx");
   return existsSync(pagePath);
+}
+
+function routeFileContent(route: string): string {
+  const pagePath = resolve(APP_DIR, `.${route}`, "page.tsx");
+  try {
+    return readFileSync(pagePath, "utf-8");
+  } catch {
+    return "";
+  }
 }
 
 const smokeRoutes = ["/", "/news", "/contact"] as const;
@@ -132,4 +146,68 @@ describe("dynamic route pattern coverage", () => {
       true,
     );
   });
+});
+
+describe("page-content registry returns real imported content", () => {
+  const contentPairs: [string, string][] = [
+    ["/company/about", "What Upcube builds"],
+    ["/company/charter", "Charter"],
+    ["/company/foundation", "product family"],
+    ["/company/careers", "Careers"],
+    ["/organizations", "organizations"],
+    ["/company/founder-letter", "Why We Focus on AI"],
+    ["/legal", "Legal"],
+    ["/legal/terms", "Terms of Use"],
+    ["/legal/privacy", "Privacy Policy"],
+    ["/legal/other-policies", "Acceptable use"],
+    ["/policy/ai-principles", "Our AI Principles"],
+    ["/policy/working-together", "communities"],
+    ["/policy/societal-impact", "discovery"],
+    ["/safety", "Safety starts with product truth"],
+    ["/security", "Security as a foundation"],
+    ["/security-privacy", "Security and privacy"],
+    ["/status", "status"],
+    ["/research/earth-ai-geospatial-intelligence", "Upcube Earth AI"],
+    ["/research/health-ai", "Health Knowledge"],
+    ["/research/software-systems", "systems"],
+  ];
+
+  for (const [route, snippet] of contentPairs) {
+    it(`returns body content for ${route} containing "${snippet}"`, () => {
+      const body = getBodyForRoute(route);
+      expect(body.length).toBeGreaterThan(50);
+      expect(body).toContain(snippet);
+    });
+  }
+});
+
+describe("public route files call getBodyForRoute with valid registry route", () => {
+  const publicRoutes: [string, string][] = [
+    ["/about", "/company/about"],
+    ["/policies", "/legal/other-policies"],
+    ["/terms", "/legal/terms"],
+    ["/privacy", "/legal/privacy"],
+    ["/principles", "/policy/ai-principles"],
+    ["/working-together", "/policy/working-together"],
+    ["/safety", "/safety"],
+    ["/security", "/security"],
+    ["/security-privacy", "/security-privacy"],
+    ["/trust-transparency", "/trust-transparency"],
+    ["/status", "/status"],
+    ["/founder-letter", "/company/founder-letter"],
+    ["/societal-impact", "/policy/societal-impact"],
+    ["/foundation", "/company/foundation"],
+    ["/charter", "/company/charter"],
+    ["/careers", "/company/careers"],
+    ["/brand", "/company/brand-help-center"],
+    ["/organizations", "/organizations"],
+  ];
+
+  for (const [publicRoute, registryRoute] of publicRoutes) {
+    it(`route ${publicRoute} page.tsx calls getBodyForRoute("${registryRoute}")`, () => {
+      const content = routeFileContent(publicRoute);
+      expect(content).toContain("LongformPage");
+      expect(content).toContain(`getBodyForRoute("${registryRoute}")`);
+    });
+  }
 });

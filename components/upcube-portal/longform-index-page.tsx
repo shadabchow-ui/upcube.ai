@@ -28,6 +28,15 @@ export function LongformIndexPage() {
             </p>
           </div>
         </div>
+        <div className="uc-shell">
+          <div className="uc-longform-cover-row">
+            <img
+              src="/product-art/FAA_starrry_night.jpg"
+              alt="Editorial cover image for Upcube research."
+              className="uc-longform-cover-image"
+            />
+          </div>
+        </div>
         <div className="uc-shell uc-longform-index-section">
           <div className="uc-longform-index-grid">
             {sorted.map((entry) => (

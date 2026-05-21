@@ -25,6 +25,10 @@ export default function StatusRoutePage() {
         body,
         category: "trust",
       }}
+      heroImage={{
+        src: "/product-art/065d0e64a3514880bf2398126d0bcdca_sw-3815_sh-2501.webp",
+        alt: "Editorial cover image for system status.",
+      }}
       backHref="/"
       backLabel="Back to Home"
     />

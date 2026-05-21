@@ -9237,7 +9237,7 @@ export const companyLongformPages: LongformPageEntry[] = [
   {
     slug: "founder-letter",
     order: 99,
-    title: "Why We Focus on AI — and to What End",
+    title: "Why We Focus on AI and What Comes Next",
     subtitle:
       "Advancing AI to serve people, expand opportunity, and propel useful innovation.",
     description: "A founder letter from **Shadab**, Founder of UpcubeAI",
@@ -9293,7 +9293,7 @@ export const trustLongformPages: LongformPageEntry[] = [
     order: 99,
     title: "Privacy Policy",
     subtitle:
-      "A privacy page shaped for clarity — without invented legal commitments.",
+      "A privacy page shaped for clarity without invented legal commitments.",
     description:
       "UpcubeAI is being built as a connected product family across AI workspaces, voice, education, commerce, discovery, cloud infrastructure, entertainment, and future computing.",
     body: "",

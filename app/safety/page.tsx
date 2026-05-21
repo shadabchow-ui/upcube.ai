@@ -26,6 +26,10 @@ export default function SafetyRoute() {
         body,
         category: "trust",
       }}
+      heroImage={{
+        src: "/product-art/Composition.jpg",
+        alt: "Editorial cover image for the safety page.",
+      }}
       backHref="/trust"
       backLabel="Back to Trust"
     />

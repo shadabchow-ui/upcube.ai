@@ -26,6 +26,10 @@ export default function TrustTransparencyRoutePage() {
         body,
         category: "trust",
       }}
+      heroImage={{
+        src: "/product-art/1998-Despues-de-Montanas-y-Mar-.webp",
+        alt: "Editorial cover image for trust and transparency.",
+      }}
       backHref="/trust"
       backLabel="Back to Trust"
     />

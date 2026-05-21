@@ -25,6 +25,10 @@ export default function SecurityPrivacyRoutePage() {
         body,
         category: "trust",
       }}
+      heroImage={{
+        src: "/product-art/a32ca26a50a12c330df049b8b402b6a8.jpg",
+        alt: "Editorial cover image for the security and privacy page.",
+      }}
       backHref="/trust"
       backLabel="Back to Trust"
     />

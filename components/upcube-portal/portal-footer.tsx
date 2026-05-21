@@ -172,7 +172,7 @@ export function PortalFooter() {
               className="uc-footer-brand-mark"
             />
             <div>
-              <p className="uc-footer-brand-tagline">The Next Frontier.</p>
+              <p className="uc-footer-brand-tagline">The Next Frontier</p>
             </div>
           </div>
         </div>
@@ -226,7 +226,7 @@ export function PortalFooter() {
             ))}
           </div>
           <div className="uc-footer-bottom-center">
-            <p className="uc-footer-bottom-copy">Upcube &copy; 2026</p>
+            <p className="uc-footer-bottom-copy">UpCube inc &copy; 2026</p>
             <span className="uc-footer-bottom-sep" aria-hidden="true">
               &middot;
             </span>

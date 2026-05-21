@@ -37,6 +37,7 @@ export type UpcubeProduct = {
   primaryAction: ProductAction;
   secondaryAction: ProductAction;
   heroHighlights: string[];
+  heroImage?: { src: string; alt: string };
   availabilityNote?: string;
   signatureTitle: string;
   signatureBody: string;
@@ -75,6 +76,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Artifacts turn answers into reusable output.",
       "Approvals and tool controls keep every important action visible.",
     ],
+    heroImage: {
+      src: "/product-art/050b0e5fb4bd48bbb2c6a91baa3afc40_sw-2962_sh-2191.webp",
+      alt: "Abstract modern composition representing AI-powered work.",
+    },
     signatureTitle:
       "One workspace for thinking through the work — and moving it forward.",
     signatureBody:
@@ -187,6 +192,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Open trusted previews instead of dead-end metadata.",
       "Save books locally so discovery feels persistent without requiring an account.",
     ],
+    heroImage: {
+      src: "/product-art/1998-Despues-de-Montanas-y-Mar-.webp",
+      alt: "Color-rich abstract painting for Upcube Books discovery.",
+    },
     signatureTitle: "Book discovery that feels curated, not crowded.",
     signatureBody:
       "Upcube Books is built for the moment before commitment — when you are comparing titles, opening previews, saving possibilities, and finding something worth coming back to.",
@@ -298,6 +307,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "See terrain, cities, and layers with greater visual depth.",
       "Use overlays and shareable views to preserve geographic context.",
     ],
+    heroImage: {
+      src: "/product-art/FAA_starrry_night.jpg",
+      alt: "Starry abstract landscape representing global exploration.",
+    },
     signatureTitle:
       "Spatial exploration that feels immersive from the first movement.",
     signatureBody:
@@ -410,6 +423,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Browse by platform, genre, studio, and franchise.",
       "Use recommendations to keep moving instead of starting over.",
     ],
+    heroImage: {
+      src: "/product-art/C-1-2016-024-Alien-Copy.jpeg",
+      alt: "Surreal alien-inspired artwork for Upcube Games.",
+    },
     signatureTitle:
       "Game discovery organized around how players actually choose.",
     signatureBody:
@@ -522,6 +539,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Explore opportunities with product and company context nearby.",
       "Move through a direct hiring destination already connected across the Upcube portal.",
     ],
+    heroImage: {
+      src: "/product-art/065d0e64a3514880bf2398126d0bcdca_sw-3815_sh-2501.webp",
+      alt: "Dynamic geometric artwork representing career motion.",
+    },
     signatureTitle: "Opportunity discovery, made clearer.",
     signatureBody:
       "Upcube Jobs is built as a polished hiring destination for exploring roles across the broader Upcube ecosystem — direct, focused, and easy to return to.",
@@ -633,6 +654,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "A product story that makes infrastructure easier to grasp.",
       "Direct paths into compute-heavy products like VM Compute.",
     ],
+    heroImage: {
+      src: "/product-art/42333816071_33313e0909_b.jpg",
+      alt: "Layered abstract forms representing cloud infrastructure.",
+    },
     signatureTitle: "A cleaner front door to the Upcube infrastructure story.",
     signatureBody:
       "Upcube Cloud brings developer tools, cloud workflows, compute, storage, networking, and infrastructure products into one focused destination. It is designed to feel approachable without hiding the complexity that real systems need underneath.",
@@ -744,6 +769,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "AI-powered catalog search and product discovery.",
       "Reviews, recommendations, and brand storefront infrastructure.",
     ],
+    heroImage: {
+      src: "/product-art/piet_mondrian_2_tableau_i.jpg",
+      alt: "Structured geometric composition for Upcube Shopping.",
+    },
     signatureTitle:
       "Shopping technology that stays clear, even when the catalog gets massive.",
     signatureBody:
@@ -857,6 +886,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Storage, networking, and async operations presented as one system story.",
       "Scalable systems language without disappearing into control-plane jargon.",
     ],
+    heroImage: {
+      src: "/product-art/COMPOSITION-VII.jpg",
+      alt: "Expressive abstract composition representing compute scale.",
+    },
     availabilityNote:
       "Compute launches through Upcube Cloud, giving the broader cloud experience a direct path into compute.",
     signatureTitle:
@@ -972,6 +1005,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Clear permissions, approvals, and visible activity history.",
       "Public consumer release planned for 2028 while the product continues to improve.",
     ],
+    heroImage: {
+      src: "/product-art/Composition.jpg",
+      alt: "Painterly composition representing operating system clarity.",
+    },
     availabilityNote:
       "Public consumer release is planned for 2028 while improvements continue across the product and system experience.",
     signatureTitle: "An operating system that explains itself as it helps.",
@@ -1085,6 +1122,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Privacy-aware intelligence with clearer user control.",
       "Public consumer release planned for 2028 while the product continues to improve.",
     ],
+    heroImage: {
+      src: "/product-art/a32ca26a50a12c330df049b8b402b6a8.jpg",
+      alt: "Textured abstract artwork for Upcube Mobile OS.",
+    },
     availabilityNote:
       "Public consumer release is planned for 2028 while improvements continue across the product and mobile system direction.",
     signatureTitle:
@@ -1199,6 +1240,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Private push-to-talk with real-time assistance and no always-listening mode.",
       "Backend-issued ephemeral sessions with no raw audio persisted.",
     ],
+    heroImage: {
+      src: "/product-art/FAA_Rhythm.jpg",
+      alt: "Rhythmic abstract art reflecting real-time voice flow.",
+    },
     availabilityNote:
       "Hardware is not launched yet, and no public Voice site is available in this repo.",
     signatureTitle:
@@ -1314,6 +1359,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "AI education, product training, technical courses, and guided learning paths.",
       "Not a legal university, accredited institution, or degree program.",
     ],
+    heroImage: {
+      src: "/product-art/Senecio.jpeg",
+      alt: "Classic abstract composition representing structured learning.",
+    },
     availabilityNote:
       "The public app domain is https://university.upcube.ai, while accreditation, degrees, and public enrollment are not claimed on this page.",
     signatureTitle: "Serious learning, structured for the AI era.",

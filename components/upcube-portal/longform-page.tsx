@@ -10,6 +10,7 @@ type LongformPageProps = {
   entry: LongformPageEntry;
   backHref?: string;
   backLabel?: string;
+  heroImage?: { src: string; alt: string };
 };
 
 function categoryEyebrow(category: string): string {
@@ -27,10 +28,12 @@ export function LongformPage({
   entry,
   backHref,
   backLabel,
+  heroImage,
 }: LongformPageProps) {
   const bodyHtml = renderMarkdownToHtml(entry.body);
   const backUrl = backHref ?? "/research";
   const backText = backLabel ?? "Back to Research";
+  const heroTagline = entry.subtitle || entry.description;
 
   return (
     <PortalShell className="uc-longform-page">
@@ -41,14 +44,22 @@ export function LongformPage({
             <div className="uc-longform-hero-copy">
               <p className="uc-eyebrow">{categoryEyebrow(entry.category)}</p>
               <h1 className="uc-longform-hero-title">{entry.title}</h1>
-              {entry.subtitle ? (
-                <p className="uc-longform-hero-subtitle">{entry.subtitle}</p>
-              ) : null}
-              {entry.description ? (
-                <p className="uc-longform-hero-desc">{entry.description}</p>
+              {heroTagline ? (
+                <p className="uc-longform-hero-subtitle">{heroTagline}</p>
               ) : null}
             </div>
           </div>
+          {heroImage ? (
+            <div className="uc-shell">
+              <div className="uc-longform-cover-row">
+                <img
+                  src={heroImage.src}
+                  alt={heroImage.alt}
+                  className="uc-longform-cover-image"
+                />
+              </div>
+            </div>
+          ) : null}
           <div className="uc-shell uc-longform-body">
             <div dangerouslySetInnerHTML={{ __html: bodyHtml }} />
           </div>

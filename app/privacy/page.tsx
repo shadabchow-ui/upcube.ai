@@ -25,6 +25,10 @@ export default function PrivacyRoute() {
         body,
         category: "trust",
       }}
+      heroImage={{
+        src: "/product-art/Senecio.jpeg",
+        alt: "Editorial cover image for the privacy page.",
+      }}
       backHref="/legal"
       backLabel="Back to Legal"
     />

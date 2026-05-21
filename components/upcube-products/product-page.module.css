@@ -76,6 +76,20 @@
   width: min(100%, 46rem);
 }
 
+.heroMedia {
+  border-radius: 24px;
+  border: 1px solid var(--product-border);
+  overflow: hidden;
+  background: var(--product-surface);
+}
+
+.heroImage {
+  width: 100%;
+  height: clamp(22rem, 34vw, 34rem);
+  object-fit: cover;
+  display: block;
+}
+
 .eyebrow {
   margin: 0;
   color: var(--product-accent);
@@ -244,6 +258,11 @@
 }
 
 @media (min-width: 900px) {
+  .heroShell {
+    grid-template-columns: minmax(0, 0.95fr) minmax(22rem, 0.8fr);
+    align-items: center;
+  }
+
   .ctaBand {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: end;
@@ -265,6 +284,10 @@
     max-width: none;
     font-size: clamp(2.35rem, 11vw, 3.2rem);
     line-height: 1.02;
+  }
+
+  .heroImage {
+    height: clamp(18rem, 60vw, 22rem);
   }
 
   .summary,
