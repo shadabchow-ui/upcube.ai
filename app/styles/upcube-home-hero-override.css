@@ -1,0 +1,16 @@
+.uc-home__hero-stack > h1 {
+  font-size: 0;
+}
+
+.uc-home__hero-stack > h1::after {
+  content: "Welcome to the Agentic UpCube Era";
+  display: block;
+  font-size: var(--up-type-xl-size);
+  line-height: var(--up-type-xl-line);
+  letter-spacing: var(--up-type-xl-track);
+  font-weight: var(--up-type-xl-weight);
+}
+
+.uc-home__hero-stack > .uc-home__lead {
+  display: none;
+}
