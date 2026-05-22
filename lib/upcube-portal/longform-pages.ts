@@ -467,9 +467,9 @@ The AI workspace where users can turn spatial findings into research notes, plan
 
 The infrastructure layer for future geospatial processing, provider integrations, APIs, and scalable data workflows.
 
-### Compute
+### Cloud VM
 
-Compute workflows for heavier geospatial tasks, experiments, simulations, or processing pipelines.
+Cloud VM workflows for heavier geospatial tasks, experiments, simulations, or processing pipelines.
 
 ### Upcube Education
 
@@ -2595,7 +2595,7 @@ The user should not have to understand scheduling, ranking, routing, graph searc
 Search is one of the most important product experiences in the Upcube ecosystem.
 
 Books needs search across titles, authors, subjects, previews, and saved reading paths.  
-Upcube Shopping needs search across massive product catalogs.  
+Upcube Commerce needs search across massive product catalogs.  
 Games needs search across releases, platforms, genres, studios, and franchises.  
 Jobs needs search across roles, companies, locations, skills, and opportunity signals.  
 Earth needs search across places, terrain, cities, and overlays.  
@@ -2680,7 +2680,7 @@ Recommendations can make a product feel alive — or make it feel manipulative.
 
 UpcubeAI should treat recommendations as a clarity tool. The goal is to help users keep moving through a catalog, topic, or workflow when they are ready for the next step.
 
-Upcube Shopping can recommend related products.  
+Upcube Commerce can recommend related products.  
 Games can recommend similar titles.  
 Books can recommend reading paths.  
 Jobs can recommend related roles.  
@@ -2710,7 +2710,7 @@ Recommendations should create momentum, not clutter.
 Market systems appear across the Upcube ecosystem.
 
 Jobs can match candidates with roles.  
-Upcube Shopping can match shoppers with products.  
+Upcube Commerce can match shoppers with products.  
 Education can match learners with courses.  
 Cloud can match workloads with compute resources.  
 Future enterprise products may match teams, agents, tools, and tasks.
@@ -2863,7 +2863,7 @@ A plain-language introduction to search, ranking, routing, scheduling, recommend
 
 ### Making huge catalogs feel simple.
 
-How UpcubeAI can design search and ranking for Books, Games, Jobs, Upcube Shopping, Earth, and Ethen.
+How UpcubeAI can design search and ranking for Books, Games, Jobs, Upcube Commerce, Earth, and Ethen.
 
 **Read the blog**
 
@@ -2997,7 +2997,7 @@ Algorithms route prompts, retrieve sources, select tools, organize artifacts, de
 
 ---
 
-## Upcube Shopping
+## Upcube Commerce
 
 ### Commerce at catalog scale.
 
@@ -3149,7 +3149,7 @@ Map the search, ranking, recommendation, routing, scheduling, and graph problems
 
 ### Phase 2: Search and ranking foundations
 
-Design shared search patterns for Books, Games, Jobs, Upcube Shopping, Earth, and Ethen.
+Design shared search patterns for Books, Games, Jobs, Upcube Commerce, Earth, and Ethen.
 
 ### Phase 3: Graph and recommendation layer
 
@@ -3200,9 +3200,9 @@ That is the kind of work Upcube Algorithms and Theory is built to support.
 The AI workspace for chat, research, artifacts, approvals, tools, and execution.  
 **Explore UpcubeAI**
 
-### Upcube Shopping  
+### Upcube Commerce  
 Large-scale commerce search, recommendations, product pages, and catalog discovery.  
-**Explore Upcube Shopping**
+**Explore Upcube Commerce**
 
 ### Upcube Jobs  
 Career discovery and opportunity workflows across the Upcube ecosystem.  
@@ -3255,7 +3255,7 @@ People are no longer only searching for web pages. They are searching across boo
 
 Upcube Information Retrieval is the research direction for how UpcubeAI can make search, retrieval, ranking, recommendations, and source-grounded answers work across the entire Upcube product family.
 
-It connects Ethen, Upcube Books, Upcube Earth, Upcube Games, Upcube Jobs, Upcube Shopping, Upcube Education, Upcube Cloud, and future operating-system experiences through one core idea:
+It connects Ethen, Upcube Books, Upcube Earth, Upcube Games, Upcube Jobs, Upcube Commerce, Upcube Education, Upcube Cloud, and future operating-system experiences through one core idea:
 
 **The right information should feel closer to the work.**
 
@@ -3332,7 +3332,7 @@ A catalog may contain millions of records, but the user only sees a handful firs
 Upcube products need different ranking strategies:
 
 Books should rank by relevance, title match, author, preview availability, subject, and reading intent.  
-Upcube Shopping should rank by product relevance, category match, quality, reviews, price, image quality, and availability.  
+Upcube Commerce should rank by product relevance, category match, quality, reviews, price, image quality, and availability.  
 Jobs should rank by role fit, freshness, location, skill match, company context, and user intent.  
 Games should rank by title match, platform, genre, release timing, ratings, and related interest.  
 Earth should rank places by geographic intent, popularity, specificity, nearby context, and layer relevance.  
@@ -3418,7 +3418,7 @@ People rarely know the perfect query on the first try.
 
 They search, refine, compare, ask follow-up questions, change constraints, and discover what they actually meant. Conversational search supports that natural process.
 
-UpcubeAI can apply conversational search across Ethen, Books, Jobs, Games, Upcube Shopping, Earth, and Education.
+UpcubeAI can apply conversational search across Ethen, Books, Jobs, Games, Upcube Commerce, Earth, and Education.
 
 ### Research direction
 
@@ -3444,7 +3444,7 @@ Modern retrieval has to work across many forms of information: text, images, map
 Upcube products already point in this direction.
 
 Books use covers and text metadata.  
-Upcube Shopping uses product images, variants, reviews, and descriptions.  
+Upcube Commerce uses product images, variants, reviews, and descriptions.  
 Games use screenshots, box art, trailers, genres, and platform metadata.  
 Earth uses maps, terrain, imagery, overlays, and place names.  
 Voice may use audio and transcripts.  
@@ -3529,7 +3529,7 @@ Title, author, subject, preview, public-domain, saved-title, and reading-path re
 
 ### Commerce retrieval
 
-Product search, PDP ranking, review retrieval, recommendation paths, and large-catalog relevance for Upcube Shopping.
+Product search, PDP ranking, review retrieval, recommendation paths, and large-catalog relevance for Upcube Commerce.
 
 ### Career retrieval
 
@@ -3573,7 +3573,7 @@ A plain-language introduction to how UpcubeAI thinks about search, ranking, retr
 
 ### One retrieval philosophy, many product surfaces.
 
-How Books, Jobs, Games, Upcube Shopping, Earth, Education, and Ethen each require different ranking and retrieval strategies.
+How Books, Jobs, Games, Upcube Commerce, Earth, Education, and Ethen each require different ranking and retrieval strategies.
 
 **Read the blog**
 
@@ -3641,7 +3641,7 @@ Until then, these cards are planned research structure, not claims of published 
 
 ## Upcube Information Retrieval: Search and Ranking Across AI Product Surfaces
 
-A future technical overview of retrieval across Ethen, Books, Jobs, Games, Upcube Shopping, Earth, Education, and Cloud.
+A future technical overview of retrieval across Ethen, Books, Jobs, Games, Upcube Commerce, Earth, Education, and Cloud.
 
 **Status:** Planned technical note  
 **Preview**
@@ -3730,11 +3730,11 @@ Jobs needs role search, skill matching, company context, freshness, location fil
 
 ---
 
-## Upcube Shopping
+## Upcube Commerce
 
 ### Commerce discovery at scale.
 
-Upcube Shopping needs large-catalog search, product ranking, category depth, review retrieval, related products, and decision-support recommendations.
+Upcube Commerce needs large-catalog search, product ranking, category depth, review retrieval, related products, and decision-support recommendations.
 
 ---
 
@@ -3830,7 +3830,7 @@ Users should be able to refine, filter, compare, save, and question results.
 
 ### Phase 1: Retrieval inventory
 
-Map search, ranking, and recommendation needs across UpcubeAI, Books, Earth, Games, Jobs, Upcube Shopping, Education, Cloud, and future OS surfaces.
+Map search, ranking, and recommendation needs across UpcubeAI, Books, Earth, Games, Jobs, Upcube Commerce, Education, Cloud, and future OS surfaces.
 
 ### Phase 2: Shared search foundations
 
@@ -3890,9 +3890,9 @@ Optimization, graph mining, ranking, scheduling, recommendation systems, and age
 The AI workspace for chat, research, artifacts, approvals, tools, and execution.  
 **Explore UpcubeAI**
 
-### Upcube Shopping  
+### Upcube Commerce  
 Large-scale commerce search and product discovery.  
-**Explore Upcube Shopping**
+**Explore Upcube Commerce**
 
 ### Upcube Books  
 Book discovery, previews, saved titles, and reading paths.  
@@ -3939,7 +3939,7 @@ For UpcubeAI, machine intelligence is not one feature.
 
 It is the technical layer that can improve chat, research, artifacts, search, ranking, prediction, recommendations, voice, visual understanding, tool routing, agent planning, personalization, and future AI-native computing.
 
-Upcube Machine Intelligence is the research direction for how the Upcube ecosystem can use learning systems responsibly across its product family — from Ethen’s workspace intelligence to Upcube Shopping commerce discovery, Upcube Books, Upcube Earth, Games, Jobs, Education, Cloud, Voice, OS, and Mobile OS.
+Upcube Machine Intelligence is the research direction for how the Upcube ecosystem can use learning systems responsibly across its product family — from Ethen’s workspace intelligence to Upcube Commerce commerce discovery, Upcube Books, Upcube Earth, Games, Jobs, Education, Cloud, Voice, OS, and Mobile OS.
 
 This page does not claim that UpcubeAI has published academic papers, trained frontier models, released benchmark-leading systems, or built formal machine intelligence research teams.
 
@@ -3963,7 +3963,7 @@ Machine intelligence studies how systems learn from data, examples, interaction,
 In UpcubeAI, that can mean many things:
 
 Understanding user intent in Ethen.  
-Ranking products in Upcube Shopping.  
+Ranking products in Upcube Commerce.  
 Recommending books, games, jobs, or courses.  
 Retrieving sources for research answers.  
 Routing prompts to the right model or tool.  
@@ -4034,7 +4034,7 @@ Language intelligence should help users turn rough thoughts into usable work whi
 
 Many Upcube products depend on ranking.
 
-Upcube Shopping ranks products.  
+Upcube Commerce ranks products.  
 Jobs ranks opportunities.  
 Books ranks titles.  
 Games ranks releases and recommendations.  
@@ -4096,7 +4096,7 @@ AI products increasingly need to work across text, images, documents, maps, audi
 
 UpcubeAI’s product family naturally moves in this direction:
 
-Upcube Shopping uses product images and metadata.  
+Upcube Commerce uses product images and metadata.  
 Books uses covers, previews, and descriptions.  
 Games uses screenshots, trailers, genres, and release data.  
 Earth uses maps, terrain, overlays, and imagery.  
@@ -4426,11 +4426,11 @@ Ethen needs language understanding, retrieval, artifact generation, tool routing
 
 ---
 
-## Upcube Shopping
+## Upcube Commerce
 
 ### Intelligence for commerce discovery.
 
-Upcube Shopping needs ranking, recommendations, product understanding, image-text matching, review summarization, category organization, and decision support.
+Upcube Commerce needs ranking, recommendations, product understanding, image-text matching, review summarization, category organization, and decision support.
 
 ---
 
@@ -4578,7 +4578,7 @@ Model uncertainty, failure modes, and product maturity should remain visible in 
 
 ### Phase 1: Product intelligence inventory
 
-Map the machine intelligence needs across Ethen, Upcube Shopping, Books, Earth, Games, Jobs, Education, Cloud, Voice, OS, and Mobile OS.
+Map the machine intelligence needs across Ethen, Upcube Commerce, Books, Earth, Games, Jobs, Education, Cloud, Voice, OS, and Mobile OS.
 
 ### Phase 2: Evaluation foundations
 
@@ -4689,7 +4689,7 @@ Machine perception is the research area behind AI systems that understand images
 
 For UpcubeAI, machine perception is a foundational direction.
 
-It can help Ethen understand uploaded files, screenshots, diagrams, documents, and visual references. It can help Upcube Shopping understand product images and catalog quality. It can help Upcube Books work with covers, scans, previews, and metadata. It can help Upcube Earth reason over terrain, imagery, overlays, and spatial visuals. It can help Upcube Games understand screenshots, art, trailers, and visual discovery. It can help Upcube Voice understand speech. It can help future OS and Mobile OS experiences make visual, audio, and document context easier to work with.
+It can help Ethen understand uploaded files, screenshots, diagrams, documents, and visual references. It can help Upcube Commerce understand product images and catalog quality. It can help Upcube Books work with covers, scans, previews, and metadata. It can help Upcube Earth reason over terrain, imagery, overlays, and spatial visuals. It can help Upcube Games understand screenshots, art, trailers, and visual discovery. It can help Upcube Voice understand speech. It can help future OS and Mobile OS experiences make visual, audio, and document context easier to work with.
 
 The goal is not only to recognize objects.
 
@@ -4804,7 +4804,7 @@ Ethen should help users turn messy documents into usable work without pretending
 
 ### Making commerce discovery more visual and more precise.
 
-Upcube Shopping’s commerce direction depends on product quality.
+Upcube Commerce’s commerce direction depends on product quality.
 
 A product page is only as strong as its images, descriptions, variants, metadata, reviews, and recommendations. Machine perception can help connect product photos with catalog structure.
 
@@ -4819,7 +4819,7 @@ Support large-catalog image quality workflows.
 
 ### Product direction
 
-Upcube Shopping should make product discovery feel richer by understanding what shoppers can actually see.
+Upcube Commerce should make product discovery feel richer by understanding what shoppers can actually see.
 
 ---
 
@@ -4975,7 +4975,7 @@ Ethen support for images, screenshots, files, diagrams, PDFs, videos, tables, co
 
 ### Commerce image intelligence
 
-Product-image analysis, image quality review, visual search, attribute extraction, and image-description consistency for Upcube Shopping.
+Product-image analysis, image quality review, visual search, attribute extraction, and image-description consistency for Upcube Commerce.
 
 ### Geospatial perception
 
@@ -5033,7 +5033,7 @@ How Ethen can help describe interfaces, compare references, extract UI patterns,
 
 ### Helping catalogs become more visual and trustworthy.
 
-How Upcube Shopping can use image understanding to improve product discovery, metadata, quality checks, and visual search.
+How Upcube Commerce can use image understanding to improve product discovery, metadata, quality checks, and visual search.
 
 **Read the blog**
 
@@ -5157,11 +5157,11 @@ Ethen can use perception to understand screenshots, diagrams, documents, product
 
 ---
 
-## Upcube Shopping
+## Upcube Commerce
 
 ### Commerce image understanding.
 
-Upcube Shopping can use perception to improve product search, image quality, category assignment, attributes, related products, and PDP confidence.
+Upcube Commerce can use perception to improve product search, image quality, category assignment, attributes, related products, and PDP confidence.
 
 ---
 
@@ -5368,9 +5368,9 @@ Search, ranking, retrieval, grounded answers, recommendations, and multi-surface
 The AI workspace for chat, research, artifacts, approvals, tools, and execution.  
 **Explore UpcubeAI**
 
-### Upcube Shopping  
+### Upcube Commerce  
 Commerce discovery with product images, search, PDPs, recommendations, and catalog scale.  
-**Explore Upcube Shopping**
+**Explore Upcube Commerce**
 
 ### Upcube Earth AI  
 Spatial intelligence for terrain, maps, overlays, imagery, and place-based reasoning.  
@@ -5413,7 +5413,7 @@ Natural language processing is the research field behind systems that read, writ
 
 For UpcubeAI, natural language processing is foundational.
 
-It powers the way users talk to Ethen. It shapes how documents become artifacts. It helps research stay grounded in sources. It improves search across Books, Jobs, Games, Upcube Shopping, Earth, and Education. It supports future voice interaction. It helps products understand entities, tasks, instructions, tone, structure, and meaning.
+It powers the way users talk to Ethen. It shapes how documents become artifacts. It helps research stay grounded in sources. It improves search across Books, Jobs, Games, Upcube Commerce, Earth, and Education. It supports future voice interaction. It helps products understand entities, tasks, instructions, tone, structure, and meaning.
 
 The deeper goal is not only to process text.
 
@@ -5554,7 +5554,7 @@ Many Upcube products depend on entities:
 
 Books have titles, authors, editions, subjects, and publishers.  
 Jobs have roles, companies, skills, locations, and industries.  
-Upcube Shopping has products, brands, categories, reviews, and attributes.  
+Upcube Commerce has products, brands, categories, reviews, and attributes.  
 Games have titles, studios, franchises, platforms, and genres.  
 Earth has places, cities, countries, layers, coordinates, and landmarks.  
 Education has courses, topics, skills, modules, and learning paths.  
@@ -5909,11 +5909,11 @@ Jobs needs skill extraction, role matching, company context, job-description und
 
 ---
 
-## Upcube Shopping
+## Upcube Commerce
 
 ### Language for commerce.
 
-Upcube Shopping needs product-title parsing, attribute extraction, review summarization, category understanding, recommendations, and PDP copy.
+Upcube Commerce needs product-title parsing, attribute extraction, review summarization, category understanding, recommendations, and PDP copy.
 
 ---
 
@@ -6041,7 +6041,7 @@ Test for accuracy, completeness, tone, formatting, safety, and task fit.
 
 ### Phase 1: NLP inventory
 
-Map language tasks across Ethen, Books, Jobs, Upcube Shopping, Earth, Games, Education, Voice, Cloud, OS, and Mobile OS.
+Map language tasks across Ethen, Books, Jobs, Upcube Commerce, Earth, Games, Education, Voice, Cloud, OS, and Mobile OS.
 
 ### Phase 2: Intent and artifact generation
 
@@ -6287,7 +6287,7 @@ Many Upcube products involve systems that are too complex for plain text alone.
 
 Cloud infrastructure has compute, storage, networking, queues, costs, logs, and deployments.  
 Earth has terrain, cities, overlays, layers, and geospatial relationships.  
-Upcube Shopping has product catalogs, reviews, recommendations, variants, and category graphs.  
+Upcube Commerce has product catalogs, reviews, recommendations, variants, and category graphs.  
 Jobs has roles, skills, companies, locations, and career paths.  
 Education has courses, prerequisites, progress, and learning maps.  
 Ethen has prompts, sources, artifacts, tools, approvals, and task state.
@@ -6637,11 +6637,11 @@ Earth needs globe-first controls, layer menus, place search, overlays, contextua
 
 ---
 
-## Upcube Shopping
+## Upcube Commerce
 
 ### Commerce decision-making.
 
-Upcube Shopping needs product grids, filters, comparison surfaces, rich PDPs, review summaries, recommendation paths, and category navigation.
+Upcube Commerce needs product grids, filters, comparison surfaces, rich PDPs, review summaries, recommendation paths, and category navigation.
 
 ---
 
@@ -6783,7 +6783,7 @@ AI should make work easier to understand, not add hidden complexity.
 
 ### Phase 1: Interface inventory
 
-Map the major interaction patterns across Ethen, Earth, Upcube Shopping, Jobs, Books, Games, Education, Cloud, Voice, OS, and Mobile OS.
+Map the major interaction patterns across Ethen, Earth, Upcube Commerce, Jobs, Books, Games, Education, Cloud, Voice, OS, and Mobile OS.
 
 ### Phase 2: Workspace shell patterns
 
@@ -6890,7 +6890,7 @@ Networking is central to modern computing.
 
 Every AI workspace, cloud platform, virtual machine, data service, search system, streaming experience, and future operating system depends on networks that can move information reliably, securely, and quickly.
 
-For UpcubeAI, networking is a core research direction behind Upcube Cloud, Compute, Ethen, Voice, Earth, Upcube Shopping, Jobs, Education, and future OS products.
+For UpcubeAI, networking is a core research direction behind Upcube Cloud, Compute, Ethen, Voice, Earth, Upcube Commerce, Jobs, Education, and future OS products.
 
 The network is not only plumbing.
 
@@ -7378,11 +7378,11 @@ Earth depends on reliable delivery of maps, terrain, imagery, overlays, search r
 
 ---
 
-## Upcube Shopping
+## Upcube Commerce
 
 ### Commerce at catalog scale.
 
-Upcube Shopping depends on product images, search APIs, PDP data, reviews, recommendations, and caching strategies.
+Upcube Commerce depends on product images, search APIs, PDP data, reviews, recommendations, and caching strategies.
 
 ---
 
@@ -7484,7 +7484,7 @@ AI-assisted network operations should recommend or explain before making sensiti
 
 ### Phase 1: Network surface inventory
 
-Map network needs across UpcubeAI, Cloud, Compute, Earth, Voice, Upcube Shopping, Books, Jobs, Games, Education, OS, and Mobile OS.
+Map network needs across UpcubeAI, Cloud, Compute, Earth, Voice, Upcube Commerce, Books, Jobs, Games, Education, OS, and Mobile OS.
 
 ### Phase 2: Virtual networking model
 
@@ -7591,7 +7591,7 @@ Responsible AI is not a single feature, policy, or checklist.
 
 It is the discipline of building artificial intelligence in ways that foreground human experience, social impact, user trust, safety, fairness, transparency, robustness, privacy, accessibility, and accountability.
 
-For UpcubeAI, Responsible AI is a foundational research direction across the entire product family: Ethen, UpcubeAI, Voice, Education, Upcube Shopping, Books, Earth, Games, Jobs, Cloud, Compute, Upcube OS, and Mobile OS.
+For UpcubeAI, Responsible AI is a foundational research direction across the entire product family: Ethen, UpcubeAI, Voice, Education, Upcube Commerce, Books, Earth, Games, Jobs, Cloud, Compute, Upcube OS, and Mobile OS.
 
 The goal is not only to make AI more powerful.
 
@@ -7795,7 +7795,7 @@ Policy, approvals, logs, and human review for AI workflows that can take action.
 
 ### Fairness in discovery products
 
-Evaluation for Jobs, Education, Upcube Shopping, Books, Games, and recommendations.
+Evaluation for Jobs, Education, Upcube Commerce, Books, Games, and recommendations.
 
 ### Transparency in AI workspaces
 
@@ -7849,7 +7849,7 @@ A research note on how Ethen can keep tool use and sensitive workflows understan
 
 ### How ranking and recommendations shape opportunity.
 
-A responsible AI view of Jobs, Education, Upcube Shopping, Books, Games, and search surfaces.
+A responsible AI view of Jobs, Education, Upcube Commerce, Books, Games, and search surfaces.
 
 **Read the blog**
 
@@ -7931,7 +7931,7 @@ Opportunity discovery needs fairness-aware ranking, clear employer/listing bound
 
 Learning products need accessibility, honest education status, safe guidance, and clear boundaries around credentials.
 
-### Upcube Shopping
+### Upcube Commerce
 
 Commerce discovery needs transparent recommendations, product-data quality, review integrity, and responsible ranking.
 
@@ -8010,7 +8010,7 @@ Abuse, fraud, spam, phishing, unauthorized access, data leakage, prompt injectio
 
 Upcube Anti-Abuse, Security, and Privacy Research is the research direction for building safer AI and cloud products across the Upcube ecosystem.
 
-It connects Ethen, UpcubeAI, Voice, Cloud, Compute, Upcube Shopping, Jobs, Books, Earth, Games, Education, OS, and Mobile OS through one core principle:
+It connects Ethen, UpcubeAI, Voice, Cloud, Compute, Upcube Commerce, Jobs, Books, Earth, Games, Education, OS, and Mobile OS through one core principle:
 
 **Powerful systems need strong boundaries.**
 
@@ -8262,7 +8262,7 @@ How scoped access, clear settings, and careful retention language protect user t
 
 ### Abuse prevention in discovery systems
 
-How Jobs, Upcube Shopping, Games, Books, and recommendations can defend against spam, fraud, and manipulation.
+How Jobs, Upcube Commerce, Games, Books, and recommendations can defend against spam, fraud, and manipulation.
 
 **Read the blog**
 
@@ -8326,7 +8326,7 @@ API protection, workload boundaries, network security, tenant isolation, rate li
 
 Push-to-talk privacy, session security, audio-handling boundaries, and user-visible activation states.
 
-### Upcube Shopping
+### Upcube Commerce
 
 Fraud prevention, review integrity, product-data trust, scraping defense, and recommendation manipulation protection.
 
@@ -8405,7 +8405,7 @@ Software engineering is the discipline behind that balance.
 
 For UpcubeAI, software engineering research connects product development, AI-assisted coding, developer tools, testing, documentation, CI/CD, observability, code quality, design systems, release processes, and human collaboration.
 
-It affects every part of the ecosystem: Ethen, UpcubeAI, Cloud, Compute, Upcube Shopping, Earth, Books, Games, Jobs, Education, Voice, OS, and Mobile OS.
+It affects every part of the ecosystem: Ethen, UpcubeAI, Cloud, Compute, Upcube Commerce, Earth, Books, Games, Jobs, Education, Voice, OS, and Mobile OS.
 
 This page does not claim that UpcubeAI has published software engineering research, created formal developer productivity tools, or operates mature engineering infrastructure at global scale.
 
@@ -8735,7 +8735,7 @@ Ethen can support implementation prompts, code review, artifact generation, repo
 
 Cloud products need APIs, infrastructure code, deployment workflows, observability, and reliability engineering.
 
-### Upcube Shopping, Books, Jobs, Games, and Earth
+### Upcube Commerce, Books, Jobs, Games, and Earth
 
 Discovery products need search systems, front-end quality, data pipelines, provider integrations, and performance discipline.
 
@@ -8809,7 +8809,7 @@ Software systems are the infrastructure that make modern products possible.
 
 They include operating systems, storage systems, distributed systems, databases, queues, schedulers, observability platforms, runtimes, networking layers, reliability systems, developer platforms, and cloud control planes.
 
-For UpcubeAI, software systems research sits underneath the entire ecosystem: Upcube Cloud, Compute, Ethen, Voice, Upcube Shopping, Earth, Jobs, Books, Games, Education, Upcube OS, and Mobile OS.
+For UpcubeAI, software systems research sits underneath the entire ecosystem: Upcube Cloud, Compute, Ethen, Voice, Upcube Commerce, Earth, Jobs, Books, Games, Education, Upcube OS, and Mobile OS.
 
 This page does not claim that UpcubeAI operates warehouse-scale systems, exabyte storage, custom hardware, global control planes, or formally published systems research.
 
@@ -9161,7 +9161,7 @@ AI workflows, artifacts, retrieval, model routing, tool gateways, approval recor
 
 Real-time sessions, audio routing, session lifecycle, privacy indicators, and low-latency reliability.
 
-### Upcube Shopping
+### Upcube Commerce
 
 Large-catalog systems, product metadata, images, search indexes, PDP rendering, reviews, and recommendations.
 

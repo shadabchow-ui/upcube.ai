@@ -194,7 +194,7 @@ export function createItemListJsonLd(
     "@type": "ItemList",
     name: "UpcubeAI Product Family",
     description:
-      "Connected products spanning AI, cloud, compute, robotics, education, commerce, discovery, entertainment, and future platforms.",
+      "Connected products spanning AI, cloud, robotics, education, commerce, discovery, entertainment, and future platforms.",
     url: buildCanonicalUrl(path),
     itemListElement: items.map((item, index) => ({
       "@type": "ListItem",

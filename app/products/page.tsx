@@ -57,7 +57,7 @@ const ecosystemGroups: GroupDef[] = [
     label: "Upcube Explore",
     href: "/explore",
     description:
-      "Earth, Games, Shopping, and Jobs — discovery surfaces across the Upcube ecosystem.",
+      "Earth, Games, Commerce, and Jobs — discovery surfaces across the Upcube ecosystem.",
     productIds: ["earth", "games", "ventari", "jobs"],
   },
 ];

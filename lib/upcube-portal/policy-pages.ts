@@ -239,7 +239,7 @@ export const policyPageContentBySlug: Record<
           "Tools for small teams to draft plans, research markets, and execute faster.",
           "Skills for the AI economy through practical education and training.",
           "Career discovery through Upcube Jobs.",
-          "Commerce at scale through Upcube Shopping for large-catalog discovery.",
+          "Commerce at scale through Upcube Commerce for large-catalog discovery.",
         ],
       },
       {
@@ -277,7 +277,7 @@ export const policyPageContentBySlug: Record<
           "We are living through a defining moment in technology. AI is no longer only a research topic or a feature hidden inside software. It is becoming a new layer for work, learning, discovery, commerce, voice, infrastructure, and computing itself.",
           "That possibility is exciting. It is also serious. As AI becomes more capable, the responsibility around it becomes more important. A powerful system should not feel mysterious. A helpful assistant should not silently take control.",
           "Our belief is simple: AI should assist, complement, empower, and inspire people without taking away the clarity and control they need to trust the work.",
-          "Ethen is designed to be more than a chat box. It is an AI workspace where research, artifacts, tools, approvals, and execution can stay connected. Upcube Books, Earth, Upcube Shopping, Education, Cloud, Voice, OS, and Mobile OS each carry that same standard.",
+          "Ethen is designed to be more than a chat box. It is an AI workspace where research, artifacts, tools, approvals, and execution can stay connected. Upcube Books, Earth, Upcube Commerce, Education, Cloud, Voice, OS, and Mobile OS each carry that same standard.",
           "The goal is not to make AI feel magical. The goal is to make it useful enough, clear enough, and trustworthy enough that people can rely on it for serious work.",
         ],
       },
@@ -303,7 +303,7 @@ export const policyPageContentBySlug: Record<
         ],
         bullets: [
           "Build a serious AI workspace for turning questions into durable work.",
-          "Bring AI into discovery across Books, Earth, Games, Jobs, and Upcube Shopping.",
+          "Bring AI into discovery across Books, Earth, Games, Jobs, and Upcube Commerce.",
           "Make learning more practical through structured AI education and product training.",
           "Support builders with infrastructure through Cloud and VM Compute.",
           "Shape future computing around trust with visible controls from the beginning.",
@@ -407,9 +407,9 @@ export const policyPageContentBySlug: Record<
       },
       {
         id: "commerce",
-        title: "Upcube Shopping for commerce",
+        title: "Upcube Commerce for commerce",
         paragraphs: [
-          "Commerce teams face a simple but difficult problem: the more products they offer, the harder discovery becomes. Upcube Shopping is built for large-scale search, rich product pages, reviews, recommendations, and catalog architecture.",
+          "Commerce teams face a simple but difficult problem: the more products they offer, the harder discovery becomes. Upcube Commerce is built for large-scale search, rich product pages, reviews, recommendations, and catalog architecture.",
         ],
         bullets: [
           "Search that keeps pace with large catalogs.",

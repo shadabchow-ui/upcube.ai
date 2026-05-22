@@ -352,7 +352,7 @@ export const buildPageContent: MarketingPageContent = {
   eyebrow: "Upcube Build",
   title: "Cloud, compute, and platform tools for builders",
   lead: "Upcube Build covers the infrastructure and systems layer — cloud workflows, virtual machines, operating systems, and voice platform for teams building on the Upcube ecosystem.",
-  chips: ["Cloud infrastructure", "Compute", "Platform tools"],
+  chips: ["Cloud infrastructure", "Cloud VM", "Platform tools"],
   primaryCta: { label: "Explore Cloud", href: "/products/cloud" },
   secondaryCta: { label: "View all products", href: "/products" },
   sections: [
@@ -366,8 +366,8 @@ export const buildPageContent: MarketingPageContent = {
           href: "/products/cloud",
         },
         {
-          title: "Compute",
-          body: "Virtual machines, networking, storage, and operations for real infrastructure workloads.",
+          title: "Cloud VM",
+          body: "Virtual machines, networking, storage, and operations inside Upcube Cloud.",
           href: "/products/vm",
         },
         {

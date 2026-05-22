@@ -272,7 +272,7 @@ export const upcubeProducts: UpcubeProduct[] = [
         href: "/products/jobs",
       },
       {
-        title: "Upcube Shopping",
+        title: "Upcube Commerce",
         body: "See how discovery patterns translate into large-scale commerce and product search.",
         href: "/products/ventari",
       },
@@ -388,8 +388,8 @@ export const upcubeProducts: UpcubeProduct[] = [
         href: "/products/cloud",
       },
       {
-        title: "Compute",
-        body: "Explore the compute layer behind scalable geospatial services and spatial workloads.",
+        title: "Cloud VM",
+        body: "Explore the cloud compute layer behind scalable geospatial services and spatial workloads.",
         href: "/products/vm",
       },
     ],
@@ -544,6 +544,10 @@ export const upcubeProducts: UpcubeProduct[] = [
       "Topic and category navigation for focused browsing across technology, science, business, and global news.",
       "Briefing-style layouts designed for staying informed efficiently.",
     ],
+    heroImage: {
+      src: "/product-art/COMPOSITION-VII.jpg",
+      alt: "Abstract composition representing news intelligence and information flow.",
+    },
     signatureTitle: "News discovery organized around what matters.",
     signatureBody:
       "Upcube News is built for people who want to stay informed without drowning in noise. It combines live news discovery, AI-generated summaries, topic navigation, and a briefing-style layout into a clean reading experience.",
@@ -762,13 +766,13 @@ export const upcubeProducts: UpcubeProduct[] = [
       href: "https://cloud.upcube.ai",
     },
     secondaryAction: {
-      label: "Explore VM Compute",
+      label: "Explore Cloud VMs",
       href: "/products/vm",
     },
     heroHighlights: [
       "A clearer entry point for developer and cloud workflows.",
       "A product story that makes infrastructure easier to grasp.",
-      "Direct paths into compute-heavy products like VM Compute.",
+      "Direct paths into compute-heavy products like Cloud VMs.",
     ],
     heroImage: {
       src: "/product-art/42333816071_33313e0909_b.jpg",
@@ -802,7 +806,7 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Built for teams moving from product to infrastructure",
-        body: "Upcube Cloud is designed to sit naturally beside UpcubeAI, Upcube Shopping, and Compute — not as a disconnected admin surface, but as the systems layer behind the ecosystem.",
+        body: "Upcube Cloud is designed to sit naturally beside UpcubeAI and Upcube Commerce as the systems layer behind the ecosystem.",
       },
     ],
     techCards: [
@@ -835,7 +839,7 @@ export const upcubeProducts: UpcubeProduct[] = [
     ],
     ecosystemLinks: [
       {
-        title: "Compute",
+        title: "Cloud VM",
         body: "Go deeper into virtual machines, networking, storage, and compute workflows.",
         href: "/products/vm",
       },
@@ -845,7 +849,7 @@ export const upcubeProducts: UpcubeProduct[] = [
         href: "/products/upcube-ai",
       },
       {
-        title: "Upcube Shopping",
+        title: "Upcube Commerce",
         body: "See how cloud infrastructure supports large-scale commerce search, catalog systems, and product discovery.",
         href: "/products/ventari",
       },
@@ -858,7 +862,7 @@ export const upcubeProducts: UpcubeProduct[] = [
       href: "https://cloud.upcube.ai",
     },
     finalSecondaryAction: {
-      label: "Explore VM Compute",
+      label: "Explore Cloud VMs",
       href: "/products/vm",
     },
   },
@@ -960,7 +964,7 @@ export const upcubeProducts: UpcubeProduct[] = [
         href: "/products/university",
       },
       {
-        title: "Compute",
+        title: "Cloud VM",
         body: "Follow the infrastructure lane that supports deeper compute thinking.",
         href: "/products/vm",
       },
@@ -1071,7 +1075,7 @@ export const upcubeProducts: UpcubeProduct[] = [
         href: "/products/upcube-ai",
       },
       {
-        title: "Compute",
+        title: "Cloud VM",
         body: "Virtual machines and storage for robotics data processing and simulation workloads.",
         href: "/products/vm",
       },
@@ -1090,16 +1094,16 @@ export const upcubeProducts: UpcubeProduct[] = [
   },
   {
     slug: "ventari",
-    name: "Upcube Shopping",
+    name: "Upcube Commerce",
     eyebrow: "Marketplace-scale commerce technology",
     headline: "Commerce technology built for billion-product scale.",
     summary:
-      "Upcube Shopping is the commerce technology layer for marketplace-scale product discovery. Designed to support up to 1 billion products, it brings AI-powered search, product pages, recommendations, reviews, category systems, and brand storefront infrastructure together so large catalogs can feel clear, fast, and easier to explore.",
-    seoTitle: "Upcube Shopping | Commerce Technology for Billion-Product Scale",
+      "Upcube Commerce is the commerce technology layer for marketplace-scale product discovery. Designed to support up to 1 billion products, it brings AI-powered search, product pages, recommendations, reviews, category systems, and brand storefront infrastructure together so large catalogs can feel clear, fast, and easier to explore.",
+    seoTitle: "Upcube Commerce | Commerce Technology for Billion-Product Scale",
     seoDescription:
-      "Upcube Shopping is the commerce technology layer for marketplace-scale product discovery and brand storefronts, designed to support up to 1 billion products with AI-powered search and recommendations.",
+      "Upcube Commerce is the commerce technology layer for marketplace-scale product discovery and brand storefronts, designed to support up to 1 billion products with AI-powered search and recommendations.",
     primaryAction: {
-      label: "Explore Upcube Shopping",
+      label: "Explore Upcube Commerce",
       href: "https://ventari.net",
     },
     secondaryAction: {
@@ -1113,16 +1117,16 @@ export const upcubeProducts: UpcubeProduct[] = [
     ],
     heroImage: {
       src: "/product-art/piet_mondrian_2_tableau_i.jpg",
-      alt: "Structured geometric composition for Upcube Shopping.",
+      alt: "Structured geometric composition for Upcube Commerce.",
     },
     signatureTitle:
-      "Shopping technology that stays clear, even when the catalog gets massive.",
+      "Commerce technology that stays clear, even when the catalog gets massive.",
     signatureBody:
-      "Upcube Shopping is designed for brands and marketplaces that want fast search, rich product pages, smart categories, and product discovery that still feels refined at scale.",
+      "Upcube Commerce is designed for brands and marketplaces that want fast search, rich product pages, smart categories, and product discovery that still feels refined at scale.",
     signatureCards: [
       {
         title: "Search designed for billion-product catalogs",
-        body: "Upcube Shopping is built around large-catalog readiness, so discovery stays useful as product choice expands.",
+        body: "Upcube Commerce is built around large-catalog readiness, so discovery stays useful as product choice expands.",
       },
       {
         title: "Product pages that make decisions easier",
@@ -1130,7 +1134,7 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Categories, reviews, and recommendations working together",
-        body: "Upcube Shopping brings each part of the shopping journey into one connected flow, keeping momentum alive from search to product detail.",
+        body: "Upcube Commerce brings each part of the commerce journey into one connected flow, keeping momentum alive from search to product detail.",
       },
     ],
     featureStories: [
@@ -1150,7 +1154,7 @@ export const upcubeProducts: UpcubeProduct[] = [
     techCards: [
       {
         title: "Catalog architecture built for scale",
-        body: "Upcube Shopping is built with large-catalog growth in mind — from taxonomy and search to image quality, metadata, and product structure.",
+        body: "Upcube Commerce is built with large-catalog growth in mind — from taxonomy and search to image quality, metadata, and product structure.",
       },
       {
         title: "Search and category depth",
@@ -1158,7 +1162,7 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Deferred storefront composition",
-        body: "The product direction emphasizes strong PDPs and related sections without letting secondary content slow down the main shopping experience.",
+        body: "The product direction emphasizes strong PDPs and related sections without letting secondary content slow down the main commerce experience.",
       },
     ],
     useCases: [
@@ -1182,21 +1186,21 @@ export const upcubeProducts: UpcubeProduct[] = [
         href: "/products/cloud",
       },
       {
-        title: "Compute",
+        title: "Cloud VM",
         body: "Follow the compute layer behind large-catalog and storefront workloads.",
         href: "/products/vm",
       },
       {
         title: "UpcubeAI",
-        body: "Connect shopping, research, product workflows, and decision-making inside the broader ecosystem.",
+        body: "Connect commerce, research, product workflows, and decision-making inside the broader ecosystem.",
         href: "/products/upcube-ai",
       },
     ],
     finalCtaTitle: "Commerce infrastructure designed for real catalog scale.",
     finalCtaBody:
-      "Upcube Shopping is built to make search, categories, reviews, recommendations, and PDP quality feel like one premium commerce experience.",
+      "Upcube Commerce is built to make search, categories, reviews, recommendations, and PDP quality feel like one premium commerce experience.",
     finalPrimaryAction: {
-      label: "Explore Upcube Shopping",
+      label: "Explore Upcube Commerce",
       href: "https://ventari.net",
     },
     finalSecondaryAction: {
@@ -1206,15 +1210,15 @@ export const upcubeProducts: UpcubeProduct[] = [
   },
   {
     slug: "vm",
-    name: "Compute",
-    eyebrow: "Virtual machines and control plane",
+    name: "Cloud VM",
+    eyebrow: "Virtual machines inside Upcube Cloud",
     headline:
-      "Compute infrastructure designed to make virtual machines, networking, storage, and operations easier to reason about.",
+      "Cloud Virtual Machines with networking, storage, and operations in the Cloud console.",
     summary:
-      "Compute is the cloud compute product in the ecosystem, built around instance lifecycle, storage, networking, jobs, repair loops, and scalable systems language that still reads clearly in public.",
-    seoTitle: "Compute | Virtual Machine Cloud Compute Platform",
+      "Cloud VM is the virtual machine product inside Upcube Cloud, built around instance lifecycle, storage, networking, jobs, repair loops, and scalable systems language that still reads clearly in public.",
+    seoTitle: "Cloud VM | Virtual Machine Platform inside Upcube Cloud",
     seoDescription:
-      "Compute is a virtual machine cloud compute platform for lifecycle control, networking, storage, jobs, and repair-oriented infrastructure.",
+      "Cloud VM is the virtual machine platform inside Upcube Cloud for lifecycle control, networking, storage, jobs, and repair-oriented infrastructure.",
     primaryAction: {
       label: "Open Upcube Cloud",
       href: "https://cloud.upcube.ai",
@@ -1230,14 +1234,14 @@ export const upcubeProducts: UpcubeProduct[] = [
     ],
     heroImage: {
       src: "/product-art/COMPOSITION-VII.jpg",
-      alt: "Expressive abstract composition representing compute scale.",
+      alt: "Expressive abstract composition representing cloud compute scale.",
     },
     availabilityNote:
-      "Compute launches through Upcube Cloud, giving the broader cloud experience a direct path into compute.",
+      "Cloud VM launches through Upcube Cloud, giving the broader cloud experience a direct path into virtual machines.",
     signatureTitle:
-      "A compute product that treats infrastructure like a real system, not a demo.",
+      "Cloud VMs that treat infrastructure like a real system, not a demo.",
     signatureBody:
-      "Compute is built around the hard parts that make cloud platforms serious: lifecycle control, durable state, storage, networking, scheduling, repair, and the long-running jobs that tie them together.",
+      "Cloud VM is built around the hard parts that make cloud platforms serious: lifecycle control, durable state, storage, networking, scheduling, repair, and the long-running jobs that tie them together.",
     signatureCards: [
       {
         title: "Virtual machines with durable identity",
@@ -1245,7 +1249,7 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Storage and networking as first-class parts of the experience",
-        body: "Disks, IPs, networks, and routing belong inside the same product narrative as compute instead of feeling bolted on after the fact.",
+        body: "Disks, IPs, networks, and routing belong inside the same product narrative as cloud compute instead of feeling bolted on after the fact.",
       },
       {
         title: "Async operations that match how infrastructure really behaves",
@@ -1255,7 +1259,7 @@ export const upcubeProducts: UpcubeProduct[] = [
     featureStories: [
       {
         title: "Compute that keeps pace with real control-plane work",
-        body: "Compute is shaped around instance lifecycle admission, scheduling, host coordination, and repair instead of a shallow create-delete demo story.",
+        body: "Cloud VM is shaped around instance lifecycle admission, scheduling, host coordination, and repair instead of a shallow create-delete demo story.",
       },
       {
         title: "Storage and snapshots that belong in the conversation",
@@ -1282,7 +1286,7 @@ export const upcubeProducts: UpcubeProduct[] = [
     ],
     useCases: [
       {
-        title: "Launch compute with more confidence",
+        title: "Launch cloud VMs with more confidence",
         body: "Use a product built around instance durability, job tracking, and operational visibility instead of fragile one-shot actions.",
       },
       {
@@ -1297,13 +1301,13 @@ export const upcubeProducts: UpcubeProduct[] = [
     ecosystemLinks: [
       {
         title: "Upcube Cloud",
-        body: "See the broader cloud entry point that Compute plugs into.",
+        body: "See the broader cloud entry point that Cloud VM operates inside.",
         href: "/products/cloud",
       },
       {
-        title: "Upcube Shopping",
-        body: "Follow how scalable commerce can depend on stronger compute systems.",
-        href: "/products/ventari",
+        title: "Upcube Commerce",
+        body: "Follow how scalable commerce can depend on stronger cloud compute systems.",
+        href: "/products/shopping",
       },
       {
         title: "Upcube Earth",
@@ -1312,9 +1316,9 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
     ],
     finalCtaTitle:
-      "Bring clearer thinking to compute, storage, and networking.",
+      "Bring clearer thinking to cloud compute, storage, and networking.",
     finalCtaBody:
-      "Compute is designed for teams that want infrastructure products to feel serious, coherent, and ready to scale.",
+      "Cloud VM is designed for teams that want infrastructure products to feel serious, coherent, and ready to scale.",
     finalPrimaryAction: {
       label: "Open Upcube Cloud",
       href: "https://cloud.upcube.ai",

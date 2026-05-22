@@ -24,7 +24,7 @@ export type FeatureBand = {
 };
 
 export const homeBuildSectionIntro =
-  "The ecosystem spans AI workspaces, cloud infrastructure, compute, robotics, education, commerce, spatial exploration, entertainment, and next-generation operating systems.";
+  "The ecosystem spans AI workspaces, cloud infrastructure, robotics, education, commerce, spatial exploration, entertainment, and next-generation operating systems.";
 
 export const homeCapabilityPoints: HomeProofPoint[] = [
   {
@@ -42,7 +42,7 @@ export const homeCapabilityPoints: HomeProofPoint[] = [
     description:
       "Commerce technology for marketplace-scale discovery. Built for billion-product catalogs with AI-powered search, product pages, reviews, recommendations, and brand storefront infrastructure.",
     href: "/products/shopping",
-    links: [{ label: "Shopping", href: "/products/shopping" }],
+    links: [{ label: "Commerce", href: "/products/shopping" }],
   },
   {
     title: "Discovery",
@@ -70,7 +70,7 @@ export const homeCapabilityPoints: HomeProofPoint[] = [
     href: "/products/cloud",
     links: [
       { label: "Cloud", href: "/products/cloud" },
-      { label: "Compute", href: "/products/vm" },
+      { label: "Cloud VM", href: "/products/vm" },
     ],
   },
   {
@@ -88,9 +88,9 @@ export const homeCapabilityPoints: HomeProofPoint[] = [
     links: [{ label: "Games", href: "/products/games" }],
   },
   {
-    title: "Computing",
+    title: "Platforms",
     description:
-      "A future direction for intelligent systems. Compute, OS, and Mobile OS define a broader path toward AI-native operating systems, virtualization, and next-generation computing.",
+      "A future direction for intelligent systems. OS and Mobile OS define a broader path toward AI-native operating systems and next-generation computing.",
     href: "/products/upcube-os",
     links: [
       { label: "OS", href: "/products/upcube-os" },
@@ -165,19 +165,19 @@ export const featureBands: FeatureBand[] = [
     tone: "green",
   },
   {
-    title: "Shopping",
+    title: "Commerce",
     description:
       "Commerce technology for marketplace-scale product discovery with AI-powered search and brand storefronts.",
     href: "/products/shopping",
-    cta: "Explore Shopping",
+    cta: "Explore Commerce",
     tone: "amber",
   },
   {
-    title: "Compute",
+    title: "Cloud VM",
     description:
-      "Virtual machines, networking, storage, and operations for the systems layer behind the ecosystem.",
+      "Virtual machines, networking, storage, and operations inside Upcube Cloud.",
     href: "/products/vm",
-    cta: "Learn more",
+    cta: "Explore Cloud VMs",
     tone: "blue",
   },
   {
@@ -231,7 +231,7 @@ export const stories: HomeLinkItem[] = [
     tag: "AI workspace",
   },
   {
-    title: "Upcube Shopping commerce launch",
+    title: "Upcube Commerce launch",
     description:
       "A commerce technology story built around marketplace-scale search, product discovery, and brand storefront infrastructure.",
     href: "/news/ventari-launch",

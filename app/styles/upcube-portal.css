@@ -939,6 +939,7 @@ body:has(.uc-page) .commerce-navbar {
   height: clamp(2.5rem, 4vw, 2.75rem);
   display: block;
   object-fit: contain;
+  background: url("/brand/logo-mark.png") center / contain no-repeat;
 }
 
 .uc-footer-brand-text {
@@ -1425,6 +1426,53 @@ body:has(.uc-page) .commerce-navbar {
   list-style: disc;
 }
 
+/* Black-surface contrast lock — keeps text/icons white on intentionally black surfaces in light mode */
+
+html[data-theme="light"] .uc-news-card,
+html[data-theme="light"] .uc-news-card--compact {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+html[data-theme="light"] .uc-news-card__title {
+  color: #ffffff;
+}
+
+html[data-theme="light"] .uc-news-card__excerpt,
+html[data-theme="light"] .uc-news-card p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+html[data-theme="light"] .uc-news-card__meta .uc-eyebrow,
+html[data-theme="light"] .uc-news-card .uc-eyebrow,
+html[data-theme="light"] .uc-news-card small {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+html[data-theme="light"] .uc-news-card__link {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+html[data-theme="light"] .uc-news-card__link:hover,
+html[data-theme="light"] .uc-news-card__link:focus-visible {
+  color: #ffffff;
+}
+
+html[data-theme="light"] .uc-longform-index-card {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+html[data-theme="light"] .uc-longform-index-card-title {
+  color: #ffffff;
+}
+
+html[data-theme="light"] .uc-longform-index-card-desc {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+html[data-theme="light"] .uc-longform-index-card-order {
+  color: rgba(255, 255, 255, 0.52);
+}
+
 /* Light mode header + footer overrides */
 
 html[data-theme="light"] .uc-nav-link,
@@ -1445,6 +1493,15 @@ html[data-theme="light"] .uc-header {
   border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
+html[data-theme="light"] .uc-theme-toggle {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+html[data-theme="light"] .uc-theme-toggle:hover,
+html[data-theme="light"] .uc-theme-toggle:focus-visible {
+  color: #ffffff;
+}
+
 html[data-theme="light"] .uc-search-trigger {
   color: rgba(255, 255, 255, 0.75);
   border-color: rgba(255, 255, 255, 0.15);
@@ -1456,21 +1513,47 @@ html[data-theme="light"] .uc-search-trigger[aria-expanded="true"] {
   background: rgba(255, 255, 255, 0.1);
 }
 
-html[data-theme="light"] .uc-button {
-  color: rgba(255, 255, 255, 0.75);
-  border-color: rgba(255, 255, 255, 0.15);
+html[data-theme="light"] .uc-page .uc-button,
+html[data-theme="light"] main[data-product] .uc-button {
+  color: #111111;
+  border-color: rgba(17, 17, 17, 0.22);
+  background: #ffffff;
 }
 
-html[data-theme="light"] .uc-button[data-variant="solid"] {
-  background: rgba(255, 255, 255, 0.1);
+html[data-theme="light"] .uc-page .uc-button[data-variant="solid"],
+html[data-theme="light"] main[data-product] .uc-button[data-variant="solid"] {
+  background: #050505;
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: #050505;
 }
 
-html[data-theme="light"] .uc-button[data-variant="solid"]:hover,
-html[data-theme="light"] .uc-button[data-variant="solid"]:focus-visible {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.3);
+html[data-theme="light"] .uc-page .uc-button[data-variant="solid"]:hover,
+html[data-theme="light"]
+  .uc-page
+  .uc-button[data-variant="solid"]:focus-visible,
+html[data-theme="light"]
+  main[data-product]
+  .uc-button[data-variant="solid"]:hover,
+html[data-theme="light"]
+  main[data-product]
+  .uc-button[data-variant="solid"]:focus-visible {
+  background: #202020;
+  border-color: #202020;
+}
+
+html[data-theme="light"] .uc-page .uc-button:not([data-variant="solid"]):hover,
+html[data-theme="light"]
+  .uc-page
+  .uc-button:not([data-variant="solid"]):focus-visible,
+html[data-theme="light"]
+  main[data-product]
+  .uc-button:not([data-variant="solid"]):hover,
+html[data-theme="light"]
+  main[data-product]
+  .uc-button:not([data-variant="solid"]):focus-visible {
+  background: #f2f2f2;
+  color: #000000;
+  border-color: rgba(17, 17, 17, 0.34);
 }
 
 html[data-theme="light"] .uuh-launcher-trigger {
@@ -1482,6 +1565,23 @@ html[data-theme="light"] .uuh-launcher-trigger:hover,
 html[data-theme="light"] .uuh-launcher-trigger[aria-expanded="true"] {
   color: #ffffff;
   background: rgba(255, 255, 255, 0.1);
+}
+
+.uc-header .uuh-launcher-trigger {
+  color: rgba(255, 255, 255, 0.86) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.uc-header .uuh-launcher-trigger:hover,
+.uc-header .uuh-launcher-trigger:focus-visible,
+.uc-header .uuh-launcher-trigger[aria-expanded="true"] {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.26) !important;
+}
+
+.uc-header .uuh-launcher-dot {
+  background: currentColor !important;
 }
 
 html[data-theme="light"] .uc-mobile-menu-button {

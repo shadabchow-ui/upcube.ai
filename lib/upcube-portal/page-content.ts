@@ -298,7 +298,7 @@ Create mission replay, fleet observability, incident evidence, and policy-aware 
 
 ### Commerce and Discovery
 
-Shape the shopping, books, games, earth, and jobs discovery experiences. Build products that help people explore large information spaces with clarity.
+Shape the commerce, books, games, earth, and jobs discovery experiences. Build products that help people explore large information spaces with clarity.
 
 ### Education Systems
 
@@ -361,13 +361,13 @@ Each product has its own identity within the Upcube family:
 
 - AI: Ethen and UpcubeAI workspace
 - Cloud: Upcube Cloud infrastructure
-- Compute: Virtual machines and operations
+- Cloud VM: Cloud virtual machines and operations
 - Robotics: Robotics operations software
 - Earth: Spatial discovery
 - Books: Knowledge discovery
 - Games: Entertainment discovery
 - Jobs: Opportunity discovery
-- Shopping: Commerce technology
+- Commerce: Commerce technology
 - Quantum: Quantum computing workspace
 - Voice: Voice platform
 - Education: Learning platform
@@ -415,7 +415,7 @@ It can help teams understand complex information. It can turn scattered research
 
 UpcubeAI is building a product family for that future.
 
-From Ethen’s AI workspace to Upcube Education, Cloud, Ventari, Jobs, Voice, Books, Earth, Games, VM Compute, and future computing surfaces, UpcubeAI is designed to help organizations use AI in practical, responsible, and connected ways.
+From Ethen’s AI workspace to Upcube Education, Cloud, Ventari, Jobs, Voice, Books, Earth, Games, Cloud VM, and future computing surfaces, UpcubeAI is designed to help organizations use AI in practical, responsible, and connected ways.
 
 Not as a disconnected tool.  
 Not as another dashboard people forget to use.  
@@ -580,7 +580,7 @@ Draft website copy, documentation, onboarding flows, customer support material, 
 
 ### Builder infrastructure
 
-Upcube Cloud and VM Compute point toward the systems layer for teams that need compute, storage, networking, and deployment workflows.
+Upcube Cloud and Cloud VM point toward the systems layer for teams that need compute, storage, networking, and deployment workflows.
 
 ---
 
@@ -608,7 +608,7 @@ Upcube Education can support AI education, product training, technical courses, 
 
 ### Build with infrastructure
 
-Upcube Cloud and VM Compute provide the direction for compute, networking, storage, and developer workflows behind more advanced systems.
+Upcube Cloud and Cloud VM provide the direction for compute, networking, storage, and developer workflows behind more advanced systems.
 
 ### Keep control visible
 
@@ -674,7 +674,7 @@ Give teams a structured way to move from basics to deeper practical use without 
 
 ---
 
-# Upcube Cloud and VM Compute
+# Upcube Cloud and Cloud VM
 
 ## Infrastructure that makes AI work possible.
 
@@ -682,7 +682,7 @@ AI products need systems behind them.
 
 Compute, storage, networking, routing, observability, deployment workflows, and developer tools all shape whether an organization can turn AI ambition into practical value.
 
-Upcube Cloud is the infrastructure destination for the Upcube ecosystem. VM Compute extends that direction into virtual machines, networking, storage, and operations.
+Upcube Cloud is the infrastructure destination for the Upcube ecosystem. Cloud VM extends that direction into virtual machines, networking, storage, and operations.
 
 ### Compute workflows
 
@@ -710,7 +710,7 @@ Commerce teams face a simple but difficult problem: the more products they offer
 
 Ventari is a premium commerce product direction built for large-scale search, categories, rich product pages, reviews, recommendations, and catalog architecture.
 
-It is designed to make shopping feel clear even when the catalog becomes massive.
+It is designed to make commerce feel clear even when the catalog becomes massive.
 
 ### Search that keeps pace
 
@@ -986,7 +986,7 @@ Our belief is simple:
 
 That belief shapes every part of the UpcubeAI ecosystem.
 
-Ethen is designed to be more than a chat box. It is an AI workspace where research, artifacts, tools, approvals, and execution can stay connected. Upcube Books is designed to make knowledge discovery feel calmer and more useful. Upcube Earth brings spatial exploration into the product family. Ventari brings AI discovery into commerce at catalog scale. Upcube Education points toward practical learning for the AI age. Upcube Cloud and VM Compute represent the systems layer behind the ecosystem. Upcube Voice, Upcube OS, and Upcube Mobile OS point toward a future where AI help is built into the devices and environments people use every day.
+Ethen is designed to be more than a chat box. It is an AI workspace where research, artifacts, tools, approvals, and execution can stay connected. Upcube Books is designed to make knowledge discovery feel calmer and more useful. Upcube Earth brings spatial exploration into the product family. Ventari brings AI discovery into commerce at catalog scale. Upcube Education points toward practical learning for the AI age. Upcube Cloud and Cloud VM represent the systems layer behind the ecosystem. Upcube Voice, Upcube OS, and Upcube Mobile OS point toward a future where AI help is built into the devices and environments people use every day.
 
 The goal is not to make AI feel magical.
 
@@ -1100,7 +1100,7 @@ Upcube Education points toward structured AI education, product training, techni
 
 ### Support builders with infrastructure
 
-Upcube Cloud and VM Compute represent the platform and systems layer needed to support more capable AI products over time.
+Upcube Cloud and Cloud VM represent the platform and systems layer needed to support more capable AI products over time.
 
 ### Shape future computing around trust
 
@@ -1316,7 +1316,7 @@ Books, Earth, Games, and Jobs help people explore knowledge, places, entertainme
 
 ### Cloud and compute
 
-Upcube Cloud and VM Compute support the infrastructure and systems layer behind the broader product family.
+Upcube Cloud and Cloud VM support the infrastructure and systems layer behind the broader product family.
 
 ### Future computing
 
@@ -1598,7 +1598,7 @@ May require terms around product listings, pricing, availability, reviews, recom
 
 ---
 
-## Upcube Cloud and VM Compute
+## Upcube Cloud and Cloud VM
 
 ### Infrastructure, compute, and developer workflows.
 
@@ -1744,7 +1744,7 @@ Support Terms
 ### Product-specific
 
 Cloud Terms  
-VM Compute Terms  
+Cloud VM Terms  
 Education Terms  
 Voice Terms  
 Books Terms  
@@ -1879,7 +1879,7 @@ Upcube Games
 Upcube Jobs  
 Upcube Cloud  
 Ventari  
-VM Compute  
+Cloud VM  
 Upcube Voice  
 Upcube Education  
 Upcube OS previews  
@@ -2116,7 +2116,7 @@ Job listings and career-related content may come from third-party sources. Upcub
 
 Commerce discovery may include product data, prices, images, descriptions, reviews, availability, recommendations, and external merchants. Product information may change and should be verified before purchase.
 
-### Upcube Cloud and VM Compute
+### Upcube Cloud and Cloud VM
 
 Cloud, compute, infrastructure, networking, storage, and virtualization features may be subject to technical limits, acceptable use requirements, security rules, and product-specific service terms.
 
@@ -2324,7 +2324,7 @@ The governing law and dispute forum.
 The final Privacy Policy.  
 The final Acceptable Use Policy, if separate.  
 The final billing, subscription, cancellation, and refund terms.  
-The final product-specific terms for Cloud, VM Compute, Education, Voice, Jobs, Books, Earth, Games, and Ventari.  
+The final product-specific terms for Cloud, Cloud VM, Education, Voice, Jobs, Books, Earth, Games, and Ventari.  
 Any required consumer protection language.  
 Any required data processing, enterprise, or API terms.  
 Legal review by qualified counsel.
@@ -2775,7 +2775,7 @@ May need disclosures for job searches, saved roles, applications, profile data, 
 
 May need disclosures for product searches, browsing history, saved products, reviews, recommendations, carts, payments, merchant links, and commerce analytics.
 
-### Upcube Cloud and VM Compute
+### Upcube Cloud and Cloud VM
 
 May need disclosures for account data, billing data, usage logs, compute metadata, networking data, storage metadata, operational logs, and support records.
 
@@ -3138,7 +3138,7 @@ Books for calmer knowledge discovery.
 Earth for spatial exploration.  
 Ventari for large-scale commerce discovery.  
 Education for AI-era learning.  
-Cloud and VM Compute for systems and infrastructure.  
+Cloud and Cloud VM for systems and infrastructure.  
 Voice, OS, and Mobile OS for future computing directions.
 
 ### Make breakthroughs broadly useful
@@ -3231,7 +3231,7 @@ That includes developers building systems, students learning technical skills, c
 
 A healthy AI ecosystem needs more than models. It needs education, infrastructure, APIs, design patterns, safety practices, evaluation methods, and accessible product experiences.
 
-Upcube Education, Cloud, VM Compute, Ethen, and future developer surfaces can help support that larger ecosystem over time.
+Upcube Education, Cloud, Cloud VM, Ethen, and future developer surfaces can help support that larger ecosystem over time.
 
 ### Work with researchers and experts
 
@@ -3315,7 +3315,7 @@ Career discovery should be direct and useful, with careful language around oppor
 
 AI commerce should make large-scale product discovery easier while keeping search, reviews, recommendations, and product detail clear.
 
-### Upcube Cloud and VM Compute
+### Upcube Cloud and Cloud VM
 
 Infrastructure products should describe compute, storage, networking, and developer workflows in clear language without overstating maturity or guarantees.
 
@@ -3758,7 +3758,7 @@ Learning products should be honest about their status. Upcube Education should n
 
 UpcubeAI is not one isolated surface. It is a product family.
 
-That creates a larger responsibility. The same care that shapes the AI workspace should influence Books, Earth, Games, Jobs, Cloud, Ventari, Voice, Education, VM Compute, Upcube OS, and Upcube Mobile OS.
+That creates a larger responsibility. The same care that shapes the AI workspace should influence Books, Earth, Games, Jobs, Cloud, Ventari, Voice, Education, Cloud VM, Upcube OS, and Upcube Mobile OS.
 
 Each product has a different job. But the standard should feel connected.
 
@@ -5166,7 +5166,7 @@ The AI workspace where users can turn spatial findings into research notes, plan
 
 The infrastructure layer for future geospatial processing, provider integrations, APIs, and scalable data workflows.
 
-### VM Compute
+### Cloud VM
 
 Compute workflows for heavier geospatial tasks, experiments, simulations, or processing pipelines.
 
@@ -5259,10 +5259,10 @@ Bring spatial research into Ethen, artifacts, planning, and workspace execution.
 Follow the infrastructure and developer layer behind scalable spatial products.  
 **Explore Cloud**
 
-### VM Compute
+### Cloud VM
 
 Explore compute workflows for systems, simulations, and geospatial processing.  
-**Explore VM Compute**
+**Explore Cloud VM**
 
 ### Societal Impact
 
@@ -5755,7 +5755,7 @@ Spatial context for access, infrastructure, environment, resilience, and public-
 
 Infrastructure direction for secure, scalable, and observable AI workflows.
 
-### VM Compute
+### Cloud VM
 
 Compute workflows for future research experiments, evaluation pipelines, and data-processing tasks.
 
@@ -5962,7 +5962,7 @@ Scientific workflows are often slow because they require moving between papers, 
 
 AI can help reduce that friction.
 
-Upcube Science AI can become a research layer across the Upcube ecosystem — connecting Ethen’s workspace, Upcube Education’s learning paths, Upcube Cloud’s infrastructure direction, VM Compute’s compute workflows, Upcube Earth AI’s spatial context, and Upcube Books’ knowledge discovery.
+Upcube Science AI can become a research layer across the Upcube ecosystem — connecting Ethen’s workspace, Upcube Education’s learning paths, Upcube Cloud’s infrastructure direction, Cloud VM’s compute workflows, Upcube Earth AI’s spatial context, and Upcube Books’ knowledge discovery.
 
 ### Research assistance
 
@@ -6474,7 +6474,7 @@ Spatial intelligence for environmental science, terrain, climate context, resili
 
 Infrastructure direction for data workflows, model experiments, APIs, evaluation, and scientific systems.
 
-### VM Compute
+### Cloud VM
 
 Compute workflows for simulations, notebooks, analysis pipelines, and future research experiments.
 
@@ -6693,7 +6693,7 @@ UpcubeAI’s sustainability research direction connects several parts of the eco
 
 Upcube Earth AI for spatial context.  
 Upcube Science AI for environmental research.  
-Upcube Cloud and VM Compute for systems and data workflows.  
+Upcube Cloud and Cloud VM for systems and data workflows.  
 Upcube Education for sustainability education.  
 Ethen for turning research into plans, reports, and artifacts.
 
@@ -7096,7 +7096,7 @@ The research layer for environmental science, complex systems, climate education
 
 The infrastructure direction for data workflows, APIs, hosting, observability, and scalable systems.
 
-### VM Compute
+### Cloud VM
 
 Compute workflows for simulations, data processing, geospatial experiments, and research pipelines.
 
@@ -7465,7 +7465,7 @@ AI should not be trusted because it sounds fluent. It should earn trust through 
 
 AI products depend on infrastructure that can route, schedule, monitor, and recover.
 
-Upcube Cloud and VM Compute create a natural research area for infrastructure algorithms: resource allocation, load balancing, storage placement, networking, autoscaling, queue management, job scheduling, model routing, and fault recovery.
+Upcube Cloud and Cloud VM create a natural research area for infrastructure algorithms: resource allocation, load balancing, storage placement, networking, autoscaling, queue management, job scheduling, model routing, and fault recovery.
 
 ### Research direction
 
@@ -7749,7 +7749,7 @@ Course recommendations, prerequisite graphs, skill progression, study plans, and
 
 ---
 
-## Upcube Cloud and VM Compute
+## Upcube Cloud and Cloud VM
 
 ### Infrastructure intelligence.
 
@@ -7920,10 +7920,10 @@ Career discovery and opportunity workflows across the Upcube ecosystem.
 Cloud infrastructure and developer workflows for scalable systems.  
 **Explore Cloud**
 
-### VM Compute
+### Cloud VM
 
 Compute, networking, storage, virtualization, and operations.  
-**Explore VM Compute**
+**Explore Cloud VM**
 
 ### AI Principles
 
@@ -8680,7 +8680,7 @@ Summarizing documents and artifacts.
 Understanding images, maps, or product photos.  
 Processing voice interaction in future devices.  
 Supporting adaptive interfaces in OS and Mobile OS.  
-Predicting system load in Cloud and VM Compute.
+Predicting system load in Cloud and Cloud VM.
 
 The deeper challenge is not simply making AI more powerful.
 
@@ -9190,7 +9190,7 @@ Voice needs speech understanding, real-time response, interruption handling, int
 
 ---
 
-## Upcube Cloud and VM Compute
+## Upcube Cloud and Cloud VM
 
 ### Intelligence for infrastructure.
 
@@ -11390,7 +11390,7 @@ Education needs course cards, learning paths, progress views, prerequisites, mod
 
 ---
 
-## Upcube Cloud and VM Compute
+## Upcube Cloud and Cloud VM
 
 ### Infrastructure visualization.
 
@@ -11606,7 +11606,7 @@ Networking is central to modern computing.
 
 Every AI workspace, cloud platform, virtual machine, data service, search system, streaming experience, and future operating system depends on networks that can move information reliably, securely, and quickly.
 
-For UpcubeAI, networking is a core research direction behind Upcube Cloud, VM Compute, Ethen, Voice, Earth, Ventari, Jobs, Education, and future OS products.
+For UpcubeAI, networking is a core research direction behind Upcube Cloud, Cloud VM, Ethen, Voice, Earth, Ventari, Jobs, Education, and future OS products.
 
 The network is not only plumbing.
 
@@ -11666,7 +11666,7 @@ Virtual networking is the foundation of modern cloud platforms.
 
 VMs, containers, databases, APIs, services, workers, queues, and storage systems all need private and public network paths. They need routing, isolation, firewalls, load balancing, DNS, service discovery, and observability.
 
-Upcube Cloud and VM Compute create a natural direction for this work.
+Upcube Cloud and Cloud VM create a natural direction for this work.
 
 ### Research direction
 
@@ -11708,11 +11708,11 @@ Users should feel that AI responds quickly and reliably, even when the system be
 
 ## 3. Data-center and compute networking direction
 
-### The systems layer behind VM Compute.
+### The systems layer behind Cloud VM.
 
 Compute is not useful unless it can communicate.
 
-VM Compute needs networking primitives that can eventually support virtual machines, storage paths, internal services, external access, management planes, and operational telemetry.
+Cloud VM needs networking primitives that can eventually support virtual machines, storage paths, internal services, external access, management planes, and operational telemetry.
 
 This page does not claim UpcubeAI operates custom data centers or large-scale interconnects.
 
@@ -11887,7 +11887,7 @@ AI should help operators understand networks better, not silently change critica
 
 Private networks, public access, firewalls, routing, DNS, load balancing, and service discovery for Upcube Cloud.
 
-### VM Compute networking
+### Cloud VM networking
 
 Virtual machine connectivity, IP management, network isolation, storage paths, and management-plane communication.
 
@@ -11937,7 +11937,7 @@ An introduction to how networks shape latency, reliability, streaming, tools, cl
 
 ### Making compute systems easier to connect and secure.
 
-A research note on private networks, public access, routing, DNS, firewalls, and VM Compute connectivity.
+A research note on private networks, public access, routing, DNS, firewalls, and Cloud VM connectivity.
 
 **Read the blog**
 
@@ -12021,7 +12021,7 @@ A future systems note on routing AI tool calls through approval, policy, securit
 
 ---
 
-## Virtual Networking for VM Compute
+## Virtual Networking for Cloud VM
 
 A future architecture note on private networks, public access, firewalls, DNS, NAT, and compute-to-storage connectivity.
 
@@ -12062,11 +12062,11 @@ Cloud requires networking for APIs, projects, compute resources, storage paths, 
 
 ---
 
-## VM Compute
+## Cloud VM
 
 ### Connected virtual machines.
 
-VM Compute needs virtual networks, IP management, firewall rules, routing, DNS, storage connectivity, and management-plane reliability.
+Cloud VM needs virtual networks, IP management, firewall rules, routing, DNS, storage connectivity, and management-plane reliability.
 
 ---
 
@@ -12200,7 +12200,7 @@ AI-assisted network operations should recommend or explain before making sensiti
 
 ### Phase 1: Network surface inventory
 
-Map network needs across UpcubeAI, Cloud, VM Compute, Earth, Voice, Ventari, Books, Jobs, Games, Education, OS, and Mobile OS.
+Map network needs across UpcubeAI, Cloud, Cloud VM, Earth, Voice, Ventari, Books, Jobs, Games, Education, OS, and Mobile OS.
 
 ### Phase 2: Virtual networking model
 
@@ -12256,10 +12256,10 @@ The future of AI needs networks that are faster, safer, more observable, and eas
 Cloud infrastructure and developer workflows for the Upcube ecosystem.  
 **Explore Cloud**
 
-### VM Compute
+### Cloud VM
 
 Compute, networking, storage, virtualization, and operations.  
-**Explore VM Compute**
+**Explore Cloud VM**
 
 ### Algorithms and Theory
 
@@ -12308,7 +12308,7 @@ Responsible AI is not a single feature, policy, or checklist.
 
 It is the discipline of building artificial intelligence in ways that foreground human experience, social impact, user trust, safety, fairness, transparency, robustness, privacy, accessibility, and accountability.
 
-For UpcubeAI, Responsible AI is a foundational research direction across the entire product family: Ethen, UpcubeAI, Voice, Education, Ventari, Books, Earth, Games, Jobs, Cloud, VM Compute, Upcube OS, and Mobile OS.
+For UpcubeAI, Responsible AI is a foundational research direction across the entire product family: Ethen, UpcubeAI, Voice, Education, Ventari, Books, Earth, Games, Jobs, Cloud, Cloud VM, Upcube OS, and Mobile OS.
 
 The goal is not only to make AI more powerful.
 
@@ -12656,7 +12656,7 @@ Commerce discovery needs transparent recommendations, product-data quality, revi
 
 Spatial products need source attribution, uncertainty, public-safety boundaries, and careful handling of sensitive location context.
 
-### Cloud and VM Compute
+### Cloud and Cloud VM
 
 Infrastructure products need security, privacy, governance, observability, and responsible automation controls.
 
@@ -12723,7 +12723,7 @@ Abuse, fraud, spam, phishing, unauthorized access, data leakage, prompt injectio
 
 Upcube Anti-Abuse, Security, and Privacy Research is the research direction for building safer AI and cloud products across the Upcube ecosystem.
 
-It connects Ethen, UpcubeAI, Voice, Cloud, VM Compute, Ventari, Jobs, Books, Earth, Games, Education, OS, and Mobile OS through one core principle:
+It connects Ethen, UpcubeAI, Voice, Cloud, Cloud VM, Ventari, Jobs, Books, Earth, Games, Education, OS, and Mobile OS through one core principle:
 
 **Powerful systems need strong boundaries.**
 
@@ -12856,7 +12856,7 @@ Privacy should be clear, specific, and backed by actual product behavior.
 
 ### Protecting data, systems, and infrastructure.
 
-Upcube Cloud, VM Compute, Ethen, and future OS products require strong information-security foundations.
+Upcube Cloud, Cloud VM, Ethen, and future OS products require strong information-security foundations.
 
 ### Research direction
 
@@ -12931,7 +12931,7 @@ Detect abusive content, fake accounts, deceptive listings, spam workflows, and m
 
 ### API and cloud abuse prevention
 
-Protect Upcube Cloud and VM Compute from overload, scraping, credential abuse, and prohibited workloads.
+Protect Upcube Cloud and Cloud VM from overload, scraping, credential abuse, and prohibited workloads.
 
 ### Permission and access control UX
 
@@ -13031,7 +13031,7 @@ A future research direction for measuring system health without over-collecting 
 
 Tool approvals, prompt-injection defense, file handling, source trust, artifact safety, and workspace access.
 
-### Upcube Cloud and VM Compute
+### Upcube Cloud and Cloud VM
 
 API protection, workload boundaries, network security, tenant isolation, rate limits, and abuse detection.
 
@@ -13114,7 +13114,7 @@ Software engineering is the discipline behind that balance.
 
 For UpcubeAI, software engineering research connects product development, AI-assisted coding, developer tools, testing, documentation, CI/CD, observability, code quality, design systems, release processes, and human collaboration.
 
-It affects every part of the ecosystem: Ethen, UpcubeAI, Cloud, VM Compute, Ventari, Earth, Books, Games, Jobs, Education, Voice, OS, and Mobile OS.
+It affects every part of the ecosystem: Ethen, UpcubeAI, Cloud, Cloud VM, Ventari, Earth, Books, Games, Jobs, Education, Voice, OS, and Mobile OS.
 
 This page does not claim that UpcubeAI has published software engineering research, created formal developer productivity tools, or operates mature engineering infrastructure at global scale.
 
@@ -13440,7 +13440,7 @@ A future research direction for connecting specs, source files, tests, issues, P
 
 Ethen can support implementation prompts, code review, artifact generation, repo summaries, and validation reporting.
 
-### Upcube Cloud and VM Compute
+### Upcube Cloud and Cloud VM
 
 Cloud products need APIs, infrastructure code, deployment workflows, observability, and reliability engineering.
 
@@ -13513,7 +13513,7 @@ Software systems are the infrastructure that make modern products possible.
 
 They include operating systems, storage systems, distributed systems, databases, queues, schedulers, observability platforms, runtimes, networking layers, reliability systems, developer platforms, and cloud control planes.
 
-For UpcubeAI, software systems research sits underneath the entire ecosystem: Upcube Cloud, VM Compute, Ethen, Voice, Ventari, Earth, Jobs, Books, Games, Education, Upcube OS, and Mobile OS.
+For UpcubeAI, software systems research sits underneath the entire ecosystem: Upcube Cloud, Cloud VM, Ethen, Voice, Ventari, Earth, Jobs, Books, Games, Education, Upcube OS, and Mobile OS.
 
 This page does not claim that UpcubeAI operates warehouse-scale systems, exabyte storage, custom hardware, global control planes, or formally published systems research.
 
@@ -13543,7 +13543,7 @@ Maps need asset delivery.
 Commerce needs catalog infrastructure.  
 Jobs need fresh listings.  
 Education needs progress systems.  
-VM Compute needs orchestration.  
+Cloud VM needs orchestration.  
 Operating systems need process, permission, and update models.
 
 Software systems determine whether those products remain fast, reliable, secure, and understandable as they grow.
@@ -13606,7 +13606,7 @@ Stored work should remain usable, secure, and understandable over time.
 
 A control plane is the system that manages resources: projects, users, permissions, VMs, networks, storage, jobs, tools, models, policies, and deployments.
 
-Upcube Cloud and VM Compute need this discipline.
+Upcube Cloud and Cloud VM need this discipline.
 
 ### Research direction
 
@@ -13822,7 +13822,7 @@ A future technical overview of distributed systems, storage, control planes, obs
 **Status:** Planned technical note  
 **Preview**
 
-### Control Plane Architecture for VM Compute
+### Control Plane Architecture for Cloud VM
 
 A future architecture note on resources, networks, storage, lifecycle, policy, and management APIs for compute products.
 
@@ -13853,7 +13853,7 @@ A future research direction for permissions, activity histories, diagnostics, lo
 
 Control planes, APIs, resource management, networking, storage, observability, and reliability.
 
-### VM Compute
+### Cloud VM
 
 Virtual machines, networking, storage, lifecycle state, capacity planning, and operational dashboards.
 
@@ -13901,7 +13901,7 @@ Build logs, metrics, traces, dashboards, and incident reporting for product and 
 
 ### Phase 4: Control plane direction
 
-Design resource models for Cloud, VM Compute, AI tools, workspaces, and organization-level controls.
+Design resource models for Cloud, Cloud VM, AI tools, workspaces, and organization-level controls.
 
 ### Phase 5: Reliability engineering
 

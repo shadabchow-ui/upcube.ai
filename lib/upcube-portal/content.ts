@@ -164,7 +164,7 @@ export const productScaleStats: ProductScaleStat[] = [
   { id: "books-scale", label: "Books", value: "50M books" },
   { id: "games-scale", label: "Games", value: "400K games" },
   { id: "news-scale", label: "News", value: "Live news" },
-  { id: "ventari-scale", label: "Shopping", value: "1B product scale" },
+  { id: "ventari-scale", label: "Commerce", value: "1B product scale" },
   { id: "jobs-scale", label: "Jobs", value: "8M jobs" },
   { id: "university-scale", label: "Education", value: "100K courses" },
   { id: "robotics-scale", label: "Robotics", value: "Robot operations" },
@@ -230,9 +230,9 @@ export {
 export const upcubeCompanyIdentity: UpcubeCompanyIdentity = {
   descriptor: "Technology company",
   tagline:
-    "A connected family of products across AI, cloud, compute, robotics, education, commerce, and discovery.",
+    "A connected family of products across AI, cloud, robotics, education, commerce, and discovery.",
   oneLiner:
-    "A technology company building a connected family of products across AI, cloud, compute, robotics, education, commerce, spatial exploration, entertainment, jobs, books, voice, and next-generation operating systems.",
+    "A technology company building a connected family of products across AI, cloud, robotics, education, commerce, spatial exploration, entertainment, jobs, books, voice, and next-generation operating systems.",
   mission:
     "Make advanced technology feel clear, connected, and useful across the products people rely on every day.",
   vision:
@@ -244,7 +244,6 @@ export const upcubeCompanyIdentity: UpcubeCompanyIdentity = {
   pillars: [
     "AI & Intelligence",
     "Cloud & Infrastructure",
-    "Compute",
     "Robotics & Physical AI",
     "Commerce",
     "Discovery",
@@ -284,7 +283,7 @@ export const portalAppLinks: PortalNavItem[] = [
   { id: "app-jobs", label: "Jobs", href: UPCUBE_JOBS_URL },
   { id: "app-cloud", label: "Cloud", href: UPCUBE_CLOUD_URL },
   { id: "app-quantum", label: "Quantum", href: UPCUBE_QUANTUM_URL },
-  { id: "app-ventari", label: "Shopping", href: UPCUBE_VENTARI_URL },
+  { id: "app-ventari", label: "Commerce", href: UPCUBE_VENTARI_URL },
 ];
 
 const portalHomepageStatusById: Record<
@@ -401,23 +400,23 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
   },
   ventari: {
     id: "ventari",
-    title: "Shopping",
+    title: "Commerce",
     description:
       "Commerce technology for marketplace-scale product discovery. Designed to support up to 1 billion products with AI-powered search, PDPs, reviews, recommendations, and brand storefront infrastructure.",
     href: "/products/shopping",
     tag: "AI commerce",
     category: "Commerce",
-    ctaLabel: "Explore Shopping",
+    ctaLabel: "Explore Commerce",
   },
   vm: {
     id: "vm",
-    title: "Compute",
+    title: "Cloud VM",
     description:
-      "Virtual machines, networking, storage, and compute workflows for the systems layer behind the Upcube ecosystem.",
+      "Cloud VMs, networking, storage, and compute workflows for the systems layer behind the Upcube ecosystem.",
     href: "/products/vm",
-    tag: "Compute",
+    tag: "Cloud Infrastructure",
     category: "Infrastructure",
-    ctaLabel: "Learn more",
+    ctaLabel: "Explore Cloud VMs",
   },
   "upcube-os": {
     id: "upcube-os",
@@ -983,7 +982,7 @@ export const portalMenuGroups: PortalMenuGroup[] = [
         label: "Explore",
         href: "/explore",
         description:
-          "Earth, News, Games, Shopping, and Jobs: discovery surfaces across Upcube.",
+          "Earth, News, Games, Commerce, and Jobs: discovery surfaces across Upcube.",
       },
       {
         id: "products-overview-menu",
@@ -1319,9 +1318,9 @@ export const companyWorkAreas: PortalBullet[] = [
   },
   {
     id: "work-compute",
-    label: "Compute Platform",
+    label: "Cloud VMs",
     detail:
-      "Virtual machines, storage, networking, and operations for workloads that need control and scale.",
+      "Virtual machines, storage, networking, and operations inside Upcube Cloud.",
   },
   {
     id: "work-robotics",
@@ -1354,7 +1353,7 @@ export const companyEcosystem: PortalCardItem[] = [
   },
   {
     id: "eco-ventari",
-    title: "Shopping",
+    title: "Commerce",
     description:
       "Commerce technology with marketplace-scale product discovery, AI-powered search, and brand storefront infrastructure.",
     href: "/products/shopping",
@@ -1378,11 +1377,11 @@ export const companyEcosystem: PortalCardItem[] = [
   },
   {
     id: "eco-compute",
-    title: "Compute",
+    title: "Cloud VM",
     description:
       "Virtual machines, networking, storage, and compute workflows for the systems layer.",
     href: "/products/vm",
-    tag: "Compute Platform",
+    tag: "Cloud Infrastructure",
   },
   {
     id: "eco-robotics",
@@ -1556,7 +1555,7 @@ export const careersOpenRoles: PortalRoleCard[] = [
     team: "Commerce and Discovery",
     title: "Build commerce and discovery products",
     summary:
-      "Shape the shopping, books, games, earth, and jobs discovery experiences.",
+      "Shape the commerce, books, games, earth, and jobs discovery experiences.",
     mode: "Hiring details not provided.",
   },
   {
@@ -1638,9 +1637,9 @@ export const contactInquiryTypes: ContactInquiryType[] = [
   { value: "security", label: "Security" },
   { value: "careers", label: "Careers" },
   { value: "education", label: "Education" },
-  { value: "cloud-compute", label: "Cloud / Compute" },
+  { value: "cloud-compute", label: "Cloud" },
   { value: "ai-voice", label: "AI / Voice" },
-  { value: "commerce", label: "Shopping / Commerce" },
+  { value: "commerce", label: "Commerce" },
   { value: "jobs", label: "Jobs" },
   { value: "books", label: "Books" },
   { value: "earth", label: "Earth" },
@@ -1660,8 +1659,8 @@ export const contactProductOptions: ContactProductOption[] = [
   { value: "jobs", label: "Jobs" },
   { value: "cloud", label: "Cloud" },
   { value: "quantum", label: "Quantum" },
-  { value: "shopping", label: "Shopping" },
-  { value: "compute", label: "Compute" },
+  { value: "shopping", label: "Commerce" },
+  { value: "compute", label: "Cloud VM" },
   { value: "os", label: "OS" },
   { value: "mobile-os", label: "Mobile OS" },
   { value: "robotics", label: "Robotics" },

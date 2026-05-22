@@ -86,7 +86,7 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
     ],
     relatedProducts: [
       { name: "Upcube Cloud", href: "/products/cloud" },
-      { name: "VM Compute", href: "/products/vm" },
+      { name: "Cloud VM", href: "/products/vm" },
       { name: "Upcube OS", href: "/products/upcube-os" },
     ],
   },
@@ -187,38 +187,38 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
     relatedProducts: [
       { name: "UpcubeAI", href: "/products/upcube-ai" },
       { name: "Education", href: "/products/university" },
-      { name: "Compute", href: "/products/vm" },
+      { name: "Cloud VM", href: "/products/vm" },
     ],
   },
   {
     slug: "ventari-launch",
     href: "/news/ventari-launch",
-    productName: "Upcube Shopping",
+    productName: "Upcube Commerce",
     category: "Product Launch",
     dateLabel: "Recent update",
     headline:
-      "Upcube Shopping launches commerce technology for marketplace-scale product discovery.",
+      "Upcube Commerce launches commerce technology for marketplace-scale product discovery.",
     excerpt:
-      "Upcube Shopping brings AI-powered search, product pages, reviews, recommendations, category systems, and brand storefront infrastructure into a commerce technology layer designed to support up to 1 billion products.",
+      "Upcube Commerce brings AI-powered search, product pages, reviews, recommendations, category systems, and brand storefront infrastructure into a commerce technology layer designed to support up to 1 billion products.",
     heroSummary:
-      "Upcube Shopping is the commerce technology layer for marketplace-scale product discovery: AI-powered catalog search, product detail pages, reviews, recommendations, category systems, and brand storefront infrastructure built for billion-product scale.",
-    primaryCtaLabel: "Explore Upcube Shopping",
+      "Upcube Commerce is the commerce technology layer for marketplace-scale product discovery: AI-powered catalog search, product detail pages, reviews, recommendations, category systems, and brand storefront infrastructure built for billion-product scale.",
+    primaryCtaLabel: "Explore Upcube Commerce",
     primaryCtaHref: "https://ventari.net",
     productPageUrl: "/products/shopping",
     launchUrl: "https://ventari.net",
     seoTitle:
-      "Upcube Shopping Launch | Commerce Technology for Billion-Product Scale",
+      "Upcube Commerce Launch | Commerce Technology for Billion-Product Scale",
     seoDescription:
-      "Read the Upcube Shopping launch story for commerce technology, AI-powered product discovery, catalog search, PDPs, reviews, recommendations, and brand storefront infrastructure designed for marketplace-scale.",
+      "Read the Upcube Commerce launch story for commerce technology, AI-powered product discovery, catalog search, PDPs, reviews, recommendations, and brand storefront infrastructure designed for marketplace-scale.",
     finalCtaTitle:
       "Commerce infrastructure that stays clear, even at massive catalog scale.",
     finalCtaBody:
-      "Upcube Shopping is positioned as commerce technology built for search, comparison, and momentum across very large product catalogs and brand storefronts.",
+      "Upcube Commerce is positioned as commerce technology built for search, comparison, and momentum across very large product catalogs and brand storefronts.",
     sections: [
       {
         eyebrow: "The launch",
         title: "Commerce technology built for billion-product scale",
-        body: "Upcube Shopping is designed for marketplace-scale product discovery. AI-powered search, categories, product detail pages, reviews, and recommendations work together to turn browsing into a guided shopping experience. Designed to support up to 1 billion products.",
+        body: "Upcube Commerce is designed for marketplace-scale product discovery. AI-powered search, categories, product detail pages, reviews, and recommendations work together to turn browsing into a guided commerce experience. Designed to support up to 1 billion products.",
       },
       {
         eyebrow: "Search",
@@ -228,7 +228,7 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
       {
         eyebrow: "Product pages",
         title: "Details that make decisions easier",
-        body: "Upcube Shopping product pages are planned around the information people need to compare, evaluate, and move forward: images, descriptions, categories, reviews, recommendations, and clear actions.",
+        body: "Upcube Commerce product pages are planned around the information people need to compare, evaluate, and move forward: images, descriptions, categories, reviews, recommendations, and clear actions.",
       },
       {
         eyebrow: "Discovery",
@@ -238,13 +238,13 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
       {
         eyebrow: "Commerce system",
         title: "A storefront infrastructure designed for scale",
-        body: "Upcube Shopping is positioned as commerce technology, with public pages, catalog systems, and discovery flows designed to grow with broad product coverage across brand storefronts.",
+        body: "Upcube Commerce is positioned as commerce technology, with public pages, catalog systems, and discovery flows designed to grow with broad product coverage across brand storefronts.",
       },
     ],
     relatedProducts: [
       { name: "UpcubeAI", href: "/products/upcube-ai" },
       { name: "Upcube Cloud", href: "/products/cloud" },
-      { name: "Compute", href: "/products/vm" },
+      { name: "Cloud VM", href: "/products/vm" },
     ],
   },
   {
@@ -497,60 +497,60 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
         body: "The public product story should explain compute, storage, networking, and infrastructure in direct language that works for builders and business users.",
       },
       {
-        eyebrow: "Compute path",
-        title: "Connected to VM Compute",
-        body: "VM Compute should carry the deeper virtual-machine story, while Upcube Cloud remains the broader entry point for cloud services.",
+        eyebrow: "VM path",
+        title: "Connected to Cloud VM",
+        body: "Cloud VM should carry the deeper virtual-machine story, while Upcube Cloud remains the broader entry point for cloud services.",
       },
       {
         eyebrow: "Ecosystem",
         title: "Infrastructure behind connected products",
-        body: "Cloud sits naturally alongside UpcubeAI, Upcube Shopping, and Compute as the scalable systems layer of the product ecosystem.",
+        body: "Cloud sits naturally alongside UpcubeAI and Upcube Commerce as the scalable systems layer of the product ecosystem.",
       },
     ],
     relatedProducts: [
-      { name: "Compute", href: "/products/vm" },
+      { name: "Cloud VM", href: "/products/vm" },
       { name: "UpcubeAI", href: "/products/upcube-ai" },
-      { name: "Upcube Shopping", href: "/products/shopping" },
+      { name: "Upcube Commerce", href: "/products/shopping" },
     ],
   },
   {
     slug: "vm-compute-launch",
     href: "/news/vm-compute-launch",
-    productName: "Compute",
+    productName: "Cloud VM",
     category: "Product Launch",
     dateLabel: "Recent update",
     headline:
-      "Compute launches a clearer path to virtual machines and scalable infrastructure.",
+      "Cloud VM launches a clearer path to virtual machines and scalable infrastructure inside Upcube Cloud.",
     excerpt:
-      "Compute brings virtual machines, lifecycle control, scheduling, networking, storage, images, host coordination, and repair flows into the Upcube Cloud story.",
+      "Cloud VM brings virtual machines, lifecycle control, scheduling, networking, storage, images, host coordination, and repair flows into the Upcube Cloud experience.",
     heroSummary:
-      "Compute is the cloud compute product for running and managing virtual machines with a clearer public story around infrastructure, lifecycle, networking, storage, and scalable operations.",
+      "Cloud VM is the virtual machine product inside Upcube Cloud with a clearer public story around infrastructure, lifecycle, networking, storage, and scalable operations.",
     primaryCtaLabel: "Open Upcube Cloud",
     primaryCtaHref: "https://cloud.upcube.ai",
     productPageUrl: "/products/vm",
     launchUrl: "https://cloud.upcube.ai",
-    seoTitle: "Compute Launch | Virtual Machines and Scalable Infrastructure",
+    seoTitle: "Cloud VM Launch | Virtual Machines inside Upcube Cloud",
     seoDescription:
-      "Read the Compute launch story for virtual machines, lifecycle control, scheduling, networking, storage, images, and repair-oriented infrastructure workflows.",
+      "Read the Cloud VM launch story for virtual machines, lifecycle control, scheduling, networking, storage, images, and repair-oriented infrastructure workflows inside Upcube Cloud.",
     finalCtaTitle:
-      "Bring compute into the product story with less jargon and more clarity.",
+      "Bring cloud compute into the product story with less jargon and more clarity.",
     finalCtaBody:
-      "Compute is positioned as the practical infrastructure lane inside Upcube Cloud, connecting lifecycle, storage, networking, and repair-oriented operations.",
+      "Cloud VM is positioned as the practical infrastructure lane inside Upcube Cloud, connecting lifecycle, storage, networking, and repair-oriented operations.",
     sections: [
       {
         eyebrow: "The launch",
-        title: "Compute without unnecessary complexity",
-        body: "Compute presents virtual machines as a practical product surface, connecting instance lifecycle, scheduling, host coordination, networking, storage, and images.",
+        title: "Cloud VMs without unnecessary complexity",
+        body: "Cloud VM presents virtual machines as a practical product surface inside Upcube Cloud, connecting instance lifecycle, scheduling, host coordination, networking, storage, and images.",
       },
       {
         eyebrow: "Lifecycle",
         title: "From instance identity to operation",
-        body: "The source direction includes durable instance identity and lifecycle workflows that can make compute easier to reason about.",
+        body: "The source direction includes durable instance identity and lifecycle workflows that can make cloud compute easier to reason about.",
       },
       {
         eyebrow: "Infrastructure",
         title: "Networking, storage, and images in one story",
-        body: "Compute should explain the infrastructure pieces people expect from a virtual-machine product without turning the article into an engineering changelog.",
+        body: "Cloud VM should explain the infrastructure pieces people expect from a virtual-machine product without turning the article into an engineering changelog.",
       },
       {
         eyebrow: "Reliability direction",
@@ -560,7 +560,7 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
       {
         eyebrow: "Cloud connection",
         title: "Part of Upcube Cloud",
-        body: "Compute launches through Upcube Cloud, giving cloud visitors a direct path from product exploration into compute.",
+        body: "Cloud VM launches through Upcube Cloud, giving cloud visitors a direct path from product exploration into virtual machines.",
       },
     ],
     relatedProducts: [
@@ -621,7 +621,7 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
     ],
     relatedProducts: [
       { name: "UpcubeAI", href: "/products/upcube-ai" },
-      { name: "Compute", href: "/products/vm" },
+      { name: "Cloud VM", href: "/products/vm" },
       { name: "Upcube Mobile OS", href: "/products/upcube-mobile-os" },
     ],
   },

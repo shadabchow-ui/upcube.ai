@@ -41,7 +41,7 @@ export const aboutPageContent: FoundationPageContent = {
       title: "What the company is building",
       paragraphs: [
         upcubeCompanyIdentity.mission,
-        "Ethen, Earth, Upcube Shopping, Cloud, Books, Games, Jobs, and the computing roadmap are positioned as connected product lines inside one broader company story.",
+        "Ethen, Earth, Upcube Commerce, Cloud, Books, Games, Jobs, and the computing roadmap are positioned as connected product lines inside one broader company story.",
       ],
     },
     {
@@ -232,7 +232,7 @@ export const brandPageContent: FoundationPageContent = {
         "Use AI technology company as the short public descriptor where a company label is needed.",
         'Use "AI for the way you work, discover, build, and imagine what\'s next" as the public-facing tagline.',
         "Use Ethen for the chat workspace destination.",
-        "Use Earth, Books, Games, Jobs, Cloud, Upcube Shopping, OS, and Mobile OS as product names when linking to those destinations.",
+        "Use Earth, Books, Games, Jobs, Cloud, Upcube Commerce, OS, and Mobile OS as product names when linking to those destinations.",
       ],
     },
     {

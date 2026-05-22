@@ -85,7 +85,7 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
   },
   {
     id: "ventari",
-    label: "Shopping",
+    label: "Commerce",
     description:
       "Commerce technology, catalog discovery, and brand storefront infrastructure.",
     productHref: "/products/shopping",
@@ -93,7 +93,7 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
   },
   {
     id: "vm",
-    label: "Compute",
+    label: "Cloud VM",
     description: "Virtual machines, networking, storage, and operations.",
     productHref: "/products/vm",
     launchHref: UPCUBE_CLOUD_URL,
@@ -183,7 +183,7 @@ export const ecosystemGroups: EcosystemGroup[] = [
       },
       {
         id: "vm",
-        label: "Compute",
+        label: "Cloud VM",
         description: "Virtual machines, networking, storage, and operations.",
         productHref: "/products/vm",
         launchHref: UPCUBE_CLOUD_URL,
@@ -267,7 +267,7 @@ export const ecosystemGroups: EcosystemGroup[] = [
       },
       {
         id: "ventari",
-        label: "Shopping",
+        label: "Commerce",
         description:
           "Commerce technology, catalog discovery, and brand storefront infrastructure.",
         productHref: "/products/shopping",
@@ -344,21 +344,15 @@ export const upcubeLauncherApps = [
   },
   {
     id: "shopping" as const,
-    label: "Shopping",
+    label: "Commerce",
     href: UPCUBE_VENTARI_URL,
-    iconSrc: "/upcube-app-icons/planet.png",
-  },
-  {
-    id: "compute" as const,
-    label: "Compute",
-    href: UPCUBE_CLOUD_URL,
-    iconSrc: "/upcube-app-icons/cloud.png",
+    iconSrc: "/upcube-app-icons/shopping.png",
   },
   {
     id: "robotics" as const,
     label: "Robotics",
     href: "/products/robotics",
-    iconSrc: "/upcube-app-icons/console.png",
+    iconSrc: "/upcube-app-icons/robot.png",
   },
   {
     id: "os" as const,
@@ -376,12 +370,12 @@ export const upcubeLauncherApps = [
     id: "voice" as const,
     label: "Voice",
     href: "/products/voice",
-    iconSrc: "/upcube-app-icons/message.png",
+    iconSrc: "/upcube-app-icons/voice.png",
   },
   {
     id: "education" as const,
     label: "Education",
     href: UPCUBE_UNIVERSITY_URL,
-    iconSrc: "/upcube-app-icons/book.png",
+    iconSrc: "/upcube-app-icons/education.png",
   },
 ];

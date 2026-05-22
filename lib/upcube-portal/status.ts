@@ -42,7 +42,7 @@ export const statusGroups: StatusGroup[] = [
     summary:
       "Premium commerce platform for large-scale product search, detail, and recommendations.",
     components: [
-      { name: "Upcube Shopping", uptime: "100%", state: "operational" },
+      { name: "Upcube Commerce", uptime: "100%", state: "operational" },
       { name: "Product Search", uptime: "99.98%", state: "operational" },
       { name: "Product Detail Pages", uptime: "100%", state: "operational" },
       {
@@ -57,7 +57,7 @@ export const statusGroups: StatusGroup[] = [
     summary: "Cloud platform, compute, storage, networking, and file services.",
     components: [
       { name: "Upcube Cloud", uptime: "99.98%", state: "operational" },
-      { name: "Compute", uptime: "100%", state: "operational" },
+      { name: "Cloud VM", uptime: "100%", state: "operational" },
       { name: "Storage", uptime: "100%", state: "operational" },
       { name: "Networking", uptime: "99.98%", state: "operational" },
       { name: "Files", uptime: "100%", state: "operational" },
