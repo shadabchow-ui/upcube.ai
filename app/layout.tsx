@@ -9,6 +9,7 @@ import {
 } from "lib/upcube-seo/metadata";
 import { ReactNode, Suspense } from "react";
 import localFont from "next/font/local";
+import Script from "next/script";
 import { Toaster } from "sonner";
 import "./globals.css";
 import "./styles/upcube-type-system.css";
@@ -16,7 +17,6 @@ import "./styles/upcube-news.css";
 import "./styles/upcube-portal.css";
 import "./styles/upcube-universal-header.css";
 import "./styles/upcube-longform.css";
-import "./styles/upcube-account.css";
 import "./styles/upcube-account.css";
 
 const upcubeInter = localFont({
@@ -84,6 +84,31 @@ export const metadata: Metadata = {
   },
 };
 
+const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-EZLC0KG6GX";
+
+function GAScript() {
+  if (!gaId) {
+    return null;
+  }
+
+  return (
+    <>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${gaId}');
+        `}
+      </Script>
+    </>
+  );
+}
+
 export default async function RootLayout({
   children,
 }: {
@@ -101,6 +126,7 @@ export default async function RootLayout({
             <main>
               {children}
               <Toaster closeButton />
+              <GAScript />
             </main>
           </Suspense>
         </CartProvider>

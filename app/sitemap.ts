@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 import { upcubeNewsArticles } from "lib/upcube-news/news";
 import { portalRoutePlan } from "lib/upcube-portal/content";
 import { researchLongformPages } from "lib/upcube-portal/longform-pages";
@@ -49,7 +51,11 @@ const legalRoutes: SitemapEntryInput[] = [
 
 const generatedPlaceholderRoutes: SitemapEntryInput[] = [
   { path: "/page-placeholder", changeFrequency: "yearly", priority: 0.2 },
-  { path: "/product/product-placeholder", changeFrequency: "yearly", priority: 0.2 },
+  {
+    path: "/product/product-placeholder",
+    changeFrequency: "yearly",
+    priority: 0.2,
+  },
   {
     path: "/updates/platform-iteration-placeholder",
     changeFrequency: "monthly",
