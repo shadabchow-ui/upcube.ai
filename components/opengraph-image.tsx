@@ -9,7 +9,7 @@ export default async function OpengraphImage(
 ): Promise<ImageResponse> {
   const { title } = {
     ...{
-      title: "UpCube",
+      title: "UpcubeAI",
     },
     ...props,
   };
@@ -114,7 +114,7 @@ export default async function OpengraphImage(
               color: "rgba(255,255,255,0.46)",
             }}
           >
-            UpCube
+            UpcubeAI
           </p>
           <p
             style={{

@@ -69,7 +69,7 @@ export function createBasicPageMetadata({
   const canonical = buildCanonicalUrl(path);
 
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical,
@@ -113,7 +113,7 @@ export function createNewsIndexMetadata(): Metadata {
   return createBasicPageMetadata({
     title: `Upcube News | ${upcubeSiteName}`,
     description:
-      "Launch stories and product previews across UpcubeAI, Robotics, Voice, Education, Shopping, Books, Earth, Games, Jobs, Cloud, Compute, OS, and Mobile OS.",
+      "Launch stories and product previews across UpcubeAI, Robotics, Voice, Education, Commerce, Books, Earth, Games, Jobs, Cloud, OS, and Mobile OS.",
     path: "/news",
   });
 }

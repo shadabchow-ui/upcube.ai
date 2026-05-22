@@ -27,10 +27,6 @@ const upcubeInter = localFont({
       path: "./fonts/inter/Inter-VariableFont_opsz,wght.ttf",
       style: "normal",
     },
-    {
-      path: "./fonts/inter/Inter-Italic-VariableFont_opsz,wght.ttf",
-      style: "italic",
-    },
   ],
   variable: "--font-upcube-inter",
   display: "swap",
@@ -42,10 +38,6 @@ const upcubeGeist = localFont({
       path: "./fonts/geist/Geist-VariableFont_wght.ttf",
       style: "normal",
     },
-    {
-      path: "./fonts/geist/Geist-Italic-VariableFont_wght.ttf",
-      style: "italic",
-    },
   ],
   variable: "--font-upcube-ui",
   display: "swap",
@@ -53,7 +45,10 @@ const upcubeGeist = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL(canonicalBaseUrl),
-  title: DEFAULT_SITE_TITLE,
+  title: {
+    default: DEFAULT_SITE_TITLE,
+    template: "%s | UpcubeAI",
+  },
   description: DEFAULT_SITE_DESCRIPTION,
   alternates: {
     canonical: canonicalBaseUrl,
@@ -97,9 +92,9 @@ function GAScript() {
     <>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="google-analytics" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
