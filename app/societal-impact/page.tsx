@@ -5,9 +5,9 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Public Impact | UpcubeAI",
+  title: "Impact | Upcube",
   description:
-    "How UpcubeAI thinks about the broader effects of AI on learning, access, discovery, and meaningful progress.",
+    "Upcube focuses on useful technology across education, careers, commerce, spatial tools, robotics operations, developer infrastructure, and future computing interfaces.",
   path: "/societal-impact",
 });
 

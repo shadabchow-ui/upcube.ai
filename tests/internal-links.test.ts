@@ -64,11 +64,9 @@ describe("internal link validation - footer", () => {
   });
 
   it("footer contains privacy and legal links", () => {
-    const legalTrustGroup = portalFooterGroups.find(
-      (g) => g.id === "legal-trust",
-    );
-    expect(legalTrustGroup).toBeDefined();
-    const hrefs = legalTrustGroup!.links.map((l) => l.href);
+    const trustGroup = portalFooterGroups.find((g) => g.id === "trust");
+    expect(trustGroup).toBeDefined();
+    const hrefs = trustGroup!.links.map((l) => l.href);
     expect(hrefs).toContain("/terms");
     expect(hrefs).toContain("/privacy");
     expect(hrefs).toContain("/safety");

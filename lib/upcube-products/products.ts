@@ -8,6 +8,7 @@ export type UpcubeProductSlug =
   | "jobs"
   | "cloud"
   | "quantum"
+  | "robotics"
   | "ventari"
   | "vm"
   | "upcube-os"
@@ -862,6 +863,117 @@ export const upcubeProducts: UpcubeProduct[] = [
     finalSecondaryAction: {
       label: "Try a template",
       href: "https://quantum.upcube.ai/console/templates",
+    },
+  },
+  {
+    slug: "robotics",
+    name: "Upcube Robotics",
+    eyebrow: "Future Platforms",
+    headline: "Understand every mission.",
+    summary:
+      "Upcube Robotics gives teams a clearer way to operate robot fleets, replay missions, investigate incidents, and turn robot activity into reviewable evidence.",
+    seoTitle: "Robotics | UpcubeAI",
+    seoDescription:
+      "Upcube Robotics helps teams replay robot missions, observe fleets, investigate incidents, and create audit-ready evidence.",
+    primaryAction: {
+      label: "Explore Robotics",
+      href: "#overview",
+    },
+    secondaryAction: {
+      label: "View product overview",
+      href: "#features",
+    },
+    heroHighlights: [
+      "Replay robot missions as clear timelines.",
+      "Turn incidents into reviewable evidence.",
+      "Observe fleet status from one focused view.",
+    ],
+    signatureTitle: "Built for robot operations.",
+    signatureBody:
+      "Robots generate a stream of commands, sensor events, pauses, handoffs, errors, policy checks, and operator decisions. Robotics turns that activity into a clear mission timeline your team can understand.",
+    signatureCards: [
+      {
+        title: "See every mission as a timeline",
+        body: "Commands, sensor events, pauses, handoffs, blocked actions, and operator decisions come together in one clear replayable view.",
+      },
+      {
+        title: "When something goes wrong, keep the evidence",
+        body: "Turn failures, stops, safety blocks, and handoff issues into structured evidence your team can review, share, and trust.",
+      },
+      {
+        title: "A clearer view across the fleet",
+        body: "Track robot status, mission progress, exceptions, and operational patterns from one focused interface.",
+      },
+    ],
+    featureStories: [
+      {
+        title: "See every mission as a timeline",
+        body: "Commands, sensor events, pauses, handoffs, blocked actions, and operator decisions come together in one clear replayable view.",
+      },
+      {
+        title: "Incident evidence that stays organized",
+        body: "Turn failures, stops, safety blocks, and handoff issues into structured evidence your team can review, share, and trust.",
+      },
+      {
+        title: "Fleet observability across the operation",
+        body: "Track robot status, mission progress, exceptions, and operational patterns from one focused interface.",
+      },
+    ],
+    techCards: [
+      {
+        title: "Mission timeline engine",
+        body: "Commands, sensor events, pauses, handoffs, errors, policy checks, and operator decisions reconstructed as one coherent replayable sequence.",
+      },
+      {
+        title: "Structured incident bundles",
+        body: "Failures, stops, safety blocks, and handoff issues captured as reviewable evidence packages for post-incident analysis.",
+      },
+      {
+        title: "Fleet state aggregation",
+        body: "Robot status, mission progress, exceptions, and operational patterns surfaced from one focused observability view.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Operators",
+        body: "See mission status at a glance and replay incidents without digging through logs.",
+      },
+      {
+        title: "Engineers",
+        body: "Trace command sequences, sensor data, and policy decisions across missions.",
+      },
+      {
+        title: "Compliance",
+        body: "Export reviewable evidence bundles for audits and post-incident reviews.",
+      },
+    ],
+    ecosystemLinks: [
+      {
+        title: "Upcube Cloud",
+        body: "Infrastructure and compute layer for robotics data pipelines and fleet operations.",
+        href: "/products/cloud",
+      },
+      {
+        title: "UpcubeAI",
+        body: "Connect robotics analysis with the assistant workspace for broader operational workflows.",
+        href: "/products/upcube-ai",
+      },
+      {
+        title: "Compute",
+        body: "Virtual machines and storage for robotics data processing and simulation workloads.",
+        href: "/products/vm",
+      },
+    ],
+    finalCtaTitle: "Start with mission replay. Scale with confidence.",
+    finalCtaBody:
+      "Robotics begins with mission replay and fleet observability, then grows toward policy-governed control, handoff records, adapter SDKs, and enterprise robot operations.",
+    finalPrimaryAction: {
+      label: "Explore Robotics",
+      href: "/products/robotics",
+    },
+    finalSecondaryAction: {
+      label: "View product direction",
+      href: "#features",
     },
   },
   {

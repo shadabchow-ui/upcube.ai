@@ -5,9 +5,9 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Founder Note | UpcubeAI",
+  title: "Founder Letter | Upcube",
   description:
-    "A letter from the founding perspective on why UpcubeAI exists and what it aims to build.",
+    "A note on why Upcube is building a connected technology ecosystem across AI, cloud, compute, robotics, education, commerce, discovery, and future operating systems.",
   path: "/founder-letter",
 });
 

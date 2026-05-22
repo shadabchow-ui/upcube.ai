@@ -5,8 +5,9 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Mission | UpcubeAI",
-  description: "Mission-oriented foundation direction page.",
+  title: "Mission | Upcube",
+  description:
+    "Upcube's mission is to make advanced technology clearer and more useful across AI, cloud, compute, robotics, commerce, education, and future computing products.",
   path: "/foundation",
 });
 

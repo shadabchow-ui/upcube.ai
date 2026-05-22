@@ -5,8 +5,8 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Upcube Status | UpcubeAI",
-  description: "Current public status for UpcubeAI products and services.",
+  title: "Status | Upcube",
+  description: "Current public status for Upcube products and services.",
   path: "/status",
 });
 
@@ -19,9 +19,9 @@ export default function StatusRoutePage() {
         slug: "status",
         order: 99,
         title: "Upcube System Status",
-        subtitle: "Current status of UpcubeAI products and services.",
+        subtitle: "Current status of Upcube products and services.",
         description:
-          "View the current public status for UpcubeAI products including Ethen, Books, Earth, Games, Jobs, Cloud, Ventari, University, Voice, and more.",
+          "View the current public status for Upcube products including AI, Books, Earth, Games, Jobs, Cloud, Ventari, Education, Voice, and more.",
         body,
         category: "trust",
       }}

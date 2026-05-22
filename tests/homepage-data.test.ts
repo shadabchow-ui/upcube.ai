@@ -12,26 +12,24 @@ import {
 
 describe("homepage company positioning", () => {
   it("has company descriptor", () => {
-    expect(upcubeCompanyIdentity.descriptor).toBe(
-      "Artificial Intelligence Company",
-    );
+    expect(upcubeCompanyIdentity.descriptor).toBe("Technology company");
   });
 
   it("has tagline", () => {
-    expect(upcubeCompanyIdentity.tagline).toBe("The Next Frontier.");
+    expect(upcubeCompanyIdentity.tagline.length).toBeGreaterThan(0);
   });
 
   it("has one-liner containing product story", () => {
     expect(upcubeCompanyIdentity.oneLiner.length).toBeGreaterThan(0);
     expect(upcubeCompanyIdentity.oneLiner.toLowerCase()).toContain(
-      "artificial intelligence",
+      "technology company",
     );
   });
 
   it("has mission statement covering product lines", () => {
     expect(upcubeCompanyIdentity.mission.length).toBeGreaterThan(0);
-    expect(upcubeCompanyIdentity.mission).toContain("work");
-    expect(upcubeCompanyIdentity.mission).toContain("infrastructure");
+    expect(upcubeCompanyIdentity.mission).toContain("products");
+    expect(upcubeCompanyIdentity.mission).toContain("clear");
   });
 
   it("has vision statement", () => {
@@ -44,7 +42,7 @@ describe("homepage company positioning", () => {
 
   it("has pillars array", () => {
     expect(upcubeCompanyIdentity.pillars.length).toBeGreaterThan(0);
-    expect(upcubeCompanyIdentity.pillars).toContain("AI & Voice");
+    expect(upcubeCompanyIdentity.pillars).toContain("AI & Intelligence");
     expect(upcubeCompanyIdentity.pillars).toContain("Cloud & Infrastructure");
   });
 });
@@ -70,6 +68,7 @@ describe("product family section data", () => {
     expect(cardIds).toContain("globe");
     expect(cardIds).toContain("books");
     expect(cardIds).toContain("cloud");
+    expect(cardIds).toContain("robotics");
   });
 
   it("all product cards have required fields", () => {

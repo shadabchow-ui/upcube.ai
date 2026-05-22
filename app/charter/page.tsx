@@ -5,9 +5,9 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Product Charter | UpcubeAI",
+  title: "Product Principles | Upcube",
   description:
-    "Public charter for how UpcubeAI should build and speak plainly.",
+    "The Upcube product principles guide a connected ecosystem of AI, cloud, compute, robotics, commerce, education, discovery, and future operating system products.",
   path: "/charter",
 });
 

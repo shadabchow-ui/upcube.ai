@@ -165,6 +165,7 @@ export const productScaleStats: ProductScaleStat[] = [
   { id: "ventari-scale", label: "Shopping", value: "1B product scale" },
   { id: "jobs-scale", label: "Jobs", value: "8M jobs" },
   { id: "university-scale", label: "Education", value: "100K courses" },
+  { id: "robotics-scale", label: "Robotics", value: "Robot operations" },
 ];
 
 export type UpcubeCompanyIdentity = {
@@ -224,27 +225,29 @@ export {
 };
 
 export const upcubeCompanyIdentity: UpcubeCompanyIdentity = {
-  descriptor: "AI technology company",
+  descriptor: "Technology company",
   tagline:
-    "Connected intelligence for the way you work, discover, build, and imagine what's next.",
+    "A connected family of products across AI, cloud, compute, robotics, education, commerce, and discovery.",
   oneLiner:
-    "An AI technology company building a connected family of premium products across AI, voice, education, commerce, discovery, cloud infrastructure, entertainment, and future computing.",
+    "A technology company building a connected family of products across AI, cloud, compute, robotics, education, commerce, spatial exploration, entertainment, jobs, books, voice, and next-generation operating systems.",
   mission:
-    "Upcube builds a connected family of premium products for work, discovery, commerce, cloud infrastructure, entertainment, voice, education, and the next era of computing.",
+    "Make advanced technology feel clear, connected, and useful across the products people rely on every day.",
   vision:
-    "The product family connects workspaces, learning, retail-scale discovery, infrastructure, and AI-native systems designed for what comes next.",
+    "Build a connected product ecosystem for work, learning, commerce, infrastructure, robotics, discovery, entertainment, and future computing.",
   belief:
-    "Intelligence should feel useful, connected, and clear across the tools people rely on every day.",
+    "The future is not one app. It is a family of focused products that work together.",
   promise:
-    "Turn powerful systems into clear, trustworthy experiences without overstating what is live.",
+    "Build premium products with clear interfaces, honest capability framing, and practical value.",
   pillars: [
-    "AI & Voice",
-    "Education & Learning",
+    "AI & Intelligence",
+    "Cloud & Infrastructure",
+    "Compute",
+    "Robotics & Physical AI",
     "Commerce",
     "Discovery",
-    "Cloud & Infrastructure",
-    "Computing",
+    "Education & Knowledge",
     "Entertainment",
+    "Future Operating Systems",
   ],
 };
 
@@ -288,6 +291,7 @@ const portalHomepageStatusById: Record<
   jobs: "live",
   cloud: "live",
   quantum: "live",
+  robotics: "preview",
   ventari: "external",
   vm: "planned",
   "upcube-os": "planned",
@@ -366,6 +370,16 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
     tag: "Future computing",
     category: "Future Platforms",
     ctaLabel: "Explore Quantum",
+  },
+  robotics: {
+    id: "robotics",
+    title: "Robotics",
+    description:
+      "Mission replay, fleet observability, incident evidence, and policy-aware operations for robot operations teams.",
+    href: "/products/robotics",
+    tag: "Robot operations",
+    category: "Future Platforms",
+    ctaLabel: "Explore Robotics",
   },
   ventari: {
     id: "ventari",
@@ -509,11 +523,11 @@ export const portalFooterGroups: PortalFooterGroup[] = [
     id: "company",
     title: "Company",
     links: [
-      { id: "about-footer", label: "Company Overview", href: "/about" },
-      { id: "charter-footer", label: "Product Charter", href: "/charter" },
+      { id: "about-footer", label: "Company", href: "/about" },
+      { id: "charter-footer", label: "Product Principles", href: "/charter" },
       { id: "foundation-footer", label: "Mission", href: "/foundation" },
       { id: "careers-footer", label: "Careers", href: "/careers" },
-      { id: "brand-footer", label: "Brand Resources", href: "/brand" },
+      { id: "brand-footer", label: "Brand", href: "/brand" },
       { id: "contact-footer", label: "Contact", href: "/contact" },
       {
         id: "working-together-footer",
@@ -527,19 +541,19 @@ export const portalFooterGroups: PortalFooterGroup[] = [
       },
       {
         id: "founder-letter-footer",
-        label: "Founder Note",
+        label: "Founder Letter",
         href: "/founder-letter",
       },
     ],
   },
   {
-    id: "legal-trust",
-    title: "Legal / Trust",
+    id: "trust",
+    title: "Trust",
     links: [
       { id: "legal-footer", label: "Legal", href: "/legal" },
-      { id: "terms-footer", label: "Terms of Use", href: "/terms" },
-      { id: "privacy-footer", label: "Privacy Notice", href: "/privacy" },
-      { id: "policies-footer", label: "Policy", href: "/policies" },
+      { id: "terms-footer", label: "Terms", href: "/terms" },
+      { id: "privacy-footer", label: "Privacy", href: "/privacy" },
+      { id: "policies-footer", label: "Policies", href: "/policies" },
       {
         id: "principles-footer",
         label: "Commitments",
@@ -854,7 +868,7 @@ export const privacySections: PortalPrivacySection[] = [
   {
     title: "Placeholder status",
     body: [
-      "This page is a placeholder policy-style surface for UpcubeAI. Reviewed legal text, effective dates, company details, and contact channels were not provided in this repo.",
+      "This page is a placeholder policy-style surface for Upcube products and websites. Reviewed legal text, effective dates, company details, and contact channels were not provided in this repo.",
       "Until approved copy exists in source control, this page should be treated as informational structure only and not as a binding privacy policy.",
     ],
   },
@@ -891,14 +905,14 @@ export const portalMenuGroups: PortalMenuGroup[] = [
         label: "Build",
         href: "/build",
         description:
-          "Cloud infrastructure, compute, operating systems, and voice platform.",
+          "Cloud infrastructure, compute, robotics, operating systems, and voice platform.",
       },
       {
         id: "learn-menu",
         label: "Learn",
         href: "/learn",
         description:
-          "Education, books, and quantum computing: learning paths for the AI age.",
+          "Education, books, and quantum computing: learning paths across the ecosystem.",
       },
       {
         id: "explore-menu",
@@ -1182,68 +1196,80 @@ export const portalNewsItems: PortalNewsItem[] = [
 
 export const companyMission: PortalHeroCopy = {
   eyebrow: "Company",
-  title: "An AI technology company for the way you work, discover, and build.",
+  title: "A technology company for the way you work, discover, and build.",
   description:
-    "Upcube is an AI technology company building a connected family of premium products across AI, commerce, discovery, cloud infrastructure, entertainment, and computing.",
+    "Upcube is a technology company building a connected family of products across AI, commerce, discovery, cloud infrastructure, entertainment, and computing.",
 };
 
 export const companyVisionBullets: PortalBullet[] = [
   {
     id: "vision-products",
-    label: "Connected product systems",
+    label: "One ecosystem. Many products.",
     detail:
-      "Build premium, useful products that move from intelligence to execution across a connected ecosystem.",
+      "AI, cloud, compute, robotics, commerce, education, discovery, and future operating systems designed to work together.",
   },
   {
     id: "vision-execution",
-    label: "Proof through products",
+    label: "Products designed to connect",
     detail:
-      "The current portfolio shows how Upcube spans AI, commerce, discovery, infrastructure, entertainment, and computing.",
+      "Each product stands on its own. Together they form a connected ecosystem for work, learning, infrastructure, and exploration.",
   },
   {
     id: "vision-trust",
-    label: "Trust through discipline",
+    label: "Clear about what we build",
     detail:
-      "Public language stays ambitious about product direction while remaining disciplined about unsupported claims.",
+      "Ambitious product direction paired with honest language about what is live, what is preview, and what is future.",
   },
 ];
 
 export const companyWorkAreas: PortalBullet[] = [
   {
     id: "work-ai",
-    label: "AI",
+    label: "AI Products",
     detail:
-      "Assistant-led workspaces, orchestration, and intelligence-native product experiences for modern teams.",
+      "Ethen brings chat, research, artifacts, and execution into one AI workspace designed for serious work.",
   },
   {
     id: "work-commerce",
-    label: "Commerce",
+    label: "Commerce Technology",
     detail:
-      "Large-scale search, product discovery, and premium commerce experiences built for modern retail.",
+      "Ventari delivers marketplace-scale product discovery with AI-powered search, reviews, recommendations, and brand storefront infrastructure.",
   },
   {
     id: "work-discovery",
-    label: "Discovery",
+    label: "Discovery Products",
     detail:
-      "Spatial exploration, book discovery, game browsing, and surfaces that help people explore complex information clearly.",
+      "Earth, Books, Games, and Jobs help people explore the world, knowledge, entertainment, and opportunity.",
   },
   {
     id: "work-cloud",
-    label: "Cloud & Infrastructure",
+    label: "Cloud Infrastructure",
     detail:
-      "Developer tools, compute direction, storage, networking, and platform services supporting the broader product ecosystem.",
+      "Developer tools, cloud workflows, storage, networking, and platform services supporting the product ecosystem.",
   },
   {
-    id: "work-computing",
-    label: "Computing",
+    id: "work-compute",
+    label: "Compute Platform",
     detail:
-      "Operating-system and device-direction work for the next era of AI-native intelligent computing.",
+      "Virtual machines, storage, networking, and operations for workloads that need control and scale.",
   },
   {
-    id: "work-entertainment",
-    label: "Entertainment",
+    id: "work-robotics",
+    label: "Robotics Operations",
     detail:
-      "Interactive products, game discovery, and media experiences that extend the platform into play and culture.",
+      "Mission replay, fleet observability, incident evidence, and policy-aware operations for robot operations teams.",
+  },
+  {
+    id: "work-education",
+    label: "Education Platform",
+    detail:
+      "Structured learning, AI education, product training, and guided paths across the ecosystem.",
+  },
+  {
+    id: "work-platforms",
+    label: "Future Platforms",
+    detail:
+      "OS, Mobile OS, Voice, and Quantum: the next generation of computing interfaces, voice interaction, and quantum exploration.",
   },
 ];
 
@@ -1252,23 +1278,23 @@ export const companyEcosystem: PortalCardItem[] = [
     id: "eco-chat",
     title: "AI",
     description:
-      "Ethen anchors the ecosystem with AI-led planning, writing, research, and execution workflows.",
+      "Ethen anchors the ecosystem with AI-led planning, research, artifacts, and execution workflows.",
     href: UPCUBE_CHAT_URL,
-    tag: "AI",
+    tag: "AI Products",
   },
   {
     id: "eco-ventari",
     title: "Shopping",
     description:
-      "Shopping brings commerce technology and marketplace-scale product discovery into the broader Upcube platform.",
+      "Commerce technology with marketplace-scale product discovery, AI-powered search, and brand storefront infrastructure.",
     href: "/products/shopping",
-    tag: "Commerce",
+    tag: "Commerce Technology",
   },
   {
     id: "eco-earth",
     title: "Earth",
     description:
-      "Earth extends Upcube into mapping, world data, and geospatial exploration.",
+      "Spatial discovery for maps, terrain, cities, and shareable world exploration.",
     href: "/products/earth",
     tag: "Discovery",
   },
@@ -1276,71 +1302,134 @@ export const companyEcosystem: PortalCardItem[] = [
     id: "eco-cloud",
     title: "Cloud",
     description:
-      "Cloud and Compute establish the infrastructure lane for builders and platform teams.",
+      "Cloud infrastructure and developer tools powering the broader Upcube product ecosystem.",
     href: "/products/cloud",
-    tag: "Cloud & Infrastructure",
+    tag: "Cloud Infrastructure",
   },
   {
-    id: "eco-os",
-    title: "OS",
+    id: "eco-compute",
+    title: "Compute",
     description:
-      "OS and Mobile OS point toward the company's long-range computing direction.",
-    href: "/products/upcube-os",
-    tag: "Computing",
+      "Virtual machines, networking, storage, and compute workflows for the systems layer.",
+    href: "/products/vm",
+    tag: "Compute Platform",
+  },
+  {
+    id: "eco-robotics",
+    title: "Robotics",
+    description:
+      "Mission replay, fleet observability, and operations software for robotics teams.",
+    href: "/products/robotics",
+    tag: "Robotics Operations",
+  },
+  {
+    id: "eco-education",
+    title: "Education",
+    description:
+      "Structured learning, AI education, product training, and guided learning paths.",
+    href: "/products/university",
+    tag: "Education Platform",
   },
   {
     id: "eco-games",
     title: "Games",
     description:
-      "Games shows how the ecosystem extends into interactive entertainment and culture.",
+      "Game discovery across releases, genres, platforms, and recommendation paths.",
     href: "/products/games",
     tag: "Entertainment",
+  },
+  {
+    id: "eco-os",
+    title: "OS",
+    description:
+      "Desktop and mobile operating system directions for the next computing interface.",
+    href: "/products/upcube-os",
+    tag: "Future Platforms",
+  },
+  {
+    id: "eco-quantum",
+    title: "Quantum",
+    description:
+      "A beginner-friendly quantum workspace for guided experiments and visual runs.",
+    href: "/products/quantum",
+    tag: "Future Platforms",
+  },
+  {
+    id: "eco-voice",
+    title: "Voice",
+    description:
+      "Voice platform for future Upcube devices: headphones, earbuds, home audio, and companion devices.",
+    href: "/products/voice",
+    tag: "Future Platforms",
+  },
+  {
+    id: "eco-books",
+    title: "Books",
+    description:
+      "Explore 50M books with previews, saved titles, and calmer discovery paths.",
+    href: "/products/books",
+    tag: "Discovery",
+  },
+  {
+    id: "eco-jobs",
+    title: "Jobs",
+    description:
+      "Browse 8M jobs with clearer discovery and opportunity workflows.",
+    href: "/products/jobs",
+    tag: "Work",
   },
 ];
 
 export const careersHero: PortalHeroCopy = {
   eyebrow: "Careers",
-  title:
-    "Careers content remains placeholder-only until hiring details are provided.",
+  title: "Build the product ecosystem.",
   description:
-    "This route is structured for future use but intentionally avoids role, benefit, location, and compensation claims not present in the repo.",
+    "Work on products that connect software, infrastructure, learning, commerce, robotics, and future computing. The work is broad. The standard is simple: make advanced technology feel useful.",
 };
 
 export const careersValues: PortalBullet[] = [
   {
-    id: "careers-rigor",
-    label: "Rigor",
-    detail: "Prefer factual implementation details over aspirational claims.",
+    id: "careers-craft",
+    label: "Product craft",
+    detail: "Care about how a product feels, not only whether it works.",
+  },
+  {
+    id: "careers-breadth",
+    label: "Broad thinking",
+    detail:
+      "Work across software, infrastructure, learning, commerce, robotics, and future computing.",
   },
   {
     id: "careers-clarity",
-    label: "Clarity",
-    detail: "Communicate boundaries, scope, and evidence directly.",
+    label: "Clear standards",
+    detail: "Build premium products that people can understand and trust.",
   },
   {
-    id: "careers-speed",
-    label: "Pragmatic speed",
-    detail: "Ship focused improvements without widening scope unnecessarily.",
+    id: "careers-honesty",
+    label: "Honest framing",
+    detail:
+      "Describe what is live, what is preview, and what is future direction.",
   },
 ];
 
 export const careersCulture: PortalBullet[] = [
   {
     id: "culture-product",
-    label: "Product-minded",
+    label: "Design and engineering together",
     detail:
-      "Work connects design, implementation, and validation rather than separating them artificially.",
+      "Product craft connects design, systems, and implementation in one continuous process.",
   },
   {
     id: "culture-review",
-    label: "Review oriented",
+    label: "Review and iterate",
     detail:
-      "Changes are expected to stay testable and grounded in the live repo.",
+      "Changes are tested, validated, and grounded in real product behavior.",
   },
   {
-    id: "culture-honesty",
-    label: "Honest reporting",
-    detail: "Unknown facts stay unknown until they are actually provided.",
+    id: "culture-breadth",
+    label: "Technology breadth",
+    detail:
+      "Work spans AI, cloud, compute, robotics, commerce, education, and future platforms.",
   },
 ];
 
@@ -1348,31 +1437,65 @@ export const careersBenefitsPlaceholders: PortalBullet[] = [
   {
     id: "benefits-status",
     label: "Benefits",
-    detail: "Not provided. Replace only with reviewed hiring material.",
+    detail:
+      "Not provided. Hiring details and compensation are not provided in current source material.",
   },
   {
     id: "location-status",
     label: "Location",
     detail:
-      "Not provided. Work mode, geography, and visa details remain placeholders.",
+      "Not provided. Work mode, geography, and specific location details are not provided.",
   },
 ];
 
 export const careersOpenRoles: PortalRoleCard[] = [
   {
-    id: "role-placeholder-1",
-    team: "Future team",
-    title: "Role placeholder",
+    id: "role-product-design",
+    team: "Product Design",
+    title: "Design the product experience",
     summary:
-      "Use this card structure when real open roles are approved for publication.",
+      "Shape how connected products look, feel, and work across the ecosystem.",
     mode: "Hiring details not provided.",
   },
   {
-    id: "role-placeholder-2",
-    team: "Future team",
-    title: "Another placeholder",
-    summary: "Static route only. This is not a live jobs board.",
-    mode: "Location and employment type not provided.",
+    id: "role-software-engineering",
+    team: "Software Engineering",
+    title: "Build the product systems",
+    summary:
+      "Develop the products, infrastructure, and platforms that power the ecosystem.",
+    mode: "Hiring details not provided.",
+  },
+  {
+    id: "role-cloud-infrastructure",
+    team: "Cloud and Infrastructure",
+    title: "Build the cloud layer",
+    summary:
+      "Design and operate the cloud infrastructure behind the product family.",
+    mode: "Hiring details not provided.",
+  },
+  {
+    id: "role-robotics",
+    team: "Robotics Systems",
+    title: "Build robotics operations software",
+    summary:
+      "Create mission replay, fleet observability, and operations tools for robotics teams.",
+    mode: "Hiring details not provided.",
+  },
+  {
+    id: "role-commerce",
+    team: "Commerce and Discovery",
+    title: "Build commerce and discovery products",
+    summary:
+      "Shape the shopping, books, games, earth, and jobs discovery experiences.",
+    mode: "Hiring details not provided.",
+  },
+  {
+    id: "role-education",
+    team: "Education Systems",
+    title: "Build the learning platform",
+    summary:
+      "Create structured learning, AI education, and guided training experiences.",
+    mode: "Hiring details not provided.",
   },
 ];
 
@@ -1453,6 +1576,7 @@ export const contactInquiryTypes: ContactInquiryType[] = [
   { value: "earth", label: "Earth" },
   { value: "games", label: "Games" },
   { value: "os-mobile", label: "OS / Mobile OS" },
+  { value: "robotics", label: "Robotics" },
   { value: "other", label: "Other" },
 ];
 
@@ -1468,6 +1592,7 @@ export const contactProductOptions: ContactProductOption[] = [
   { value: "compute", label: "Compute" },
   { value: "os", label: "OS" },
   { value: "mobile-os", label: "Mobile OS" },
+  { value: "robotics", label: "Robotics" },
   { value: "voice", label: "Voice" },
   { value: "education", label: "Education" },
   { value: "multiple", label: "Multiple products" },
@@ -1484,47 +1609,59 @@ export const contactCompanySizeOptions: ContactInquiryType[] = [
 
 export const principlesSections: PortalTextSection[] = [
   {
-    id: "mission",
-    title: "Mission",
+    id: "useful",
+    title: "Useful before flashy",
     paragraphs: [
-      "Upcube builds practical intelligence tools for planning, analysis, and execution while keeping human judgment central.",
+      "Every product should solve a real problem. Features should earn their place by making the experience clearer or the workflow faster.",
       "This principles page is directional and product-focused, not a legal commitment document.",
     ],
   },
   {
-    id: "benefits",
-    title: "Broadly useful outcomes",
+    id: "premium",
+    title: "Premium but simple",
     paragraphs: [
-      "We prioritize workflows that improve clarity, speed, and operator control across teams.",
+      "Power should not feel complicated. Premium means refined, confident, and honest about what each product does.",
     ],
     bullets: [
+      "Every product should feel clear from the first moment.",
+      "Power should not come with complexity the user has to untangle.",
+      "The ecosystem should make each product more useful, not more crowded.",
+    ],
+  },
+  {
+    id: "connected",
+    title: "Connected, not cluttered",
+    paragraphs: [
+      "Products should work together without becoming a maze. Each product stands on its own, but the sum should be greater than the parts.",
+    ],
+    bullets: [
+      "Design for real workflows that cross product boundaries.",
+      "Keep navigation simple even as the ecosystem grows.",
+      "Each product should have a clear job and a clear boundary.",
+    ],
+  },
+  {
+    id: "workflows",
+    title: "Built for real workflows",
+    paragraphs: [
+      "Products should fit how people actually work, learn, discover, and operate.",
+    ],
+    bullets: [
+      "Start with the user's task, not the technology stack.",
       "Prefer inspectable outputs over opaque automation.",
-      "Favor grounded, reviewable responses for high-stakes tasks.",
-      "Keep user trust ahead of short-term growth claims.",
-    ],
-  },
-  {
-    id: "safety",
-    title: "Safety and reliability",
-    paragraphs: [
-      "Risk-sensitive capabilities should ship with scoped permissions, review paths, and clear failure handling.",
-    ],
-    bullets: [
-      "Introduce high-risk behaviors with explicit gating.",
-      "Treat unknown facts as unknown and report limits directly.",
-      "Iterate safeguards continuously as capabilities evolve.",
-    ],
-  },
-  {
-    id: "cooperation",
-    title: "Interoperability and collaboration",
-    paragraphs: [
-      "Upcube should integrate cleanly with the systems teams already operate.",
-    ],
-    bullets: [
-      "Use transparent contracts between product surfaces and supporting services.",
       "Support review workflows that can be audited by operators.",
-      "Publish capability boundaries clearly in product copy.",
+    ],
+  },
+  {
+    id: "scale",
+    title: "Designed for scale",
+    paragraphs: [
+      "From commerce catalogs with billions of products to infrastructure serving millions of requests, scale should feel invisible.",
+    ],
+    bullets: [
+      "Architect systems that grow without losing clarity.",
+      "Plan for scale at every layer: product, data, infrastructure, and operations.",
+      "Keep performance and reliability as product features, not afterthoughts.",
     ],
   },
 ];
@@ -1617,7 +1754,7 @@ export const trustSections: PortalTextSection[] = [
     id: "overview",
     title: "Trust and security overview",
     paragraphs: [
-      "This page summarizes current trust posture at a high level and links to implemented safety, FAQ, and privacy routes.",
+      "This page summarizes current trust posture for Upcube products and websites and links to implemented safety, FAQ, and privacy routes.",
       "It does not assert certifications, compliance frameworks, or audited controls.",
     ],
   },
@@ -1636,7 +1773,7 @@ export const trustSections: PortalTextSection[] = [
 ];
 
 export const legalDraftNotice =
-  "Draft placeholder: reviewed legal copy, legal entity details, effective dates, and policy contacts were not provided in this repo.";
+  "Reviewed legal copy, legal entity details, effective dates, and policy contacts are not provided in this repo.";
 
 export const privacyPolicySections: PortalTextSection[] = [
   {
@@ -1751,7 +1888,7 @@ export const securitySections: PortalTextSection[] = [
     id: "security-overview",
     title: "Security overview",
     paragraphs: [
-      "This route is a canonical security entry point for the portal.",
+      "This route is a security entry point for Upcube products and websites.",
       "Security controls, certifications, and contractual guarantees are not provided in current repo content and are intentionally not claimed here.",
     ],
   },
@@ -1790,7 +1927,7 @@ export const legalSections: PortalTextSection[] = [
     id: "legal-index",
     title: "Legal index",
     paragraphs: [
-      "This route indexes current legal and policy pages published in the portal.",
+      "This route indexes current legal and policy pages published for Upcube products and websites.",
       "Reviewed legal entity text, effective dates, and contact details are not fully provided in this repo.",
     ],
     bullets: [

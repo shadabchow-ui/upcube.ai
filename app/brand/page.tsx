@@ -5,8 +5,9 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Brand Resources | UpcubeAI",
-  description: "Practical brand-use guidance for UpcubeAI and connected apps.",
+  title: "Brand | Upcube",
+  description:
+    "Explore the Upcube brand system for a connected family of technology products across AI, cloud, compute, robotics, commerce, education, discovery, and future computing.",
   path: "/brand",
 });
 

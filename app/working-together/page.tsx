@@ -5,9 +5,9 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Building With Communities | UpcubeAI",
+  title: "Communities | Upcube",
   description:
-    "How UpcubeAI approaches collaboration, inclusion, and shared progress across the AI community.",
+    "Upcube builds with the communities who use technology to learn, create, discover, operate, and build across connected product experiences.",
   path: "/working-together",
 });
 

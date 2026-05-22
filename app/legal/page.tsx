@@ -5,8 +5,9 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Legal | UpcubeAI",
-  description: "Legal index for terms, privacy, policies, and trust routes.",
+  title: "Legal | Upcube",
+  description:
+    "Legal index for Upcube products, websites, and services including terms, privacy, policies, and trust routes.",
   path: "/legal",
 });
 
@@ -19,9 +20,9 @@ export default function LegalRoutePage() {
         slug: "legal-policy-index",
         order: 99,
         title: "Legal & Policies",
-        subtitle: "A clear home for UpcubeAI legal and policy pages.",
+        subtitle: "A clear home for Upcube legal and policy pages.",
         description:
-          "This page brings together the legal, policy, safety, trust, privacy, and responsible AI routes currently available across the UpcubeAI portal.",
+          "This page brings together the legal, policy, safety, trust, privacy, and responsible AI routes currently available across the Upcube portal.",
         body,
         category: "trust",
       }}

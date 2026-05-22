@@ -5,9 +5,9 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Trust | UpcubeAI",
+  title: "Trust | Upcube",
   description:
-    "How the public UpcubeAI site handles trust language, placeholders, and evidence boundaries.",
+    "How Upcube handles trust language, placeholders, and evidence boundaries across products and websites.",
   path: "/trust-transparency",
 });
 
@@ -22,7 +22,7 @@ export default function TrustTransparencyRoutePage() {
         title: "Trust",
         subtitle: "How we handle evidence, placeholders, and public language.",
         description:
-          "Trust is not a single page. It is built through honest product framing, clear public language, and evidence-backed claims.",
+          "Trust is not a single page. It is built through honest product framing, clear public language, and evidence-backed claims across the Upcube product family.",
         body,
         category: "trust",
       }}

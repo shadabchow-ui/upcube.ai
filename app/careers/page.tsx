@@ -5,8 +5,9 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Careers | UpcubeAI",
-  description: "Careers and builder culture overview for UpcubeAI.",
+  title: "Careers | Upcube",
+  description:
+    "Explore the teams and product directions behind Upcube's connected technology ecosystem across AI, cloud, compute, robotics, commerce, education, discovery, and future operating systems.",
   path: "/careers",
 });
 

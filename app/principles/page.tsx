@@ -5,9 +5,9 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Commitments | UpcubeAI",
+  title: "Commitments | Upcube",
   description:
-    "Operating principles for UpcubeAI product delivery and trust posture.",
+    "Operating principles for Upcube product delivery, trust posture, and responsible product practices.",
   path: "/principles",
 });
 
@@ -23,7 +23,7 @@ export default function PrinciplesRoutePage() {
         subtitle:
           "Bold innovation. Responsible development. Progress together.",
         description:
-          "UpcubeAI's approach to developing and using AI is grounded in a simple founding belief.",
+          "Upcube approach to developing products and technologies grounded in clear operating principles.",
         body,
         category: "trust",
       }}

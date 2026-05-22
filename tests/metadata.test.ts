@@ -94,11 +94,12 @@ describe("constants", () => {
   });
 
   it("has correct default site title", () => {
-    expect(DEFAULT_SITE_TITLE).toContain("UpcubeAI");
+    expect(DEFAULT_SITE_TITLE).toContain("Upcube");
+    expect(DEFAULT_SITE_TITLE).toContain("Technology");
   });
 
   it("has correct default site description", () => {
-    expect(DEFAULT_SITE_DESCRIPTION).toContain("Ethen");
-    expect(DEFAULT_SITE_DESCRIPTION).toContain("UpcubeAI");
+    expect(DEFAULT_SITE_DESCRIPTION).toContain("technology ecosystem");
+    expect(DEFAULT_SITE_DESCRIPTION).toContain("robotics");
   });
 });

@@ -120,6 +120,7 @@ describe("route page file coverage - product pages", () => {
     "jobs",
     "cloud",
     "quantum",
+    "robotics",
     "ventari",
     "vm",
     "upcube-os",

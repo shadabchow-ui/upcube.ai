@@ -5,9 +5,9 @@ import type { UpcubeProduct } from "lib/upcube-products/products";
 
 export const CANONICAL_BASE_URL = "https://upcube.ai";
 export const DEFAULT_SITE_TITLE =
-  "UpcubeAI | AI Product Family for Work, Discovery, and Cloud";
+  "Upcube | AI, Cloud, Compute, Robotics, Education & Future Technology Products";
 export const DEFAULT_SITE_DESCRIPTION =
-  "UpcubeAI is the AI product company behind Ethen, Earth, Books, Games, Jobs, Cloud, Voice, Education, and future computing platforms — a connected product family for work, discovery, commerce, infrastructure, and learning.";
+  "Upcube builds a connected technology ecosystem across AI, cloud infrastructure, compute, robotics, education, commerce, spatial exploration, entertainment, jobs, books, voice, and next-generation operating systems.";
 export const DEFAULT_OG_IMAGE = "/opengraph-image";
 
 export const canonicalBaseUrl = CANONICAL_BASE_URL;
@@ -41,7 +41,7 @@ export const upcubeOrganizationSchema = {
   description: DEFAULT_SITE_DESCRIPTION,
   logo: buildCanonicalUrl("/brand/logo-mark.png"),
   slogan:
-    "AI for the way you work, discover, build, and imagine what\u2019s next.",
+    "A connected family of products across AI, cloud, compute, robotics, education, commerce, and discovery.",
   sameAs: [
     "https://www.facebook.com/upcubeinc/",
     "https://www.linkedin.com/company/35441477",
@@ -113,7 +113,7 @@ export function createNewsIndexMetadata(): Metadata {
   return createBasicPageMetadata({
     title: `Upcube News | ${upcubeSiteName}`,
     description:
-      "Launch stories and product previews across UpcubeAI, Voice, Education, Upcube Shopping, Books, Earth, Games, Jobs, Cloud, Compute, OS, and Mobile OS.",
+      "Launch stories and product previews across UpcubeAI, Robotics, Voice, Education, Shopping, Books, Earth, Games, Jobs, Cloud, Compute, OS, and Mobile OS.",
     path: "/news",
   });
 }

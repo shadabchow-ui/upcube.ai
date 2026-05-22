@@ -83,6 +83,7 @@ describe("core sitemap route coverage", () => {
     expect(slugs).toContain("upcube-os");
     expect(slugs).toContain("upcube-mobile-os");
     expect(slugs).toContain("voice");
+    expect(slugs).toContain("robotics");
     expect(slugs).toContain("university");
   });
 

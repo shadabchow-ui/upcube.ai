@@ -13,9 +13,10 @@ import {
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata = createBasicPageMetadata({
-  title: "Upcube | AI-Native Technology Ecosystem",
+  title:
+    "Upcube | AI, Cloud, Compute, Robotics, Education & Future Technology Products",
   description:
-    "Upcube is building an AI-native technology ecosystem — combining AI, cloud, compute, operating systems, education, spatial tools, commerce, and work products into one connected platform. Explore Core, Build, Learn, and Explore.",
+    "Upcube builds a connected technology ecosystem across AI, cloud infrastructure, compute, robotics, education, commerce, spatial exploration, entertainment, jobs, books, voice, and next-generation operating systems.",
   path: "/",
 });
 

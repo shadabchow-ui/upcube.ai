@@ -24,7 +24,7 @@ export type FeatureBand = {
 };
 
 export const homeBuildSectionIntro =
-  "The ecosystem spans AI workspaces, cloud infrastructure, compute, education, commerce, spatial exploration, entertainment, and next-generation operating systems.";
+  "The ecosystem spans AI workspaces, cloud infrastructure, compute, robotics, education, commerce, spatial exploration, entertainment, and next-generation operating systems.";
 
 export const homeCapabilityPoints: HomeProofPoint[] = [
   {
@@ -71,6 +71,13 @@ export const homeCapabilityPoints: HomeProofPoint[] = [
       { label: "Cloud", href: "/products/cloud" },
       { label: "Compute", href: "/products/vm" },
     ],
+  },
+  {
+    title: "Robotics & Physical AI",
+    description:
+      "A new operations layer for robots in the real world. Robotics brings mission replay, fleet visibility, incident evidence, and policy-aware control into the Upcube ecosystem.",
+    href: "/products/robotics",
+    links: [{ label: "Robotics", href: "/products/robotics" }],
   },
   {
     title: "Entertainment",
@@ -163,6 +170,14 @@ export const featureBands: FeatureBand[] = [
     href: "/products/vm",
     cta: "Learn more",
     tone: "blue",
+  },
+  {
+    title: "Robotics",
+    description:
+      "Mission replay, fleet observability, incident evidence, and policy-aware robotics operations for teams building and operating real-world robot fleets.",
+    href: "/products/robotics",
+    cta: "Explore Robotics",
+    tone: "teal",
   },
   {
     title: "OS",

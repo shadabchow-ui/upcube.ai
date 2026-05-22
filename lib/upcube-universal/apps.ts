@@ -11,6 +11,7 @@ export type UpcubeAppId =
   | "quantum"
   | "shopping"
   | "compute"
+  | "robotics"
   | "os"
   | "mobile-os"
   | "voice"

@@ -68,6 +68,13 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
     launchHref: UPCUBE_QUANTUM_URL,
   },
   {
+    id: "robotics",
+    label: "Robotics",
+    description:
+      "Mission replay, fleet observability, incident evidence, and robotics operations software.",
+    productHref: "/products/robotics",
+  },
+  {
     id: "ventari",
     label: "Shopping",
     description:
@@ -157,6 +164,13 @@ export const ecosystemGroups: EcosystemGroup[] = [
         description: "Developer tools, cloud workflows, and compute access.",
         productHref: "/products/cloud",
         launchHref: UPCUBE_CLOUD_URL,
+      },
+      {
+        id: "robotics",
+        label: "Robotics",
+        description:
+          "Mission replay, fleet observability, incident evidence, and policy-aware operations.",
+        productHref: "/products/robotics",
       },
       {
         id: "vm",
@@ -316,6 +330,12 @@ export const upcubeLauncherApps = [
     label: "Compute",
     href: UPCUBE_CLOUD_URL,
     iconSrc: "/upcube-app-icons/cloud.png",
+  },
+  {
+    id: "robotics" as const,
+    label: "Robotics",
+    href: "/products/robotics",
+    iconSrc: "/upcube-app-icons/console.png",
   },
   {
     id: "os" as const,

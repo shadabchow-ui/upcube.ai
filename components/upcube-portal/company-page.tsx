@@ -29,7 +29,10 @@ export function CompanyPage() {
 
         <section className="uc-section uc-section-rule">
           <div className="uc-shell">
-            <SectionHeading title="Mission and vision" />
+            <SectionHeading
+              title="One ecosystem. Many ways to build, learn, discover, and operate."
+              description="Products designed to work together."
+            />
             <div className="uc-grid uc-inner-grid-3">
               {companyVisionBullets.map((item) => (
                 <article key={item.id} className="uc-card">
@@ -44,8 +47,8 @@ export function CompanyPage() {
         <section className="uc-section uc-section-rule">
           <div className="uc-shell">
             <SectionHeading
-              title="Work areas"
-              description="Core company pillars represented by the current product ecosystem."
+              title="Product areas"
+              description="Connected products across the technology ecosystem."
             />
             <div className="uc-grid uc-inner-grid-3">
               {companyWorkAreas.map((item) => (
@@ -61,8 +64,8 @@ export function CompanyPage() {
         <section className="uc-section uc-section-rule">
           <div className="uc-shell">
             <SectionHeading
-              title="Ecosystem overview"
-              description="Current products as proof points in the broader UpcubeAI company story."
+              title="Product family"
+              description="Every product in the Upcube ecosystem."
             />
             <div className="uc-grid uc-card-grid">
               {companyEcosystem.map((item) => (
@@ -73,20 +76,6 @@ export function CompanyPage() {
                 </article>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className="uc-section uc-section-rule">
-          <div className="uc-shell">
-            <SectionHeading
-              title="Build with UpcubeAI"
-              description={upcubeCompanyIdentity.mission}
-            />
-            <p>
-              <Link className="uc-button" data-variant="solid" href="#">
-                Contact team (placeholder)
-              </Link>
-            </p>
           </div>
         </section>
       </main>

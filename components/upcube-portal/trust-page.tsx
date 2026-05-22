@@ -6,7 +6,7 @@ export function TrustPage() {
     <TextPage
       eyebrow="Trust and security"
       title="Trust framing tied to current implementation evidence"
-      description="This page complements the existing safety route and provides a trust-focused entry point without unsupported guarantees."
+      description="This page provides a trust-focused entry point for Upcube products and websites without unsupported guarantees."
       sections={trustSections}
       ctas={[
         { label: "Open safety", href: "/safety" },

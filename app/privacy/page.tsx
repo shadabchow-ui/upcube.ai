@@ -5,8 +5,9 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Privacy | UpcubeAI",
-  description: "Privacy policy for UpcubeAI products and services.",
+  title: "Privacy | Upcube",
+  description:
+    "Privacy policy covering Upcube products, websites, and services.",
   path: "/privacy",
 });
 
@@ -21,7 +22,7 @@ export default function PrivacyRoute() {
         title: "Privacy Notice",
         subtitle: "",
         description:
-          "UpcubeAI privacy policy covering how we handle your data.",
+          "Upcube privacy policy covering Upcube products, websites, and services.",
         body,
         category: "trust",
       }}

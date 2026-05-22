@@ -1,130 +1,73 @@
 # Careers
 
-## Build the product family for the AI age.
+## Build the product ecosystem.
 
-Upcube is building a connected ecosystem across AI workspaces, voice, education, commerce, discovery, cloud infrastructure, entertainment, and future computing.
+Upcube is a technology company building connected products across AI, cloud infrastructure, compute, robotics, commerce, education, spatial exploration, entertainment, discovery, and future operating systems.
 
-That kind of ambition takes builders who care about more than shipping features.
+That kind of ambition takes people who care about product craft, systems thinking, design quality, infrastructure, and the discipline of turning a broad vision into real software.
 
-It takes people who care about product craft, systems thinking, design quality, user trust, AI safety, infrastructure, storytelling, and the hard work of turning a broad vision into real software.
-
-Careers at Upcube are for people who want to help build products that feel premium, useful, and understandable.
+Careers at Upcube are for people who want to help build products that feel premium, useful, and connected.
 
 ## The work
 
-Upcube is not focused on one narrow surface.
+The product family includes Ethen for AI workspace, Cloud for infrastructure, Compute for virtual machines and operations, Robotics for mission replay and fleet observability, Ventari for commerce technology, Education for structured learning, Earth for spatial discovery, Books for knowledge discovery, Games for entertainment, Jobs for opportunity workflows, and OS, Mobile OS, Voice, and Quantum for future platforms.
 
-The product family includes Ethen and UpcubeAI for serious AI work, Upcube Voice for future private voice interaction, Upcube University for guided learning, Ventari for AI commerce, Upcube Earth for spatial discovery, Books for knowledge discovery, Games for entertainment discovery, Jobs for opportunity workflows, Cloud and Compute for infrastructure, and OS/Mobile OS for future AI-native computing.
+That creates a wide range of work:
 
-That creates a wide range of work.
-
-Designing better AI workspaces.  
-Building long-form research and trust pages.  
-Creating product systems that scale.  
-Improving search and retrieval.  
-Building cloud and compute foundations.  
-Designing safer tool workflows.  
-Improving accessibility.  
-Creating premium visual systems.  
-Writing product language that is ambitious but honest.  
-Turning technical systems into experiences people can understand.
+Designing better product experiences. Building infrastructure that scales. Creating robotics operations software. Developing commerce and discovery systems. Building education platforms. Improving search and retrieval. Designing safe tool workflows. Creating premium visual systems. Writing product language that is ambitious but honest. Turning technical systems into experiences people can understand.
 
 ## How we work
 
-Upcube values focused execution.
+Upcube values focused execution. The best work is clear, scoped, tested, and grounded in the actual product.
 
-The best work is clear, scoped, tested, and grounded in the actual product. We care about strong plans, but plans are not the product. We care about design references, but copying is not craftsmanship. We care about AI speed, but speed without validation is fragile.
+The working style is practical: understand the current system, make scoped changes, run validation, and keep public claims tied to what is actually implemented.
 
-The working style is practical:
+This is a builder culture. We care about strong plans, but plans are not the product. We care about design, but copying is not craftsmanship. We care about speed, but speed without validation is fragile.
 
-Read the current repo before changing it.  
-Understand the route, component, data, and style patterns.  
-Make scoped changes.  
-Avoid unnecessary rewrites.  
-Run validation.  
-Report what passed, what failed, and what still needs review.  
-Keep public claims tied to what is actually implemented.
+## Teams and directions
 
-This is a builder culture.
+### Product Design
 
-## What we look for
+Shape how connected products look, feel, and work across the ecosystem. Design premium interfaces that make advanced technology feel clear and useful.
 
-### Product judgment
+### Software Engineering
 
-You should care about how a product feels, not only whether it technically works. Small details matter: spacing, hierarchy, responsiveness, labels, empty states, loading states, and how easily a user understands the next step.
+Develop the products, infrastructure, and platforms that power the ecosystem. Build across AI, cloud, compute, robotics, commerce, education, and discovery.
 
-### Technical discipline
+### Cloud and Infrastructure
 
-You should be comfortable working with modern web apps, typed code, data-driven content, reusable components, validation commands, and deployment-minded development.
+Design and operate the cloud infrastructure, compute platform, storage, networking, and developer tools behind the product family.
 
-### AI fluency
+### Robotics Systems
 
-You do not need to pretend AI is magic. You need to understand how AI products behave: retrieval, model limits, hallucination risk, tool use, approvals, evaluation, and the difference between a demo and a durable product.
+Create mission replay, fleet observability, incident evidence, and policy-aware operations software for robotics operations teams.
 
-### Taste and restraint
+### Commerce and Discovery
 
-Premium product work requires knowing what to leave out. A page should not become a wall of text. A dashboard should not become a junk drawer. A feature should not overclaim. A design should feel focused.
+Shape the shopping, books, games, earth, and jobs discovery experiences. Build products that help people explore large information spaces with clarity.
 
-### Trust awareness
+### Education Systems
 
-Privacy, safety, security, legal, and policy pages should be treated carefully. If something is not documented, do not invent it. If a product is future direction, say so clearly.
+Build the learning platform. Create structured learning paths, AI education, product training, and guided technical courses.
 
-## Areas of work
+### Operating Systems and Interfaces
 
-### AI product engineering
+Work on OS, Mobile OS, Voice, and Quantum platform directions. Shape future computing interfaces around trust, privacy, and user control.
 
-Build Ethen, UpcubeAI, artifacts, research workflows, tool governance, approvals, and workspace continuity.
+### Trust and Operations
 
-### Frontend and design systems
-
-Create premium interfaces, route systems, long-form pages, responsive layouts, navigation, product pages, dashboards, and reusable components.
-
-### Cloud and compute systems
-
-Work on developer tools, infrastructure direction, compute workflows, networking, storage, observability, and scalable systems.
-
-### Search and discovery
-
-Improve discovery across books, games, jobs, products, courses, maps, research, and workspace content.
-
-### AI safety and trust
-
-Design clear approvals, source attribution, privacy-aware flows, policy pages, responsible AI framing, and trust surfaces.
-
-### Content and product storytelling
-
-Write pages that make the company feel ambitious, polished, and grounded without drifting into unsupported claims.
-
-### Education and learning
-
-Build Upcube University learning paths, product training, technical content, and guided AI education.
-
-### Future computing
-
-Explore OS and Mobile OS directions around visible AI help, trust, privacy, permissions, and user control.
-
-## Candidate mindset
-
-The strongest candidates are curious and direct.
-
-They can work with ambiguity without inventing facts. They can move fast without becoming sloppy. They can improve a design without copying another brand. They can use AI without outsourcing their judgment to it. They can care about both the big vision and the small implementation detail that makes a page feel finished.
-
-Upcube is looking for builders who want to do serious work.
+Design clear approvals, privacy-aware flows, responsible product framing, and trust surfaces across the ecosystem.
 
 ## Current status
 
-This page is a public careers direction page.
-
-Specific openings, hiring process details, compensation, location policy, benefits, employment terms, legal entity information, and application contact channels are not provided here unless separately added to the live jobs destination or reviewed company documentation.
+This page is a public careers direction page. Specific openings, hiring process details, compensation, location policy, benefits, employment terms, legal entity information, and application contact channels are not provided here unless separately added to the live jobs destination or reviewed company documentation.
 
 Until formal hiring details are published, this page should be treated as company culture and career-direction content.
 
 ## The careers standard
 
-Upcube is building for the long term.
+Upcube is building for the long term. The work needs people who can think clearly, build carefully, and keep going when the product becomes complex.
 
-The work needs people who can think clearly, build carefully, and keep going when the product becomes complex.
+If you want to help build connected products across software, infrastructure, learning, commerce, robotics, and future computing, this is the kind of company Upcube is becoming.
 
-If you want to help build AI products that connect work, learning, discovery, commerce, infrastructure, and future computing, this is the kind of company Upcube is becoming.
-
-**Build with ambition. Ship with evidence. Keep the user in control.**
+**Build the product ecosystem. Keep the standard high. Make advanced technology feel useful.**

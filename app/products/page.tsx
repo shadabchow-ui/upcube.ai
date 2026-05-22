@@ -34,8 +34,15 @@ const ecosystemGroups: GroupDef[] = [
     label: "Upcube Build",
     href: "/build",
     description:
-      "Cloud infrastructure, compute, operating systems, and voice platform for builders and platform teams.",
-    productIds: ["cloud", "vm", "upcube-os", "upcube-mobile-os", "voice"],
+      "Cloud infrastructure, compute, robotics, operating systems, and voice platform for builders and platform teams.",
+    productIds: [
+      "cloud",
+      "vm",
+      "robotics",
+      "upcube-os",
+      "upcube-mobile-os",
+      "voice",
+    ],
   },
   {
     id: "learn",

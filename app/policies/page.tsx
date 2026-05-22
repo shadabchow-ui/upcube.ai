@@ -5,9 +5,9 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Policy | UpcubeAI",
+  title: "Policies | Upcube",
   description:
-    "Additional policy pages covering UpcubeAI safety, trust, and responsible AI.",
+    "Additional policy pages covering Upcube safety, trust, privacy, and responsible product practices.",
   path: "/policies",
 });
 
@@ -21,7 +21,8 @@ export default function PoliciesRoutePage() {
         order: 99,
         title: "Policy",
         subtitle: "",
-        description: "Additional policy surfaces across the UpcubeAI portal.",
+        description:
+          "Additional policy surfaces across Upcube products and websites.",
         body,
         category: "trust",
       }}

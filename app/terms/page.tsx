@@ -5,8 +5,8 @@ import { getBodyForRoute } from "lib/upcube-portal/page-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
-  title: "Terms of Use | UpcubeAI",
-  description: "Terms of Use for UpcubeAI websites, products, and services.",
+  title: "Terms | Upcube",
+  description: "Terms of Use for Upcube products, websites, and services.",
   path: "/terms",
 });
 
@@ -19,9 +19,9 @@ export default function TermsRoutePage() {
         slug: "terms-of-use",
         order: 99,
         title: "Terms of Use",
-        subtitle: "Welcome to UpcubeAI",
+        subtitle: "Welcome to Upcube",
         description:
-          "These Terms of Use describe the rules that apply when you access or use UpcubeAI products.",
+          "These Terms of Use describe the rules that apply when you access or use Upcube products and websites.",
         body,
         category: "trust",
       }}

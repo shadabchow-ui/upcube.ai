@@ -39,8 +39,10 @@ function Hero() {
         <div className="uc-home__hero-stack">
           <h1>Build, learn, compute, create, &amp; explore.</h1>
           <p className="uc-home__lead">
-            Upcube is a AI-native technology ecosystem for the next generation
-            of builders, learners, creators, founders, and businesses.
+            Upcube is a technology company building a connected family of
+            products across AI, cloud, compute, robotics, education, commerce,
+            spatial exploration, entertainment, and next-generation operating
+            systems.
           </p>
           <HeroChatPanel />
         </div>
@@ -81,11 +83,11 @@ export default function UpcubeHomePage() {
               Explore the ecosystem.
             </h2>
             <p className="uc-home__section-copy uc-home__section-copy--centered">
-              One connected platform bringing together AI workspaces, cloud
-              infrastructure, compute, education, commerce, spatial exploration,
-              entertainment, and next-generation operating systems, designed to
-              help people turn ideas into real products, knowledge into action,
-              and ambition into momentum.
+              One connected ecosystem bringing together AI, cloud, compute,
+              robotics, education, commerce, spatial exploration, entertainment,
+              and next-generation operating systems, designed to help people
+              turn ideas into real products, knowledge into action, and ambition
+              into momentum.
             </p>
             <div className="uc-home__ecosystem-grid">
               {ecosystemGroups.map((group) => (
@@ -298,9 +300,9 @@ export default function UpcubeHomePage() {
             <p className="uc-home__cta-copy">
               Start with Ethen. Then explore everything the ecosystem opens.
               Move through product pages, launch stories, and research to see
-              how Upcube connects AI workspaces, cloud infrastructure,
-              education, commerce, discovery, entertainment, and next-generation
-              computing into one connected platform.
+              how Upcube connects AI, cloud, compute, robotics, education,
+              commerce, discovery, entertainment, and next-generation operating
+              systems into one connected ecosystem.
             </p>
             <div className="uc-home__cta-row">
               <Link href={HOME_CHAT_CTA_HREF} className="uc-home__primary-btn">

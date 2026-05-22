@@ -55,6 +55,7 @@ function getProductApplicationCategory(slug: UpcubeProductSlug) {
     jobs: "BusinessApplication",
     cloud: "DeveloperApplication",
     quantum: "EducationalApplication",
+    robotics: "BusinessApplication",
     ventari: "ShoppingApplication",
     vm: "DeveloperApplication",
     "upcube-os": "OperatingSystem",
@@ -192,7 +193,7 @@ export function createItemListJsonLd(
     "@type": "ItemList",
     name: "UpcubeAI Product Family",
     description:
-      "Connected AI products spanning work, discovery, commerce, cloud infrastructure, entertainment, learning, and future computing.",
+      "Connected products spanning AI, cloud, compute, robotics, education, commerce, discovery, entertainment, and future platforms.",
     url: buildCanonicalUrl(path),
     itemListElement: items.map((item, index) => ({
       "@type": "ListItem",
