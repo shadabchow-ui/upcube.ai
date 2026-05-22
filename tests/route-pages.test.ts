@@ -23,7 +23,14 @@ function routeFileContent(route: string): string {
   }
 }
 
-const smokeRoutes = ["/", "/news", "/contact"] as const;
+const smokeRoutes = [
+  "/",
+  "/news",
+  "/contact",
+  "/signin",
+  "/signup",
+  "/account",
+] as const;
 
 const job5Routes = [
   "/pricing",
@@ -42,6 +49,17 @@ const ecosystemRoutes = [
   "/build",
   "/learn",
   "/explore",
+] as const;
+
+const accountRoutes = [
+  "/account",
+  "/account/profile",
+  "/account/security",
+  "/account/apps",
+  "/account/privacy",
+  "/account/billing",
+  "/account/storage",
+  "/account/help",
 ] as const;
 
 const corePortalRoutes = [
@@ -85,6 +103,18 @@ describe("route page file coverage - smoke routes", () => {
   it("has /contact page.tsx", () => {
     expect(routePageExists("/contact")).toBe(true);
   });
+
+  it("has /signin page.tsx", () => {
+    expect(routePageExists("/signin")).toBe(true);
+  });
+
+  it("has /signup page.tsx", () => {
+    expect(routePageExists("/signup")).toBe(true);
+  });
+
+  it("has /account page.tsx", () => {
+    expect(routePageExists("/account")).toBe(true);
+  });
 });
 
 describe("route page file coverage - Job 5 routes", () => {
@@ -97,6 +127,14 @@ describe("route page file coverage - Job 5 routes", () => {
 
 describe("route page file coverage - ecosystem routes", () => {
   for (const route of ecosystemRoutes) {
+    it(`has ${route} page.tsx`, () => {
+      expect(routePageExists(route)).toBe(true);
+    });
+  }
+});
+
+describe("route page file coverage - account routes", () => {
+  for (const route of accountRoutes) {
     it(`has ${route} page.tsx`, () => {
       expect(routePageExists(route)).toBe(true);
     });

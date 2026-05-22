@@ -1,0 +1,262 @@
+.uc-account {
+  --uc-account-sidebar-width: 16rem;
+  --uc-account-gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.uc-account-layout {
+  display: grid;
+  grid-template-columns: var(--uc-account-sidebar-width) 1fr;
+  gap: var(--uc-account-gap);
+  width: min(100%, var(--uc-max-width));
+  margin-inline: auto;
+  padding: clamp(1.5rem, 3vw, 2.5rem) var(--uc-gutter);
+  min-height: 60svh;
+}
+
+.uc-account-sidebar {
+  position: relative;
+}
+
+.uc-account-sidebar-sticky {
+  position: sticky;
+  top: calc(var(--up-header-h, 5rem) + 1rem);
+}
+
+.uc-account-sidebar-label {
+  margin: 0 0 0.75rem;
+  color: var(--uc-text-dim);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.uc-account-sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.uc-account-sidebar-link {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--uc-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.3;
+  text-decoration: none;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.uc-account-sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--uc-text);
+}
+
+.uc-account-sidebar-link:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--uc-accent) 65%, #8eb9ff);
+  outline-offset: 2px;
+}
+
+.uc-account-sidebar-link[data-active] {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--uc-text);
+  font-weight: 500;
+}
+
+.uc-account-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  min-width: 0;
+}
+
+.uc-account-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.uc-account-title {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.15;
+  font-weight: 540;
+  letter-spacing: -0.02em;
+}
+
+.uc-account-desc {
+  margin: 0;
+  color: var(--uc-text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.uc-account-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  gap: 1rem;
+}
+
+.uc-account-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: clamp(1.1rem, 2vw, 1.35rem);
+  border: 1px solid var(--uc-border-soft);
+  border-radius: var(--uc-radius-sm);
+  color: var(--uc-text);
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.uc-account-card:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.uc-account-card:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--uc-accent) 65%, #8eb9ff);
+  outline-offset: 2px;
+}
+
+.uc-account-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.uc-account-card-title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 530;
+}
+
+.uc-account-card-desc {
+  margin: 0;
+  color: var(--uc-text-muted);
+  font-size: 0.84375rem;
+  line-height: 1.5;
+}
+
+.uc-account-card-status {
+  align-self: flex-start;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--uc-border-soft);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--uc-text-dim);
+}
+
+.uc-account-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.uc-account-section-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: clamp(1.1rem, 2vw, 1.35rem);
+  border: 1px solid var(--uc-border-soft);
+  border-radius: var(--uc-radius-sm);
+}
+
+.uc-account-section-title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 530;
+}
+
+.uc-account-section-desc {
+  margin: 0;
+  color: var(--uc-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.uc-account-app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.uc-account-app-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--uc-border-soft);
+  border-radius: 0.5rem;
+  color: var(--uc-text);
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.uc-account-app-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.uc-account-app-card:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--uc-accent) 65%, #8eb9ff);
+  outline-offset: 2px;
+}
+
+.uc-account-app-label {
+  font-size: 0.9rem;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.uc-account-app-desc {
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: var(--uc-text-muted);
+}
+
+@media (max-width: 48rem) {
+  .uc-account-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .uc-account-sidebar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .uc-account-sidebar-sticky {
+    position: static;
+  }
+
+  .uc-account-sidebar-list {
+    flex-direction: row;
+    gap: 0.25rem;
+  }
+
+  .uc-account-sidebar-link {
+    white-space: nowrap;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.85rem;
+  }
+
+  .uc-account-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .uc-account-sidebar-link,
+  .uc-account-card,
+  .uc-account-app-card {
+    transition-duration: 0.01ms !important;
+  }
+}

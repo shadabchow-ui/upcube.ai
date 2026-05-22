@@ -5,6 +5,11 @@ import {
   portalHomepageCards,
   portalMenuGroups,
   portalActionNav,
+  portalRoutePlan,
+  portalAppLinks,
+  signinSections,
+  signupSections,
+  accountSections,
 } from "lib/upcube-portal/content";
 import { upcubeProductLinks } from "lib/upcube-universal/product-links";
 
@@ -22,6 +27,9 @@ describe("internal link validation - header navigation", () => {
   });
 
   it("portalActionNav links are well-formed", () => {
+    expect(portalActionNav.length).toBeGreaterThanOrEqual(2);
+    const hrefs = portalActionNav.map((i) => i.href);
+    expect(hrefs).toContain("/contact");
     for (const item of portalActionNav) {
       expect(resolveFullyQualifiedInternalLink(item.href)).toBe(true);
     }
@@ -122,5 +130,80 @@ describe("product link data", () => {
         expect(product.launchHref.startsWith("https://")).toBe(true);
       }
     }
+  });
+});
+
+describe("signin and signup content", () => {
+  it("signinSections has sign-in status section", () => {
+    expect(signinSections.length).toBeGreaterThan(0);
+    expect(signinSections[0]!.id).toBe("signin-status");
+    expect(signinSections[0]!.title).toContain("Sign-in");
+  });
+
+  it("signupSections has sign-up status section", () => {
+    expect(signupSections.length).toBeGreaterThan(0);
+    expect(signupSections[0]!.id).toBe("signup-status");
+    expect(signupSections[0]!.title).toContain("Sign-up");
+  });
+
+  it("signin content does not claim auth is implemented", () => {
+    const body = signinSections.map((s) => s.paragraphs.join(" ")).join(" ");
+    expect(body).toContain("not yet provided");
+    expect(body).toContain("not implemented");
+  });
+
+  it("signup content does not claim auth is implemented", () => {
+    const body = signupSections.map((s) => s.paragraphs.join(" ")).join(" ");
+    expect(body).toContain("not yet provided");
+    expect(body).toContain("not implemented");
+  });
+});
+
+describe("account content and navigation", () => {
+  it("accountSections has account status section", () => {
+    expect(accountSections.length).toBeGreaterThan(0);
+    expect(accountSections[0]!.id).toBe("account-status");
+    expect(accountSections[0]!.title).toContain("Account");
+  });
+
+  it("account content does not claim auth is implemented", () => {
+    const body = accountSections.map((s) => s.paragraphs.join(" ")).join(" ");
+    expect(body).toContain("not yet provided");
+    expect(body).toContain("not implemented");
+  });
+
+  it("account appears in portalActionNav", () => {
+    const actionIds = portalActionNav.map((i) => i.id);
+    expect(actionIds).toContain("account");
+    const accountAction = portalActionNav.find((i) => i.id === "account");
+    expect(accountAction!.href).toBe("/account");
+  });
+
+  it("account appears in portalAppLinks for mobile menu", () => {
+    const appIds = portalAppLinks.map((i) => i.id);
+    expect(appIds).toContain("app-account");
+    const accountApp = portalAppLinks.find((i) => i.id === "app-account");
+    expect(accountApp!.href).toBe("/account");
+  });
+
+  it("account is in the portalRoutePlan", () => {
+    const routeIds = portalRoutePlan.map((r) => r.id);
+    expect(routeIds).toContain("account");
+    const accountRoute = portalRoutePlan.find((r) => r.id === "account");
+    expect(accountRoute!.status).toBe("live");
+  });
+
+  it("account appears in footer company section", () => {
+    const companyGroup = portalFooterGroups.find((g) => g.id === "company");
+    expect(companyGroup).toBeDefined();
+    const hrefs = companyGroup!.links.map((l) => l.href);
+    expect(hrefs).toContain("/account");
+  });
+
+  it("account appears in portalMenuGroups company section", () => {
+    const companyGroup = portalMenuGroups.find((g) => g.id === "company");
+    expect(companyGroup).toBeDefined();
+    const itemHrefs = companyGroup!.items.map((i) => i.href);
+    expect(itemHrefs).toContain("/account");
   });
 });

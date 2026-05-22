@@ -1659,6 +1659,26 @@ body:has(.uc-page) .commerce-navbar {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  .uc-button:hover,
+  .uc-nav-link:hover,
+  .uc-nav-trigger:hover,
+  .uc-mobile-menu-button:hover,
+  .uc-mobile-menu-link:hover,
+  .uc-mobile-menu-app-link:hover,
+  .uc-mobile-menu-cta:hover,
+  .uc-header-mega-link:hover,
+  .uc-footer-link:hover,
+  .uc-footer-social-icon:hover,
+  .uc-footer-bottom-link:hover,
+  .uc-footer-bottom-lang:hover,
+  .uc-tab-button:hover,
+  .uc-card:hover,
+  .uc-search-link:hover,
+  .uc-search-result:hover,
+  .uuh-app-tile:hover {
+    transform: none !important;
+  }
 }
 
 /* Search trigger */

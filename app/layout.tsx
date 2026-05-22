@@ -16,6 +16,8 @@ import "./styles/upcube-news.css";
 import "./styles/upcube-portal.css";
 import "./styles/upcube-universal-header.css";
 import "./styles/upcube-longform.css";
+import "./styles/upcube-account.css";
+import "./styles/upcube-account.css";
 
 const upcubeInter = localFont({
   src: [

@@ -261,6 +261,8 @@ export const portalPrimaryNav: PortalNavItem[] = [
 
 export const portalActionNav: PortalNavItem[] = [
   { id: "chat", label: "Try Ethen", href: UPCUBE_CHAT_URL },
+  { id: "account", label: "Account", href: "/account" },
+  { id: "contact", label: "Contact", href: "/contact" },
 ];
 
 export const portalNav = portalPrimaryNav;
@@ -271,6 +273,7 @@ export const portalFooterLinks: PortalNavItem[] = [
 
 export const portalAppLinks: PortalNavItem[] = [
   { id: "app-ethen", label: "Ethen", href: UPCUBE_CHAT_URL },
+  { id: "app-account", label: "Account", href: "/account" },
   { id: "app-earth", label: "Earth", href: UPCUBE_PLANET_URL },
   { id: "app-books", label: "Books", href: UPCUBE_BOOKS_URL },
   { id: "app-games", label: "Games", href: UPCUBE_GAMES_URL },
@@ -529,6 +532,7 @@ export const portalFooterGroups: PortalFooterGroup[] = [
       { id: "careers-footer", label: "Careers", href: "/careers" },
       { id: "brand-footer", label: "Brand", href: "/brand" },
       { id: "contact-footer", label: "Contact", href: "/contact" },
+      { id: "account-footer", label: "Account", href: "/account" },
       {
         id: "working-together-footer",
         label: "Building With Communities",
@@ -666,6 +670,51 @@ export const portalRoutePlan: PortalRoutePlan[] = [
   { id: "faq", title: "FAQ", href: "/faq", status: "live" },
   { id: "privacy", title: "Privacy", href: "/privacy", status: "live" },
   { id: "contact", title: "Contact", href: "/contact", status: "live" },
+  { id: "signin", title: "Sign In", href: "/signin", status: "live" },
+  { id: "signup", title: "Sign Up", href: "/signup", status: "live" },
+  { id: "account", title: "Account", href: "/account", status: "live" },
+  {
+    id: "account-profile",
+    title: "Account Profile",
+    href: "/account/profile",
+    status: "live",
+  },
+  {
+    id: "account-security",
+    title: "Account Security",
+    href: "/account/security",
+    status: "live",
+  },
+  {
+    id: "account-apps",
+    title: "Connected Apps",
+    href: "/account/apps",
+    status: "live",
+  },
+  {
+    id: "account-privacy",
+    title: "Account Privacy",
+    href: "/account/privacy",
+    status: "live",
+  },
+  {
+    id: "account-billing",
+    title: "Account Billing",
+    href: "/account/billing",
+    status: "live",
+  },
+  {
+    id: "account-storage",
+    title: "Account Storage",
+    href: "/account/storage",
+    status: "live",
+  },
+  {
+    id: "account-help",
+    title: "Account Help",
+    href: "/account/help",
+    status: "live",
+  },
   { id: "company", title: "Company", href: "/company", status: "live" },
   { id: "careers", title: "Careers", href: "/careers", status: "live" },
   {
@@ -1026,6 +1075,12 @@ export const portalMenuGroups: PortalMenuGroup[] = [
         label: "Contact",
         href: "/contact",
         description: "Get in touch.",
+      },
+      {
+        id: "company-account-menu",
+        label: "Account",
+        href: "/account",
+        description: "Manage your account settings and preferences.",
       },
     ],
   },
@@ -1879,6 +1934,67 @@ export const appsSections: PortalTextSection[] = [
     paragraphs: [
       "This page collects public app launch destinations and product overviews available from current link constants.",
       "Account-gated dashboard behavior is not implemented in this route.",
+    ],
+  },
+];
+
+export const signinSections: PortalTextSection[] = [
+  {
+    id: "signin-status",
+    title: "Sign-in access status",
+    paragraphs: [
+      "A sign-in destination is not yet provided in this release. Account-based access, authentication, and user dashboards are not implemented in the current portal.",
+      "When available, sign-in will let you access saved work, product settings, and connected ecosystem surfaces.",
+    ],
+    bullets: [
+      "Use Ethen to explore the AI workspace without signing in.",
+      "Use Contact to reach the team about account or access questions.",
+      "Product-specific destinations remain available without authentication.",
+    ],
+  },
+];
+
+export const signupSections: PortalTextSection[] = [
+  {
+    id: "signup-status",
+    title: "Sign-up access status",
+    paragraphs: [
+      "A sign-up destination is not yet provided in this release. Account creation, registration workflows, and onboarding surfaces are not implemented in the current portal.",
+      "When available, sign-up will provide access to workspace features, saved settings, and connected product surfaces.",
+    ],
+    bullets: [
+      "Use Ethen to begin exploring the AI workspace right away.",
+      "Use Contact to express interest in early access or account provisioning.",
+      "Product discovery pages are fully available without an account.",
+    ],
+  },
+];
+
+export const accountSections: PortalTextSection[] = [
+  {
+    id: "account-status",
+    title: "Account access status",
+    paragraphs: [
+      "Account management features are not yet provided in this release. Authentication, profile settings, and user dashboards are not implemented in the current portal.",
+      "When available, your account will provide access to saved work, product preferences, and connected ecosystem surfaces.",
+    ],
+    bullets: [
+      "Use Ethen to explore the AI workspace without signing in.",
+      "Use Contact to reach the team about account or access questions.",
+      "Product overview pages remain fully available without an account.",
+    ],
+  },
+  {
+    id: "account-features",
+    title: "Planned account features",
+    paragraphs: [
+      "The following account areas are planned but not yet implemented. They are listed here to indicate future product direction without implying current availability.",
+    ],
+    bullets: [
+      "Profile: manage your name, contact details, and personal preferences.",
+      "Security: update your password, review active sessions, and manage two-factor authentication.",
+      "Notifications: configure product, security, and marketing notification preferences.",
+      "Appearance: choose theme, font size, and display preferences.",
     ],
   },
 ];

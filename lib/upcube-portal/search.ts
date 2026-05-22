@@ -91,6 +91,12 @@ const companyTrustSearchLinks: SearchLink[] = [
     label: "Brand Help Center",
     href: "/brand",
   },
+  {
+    id: "account",
+    label: "Account",
+    href: "/account",
+    detail: "Manage your account and preferences.",
+  },
 ];
 
 const newsSearchLinks: SearchLink[] = upcubeNewsArticles.map((a) => ({
