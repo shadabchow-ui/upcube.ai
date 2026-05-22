@@ -37,7 +37,7 @@ function Hero() {
     <section className="uc-home__hero">
       <div className="uc-home__container uc-home__hero-inner">
         <div className="uc-home__hero-stack">
-          <h1>Build, learn, compute, create, &amp; explore.</h1>
+          <h1>Welcome to the agentic UpCube era.</h1>
           <p className="uc-home__lead">
             Upcube is a technology company building a connected family of
             products across AI, cloud, compute, robotics, education, commerce,
@@ -120,143 +120,18 @@ export default function UpcubeHomePage() {
           aria-labelledby="product-cards-title"
         >
           <div className="uc-home__container">
-            <div className="uc-home__portal-grid">
+            <h2 id="product-cards-title" className="uc-home__section-title">
+              Product highlights.
+            </h2>
+            <div className="uc-home__product-card-grid">
               {portalHomepageCards.map((card) => (
-                <Link
-                  className="uc-home__portal-card"
-                  href={card.href}
-                  key={card.id}
-                >
-                  <LinkMeta tag={card.tag} />
+                <article className="uc-home__product-card" key={card.id}>
+                  <div className="uc-home__product-card-meta">
+                    <LinkMeta tag={card.tag} />
+                  </div>
                   <h3>{card.title}</h3>
                   <p>{card.description}</p>
-                  <span className="uc-home__card-link">
-                    {card.ctaLabel ?? "View product details"}
-                  </span>
-                  <LinkMeta placeholder={card.href === "#"} />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section
-          className="uc-home__section uc-home__section--preview"
-          aria-labelledby="preview-title"
-        >
-          <div className="uc-home__container">
-            <p className="uc-home__preview-label">Ecosystem surfaces</p>
-            <h2 id="preview-title">Interfaces built for clarity at scale.</h2>
-            <p className="uc-home__section-copy">
-              Purpose-built experiences across the ecosystem that turn massive
-              information spaces into simple, focused, and intelligent product
-              surfaces.
-            </p>
-            <div className="uc-home__preview-grid">
-              <article className="uc-home__preview-panel">
-                <p className="uc-home__preview-caption">
-                  Ethen workspace: Chat, research, and execution in one
-                  connected AI workspace.
-                </p>
-                <div className="uc-home__preview-surface uc-home__preview-surface--workspace">
-                  <div className="uc-home__preview-sidebar">
-                    <span className="uc-home__preview-sidebar-item" />
-                    <span className="uc-home__preview-sidebar-item" />
-                    <span className="uc-home__preview-sidebar-item" />
-                    <span className="uc-home__preview-sidebar-item" />
-                    <span className="uc-home__preview-sidebar-item" />
-                  </div>
-                  <div className="uc-home__preview-main">
-                    <div className="uc-home__preview-header-bar">
-                      <span className="uc-home__preview-header-line" />
-                      <span className="uc-home__preview-header-dot" />
-                    </div>
-                    <div className="uc-home__preview-body-lines">
-                      <span className="uc-home__preview-body-line" />
-                      <span className="uc-home__preview-body-line" />
-                      <span className="uc-home__preview-body-line" />
-                      <span className="uc-home__preview-body-line" />
-                      <span className="uc-home__preview-body-line" />
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article className="uc-home__preview-panel">
-                <p className="uc-home__preview-caption">
-                  Earth: 3D spatial exploration with terrain, layers, and
-                  contextual overlays.
-                </p>
-                <div className="uc-home__preview-surface uc-home__preview-surface--globe">
-                  <div className="uc-home__preview-globe-ring" />
-                  <div className="uc-home__preview-annotation">
-                    <span className="uc-home__preview-annotation-dot" />
-                    <span className="uc-home__preview-annotation-text">
-                      Terrain + overlay context
-                    </span>
-                  </div>
-                </div>
-              </article>
-
-              <article className="uc-home__preview-panel">
-                <p className="uc-home__preview-caption">
-                  Shopping: Commerce discovery built for 100M+ products, with
-                  powerful search, product detail, and catalog-scale browsing.
-                </p>
-                <div className="uc-home__preview-surface uc-home__preview-surface--commerce">
-                  <span className="uc-home__preview-commerce-bar" />
-                  <div className="uc-home__preview-commerce-grid">
-                    <span className="uc-home__preview-commerce-card" />
-                    <span className="uc-home__preview-commerce-card" />
-                    <span className="uc-home__preview-commerce-card" />
-                    <span className="uc-home__preview-commerce-card" />
-                    <span className="uc-home__preview-commerce-card" />
-                    <span className="uc-home__preview-commerce-card" />
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section
-          className="uc-home__section uc-home__section--alt"
-          aria-labelledby="feature-title"
-        >
-          <div className="uc-home__container">
-            <h2 id="feature-title">Product highlights.</h2>
-            <div className="uc-home__feature-grid">
-              {featureBands.map((band) => (
-                <article
-                  className={`uc-home__feature uc-home__feature--${band.tone}`}
-                  key={band.title}
-                >
-                  <h3>{band.title}</h3>
-                  <p>{band.description}</p>
-                  <Link href={band.href}>{band.cta}</Link>
-                  <LinkMeta placeholder={band.href === "#"} />
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="uc-home__section" aria-labelledby="proof-title">
-          <div className="uc-home__container">
-            <h2 id="proof-title">Ecosystem capabilities.</h2>
-            <p className="uc-home__section-copy">{homeBuildSectionIntro}</p>
-            <div className="uc-home__proof-grid">
-              {homeCapabilityPoints.map((item) => (
-                <article className="uc-home__proof-card" key={item.title}>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <div className="uc-home__inline-links">
-                    {item.links.map((link) => (
-                      <Link href={link.href} key={link.href}>
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
+                  <Link href={card.href}>{card.ctaLabel ?? "Explore"}</Link>
                 </article>
               ))}
             </div>
@@ -264,58 +139,60 @@ export default function UpcubeHomePage() {
         </section>
 
         <section
-          className="uc-home__section uc-home__section--alt"
-          aria-labelledby="updates-title"
+          className="uc-home__section uc-home__section--build"
+          aria-labelledby="build-title"
         >
+          <div className="uc-home__container uc-home__split-section">
+            <div>
+              <span className="uc-home__eyebrow">{homeBuildSectionIntro.eyebrow}</span>
+              <h2 id="build-title">{homeBuildSectionIntro.title}</h2>
+            </div>
+            <p>{homeBuildSectionIntro.copy}</p>
+          </div>
+        </section>
+
+        <section className="uc-home__section uc-home__section--capabilities">
+          <div className="uc-home__container uc-home__capability-grid">
+            {homeCapabilityPoints.map((point) => (
+              <article className="uc-home__capability-card" key={point.title}>
+                <span>{point.eyebrow}</span>
+                <h3>{point.title}</h3>
+                <p>{point.copy}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="uc-home__section uc-home__section--bands">
+          <div className="uc-home__container uc-home__band-grid">
+            {featureBands.map((band) => (
+              <article className="uc-home__band-card" key={band.title}>
+                <span>{band.eyebrow}</span>
+                <h3>{band.title}</h3>
+                <p>{band.copy}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="uc-home__section uc-home__section--stories">
           <div className="uc-home__container">
-            <div className="uc-home__section-head-row">
-              <h2 id="updates-title">Recent developments</h2>
-              <Link href="/news" className="uc-home__news-link">
-                View all news
-              </Link>
+            <div className="uc-home__section-heading-row">
+              <h2>Recent developments</h2>
+              <Link href="/news">View all news</Link>
             </div>
             <div className="uc-home__story-grid">
               {stories.map((story) => (
-                <Link
-                  className="uc-home__story"
-                  href={story.href}
-                  key={story.title}
-                >
-                  <LinkMeta tag={story.tag} />
+                <Link href={story.href} className="uc-home__story-card" key={story.title}>
+                  <span>{story.eyebrow}</span>
                   <h3>{story.title}</h3>
-                  <p>{story.description}</p>
-                  <LinkMeta placeholder={story.href === "#"} />
+                  <p>{story.copy}</p>
                 </Link>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section
-          className="uc-home__section uc-home__section--cta"
-          aria-labelledby="cta-title"
-        >
-          <div className="uc-home__container">
-            <h2 id="cta-title">Built as an ecosystem, not a product list.</h2>
-            <p className="uc-home__cta-copy">
-              Start with Ethen. Then explore everything the ecosystem opens.
-              Move through product pages, launch stories, and research to see
-              how Upcube connects AI, cloud, compute, robotics, education,
-              commerce, discovery, entertainment, and next-generation operating
-              systems into one connected ecosystem.
-            </p>
-            <div className="uc-home__cta-row">
-              <Link href={HOME_CHAT_CTA_HREF} className="uc-home__primary-btn">
-                Try Ethen
-              </Link>
-              <Link href="#portal-title" className="uc-home__ghost-btn">
-                View ecosystem
-              </Link>
             </div>
           </div>
         </section>
       </main>
-
       <PortalFooter />
     </div>
   );
