@@ -1,3 +1,4 @@
+import "app/styles/upcube-news.css";
 import type { Metadata } from "next";
 
 import { NewsIndexPage } from "components/upcube-news/news-index-page";

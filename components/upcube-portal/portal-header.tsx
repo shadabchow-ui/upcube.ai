@@ -1,8 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
+import {
+  accountSignInUrl,
+  accountLogoutUrl,
+  useSession,
+} from "lib/upcube-account/client";
 import { PortalSearch } from "components/upcube-portal/portal-search";
 import { ThemeToggle } from "components/upcube-theme/theme-toggle";
 import { UpcubeAppLauncher } from "components/upcube-universal-header/upcube-app-launcher";
@@ -22,6 +28,8 @@ export function PortalHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
+  const pathname = usePathname();
+  const session = useSession();
   const menuShellRef = useRef<HTMLDivElement | null>(null);
   const closeTimerRef = useRef<number | null>(null);
   const activeMenu =
@@ -254,16 +262,66 @@ export function PortalHeader() {
           </button>
           <ThemeToggle />
           <UpcubeAppLauncher />
-          {portalActionNav.map((item, index) => (
+          {session.status === "authenticated" && session.user ? (
+            <div className="uc-header-account">
+              <Link
+                className="uc-button uc-account-avatar-btn"
+                href="/account"
+                aria-label={`Account: ${session.user.name || session.user.email || "signed in"}`}
+              >
+                <span className="uc-account-avatar">
+                  {session.user.picture ? (
+                    <img
+                      src={session.user.picture}
+                      alt=""
+                      className="uc-account-avatar-img"
+                    />
+                  ) : (
+                    <span className="uc-account-avatar-fallback">
+                      {(session.user.name || session.user.email || "U")
+                        .charAt(0)
+                        .toUpperCase()}
+                    </span>
+                  )}
+                </span>
+                <span className="uc-account-label">
+                  {session.user.name || session.user.email || "Account"}
+                </span>
+              </Link>
+              <a
+                className="uc-button uc-account-logout"
+                href={accountLogoutUrl(
+                  typeof window !== "undefined"
+                    ? window.location.href
+                    : pathname,
+                )}
+              >
+                Sign out
+              </a>
+            </div>
+          ) : (
             <Link
-              key={item.id}
               className="uc-button"
-              data-variant={item.id === "chat" ? "solid" : undefined}
-              href={item.href}
+              data-variant="solid"
+              href={accountSignInUrl(
+                typeof window !== "undefined" ? window.location.href : pathname,
+              )}
             >
-              {item.label}
+              Sign in
             </Link>
-          ))}
+          )}
+          {portalActionNav
+            .filter((item) => item.id !== "account")
+            .map((item) => (
+              <Link
+                key={item.id}
+                className="uc-button"
+                data-variant={item.id === "chat" ? "solid" : undefined}
+                href={item.href}
+              >
+                {item.label}
+              </Link>
+            ))}
         </div>
 
         <div className="uc-mobile-menu-shell">
@@ -356,16 +414,39 @@ export function PortalHeader() {
                 </div>
               </div>
 
-              {portalActionNav.map((item) => (
+              {session.status === "authenticated" && session.user ? (
                 <Link
-                  key={item.id}
                   className="uc-mobile-menu-cta"
-                  href={item.href}
+                  href="/account"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {item.label}
+                  {session.user.name || session.user.email || "Account"}
                 </Link>
-              ))}
+              ) : (
+                <Link
+                  className="uc-mobile-menu-cta"
+                  href={accountSignInUrl(
+                    typeof window !== "undefined"
+                      ? window.location.href
+                      : pathname,
+                  )}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Sign in
+                </Link>
+              )}
+              {portalActionNav
+                .filter((item) => item.id !== "account")
+                .map((item) => (
+                  <Link
+                    key={item.id}
+                    className="uc-mobile-menu-cta"
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
             </div>
           ) : null}
         </div>

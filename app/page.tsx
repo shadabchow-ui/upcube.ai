@@ -1,4 +1,5 @@
 import "app/styles/upcube-home.css";
+import "app/styles/upcube-home-hero-override.css";
 import { JsonLd } from "components/upcube-seo/json-ld";
 import UpcubeHomePage from "components/upcube-home/home-page";
 import {

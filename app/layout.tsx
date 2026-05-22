@@ -14,12 +14,8 @@ import Script from "next/script";
 import { Toaster } from "sonner";
 import "./globals.css";
 import "./styles/upcube-type-system.css";
-import "./styles/upcube-news.css";
 import "./styles/upcube-portal.css";
 import "./styles/upcube-universal-header.css";
-import "./styles/upcube-longform.css";
-import "./styles/upcube-account.css";
-import "./styles/upcube-home-hero-override.css";
 
 const upcubeInter = localFont({
   src: [
@@ -84,7 +80,7 @@ export const metadata: Metadata = {
 const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-EZLC0KG6GX";
 
 function GAScript() {
-  if (!gaId) {
+  if (process.env.NEXT_PUBLIC_ENABLE_GA !== "true" || !gaId) {
     return null;
   }
 

@@ -218,6 +218,22 @@ body:has(.uc-page) .commerce-navbar {
   order: 2;
 }
 
+.uc-header .uc-button {
+  color: #ffffff;
+}
+
+.uc-header .uc-button[data-variant="solid"] {
+  background: #ffffff;
+  color: #000000;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.uc-header .uc-button[data-variant="solid"]:hover,
+.uc-header .uc-button[data-variant="solid"]:focus-visible {
+  background: #e8e8e8;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
 .uc-mobile-menu-shell {
   margin-left: auto;
   position: relative;
@@ -1344,6 +1360,173 @@ body:has(.uc-page) .commerce-navbar {
   }
 }
 
+/* Account button / avatar in header */
+
+.uc-header-account {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.uc-account-avatar-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.25rem 0.65rem 0.25rem 0.35rem !important;
+}
+
+.uc-account-avatar {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 999px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  background: color-mix(in srgb, var(--uc-accent) 14%, transparent);
+  color: var(--uc-text);
+}
+
+.uc-account-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uc-account-avatar-fallback {
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.uc-account-label {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  max-width: 8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.uc-account-logout {
+  font-size: 0.78rem !important;
+  padding: 0.3rem 0.65rem !important;
+  color: var(--uc-text-muted) !important;
+  border-color: var(--uc-border) !important;
+}
+
+.uc-account-logout:hover {
+  color: var(--uc-text) !important;
+  border-color: var(--uc-border) !important;
+}
+
+/* Account redirect page (signin / signup) */
+
+.uc-account-redirect {
+  min-height: 70svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--uc-gutter);
+}
+
+.uc-account-redirect-card {
+  width: min(100%, 26rem);
+  display: grid;
+  gap: 1.25rem;
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  border: 1px solid var(--uc-border-soft);
+  border-radius: var(--uc-radius);
+  background: #050505;
+  text-align: center;
+}
+
+.uc-account-redirect-title {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.uc-account-redirect-desc {
+  margin: 0;
+  color: var(--uc-text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.uc-account-redirect-actions {
+  display: grid;
+  gap: 0.85rem;
+  justify-items: center;
+}
+
+.uc-account-redirect-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  background: var(--uc-accent);
+  color: var(--uc-accent-contrast);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: opacity 0.18s ease;
+}
+
+.uc-account-redirect-btn:hover {
+  opacity: 0.88;
+}
+
+.uc-account-redirect-signed-in {
+  margin: 0;
+  color: #30a46c;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.uc-account-redirect-note {
+  margin: 0;
+  font-size: 0.84375rem;
+  color: var(--uc-text-muted);
+}
+
+.uc-account-redirect-note a {
+  color: var(--uc-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Central account link notice */
+
+.uc-account-central-notice {
+  border: 1px solid var(--uc-border-soft);
+  border-radius: var(--uc-radius-sm);
+  padding: 0.75rem 1rem;
+  background: color-mix(in srgb, var(--uc-accent) 6%, transparent);
+}
+
+.uc-account-central-text {
+  margin: 0;
+  font-size: 0.84375rem;
+  line-height: 1.5;
+  color: var(--uc-text-muted);
+}
+
+.uc-account-central-link {
+  color: var(--uc-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+}
+
+.uc-account-central-link:hover {
+  opacity: 0.8;
+}
+
 .uc-nav-note {
   margin-left: 0.4rem;
   font-size: 0.72rem;
@@ -1582,6 +1765,28 @@ html[data-theme="light"] .uuh-launcher-trigger[aria-expanded="true"] {
 
 .uc-header .uuh-launcher-dot {
   background: currentColor !important;
+}
+
+/* Light mode account button in header */
+
+html[data-theme="light"] .uc-header-account .uc-button {
+  color: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+html[data-theme="light"] .uc-header-account .uc-button:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.26) !important;
+}
+
+html[data-theme="light"] .uc-header-account .uc-account-avatar {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+html[data-theme="light"] .uc-account-redirect-card {
+  background: #050505;
 }
 
 html[data-theme="light"] .uc-mobile-menu-button {

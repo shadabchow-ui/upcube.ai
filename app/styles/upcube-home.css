@@ -650,7 +650,7 @@ body:has(.uc-home) .commerce-navbar {
 }
 
 .uc-home__news-link {
-  color: var(--uc-text-muted);
+  color: var(--uc-text);
   text-decoration: none;
   font-size: var(--up-type-p2-size);
   line-height: 1.45;
@@ -658,6 +658,7 @@ body:has(.uc-home) .commerce-navbar {
 
 .uc-home__news-link:hover {
   color: var(--uc-text);
+  text-decoration: underline;
 }
 
 .uc-home__portal-grid,
@@ -1139,23 +1140,24 @@ body:has(.uc-home) .commerce-navbar {
 
   .uc-home__hero-inner {
     min-height: auto;
-    padding-block: clamp(1.4rem, 7vw, 2.4rem);
+    padding-block: clamp(0.8rem, 4vw, 1.4rem);
   }
 
   .uc-home__hero-stack {
-    gap: 0.45rem;
+    gap: 0.35rem;
   }
 
   .uc-home__chat-panel {
     width: min(100%, calc(100vw - 32px));
     max-width: 100%;
+    margin-top: 0.3rem;
   }
 
   .uc-home__chat-composer {
-    gap: 0.45rem;
-    padding: 0.7rem 0.75rem 0.75rem;
-    border-radius: 22px;
-    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.34);
+    gap: 0.35rem;
+    padding: 0.55rem 0.6rem 0.6rem;
+    border-radius: 18px;
+    box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.2);
   }
 
   .uc-home__chat-composer-field {
@@ -1199,16 +1201,20 @@ body:has(.uc-home) .commerce-navbar {
   }
 
   .uc-home__chat-suggestions {
-    gap: 0.45rem;
+    gap: 0.35rem;
     width: min(100%, calc(100vw - 32px));
     margin-inline: auto;
-    padding-inline: 0.25rem;
+    padding-inline: 0.15rem;
   }
 
   .uc-home__chat-suggestions a {
-    padding: 0.48rem 0.78rem;
-    font-size: 0.82rem;
-    line-height: 1.2rem;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.78rem;
+    line-height: 1.1rem;
+  }
+
+  .uc-home__chat-suggestions a:nth-child(n + 6) {
+    display: none;
   }
 
   .uc-home__ecosystem-grid {
@@ -1258,6 +1264,7 @@ body:has(.uc-home) .commerce-navbar {
 
   .uc-home__hero h1 {
     max-width: 10ch;
+    font-size: clamp(20px, 6vw, 26px);
   }
 
   .uc-home__chat-panel {

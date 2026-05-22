@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AccountShell } from "components/upcube-account/account-shell";
 import { AccountSidebar } from "components/upcube-account/account-sidebar";
+import { AccountCentralLink } from "components/upcube-account/account-central-link";
 import { securitySections } from "lib/upcube-account/account-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
@@ -17,6 +18,7 @@ export default function AccountSecurityPage() {
       <main className="uc-account-layout">
         <AccountSidebar />
         <div className="uc-account-content">
+          <AccountCentralLink settingPath="security" />
           <div className="uc-account-header">
             <h1 className="uc-account-title">Security</h1>
             <p className="uc-account-desc">

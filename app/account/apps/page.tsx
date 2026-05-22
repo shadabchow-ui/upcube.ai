@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AccountShell } from "components/upcube-account/account-shell";
 import { AccountSidebar } from "components/upcube-account/account-sidebar";
+import { AccountCentralLink } from "components/upcube-account/account-central-link";
 import { AccountAppGrid } from "components/upcube-account/account-app-grid";
 import { appsSections } from "lib/upcube-account/account-content";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
@@ -18,6 +19,7 @@ export default function AccountAppsPage() {
       <main className="uc-account-layout">
         <AccountSidebar />
         <div className="uc-account-content">
+          <AccountCentralLink settingPath="apps" />
           <div className="uc-account-header">
             <h1 className="uc-account-title">Connected Apps</h1>
             <p className="uc-account-desc">
