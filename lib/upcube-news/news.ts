@@ -91,6 +91,62 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
     ],
   },
   {
+    slug: "upcube-news-launch",
+    href: "/news/upcube-news-launch",
+    productName: "Upcube News",
+    category: "Product Launch",
+    dateLabel: "Recent update",
+    headline:
+      "Upcube News launches live news intelligence with AI-powered discovery and briefing-style reading.",
+    excerpt:
+      "Upcube News brings live news intelligence, AI summaries, topic discovery, source-linked stories, and briefing-style layouts into a focused editorial app.",
+    heroSummary:
+      "Upcube News is designed for people who want to stay informed across AI, technology, and global topics. It combines live discovery, AI summaries, topic navigation, and source-linked briefing surfaces into a clean editorial reading experience.",
+    primaryCtaLabel: "Launch Upcube News",
+    primaryCtaHref: "https://news.upcube.ai",
+    productPageUrl: "/products/news",
+    launchUrl: "https://news.upcube.ai",
+    seoTitle:
+      "Upcube News Launch | Live News Intelligence and AI-Powered Discovery",
+    seoDescription:
+      "Read the Upcube News launch story for live news intelligence, AI summaries, topic discovery, source-linked stories, and briefing-style layouts.",
+    finalCtaTitle: "Stay informed with clarity, not clutter.",
+    finalCtaBody:
+      "Upcube News is built for live news intelligence discovery, AI-powered summaries, topic navigation, and briefing-style reading — positioned as news discovery and aggregation, not original reporting.",
+    sections: [
+      {
+        eyebrow: "The launch",
+        title: "A briefing surface for staying informed",
+        body: "Upcube News gives readers a focused editorial app for live news discovery, AI-powered summaries, and topic navigation. The experience is designed around staying informed efficiently rather than scrolling endlessly.",
+      },
+      {
+        eyebrow: "Discovery",
+        title: "Live news discovery with topic control",
+        body: "The product surfaces stories from live feeds organized by topic and category, helping readers focus on the areas most relevant to them without losing the broader news context.",
+      },
+      {
+        eyebrow: "Summaries",
+        title: "AI-powered summaries for faster scanning",
+        body: "Stories include AI-generated summaries that help readers understand the key points quickly. Summaries are generated from source content as discovery assistance, not original editorial.",
+      },
+      {
+        eyebrow: "Sources",
+        title: "Source-linked stories with transparency",
+        body: "Every story links back to its original source, keeping discovery transparent and allowing readers to dive deeper into stories that deserve their full attention.",
+      },
+      {
+        eyebrow: "Briefings",
+        title: "Briefing-style layouts for efficient reading",
+        body: "The homepage and category surfaces are organized as daily briefing layouts — scannable, structured, and built for people who want to stay informed without drowning in noise.",
+      },
+    ],
+    relatedProducts: [
+      { name: "UpcubeAI", href: "/products/upcube-ai" },
+      { name: "Upcube Books", href: "/products/books" },
+      { name: "Upcube Earth", href: "/products/earth" },
+    ],
+  },
+  {
     slug: "upcube-quantum-launch",
     href: "/news/upcube-quantum-launch",
     productName: "Upcube Quantum",

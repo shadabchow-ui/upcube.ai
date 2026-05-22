@@ -47,10 +47,11 @@ export const homeCapabilityPoints: HomeProofPoint[] = [
   {
     title: "Discovery",
     description:
-      "New ways to explore knowledge, places, and entertainment. Earth, Books, and Games extend into AI-powered discovery across the world, reading, and interactive entertainment.",
+      "New ways to explore knowledge, places, news, and entertainment. Earth, News, Books, and Games extend into AI-powered discovery across the world, reading, news intelligence, and interactive entertainment.",
     href: "/products/earth",
     links: [
       { label: "Earth", href: "/products/earth" },
+      { label: "News", href: "/products/news" },
       { label: "Books", href: "/products/books" },
       { label: "Games", href: "/products/games" },
     ],
@@ -122,6 +123,14 @@ export const featureBands: FeatureBand[] = [
     href: "/products/earth",
     cta: "Explore Earth",
     tone: "teal",
+  },
+  {
+    title: "News",
+    description:
+      "Live news intelligence, AI summaries, topic discovery, and briefing-style reading for staying informed with clarity.",
+    href: "/products/news",
+    cta: "Launch News",
+    tone: "blue",
   },
   {
     title: "Games",
@@ -241,6 +250,13 @@ export const stories: HomeLinkItem[] = [
       "A calmer, more thoughtful way to discover books through previews, saved titles, and guided reading paths.",
     href: "/news/upcube-books-launch",
     tag: "Books",
+  },
+  {
+    title: "Upcube News launch story",
+    description:
+      "A live news intelligence app for AI-powered summaries, topic discovery, source-linked stories, and briefing-style reading.",
+    href: "/news/upcube-news-launch",
+    tag: "News intelligence",
   },
   {
     title: "Upcube Voice preview",

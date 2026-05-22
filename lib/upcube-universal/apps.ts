@@ -5,6 +5,7 @@ export type UpcubeAppId =
   | "chat"
   | "globe"
   | "books"
+  | "news"
   | "games"
   | "jobs"
   | "cloud"

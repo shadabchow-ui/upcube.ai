@@ -5,6 +5,7 @@ export type UpcubeProductSlug =
   | "books"
   | "earth"
   | "games"
+  | "news"
   | "jobs"
   | "cloud"
   | "quantum"
@@ -518,6 +519,117 @@ export const upcubeProducts: UpcubeProduct[] = [
     finalSecondaryAction: {
       label: "Explore more products",
       href: "/explore",
+    },
+  },
+  {
+    slug: "news",
+    name: "Upcube News",
+    eyebrow: "News intelligence",
+    headline: "A live editorial app for AI-era news discovery.",
+    summary:
+      "Upcube News brings live news intelligence, AI-powered summaries, topic discovery, source-linked stories, and briefing-style layouts into a focused editorial app. Designed for people who want to stay informed across AI, technology, and global topics through discovery, aggregation, and clear briefing navigation.",
+    seoTitle: "Upcube News | Live News Intelligence and AI-Powered Discovery",
+    seoDescription:
+      "Upcube News is a live news intelligence app for AI-powered summaries, topic discovery, source-linked stories, briefing-style layouts, and category-based navigation.",
+    primaryAction: {
+      label: "Launch Upcube News",
+      href: "https://news.upcube.ai",
+    },
+    secondaryAction: {
+      label: "Read launch story",
+      href: "/news/upcube-news-launch",
+    },
+    heroHighlights: [
+      "Live news discovery with AI-powered summaries and source-linked stories.",
+      "Topic and category navigation for focused browsing across technology, science, business, and global news.",
+      "Briefing-style layouts designed for staying informed efficiently.",
+    ],
+    signatureTitle: "News discovery organized around what matters.",
+    signatureBody:
+      "Upcube News is built for people who want to stay informed without drowning in noise. It combines live news discovery, AI-generated summaries, topic navigation, and a briefing-style layout into a clean reading experience.",
+    signatureCards: [
+      {
+        title: "Live news discovery",
+        body: "Stay current with source-linked stories across AI, technology, science, business, and global topics — updated from live feeds.",
+      },
+      {
+        title: "AI-powered summaries",
+        body: "Quickly understand key points through concise, AI-generated summaries that surface what matters in each story.",
+      },
+      {
+        title: "Topic and category navigation",
+        body: "Browse by topic, category, or source type so you can focus on the areas most relevant to you.",
+      },
+    ],
+    featureStories: [
+      {
+        title: "Briefing-style homepage",
+        body: "The homepage is designed as a daily briefing surface — organized, scannable, and built for people who want to stay informed quickly.",
+      },
+      {
+        title: "Source-linked stories with transparency",
+        body: "Every story links back to the original source, keeping discovery transparent and grounded in its origins.",
+      },
+      {
+        title: "AI and technology focus",
+        body: "Upcube News prioritizes AI, technology, and science coverage, with categories that make it easy to follow the topics shaping the next decade.",
+      },
+    ],
+    techCards: [
+      {
+        title: "Live feed aggregation",
+        body: "News content is aggregated from live provider feeds using discovery and aggregation patterns — not original reporting.",
+      },
+      {
+        title: "AI summary generation",
+        body: "Stories are summarized to help readers decide what to read next. Summaries are generated from source content, not original editorial.",
+      },
+      {
+        title: "Category and topic systems",
+        body: "Structured navigation helps readers move through categories and topics without losing the broader news context.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Stay informed on AI and technology",
+        body: "Follow AI, technology, and science stories from multiple sources in one focused briefing surface.",
+      },
+      {
+        title: "Scan quickly, read what matters",
+        body: "Use summaries and headlines to move through the day's news efficiently, then dive deeper into the stories that deserve your attention.",
+      },
+      {
+        title: "Explore topics across disciplines",
+        body: "Browse categories from business to science to global news, following the topics that intersect with your work and interests.",
+      },
+    ],
+    ecosystemLinks: [
+      {
+        title: "UpcubeAI",
+        body: "Carry news research, summaries, and topic context into the broader AI workspace.",
+        href: "/products/upcube-ai",
+      },
+      {
+        title: "Upcube Books",
+        body: "Move from news discovery into deeper reading and knowledge exploration.",
+        href: "/products/books",
+      },
+      {
+        title: "Upcube Earth",
+        body: "Connect news stories to geographic context and spatial exploration.",
+        href: "/products/earth",
+      },
+    ],
+    finalCtaTitle: "Stay informed with clarity, not clutter.",
+    finalCtaBody:
+      "Upcube News is built for live news discovery, AI summaries, and briefing-style reading — positioned as discovery and aggregation, not original reporting.",
+    finalPrimaryAction: {
+      label: "Launch Upcube News",
+      href: "https://news.upcube.ai",
+    },
+    finalSecondaryAction: {
+      label: "Read the launch story",
+      href: "/news/upcube-news-launch",
     },
   },
   {

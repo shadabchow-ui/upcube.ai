@@ -52,6 +52,7 @@ function getProductApplicationCategory(slug: UpcubeProductSlug) {
     books: "LifestyleApplication",
     earth: "TravelApplication",
     games: "EntertainmentApplication",
+    news: "NewsApplication",
     jobs: "BusinessApplication",
     cloud: "DeveloperApplication",
     quantum: "EducationalApplication",

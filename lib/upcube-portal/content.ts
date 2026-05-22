@@ -4,6 +4,7 @@ import {
   UPCUBE_CLOUD_URL,
   UPCUBE_GAMES_URL,
   UPCUBE_JOBS_URL,
+  UPCUBE_NEWS_URL,
   UPCUBE_PLANET_URL,
   UPCUBE_QUANTUM_URL,
   UPCUBE_VENTARI_URL,
@@ -162,6 +163,7 @@ export type ProductScaleStat = {
 export const productScaleStats: ProductScaleStat[] = [
   { id: "books-scale", label: "Books", value: "50M books" },
   { id: "games-scale", label: "Games", value: "400K games" },
+  { id: "news-scale", label: "News", value: "Live news" },
   { id: "ventari-scale", label: "Shopping", value: "1B product scale" },
   { id: "jobs-scale", label: "Jobs", value: "8M jobs" },
   { id: "university-scale", label: "Education", value: "100K courses" },
@@ -218,6 +220,7 @@ export {
   UPCUBE_CLOUD_URL,
   UPCUBE_GAMES_URL,
   UPCUBE_JOBS_URL,
+  UPCUBE_NEWS_URL,
   UPCUBE_PLANET_URL,
   UPCUBE_QUANTUM_URL,
   UPCUBE_VENTARI_URL,
@@ -275,6 +278,7 @@ export const portalAppLinks: PortalNavItem[] = [
   { id: "app-ethen", label: "Ethen", href: UPCUBE_CHAT_URL },
   { id: "app-account", label: "Account", href: "/account" },
   { id: "app-earth", label: "Earth", href: UPCUBE_PLANET_URL },
+  { id: "app-news", label: "News", href: UPCUBE_NEWS_URL },
   { id: "app-books", label: "Books", href: UPCUBE_BOOKS_URL },
   { id: "app-games", label: "Games", href: UPCUBE_GAMES_URL },
   { id: "app-jobs", label: "Jobs", href: UPCUBE_JOBS_URL },
@@ -291,6 +295,7 @@ const portalHomepageStatusById: Record<
   books: "live",
   earth: "live",
   games: "live",
+  news: "live",
   jobs: "live",
   cloud: "live",
   quantum: "live",
@@ -333,6 +338,16 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
     tag: "Entertainment",
     category: "Discovery",
     ctaLabel: "Explore Games",
+  },
+  news: {
+    id: "news",
+    title: "News",
+    description:
+      "Live news intelligence, AI summaries, topic discovery, and briefing-style reading for staying informed with clarity.",
+    href: "/products/news",
+    tag: "News intelligence",
+    category: "Discovery",
+    ctaLabel: "Launch News",
   },
   books: {
     id: "books",
@@ -968,7 +983,7 @@ export const portalMenuGroups: PortalMenuGroup[] = [
         label: "Explore",
         href: "/explore",
         description:
-          "Earth, Games, Shopping, and Jobs: discovery surfaces across Upcube.",
+          "Earth, News, Games, Shopping, and Jobs: discovery surfaces across Upcube.",
       },
       {
         id: "products-overview-menu",
@@ -1294,7 +1309,7 @@ export const companyWorkAreas: PortalBullet[] = [
     id: "work-discovery",
     label: "Discovery Products",
     detail:
-      "Earth, Books, Games, and Jobs help people explore the world, knowledge, entertainment, and opportunity.",
+      "Earth, News, Books, Games, and Jobs help people explore the world, knowledge, entertainment, and opportunity.",
   },
   {
     id: "work-cloud",
@@ -1630,6 +1645,7 @@ export const contactInquiryTypes: ContactInquiryType[] = [
   { value: "books", label: "Books" },
   { value: "earth", label: "Earth" },
   { value: "games", label: "Games" },
+  { value: "news", label: "News" },
   { value: "os-mobile", label: "OS / Mobile OS" },
   { value: "robotics", label: "Robotics" },
   { value: "other", label: "Other" },
@@ -1640,6 +1656,7 @@ export const contactProductOptions: ContactProductOption[] = [
   { value: "books", label: "Books" },
   { value: "earth", label: "Earth" },
   { value: "games", label: "Games" },
+  { value: "news", label: "News" },
   { value: "jobs", label: "Jobs" },
   { value: "cloud", label: "Cloud" },
   { value: "quantum", label: "Quantum" },

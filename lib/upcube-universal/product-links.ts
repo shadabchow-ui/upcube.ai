@@ -7,6 +7,7 @@ export const UPCUBE_CLOUD_URL = "https://cloud.upcube.ai";
 export const UPCUBE_QUANTUM_URL = "https://quantum.upcube.ai";
 export const UPCUBE_VENTARI_URL = "https://ventari.net";
 export const UPCUBE_UNIVERSITY_URL = "https://university.upcube.ai";
+export const UPCUBE_NEWS_URL = "https://news.upcube.ai";
 
 export type UpcubeProductLink = {
   id: string;
@@ -44,6 +45,14 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
     description: "Game discovery, releases, and recommendation flows.",
     productHref: "/products/games",
     launchHref: UPCUBE_GAMES_URL,
+  },
+  {
+    id: "news",
+    label: "News",
+    description:
+      "Live news intelligence, AI summaries, topic discovery, and editorial briefing.",
+    productHref: "/products/news",
+    launchHref: UPCUBE_NEWS_URL,
   },
   {
     id: "jobs",
@@ -242,6 +251,14 @@ export const ecosystemGroups: EcosystemGroup[] = [
         launchHref: UPCUBE_PLANET_URL,
       },
       {
+        id: "news",
+        label: "News",
+        description:
+          "Live news intelligence, AI summaries, topic discovery, and editorial briefing.",
+        productHref: "/products/news",
+        launchHref: UPCUBE_NEWS_URL,
+      },
+      {
         id: "games",
         label: "Games",
         description: "Game discovery, releases, and recommendation flows.",
@@ -288,6 +305,12 @@ export const upcubeLauncherApps = [
     label: "Earth",
     href: UPCUBE_PLANET_URL,
     iconSrc: "/upcube-app-icons/planet.png",
+  },
+  {
+    id: "news" as const,
+    label: "News",
+    href: UPCUBE_NEWS_URL,
+    iconSrc: "/upcube-app-icons/book.png",
   },
   {
     id: "books" as const,
