@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HeroChatPanel, HOME_CHAT_CTA_HREF } from "./hero-chat-panel";
+import { HeroChatPanel } from "./hero-chat-panel";
 import {
   featureBands,
   homeBuildSectionIntro,
@@ -144,10 +144,10 @@ export default function UpcubeHomePage() {
         >
           <div className="uc-home__container uc-home__split-section">
             <div>
-              <span className="uc-home__eyebrow">{homeBuildSectionIntro.eyebrow}</span>
-              <h2 id="build-title">{homeBuildSectionIntro.title}</h2>
+              <span className="uc-home__eyebrow">Platform direction</span>
+              <h2 id="build-title">A connected product family for the agentic era.</h2>
             </div>
-            <p>{homeBuildSectionIntro.copy}</p>
+            <p>{homeBuildSectionIntro}</p>
           </div>
         </section>
 
@@ -155,9 +155,16 @@ export default function UpcubeHomePage() {
           <div className="uc-home__container uc-home__capability-grid">
             {homeCapabilityPoints.map((point) => (
               <article className="uc-home__capability-card" key={point.title}>
-                <span>{point.eyebrow}</span>
+                <span>Capability</span>
                 <h3>{point.title}</h3>
-                <p>{point.copy}</p>
+                <p>{point.description}</p>
+                <div className="uc-home__ecosystem-products">
+                  {point.links.map((link) => (
+                    <Link href={link.href} key={link.href}>
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
               </article>
             ))}
           </div>
@@ -167,9 +174,10 @@ export default function UpcubeHomePage() {
           <div className="uc-home__container uc-home__band-grid">
             {featureBands.map((band) => (
               <article className="uc-home__band-card" key={band.title}>
-                <span>{band.eyebrow}</span>
+                <span>Product</span>
                 <h3>{band.title}</h3>
-                <p>{band.copy}</p>
+                <p>{band.description}</p>
+                <Link href={band.href}>{band.cta}</Link>
               </article>
             ))}
           </div>
@@ -184,9 +192,9 @@ export default function UpcubeHomePage() {
             <div className="uc-home__story-grid">
               {stories.map((story) => (
                 <Link href={story.href} className="uc-home__story-card" key={story.title}>
-                  <span>{story.eyebrow}</span>
+                  <span>{story.tag ?? "Recent update"}</span>
                   <h3>{story.title}</h3>
-                  <p>{story.copy}</p>
+                  <p>{story.description}</p>
                 </Link>
               ))}
             </div>
