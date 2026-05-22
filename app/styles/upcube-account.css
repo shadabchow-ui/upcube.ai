@@ -54,7 +54,7 @@
 }
 
 .uc-account-sidebar-link:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: color-mix(in srgb, var(--uc-accent) 6%, transparent);
   color: var(--uc-text);
 }
 
@@ -64,7 +64,7 @@
 }
 
 .uc-account-sidebar-link[data-active] {
-  background: rgba(255, 255, 255, 0.08);
+  background: color-mix(in srgb, var(--uc-accent) 10%, transparent);
   color: var(--uc-text);
   font-weight: 500;
 }
@@ -116,7 +116,7 @@
 }
 
 .uc-account-card:hover {
-  background: rgba(255, 255, 255, 0.03);
+  background: color-mix(in srgb, var(--uc-accent) 4%, transparent);
 }
 
 .uc-account-card:focus-visible {
@@ -203,7 +203,7 @@
 }
 
 .uc-account-app-card:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: color-mix(in srgb, var(--uc-accent) 5%, transparent);
 }
 
 .uc-account-app-card:focus-visible {

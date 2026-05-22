@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 import { PortalSearch } from "components/upcube-portal/portal-search";
+import { ThemeToggle } from "components/upcube-theme/theme-toggle";
 import { UpcubeAppLauncher } from "components/upcube-universal-header/upcube-app-launcher";
 import {
   portalActionNav,
@@ -109,13 +110,7 @@ export function PortalHeader() {
     <header className="uc-header" ref={headerRef}>
       <div className="uc-shell uc-header-inner">
         <Link href="/" className="uc-brand" aria-label="UpcubeAI home">
-          <img
-            src="/brand/logo-mark.png"
-            width={40}
-            height={40}
-            alt="UpcubeAI"
-            className="uc-brand-mark"
-          />
+          <div className="uc-brand-mark" role="img" aria-label="UpcubeAI" />
         </Link>
 
         <div
@@ -257,6 +252,7 @@ export function PortalHeader() {
               />
             </svg>
           </button>
+          <ThemeToggle />
           <UpcubeAppLauncher />
           {portalActionNav.map((item, index) => (
             <Link
@@ -306,6 +302,12 @@ export function PortalHeader() {
                 >
                   Search Upcube
                 </button>
+                <div
+                  className="uc-mobile-menu-link"
+                  style={{ padding: "0.55rem 0.7rem" }}
+                >
+                  <ThemeToggle />
+                </div>
                 {portalPrimaryNav.map((item) => (
                   <Link
                     key={item.id}

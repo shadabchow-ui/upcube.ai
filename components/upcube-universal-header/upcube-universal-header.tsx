@@ -29,13 +29,7 @@ export function UpcubeUniversalHeader({
           aria-label="Upcube home"
           prefetch={false}
         >
-          <img
-            src="/brand/logo-mark.png"
-            alt=""
-            width={30}
-            height={30}
-            className="uuh-brand-mark"
-          />
+          <div className="uuh-brand-mark" role="img" aria-label="Upcube" />
           <span className="uuh-brand-label">Upcube</span>
         </Link>
 

@@ -1,0 +1,6 @@
+./_audit/sitemap_files.txt
+./_disabled_metadata_routes/sitemap.ts
+./.open-next/assets/sitemap.xml
+./app/sitemap.ts
+./public/sitemap.xml
+./tests/sitemap-data.test.ts

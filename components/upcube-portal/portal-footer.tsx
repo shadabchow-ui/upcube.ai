@@ -164,12 +164,10 @@ export function PortalFooter() {
       <div className="uc-shell uc-footer-grid">
         <div className="uc-footer-brand-stack">
           <div className="uc-footer-brand-row">
-            <img
-              src="/brand/logo-mark.png"
-              width={44}
-              height={44}
-              alt="UpcubeAI"
+            <div
               className="uc-footer-brand-mark"
+              role="img"
+              aria-label="UpcubeAI"
             />
             <div>
               <p className="uc-footer-brand-tagline">The Next Frontier</p>
