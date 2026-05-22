@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { CartProvider } from "components/cart/cart-context";
 import { Navbar } from "components/layout/navbar";
-import { getCart } from "lib/shopify";
 import {
   canonicalBaseUrl,
   DEFAULT_OG_IMAGE,
   DEFAULT_SITE_DESCRIPTION,
   DEFAULT_SITE_TITLE,
 } from "lib/upcube-seo/metadata";
-import { ReactNode } from "react";
+import { ReactNode, Suspense } from "react";
 import localFont from "next/font/local";
 import { Toaster } from "sonner";
 import "./globals.css";
@@ -88,21 +87,20 @@ export default async function RootLayout({
 }: {
   children: ReactNode;
 }) {
-  // Don't await the fetch, pass the Promise to the context provider
-  const cart = getCart();
-
   return (
     <html
       lang="en"
       className={`${upcubeInter.variable} ${upcubeGeist.variable}`}
     >
       <body className="bg-neutral-50 text-black selection:bg-teal-300 dark:bg-neutral-900 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
-        <CartProvider cartPromise={cart}>
-          <Navbar />
-          <main>
-            {children}
-            <Toaster closeButton />
-          </main>
+        <CartProvider>
+          <Suspense fallback={null}>
+            <Navbar />
+            <main>
+              {children}
+              <Toaster closeButton />
+            </main>
+          </Suspense>
         </CartProvider>
       </body>
     </html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://upcube.ai/sitemap.xml

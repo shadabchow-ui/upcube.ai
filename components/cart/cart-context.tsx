@@ -6,13 +6,7 @@ import type {
   Product,
   ProductVariant,
 } from "lib/shopify/types";
-import React, {
-  createContext,
-  use,
-  useContext,
-  useMemo,
-  useOptimistic,
-} from "react";
+import React, { createContext, useContext, useMemo, useState } from "react";
 
 type UpdateType = "plus" | "minus" | "delete";
 
@@ -27,7 +21,9 @@ type CartAction =
     };
 
 type CartContextType = {
-  cartPromise: Promise<Cart | undefined>;
+  cart: Cart | undefined;
+  updateCartItem: (merchandiseId: string, updateType: UpdateType) => void;
+  addCartItem: (variant: ProductVariant, product: Product) => void;
 };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -190,18 +186,30 @@ function cartReducer(state: Cart | undefined, action: CartAction): Cart {
   }
 }
 
-export function CartProvider({
-  children,
-  cartPromise,
-}: {
-  children: React.ReactNode;
-  cartPromise: Promise<Cart | undefined>;
-}) {
-  return (
-    <CartContext.Provider value={{ cartPromise }}>
-      {children}
-    </CartContext.Provider>
-  );
+export function CartProvider({ children }: { children: React.ReactNode }) {
+  const [cart, setCart] = useState<Cart | undefined>(undefined);
+
+  const updateCartItem = (merchandiseId: string, updateType: UpdateType) => {
+    setCart((prev) =>
+      cartReducer(prev, {
+        type: "UPDATE_ITEM",
+        payload: { merchandiseId, updateType },
+      }),
+    );
+  };
+
+  const addCartItem = (variant: ProductVariant, product: Product) => {
+    setCart((prev) =>
+      cartReducer(prev, {
+        type: "ADD_ITEM",
+        payload: { variant, product },
+      }),
+    );
+  };
+
+  const value = useMemo(() => ({ cart, updateCartItem, addCartItem }), [cart]);
+
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
 
 export function useCart() {
@@ -210,29 +218,5 @@ export function useCart() {
     throw new Error("useCart must be used within a CartProvider");
   }
 
-  const initialCart = use(context.cartPromise);
-  const [optimisticCart, updateOptimisticCart] = useOptimistic(
-    initialCart,
-    cartReducer,
-  );
-
-  const updateCartItem = (merchandiseId: string, updateType: UpdateType) => {
-    updateOptimisticCart({
-      type: "UPDATE_ITEM",
-      payload: { merchandiseId, updateType },
-    });
-  };
-
-  const addCartItem = (variant: ProductVariant, product: Product) => {
-    updateOptimisticCart({ type: "ADD_ITEM", payload: { variant, product } });
-  };
-
-  return useMemo(
-    () => ({
-      cart: optimisticCart,
-      updateCartItem,
-      addCartItem,
-    }),
-    [optimisticCart],
-  );
+  return context;
 }

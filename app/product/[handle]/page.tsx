@@ -10,11 +10,19 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
+async function loadProduct(handle: string) {
+  try {
+    return await getProduct(handle);
+  } catch {
+    return undefined;
+  }
+}
+
 export async function generateMetadata(props: {
   params: Promise<{ handle: string }>;
 }): Promise<Metadata> {
   const params = await props.params;
-  const product = await getProduct(params.handle);
+  const product = await loadProduct(params.handle);
 
   if (!product) return notFound();
 
@@ -51,7 +59,7 @@ export default async function ProductPage(props: {
   params: Promise<{ handle: string }>;
 }) {
   const params = await props.params;
-  const product = await getProduct(params.handle);
+  const product = await loadProduct(params.handle);
 
   if (!product) return notFound();
 
@@ -108,6 +116,10 @@ export default async function ProductPage(props: {
       <Footer />
     </>
   );
+}
+
+export function generateStaticParams() {
+  return [{ handle: "product-placeholder" }];
 }
 
 async function RelatedProducts({ id }: { id: string }) {

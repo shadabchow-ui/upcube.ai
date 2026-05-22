@@ -5,6 +5,10 @@ import { getPage } from "lib/shopify";
 import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 import { notFound } from "next/navigation";
 
+export function generateStaticParams() {
+  return [{ page: "page-placeholder" }];
+}
+
 async function loadPage(handle: string) {
   try {
     return await getPage(handle);
