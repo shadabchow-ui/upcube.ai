@@ -163,11 +163,9 @@ export type ProductScaleStat = {
 export const productScaleStats: ProductScaleStat[] = [
   { id: "books-scale", label: "Books", value: "50M books" },
   { id: "games-scale", label: "Games", value: "400K games" },
-  { id: "news-scale", label: "News", value: "Live news" },
   { id: "ventari-scale", label: "Commerce", value: "1B product scale" },
   { id: "jobs-scale", label: "Jobs", value: "8M jobs" },
   { id: "university-scale", label: "Education", value: "100K courses" },
-  { id: "robotics-scale", label: "Robotics", value: "Robot operations" },
 ];
 
 export type UpcubeCompanyIdentity = {
@@ -264,7 +262,6 @@ export const portalPrimaryNav: PortalNavItem[] = [
 export const portalActionNav: PortalNavItem[] = [
   { id: "chat", label: "Try Ethen", href: UPCUBE_CHAT_URL },
   { id: "account", label: "Account", href: "/account" },
-  { id: "contact", label: "Contact", href: "/contact" },
 ];
 
 export const portalNav = portalPrimaryNav;
@@ -298,7 +295,6 @@ const portalHomepageStatusById: Record<
   jobs: "live",
   cloud: "live",
   quantum: "live",
-  robotics: "preview",
   ventari: "external",
   vm: "planned",
   "upcube-os": "planned",
@@ -337,16 +333,6 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
     tag: "Entertainment",
     category: "Discovery",
     ctaLabel: "Explore Games",
-  },
-  news: {
-    id: "news",
-    title: "News",
-    description:
-      "Live news intelligence, AI summaries, topic discovery, and briefing-style reading for staying informed with clarity.",
-    href: "/products/news",
-    tag: "News intelligence",
-    category: "Discovery",
-    ctaLabel: "Launch News",
   },
   books: {
     id: "books",
@@ -387,16 +373,6 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
     tag: "Future computing",
     category: "Future Platforms",
     ctaLabel: "Explore Quantum",
-  },
-  robotics: {
-    id: "robotics",
-    title: "Robotics",
-    description:
-      "Mission replay, fleet observability, incident evidence, and policy-aware operations for robot operations teams.",
-    href: "/products/robotics",
-    tag: "Robot operations",
-    category: "Future Platforms",
-    ctaLabel: "Explore Robotics",
   },
   ventari: {
     id: "ventari",

@@ -48,14 +48,18 @@ describe("createBasicPageMetadata", () => {
 
   it("sets noIndex to false by default", () => {
     const meta = createBasicPageMetadata({});
-    expect(meta.robots?.index).toBe(true);
-    expect(meta.robots?.follow).toBe(true);
+    const robots =
+      typeof meta.robots === "object" ? meta.robots : undefined;
+    expect(robots?.index).toBe(true);
+    expect(robots?.follow).toBe(true);
   });
 
   it("respects noIndex flag", () => {
     const meta = createBasicPageMetadata({ noIndex: true });
-    expect(meta.robots?.index).toBe(false);
-    expect(meta.robots?.follow).toBe(false);
+    const robots =
+      typeof meta.robots === "object" ? meta.robots : undefined;
+    expect(robots?.index).toBe(false);
+    expect(robots?.follow).toBe(false);
   });
 
   it("sets openGraph fields", () => {
@@ -64,11 +68,15 @@ describe("createBasicPageMetadata", () => {
       description: "OG desc.",
       path: "/og",
     });
-    expect(meta.openGraph?.title).toBe("OG Title");
-    expect(meta.openGraph?.url).toBe("https://upcube.ai/og");
-    expect(meta.openGraph?.siteName).toBe(upcubeSiteName);
-    expect(meta.openGraph?.type).toBe("website");
-    expect(meta.openGraph?.images).toEqual([{ url: "/opengraph-image" }]);
+    const og =
+      typeof meta.openGraph === "object" && meta.openGraph !== null
+        ? (meta.openGraph as Record<string, unknown>)
+        : undefined;
+    expect(og?.title).toBe("OG Title");
+    expect(og?.url).toBe("https://upcube.ai/og");
+    expect(og?.siteName).toBe(upcubeSiteName);
+    expect(og?.type).toBe("website");
+    expect(og?.images).toEqual([{ url: "/opengraph-image" }]);
   });
 
   it("sets twitter card fields", () => {
@@ -76,15 +84,23 @@ describe("createBasicPageMetadata", () => {
       title: "Tweet Title",
       description: "Tweet desc.",
     });
-    expect(meta.twitter?.card).toBe("summary_large_image");
-    expect(meta.twitter?.title).toBe("Tweet Title");
-    expect(meta.twitter?.description).toBe("Tweet desc.");
-    expect(meta.twitter?.images).toEqual(["/opengraph-image"]);
+    const tw =
+      typeof meta.twitter === "object" && meta.twitter !== null
+        ? (meta.twitter as Record<string, unknown>)
+        : undefined;
+    expect(tw?.card).toBe("summary_large_image");
+    expect(tw?.title).toBe("Tweet Title");
+    expect(tw?.description).toBe("Tweet desc.");
+    expect(tw?.images).toEqual(["/opengraph-image"]);
   });
 
   it("supports article type", () => {
     const meta = createBasicPageMetadata({ type: "article", path: "/post" });
-    expect(meta.openGraph?.type).toBe("article");
+    const og =
+      typeof meta.openGraph === "object" && meta.openGraph !== null
+        ? (meta.openGraph as Record<string, unknown>)
+        : undefined;
+    expect(og?.type).toBe("article");
   });
 });
 
