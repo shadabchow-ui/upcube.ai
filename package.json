@@ -10,9 +10,9 @@
     "test:unit": "vitest run",
     "test:watch": "vitest",
     "validate": "pnpm prettier:check && pnpm test:unit",
-    "cf:build": "opennextjs-cloudflare build && cp .open-next/worker.js .open-next/_worker.js",
+    "cf:build": "next build",
     "preview": "opennextjs-cloudflare preview",
-    "deploy": "pnpm cf:build && npx wrangler pages deploy .open-next --project-name upcube-ai"
+    "deploy": "opennextjs-cloudflare deploy"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
