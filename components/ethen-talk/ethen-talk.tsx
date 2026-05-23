@@ -1,8 +1,8 @@
 "use client";
 
 import { Dialog, Transition } from "@headlessui/react";
-import Link from "next/link";
 import { Fragment, useCallback, useEffect, useRef, useState } from "react";
+import { EthenRobotPreview } from "components/ethen/EthenRobotPreview";
 import "app/styles/ethen-talk.css";
 
 type PanelState = "idle" | "loading" | "ready" | "error";
@@ -17,13 +17,17 @@ declare global {
   }
 }
 
+type ChatMessage = {
+  role: "user" | "assistant";
+  content: string;
+};
+
 const starters = [
-  { label: "Help me choose a product", href: "/products" },
-  { label: "I want to build with AI", href: "/products/upcube-ai" },
-  { label: "I need cloud tools", href: "/products/cloud" },
-  { label: "I'm a founder", href: "/products" },
-  { label: "I'm a student", href: "/products/university" },
-  { label: "I want to explore Upcube", href: "/products" },
+  { label: "Help me choose a product" },
+  { label: "I want to build with AI" },
+  { label: "I need cloud tools" },
+  { label: "I'm a founder" },
+  { label: "I'm a student" },
 ];
 
 const fallbackCtas = [
@@ -43,12 +47,19 @@ export function EthenTalk() {
   const [state, setState] = useState<PanelState>("idle");
   const [conversationUrl, setConversationUrl] = useState<string | null>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const tavusInitiated = useRef(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
+  const [chatInput, setChatInput] = useState("");
+  const [chatLoading, setChatLoading] = useState(false);
 
   const closePanel = useCallback(() => {
     setOpen(false);
     setTimeout(() => {
       setState("idle");
       setConversationUrl(null);
+      tavusInitiated.current = false;
     }, 300);
   }, []);
 
@@ -62,10 +73,16 @@ export function EthenTalk() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [open, closePanel]);
 
-  const startConversation = useCallback(async () => {
-    trackEvent("ethen_talk_open");
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [chatMessages]);
+
+  const speakWithEthen = useCallback(async () => {
+    if (tavusInitiated.current) return;
+    tavusInitiated.current = true;
+
+    trackEvent("ethen_speak_click");
     setState("loading");
-    setOpen(true);
 
     try {
       const res = await fetch("https://upcube-tavus.shadabchow.workers.dev", {
@@ -88,17 +105,71 @@ export function EthenTalk() {
       trackEvent("ethen_conversation_ready");
     } catch {
       setState("error");
+      tavusInitiated.current = false;
       trackEvent("ethen_conversation_error");
     }
   }, []);
 
-  const showStarters = state === "loading" || state === "idle";
+  const sendChatMessage = useCallback(async (text: string) => {
+    setChatMessages((prev) => [...prev, { role: "user", content: text }]);
+    setChatLoading(true);
+    try {
+      const res = await fetch("/api/ethen/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text }),
+      });
+      const data = (await res.json()) as { reply?: string };
+      setChatMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: data.reply ?? "I'm not sure how to answer that.",
+        },
+      ]);
+    } catch {
+      setChatMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: "Ethen is unavailable right now. Please try again later.",
+        },
+      ]);
+    } finally {
+      setChatLoading(false);
+    }
+  }, []);
+
+  const handleSubmit = useCallback(
+    (e: React.FormEvent) => {
+      e.preventDefault();
+      const trimmed = chatInput.trim();
+      if (!trimmed || chatLoading) return;
+      trackEvent("ethen_chat_send", trimmed);
+      sendChatMessage(trimmed);
+      setChatInput("");
+    },
+    [chatInput, chatLoading, sendChatMessage],
+  );
+
+  const handleStarterClick = useCallback(
+    (label: string) => {
+      trackEvent("ethen_starter_chat", label);
+      sendChatMessage(label);
+    },
+    [sendChatMessage],
+  );
+
+  const openPanel = useCallback(() => {
+    trackEvent("ethen_panel_open");
+    setOpen(true);
+  }, []);
 
   return (
     <>
       <button
         className="ethen-talk__fab"
-        onClick={startConversation}
+        onClick={openPanel}
         aria-label="Talk to Ethen"
       >
         <svg
@@ -144,14 +215,7 @@ export function EthenTalk() {
                 <Dialog.Title className="ethen-talk__title">
                   Meet Ethen
                 </Dialog.Title>
-                <p className="ethen-talk__subtitle">
-                  Tell Ethen what you want to do. He&rsquo;ll guide you to the
-                  right Upcube product.
-                </p>
-                <p className="ethen-talk__disclosure">
-                  You&rsquo;re speaking with Ethen, an AI guide for Upcube. Do
-                  not share sensitive personal information.
-                </p>
+                <p className="ethen-talk__subtitle">Your Upcube AI guide.</p>
                 <button
                   className="ethen-talk__close"
                   onClick={closePanel}
@@ -175,74 +239,141 @@ export function EthenTalk() {
               </div>
 
               <div className="ethen-talk__body">
-                {showStarters && (
+                <div className="ethen-talk__avatar-section">
+                  <div className="ethen-talk__avatar-card">
+                    {state === "idle" && <EthenRobotPreview />}
+
+                    {state === "loading" && (
+                      <div className="ethen-talk__loading">
+                        <div className="ethen-talk__spinner" />
+                        <p>Starting Ethen&hellip;</p>
+                      </div>
+                    )}
+
+                    {state === "ready" && conversationUrl && (
+                      <iframe
+                        ref={iframeRef}
+                        src={conversationUrl}
+                        className="ethen-talk__iframe"
+                        allow="camera; microphone; autoplay; display-capture"
+                        allowFullScreen
+                        title="Ethen conversation"
+                      />
+                    )}
+
+                    {state === "error" && (
+                      <div className="ethen-talk__error">
+                        <p>Ethen is unavailable right now.</p>
+                        <button
+                          className="ethen-talk__retry-btn"
+                          onClick={() => {
+                            trackEvent("ethen_retry");
+                            tavusInitiated.current = false;
+                            speakWithEthen();
+                          }}
+                        >
+                          Try again
+                        </button>
+                      </div>
+                    )}
+                  </div>
+
+                  {state === "idle" && chatMessages.length === 0 && (
+                    <button
+                      className="ethen-talk__cta"
+                      onClick={() =>
+                        handleStarterClick(
+                          "Introduce yourself and explain how you can help me use Upcube.",
+                        )
+                      }
+                    >
+                      Speak with Ethen
+                    </button>
+                  )}
+                </div>
+
+                {chatMessages.length > 0 && (
+                  <div className="ethen-talk__messages">
+                    {chatMessages.map((msg, i) => (
+                      <div
+                        key={i}
+                        className={`ethen-talk__message ethen-talk__message--${msg.role}`}
+                      >
+                        {msg.content}
+                      </div>
+                    ))}
+                    {chatLoading && (
+                      <div className="ethen-talk__message ethen-talk__message--assistant ethen-talk__message--loading">
+                        Ethen is thinking&hellip;
+                      </div>
+                    )}
+                    <div ref={messagesEndRef} />
+                  </div>
+                )}
+
+                <p className="ethen-talk__disclosure">
+                  You&rsquo;re speaking with Ethen, an AI guide for Upcube. Do
+                  not share sensitive personal information.
+                </p>
+
+                {chatMessages.length === 0 && (
                   <div className="ethen-talk__starters">
                     <p className="ethen-talk__starters-label">
                       Try asking about:
                     </p>
                     <div className="ethen-talk__starters-grid">
                       {starters.map((s) => (
-                        <Link
-                          href={s.href}
+                        <button
                           key={s.label}
                           className="ethen-talk__starter"
-                          onClick={() =>
-                            trackEvent("ethen_starter_click", s.label)
-                          }
+                          onClick={() => handleStarterClick(s.label)}
                         >
                           {s.label}
-                        </Link>
+                        </button>
                       ))}
                     </div>
                   </div>
                 )}
 
-                {state === "loading" && (
-                  <div className="ethen-talk__loading">
-                    <div className="ethen-talk__spinner" />
-                    <p>Starting Ethen&hellip;</p>
-                  </div>
-                )}
-
-                {state === "error" && (
-                  <div className="ethen-talk__error">
-                    <p>Ethen is unavailable right now.</p>
+                <div className="ethen-talk__input-row">
+                  <form
+                    onSubmit={handleSubmit}
+                    className="ethen-talk__input-form"
+                  >
+                    <input
+                      className="ethen-talk__text-input"
+                      type="text"
+                      placeholder="Ask Ethen about Upcube..."
+                      value={chatInput}
+                      onChange={(e) => setChatInput(e.target.value)}
+                      disabled={chatLoading || state !== "idle"}
+                    />
                     <button
-                      className="ethen-talk__retry-btn"
-                      onClick={() => {
-                        trackEvent("ethen_retry");
-                        startConversation();
-                      }}
+                      type="submit"
+                      className="ethen-talk__send-btn"
+                      disabled={
+                        !chatInput.trim() || chatLoading || state !== "idle"
+                      }
+                      aria-label="Send"
                     >
-                      Try again
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
                     </button>
-                    <div className="ethen-talk__fallback-links">
-                      {fallbackCtas.map((cta) => (
-                        <Link
-                          href={cta.href}
-                          key={cta.label}
-                          className="ethen-talk__fallback-link"
-                          onClick={() =>
-                            trackEvent("ethen_fallback_cta", cta.label)
-                          }
-                        >
-                          {cta.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {state === "ready" && conversationUrl && (
-                  <iframe
-                    ref={iframeRef}
-                    src={conversationUrl}
-                    className="ethen-talk__iframe"
-                    allow="camera; microphone; autoplay; display-capture"
-                    allowFullScreen
-                    title="Ethen conversation"
-                  />
-                )}
+                  </form>
+                </div>
               </div>
             </Dialog.Panel>
           </Transition.Child>
