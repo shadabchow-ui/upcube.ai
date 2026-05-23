@@ -5,7 +5,7 @@ import { Fragment, useCallback, useEffect, useRef, useState } from "react";
 import { EthenRobotPreview } from "components/ethen/EthenRobotPreview";
 import "app/styles/ethen-talk.css";
 
-type PanelState = "idle" | "loading" | "ready" | "error";
+type VoiceState = "idle" | "loading" | "ready" | "error";
 
 declare global {
   interface Window {
@@ -22,6 +22,20 @@ type ChatMessage = {
   content: string;
 };
 
+type RealtimeSessionResponse = {
+  clientSecret?: string;
+  expiresAt?: number | null;
+  session?: {
+    id?: string | null;
+    model?: string | null;
+    voice?: string | null;
+  };
+  error?: {
+    code?: string;
+    message?: string;
+  };
+};
+
 const starters = [
   { label: "Help me choose a product" },
   { label: "I want to build with AI" },
@@ -29,6 +43,8 @@ const starters = [
   { label: "I'm a founder" },
   { label: "I'm a student" },
 ];
+
+const ETHEN_REALTIME_SESSION_ROUTE = "/api/ethen/realtime-session" as string;
 
 const fallbackCtas = [
   { label: "Explore all products", href: "/products" },
@@ -44,10 +60,12 @@ function trackEvent(action: string, label?: string) {
 
 export function EthenTalk() {
   const [open, setOpen] = useState(false);
-  const [state, setState] = useState<PanelState>("idle");
-  const [conversationUrl, setConversationUrl] = useState<string | null>(null);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-  const tavusInitiated = useRef(false);
+  const [voiceState, setVoiceState] = useState<VoiceState>("idle");
+  const [voiceMessage, setVoiceMessage] = useState<string | null>(null);
+  const [voiceSession, setVoiceSession] = useState<RealtimeSessionResponse | null>(
+    null,
+  );
+  const voiceRequestInFlight = useRef(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
@@ -57,9 +75,10 @@ export function EthenTalk() {
   const closePanel = useCallback(() => {
     setOpen(false);
     setTimeout(() => {
-      setState("idle");
-      setConversationUrl(null);
-      tavusInitiated.current = false;
+      setVoiceState("idle");
+      setVoiceMessage(null);
+      setVoiceSession(null);
+      voiceRequestInFlight.current = false;
     }, 300);
   }, []);
 
@@ -78,35 +97,47 @@ export function EthenTalk() {
   }, [chatMessages]);
 
   const speakWithEthen = useCallback(async () => {
-    if (tavusInitiated.current) return;
-    tavusInitiated.current = true;
+    if (voiceRequestInFlight.current) return;
+    voiceRequestInFlight.current = true;
 
     trackEvent("ethen_speak_click");
-    setState("loading");
+    setVoiceState("loading");
+    setVoiceMessage("Starting voice...");
+    setVoiceSession(null);
 
     try {
-      const res = await fetch("https://upcube-tavus.shadabchow.workers.dev", {
+      const res = await fetch(ETHEN_REALTIME_SESSION_ROUTE, {
         method: "POST",
       });
-      if (!res.ok) {
-        throw new Error("Failed to create conversation");
-      }
-      const data = (await res.json()) as {
-        conversation_url?: string;
-        conversation_id?: string;
-      };
 
-      if (!data.conversation_url) {
-        throw new Error("No conversation URL returned");
+      const data = (await res.json()) as RealtimeSessionResponse;
+
+      if (!res.ok || !data.clientSecret) {
+        const message =
+          data.error?.message ??
+          "Voice mode is unavailable right now. Please try again later.";
+        setVoiceState("error");
+        setVoiceMessage(message);
+        setVoiceSession(null);
+        trackEvent("ethen_conversation_error", data.error?.code);
+        return;
       }
 
-      setConversationUrl(data.conversation_url);
-      setState("ready");
+      setVoiceSession(data);
+      setVoiceState("ready");
+      setVoiceMessage(
+        "Voice mode ready. Session bootstrap succeeded. Live microphone streaming is not enabled in this build yet.",
+      );
       trackEvent("ethen_conversation_ready");
     } catch {
-      setState("error");
-      tavusInitiated.current = false;
+      setVoiceState("error");
+      setVoiceMessage(
+        "Voice mode is unavailable right now. Please try again in a moment.",
+      );
+      setVoiceSession(null);
       trackEvent("ethen_conversation_error");
+    } finally {
+      voiceRequestInFlight.current = false;
     }
   }, []);
 
@@ -241,54 +272,55 @@ export function EthenTalk() {
               <div className="ethen-talk__body">
                 <div className="ethen-talk__avatar-section">
                   <div className="ethen-talk__avatar-card">
-                    {state === "idle" && <EthenRobotPreview />}
-
-                    {state === "loading" && (
-                      <div className="ethen-talk__loading">
-                        <div className="ethen-talk__spinner" />
-                        <p>Starting Ethen&hellip;</p>
-                      </div>
-                    )}
-
-                    {state === "ready" && conversationUrl && (
-                      <iframe
-                        ref={iframeRef}
-                        src={conversationUrl}
-                        className="ethen-talk__iframe"
-                        allow="camera; microphone; autoplay; display-capture"
-                        allowFullScreen
-                        title="Ethen conversation"
-                      />
-                    )}
-
-                    {state === "error" && (
-                      <div className="ethen-talk__error">
-                        <p>Ethen is unavailable right now.</p>
-                        <button
-                          className="ethen-talk__retry-btn"
-                          onClick={() => {
-                            trackEvent("ethen_retry");
-                            tavusInitiated.current = false;
-                            speakWithEthen();
-                          }}
-                        >
-                          Try again
-                        </button>
-                      </div>
-                    )}
+                    <EthenRobotPreview />
                   </div>
 
-                  {state === "idle" && chatMessages.length === 0 && (
+                  {chatMessages.length === 0 && (
                     <button
                       className="ethen-talk__cta"
-                      onClick={() =>
-                        handleStarterClick(
-                          "Introduce yourself and explain how you can help me use Upcube.",
-                        )
-                      }
+                      onClick={speakWithEthen}
+                      disabled={voiceState === "loading"}
                     >
-                      Speak with Ethen
+                      {voiceState === "loading"
+                        ? "Starting voice..."
+                        : voiceState === "ready"
+                          ? "Voice mode ready"
+                          : "Speak with Ethen"}
                     </button>
+                  )}
+
+                  {voiceMessage && (
+                    <p
+                      className={`ethen-talk__voice-status ethen-talk__voice-status--${voiceState}`}
+                    >
+                      {voiceMessage}
+                    </p>
+                  )}
+
+                  {voiceState === "error" && chatMessages.length === 0 && (
+                    <button
+                      className="ethen-talk__retry-btn"
+                      onClick={() => {
+                        trackEvent("ethen_retry");
+                        speakWithEthen();
+                      }}
+                    >
+                      Try again
+                    </button>
+                  )}
+
+                  {voiceState === "ready" && voiceSession?.expiresAt && (
+                    <p className="ethen-talk__voice-meta">
+                      Temporary session prepared. Expires at{" "}
+                      {new Date(voiceSession.expiresAt * 1000).toLocaleTimeString(
+                        [],
+                        {
+                          hour: "numeric",
+                          minute: "2-digit",
+                        },
+                      )}
+                      .
+                    </p>
                   )}
                 </div>
 
@@ -346,14 +378,12 @@ export function EthenTalk() {
                       placeholder="Ask Ethen about Upcube..."
                       value={chatInput}
                       onChange={(e) => setChatInput(e.target.value)}
-                      disabled={chatLoading || state !== "idle"}
+                      disabled={chatLoading}
                     />
                     <button
                       type="submit"
                       className="ethen-talk__send-btn"
-                      disabled={
-                        !chatInput.trim() || chatLoading || state !== "idle"
-                      }
+                      disabled={!chatInput.trim() || chatLoading}
                       aria-label="Send"
                     >
                       <svg

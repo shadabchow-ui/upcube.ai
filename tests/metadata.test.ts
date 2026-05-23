@@ -48,16 +48,14 @@ describe("createBasicPageMetadata", () => {
 
   it("sets noIndex to false by default", () => {
     const meta = createBasicPageMetadata({});
-    const robots =
-      typeof meta.robots === "object" ? meta.robots : undefined;
+    const robots = typeof meta.robots === "object" ? meta.robots : undefined;
     expect(robots?.index).toBe(true);
     expect(robots?.follow).toBe(true);
   });
 
   it("respects noIndex flag", () => {
     const meta = createBasicPageMetadata({ noIndex: true });
-    const robots =
-      typeof meta.robots === "object" ? meta.robots : undefined;
+    const robots = typeof meta.robots === "object" ? meta.robots : undefined;
     expect(robots?.index).toBe(false);
     expect(robots?.follow).toBe(false);
   });

@@ -195,6 +195,12 @@
   transform: translateY(0);
 }
 
+.ethen-talk__cta:disabled {
+  opacity: 0.55;
+  cursor: wait;
+  transform: none;
+}
+
 .ethen-talk__disclosure {
   margin: 0;
   font-family: var(--up-font-sans);
@@ -403,6 +409,32 @@
   background: rgba(245, 245, 240, 0.08);
 }
 
+.ethen-talk__voice-status {
+  margin: 0;
+  font-family: var(--up-font-sans);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-align: center;
+  color: rgba(245, 245, 240, 0.62);
+}
+
+.ethen-talk__voice-status--ready {
+  color: rgba(245, 245, 240, 0.82);
+}
+
+.ethen-talk__voice-status--error {
+  color: rgba(255, 191, 191, 0.9);
+}
+
+.ethen-talk__voice-meta {
+  margin: 0;
+  font-family: var(--up-font-sans);
+  font-size: 0.6875rem;
+  line-height: 1.35;
+  text-align: center;
+  color: rgba(245, 245, 240, 0.42);
+}
+
 .ethen-talk__iframe {
   width: 100%;
   height: 100%;
@@ -553,6 +585,10 @@ html[data-theme="light"] .ethen-talk__cta:hover {
   background: #303030;
 }
 
+html[data-theme="light"] .ethen-talk__cta:disabled {
+  opacity: 0.5;
+}
+
 html[data-theme="light"] .ethen-talk__disclosure {
   color: rgba(16, 16, 16, 0.3);
 }
@@ -612,6 +648,22 @@ html[data-theme="light"] .ethen-talk__retry-btn {
 
 html[data-theme="light"] .ethen-talk__retry-btn:hover {
   background: rgba(16, 16, 16, 0.06);
+}
+
+html[data-theme="light"] .ethen-talk__voice-status {
+  color: rgba(16, 16, 16, 0.58);
+}
+
+html[data-theme="light"] .ethen-talk__voice-status--ready {
+  color: rgba(16, 16, 16, 0.82);
+}
+
+html[data-theme="light"] .ethen-talk__voice-status--error {
+  color: #9b2c2c;
+}
+
+html[data-theme="light"] .ethen-talk__voice-meta {
+  color: rgba(16, 16, 16, 0.42);
 }
 
 html[data-theme="light"] .ethen-talk__backdrop {
