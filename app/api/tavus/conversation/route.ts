@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 export async function POST() {
   const apiKey = process.env.TAVUS_API_KEY;
   const replicaId = process.env.TAVUS_REPLICA_ID;
+  const personaId = process.env.TAVUS_PERSONA_ID;
 
   if (!apiKey) {
     return NextResponse.json(
@@ -18,6 +19,13 @@ export async function POST() {
     );
   }
 
+  if (!personaId) {
+    return NextResponse.json(
+      { error: "Tavus persona ID not configured" },
+      { status: 500 },
+    );
+  }
+
   try {
     const response = await fetch("https://tavusapi.com/v2/conversations", {
       method: "POST",
@@ -27,6 +35,7 @@ export async function POST() {
       },
       body: JSON.stringify({
         replica_id: replicaId,
+        persona_id: personaId,
         conversation_name: "Ethen Talk",
         properties: {
           max_call_duration: 600,
