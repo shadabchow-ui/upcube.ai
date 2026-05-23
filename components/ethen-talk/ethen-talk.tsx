@@ -68,7 +68,9 @@ export function EthenTalk() {
     setOpen(true);
 
     try {
-      const res = await fetch("/api/tavus/conversation", { method: "POST" });
+      const res = await fetch("https://upcube-tavus.shadabchow.workers.dev", {
+        method: "POST",
+      });
       if (!res.ok) {
         throw new Error("Failed to create conversation");
       }
