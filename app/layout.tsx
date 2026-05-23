@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CartProvider } from "components/cart/cart-context";
 import { Navbar } from "components/layout/navbar";
+import { EthenTalk } from "components/ethen-talk/ethen-talk";
 import { ThemeInitScript } from "components/upcube-theme/theme-init-script";
 import {
   canonicalBaseUrl,
@@ -122,6 +123,7 @@ export default async function RootLayout({
               <Toaster closeButton />
               <GAScript />
             </main>
+            <EthenTalk />
           </Suspense>
         </CartProvider>
       </body>
