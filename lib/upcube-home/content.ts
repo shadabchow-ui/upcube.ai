@@ -74,13 +74,6 @@ export const homeCapabilityPoints: HomeProofPoint[] = [
     ],
   },
   {
-    title: "Robotics & Physical AI",
-    description:
-      "A new operations layer for robots in the real world. Robotics brings mission replay, fleet visibility, incident evidence, and policy-aware control into the Upcube ecosystem.",
-    href: "/products/robotics",
-    links: [{ label: "Robotics", href: "/products/robotics" }],
-  },
-  {
     title: "Entertainment",
     description:
       "Consumer discovery at ambitious scale. Games and other entertainment surfaces pair bold interfaces with broad, intelligent discovery experiences.",
@@ -123,14 +116,6 @@ export const featureBands: FeatureBand[] = [
     href: "/products/earth",
     cta: "Explore Earth",
     tone: "teal",
-  },
-  {
-    title: "News",
-    description:
-      "Live news intelligence, AI summaries, topic discovery, and briefing-style reading for staying informed with clarity.",
-    href: "/products/news",
-    cta: "Launch News",
-    tone: "blue",
   },
   {
     title: "Games",
@@ -179,14 +164,6 @@ export const featureBands: FeatureBand[] = [
     href: "/products/vm",
     cta: "Explore Cloud VMs",
     tone: "blue",
-  },
-  {
-    title: "Robotics",
-    description:
-      "Mission replay, fleet observability, incident evidence, and policy-aware robotics operations for teams building and operating real-world robot fleets.",
-    href: "/products/robotics",
-    cta: "Explore Robotics",
-    tone: "teal",
   },
   {
     title: "OS",

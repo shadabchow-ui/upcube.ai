@@ -1061,12 +1061,6 @@ export const portalMenuGroups: PortalMenuGroup[] = [
         description: "Join the team.",
       },
       {
-        id: "company-contact-menu",
-        label: "Contact",
-        href: "/contact",
-        description: "Get in touch.",
-      },
-      {
         id: "company-account-menu",
         label: "Account",
         href: "/account",
