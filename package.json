@@ -12,7 +12,7 @@
     "validate": "pnpm prettier:check && pnpm test:unit",
     "cf:build": "next build",
     "preview": "opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare deploy"
+    "deploy": "npx wrangler pages deploy out --project-name upcube-ai --branch main --commit-dirty=true"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
