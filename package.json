@@ -10,7 +10,7 @@
     "test:unit": "vitest run",
     "test:watch": "vitest",
     "validate": "pnpm prettier:check && pnpm test:unit",
-    "cf:build": "node scripts/cloudflare-pages-build.mjs",
+    "cf:build": "next build",
     "preview": "opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare deploy"
   },
