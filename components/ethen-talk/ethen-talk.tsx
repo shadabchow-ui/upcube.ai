@@ -37,14 +37,16 @@ type RealtimeSessionResponse = {
     model?: string | null;
     voice?: string | null;
   };
-  error?: {
-    code?: string;
-    message?: string;
-    details?: {
-      status?: number;
-      requestId?: string | null;
-    };
-  };
+  error?:
+    | string
+    | {
+        code?: string;
+        message?: string;
+        details?: {
+          status?: number;
+          requestId?: string | null;
+        };
+      };
 };
 
 type VoiceSessionMeta = {
@@ -84,6 +86,28 @@ function debugVoiceLog(event: string, details?: Record<string, unknown>) {
   }
 
   console.info("[EthenVoice]", event, details ?? {});
+}
+
+function getRealtimeSessionErrorMessage(
+  status: number,
+  error: RealtimeSessionResponse["error"],
+) {
+  if (status === 405) {
+    return "Voice route rejected the request method. The deployed client must call the session route with POST.";
+  }
+
+  if (typeof error === "string") {
+    return error;
+  }
+
+  if (typeof error === "object" && error) {
+    return (
+      error.message ??
+      "Voice mode is unavailable right now. Please try again later."
+    );
+  }
+
+  return "Voice mode is unavailable right now. Please try again later.";
 }
 
 export function EthenTalk() {
@@ -175,23 +199,27 @@ export function EthenTalk() {
     try {
       const res = await fetch(ETHEN_REALTIME_SESSION_ROUTE, {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({}),
       });
 
       const data = (await res.json()) as RealtimeSessionResponse;
+      const errorCode =
+        typeof data.error === "object" && data.error ? data.error.code : undefined;
       debugVoiceLog("session.bootstrap.response", {
         status: res.status,
         ok: res.ok,
-        errorCode: data.error?.code,
+        errorCode,
       });
 
       if (!res.ok || !data.clientSecret) {
-        const message =
-          data.error?.message ??
-          "Voice mode is unavailable right now. Please try again later.";
+        const message = getRealtimeSessionErrorMessage(res.status, data.error);
         setVoiceState("error");
         setVoiceMessage(message);
         setVoiceSession(null);
-        trackEvent("ethen_conversation_error", data.error?.code);
+        trackEvent("ethen_conversation_error", errorCode ?? `http_${res.status}`);
         return;
       }
 
