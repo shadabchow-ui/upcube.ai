@@ -201,6 +201,16 @@
   transform: none;
 }
 
+.ethen-talk__cta--secondary {
+  border: 1px solid rgba(245, 245, 240, 0.16);
+  background: transparent;
+  color: #f5f5f0;
+}
+
+.ethen-talk__cta--secondary:hover {
+  background: rgba(245, 245, 240, 0.08);
+}
+
 .ethen-talk__disclosure {
   margin: 0;
   font-family: var(--up-font-sans);
@@ -422,6 +432,10 @@
   color: rgba(245, 245, 240, 0.82);
 }
 
+.ethen-talk__voice-status--connected {
+  color: rgba(245, 245, 240, 0.82);
+}
+
 .ethen-talk__voice-status--error {
   color: rgba(255, 191, 191, 0.9);
 }
@@ -589,6 +603,16 @@ html[data-theme="light"] .ethen-talk__cta:disabled {
   opacity: 0.5;
 }
 
+html[data-theme="light"] .ethen-talk__cta--secondary {
+  border-color: rgba(16, 16, 16, 0.16);
+  background: transparent;
+  color: #101010;
+}
+
+html[data-theme="light"] .ethen-talk__cta--secondary:hover {
+  background: rgba(16, 16, 16, 0.06);
+}
+
 html[data-theme="light"] .ethen-talk__disclosure {
   color: rgba(16, 16, 16, 0.3);
 }
@@ -655,6 +679,10 @@ html[data-theme="light"] .ethen-talk__voice-status {
 }
 
 html[data-theme="light"] .ethen-talk__voice-status--ready {
+  color: rgba(16, 16, 16, 0.82);
+}
+
+html[data-theme="light"] .ethen-talk__voice-status--connected {
   color: rgba(16, 16, 16, 0.82);
 }
 

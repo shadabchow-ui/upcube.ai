@@ -5,7 +5,14 @@ import { Fragment, useCallback, useEffect, useRef, useState } from "react";
 import { EthenRobotPreview } from "components/ethen/EthenRobotPreview";
 import "app/styles/ethen-talk.css";
 
-type VoiceState = "idle" | "loading" | "ready" | "error";
+type VoiceState =
+  | "idle"
+  | "starting"
+  | "requestingMicrophone"
+  | "connecting"
+  | "connected"
+  | "stopping"
+  | "error";
 
 declare global {
   interface Window {
@@ -33,6 +40,19 @@ type RealtimeSessionResponse = {
   error?: {
     code?: string;
     message?: string;
+    details?: {
+      status?: number;
+      requestId?: string | null;
+    };
+  };
+};
+
+type VoiceSessionMeta = {
+  expiresAt?: number | null;
+  session?: {
+    id?: string | null;
+    model?: string | null;
+    voice?: string | null;
   };
 };
 
@@ -58,29 +78,73 @@ function trackEvent(action: string, label?: string) {
   }
 }
 
+function debugVoiceLog(event: string, details?: Record<string, unknown>) {
+  if (process.env.NODE_ENV !== "development") {
+    return;
+  }
+
+  console.info("[EthenVoice]", event, details ?? {});
+}
+
 export function EthenTalk() {
   const [open, setOpen] = useState(false);
   const [voiceState, setVoiceState] = useState<VoiceState>("idle");
   const [voiceMessage, setVoiceMessage] = useState<string | null>(null);
-  const [voiceSession, setVoiceSession] = useState<RealtimeSessionResponse | null>(
-    null,
-  );
+  const [voiceSession, setVoiceSession] = useState<VoiceSessionMeta | null>(null);
   const voiceRequestInFlight = useRef(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const remoteAudioRef = useRef<HTMLAudioElement | null>(null);
+  const peerConnectionRef = useRef<RTCPeerConnection | null>(null);
+  const dataChannelRef = useRef<RTCDataChannel | null>(null);
+  const microphoneStreamRef = useRef<MediaStream | null>(null);
+  const remoteStreamRef = useRef<MediaStream | null>(null);
 
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
   const [chatInput, setChatInput] = useState("");
   const [chatLoading, setChatLoading] = useState(false);
 
+  const teardownVoiceResources = useCallback(() => {
+    dataChannelRef.current?.close();
+    dataChannelRef.current = null;
+
+    peerConnectionRef.current?.getSenders().forEach((sender) => {
+      sender.track?.stop();
+    });
+    peerConnectionRef.current?.close();
+    peerConnectionRef.current = null;
+
+    microphoneStreamRef.current?.getTracks().forEach((track) => track.stop());
+    microphoneStreamRef.current = null;
+
+    remoteStreamRef.current?.getTracks().forEach((track) => track.stop());
+    remoteStreamRef.current = null;
+
+    if (remoteAudioRef.current) {
+      remoteAudioRef.current.pause();
+      remoteAudioRef.current.srcObject = null;
+    }
+  }, []);
+
+  const stopVoiceSession = useCallback((nextState: VoiceState = "idle") => {
+    debugVoiceLog("stop.voice.begin", { nextState });
+
+    teardownVoiceResources();
+
+    if (nextState === "idle") {
+      setVoiceMessage(null);
+      setVoiceSession(null);
+    }
+
+    setVoiceState(nextState);
+    voiceRequestInFlight.current = false;
+  }, [teardownVoiceResources]);
+
   const closePanel = useCallback(() => {
     setOpen(false);
     setTimeout(() => {
-      setVoiceState("idle");
-      setVoiceMessage(null);
-      setVoiceSession(null);
-      voiceRequestInFlight.current = false;
+      stopVoiceSession("idle");
     }, 300);
-  }, []);
+  }, [stopVoiceSession]);
 
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
@@ -96,12 +160,15 @@ export function EthenTalk() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [chatMessages]);
 
+  useEffect(() => () => stopVoiceSession("idle"), [stopVoiceSession]);
+
   const speakWithEthen = useCallback(async () => {
     if (voiceRequestInFlight.current) return;
     voiceRequestInFlight.current = true;
 
+    teardownVoiceResources();
     trackEvent("ethen_speak_click");
-    setVoiceState("loading");
+    setVoiceState("starting");
     setVoiceMessage("Starting voice...");
     setVoiceSession(null);
 
@@ -111,6 +178,11 @@ export function EthenTalk() {
       });
 
       const data = (await res.json()) as RealtimeSessionResponse;
+      debugVoiceLog("session.bootstrap.response", {
+        status: res.status,
+        ok: res.ok,
+        errorCode: data.error?.code,
+      });
 
       if (!res.ok || !data.clientSecret) {
         const message =
@@ -123,23 +195,163 @@ export function EthenTalk() {
         return;
       }
 
-      setVoiceSession(data);
-      setVoiceState("ready");
-      setVoiceMessage(
-        "Voice mode ready. Session bootstrap succeeded. Live microphone streaming is not enabled in this build yet.",
-      );
+      setVoiceSession({
+        expiresAt: data.expiresAt ?? null,
+        session: data.session ?? undefined,
+      });
+
+      setVoiceState("requestingMicrophone");
+      setVoiceMessage("Requesting microphone...");
+      debugVoiceLog("microphone.requested");
+
+      let microphoneStream: MediaStream;
+      try {
+        microphoneStream = await navigator.mediaDevices.getUserMedia({
+          audio: true,
+        });
+      } catch (error) {
+        console.error("Ethen microphone request failed:", error);
+        setVoiceState("error");
+        setVoiceMessage(
+          "Microphone access was blocked. Allow microphone access to use Ethen voice.",
+        );
+        trackEvent("ethen_conversation_error", "microphone_denied");
+        return;
+      }
+
+      microphoneStreamRef.current = microphoneStream;
+      setVoiceState("connecting");
+      setVoiceMessage("Connecting voice...");
+
+      const peerConnection = new RTCPeerConnection();
+      peerConnectionRef.current = peerConnection;
+
+      const remoteStream = new MediaStream();
+      remoteStreamRef.current = remoteStream;
+
+      if (remoteAudioRef.current) {
+        remoteAudioRef.current.srcObject = remoteStream;
+        void remoteAudioRef.current.play().catch(() => {});
+      }
+
+      peerConnection.onconnectionstatechange = () => {
+        if (peerConnectionRef.current !== peerConnection) {
+          return;
+        }
+
+        debugVoiceLog("peer.connection.state", {
+          connectionState: peerConnection.connectionState,
+        });
+
+        if (peerConnection.connectionState === "connected") {
+          setVoiceState("connected");
+          setVoiceMessage("Voice mode connected. Ethen is listening.");
+        } else if (peerConnection.connectionState === "failed") {
+          stopVoiceSession("error");
+          setVoiceMessage("Voice connection failed. Please try again.");
+        } else if (peerConnection.connectionState === "disconnected") {
+          setVoiceState("error");
+          setVoiceMessage("Voice connection failed. Please try again.");
+        }
+      };
+
+      peerConnection.oniceconnectionstatechange = () => {
+        debugVoiceLog("peer.ice.state", {
+          iceConnectionState: peerConnection.iceConnectionState,
+        });
+      };
+
+      peerConnection.ontrack = (event) => {
+        debugVoiceLog("remote.audio.track", {
+          streamCount: event.streams.length,
+        });
+        event.streams.forEach((stream) => {
+          stream.getAudioTracks().forEach((track) => remoteStream.addTrack(track));
+        });
+
+        if (remoteAudioRef.current) {
+          remoteAudioRef.current.srcObject = remoteStream;
+          void remoteAudioRef.current.play().catch(() => {});
+        }
+      };
+
+      microphoneStream.getTracks().forEach((track) => {
+        peerConnection.addTrack(track, microphoneStream);
+      });
+
+      const dataChannel = peerConnection.createDataChannel("oai-events");
+      dataChannelRef.current = dataChannel;
+
+      dataChannel.onopen = () => {
+        debugVoiceLog("datachannel.open");
+      };
+
+      dataChannel.onclose = () => {
+        debugVoiceLog("datachannel.close");
+      };
+
+      dataChannel.onerror = (event) => {
+        debugVoiceLog("datachannel.error", {
+          type: event.type,
+        });
+      };
+
+      dataChannel.onmessage = (event) => {
+        try {
+          const payload = JSON.parse(event.data) as { type?: string };
+          debugVoiceLog("datachannel.message", {
+            type: payload.type ?? "unknown",
+          });
+        } catch {
+          debugVoiceLog("datachannel.message.invalid_json");
+        }
+      };
+
+      const offer = await peerConnection.createOffer();
+      await peerConnection.setLocalDescription(offer);
+
+      const sdpResponse = await fetch("https://api.openai.com/v1/realtime/calls", {
+        method: "POST",
+        body: offer.sdp,
+        headers: {
+          Authorization: `Bearer ${data.clientSecret}`,
+          "Content-Type": "application/sdp",
+        },
+      });
+
+      if (!sdpResponse.ok) {
+        const errorText = await sdpResponse.text();
+        debugVoiceLog("webrtc.sdp.failed", {
+          status: sdpResponse.status,
+        });
+        console.error("Ethen SDP exchange failed:", sdpResponse.status, errorText);
+        stopVoiceSession("error");
+        setVoiceMessage("Voice connection failed. Please try again.");
+        trackEvent("ethen_conversation_error", "webrtc_sdp_failed");
+        return;
+      }
+
+      const answerSdp = await sdpResponse.text();
+      await peerConnection.setRemoteDescription({
+        type: "answer",
+        sdp: answerSdp,
+      });
+
+      debugVoiceLog("webrtc.sdp.connected", {
+        sessionId: data.session?.id ?? null,
+      });
+      setVoiceMessage("Voice mode connected. Ethen is listening.");
       trackEvent("ethen_conversation_ready");
-    } catch {
-      setVoiceState("error");
-      setVoiceMessage(
-        "Voice mode is unavailable right now. Please try again in a moment.",
-      );
+    } catch (error) {
+      console.error("Ethen voice startup failed:", error);
+      stopVoiceSession("error");
+      setVoiceMessage("Voice connection failed. Please try again.");
       setVoiceSession(null);
-      trackEvent("ethen_conversation_error");
+      trackEvent("ethen_conversation_error", "voice_start_failed");
     } finally {
       voiceRequestInFlight.current = false;
     }
-  }, []);
+  }, [stopVoiceSession, teardownVoiceResources]);
 
   const sendChatMessage = useCallback(async (text: string) => {
     setChatMessages((prev) => [...prev, { role: "user", content: text }]);
@@ -275,17 +487,28 @@ export function EthenTalk() {
                     <EthenRobotPreview />
                   </div>
 
-                  {chatMessages.length === 0 && (
+                  {voiceState === "connected" ||
+                  voiceState === "connecting" ||
+                  voiceState === "requestingMicrophone" ||
+                  voiceState === "starting" ||
+                  voiceState === "stopping" ? (
+                    <button
+                      className="ethen-talk__cta ethen-talk__cta--secondary"
+                      onClick={() => {
+                        setVoiceState("stopping");
+                        setVoiceMessage("Stopping voice...");
+                        stopVoiceSession("idle");
+                      }}
+                      disabled={voiceState === "stopping"}
+                    >
+                      {voiceState === "stopping" ? "Stopping..." : "Stop voice"}
+                    </button>
+                  ) : (
                     <button
                       className="ethen-talk__cta"
                       onClick={speakWithEthen}
-                      disabled={voiceState === "loading"}
                     >
-                      {voiceState === "loading"
-                        ? "Starting voice..."
-                        : voiceState === "ready"
-                          ? "Voice mode ready"
-                          : "Speak with Ethen"}
+                      Speak with Ethen
                     </button>
                   )}
 
@@ -297,7 +520,7 @@ export function EthenTalk() {
                     </p>
                   )}
 
-                  {voiceState === "error" && chatMessages.length === 0 && (
+                  {voiceState === "error" && (
                     <button
                       className="ethen-talk__retry-btn"
                       onClick={() => {
@@ -309,7 +532,7 @@ export function EthenTalk() {
                     </button>
                   )}
 
-                  {voiceState === "ready" && voiceSession?.expiresAt && (
+                  {voiceSession?.expiresAt && voiceState !== "idle" && (
                     <p className="ethen-talk__voice-meta">
                       Temporary session prepared. Expires at{" "}
                       {new Date(voiceSession.expiresAt * 1000).toLocaleTimeString(
@@ -409,6 +632,7 @@ export function EthenTalk() {
           </Transition.Child>
         </Dialog>
       </Transition>
+      <audio ref={remoteAudioRef} autoPlay playsInline hidden />
     </>
   );
 }

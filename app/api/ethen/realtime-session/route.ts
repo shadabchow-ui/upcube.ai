@@ -44,7 +44,7 @@ export async function POST() {
         error: {
           code: "missing_openai_api_key",
           message:
-            "Voice mode is not configured yet. Add OPENAI_API_KEY in the server environment to enable it.",
+            "Voice mode is not configured in this deployment. Add OPENAI_API_KEY to this Cloudflare Pages environment.",
         },
       },
       503,
@@ -77,6 +77,8 @@ export async function POST() {
                 },
                 turn_detection: {
                   type: "server_vad",
+                  create_response: true,
+                  interrupt_response: true,
                 },
               },
               output: {
@@ -94,9 +96,11 @@ export async function POST() {
 
     if (!response.ok) {
       const errorText = await response.text();
+      const requestId = response.headers.get("x-request-id");
       console.error(
         "OpenAI realtime session bootstrap failed:",
         response.status,
+        requestId ?? "no-request-id",
         errorText,
       );
       return jsonNoStore(
@@ -105,6 +109,10 @@ export async function POST() {
             code: "realtime_session_failed",
             message:
               "Voice mode is unavailable right now. Please try again in a moment.",
+            details: {
+              status: response.status,
+              requestId,
+            },
           },
         },
         502,
@@ -129,6 +137,9 @@ export async function POST() {
             code: "missing_client_secret",
             message:
               "Voice mode could not be prepared. Please try again shortly.",
+            details: {
+              status: 502,
+            },
           },
         },
         502,
