@@ -2,6 +2,7 @@ import { UPCUBE_QUANTUM_URL } from "lib/upcube-universal/product-links";
 
 export type UpcubeProductSlug =
   | "upcube-ai"
+  | "avatar"
   | "books"
   | "earth"
   | "games"
@@ -9,6 +10,7 @@ export type UpcubeProductSlug =
   | "jobs"
   | "cloud"
   | "quantum"
+  | "research"
   | "robotics"
   | "ventari"
   | "vm"
@@ -171,6 +173,136 @@ export const upcubeProducts: UpcubeProduct[] = [
     },
     finalSecondaryAction: {
       label: "Explore products",
+      href: "/explore",
+    },
+  },
+  {
+    slug: "avatar",
+    name: "Upcube Avatar Cloud",
+    eyebrow: "AI Avatars",
+    headline: "AI avatars that speak, listen, and guide.",
+    summary:
+      "Upcube Avatar Cloud is a platform for creating and deploying AI avatars for websites, training, sales, education, support, and creators. Live avatars, studio video, interactive pages, and a developer API — fully managed.",
+    seoTitle: "Upcube Avatar Cloud | AI Avatar Platform",
+    seoDescription:
+      "Upcube Avatar Cloud is an AI avatar platform for deploying conversational avatars, studio-generated avatar videos, interactive pages, and avatar API integrations.",
+    primaryAction: {
+      label: "Try Avatar",
+      href: "https://avatar.upcube.ai",
+    },
+    secondaryAction: {
+      label: "Explore UpcubeAI",
+      href: "/products/upcube-ai",
+    },
+    heroHighlights: [
+      "Deploy real-time conversational avatars on your website in minutes.",
+      "Turn scripts, docs, and URLs into avatar-led videos with Studio.",
+      "Interactive pages, embed SDK, and Avatar API for custom integrations.",
+    ],
+    heroImage: {
+      src: "/product-art/050b0e5fb4bd48bbb2c6a91baa3afc40_sw-2962_sh-2191.webp",
+      alt: "Abstract composition representing AI avatar interaction.",
+    },
+    availabilityNote:
+      "Upcube Avatar Cloud is in active development. Live Avatar (Ethen) is functional with chat and TTS. Studio, Interactive Pages, and the full platform are in preview.",
+    signatureTitle: "One platform for deploying AI avatars anywhere.",
+    signatureBody:
+      "Upcube Avatar Cloud brings live conversational avatars, studio-generated video, interactive pages, and a developer API into one managed platform. Deploy avatars that talk, listen, and guide — on your website, in training, for sales, and in support.",
+    signatureCards: [
+      {
+        title: "Live Avatar",
+        body: "Deploy real-time conversational avatars on your website. Visitors can talk to an AI avatar that answers questions, qualifies leads, books meetings, and hands off to your team.",
+      },
+      {
+        title: "Studio",
+        body: "Turn scripts, PDFs, URLs, and blog posts into avatar-led videos. Script-to-scene editor, captions, transcript, and hosted video pages — no recording required.",
+      },
+      {
+        title: "Interactive Pages",
+        body: "Each video becomes an interactive page with transcript, quiz, live avatar Q&A, lead capture, and analytics. Passive viewing becomes active engagement.",
+      },
+    ],
+    featureStories: [
+      {
+        title: "Avatar API for custom integrations",
+        body: "Personas, sessions, streaming, webhooks, and an embed SDK let you integrate AI avatars into your own products and platforms.",
+      },
+      {
+        title: "Responsible by design",
+        body: "Consent records, identity verification, data retention controls, and audit logs are built into the platform from the start. Moderation and governance are part of the architecture.",
+      },
+      {
+        title: "Preview-first development",
+        body: "The platform is in active development with a clear preview status. Ethen is functional today; Studio, Interactive Pages, and the full API surface are evolving toward production readiness.",
+      },
+    ],
+    techCards: [
+      {
+        title: "Real-time conversational avatars",
+        body: "Deploy avatars that use text chat and TTS voice. Visitors interact naturally without needing to install or configure anything.",
+      },
+      {
+        title: "Studio video generation pipeline",
+        body: "Script-to-scene, document-to-video, and URL-to-video workflows turn existing content into avatar-led video assets.",
+      },
+      {
+        title: "Embed SDK and API",
+        body: "Session tokens, webhooks, persona configuration, and streaming support give developers full control over avatar deployment and behavior.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Website Concierge",
+        body: "Greet visitors, answer questions, qualify leads, and book meetings with a live AI avatar on your site.",
+      },
+      {
+        title: "AI Sales Agent",
+        body: "Engage prospects, explain products, handle objections, and route hot leads to your team.",
+      },
+      {
+        title: "Training Coach",
+        body: "Deliver interactive training, quiz learners, and track completion through avatar-led sessions.",
+      },
+      {
+        title: "Product Demos",
+        body: "Showcase your product with a live avatar that answers buyer questions in real time.",
+      },
+      {
+        title: "Support Agent",
+        body: "Resolve common issues, guide users through troubleshooting, and escalate to humans.",
+      },
+      {
+        title: "Ecommerce Assistant",
+        body: "Recommend products, compare options, and help shoppers find what they need.",
+      },
+    ],
+    ecosystemLinks: [
+      {
+        title: "UpcubeAI",
+        body: "Connect avatar interactions to the broader AI workspace and assistant platform.",
+        href: "/products/upcube-ai",
+      },
+      {
+        title: "Upcube Voice",
+        body: "Explore the voice platform direction that powers avatar speech and real-time conversation.",
+        href: "/products/voice",
+      },
+      {
+        title: "Research Console",
+        body: "See how research, synthesis, and briefs feed into avatar knowledge and responses.",
+        href: "/products/research",
+      },
+    ],
+    finalCtaTitle:
+      "Deploy AI avatars that feel alive from the first interaction.",
+    finalCtaBody:
+      "Upcube Avatar Cloud is in active development. Live Ethen avatars are functional today. Studio, Interactive Pages, and the full platform are evolving toward production readiness.",
+    finalPrimaryAction: {
+      label: "Try Avatar",
+      href: "https://avatar.upcube.ai",
+    },
+    finalSecondaryAction: {
+      label: "Explore the ecosystem",
       href: "/explore",
     },
   },
@@ -979,6 +1111,125 @@ export const upcubeProducts: UpcubeProduct[] = [
     finalSecondaryAction: {
       label: "Try a template",
       href: "https://quantum.upcube.ai/console/templates",
+    },
+  },
+  {
+    slug: "research",
+    name: "Upcube Research Console",
+    eyebrow: "Research & Synthesis",
+    headline: "Research that turns scattered sources into organized decisions.",
+    summary:
+      "Upcube Research Console is a research workspace for gathering sources, organizing projects, synthesizing findings, saving discoveries, and exporting reports. Built to connect research workflows with the broader Upcube ecosystem — from research into Ethen and Avatar.",
+    seoTitle:
+      "Upcube Research Console | Research Workspace and Synthesis Platform",
+    seoDescription:
+      "Upcube Research Console is a research workspace for source gathering, research projects, synthesis and briefs, saved findings, and exportable reports across the Upcube ecosystem.",
+    primaryAction: {
+      label: "Open Research",
+      href: "https://research.upcube.ai",
+    },
+    secondaryAction: {
+      label: "Explore UpcubeAI",
+      href: "/products/upcube-ai",
+    },
+    heroHighlights: [
+      "Gather sources from across the web into focused research projects.",
+      "Synthesize findings into briefs, summaries, and structured reports.",
+      "Saved findings persist across sessions — exportable and ready to share.",
+    ],
+    heroImage: {
+      src: "/product-art/050b0e5fb4bd48bbb2c6a91baa3afc40_sw-2962_sh-2191.webp",
+      alt: "Abstract composition representing research and synthesis.",
+    },
+    availabilityNote:
+      "Upcube Research Console is in product preview. The platform direction is under active development.",
+    signatureTitle:
+      "A research workspace built for depth, structure, and output.",
+    signatureBody:
+      "Upcube Research Console is designed for people who need to gather, organize, and synthesize information across multiple sources. Research projects keep context together, briefs turn findings into decisions, and saved findings make every session cumulative rather than disposable.",
+    signatureCards: [
+      {
+        title: "Source gathering",
+        body: "Collect sources from across the web, organize them by relevance, and keep the original context attached to every finding.",
+      },
+      {
+        title: "Research projects",
+        body: "Create projects that group related sources, questions, notes, and findings together — keeping the shape of the research visible and navigable.",
+      },
+      {
+        title: "Synthesis and briefs",
+        body: "Turn raw findings into structured briefs, summaries, and reports that capture what matters without losing the supporting evidence.",
+      },
+    ],
+    featureStories: [
+      {
+        title: "Saved findings that persist",
+        body: "Bookmark, tag, and annotate findings so important discoveries stay accessible across sessions and projects.",
+      },
+      {
+        title: "Exportable reports",
+        body: "Export research as structured reports, briefs, or raw findings — ready to share, present, or move into the next workflow.",
+      },
+      {
+        title: "Connected workflow from Research to Ethen to Avatar",
+        body: "Research feeds directly into the Upcube ecosystem. Use research findings in Ethen conversations or as source material for Avatar knowledge bases.",
+      },
+    ],
+    techCards: [
+      {
+        title: "Project-based organization",
+        body: "Research is organized into projects that keep sources, findings, questions, and briefs in one coherent workspace.",
+      },
+      {
+        title: "Source-linked evidence",
+        body: "Every finding retains its original source context, keeping research grounded and verifiable.",
+      },
+      {
+        title: "Export and integration pipeline",
+        body: "Reports, briefs, and findings can be exported or routed into other Upcube products for further work.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Turn a broad question into structured research",
+        body: "Start with a question, gather sources, organize findings, and synthesize into a brief that captures what matters.",
+      },
+      {
+        title: "Keep research alive across sessions",
+        body: "Saved findings and project structure mean no discovery gets lost between research sessions.",
+      },
+      {
+        title: "Move from research to action",
+        body: "Export findings into reports or route them into Ethen conversations and Avatar knowledge workflows.",
+      },
+    ],
+    ecosystemLinks: [
+      {
+        title: "UpcubeAI",
+        body: "Carry research findings into Ethen conversations, artifacts, and workspace workflows.",
+        href: "/products/upcube-ai",
+      },
+      {
+        title: "Upcube Avatar Cloud",
+        body: "Route research briefs and synthesized knowledge into Avatar knowledge bases and responses.",
+        href: "/products/avatar",
+      },
+      {
+        title: "Upcube Books",
+        body: "Connect research discovery with book previews, reading paths, and deeper source exploration.",
+        href: "/products/books",
+      },
+    ],
+    finalCtaTitle: "Make every research session worth returning to.",
+    finalCtaBody:
+      "Upcube Research Console is in product preview — built for source gathering, synthesis, saved findings, and connected workflows across the Upcube ecosystem.",
+    finalPrimaryAction: {
+      label: "Open Research",
+      href: "https://research.upcube.ai",
+    },
+    finalSecondaryAction: {
+      label: "Explore the ecosystem",
+      href: "/explore",
     },
   },
   {

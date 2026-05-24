@@ -27,7 +27,7 @@ const ecosystemGroups: GroupDef[] = [
     href: "/core",
     description:
       "The shared intelligence and platform layer spanning AI, workspace, identity, search, and project orchestration.",
-    productIds: ["upcube-ai"],
+    productIds: ["upcube-ai", "research"],
   },
   {
     id: "build",
@@ -42,6 +42,7 @@ const ecosystemGroups: GroupDef[] = [
       "upcube-os",
       "upcube-mobile-os",
       "voice",
+      "avatar",
     ],
   },
   {

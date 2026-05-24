@@ -16,7 +16,9 @@ export type UpcubeAppId =
   | "os"
   | "mobile-os"
   | "voice"
-  | "education";
+  | "education"
+  | "research"
+  | "avatar";
 
 export type UpcubeApp = {
   id: UpcubeAppId;

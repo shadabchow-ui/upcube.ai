@@ -120,17 +120,14 @@ export async function POST() {
     }
 
     const data = (await response.json()) as OpenAIRealtimeSessionResponse;
-    const clientSecret =
-      data.client_secret?.value ??
-      data.value ??
-      null;
-    const expiresAt =
-      data.client_secret?.expires_at ??
-      data.expires_at ??
-      null;
+    const clientSecret = data.client_secret?.value ?? data.value ?? null;
+    const expiresAt = data.client_secret?.expires_at ?? data.expires_at ?? null;
 
     if (!clientSecret) {
-      console.error("OpenAI realtime bootstrap returned no client secret", data);
+      console.error(
+        "OpenAI realtime bootstrap returned no client secret",
+        data,
+      );
       return jsonNoStore(
         {
           error: {

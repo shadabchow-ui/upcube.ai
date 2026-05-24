@@ -10,6 +10,18 @@
   color: var(--uc-text);
 }
 
+.page[data-product="avatar"] {
+  --product-glow: rgba(0, 200, 255, 0.32);
+  --product-glow-soft: rgba(0, 200, 255, 0.16);
+  --product-accent: #b8f0ff;
+}
+
+.page[data-product="research"] {
+  --product-glow: rgba(160, 120, 255, 0.32);
+  --product-glow-soft: rgba(160, 120, 255, 0.16);
+  --product-accent: #e4d8ff;
+}
+
 .page[data-product="books"] {
   --product-glow: rgba(244, 188, 110, 0.32);
   --product-glow-soft: rgba(244, 188, 110, 0.16);

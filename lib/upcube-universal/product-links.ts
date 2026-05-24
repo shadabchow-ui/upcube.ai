@@ -8,6 +8,8 @@ export const UPCUBE_QUANTUM_URL = "https://quantum.upcube.ai";
 export const UPCUBE_VENTARI_URL = "https://ventari.net";
 export const UPCUBE_UNIVERSITY_URL = "https://university.upcube.ai";
 export const UPCUBE_NEWS_URL = "https://news.upcube.ai";
+export const UPCUBE_RESEARCH_URL = "https://research.upcube.ai";
+export const UPCUBE_AVATAR_URL = "https://avatar.upcube.ai";
 
 export type UpcubeProductLink = {
   id: string;
@@ -124,6 +126,21 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
     productHref: "/products/university",
     launchHref: UPCUBE_UNIVERSITY_URL,
   },
+  {
+    id: "research",
+    label: "Research",
+    description:
+      "Research workspace for source gathering, synthesis, briefs, and exportable reports.",
+    productHref: "/products/research",
+    launchHref: UPCUBE_RESEARCH_URL,
+  },
+  {
+    id: "avatar",
+    label: "Avatar",
+    description: "AI avatars, studio video, interactive pages, and avatar API.",
+    productHref: "/products/avatar",
+    launchHref: UPCUBE_AVATAR_URL,
+  },
 ];
 
 export type EcosystemGroupItem = {
@@ -153,6 +170,14 @@ export const ecosystemGroups: EcosystemGroup[] = [
         description: "Chat, tools, research, and workspace intelligence.",
         productHref: "/products/upcube-ai",
         launchHref: UPCUBE_CHAT_URL,
+      },
+      {
+        id: "research",
+        label: "Research",
+        description:
+          "Research workspace for source gathering, synthesis, briefs, and exportable reports.",
+        productHref: "/products/research",
+        launchHref: UPCUBE_RESEARCH_URL,
       },
       { id: "account", label: "Account" },
       { id: "billing", label: "Billing" },
@@ -205,6 +230,14 @@ export const ecosystemGroups: EcosystemGroup[] = [
         label: "Voice",
         description: "AI voice platform for future Upcube devices.",
         productHref: "/products/voice",
+      },
+      {
+        id: "avatar",
+        label: "Avatar",
+        description:
+          "AI avatars, studio video, interactive pages, and avatar API.",
+        productHref: "/products/avatar",
+        launchHref: UPCUBE_AVATAR_URL,
       },
     ],
   },
@@ -377,5 +410,17 @@ export const upcubeLauncherApps = [
     label: "Education",
     href: UPCUBE_UNIVERSITY_URL,
     iconSrc: "/upcube-app-icons/education.png",
+  },
+  {
+    id: "research" as const,
+    label: "Research",
+    href: UPCUBE_RESEARCH_URL,
+    iconSrc: "/upcube-app-icons/console.png",
+  },
+  {
+    id: "avatar" as const,
+    label: "Avatar",
+    href: UPCUBE_AVATAR_URL,
+    iconSrc: "/upcube-app-icons/robot.png",
   },
 ];

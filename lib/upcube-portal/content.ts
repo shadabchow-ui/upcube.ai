@@ -1,4 +1,5 @@
 import {
+  UPCUBE_AVATAR_URL,
   UPCUBE_BOOKS_URL,
   UPCUBE_CHAT_URL,
   UPCUBE_CLOUD_URL,
@@ -7,6 +8,7 @@ import {
   UPCUBE_NEWS_URL,
   UPCUBE_PLANET_URL,
   UPCUBE_QUANTUM_URL,
+  UPCUBE_RESEARCH_URL,
   UPCUBE_VENTARI_URL,
   ecosystemGroups,
   getProductsByGroup,
@@ -213,6 +215,7 @@ export type PortalArticle = {
 };
 
 export {
+  UPCUBE_AVATAR_URL,
   UPCUBE_BOOKS_URL,
   UPCUBE_CHAT_URL,
   UPCUBE_CLOUD_URL,
@@ -221,6 +224,7 @@ export {
   UPCUBE_NEWS_URL,
   UPCUBE_PLANET_URL,
   UPCUBE_QUANTUM_URL,
+  UPCUBE_RESEARCH_URL,
   UPCUBE_VENTARI_URL,
   ecosystemGroups,
 };
@@ -301,6 +305,8 @@ const portalHomepageStatusById: Record<
   "upcube-mobile-os": "planned",
   voice: "preview",
   university: "live",
+  research: "preview",
+  avatar: "preview",
 };
 
 const portalHomepageCardsById: Record<string, PortalCardItem> = {
@@ -433,6 +439,26 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
     tag: "Education & Learning",
     category: "Learning",
     ctaLabel: "Explore Education",
+  },
+  research: {
+    id: "research",
+    title: "Research",
+    description:
+      "A research console for gathering sources, organizing findings, generating briefs, and turning scattered information into clear decisions.",
+    href: "/products/research",
+    tag: "AI research",
+    category: "Work",
+    ctaLabel: "Open Research",
+  },
+  avatar: {
+    id: "avatar",
+    title: "Avatar",
+    description:
+      "Create live AI avatars and avatar-led video experiences for websites, demos, training, sales, support, and creator workflows.",
+    href: "/products/avatar",
+    tag: "AI avatars",
+    category: "Work",
+    ctaLabel: "Try Avatar",
   },
 };
 
@@ -1230,6 +1256,22 @@ export const portalNewsItems: PortalNewsItem[] = [
       "Planning pass for hiring workflow surfacing and clearer pathway alignment to the jobs destination.",
     statusLabel: "Recent update",
     href: "https://jobs.upcube.ai",
+  },
+  {
+    id: "news-avatar-preview",
+    title: "Upcube Avatar Cloud preview joins the Upcube ecosystem",
+    summary:
+      "Live AI avatars, Studio, Interactive Pages, and Avatar API are being added as a preview product for websites, demos, training, sales, support, and creator workflows.",
+    statusLabel: "Preview",
+    href: "/products/avatar",
+  },
+  {
+    id: "news-research-preview",
+    title: "Upcube Research Console enters preview",
+    summary:
+      "A focused AI research workspace for source collection, synthesis, brief generation, saved findings, and reusable research workflows.",
+    statusLabel: "Preview",
+    href: "/products/research",
   },
 ];
 

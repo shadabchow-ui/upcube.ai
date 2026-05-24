@@ -49,6 +49,7 @@ function createImageObject(path: string) {
 function getProductApplicationCategory(slug: UpcubeProductSlug) {
   const categories: Record<UpcubeProductSlug, string> = {
     "upcube-ai": "BusinessApplication",
+    avatar: "MultimediaApplication",
     books: "LifestyleApplication",
     earth: "TravelApplication",
     games: "EntertainmentApplication",
@@ -56,6 +57,7 @@ function getProductApplicationCategory(slug: UpcubeProductSlug) {
     jobs: "BusinessApplication",
     cloud: "DeveloperApplication",
     quantum: "EducationalApplication",
+    research: "BusinessApplication",
     robotics: "BusinessApplication",
     ventari: "ShoppingApplication",
     vm: "DeveloperApplication",

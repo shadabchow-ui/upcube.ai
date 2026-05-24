@@ -152,12 +152,14 @@ describe("route page file coverage - core portal routes", () => {
 describe("route page file coverage - product pages", () => {
   const productSlugs = [
     "upcube-ai",
+    "avatar",
     "books",
     "earth",
     "games",
     "jobs",
     "cloud",
     "quantum",
+    "research",
     "robotics",
     "ventari",
     "vm",

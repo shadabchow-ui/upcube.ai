@@ -792,6 +792,112 @@ export const upcubeNewsArticles: UpcubeNewsArticle[] = [
       { name: "Upcube Books", href: "/products/books" },
     ],
   },
+  {
+    slug: "upcube-avatar-preview",
+    href: "/news/upcube-avatar-preview",
+    productName: "Upcube Avatar Cloud",
+    category: "Product Preview",
+    dateLabel: "Recent update",
+    headline: "Upcube Avatar Cloud preview joins the Upcube ecosystem.",
+    excerpt:
+      "Live AI avatars, Studio, Interactive Pages, and Avatar API are being added as a preview product for websites, demos, training, sales, support, and creator workflows.",
+    heroSummary:
+      "Upcube Avatar Cloud is presented as a preview product for AI avatar creation and avatar-led video experiences, with the Avatar Studio, Interactive Pages, and Avatar API shaping the product direction.",
+    primaryCtaLabel: "Explore Avatar Cloud",
+    primaryCtaHref: "/products/avatar",
+    productPageUrl: "/products/avatar",
+    seoTitle: "Upcube Avatar Cloud Preview | Live AI Avatars",
+    seoDescription:
+      "Preview Upcube Avatar Cloud, an AI avatar platform with Studio, Interactive Pages, and Avatar API for websites, demos, training, sales, support, and creator workflows.",
+    finalCtaTitle: "Follow the avatar direction through the product preview.",
+    finalCtaBody:
+      "Upcube Avatar Cloud stays framed as a preview product with claim discipline around feature availability, commercial terms, and production guarantees.",
+    sections: [
+      {
+        eyebrow: "The preview",
+        title: "AI avatars entering the Upcube ecosystem",
+        body: "Upcube Avatar Cloud is described as a preview product for creating live AI avatars and avatar-led video experiences. The page avoids claiming that all features are publicly available or that commercial terms are finalized.",
+      },
+      {
+        eyebrow: "Studio",
+        title: "Avatar Studio for creation and editing",
+        body: "The product direction includes an Avatar Studio workspace where avatars can be created, customized, and prepared for interactive deployment.",
+      },
+      {
+        eyebrow: "Interactive Pages",
+        title: "Avatar-led interactive experiences",
+        body: "Interactive Pages are positioned as a preview surface for embedding AI avatars into websites, demos, training materials, and support flows.",
+      },
+      {
+        eyebrow: "API",
+        title: "Avatar API for developer integration",
+        body: "The Avatar API direction supports programmatic avatar creation, management, and deployment, described as a future-facing capability in preview.",
+      },
+      {
+        eyebrow: "Ecosystem",
+        title: "How Avatar fits the Upcube ecosystem",
+        body: "Upcube Avatar Cloud is positioned alongside UpcubeAI and the broader product family as a future communication and interaction surface.",
+      },
+    ],
+    relatedProducts: [
+      { name: "UpcubeAI", href: "/products/upcube-ai" },
+      { name: "Upcube Voice", href: "/products/voice" },
+      { name: "Upcube OS", href: "/products/upcube-os" },
+    ],
+  },
+  {
+    slug: "upcube-research-preview",
+    href: "/news/upcube-research-preview",
+    productName: "Upcube Research Console",
+    category: "Product Preview",
+    dateLabel: "Recent update",
+    headline: "Upcube Research Console enters preview.",
+    excerpt:
+      "A focused AI research workspace for source collection, synthesis, brief generation, saved findings, and reusable research workflows.",
+    heroSummary:
+      "Upcube Research Console is presented as a preview product for AI-assisted research workflows, with source collection, synthesis, brief generation, saved findings, and workflow reuse as the core product direction.",
+    primaryCtaLabel: "Explore Research Console",
+    primaryCtaHref: "/products/research",
+    productPageUrl: "/products/research",
+    seoTitle: "Upcube Research Console Preview | AI Research Workspace",
+    seoDescription:
+      "Preview Upcube Research Console, an AI research workspace for source collection, synthesis, brief generation, saved findings, and reusable research workflows across the Upcube ecosystem.",
+    finalCtaTitle: "Follow the research direction through the product preview.",
+    finalCtaBody:
+      "Upcube Research Console stays framed as a preview product with careful boundaries around feature completeness, commercial availability, and production readiness.",
+    sections: [
+      {
+        eyebrow: "The preview",
+        title: "A focused research workspace",
+        body: "Upcube Research Console is described as a preview product for AI-assisted research. The workspace is designed around gathering sources, organizing findings, generating briefs, and turning scattered information into clear decisions.",
+      },
+      {
+        eyebrow: "Collection",
+        title: "Source collection and organization",
+        body: "The product direction includes tools for collecting web sources, documents, and notes into one structured workspace with clear provenance.",
+      },
+      {
+        eyebrow: "Synthesis",
+        title: "From findings to decisions",
+        body: "Synthesis flows are positioned to help researchers compare sources, extract key points, and build coherent summaries without losing sight of individual source details.",
+      },
+      {
+        eyebrow: "Briefs",
+        title: "Brief generation for faster handoffs",
+        body: "Brief generation is described as a preview capability for turning research sessions into structured outputs that can be shared, reviewed, and acted on.",
+      },
+      {
+        eyebrow: "Ecosystem",
+        title: "How Research Console fits the Upcube ecosystem",
+        body: "Upcube Research Console sits alongside UpcubeAI and the broader product family as a focused research surface within the connected workspace story.",
+      },
+    ],
+    relatedProducts: [
+      { name: "UpcubeAI", href: "/products/upcube-ai" },
+      { name: "Upcube Voice", href: "/products/voice" },
+      { name: "Upcube Books", href: "/products/books" },
+    ],
+  },
 ];
 
 export const featuredUpcubeNewsArticle: UpcubeNewsArticle =

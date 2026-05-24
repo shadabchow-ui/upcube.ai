@@ -114,7 +114,9 @@ export function EthenTalk() {
   const [open, setOpen] = useState(false);
   const [voiceState, setVoiceState] = useState<VoiceState>("idle");
   const [voiceMessage, setVoiceMessage] = useState<string | null>(null);
-  const [voiceSession, setVoiceSession] = useState<VoiceSessionMeta | null>(null);
+  const [voiceSession, setVoiceSession] = useState<VoiceSessionMeta | null>(
+    null,
+  );
   const voiceRequestInFlight = useRef(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const remoteAudioRef = useRef<HTMLAudioElement | null>(null);
@@ -149,19 +151,22 @@ export function EthenTalk() {
     }
   }, []);
 
-  const stopVoiceSession = useCallback((nextState: VoiceState = "idle") => {
-    debugVoiceLog("stop.voice.begin", { nextState });
+  const stopVoiceSession = useCallback(
+    (nextState: VoiceState = "idle") => {
+      debugVoiceLog("stop.voice.begin", { nextState });
 
-    teardownVoiceResources();
+      teardownVoiceResources();
 
-    if (nextState === "idle") {
-      setVoiceMessage(null);
-      setVoiceSession(null);
-    }
+      if (nextState === "idle") {
+        setVoiceMessage(null);
+        setVoiceSession(null);
+      }
 
-    setVoiceState(nextState);
-    voiceRequestInFlight.current = false;
-  }, [teardownVoiceResources]);
+      setVoiceState(nextState);
+      voiceRequestInFlight.current = false;
+    },
+    [teardownVoiceResources],
+  );
 
   const closePanel = useCallback(() => {
     setOpen(false);
@@ -207,7 +212,9 @@ export function EthenTalk() {
 
       const data = (await res.json()) as RealtimeSessionResponse;
       const errorCode =
-        typeof data.error === "object" && data.error ? data.error.code : undefined;
+        typeof data.error === "object" && data.error
+          ? data.error.code
+          : undefined;
       debugVoiceLog("session.bootstrap.response", {
         status: res.status,
         ok: res.ok,
@@ -219,7 +226,10 @@ export function EthenTalk() {
         setVoiceState("error");
         setVoiceMessage(message);
         setVoiceSession(null);
-        trackEvent("ethen_conversation_error", errorCode ?? `http_${res.status}`);
+        trackEvent(
+          "ethen_conversation_error",
+          errorCode ?? `http_${res.status}`,
+        );
         return;
       }
 
@@ -294,7 +304,9 @@ export function EthenTalk() {
           streamCount: event.streams.length,
         });
         event.streams.forEach((stream) => {
-          stream.getAudioTracks().forEach((track) => remoteStream.addTrack(track));
+          stream
+            .getAudioTracks()
+            .forEach((track) => remoteStream.addTrack(track));
         });
 
         if (remoteAudioRef.current) {
@@ -338,21 +350,28 @@ export function EthenTalk() {
       const offer = await peerConnection.createOffer();
       await peerConnection.setLocalDescription(offer);
 
-      const sdpResponse = await fetch("https://api.openai.com/v1/realtime/calls", {
-        method: "POST",
-        body: offer.sdp,
-        headers: {
-          Authorization: `Bearer ${data.clientSecret}`,
-          "Content-Type": "application/sdp",
+      const sdpResponse = await fetch(
+        "https://api.openai.com/v1/realtime/calls",
+        {
+          method: "POST",
+          body: offer.sdp,
+          headers: {
+            Authorization: `Bearer ${data.clientSecret}`,
+            "Content-Type": "application/sdp",
+          },
         },
-      });
+      );
 
       if (!sdpResponse.ok) {
         const errorText = await sdpResponse.text();
         debugVoiceLog("webrtc.sdp.failed", {
           status: sdpResponse.status,
         });
-        console.error("Ethen SDP exchange failed:", sdpResponse.status, errorText);
+        console.error(
+          "Ethen SDP exchange failed:",
+          sdpResponse.status,
+          errorText,
+        );
         stopVoiceSession("error");
         setVoiceMessage("Voice connection failed. Please try again.");
         trackEvent("ethen_conversation_error", "webrtc_sdp_failed");
@@ -563,13 +582,12 @@ export function EthenTalk() {
                   {voiceSession?.expiresAt && voiceState !== "idle" && (
                     <p className="ethen-talk__voice-meta">
                       Temporary session prepared. Expires at{" "}
-                      {new Date(voiceSession.expiresAt * 1000).toLocaleTimeString(
-                        [],
-                        {
-                          hour: "numeric",
-                          minute: "2-digit",
-                        },
-                      )}
+                      {new Date(
+                        voiceSession.expiresAt * 1000,
+                      ).toLocaleTimeString([], {
+                        hour: "numeric",
+                        minute: "2-digit",
+                      })}
                       .
                     </p>
                   )}
