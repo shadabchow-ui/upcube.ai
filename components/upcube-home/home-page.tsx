@@ -36,12 +36,13 @@ function Hero() {
     <section className="uc-home__hero">
       <div className="uc-home__container uc-home__hero-inner">
         <div className="uc-home__hero-stack">
-          <h1>Build, learn, compute, create, &amp; explore.</h1>
+          <h1>
+            Learn, create, build, and explore with one connected AI ecosystem.
+          </h1>
           <p className="uc-home__lead">
-            Upcube is a technology company building a connected family of
-            products across AI, cloud, compute, robotics, education, commerce,
-            spatial exploration, entertainment, and next-generation operating
-            systems.
+            Upcube brings AI, education, research, cloud, commerce, jobs,
+            spatial discovery, and future computing into one product family
+            designed to help people turn ideas into action.
           </p>
           <HeroChatPanel />
         </div>
@@ -269,18 +270,16 @@ export default function UpcubeHomePage() {
           <div className="uc-home__container">
             <h2 id="cta-title">Built as an ecosystem, not a product list.</h2>
             <p className="uc-home__cta-copy">
-              Start with Ethen. Then explore everything the ecosystem opens.
-              Move through product pages, launch stories, and research to see
-              how Upcube connects AI, cloud, compute, robotics, education,
-              commerce, discovery, entertainment, and next-generation operating
-              systems into one connected ecosystem.
+              Start with Ethen. Ask questions, research topics, plan work,
+              summarize information, and move from idea to execution across the
+              Upcube ecosystem.
             </p>
             <div className="uc-home__cta-row">
               <Link href={HOME_CHAT_CTA_HREF} className="uc-home__primary-btn">
-                Try Ethen
+                Start with Ethen
               </Link>
               <Link href="#portal-title" className="uc-home__ghost-btn">
-                View ecosystem
+                Explore products
               </Link>
             </div>
           </div>

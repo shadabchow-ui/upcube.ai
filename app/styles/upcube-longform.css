@@ -244,6 +244,36 @@
   max-width: 48rem;
 }
 
+.uc-longform-index-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+.uc-longform-index-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding-top: 0.75rem;
+}
+
+.uc-longform-index-highlight {
+  border: 1px solid var(--uc-border-soft);
+  border-radius: var(--up-radius-md);
+  padding: 0.65rem 1rem;
+  background: #070707;
+  font-size: var(--up-type-p2-size);
+  line-height: 1.45;
+  color: var(--up-color-primary-80);
+  backdrop-filter: blur(6px);
+}
+
+.uc-longform-index-grid-label {
+  margin-bottom: 1.5rem;
+}
+
 .uc-longform-index-section {
   padding-block: var(--up-section-y);
   border-top: 1px solid var(--uc-border-soft);

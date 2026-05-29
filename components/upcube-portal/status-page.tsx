@@ -32,10 +32,11 @@ export function StatusPage() {
               </span>
               <div>
                 <h1 className="uc-status-banner-title">
-                  We&rsquo;re fully operational
+                  Public status overview
                 </h1>
                 <p className="uc-status-banner-text">
-                  We&rsquo;re not aware of any issues affecting our systems.
+                  Status labels on this page describe current public product
+                  direction and route availability.
                 </p>
               </div>
             </div>
@@ -63,7 +64,7 @@ export function StatusPage() {
                           </span>
                         </div>
                         <span className="uc-status-uptime">
-                          {component.uptime} uptime
+                          {component.statusLabel}
                         </span>
                       </div>
                     ))}

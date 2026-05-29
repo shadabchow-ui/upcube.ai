@@ -15,9 +15,9 @@ import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata = createBasicPageMetadata({
   title:
-    "Upcube | AI, Cloud, Compute, Robotics, Education & Future Technology Products",
+    "Upcube | Connected AI Ecosystem for Learning, Building, and Discovery",
   description:
-    "Upcube builds a connected technology ecosystem across AI, cloud infrastructure, compute, robotics, education, commerce, spatial exploration, entertainment, jobs, books, voice, and next-generation operating systems.",
+    "Learn, create, build, and explore with one connected AI ecosystem. Start with Ethen, then move across Upcube products for research, cloud, commerce, education, jobs, and spatial discovery.",
   path: "/",
 });
 

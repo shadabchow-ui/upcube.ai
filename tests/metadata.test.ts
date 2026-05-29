@@ -29,7 +29,7 @@ describe("buildCanonicalUrl", () => {
 describe("createBasicPageMetadata", () => {
   it("returns default metadata when no input provided", () => {
     const meta = createBasicPageMetadata({});
-    expect(meta.title).toBe(DEFAULT_SITE_TITLE);
+    expect(meta.title).toEqual({ absolute: DEFAULT_SITE_TITLE });
     expect(meta.description).toBe(DEFAULT_SITE_DESCRIPTION);
     expect(meta.alternates?.canonical).toBe("https://upcube.ai/");
     expect(meta.robots).toEqual({ index: true, follow: true });
@@ -41,7 +41,7 @@ describe("createBasicPageMetadata", () => {
       description: "Test description.",
       path: "/test",
     });
-    expect(meta.title).toBe("Test Title");
+    expect(meta.title).toEqual({ absolute: "Test Title" });
     expect(meta.description).toBe("Test description.");
     expect(meta.alternates?.canonical).toBe("https://upcube.ai/test");
   });
@@ -66,11 +66,11 @@ describe("createBasicPageMetadata", () => {
       description: "OG desc.",
       path: "/og",
     });
+    expect(meta.title).toEqual({ absolute: "OG Title" });
     const og =
       typeof meta.openGraph === "object" && meta.openGraph !== null
         ? (meta.openGraph as Record<string, unknown>)
         : undefined;
-    expect(og?.title).toBe("OG Title");
     expect(og?.url).toBe("https://upcube.ai/og");
     expect(og?.siteName).toBe(upcubeSiteName);
     expect(og?.type).toBe("website");

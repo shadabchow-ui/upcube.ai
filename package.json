@@ -44,5 +44,8 @@
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.1.6",
     "wrangler": "^4.92.0"
-  }
+  },
+  "workspaces": [
+    "."
+  ]
 }

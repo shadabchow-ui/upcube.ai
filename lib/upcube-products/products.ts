@@ -288,7 +288,7 @@ export const upcubeProducts: UpcubeProduct[] = [
         href: "/products/voice",
       },
       {
-        title: "Research Console",
+        title: "Upcube Research",
         body: "See how research, synthesis, and briefs feed into avatar knowledge and responses.",
         href: "/products/research",
       },
@@ -1115,92 +1115,91 @@ export const upcubeProducts: UpcubeProduct[] = [
   },
   {
     slug: "research",
-    name: "Upcube Research Console",
-    eyebrow: "Research & Synthesis",
-    headline: "Research that turns scattered sources into organized decisions.",
+    name: "Upcube Research",
+    eyebrow: "Research & web intelligence",
+    headline:
+      "Turn the open web into structured research, cited answers, and reusable intelligence.",
     summary:
-      "Upcube Research Console is a research workspace for gathering sources, organizing projects, synthesizing findings, saving discoveries, and exporting reports. Built to connect research workflows with the broader Upcube ecosystem — from research into Ethen and Avatar.",
-    seoTitle:
-      "Upcube Research Console | Research Workspace and Synthesis Platform",
+      "Upcube Research helps you search across the web, collect trusted sources, synthesize findings, monitor changing topics, and export research into briefs, reports, datasets, workflows, and projects.",
+    seoTitle: "Upcube Research | AI-Native Research Console",
     seoDescription:
-      "Upcube Research Console is a research workspace for source gathering, research projects, synthesis and briefs, saved findings, and exportable reports across the Upcube ecosystem.",
+      "Upcube Research is an AI-native research console for searching the web, extracting sources, organizing evidence, synthesizing findings, monitoring topics, and exporting briefs, reports, and datasets across the Upcube ecosystem.",
     primaryAction: {
       label: "Open Research",
       href: "https://research.upcube.ai",
     },
     secondaryAction: {
-      label: "Explore UpcubeAI",
+      label: "Explore Upcube AI",
       href: "/products/upcube-ai",
     },
     heroHighlights: [
-      "Gather sources from across the web into focused research projects.",
-      "Synthesize findings into briefs, summaries, and structured reports.",
-      "Saved findings persist across sessions — exportable and ready to share.",
+      "Search and gather sources from across the web.",
+      "Extract clean page content, summaries, and citations.",
+      "Run deeper research workflows across topics, companies, markets, and questions.",
     ],
     heroImage: {
       src: "/product-art/050b0e5fb4bd48bbb2c6a91baa3afc40_sw-2962_sh-2191.webp",
-      alt: "Abstract composition representing research and synthesis.",
+      alt: "Abstract composition representing research and web intelligence.",
     },
     availabilityNote:
-      "Upcube Research Console is in product preview. The platform direction is under active development.",
-    signatureTitle:
-      "A research workspace built for depth, structure, and output.",
+      "Upcube Research is in product preview. The platform direction is under active development.",
+    signatureTitle: "Built for research that does not stop at search.",
     signatureBody:
-      "Upcube Research Console is designed for people who need to gather, organize, and synthesize information across multiple sources. Research projects keep context together, briefs turn findings into decisions, and saved findings make every session cumulative rather than disposable.",
+      "Search gives you links. Upcube Research gives you a working research system. It helps you discover sources, extract clean content, compare evidence, and build structured outputs that can be checked, shared, and reused.",
     signatureCards: [
       {
-        title: "Source gathering",
-        body: "Collect sources from across the web, organize them by relevance, and keep the original context attached to every finding.",
+        title: "Discover relevant sources",
+        body: "Search the web with research intent and collect the sources that matter most to your question, topic, or project.",
       },
       {
-        title: "Research projects",
-        body: "Create projects that group related sources, questions, notes, and findings together — keeping the shape of the research visible and navigable.",
+        title: "Understand and compare evidence",
+        body: "Extract clean content, compare what each source says, and build a clear picture from multiple perspectives and data points.",
       },
       {
-        title: "Synthesis and briefs",
-        body: "Turn raw findings into structured briefs, summaries, and reports that capture what matters without losing the supporting evidence.",
+        title: "Turn research into reusable output",
+        body: "Synthesize findings into briefs, reports, tables, and datasets — structured work you can export, share, and build on.",
       },
     ],
     featureStories: [
       {
-        title: "Saved findings that persist",
-        body: "Bookmark, tag, and annotate findings so important discoveries stay accessible across sessions and projects.",
+        title: "AI web search with research intent",
+        body: "Search across web sources designed around research, not just keywords. Find relevant pages, articles, and public documents more efficiently.",
       },
       {
-        title: "Exportable reports",
-        body: "Export research as structured reports, briefs, or raw findings — ready to share, present, or move into the next workflow.",
+        title: "Source collection and content extraction",
+        body: "Save links, extract clean page content, and keep citations and evidence organized in projects that preserve the shape of your inquiry.",
       },
       {
-        title: "Connected workflow from Research to Ethen to Avatar",
-        body: "Research feeds directly into the Upcube ecosystem. Use research findings in Ethen conversations or as source material for Avatar knowledge bases.",
+        title: "Exportable outputs for real decisions",
+        body: "Turn findings into briefs, reports, tables, datasets, and workflow inputs — outputs that carry weight and move your work forward.",
       },
     ],
     techCards: [
       {
-        title: "Project-based organization",
-        body: "Research is organized into projects that keep sources, findings, questions, and briefs in one coherent workspace.",
+        title: "Project-based research workspace",
+        body: "Every research question becomes a project where sources, notes, extracted content, briefs, and citations stay organized and accessible.",
       },
       {
-        title: "Source-linked evidence",
-        body: "Every finding retains its original source context, keeping research grounded and verifiable.",
+        title: "Monitor-ready research workflows",
+        body: "Designed to help track topics, companies, competitors, and market signals over time — so research surfaces what changed when it matters.",
       },
       {
-        title: "Export and integration pipeline",
-        body: "Reports, briefs, and findings can be exported or routed into other Upcube products for further work.",
+        title: "Export and ecosystem pipeline",
+        body: "Briefs, reports, and curated findings can be exported or routed into other Upcube products for further synthesis, publishing, or execution.",
       },
     ],
     useCases: [
       {
-        title: "Turn a broad question into structured research",
-        body: "Start with a question, gather sources, organize findings, and synthesize into a brief that captures what matters.",
+        title: "Market and competitive research",
+        body: "Track companies, competitors, and market shifts with source-backed evidence and structured briefs that make the landscape easier to understand.",
       },
       {
-        title: "Keep research alive across sessions",
-        body: "Saved findings and project structure mean no discovery gets lost between research sessions.",
+        title: "Product and content research",
+        body: "Research features, positioning, trends, and audience needs — then turn findings into reports, specs, and content briefs.",
       },
       {
-        title: "Move from research to action",
-        body: "Export findings into reports or route them into Ethen conversations and Avatar knowledge workflows.",
+        title: "Knowledge building and synthesis",
+        body: "Collect sources across topics, compare findings, and build a growing knowledge base of evidence-backed briefs and reusable research assets.",
       },
     ],
     ecosystemLinks: [
@@ -1211,7 +1210,7 @@ export const upcubeProducts: UpcubeProduct[] = [
       },
       {
         title: "Upcube Avatar Cloud",
-        body: "Route research briefs and synthesized knowledge into Avatar knowledge bases and responses.",
+        body: "Route research briefs and synthesized knowledge into Avatar knowledge bases and intelligent responses.",
         href: "/products/avatar",
       },
       {
@@ -1220,16 +1219,16 @@ export const upcubeProducts: UpcubeProduct[] = [
         href: "/products/books",
       },
     ],
-    finalCtaTitle: "Make every research session worth returning to.",
+    finalCtaTitle: "Start with a question. Leave with a research asset.",
     finalCtaBody:
-      "Upcube Research Console is in product preview — built for source gathering, synthesis, saved findings, and connected workflows across the Upcube ecosystem.",
+      "Open a research workspace, gather sources, synthesize the evidence, and turn what you learn into something you can save, share, export, or build on.",
     finalPrimaryAction: {
       label: "Open Research",
       href: "https://research.upcube.ai",
     },
     finalSecondaryAction: {
-      label: "Explore the ecosystem",
-      href: "/explore",
+      label: "Explore Upcube AI",
+      href: "/products/upcube-ai",
     },
   },
   {

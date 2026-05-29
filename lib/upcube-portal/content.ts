@@ -420,6 +420,16 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
     category: "Future Platforms",
     ctaLabel: "View preview",
   },
+  robotics: {
+    id: "robotics",
+    title: "Robotics",
+    description:
+      "Mission replay, fleet observability, incident evidence, and operations software for robot operations teams.",
+    href: "/products/robotics",
+    tag: "Future Platforms",
+    category: "Infrastructure",
+    ctaLabel: "Explore Robotics",
+  },
   voice: {
     id: "voice",
     title: "Voice",
@@ -444,9 +454,9 @@ const portalHomepageCardsById: Record<string, PortalCardItem> = {
     id: "research",
     title: "Research",
     description:
-      "A research console for gathering sources, organizing findings, generating briefs, and turning scattered information into clear decisions.",
+      "Search the web, extract sources, synthesize evidence, and export research into briefs, reports, and decisions across the Upcube ecosystem.",
     href: "/products/research",
-    tag: "AI research",
+    tag: "Web intelligence",
     category: "Work",
     ctaLabel: "Open Research",
   },
@@ -542,7 +552,7 @@ export const portalFooterGroups: PortalFooterGroup[] = [
     id: "company",
     title: "Company",
     links: [
-      { id: "about-footer", label: "Company", href: "/about" },
+      { id: "about-footer", label: "About Upcube", href: "/about" },
       { id: "charter-footer", label: "Product Principles", href: "/charter" },
       { id: "foundation-footer", label: "Mission", href: "/foundation" },
       { id: "careers-footer", label: "Careers", href: "/careers" },
@@ -592,9 +602,10 @@ export const portalFooterGroups: PortalFooterGroup[] = [
       },
       {
         id: "trust-transparency-footer",
-        label: "Trust",
+        label: "Trust & Transparency",
         href: "/trust-transparency",
       },
+      { id: "trust-footer", label: "Trust", href: "/trust" },
       { id: "status-footer", label: "Status", href: "/status" },
     ],
   },
@@ -1267,9 +1278,9 @@ export const portalNewsItems: PortalNewsItem[] = [
   },
   {
     id: "news-research-preview",
-    title: "Upcube Research Console enters preview",
+    title: "Upcube Research — search, synthesize, and export web intelligence.",
     summary:
-      "A focused AI research workspace for source collection, synthesis, brief generation, saved findings, and reusable research workflows.",
+      "An AI-native research console for searching the web, extracting sources, synthesizing evidence, and exporting structured outputs.",
     statusLabel: "Preview",
     href: "/products/research",
   },

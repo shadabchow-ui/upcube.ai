@@ -1,17 +1,1 @@
-.uc-home .uc-home__hero .uc-home__hero-stack > h1 {
-  font-size: 0 !important;
-  line-height: 0 !important;
-}
-
-.uc-home .uc-home__hero .uc-home__hero-stack > h1::after {
-  content: "Welcome to the Agentic UpCube Era";
-  display: block;
-  font-size: clamp(26px, 7vw, 36px) !important;
-  line-height: 1.05 !important;
-  letter-spacing: -0.04em !important;
-  font-weight: 500 !important;
-}
-
-.uc-home .uc-home__hero .uc-home__hero-stack > .uc-home__lead {
-  display: none !important;
-}
+/* Intentionally blank to keep homepage hero copy controlled by component content. */

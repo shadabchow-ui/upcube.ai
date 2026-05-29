@@ -130,7 +130,7 @@ export const upcubeProductLinks: UpcubeProductLink[] = [
     id: "research",
     label: "Research",
     description:
-      "Research workspace for source gathering, synthesis, briefs, and exportable reports.",
+      "AI-native research workspace for evidence synthesis, projects, briefs, and connected knowledge workflows.",
     productHref: "/products/research",
     launchHref: UPCUBE_RESEARCH_URL,
   },
@@ -175,7 +175,7 @@ export const ecosystemGroups: EcosystemGroup[] = [
         id: "research",
         label: "Research",
         description:
-          "Research workspace for source gathering, synthesis, briefs, and exportable reports.",
+          "AI-native research workspace for evidence synthesis, projects, briefs, and connected knowledge workflows.",
         productHref: "/products/research",
         launchHref: UPCUBE_RESEARCH_URL,
       },

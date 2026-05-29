@@ -6,7 +6,8 @@ import { createBasicPageMetadata } from "lib/upcube-seo/metadata";
 
 export const metadata: Metadata = createBasicPageMetadata({
   title: "Company Overview | UpcubeAI",
-  description: "Company overview and product ecosystem for UpcubeAI.",
+  description:
+    "Company overview for Upcube and its connected product ecosystem across AI, cloud, education, commerce, and discovery.",
   path: "/about",
 });
 
@@ -19,9 +20,9 @@ export default function AboutRoutePage() {
         slug: "about",
         order: 99,
         title: "Company Overview",
-        subtitle: "Building a product family for the AI age.",
+        subtitle: "Building a connected product family for the AI era.",
         description:
-          "Upcube is an AI technology company building a connected family of products.",
+          "Upcube is a technology company building a connected family of products designed around clear product boundaries and practical use.",
         body,
         category: "company",
       }}

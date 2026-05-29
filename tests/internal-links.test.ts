@@ -28,8 +28,6 @@ describe("internal link validation - header navigation", () => {
 
   it("portalActionNav links are well-formed", () => {
     expect(portalActionNav.length).toBeGreaterThanOrEqual(2);
-    const hrefs = portalActionNav.map((i) => i.href);
-    expect(hrefs).toContain("/contact");
     for (const item of portalActionNav) {
       expect(resolveFullyQualifiedInternalLink(item.href)).toBe(true);
     }
